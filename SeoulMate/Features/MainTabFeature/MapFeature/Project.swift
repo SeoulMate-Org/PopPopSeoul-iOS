@@ -1,13 +1,13 @@
 import ProjectDescription
 
 let project = Project(
-  name: "HomeFeature",
+  name: "MapFeature",
   targets: [
     .target(
-      name: "HomeFeature",
+      name: "MapFeature",
       destinations: .iOS,
       product: .framework,
-      bundleId: "dev.sunidev.homefeature",
+      bundleId: "dev.sunidev.mapfeature",
       sources: ["Sources/**"],
       dependencies: []
     )
