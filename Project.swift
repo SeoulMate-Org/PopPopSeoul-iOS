@@ -100,7 +100,7 @@ let project = Project(
             name: "SeoulMateKit",
             destinations: appDestinations,
             product: .staticFramework,
-            bundleId: "dev.suni.SeoulMatekit",
+            bundleId: "dev.suni.SeoulMateKit",
             deploymentTargets: appDeploymentTargets,
             infoPlist: .extendingDefault(with: [:]),
             sources: "Sources/AppKit/**",
@@ -110,12 +110,7 @@ let project = Project(
                 .external(name: "BottomSheet"),
                 .external(name: "ComposableCoreLocation"),
                 .target(name: "Common"),
-            ],
-            settings: .settings(
-                base: [
-                    "SWIFT_OBJC_BRIDGING_HEADER": "$SRCROOT/Support/AppKit/Bridging.h",
-                ]
-            )
+            ]
         ),
         .target(
             name: "SeoulMateKitTests",

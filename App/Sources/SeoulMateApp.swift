@@ -1,6 +1,5 @@
 import SwiftUI
 import SeoulMateKit
-import XCTestDynamicOverlay
 
 // MARK: - AppDelegate
 
