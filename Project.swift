@@ -10,6 +10,18 @@ public let appDestinations: Destinations = [.iPhone, .iPad]
 let isAppStore = Environment.isAppStore.getBoolean(default: false)
 let additionalCondition = isAppStore ? "APPSTORE" : ""
 
+let swiftlintScript: TargetScript = .pre(
+  script: """
+  if which swiftlint >/dev/null; then
+    swiftlint
+  else
+    echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
+  fi
+  """,
+  name: "SwiftLint",
+  basedOnDependencyAnalysis: false
+)
+
 let appInfoPlist: [String: Plist.Value] = [
     "CFBundleShortVersionString": Plist.Value(stringLiteral: version),
     "UILaunchScreen": ["UILaunchScreen": [:]],
@@ -40,7 +52,8 @@ func createAppTarget(suffix: String = "", isDev: Bool = false, scripts: [TargetS
         resources: .resources(
             ["App/Resources/**"]
         ),
-        scripts: scripts,
+        scripts: scripts
+        + [swiftlintScript],
         
         dependencies: [.target(name: "SeoulMateKit")]
         + dependencies,
@@ -109,6 +122,7 @@ let project = Project(
                 .external(name: "ComposableArchitecture"),
                 .external(name: "BottomSheet"),
                 .external(name: "ComposableCoreLocation"),
+                .external(name: "SwiftUIIntrospect"),
                 .target(name: "Common"),
             ]
         ),

@@ -13,17 +13,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 @main
 struct SeoulMateApp: App {
-  @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+  @UIApplicationDelegateAdaptor(AppDelegate.self)
+  var appDelegate
 
   var body: some Scene {
     WindowGroup {
       if ProcessInfo.processInfo.environment["UITesting"] == "true" {
-        TestingAppView()
-      } else if _XCTIsTesting {
         EmptyView()
       } else {
-        AppView()
+//        AppView()
+        EmptyView()
       }
+//      } else if _XCTIsTesting {
+//        EmptyView()
     }
   }
 }

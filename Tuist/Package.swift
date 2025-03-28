@@ -25,6 +25,8 @@ let package = Package(
         .package(
             url: "https://github.com/lucaszischka/BottomSheet.git",
             .upToNextMajor(from: "3.1.0")
-        )
+        ),
+        .package(url: "https://github.com/siteline/SwiftUI-Introspect.git",
+                 from: "1.0.0")
     ]
 )
