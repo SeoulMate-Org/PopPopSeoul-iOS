@@ -16,7 +16,7 @@ let package = Package(
         ),
         .package(
             url: "https://github.com/apple/swift-log.git",
-            .upToNextMajor(from: "1.2.0")
+            .upToNextMajor(from: "1.0.0")
         ),
         .package(
             url: "https://github.com/mltbnz/composable-core-location.git",
@@ -26,7 +26,9 @@ let package = Package(
             url: "https://github.com/lucaszischka/BottomSheet.git",
             .upToNextMajor(from: "3.1.0")
         ),
-        .package(url: "https://github.com/siteline/SwiftUI-Introspect.git",
-                 from: "1.0.0")
+        .package(
+            url: "https://github.com/siteline/SwiftUI-Introspect.git",
+            .upToNextMajor(from: "1.0.0")
+        )
     ]
 )

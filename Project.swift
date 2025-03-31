@@ -123,6 +123,8 @@ let project = Project(
                 .external(name: "BottomSheet"),
                 .external(name: "ComposableCoreLocation"),
                 .external(name: "SwiftUIIntrospect"),
+                .external(name: "Logging"),
+                
                 .target(name: "Common"),
             ]
         ),
@@ -147,6 +149,7 @@ let project = Project(
             dependencies: [
                 .external(name: "ComposableCoreLocation"),
                 .external(name: "ComposableArchitecture"),
+                .external(name: "Logging"),
             ]
         )
        ]

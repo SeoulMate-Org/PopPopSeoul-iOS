@@ -9,7 +9,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 }
 
-// MARK: - WhisperBoardApp
+// MARK: - SeoulMateApp
 
 @main
 struct SeoulMateApp: App {
@@ -21,8 +21,7 @@ struct SeoulMateApp: App {
       if ProcessInfo.processInfo.environment["UITesting"] == "true" {
         EmptyView()
       } else {
-//        AppView()
-        EmptyView()
+        AppView()
       }
 //      } else if _XCTIsTesting {
 //        EmptyView()
