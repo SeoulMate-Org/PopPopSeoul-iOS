@@ -10,9 +10,11 @@
 		0099DE467D2ACD001D0BCF93 /* TuistAssets+SeoulMateKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B618900CED8B13010E8C99C4 /* TuistAssets+SeoulMateKit.swift */; };
 		00E4ED9DDEFD90F0BE6AC9AE /* BottomSheet.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 9371936642992DBF939F755E /* BottomSheet.framework */; };
 		01544C8DCB85E7A5005332EB /* DependenciesMacros.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8816CEA988459C0964792095 /* DependenciesMacros.framework */; };
+		045EA3BB456EDDDC8CAB093C /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC27C4A3E7418E6642E7B855 /* Icons.xcassets */; };
 		04E63A1C4A475B3835D30649 /* RecommendFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D42D2DB20135CF71DA45CE /* RecommendFeature.swift */; };
 		06218BFCE621C561E814D159 /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AA72E9D52272C102CBE427F /* Dependencies.framework */; };
 		073742A2794518C24AE26A24 /* UIKitNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C1CEC994AEC2A9198C518E /* UIKitNavigation.framework */; };
+		078F5BC9766F7BCAEC7311BC /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3A65010649C22205D55590A8 /* Localizable.xcstrings */; };
 		0FC9E38318A113E0C9113B52 /* OrderedCollections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A68D9C050D1F464C260C94E /* OrderedCollections.framework */; };
 		110FE8924C05E589C1256170 /* CombineSchedulers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C4007C7AFB159748F5BD24 /* CombineSchedulers.framework */; };
 		15D46FCE8762D38910EBF82C /* SeoulMate_SeoulMateKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C7A574227FF9AD88D7A99FC2 /* SeoulMate_SeoulMateKit.bundle */; };
@@ -21,7 +23,6 @@
 		1D41EC8F3E8261D9A1F039DE /* CasePaths.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E1D37C44F8EE4C728D94BD /* CasePaths.framework */; };
 		200C610596CA319FF5FED3F0 /* Sharing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B28FB573FC7097A47AAA9CF /* Sharing.framework */; };
 		201506C17F154D54490DAA40 /* CustomDump.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B263C4BF04A96945400697E /* CustomDump.framework */; };
-		202AEBEAC5D5AC869DD402EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4FE7EF32182E96826EA44CE /* Assets.xcassets */; };
 		2083E4C7601F95C75C9D290B /* Logging.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 6AB88D7576A9C1C46D3B4163 /* Logging.framework */; };
 		20FCC99598B20883EB8D869C /* swift-sharing_Sharing.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 78ED93D4D6E7E8C23A8A70A5 /* swift-sharing_Sharing.bundle */; };
 		24468024084884B7B64D76C2 /* DependenciesMacros.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8816CEA988459C0964792095 /* DependenciesMacros.framework */; };
@@ -36,14 +37,18 @@
 		3614ADB2348786732572286C /* swift-sharing_Sharing.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 78ED93D4D6E7E8C23A8A70A5 /* swift-sharing_Sharing.bundle */; };
 		3617040975A52D4F1DA8CB1A /* SwiftUINavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B825EBC924AF094AAC0A769 /* SwiftUINavigation.framework */; };
 		380FBD9CE5530B53D3C71F67 /* SeoulMate_SeoulMateKit.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = C7A574227FF9AD88D7A99FC2 /* SeoulMate_SeoulMateKit.bundle */; };
+		3A444D19E179A306FFBFA5F3 /* Images.swift in Resources */ = {isa = PBXBuildFile; fileRef = 6DF71955AD9FDA3F2094E6C7 /* Images.swift */; };
 		3B8FCB741EA085238470566C /* XCTestDynamicOverlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E482912CCE48BC5563F9E305 /* XCTestDynamicOverlay.framework */; };
 		3BADE9D7DE869C5D50D76CA5 /* CasePathsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245B4B55FE52C5AF0CA27B7F /* CasePathsCore.framework */; };
 		3C79799DFEE1C1BAC6DD3680 /* IssueReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE759417AF1AEDEB27B1EA7E /* IssueReporting.framework */; };
 		3CED103DCAA53C7D581B42DB /* SwiftUINavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B825EBC924AF094AAC0A769 /* SwiftUINavigation.framework */; };
 		3EE2FBC7FC5B6DB6C9BBA353 /* PerceptionCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F230A3EC17F911929880FCCD /* PerceptionCore.framework */; };
 		4081A8ABC433D274E1C27684 /* SwiftNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B690221A605610A926F4D15 /* SwiftNavigation.framework */; };
+		40FD671F3063232E0010818A /* Images.swift in Resources */ = {isa = PBXBuildFile; fileRef = 6DF71955AD9FDA3F2094E6C7 /* Images.swift */; };
 		41640703CAA172EB887191E5 /* CasePaths.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E1D37C44F8EE4C728D94BD /* CasePaths.framework */; };
+		430E8A92AD85A89992BA07D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8369E2C609C91B5F8657FC4D /* Images.xcassets */; };
 		480E65D2D5E7E7B3373090CF /* BottomSheet_BottomSheet.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 1CD41BC9540C02E6017EC239 /* BottomSheet_BottomSheet.bundle */; };
+		492532480EB60C969B628FCB /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3A65010649C22205D55590A8 /* Localizable.xcstrings */; };
 		4B2DD781A658F26665B2CCCF /* ComposableCoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA32B70082EC943D04BB2B5 /* ComposableCoreLocation.framework */; };
 		503A9D4EEB069ABF504B48E3 /* ComposableCoreLocation.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = ACA32B70082EC943D04BB2B5 /* ComposableCoreLocation.framework */; };
 		5205F3B15ED499ED952116F3 /* ComposableCoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA32B70082EC943D04BB2B5 /* ComposableCoreLocation.framework */; };
@@ -52,11 +57,11 @@
 		53914644CAF71D05DB065D8C /* IssueReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE759417AF1AEDEB27B1EA7E /* IssueReporting.framework */; };
 		552392074EF09A994885258F /* Clocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D0147E4C419D7BDE333386 /* Clocks.framework */; };
 		55548EDAD40F6FE3DB09AA1F /* UIKitNavigationShim.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C54655C5B7C54E84F3408E4A /* UIKitNavigationShim.framework */; };
+		5630E7D70E0CD2933BAF3799 /* Icons.swift in Resources */ = {isa = PBXBuildFile; fileRef = 9831232229A35E973F5FA5B5 /* Icons.swift */; };
 		5791DE2672F7458384575832 /* SeoulMateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF95F27419BD189FC0BEC73A /* SeoulMateApp.swift */; };
 		58E161F5901FB105F4346305 /* ConcurrencyExtras.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCF463C9AD0A48706B0726E /* ConcurrencyExtras.framework */; };
 		597E13443994A1237435A6BE /* AppFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CA36BF669A6060B2A86611 /* AppFeature.swift */; };
 		5A6FC0F0B7DB33E193630B3E /* swift-composable-architecture_ComposableArchitecture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F39F21440BA35855CE3C36B1 /* swift-composable-architecture_ComposableArchitecture.bundle */; };
-		5BA9825826FD96C48A350833 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3ADFFD48E6392DB5263C63 /* AppView.swift */; };
 		5CC2A843C6CFA3DB4D311669 /* Sharing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B28FB573FC7097A47AAA9CF /* Sharing.framework */; };
 		6149BA93473650A5A9CDE6A5 /* Sharing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B28FB573FC7097A47AAA9CF /* Sharing.framework */; };
 		6387C43F414447E4A8452C75 /* Sharing2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1A763F0BDE698EF6090BD08 /* Sharing2.framework */; };
@@ -69,6 +74,7 @@
 		7369E005473A1BDE441D0CA6 /* IdentifiedCollections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E86BBD63365A624DBB63C4 /* IdentifiedCollections.framework */; };
 		7433BE6F175D7B276374FEEF /* SeoulMate_SeoulMateKit.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = C7A574227FF9AD88D7A99FC2 /* SeoulMate_SeoulMateKit.bundle */; };
 		744D23701477CB65CACA84E9 /* SeoulMateKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48E1ADE1047229132D1B8943 /* SeoulMateKit.framework */; };
+		750C872CA7D9DB82450CC9A7 /* String+Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522989AD9DE7B5538424A4AD /* String+Language.swift */; };
 		7528D40B2AEEEF0F525EC560 /* FavoritesFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9BE99B19E857012171576B /* FavoritesFeature.swift */; };
 		77DB870BA51C3A91B8B8022F /* Clocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D0147E4C419D7BDE333386 /* Clocks.framework */; };
 		780CD308CC1A949566D434D8 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3497F3251180C380B697DCB3 /* Common.framework */; };
@@ -76,6 +82,7 @@
 		7BEDA59865457BA79FF74ECC /* swift-composable-architecture_ComposableArchitecture.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = F39F21440BA35855CE3C36B1 /* swift-composable-architecture_ComposableArchitecture.bundle */; };
 		7E91D661458BEE0F13CC5EB2 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3497F3251180C380B697DCB3 /* Common.framework */; };
 		7ED66E560345193E43382A18 /* Sharing1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47347DBAFA0F8ECB0D7F861C /* Sharing1.framework */; };
+		7F30354CCD281054C3CBB69B /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC27C4A3E7418E6642E7B855 /* Icons.xcassets */; };
 		83A6A0D5D69A6ECF508523E1 /* ConcurrencyExtras.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCF463C9AD0A48706B0726E /* ConcurrencyExtras.framework */; };
 		85238A63BFFF13731D7D5A62 /* swift-composable-architecture_ComposableArchitecture.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = F39F21440BA35855CE3C36B1 /* swift-composable-architecture_ComposableArchitecture.bundle */; };
 		86E4B7509C5E3B36F5D3D73B /* Sharing2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1A763F0BDE698EF6090BD08 /* Sharing2.framework */; };
@@ -88,6 +95,7 @@
 		929E2773C29840F57F811513 /* ComposableCoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA32B70082EC943D04BB2B5 /* ComposableCoreLocation.framework */; };
 		92FE7526367068826BB80A41 /* ConcurrencyExtras.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCF463C9AD0A48706B0726E /* ConcurrencyExtras.framework */; };
 		96A225314AA1E8CC5CD87F77 /* DependenciesMacros.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8816CEA988459C0964792095 /* DependenciesMacros.framework */; };
+		9EF8CCE24DE07A99BF1777F5 /* Icons.swift in Resources */ = {isa = PBXBuildFile; fileRef = 9831232229A35E973F5FA5B5 /* Icons.swift */; };
 		A02E389A33C1FDCFC7911790 /* BottomSheet_BottomSheet.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1CD41BC9540C02E6017EC239 /* BottomSheet_BottomSheet.bundle */; };
 		A31F244A4D89491FE295D379 /* swift-composable-architecture_ComposableArchitecture.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = F39F21440BA35855CE3C36B1 /* swift-composable-architecture_ComposableArchitecture.bundle */; };
 		A37CABE75739B80A30319683 /* CustomDump.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B263C4BF04A96945400697E /* CustomDump.framework */; };
@@ -97,6 +105,7 @@
 		B066F46602890E4E2360BA1D /* swift-composable-architecture_ComposableArchitecture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F39F21440BA35855CE3C36B1 /* swift-composable-architecture_ComposableArchitecture.bundle */; };
 		B24EC15D72EF623AD5F22F62 /* ComposableArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E158A76508DD8564D5AFA2 /* ComposableArchitecture.framework */; };
 		B254759D60DF7974A7551302 /* swift-composable-architecture_ComposableArchitecture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F39F21440BA35855CE3C36B1 /* swift-composable-architecture_ComposableArchitecture.bundle */; };
+		B318C0BDF426B6F75BF7C3BD /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C88D86236543BA198869E46 /* Logger.swift */; };
 		B4A1CF7778DC5E6F244BB933 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3062A1B7DFD85F1FD1BC2D3 /* Assets.xcassets */; };
 		B548F37BA53EA3B10BBAF2D5 /* UIKitNavigationShim.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C54655C5B7C54E84F3408E4A /* UIKitNavigationShim.framework */; };
 		B74555AEBBE0353E57FA609A /* Sharing1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47347DBAFA0F8ECB0D7F861C /* Sharing1.framework */; };
@@ -110,7 +119,7 @@
 		BD04C84A671BF78B2732FE9F /* TuistAssets+SeoulMateDev.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AEC0C398163CE044366505 /* TuistAssets+SeoulMateDev.swift */; };
 		BDAA0879D2D3D27A5795BBF1 /* TuistAssets+SeoulMate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E71A1BBDC8671C33A908C75 /* TuistAssets+SeoulMate.swift */; };
 		BEA74576E5177DC8EB4F0989 /* CombineSchedulers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C4007C7AFB159748F5BD24 /* CombineSchedulers.framework */; };
-		C09AA25F6F5006FA355EB9BB /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2D93A89936FF0375B59196 /* Logger.swift */; };
+		C8FC7D69C14FE5904D982342 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC27C4A3E7418E6642E7B855 /* Icons.xcassets */; };
 		C956B330F640FF7BD81FDC8C /* SwiftUIIntrospect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3105A93CDB6B3DA5A720CC /* SwiftUIIntrospect.framework */; };
 		CAC5A90DF030A339F2AB1485 /* swift-sharing_Sharing.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 78ED93D4D6E7E8C23A8A70A5 /* swift-sharing_Sharing.bundle */; };
 		CAE21738DDC4216478D2E4D8 /* TuistBundle+SeoulMate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAC6C66A98CDA81562E146E /* TuistBundle+SeoulMate.swift */; };
@@ -130,19 +139,25 @@
 		E0FF012946E056C371BA4570 /* PerceptionCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F230A3EC17F911929880FCCD /* PerceptionCore.framework */; };
 		E14C6B590C550AEF508E7F7D /* XCTestDynamicOverlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E482912CCE48BC5563F9E305 /* XCTestDynamicOverlay.framework */; };
 		E15C1E751AE761ADA4047E3B /* BottomSheet_BottomSheet.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1CD41BC9540C02E6017EC239 /* BottomSheet_BottomSheet.bundle */; };
+		E1D144B6D8D539F691A9E17C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8369E2C609C91B5F8657FC4D /* Images.xcassets */; };
 		E219488813B5BABFBC47CA68 /* TuistBundle+SeoulMateKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAC1489C41C66C0A220F498 /* TuistBundle+SeoulMateKit.swift */; };
 		E2A153EA9155930C369E58EC /* Perception.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8895718C60B698402C184CDD /* Perception.framework */; };
 		E5BC1AF6113FAF212A3CE97D /* IdentifiedCollections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E86BBD63365A624DBB63C4 /* IdentifiedCollections.framework */; };
 		E64745AD1AF0D808D685A269 /* BottomSheet_BottomSheet.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 1CD41BC9540C02E6017EC239 /* BottomSheet_BottomSheet.bundle */; };
 		E68C136FD1F6F4EC005DC659 /* CombineSchedulers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C4007C7AFB159748F5BD24 /* CombineSchedulers.framework */; };
+		E8841362E9C3274BF9782E76 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4836FC74950D156B58966EE /* AppView.swift */; };
 		EA3F39992F6BCD43747FFFA4 /* SeoulMateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF95F27419BD189FC0BEC73A /* SeoulMateApp.swift */; };
+		EAC80BBD8EB589AA19F701D1 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3A65010649C22205D55590A8 /* Localizable.xcstrings */; };
 		EBD041734950EB604E552179 /* Logging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB88D7576A9C1C46D3B4163 /* Logging.framework */; };
 		EBE29F3CC0D118583D793A1A /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AA72E9D52272C102CBE427F /* Dependencies.framework */; };
+		EC3EDB0759AF46E5DA1CDEBF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8369E2C609C91B5F8657FC4D /* Images.xcassets */; };
 		F0290E8421632A811B7567FB /* InternalCollectionsUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC9F74CAF3E40D7E77AD917 /* InternalCollectionsUtilities.framework */; };
 		F0C11B526CBD98AE5A46427B /* BottomSheet_BottomSheet.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1CD41BC9540C02E6017EC239 /* BottomSheet_BottomSheet.bundle */; };
+		F25DADFA01F0D6627C5F8BEE /* Icons.swift in Resources */ = {isa = PBXBuildFile; fileRef = 9831232229A35E973F5FA5B5 /* Icons.swift */; };
 		F7A80BB38FCCC24C9010A18A /* CasePaths.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E1D37C44F8EE4C728D94BD /* CasePaths.framework */; };
 		F80D63C3A204BEFC8A732D12 /* ComposableCoreLocation.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = ACA32B70082EC943D04BB2B5 /* ComposableCoreLocation.framework */; };
 		F87C0B3D1942B3CC72D7962C /* SeoulMate_SeoulMateKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C7A574227FF9AD88D7A99FC2 /* SeoulMate_SeoulMateKit.bundle */; };
+		F9D9B3F85B9CE98BBB43D3A3 /* Images.swift in Resources */ = {isa = PBXBuildFile; fileRef = 6DF71955AD9FDA3F2094E6C7 /* Images.swift */; };
 		FEA3363B5C25C2EAB3086760 /* Logging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB88D7576A9C1C46D3B4163 /* Logging.framework */; };
 		FEA80602584BA0FE73EB05F2 /* SwiftUINavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B825EBC924AF094AAC0A769 /* SwiftUINavigation.framework */; };
 /* End PBXBuildFile section */
@@ -321,14 +336,16 @@
 		245B4B55FE52C5AF0CA27B7F /* CasePathsCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CasePathsCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B28FB573FC7097A47AAA9CF /* Sharing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sharing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B825EBC924AF094AAC0A769 /* SwiftUINavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftUINavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C3ADFFD48E6392DB5263C63 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		2CAC1489C41C66C0A220F498 /* TuistBundle+SeoulMateKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+SeoulMateKit.swift"; sourceTree = "<group>"; };
 		340E613BC37C05DC5B44CBF5 /* IntroFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroFeature.swift; sourceTree = "<group>"; };
 		3497F3251180C380B697DCB3 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A65010649C22205D55590A8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		40C1CEC994AEC2A9198C518E /* UIKitNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIKitNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47347DBAFA0F8ECB0D7F861C /* Sharing1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sharing1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E158A76508DD8564D5AFA2 /* ComposableArchitecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ComposableArchitecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48E1ADE1047229132D1B8943 /* SeoulMateKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SeoulMateKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C88D86236543BA198869E46 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		522989AD9DE7B5538424A4AD /* String+Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Language.swift"; sourceTree = "<group>"; };
 		5A68D9C050D1F464C260C94E /* OrderedCollections.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OrderedCollections.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4DDFDDFC394A95438F91EF /* MapFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFeature.swift; sourceTree = "<group>"; };
 		5B690221A605610A926F4D15 /* SwiftNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -337,11 +354,13 @@
 		6AA72E9D52272C102CBE427F /* Dependencies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dependencies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB88D7576A9C1C46D3B4163 /* Logging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Logging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC9F74CAF3E40D7E77AD917 /* InternalCollectionsUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = InternalCollectionsUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DF71955AD9FDA3F2094E6C7 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		77AEC0C398163CE044366505 /* TuistAssets+SeoulMateDev.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+SeoulMateDev.swift"; sourceTree = "<group>"; };
 		78ED93D4D6E7E8C23A8A70A5 /* swift-sharing_Sharing.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-sharing_Sharing.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E86BBD63365A624DBB63C4 /* IdentifiedCollections.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IdentifiedCollections.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DAC6C66A98CDA81562E146E /* TuistBundle+SeoulMate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+SeoulMate.swift"; sourceTree = "<group>"; };
 		7DD258697A9D67A01FC77297 /* SeoulMate_SeoulMateKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SeoulMate_SeoulMateKit-Info.plist"; sourceTree = "<group>"; };
+		8369E2C609C91B5F8657FC4D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		83CA36BF669A6060B2A86611 /* AppFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeature.swift; sourceTree = "<group>"; };
 		847D4189DD2F76CCCAFCEE49 /* TuistBundle+SeoulMateDev.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+SeoulMateDev.swift"; sourceTree = "<group>"; };
 		8816CEA988459C0964792095 /* DependenciesMacros.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DependenciesMacros.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -349,21 +368,22 @@
 		88C4007C7AFB159748F5BD24 /* CombineSchedulers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CombineSchedulers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E71A1BBDC8671C33A908C75 /* TuistAssets+SeoulMate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+SeoulMate.swift"; sourceTree = "<group>"; };
 		9371936642992DBF939F755E /* BottomSheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BottomSheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9831232229A35E973F5FA5B5 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		A34FBD22F45DFE8C487AF74C /* SeoulMateDev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SeoulMateDev-Info.plist"; sourceTree = "<group>"; };
-		A4FE7EF32182E96826EA44CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACA32B70082EC943D04BB2B5 /* ComposableCoreLocation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ComposableCoreLocation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29B9E5931DB50BE2E02B973 /* SeoulMateDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeoulMateDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D0147E4C419D7BDE333386 /* Clocks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Clocks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4836FC74950D156B58966EE /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		B618900CED8B13010E8C99C4 /* TuistAssets+SeoulMateKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+SeoulMateKit.swift"; sourceTree = "<group>"; };
 		BE759417AF1AEDEB27B1EA7E /* IssueReporting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IssueReporting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C54655C5B7C54E84F3408E4A /* UIKitNavigationShim.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIKitNavigationShim.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A574227FF9AD88D7A99FC2 /* SeoulMate_SeoulMateKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeoulMate_SeoulMateKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA2D93A89936FF0375B59196 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		CC8F7871F173DDF309E440E9 /* Common-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Common-Info.plist"; sourceTree = "<group>"; };
 		CF95F27419BD189FC0BEC73A /* SeoulMateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeoulMateApp.swift; sourceTree = "<group>"; };
 		D0E1D37C44F8EE4C728D94BD /* CasePaths.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CasePaths.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D225FBE5903439320B022F13 /* SeoulMateKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeoulMateKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA4F2A2DA2DF100742F28680 /* SeoulMateKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SeoulMateKitTests-Info.plist"; sourceTree = "<group>"; };
+		DC27C4A3E7418E6642E7B855 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		DF3105A93CDB6B3DA5A720CC /* SwiftUIIntrospect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftUIIntrospect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3062A1B7DFD85F1FD1BC2D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E482912CCE48BC5563F9E305 /* XCTestDynamicOverlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XCTestDynamicOverlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -563,8 +583,17 @@
 			isa = PBXGroup;
 			children = (
 				83CA36BF669A6060B2A86611 /* AppFeature.swift */,
+				B4836FC74950D156B58966EE /* AppView.swift */,
 			);
 			path = AppFeature;
+			sourceTree = "<group>";
+		};
+		20E644676672D4EDBD569E3F /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				522989AD9DE7B5538424A4AD /* String+Language.swift */,
+			);
+			path = Language;
 			sourceTree = "<group>";
 		};
 		2AAFDA561695294D669C0A8C /* MapFeature */ = {
@@ -618,6 +647,14 @@
 			path = RecommendFeature;
 			sourceTree = "<group>";
 		};
+		675C80D33A9C49246553F25B /* L10n */ = {
+			isa = PBXGroup;
+			children = (
+				3A65010649C22205D55590A8 /* Localizable.xcstrings */,
+			);
+			path = L10n;
+			sourceTree = "<group>";
+		};
 		7B2D1ECCAF11491ED651636A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -630,7 +667,6 @@
 			isa = PBXGroup;
 			children = (
 				F5ECB281310199EFD66B2E08 /* Features */,
-				2C3ADFFD48E6392DB5263C63 /* AppView.swift */,
 			);
 			path = AppKit;
 			sourceTree = "<group>";
@@ -644,10 +680,22 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		96CBC42CC54BA9B5275C485C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				9831232229A35E973F5FA5B5 /* Icons.swift */,
+				DC27C4A3E7418E6642E7B855 /* Icons.xcassets */,
+				6DF71955AD9FDA3F2094E6C7 /* Images.swift */,
+				8369E2C609C91B5F8657FC4D /* Images.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		A6BC1719C8E36DDC955A870D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				CA2D93A89936FF0375B59196 /* Logger.swift */,
+				20E644676672D4EDBD569E3F /* Language */,
+				4C88D86236543BA198869E46 /* Logger.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -710,7 +758,8 @@
 		E1ED7A91BC30B6493AE5D53D /* AppKit */ = {
 			isa = PBXGroup;
 			children = (
-				A4FE7EF32182E96826EA44CE /* Assets.xcassets */,
+				96CBC42CC54BA9B5275C485C /* Assets */,
+				675C80D33A9C49246553F25B /* L10n */,
 			);
 			path = AppKit;
 			sourceTree = "<group>";
@@ -941,7 +990,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				202AEBEAC5D5AC869DD402EC /* Assets.xcassets in Resources */,
+				5630E7D70E0CD2933BAF3799 /* Icons.swift in Resources */,
+				7F30354CCD281054C3CBB69B /* Icons.xcassets in Resources */,
+				40FD671F3063232E0010818A /* Images.swift in Resources */,
+				EC3EDB0759AF46E5DA1CDEBF /* Images.xcassets in Resources */,
+				492532480EB60C969B628FCB /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -950,6 +1003,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DE3D6BB3E65AC039FF149B3 /* Assets.xcassets in Resources */,
+				F25DADFA01F0D6627C5F8BEE /* Icons.swift in Resources */,
+				C8FC7D69C14FE5904D982342 /* Icons.xcassets in Resources */,
+				3A444D19E179A306FFBFA5F3 /* Images.swift in Resources */,
+				E1D144B6D8D539F691A9E17C /* Images.xcassets in Resources */,
+				078F5BC9766F7BCAEC7311BC /* Localizable.xcstrings in Resources */,
 				E15C1E751AE761ADA4047E3B /* BottomSheet_BottomSheet.bundle in Resources */,
 				F87C0B3D1942B3CC72D7962C /* SeoulMate_SeoulMateKit.bundle in Resources */,
 				B254759D60DF7974A7551302 /* swift-composable-architecture_ComposableArchitecture.bundle in Resources */,
@@ -962,6 +1020,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4A1CF7778DC5E6F244BB933 /* Assets.xcassets in Resources */,
+				9EF8CCE24DE07A99BF1777F5 /* Icons.swift in Resources */,
+				045EA3BB456EDDDC8CAB093C /* Icons.xcassets in Resources */,
+				F9D9B3F85B9CE98BBB43D3A3 /* Images.swift in Resources */,
+				430E8A92AD85A89992BA07D4 /* Images.xcassets in Resources */,
+				EAC80BBD8EB589AA19F701D1 /* Localizable.xcstrings in Resources */,
 				F0C11B526CBD98AE5A46427B /* BottomSheet_BottomSheet.bundle in Resources */,
 				15D46FCE8762D38910EBF82C /* SeoulMate_SeoulMateKit.bundle in Resources */,
 				B066F46602890E4E2360BA1D /* swift-composable-architecture_ComposableArchitecture.bundle in Resources */,
@@ -1079,7 +1142,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C09AA25F6F5006FA355EB9BB /* Logger.swift in Sources */,
+				750C872CA7D9DB82450CC9A7 /* String+Language.swift in Sources */,
+				B318C0BDF426B6F75BF7C3BD /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1089,8 +1153,8 @@
 			files = (
 				0099DE467D2ACD001D0BCF93 /* TuistAssets+SeoulMateKit.swift in Sources */,
 				E219488813B5BABFBC47CA68 /* TuistBundle+SeoulMateKit.swift in Sources */,
-				5BA9825826FD96C48A350833 /* AppView.swift in Sources */,
 				597E13443994A1237435A6BE /* AppFeature.swift in Sources */,
+				E8841362E9C3274BF9782E76 /* AppView.swift in Sources */,
 				8C1AEA9503BC5A3F1EEA85DA /* IntroFeature.swift in Sources */,
 				7528D40B2AEEEF0F525EC560 /* FavoritesFeature.swift in Sources */,
 				1B50ADA54F7DBCB24DE8F9F8 /* MapFeature.swift in Sources */,
@@ -1168,7 +1232,6 @@
 				CODE_SIGNING_REQUIRED = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3T5QFYSPG5;
 				ENABLE_PREVIEWS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1304,56 +1367,56 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftOperators",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing1",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParserDiagnostics",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftBasicFormat",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CombineSchedulers",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitecture",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing2",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftUINavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigationShim",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftNavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/BottomSheet_BottomSheet",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/InternalCollectionsUtilities",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsMacros",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableCoreLocation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IdentifiedCollections",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitectureMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax600",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePaths",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxBuilder",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-sharing_Sharing",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Logging",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SeoulMate_SeoulMateKit",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CustomDump",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/OrderedCollections",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacroExpansion",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/XCTestDynamicOverlay",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Clocks",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/BottomSheet",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IssueReporting",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPluginMessageHandling",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/_SwiftSyntaxCShims",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-composable-architecture_ComposableArchitecture",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Common",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ConcurrencyExtras",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftDiagnostics",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftUIIntrospect",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParser",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax510",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Perception",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Dependencies",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax509",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPluginMessageHandling",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacroExpansion",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/InternalCollectionsUtilities",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/_SwiftSyntaxCShims",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CustomDump",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePaths",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax600",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParserDiagnostics",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ConcurrencyExtras",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Clocks",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftDiagnostics",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/OrderedCollections",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftUINavigation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing2",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxBuilder",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax510",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-sharing_Sharing",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IssueReporting",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftBasicFormat",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing1",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CombineSchedulers",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/BottomSheet_BottomSheet",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParser",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax509",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Perception",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/BottomSheet",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IdentifiedCollections",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacrosPlugin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Logging",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigationShim",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Dependencies",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-composable-architecture_ComposableArchitecture",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftUIIntrospect",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitectureMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SeoulMate_SeoulMateKit",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftNavigation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/XCTestDynamicOverlay",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitecture",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPlugin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Common",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1556,52 +1619,52 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/XCTestDynamicOverlay",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Clocks",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftOperators",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IssueReporting",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPluginMessageHandling",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/_SwiftSyntaxCShims",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing1",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-composable-architecture_ComposableArchitecture",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitecture",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CombineSchedulers",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParserDiagnostics",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ConcurrencyExtras",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftUINavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftBasicFormat",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing2",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftNavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigationShim",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/InternalCollectionsUtilities",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftDiagnostics",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParser",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableCoreLocation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParserDiagnostics",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftUINavigation",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Perception",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Dependencies",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IdentifiedCollections",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitectureMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax600",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax510",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePaths",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax509",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxBuilder",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-sharing_Sharing",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Logging",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPlugin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftDiagnostics",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftOperators",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CustomDump",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacrosPlugin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing2",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IdentifiedCollections",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Clocks",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftNavigation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax600",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IssueReporting",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxBuilder",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacros",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/OrderedCollections",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CombineSchedulers",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-sharing_Sharing",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitecture",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/XCTestDynamicOverlay",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPluginMessageHandling",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/_SwiftSyntaxCShims",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPlugin",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacroExpansion",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing1",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax509",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigationShim",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ConcurrencyExtras",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Logging",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax510",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-composable-architecture_ComposableArchitecture",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/InternalCollectionsUtilities",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePaths",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParser",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Dependencies",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitectureMacros",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1826,7 +1889,6 @@
 				CODE_SIGNING_REQUIRED = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3T5QFYSPG5;
 				ENABLE_PREVIEWS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",

@@ -11,15 +11,15 @@ let isAppStore = Environment.isAppStore.getBoolean(default: false)
 let additionalCondition = isAppStore ? "APPSTORE" : ""
 
 let swiftlintScript: TargetScript = .pre(
-  script: """
+    script: """
   if which swiftlint >/dev/null; then
     swiftlint
   else
     echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
   fi
   """,
-  name: "SwiftLint",
-  basedOnDependencyAnalysis: false
+    name: "SwiftLint",
+    basedOnDependencyAnalysis: false
 )
 
 let appInfoPlist: [String: Plist.Value] = [
@@ -49,9 +49,10 @@ func createAppTarget(suffix: String = "", isDev: Bool = false, scripts: [TargetS
         deploymentTargets: appDeploymentTargets,
         infoPlist: .extendingDefault(with: appInfoPlist),
         sources: "App/Sources/**",
-        resources: .resources(
-            ["App/Resources/**"]
-        ),
+        resources: .resources([
+            "App/Resources/**",
+            "Resources/AppKit/**"
+        ]),
         scripts: scripts
         + [swiftlintScript],
         
@@ -125,7 +126,7 @@ let project = Project(
                 .external(name: "SwiftUIIntrospect"),
                 .external(name: "Logging"),
                 
-                .target(name: "Common"),
+                    .target(name: "Common"),
             ]
         ),
         .target(
