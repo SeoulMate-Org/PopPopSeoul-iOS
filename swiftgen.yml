@@ -16,3 +16,12 @@ xcassets:
         params:
           enumName: Icon
           publicAccess: true
+          
+  - inputs:
+    - Resources/AppKit/Assets/Colors.xcassets
+    outputs:
+      - templateName: swift5
+        output: Resources/AppKit/Assets/Colors.swift
+        params:
+          enumName: Color
+          publicAccess: true

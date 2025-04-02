@@ -147,6 +147,11 @@
 		E68C136FD1F6F4EC005DC659 /* CombineSchedulers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C4007C7AFB159748F5BD24 /* CombineSchedulers.framework */; };
 		E8841362E9C3274BF9782E76 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4836FC74950D156B58966EE /* AppView.swift */; };
 		EA3F39992F6BCD43747FFFA4 /* SeoulMateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF95F27419BD189FC0BEC73A /* SeoulMateApp.swift */; };
+		EAA517DF2D9C08E6003C17A7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAA517DE2D9C08E6003C17A7 /* Colors.xcassets */; };
+		EAA517E02D9C08E6003C17A7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAA517DE2D9C08E6003C17A7 /* Colors.xcassets */; };
+		EAA517E12D9C08E6003C17A7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAA517DE2D9C08E6003C17A7 /* Colors.xcassets */; };
+		EAA517E32D9C093B003C17A7 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA517E22D9C093B003C17A7 /* Colors.swift */; };
+		EAA517E42D9C093B003C17A7 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA517E22D9C093B003C17A7 /* Colors.swift */; };
 		EAC80BBD8EB589AA19F701D1 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3A65010649C22205D55590A8 /* Localizable.xcstrings */; };
 		EBD041734950EB604E552179 /* Logging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB88D7576A9C1C46D3B4163 /* Logging.framework */; };
 		EBE29F3CC0D118583D793A1A /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AA72E9D52272C102CBE427F /* Dependencies.framework */; };
@@ -388,6 +393,8 @@
 		E3062A1B7DFD85F1FD1BC2D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E482912CCE48BC5563F9E305 /* XCTestDynamicOverlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XCTestDynamicOverlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7EC29CE28929EFB4731C604 /* SeoulMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeoulMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAA517DE2D9C08E6003C17A7 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		EAA517E22D9C093B003C17A7 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		F1A763F0BDE698EF6090BD08 /* Sharing2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sharing2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F230A3EC17F911929880FCCD /* PerceptionCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PerceptionCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F39F21440BA35855CE3C36B1 /* swift-composable-architecture_ComposableArchitecture.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-composable-architecture_ComposableArchitecture.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -687,6 +694,8 @@
 				DC27C4A3E7418E6642E7B855 /* Icons.xcassets */,
 				6DF71955AD9FDA3F2094E6C7 /* Images.swift */,
 				8369E2C609C91B5F8657FC4D /* Images.xcassets */,
+				EAA517E22D9C093B003C17A7 /* Colors.swift */,
+				EAA517DE2D9C08E6003C17A7 /* Colors.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -936,6 +945,11 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					3B9C57DB5DCE66771C0B5E04 = {
+						LastSwiftMigration = 1620;
+					};
+				};
 			};
 			buildConfigurationList = B76C0B83AA53C9BCA1291867 /* Build configuration list for PBXProject "SeoulMate" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -995,6 +1009,7 @@
 				40FD671F3063232E0010818A /* Images.swift in Resources */,
 				EC3EDB0759AF46E5DA1CDEBF /* Images.xcassets in Resources */,
 				492532480EB60C969B628FCB /* Localizable.xcstrings in Resources */,
+				EAA517E12D9C08E6003C17A7 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1007,6 +1022,7 @@
 				C8FC7D69C14FE5904D982342 /* Icons.xcassets in Resources */,
 				3A444D19E179A306FFBFA5F3 /* Images.swift in Resources */,
 				E1D144B6D8D539F691A9E17C /* Images.xcassets in Resources */,
+				EAA517DF2D9C08E6003C17A7 /* Colors.xcassets in Resources */,
 				078F5BC9766F7BCAEC7311BC /* Localizable.xcstrings in Resources */,
 				E15C1E751AE761ADA4047E3B /* BottomSheet_BottomSheet.bundle in Resources */,
 				F87C0B3D1942B3CC72D7962C /* SeoulMate_SeoulMateKit.bundle in Resources */,
@@ -1024,6 +1040,7 @@
 				045EA3BB456EDDDC8CAB093C /* Icons.xcassets in Resources */,
 				F9D9B3F85B9CE98BBB43D3A3 /* Images.swift in Resources */,
 				430E8A92AD85A89992BA07D4 /* Images.xcassets in Resources */,
+				EAA517E02D9C08E6003C17A7 /* Colors.xcassets in Resources */,
 				EAC80BBD8EB589AA19F701D1 /* Localizable.xcstrings in Resources */,
 				F0C11B526CBD98AE5A46427B /* BottomSheet_BottomSheet.bundle in Resources */,
 				15D46FCE8762D38910EBF82C /* SeoulMate_SeoulMateKit.bundle in Resources */,
@@ -1167,6 +1184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5791DE2672F7458384575832 /* SeoulMateApp.swift in Sources */,
+				EAA517E32D9C093B003C17A7 /* Colors.swift in Sources */,
 				BD04C84A671BF78B2732FE9F /* TuistAssets+SeoulMateDev.swift in Sources */,
 				300E48F050B571D3E7CA020C /* TuistBundle+SeoulMateDev.swift in Sources */,
 			);
@@ -1177,6 +1195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA3F39992F6BCD43747FFFA4 /* SeoulMateApp.swift in Sources */,
+				EAA517E42D9C093B003C17A7 /* Colors.swift in Sources */,
 				BDAA0879D2D3D27A5795BBF1 /* TuistAssets+SeoulMate.swift in Sources */,
 				CAE21738DDC4216478D2E4D8 /* TuistBundle+SeoulMate.swift in Sources */,
 			);
@@ -1519,6 +1538,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILT_PRODUCTS_DIR = "$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/$(PRODUCT_NAME)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GENERATE_MASTER_OBJECT_FILE = NO;
@@ -1589,6 +1609,7 @@
 		A7CA3FD0C7EF9FA87ED3AF27 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GENERATE_MASTER_OBJECT_FILE = NO;
