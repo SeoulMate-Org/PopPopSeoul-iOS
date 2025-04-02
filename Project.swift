@@ -50,9 +50,7 @@ func createAppTarget(suffix: String = "", isDev: Bool = false, scripts: [TargetS
         infoPlist: .extendingDefault(with: appInfoPlist),
         sources: "App/Sources/**",
         resources: .resources([
-            "App/Resources/**",
-            "Resources/AppKit/**"
-        ]),
+            "App/Resources/**"]),
         scripts: scripts
         + [swiftlintScript],
         
@@ -118,15 +116,16 @@ let project = Project(
             deploymentTargets: appDeploymentTargets,
             infoPlist: .extendingDefault(with: [:]),
             sources: "Sources/AppKit/**",
-            resources: "Resources/AppKit/**",
+            resources: .resources([
+                "Resources/AppKit/**"
+            ]),
             dependencies: [
                 .external(name: "ComposableArchitecture"),
                 .external(name: "BottomSheet"),
                 .external(name: "ComposableCoreLocation"),
                 .external(name: "SwiftUIIntrospect"),
                 .external(name: "Logging"),
-                
-                    .target(name: "Common"),
+                .target(name: "Common"),
             ]
         ),
         .target(

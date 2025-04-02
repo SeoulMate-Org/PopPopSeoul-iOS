@@ -21,7 +21,7 @@ public typealias AssetImageTypeAlias = ImageAsset.Image
 // MARK: - Asset Catalogs
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
-public enum Icon {
+public enum Icons {
   public static let arrowLeftLine = ImageAsset(name: "arrow_left_line")
   public static let arrowRightLine = ImageAsset(name: "arrow_right_line")
   public static let checkLine = ImageAsset(name: "check_line")

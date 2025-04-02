@@ -3,25 +3,25 @@ xcassets:
     - Resources/AppKit/Assets/Images.xcassets
     outputs:
       - templateName: swift5
-        output: Resources/AppKit/Assets/Images.swift
+        output: Sources/AppKit/UI/DesignSystem/Images.swift
         params:
-          enumName: Image
+          enumName: Images
           publicAccess: true
           
   - inputs:
     - Resources/AppKit/Assets/Icons.xcassets
     outputs:
       - templateName: swift5
-        output: Resources/AppKit/Assets/Icons.swift
+        output: Sources/AppKit/UI/DesignSystem/Icons.swift
         params:
-          enumName: Icon
+          enumName: Icons
           publicAccess: true
           
   - inputs:
     - Resources/AppKit/Assets/Colors.xcassets
     outputs:
       - templateName: swift5
-        output: Resources/AppKit/Assets/Colors.swift
+        output: Sources/AppKit/UI/DesignSystem/Colors.swift
         params:
-          enumName: Color
+          enumName: Colors
           publicAccess: true
