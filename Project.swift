@@ -113,7 +113,7 @@ let project = Project(
         .target(
             name: "SeoulMateKit",
             destinations: appDestinations,
-            product: .staticFramework,
+            product: Environment.forPreview.getBoolean(default: false) ? .framework : .staticFramework,
             bundleId: "dev.suni.SeoulMateKit",
             deploymentTargets: appDeploymentTargets,
             infoPlist: .extendingDefault(with: [:]),
