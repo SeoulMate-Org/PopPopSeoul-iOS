@@ -11,6 +11,11 @@ public struct AppView: View {
   }
 
   public var body: some View {
-    Text("test".localized)
+    MainTabView(
+      store: Store<MainTabFeature.State, MainTabFeature.Action>(
+        initialState: .init(),
+        reducer: { MainTabFeature() }
+      )
+    )
   }
 }

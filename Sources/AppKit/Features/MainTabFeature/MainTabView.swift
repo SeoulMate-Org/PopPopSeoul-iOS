@@ -10,8 +10,8 @@ import ComposableArchitecture
 import Common
 
 public struct MainTabView: View {
-  @Bindable var store: StoreOf<MainTabFeature>
-
+  @State private var store: StoreOf<MainTabFeature>
+  
   public init(store: StoreOf<MainTabFeature>) {
     self.store = store
   }
@@ -23,35 +23,43 @@ public struct MainTabView: View {
       likesTab
     }
     .frame(height: 58)
-    .background(Colors.black.swiftUIColor)
-    .modifier(ShadowModifier())
+    .background(Colors.white.swiftUIColor)
+    .modifier(ShadowModifier(
+      shadow: AppShadow(
+        color: Colors.trueBlack.swiftUIColor.opacity(0.08),
+        x: 0,
+        y: -4,
+        blur: 12,
+        spread: 0
+      )
+    ))
   }
-
+  
   var themeTab: some View {
     Button {
       store.send(.themeTapped)
     } label: {
-      Image(systemName: "sparkles")
+      Icons.themeLine.swiftUIImage
     }
-    .frame(maxWidth: .infinity)
+    .frame(width: 30, height: 30)
   }
-
+  
   var mapTab: some View {
     Button {
       store.send(.mapTapped)
     } label: {
-      Image(systemName: "map")
+      Icons.mapLine.swiftUIImage
     }
-    .frame(maxWidth: .infinity)
+    .frame(width: 30, height: 30)
   }
-
+  
   var likesTab: some View {
     Button {
       store.send(.likesTapped)
     } label: {
-      Image(systemName: "heart")
+      Icons.heartLine.swiftUIImage
     }
-    .frame(maxWidth: .infinity)
+    .frame(width: 30, height: 30)
   }
 }
 
@@ -67,18 +75,3 @@ public struct MainTabView: View {
 }
 
 // MARK: - Helper
-
-struct ShadowModifier: ViewModifier {
-  @Environment(\.colorScheme) var colorScheme
-
-  func body(content: Content) -> some View {
-    Group {
-      if colorScheme == .light {
-        content
-          .shadow(color: Color.black.opacity(0.2), radius: 6, x: 0.0, y: 0.0)
-      } else {
-        content
-      }
-    }
-  }
-}

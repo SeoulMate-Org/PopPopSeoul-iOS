@@ -50,7 +50,9 @@ func createAppTarget(suffix: String = "", isDev: Bool = false, scripts: [TargetS
         infoPlist: .extendingDefault(with: appInfoPlist),
         sources: "App/Sources/**",
         resources: .resources([
-            "App/Resources/**"]),
+            "App/Resources/**",
+            "Resources/AppKit/**"
+        ]),
         scripts: scripts
         + [swiftlintScript],
         

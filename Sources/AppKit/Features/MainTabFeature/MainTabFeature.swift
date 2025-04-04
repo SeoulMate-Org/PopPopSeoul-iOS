@@ -8,7 +8,13 @@
 import Foundation
 import ComposableArchitecture
 
-public struct MainTabFeature: Reducer {
+@Reducer
+public struct MainTabFeature {
+  public init() {}
+  
+  // MARK: State
+
+  @ObservableState
   public struct State: Equatable {
     public var selectedTab: Tab = .theme
 
@@ -16,14 +22,21 @@ public struct MainTabFeature: Reducer {
       case theme, map, likes
     }
   }
-
+  
+  // MARK: Actions
+  
+  @CasePathable
   public enum Action: Equatable {
     case themeTapped
     case mapTapped
     case likesTapped
   }
-
-  public var body: some ReducerOf<Self> {
+  
+  // MARK: Reducer
+  
+  public var body: some Reducer<State, Action> {
+//    BindingReducer()
+    
     Reduce { state, action in
       switch action {
       case .themeTapped:
@@ -39,3 +52,5 @@ public struct MainTabFeature: Reducer {
     }
   }
 }
+
+// MARK: - Helper
