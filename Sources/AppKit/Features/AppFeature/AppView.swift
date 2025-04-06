@@ -9,7 +9,7 @@ public struct AppView: View {
   public init() {
     logs.info("Logging Test - App View")
   }
-
+  
   public var body: some View {
     MainTabView(
       store: Store<MainTabFeature.State, MainTabFeature.Action>(
