@@ -124,6 +124,8 @@
 		EA3F39992F6BCD43747FFFA4 /* SeoulMateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF95F27419BD189FC0BEC73A /* SeoulMateApp.swift */; };
 		EAC80BBD8EB589AA19F701D1 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3A65010649C22205D55590A8 /* Localizable.xcstrings */; };
 		EACE483A2DA44CEE00EA4048 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACE48392DA44CEE00EA4048 /* Fonts.swift */; };
+		EACE483C2DA45EC600EA4048 /* CommonHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACE483B2DA45EC600EA4048 /* CommonHeaderView.swift */; };
+		EACE48402DA4613600EA4048 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACE483F2DA4613600EA4048 /* TextStyle.swift */; };
 		F0686CD49D1E6A1ACA695983 /* ComposableCoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA32B70082EC943D04BB2B5 /* ComposableCoreLocation.framework */; };
 		F0C11B526CBD98AE5A46427B /* BottomSheet_BottomSheet.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1CD41BC9540C02E6017EC239 /* BottomSheet_BottomSheet.bundle */; };
 		F55DE23C32F6D8C04E0A155C /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C51729E572CAF44B7453310 /* Pretendard-ExtraLight.otf */; };
@@ -344,6 +346,8 @@
 		E482912CCE48BC5563F9E305 /* XCTestDynamicOverlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XCTestDynamicOverlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7EC29CE28929EFB4731C604 /* SeoulMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeoulMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACE48392DA44CEE00EA4048 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		EACE483B2DA45EC600EA4048 /* CommonHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonHeaderView.swift; sourceTree = "<group>"; };
+		EACE483F2DA4613600EA4048 /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
 		F1A763F0BDE698EF6090BD08 /* Sharing2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sharing2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F230A3EC17F911929880FCCD /* PerceptionCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PerceptionCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F39F21440BA35855CE3C36B1 /* swift-composable-architecture_ComposableArchitecture.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-composable-architecture_ComposableArchitecture.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -494,6 +498,7 @@
 			isa = PBXGroup;
 			children = (
 				C6337DFB4ADBEDF70EFC88A0 /* DesignSystem */,
+				EACE483B2DA45EC600EA4048 /* CommonHeaderView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -649,9 +654,10 @@
 			isa = PBXGroup;
 			children = (
 				EACE48392DA44CEE00EA4048 /* Fonts.swift */,
+				EACE483F2DA4613600EA4048 /* TextStyle.swift */,
 				54F570200CA17C0D80D9E91F /* Assets.swift */,
-				04116B0AEB1D8D37EC6A7F9D /* Color++.swift */,
 				13581ED6FBCBDE0345312E64 /* Colors.swift */,
+				04116B0AEB1D8D37EC6A7F9D /* Color++.swift */,
 				518B0D0A79B46E60E6E248DB /* ShadowModifier.swift */,
 			);
 			path = DesignSystem;
@@ -1058,10 +1064,12 @@
 				E219488813B5BABFBC47CA68 /* TuistBundle+SeoulMateKit.swift in Sources */,
 				DFF7D8696A3819A921417772 /* TuistFonts+SeoulMateKit.swift in Sources */,
 				597E13443994A1237435A6BE /* AppFeature.swift in Sources */,
+				EACE48402DA4613600EA4048 /* TextStyle.swift in Sources */,
 				E8841362E9C3274BF9782E76 /* AppView.swift in Sources */,
 				7528D40B2AEEEF0F525EC560 /* FavoritesFeature.swift in Sources */,
 				053E98C3DB11A9A18A6EE23E /* MainTabFeature.swift in Sources */,
 				1AB46FA973D3FCCC3D54C589 /* MainTabView.swift in Sources */,
+				EACE483C2DA45EC600EA4048 /* CommonHeaderView.swift in Sources */,
 				C6F0EFF57C664DDCED3E64B0 /* BottomSheetView.swift in Sources */,
 				1B50ADA54F7DBCB24DE8F9F8 /* MapFeature.swift in Sources */,
 				A75BB59F2380E0537D6D9E3C /* MapView.swift in Sources */,

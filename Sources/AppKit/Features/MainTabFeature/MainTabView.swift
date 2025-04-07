@@ -94,6 +94,7 @@ public struct MainTabView: View {
 }
 
 // MARK: Preview
+
 #Preview {
   MainTabView(
     store: Store<MainTabFeature.State, MainTabFeature.Action>(
@@ -138,4 +139,3 @@ extension MainTabFeature.State.Tab {
     }
   }
 }
-
