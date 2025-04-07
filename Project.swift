@@ -44,15 +44,15 @@ let appInfoPlist: [String: Plist.Value] = [
         "UIInterfaceOrientationLandscapeRight"
     ],
     "UIAppFonts": [
-        "Pretendard-Thin",
-        "Pretendard-ExtraLight",
-        "Pretendard-Light",
-        "Pretendard-Regular",
-        "Pretendard-Medium",
-        "Pretendard-SemiBold",
-        "Pretendard-Bold",
-        "Pretendard-ExtraBold",
-        "Pretendard-Black"
+        "Pretendard-Black.otf",
+        "Pretendard-Bold.otf",
+        "Pretendard-ExtraBold.otf",
+        "Pretendard-ExtraLight.otf",
+        "Pretendard-Light.otf",
+        "Pretendard-Medium.otf",
+        "Pretendard-Regular.otf",
+        "Pretendard-SemiBold.otf",
+        "Pretendard-Thin.otf",
     ]
 ]
 
@@ -135,6 +135,7 @@ let project = Project(
             infoPlist: .extendingDefault(with: [:]),
             sources: "Sources/AppKit/**",
             resources: .resources([
+                "App/Resources/**",
                 "Resources/AppKit/**"
             ]),
             dependencies: [
