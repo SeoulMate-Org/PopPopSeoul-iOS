@@ -1,7 +1,7 @@
 import Foundation
 import ProjectDescription
 
-public let version = "0.1.0"
+public let version = "0.0.1"
 
 public let deploymentTargetString = "17.0"
 public let appDeploymentTargets: DeploymentTargets = .iOS(deploymentTargetString)
@@ -24,10 +24,15 @@ let swiftlintScript: TargetScript = .pre(
 
 let appInfoPlist: [String: Plist.Value] = [
     "CFBundleShortVersionString": Plist.Value(stringLiteral: version),
-    "UILaunchScreen": ["UILaunchScreen": [:]],
+    "UILaunchStoryboardName": "Launch Screen",
     "UIApplicationSceneManifest": [
         "UIApplicationSupportsMultipleScenes": false,
         "UISceneConfigurations": []
+    ],
+    "CFBundleDevelopmentRegion": "$(DEVELOPMENT_LANGUAGE)",
+    "CFBundleLocalizations": [
+        "ko",
+        "en"
     ],
     "ITSAppUsesNonExemptEncryption": false,
     "UIUserInterfaceStyle": "Light",

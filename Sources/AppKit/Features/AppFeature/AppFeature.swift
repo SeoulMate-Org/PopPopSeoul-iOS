@@ -4,6 +4,8 @@ import ComposableArchitecture
 public struct AppFeature {
   public init() {}
   
+  @Dependency(\.continuousClock) var clock
+  
   @Reducer
   public enum Destination {
     case alert(AlertState<Alert>)
@@ -59,6 +61,7 @@ public struct AppFeature {
           if updateNeeded {
             await send(.destination(.presented(.alert(.forceUpdate))))
           } else {
+            try? await clock.sleep(for: .seconds(2))
             await send(.routeChanged(.mainTab))
           }
         }
