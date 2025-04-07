@@ -47,14 +47,12 @@
 		7528D40B2AEEEF0F525EC560 /* FavoritesFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9BE99B19E857012171576B /* FavoritesFeature.swift */; };
 		76B8A75085AF270F63EF46A0 /* ShadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518B0D0A79B46E60E6E248DB /* ShadowModifier.swift */; };
 		79467AC527BD6E73A35E943D /* CasePathsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245B4B55FE52C5AF0CA27B7F /* CasePathsCore.framework */; };
-		79EB76448C2D645FE48A4114 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C283EFD771B8ADD9841891D0 /* IntroView.swift */; };
 		7BEDA59865457BA79FF74ECC /* swift-composable-architecture_ComposableArchitecture.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = F39F21440BA35855CE3C36B1 /* swift-composable-architecture_ComposableArchitecture.bundle */; };
 		7C58DDB48AB30FD47BE17E2A /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AA72E9D52272C102CBE427F /* Dependencies.framework */; };
 		8016DC14A5B3F753D912EE89 /* SeoulMateKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 48E1ADE1047229132D1B8943 /* SeoulMateKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		85238A63BFFF13731D7D5A62 /* swift-composable-architecture_ComposableArchitecture.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = F39F21440BA35855CE3C36B1 /* swift-composable-architecture_ComposableArchitecture.bundle */; };
 		87008C4096E61BFB02DCC0F5 /* UIKitNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C1CEC994AEC2A9198C518E /* UIKitNavigation.framework */; };
 		8A727FB0FF2A4E757CFB1CA9 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F570200CA17C0D80D9E91F /* Assets.swift */; };
-		8C1AEA9503BC5A3F1EEA85DA /* IntroFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340E613BC37C05DC5B44CBF5 /* IntroFeature.swift */; };
 		8C5EA43D5F7E1CC619428DCB /* DependenciesMacros.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8816CEA988459C0964792095 /* DependenciesMacros.framework */; };
 		8DE3D6BB3E65AC039FF149B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3062A1B7DFD85F1FD1BC2D3 /* Assets.xcassets */; };
 		9007747D7EF7FB75FEA6E32C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9576463768703AC3F0BFA212 /* Colors.xcassets */; };
@@ -249,7 +247,6 @@
 		2B28FB573FC7097A47AAA9CF /* Sharing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sharing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B825EBC924AF094AAC0A769 /* SwiftUINavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftUINavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CAC1489C41C66C0A220F498 /* TuistBundle+SeoulMateKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+SeoulMateKit.swift"; sourceTree = "<group>"; };
-		340E613BC37C05DC5B44CBF5 /* IntroFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroFeature.swift; sourceTree = "<group>"; };
 		3497F3251180C380B697DCB3 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A65010649C22205D55590A8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		40C1CEC994AEC2A9198C518E /* UIKitNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIKitNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -291,7 +288,6 @@
 		B4836FC74950D156B58966EE /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		B618900CED8B13010E8C99C4 /* TuistAssets+SeoulMateKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+SeoulMateKit.swift"; sourceTree = "<group>"; };
 		BE759417AF1AEDEB27B1EA7E /* IssueReporting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IssueReporting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C283EFD771B8ADD9841891D0 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		C54655C5B7C54E84F3408E4A /* UIKitNavigationShim.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIKitNavigationShim.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8F7871F173DDF309E440E9 /* Common-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Common-Info.plist"; sourceTree = "<group>"; };
 		CF95F27419BD189FC0BEC73A /* SeoulMateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeoulMateApp.swift; sourceTree = "<group>"; };
@@ -578,15 +574,6 @@
 			path = MainTabFeature;
 			sourceTree = "<group>";
 		};
-		A9BF4B3AC6CD58323A164344 /* IntroFeature */ = {
-			isa = PBXGroup;
-			children = (
-				340E613BC37C05DC5B44CBF5 /* IntroFeature.swift */,
-				C283EFD771B8ADD9841891D0 /* IntroView.swift */,
-			);
-			path = IntroFeature;
-			sourceTree = "<group>";
-		};
 		B7742FB00A1424D6BA65CD30 /* Project */ = {
 			isa = PBXGroup;
 			children = (
@@ -655,7 +642,6 @@
 			isa = PBXGroup;
 			children = (
 				0FFFA9A64A93249E7730933D /* AppFeature */,
-				A9BF4B3AC6CD58323A164344 /* IntroFeature */,
 				A70E452E3C3DEC066FD876FB /* MainTabFeature */,
 			);
 			path = Features;
@@ -981,8 +967,6 @@
 				E219488813B5BABFBC47CA68 /* TuistBundle+SeoulMateKit.swift in Sources */,
 				597E13443994A1237435A6BE /* AppFeature.swift in Sources */,
 				E8841362E9C3274BF9782E76 /* AppView.swift in Sources */,
-				8C1AEA9503BC5A3F1EEA85DA /* IntroFeature.swift in Sources */,
-				79EB76448C2D645FE48A4114 /* IntroView.swift in Sources */,
 				7528D40B2AEEEF0F525EC560 /* FavoritesFeature.swift in Sources */,
 				053E98C3DB11A9A18A6EE23E /* MainTabFeature.swift in Sources */,
 				1AB46FA973D3FCCC3D54C589 /* MainTabView.swift in Sources */,
