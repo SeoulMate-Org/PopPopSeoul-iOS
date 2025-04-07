@@ -1,20 +1,12 @@
-xcassets:
-  - inputs: 
+xcassets:          
+  - inputs:
+    - Resources/AppKit/Assets/Icons.xcassets
     - Resources/AppKit/Assets/Images.xcassets
     outputs:
       - templateName: swift5
-        output: Sources/AppKit/UI/DesignSystem/Images.swift
+        output: Sources/AppKit/UI/DesignSystem/Assets.swift
         params:
-          enumName: Images
-          publicAccess: true
-          
-  - inputs:
-    - Resources/AppKit/Assets/Icons.xcassets
-    outputs:
-      - templateName: swift5
-        output: Sources/AppKit/UI/DesignSystem/Icons.swift
-        params:
-          enumName: Icons
+          enumName: Assets
           publicAccess: true
           
   - inputs:

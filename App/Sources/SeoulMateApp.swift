@@ -1,5 +1,6 @@
 import SwiftUI
 import SeoulMateKit
+import ComposableArchitecture
 
 // MARK: - AppDelegate
 
@@ -16,12 +17,16 @@ struct SeoulMateApp: App {
   @UIApplicationDelegateAdaptor(AppDelegate.self)
   var appDelegate
 
+  static let store = Store(initialState: AppFeature.State()) {
+    AppFeature()
+  }
+
   var body: some Scene {
     WindowGroup {
       if ProcessInfo.processInfo.environment["UITesting"] == "true" {
         EmptyView()
       } else {
-        AppView()
+        AppView(store: Self.store)
       }
 //      } else if _XCTIsTesting {
 //        EmptyView()

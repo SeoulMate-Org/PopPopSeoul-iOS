@@ -6,41 +6,74 @@ public struct AppFeature {
   
   @Reducer
   public enum Destination {
-    case intro(IntroFeature)
+    case alert(AlertState<Alert>)
+    
+    public enum Alert: Equatable {
+      case forceUpdate
+      case latestUpdate
+    }
+  }
+  
+  public enum Route {
+    case launching
+    case mainTab
   }
   
   // MARK: State
   
   @ObservableState
   public struct State {
+    public init() {}
+    
     // Navigation
+    var route: Route = .launching
+    var mainTab: MainTabFeature.State = .init()
     @Presents var destination: Destination.State?
   }
   
   // MARK: Actions
   
   public enum Action {
-    case destination(PresentationAction<Destination.Action>)
     case onAppear
+    
+    // Navigation
+    case routeChanged(Route)
+    case mainTab(MainTabFeature.Action)
+    case destination(PresentationAction<Destination.Action>)
   }
   
   // MARK: Reducer
   
   public var body: some ReducerOf<Self> {
+    Scope(state: \.mainTab, action: \.mainTab) {
+      MainTabFeature()
+    }
+    
     Reduce { state, action in
       switch action {
       case .onAppear:
-        state.destination = .intro(IntroFeature.State())
+        return .run { send in
+          //          let updateNeeded = await checkAppUpdate()
+          // TODO: - Update Check
+          let updateNeeded = false
+          if updateNeeded {
+            await send(.destination(.presented(.alert(.forceUpdate))))
+          } else {
+            await send(.routeChanged(.mainTab))
+          }
+        }
+        
+      case let .routeChanged(route):
+        state.route = route
         return .none
         
       case .destination:
         return .none
+        
+      case .mainTab:
+        return .none
       }
     }
-//    .presentation(
-//      destination: \.$destination,
-//      action: \.destination,
-//      reducer: Destination.init
-//    )
+    .ifLet(\.$destination, action: \.destination)
   }
 }

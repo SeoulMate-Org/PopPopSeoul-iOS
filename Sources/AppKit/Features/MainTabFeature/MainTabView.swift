@@ -39,7 +39,7 @@ public struct MainTabView: View {
     Button {
       store.send(.themeTapped)
     } label: {
-      Icons.themeLine.swiftUIImage
+      Assets.Icons.themeLine.swiftUIImage
     }
     .frame(width: 30, height: 30)
   }
@@ -48,7 +48,7 @@ public struct MainTabView: View {
     Button {
       store.send(.mapTapped)
     } label: {
-      Icons.mapLine.swiftUIImage
+      Assets.Icons.mapLine.swiftUIImage
     }
     .frame(width: 30, height: 30)
   }
@@ -57,7 +57,7 @@ public struct MainTabView: View {
     Button {
       store.send(.likesTapped)
     } label: {
-      Icons.heartLine.swiftUIImage
+      Assets.Icons.heartLine.swiftUIImage
     }
     .frame(width: 30, height: 30)
   }

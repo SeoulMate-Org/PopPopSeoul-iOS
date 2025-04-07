@@ -21,27 +21,32 @@ public typealias AssetImageTypeAlias = ImageAsset.Image
 // MARK: - Asset Catalogs
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
-public enum Icons {
-  public static let arrowLeftLine = ImageAsset(name: "arrow_left_line")
-  public static let arrowRightLine = ImageAsset(name: "arrow_right_line")
-  public static let checkLine = ImageAsset(name: "check_line")
-  public static let deleteBtnLine = ImageAsset(name: "delete_btn_line")
-  public static let embassyLine = ImageAsset(name: "embassy_line")
-  public static let emptyLine = ImageAsset(name: "empty_line")
-  public static let heartFill = ImageAsset(name: "heart_fill")
-  public static let heartLine = ImageAsset(name: "heart_line")
-  public static let hospitalLine = ImageAsset(name: "hospital_line")
-  public static let locationLine = ImageAsset(name: "location_line")
-  public static let mapFill = ImageAsset(name: "map_fill")
-  public static let mapLine = ImageAsset(name: "map_line")
-  public static let searchLine = ImageAsset(name: "search_line")
-  public static let shareLine = ImageAsset(name: "share_line")
-  public static let themFill = ImageAsset(name: "them_fill")
-  public static let themeLine = ImageAsset(name: "theme_line")
-  public static let toiletLine = ImageAsset(name: "toilet_line")
-  public static let warningLine = ImageAsset(name: "warning_line")
-  public static let wifiLine = ImageAsset(name: "wifi_line")
-  public static let xLine = ImageAsset(name: "x_line")
+public enum Assets {
+  public enum Icons {
+    public static let arrowLeftLine = ImageAsset(name: "arrow_left_line")
+    public static let arrowRightLine = ImageAsset(name: "arrow_right_line")
+    public static let checkLine = ImageAsset(name: "check_line")
+    public static let deleteBtnLine = ImageAsset(name: "delete_btn_line")
+    public static let embassyLine = ImageAsset(name: "embassy_line")
+    public static let emptyLine = ImageAsset(name: "empty_line")
+    public static let heartFill = ImageAsset(name: "heart_fill")
+    public static let heartLine = ImageAsset(name: "heart_line")
+    public static let hospitalLine = ImageAsset(name: "hospital_line")
+    public static let locationLine = ImageAsset(name: "location_line")
+    public static let mapFill = ImageAsset(name: "map_fill")
+    public static let mapLine = ImageAsset(name: "map_line")
+    public static let searchLine = ImageAsset(name: "search_line")
+    public static let shareLine = ImageAsset(name: "share_line")
+    public static let themeFill = ImageAsset(name: "theme_fill")
+    public static let themeLine = ImageAsset(name: "theme_line")
+    public static let toiletLine = ImageAsset(name: "toilet_line")
+    public static let warningLine = ImageAsset(name: "warning_line")
+    public static let wifiLine = ImageAsset(name: "wifi_line")
+    public static let xLine = ImageAsset(name: "x_line")
+  }
+  public enum Images {
+    public static let splash = ImageAsset(name: "splash")
+  }
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
