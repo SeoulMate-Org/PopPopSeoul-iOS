@@ -15,52 +15,75 @@ public struct MainTabView: View {
   public init(store: StoreOf<MainTabFeature>) {
     self.store = store
   }
-
+  
   public var body: some View {
-    VStack {
-      Spacer()
-      HStack {
-        Spacer(minLength: 20)
-        
-        tabItem(icon: Assets.Icons.themeLine.swiftUIImage, label: "테마추천") {
-          store.send(.themeTapped)
+    WithViewStore(store, observe: \.selectedTab) { viewStore in
+      VStack(spacing: 0) {
+        Group {
+          switch viewStore.state {
+          case .theme:
+            Spacer()
+          case .map:
+            Spacer()
+          case .likes:
+            Spacer()
+          }
         }
+        .frame(maxHeight: .infinity)
         
-        tabItem(icon: Assets.Icons.mapLine.swiftUIImage, label: "지도") {
-          store.send(.mapTapped)
+        VStack(spacing: 0) {
+          Rectangle()
+            .foregroundColor(Color(.gray25))
+            .frame(height: 1)
+          
+          HStack {
+            tabItem(tab: .theme, isSelected: viewStore.state == .theme) {
+              store.send(.themeTapped)
+            }
+            
+            tabItem(tab: .map, isSelected: viewStore.state == .map) {
+              store.send(.mapTapped)
+            }
+            
+            tabItem(tab: .likes, isSelected: viewStore.state == .likes) {
+              store.send(.likesTapped)
+            }
+          }
+          .frame(height: 58)
+          .background(Color(.appWhite))
+          .contentMargins(.horizontal, 20)
         }
-        
-        tabItem(icon: Assets.Icons.heartLine.swiftUIImage, label: "좋아요") {
-          store.send(.likesTapped)
-        }
+        .modifier(ShadowModifier(
+          shadow: AppShadow(
+            color: Color(.trueBlack).opacity(0.08),
+            x: 0,
+            y: -4,
+            blur: 12,
+            spread: 0
+          )
+        ))
       }
-      .frame(height: 58)
-      .background(Colors.white.swiftUIColor)
-      .modifier(ShadowModifier(
-        shadow: AppShadow(
-          color: Colors.trueBlack.swiftUIColor.opacity(0.08),
-          x: 0,
-          y: -4,
-          blur: 12,
-          spread: 0
-        )
-      ))
     }
   }
   
   @ViewBuilder
-  func tabItem(icon: Image, label: String, action: @escaping () -> Void) -> some View {
+  func tabItem(tab: MainTabFeature.State.Tab, isSelected: Bool, action: @escaping () -> Void) -> some View {
+    
+    let icon = isSelected ? tab.selectedIcon : tab.icon
+    let label = tab.title
+    let color = isSelected ? tab.selectedColor : tab.color
+    
     VStack {
       Button(action: action) {
         VStack(spacing: 4) {
           icon
             .resizable()
             .frame(width: 24, height: 24)
-            .foregroundColor(Colors.gray300.swiftUIColor)
-
+            .foregroundColor(color)
+          
           Text(label)
             .font(Fonts.Pretendard.semiBold.swiftUIFont(size: 12))
-            .foregroundColor(Colors.gray300.swiftUIColor)
+            .foregroundColor(color)
         }
       }
       .buttonStyle(PlainButtonStyle())
@@ -81,3 +104,38 @@ public struct MainTabView: View {
 }
 
 // MARK: - Helper
+
+extension MainTabFeature.State.Tab {
+  var color: Color {
+    Color(.gray300)
+  }
+
+  var selectedColor: Color {
+    Color(.blue500)
+  }
+  
+  var title: String {
+    switch self {
+    case .theme: "tab_theme".localized
+    case .map: "tab_map".localized
+    case .likes: "tab_like".localized
+    }
+  }
+  
+  var icon: Image {
+    switch self {
+    case .theme: Assets.Icons.themeLine.swiftUIImage
+    case .map: Assets.Icons.mapLine.swiftUIImage
+    case .likes: Assets.Icons.heartLine.swiftUIImage
+    }
+  }
+  
+  var selectedIcon: Image {
+    switch self {
+    case .theme: Assets.Icons.themeFill.swiftUIImage
+    case .map: Assets.Icons.mapFill.swiftUIImage
+    case .likes: Assets.Icons.heartFill.swiftUIImage
+    }
+  }
+}
+

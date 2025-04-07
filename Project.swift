@@ -29,7 +29,7 @@ let appInfoPlist: [String: Plist.Value] = [
         "UIApplicationSupportsMultipleScenes": false,
         "UISceneConfigurations": []
     ],
-    "CFBundleDevelopmentRegion": "$(DEVELOPMENT_LANGUAGE)",
+    "CFBundleDevelopmentRegion": "ko",
     "CFBundleLocalizations": [
         "ko",
         "en"
