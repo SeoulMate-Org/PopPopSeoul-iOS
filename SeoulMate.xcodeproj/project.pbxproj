@@ -16,63 +16,88 @@
 		05D68D2DFC506DA04BF27C1A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9576463768703AC3F0BFA212 /* Colors.xcassets */; };
 		078F5BC9766F7BCAEC7311BC /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3A65010649C22205D55590A8 /* Localizable.xcstrings */; };
 		08726E11F4407EF9BAE8A624 /* PerceptionCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F230A3EC17F911929880FCCD /* PerceptionCore.framework */; };
+		0A32AAB9F39E9345939FF6F9 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC31287397495E24EC7427B4 /* Pretendard-Thin.otf */; };
 		0DD65B1240C0E304E9B72199 /* ConcurrencyExtras.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCF463C9AD0A48706B0726E /* ConcurrencyExtras.framework */; };
 		0EDD55747DAA27EF1F6B0A3A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4361D9A0CD6E95518AF9FE1F /* Launch Screen.storyboard */; };
+		126401EBD7A444E6954CCE08 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C77E40EA8D338C597A36120E /* Pretendard-Bold.otf */; };
+		12C89C361197B0B4350AEEB4 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C51729E572CAF44B7453310 /* Pretendard-ExtraLight.otf */; };
+		1537A1C108ED45025CE536D0 /* TuistFonts+SeoulMate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC580F0AD921074144BAC2D9 /* TuistFonts+SeoulMate.swift */; };
 		1AB46FA973D3FCCC3D54C589 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D7E17BAA24197318969E3F /* MainTabView.swift */; };
 		1B50ADA54F7DBCB24DE8F9F8 /* MapFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DDFDDFC394A95438F91EF /* MapFeature.swift */; };
 		2083E4C7601F95C75C9D290B /* Logging.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 6AB88D7576A9C1C46D3B4163 /* Logging.framework */; };
 		20FCC99598B20883EB8D869C /* swift-sharing_Sharing.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 78ED93D4D6E7E8C23A8A70A5 /* swift-sharing_Sharing.bundle */; };
+		218F886ABDF57E7CF0B4B68A /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 51F81CE0A8B94531C1E65E6F /* Pretendard-ExtraBold.otf */; };
 		295E90A3A36852E5EB228F0D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3A65010649C22205D55590A8 /* Localizable.xcstrings */; };
+		3006D9FA154F787E5C2C97A3 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C77E40EA8D338C597A36120E /* Pretendard-Bold.otf */; };
 		300E48F050B571D3E7CA020C /* TuistBundle+SeoulMateDev.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D4189DD2F76CCCAFCEE49 /* TuistBundle+SeoulMateDev.swift */; };
 		31C482CE59E0E1DEF4920783 /* SeoulMateKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48E1ADE1047229132D1B8943 /* SeoulMateKit.framework */; };
 		36138CA685991720A7B6833B /* swift-sharing_Sharing.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 78ED93D4D6E7E8C23A8A70A5 /* swift-sharing_Sharing.bundle */; };
 		3614ADB2348786732572286C /* swift-sharing_Sharing.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 78ED93D4D6E7E8C23A8A70A5 /* swift-sharing_Sharing.bundle */; };
+		3C3BB61B11F5068A04E514F7 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = D98CBF9CD95AA6BA2BE69DD8 /* Pretendard-Black.otf */; };
+		3E49B465609A77892F54C74B /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C51729E572CAF44B7453310 /* Pretendard-ExtraLight.otf */; };
 		417562018E704CE4B2B8851E /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3497F3251180C380B697DCB3 /* Common.framework */; };
 		430E8A92AD85A89992BA07D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8369E2C609C91B5F8657FC4D /* Images.xcassets */; };
 		446B3E3B513F01155FB57B4E /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC27C4A3E7418E6642E7B855 /* Icons.xcassets */; };
 		45D04315A0A6A42CD1F5F79D /* InternalCollectionsUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC9F74CAF3E40D7E77AD917 /* InternalCollectionsUtilities.framework */; };
 		480E65D2D5E7E7B3373090CF /* BottomSheet_BottomSheet.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 1CD41BC9540C02E6017EC239 /* BottomSheet_BottomSheet.bundle */; };
+		4AE95D53273B4FBF6A13725A /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62CB616CDE25E422B50032BD /* Pretendard-SemiBold.otf */; };
 		4E5F9366899BAF51FD099BFC /* Sharing1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47347DBAFA0F8ECB0D7F861C /* Sharing1.framework */; };
 		511F329AE352A2FE519097C6 /* UIKitNavigationShim.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C54655C5B7C54E84F3408E4A /* UIKitNavigationShim.framework */; };
 		5244782FFE9CA675AC39051C /* ComposableArchitecture.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 47E158A76508DD8564D5AFA2 /* ComposableArchitecture.framework */; };
+		52FF3655A000FC85053D113A /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 67128952FBA7CF43BB0898DA /* Pretendard-Regular.otf */; };
 		5791DE2672F7458384575832 /* SeoulMateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF95F27419BD189FC0BEC73A /* SeoulMateApp.swift */; };
 		597E13443994A1237435A6BE /* AppFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CA36BF669A6060B2A86611 /* AppFeature.swift */; };
 		5A6FC0F0B7DB33E193630B3E /* swift-composable-architecture_ComposableArchitecture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F39F21440BA35855CE3C36B1 /* swift-composable-architecture_ComposableArchitecture.bundle */; };
+		5DDDBBDF7261D801F167B01F /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 67128952FBA7CF43BB0898DA /* Pretendard-Regular.otf */; };
+		60370A7AFAA9AE1A15BA3F3A /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4723B6663EF959547B9076F4 /* Pretendard-Light.otf */; };
 		6459C1909A27B20A94C45564 /* SeoulMateKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48E1ADE1047229132D1B8943 /* SeoulMateKit.framework */; };
 		69AAB65C0343E658C6A34F87 /* CustomDump.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B263C4BF04A96945400697E /* CustomDump.framework */; };
 		6DB990F13AC37967293FF101 /* Color++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04116B0AEB1D8D37EC6A7F9D /* Color++.swift */; };
+		711A4ED02878E02E680B47F6 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 499285D5E9471A23AF1BA0B8 /* Pretendard-Medium.otf */; };
 		73809EB0D5DE7562753BBFDD /* XCTestDynamicOverlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E482912CCE48BC5563F9E305 /* XCTestDynamicOverlay.framework */; };
 		744D23701477CB65CACA84E9 /* SeoulMateKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48E1ADE1047229132D1B8943 /* SeoulMateKit.framework */; };
 		750C872CA7D9DB82450CC9A7 /* String+Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522989AD9DE7B5538424A4AD /* String+Language.swift */; };
 		7528D40B2AEEEF0F525EC560 /* FavoritesFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9BE99B19E857012171576B /* FavoritesFeature.swift */; };
 		76B8A75085AF270F63EF46A0 /* ShadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518B0D0A79B46E60E6E248DB /* ShadowModifier.swift */; };
+		76F8371DFDDB8BD688A61A21 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC31287397495E24EC7427B4 /* Pretendard-Thin.otf */; };
 		79467AC527BD6E73A35E943D /* CasePathsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245B4B55FE52C5AF0CA27B7F /* CasePathsCore.framework */; };
 		7BEDA59865457BA79FF74ECC /* swift-composable-architecture_ComposableArchitecture.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = F39F21440BA35855CE3C36B1 /* swift-composable-architecture_ComposableArchitecture.bundle */; };
 		7C58DDB48AB30FD47BE17E2A /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AA72E9D52272C102CBE427F /* Dependencies.framework */; };
 		8016DC14A5B3F753D912EE89 /* SeoulMateKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 48E1ADE1047229132D1B8943 /* SeoulMateKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		85238A63BFFF13731D7D5A62 /* swift-composable-architecture_ComposableArchitecture.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = F39F21440BA35855CE3C36B1 /* swift-composable-architecture_ComposableArchitecture.bundle */; };
 		87008C4096E61BFB02DCC0F5 /* UIKitNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C1CEC994AEC2A9198C518E /* UIKitNavigation.framework */; };
+		874E23C6844D22C0C0C9CFE5 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 67128952FBA7CF43BB0898DA /* Pretendard-Regular.otf */; };
+		887CC205576ACB7027697115 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4723B6663EF959547B9076F4 /* Pretendard-Light.otf */; };
 		8A727FB0FF2A4E757CFB1CA9 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F570200CA17C0D80D9E91F /* Assets.swift */; };
+		8BA88E851D8EA849E49DF82D /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = D98CBF9CD95AA6BA2BE69DD8 /* Pretendard-Black.otf */; };
 		8C5EA43D5F7E1CC619428DCB /* DependenciesMacros.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8816CEA988459C0964792095 /* DependenciesMacros.framework */; };
 		8DE3D6BB3E65AC039FF149B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3062A1B7DFD85F1FD1BC2D3 /* Assets.xcassets */; };
 		9007747D7EF7FB75FEA6E32C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9576463768703AC3F0BFA212 /* Colors.xcassets */; };
 		9128478240AEC0E37E89D996 /* IdentifiedCollections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E86BBD63365A624DBB63C4 /* IdentifiedCollections.framework */; };
+		9B0B165A12ECF78FF309854F /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C77E40EA8D338C597A36120E /* Pretendard-Bold.otf */; };
+		9E37EC8DDB50097C4E67A315 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 51F81CE0A8B94531C1E65E6F /* Pretendard-ExtraBold.otf */; };
 		9F8029648F8D23AFF6579519 /* IssueReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE759417AF1AEDEB27B1EA7E /* IssueReporting.framework */; };
 		A02E389A33C1FDCFC7911790 /* BottomSheet_BottomSheet.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1CD41BC9540C02E6017EC239 /* BottomSheet_BottomSheet.bundle */; };
+		A313F26685A57131E55C5EC6 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62CB616CDE25E422B50032BD /* Pretendard-SemiBold.otf */; };
 		A31F244A4D89491FE295D379 /* swift-composable-architecture_ComposableArchitecture.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = F39F21440BA35855CE3C36B1 /* swift-composable-architecture_ComposableArchitecture.bundle */; };
 		A45E992E925024E43EC4B89C /* Logging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB88D7576A9C1C46D3B4163 /* Logging.framework */; };
+		A48854342D4E013EFF7B6981 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62CB616CDE25E422B50032BD /* Pretendard-SemiBold.otf */; };
 		A54D572EB6DA18AC38F7EA6B /* SwiftUIIntrospect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3105A93CDB6B3DA5A720CC /* SwiftUIIntrospect.framework */; };
 		A75BB59F2380E0537D6D9E3C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61688165487F3D00CD9ED761 /* MapView.swift */; };
+		A7628BC770D7DED8CFC697A9 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 499285D5E9471A23AF1BA0B8 /* Pretendard-Medium.otf */; };
+		AAFE0079FF574C8A0F7D11DE /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 51F81CE0A8B94531C1E65E6F /* Pretendard-ExtraBold.otf */; };
 		AE8145CE9BF2BB3E8A4063D6 /* CombineSchedulers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C4007C7AFB159748F5BD24 /* CombineSchedulers.framework */; };
 		B066F46602890E4E2360BA1D /* swift-composable-architecture_ComposableArchitecture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F39F21440BA35855CE3C36B1 /* swift-composable-architecture_ComposableArchitecture.bundle */; };
 		B16F2340CEC9C0D7910F8FC4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13581ED6FBCBDE0345312E64 /* Colors.swift */; };
 		B254759D60DF7974A7551302 /* swift-composable-architecture_ComposableArchitecture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F39F21440BA35855CE3C36B1 /* swift-composable-architecture_ComposableArchitecture.bundle */; };
 		B318C0BDF426B6F75BF7C3BD /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C88D86236543BA198869E46 /* Logger.swift */; };
 		B4A1CF7778DC5E6F244BB933 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3062A1B7DFD85F1FD1BC2D3 /* Assets.xcassets */; };
+		BA40A21466C5268DE4F8DDFB /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 499285D5E9471A23AF1BA0B8 /* Pretendard-Medium.otf */; };
 		BA6D03C38B4B9DB16D8A7A55 /* SeoulMateKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 48E1ADE1047229132D1B8943 /* SeoulMateKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC5CC27C0A1107DC1EA94523 /* swift-sharing_Sharing.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 78ED93D4D6E7E8C23A8A70A5 /* swift-sharing_Sharing.bundle */; };
 		BD04C84A671BF78B2732FE9F /* TuistAssets+SeoulMateDev.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AEC0C398163CE044366505 /* TuistAssets+SeoulMateDev.swift */; };
 		BDAA0879D2D3D27A5795BBF1 /* TuistAssets+SeoulMate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E71A1BBDC8671C33A908C75 /* TuistAssets+SeoulMate.swift */; };
+		C1EC0B45F0907063287A9302 /* TuistFonts+SeoulMateDev.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AC929282AA85F61F0C8944 /* TuistFonts+SeoulMateDev.swift */; };
 		C2D1A66D6F9BC79A8C815537 /* SwiftUINavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B825EBC924AF094AAC0A769 /* SwiftUINavigation.framework */; };
 		C6F0EFF57C664DDCED3E64B0 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC380216E5F0080E71F99AD9 /* BottomSheetView.swift */; };
 		C8FC7D69C14FE5904D982342 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC27C4A3E7418E6642E7B855 /* Icons.xcassets */; };
@@ -83,10 +108,13 @@
 		D005DA8787C3D5846BB47779 /* BottomSheet_BottomSheet.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 1CD41BC9540C02E6017EC239 /* BottomSheet_BottomSheet.bundle */; };
 		D02A462BFDF5E5F5B616FCD2 /* OrderedCollections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A68D9C050D1F464C260C94E /* OrderedCollections.framework */; };
 		D5E02EC7EC7B26B419C4EE98 /* SwiftNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B690221A605610A926F4D15 /* SwiftNavigation.framework */; };
+		D70AA6DF233838ED6376AFD5 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC31287397495E24EC7427B4 /* Pretendard-Thin.otf */; };
 		DA4884814F937E2145313AD9 /* BottomSheet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9371936642992DBF939F755E /* BottomSheet.framework */; };
 		DD79796C904C21082E9A57D6 /* Perception.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8895718C60B698402C184CDD /* Perception.framework */; };
+		DE65E9BE0EFD1DFF230ED7A0 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4723B6663EF959547B9076F4 /* Pretendard-Light.otf */; };
 		DEA7E7CCACCFD5FC15BAAC0B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE9222F2A2CC98A4E8749AD /* MapViewController.swift */; };
 		DF7A7293E34942ED956BF78A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8369E2C609C91B5F8657FC4D /* Images.xcassets */; };
+		DFF7D8696A3819A921417772 /* TuistFonts+SeoulMateKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EFAB24595153B32CC67D6A /* TuistFonts+SeoulMateKit.swift */; };
 		E15C1E751AE761ADA4047E3B /* BottomSheet_BottomSheet.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1CD41BC9540C02E6017EC239 /* BottomSheet_BottomSheet.bundle */; };
 		E1D144B6D8D539F691A9E17C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8369E2C609C91B5F8657FC4D /* Images.xcassets */; };
 		E219488813B5BABFBC47CA68 /* TuistBundle+SeoulMateKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAC1489C41C66C0A220F498 /* TuistBundle+SeoulMateKit.swift */; };
@@ -95,11 +123,14 @@
 		E8841362E9C3274BF9782E76 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4836FC74950D156B58966EE /* AppView.swift */; };
 		EA3F39992F6BCD43747FFFA4 /* SeoulMateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF95F27419BD189FC0BEC73A /* SeoulMateApp.swift */; };
 		EAC80BBD8EB589AA19F701D1 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3A65010649C22205D55590A8 /* Localizable.xcstrings */; };
+		EACE483A2DA44CEE00EA4048 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACE48392DA44CEE00EA4048 /* Fonts.swift */; };
 		F0686CD49D1E6A1ACA695983 /* ComposableCoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA32B70082EC943D04BB2B5 /* ComposableCoreLocation.framework */; };
 		F0C11B526CBD98AE5A46427B /* BottomSheet_BottomSheet.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1CD41BC9540C02E6017EC239 /* BottomSheet_BottomSheet.bundle */; };
+		F55DE23C32F6D8C04E0A155C /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C51729E572CAF44B7453310 /* Pretendard-ExtraLight.otf */; };
 		F722946DEAB5094D71291518 /* Sharing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B28FB573FC7097A47AAA9CF /* Sharing.framework */; };
 		F80D63C3A204BEFC8A732D12 /* ComposableCoreLocation.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = ACA32B70082EC943D04BB2B5 /* ComposableCoreLocation.framework */; };
 		F872A5AFC4BA09142F76734C /* CasePaths.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E1D37C44F8EE4C728D94BD /* CasePaths.framework */; };
+		F964D2A6773ACD2536436555 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = D98CBF9CD95AA6BA2BE69DD8 /* Pretendard-Black.otf */; };
 		FC5DC81BA6FB8DB5866B1B36 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4361D9A0CD6E95518AF9FE1F /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -242,20 +273,26 @@
 		0B263C4BF04A96945400697E /* CustomDump.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CustomDump.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13581ED6FBCBDE0345312E64 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		14847FADD0F3E2A9143F29FD /* SeoulMate-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SeoulMate-Info.plist"; sourceTree = "<group>"; };
+		18EFAB24595153B32CC67D6A /* TuistFonts+SeoulMateKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistFonts+SeoulMateKit.swift"; sourceTree = "<group>"; };
 		1CD41BC9540C02E6017EC239 /* BottomSheet_BottomSheet.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BottomSheet_BottomSheet.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		245B4B55FE52C5AF0CA27B7F /* CasePathsCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CasePathsCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B28FB573FC7097A47AAA9CF /* Sharing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sharing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B825EBC924AF094AAC0A769 /* SwiftUINavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftUINavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CAC1489C41C66C0A220F498 /* TuistBundle+SeoulMateKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+SeoulMateKit.swift"; sourceTree = "<group>"; };
 		3497F3251180C380B697DCB3 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37AC929282AA85F61F0C8944 /* TuistFonts+SeoulMateDev.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistFonts+SeoulMateDev.swift"; sourceTree = "<group>"; };
 		3A65010649C22205D55590A8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		40C1CEC994AEC2A9198C518E /* UIKitNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIKitNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4361D9A0CD6E95518AF9FE1F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		4723B6663EF959547B9076F4 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
 		47347DBAFA0F8ECB0D7F861C /* Sharing1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sharing1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E158A76508DD8564D5AFA2 /* ComposableArchitecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ComposableArchitecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48E1ADE1047229132D1B8943 /* SeoulMateKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SeoulMateKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		499285D5E9471A23AF1BA0B8 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		4C51729E572CAF44B7453310 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
 		4C88D86236543BA198869E46 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		518B0D0A79B46E60E6E248DB /* ShadowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowModifier.swift; sourceTree = "<group>"; };
+		51F81CE0A8B94531C1E65E6F /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
 		522989AD9DE7B5538424A4AD /* String+Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Language.swift"; sourceTree = "<group>"; };
 		54F570200CA17C0D80D9E91F /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		5A68D9C050D1F464C260C94E /* OrderedCollections.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OrderedCollections.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -264,6 +301,8 @@
 		5DCF463C9AD0A48706B0726E /* ConcurrencyExtras.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ConcurrencyExtras.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		600AC041831DEA476B0F83A1 /* SeoulMateKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SeoulMateKit-Info.plist"; sourceTree = "<group>"; };
 		61688165487F3D00CD9ED761 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		62CB616CDE25E422B50032BD /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		67128952FBA7CF43BB0898DA /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		6AA72E9D52272C102CBE427F /* Dependencies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dependencies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB88D7576A9C1C46D3B4163 /* Logging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Logging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC9F74CAF3E40D7E77AD917 /* InternalCollectionsUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = InternalCollectionsUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -289,17 +328,22 @@
 		B618900CED8B13010E8C99C4 /* TuistAssets+SeoulMateKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+SeoulMateKit.swift"; sourceTree = "<group>"; };
 		BE759417AF1AEDEB27B1EA7E /* IssueReporting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IssueReporting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C54655C5B7C54E84F3408E4A /* UIKitNavigationShim.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIKitNavigationShim.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C77E40EA8D338C597A36120E /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		CC580F0AD921074144BAC2D9 /* TuistFonts+SeoulMate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistFonts+SeoulMate.swift"; sourceTree = "<group>"; };
 		CC8F7871F173DDF309E440E9 /* Common-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Common-Info.plist"; sourceTree = "<group>"; };
 		CF95F27419BD189FC0BEC73A /* SeoulMateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeoulMateApp.swift; sourceTree = "<group>"; };
 		D0A154FF7D510E540A7B4006 /* MainTabFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabFeature.swift; sourceTree = "<group>"; };
 		D0E1D37C44F8EE4C728D94BD /* CasePaths.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CasePaths.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D225FBE5903439320B022F13 /* SeoulMateKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeoulMateKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D98CBF9CD95AA6BA2BE69DD8 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
 		DA4F2A2DA2DF100742F28680 /* SeoulMateKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SeoulMateKitTests-Info.plist"; sourceTree = "<group>"; };
 		DC27C4A3E7418E6642E7B855 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		DC31287397495E24EC7427B4 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
 		DF3105A93CDB6B3DA5A720CC /* SwiftUIIntrospect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftUIIntrospect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3062A1B7DFD85F1FD1BC2D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E482912CCE48BC5563F9E305 /* XCTestDynamicOverlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XCTestDynamicOverlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7EC29CE28929EFB4731C604 /* SeoulMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeoulMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EACE48392DA44CEE00EA4048 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		F1A763F0BDE698EF6090BD08 /* Sharing2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sharing2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F230A3EC17F911929880FCCD /* PerceptionCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PerceptionCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F39F21440BA35855CE3C36B1 /* swift-composable-architecture_ComposableArchitecture.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-composable-architecture_ComposableArchitecture.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -379,6 +423,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01EBD549967C9ABBEA6C007E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D98CBF9CD95AA6BA2BE69DD8 /* Pretendard-Black.otf */,
+				C77E40EA8D338C597A36120E /* Pretendard-Bold.otf */,
+				51F81CE0A8B94531C1E65E6F /* Pretendard-ExtraBold.otf */,
+				4C51729E572CAF44B7453310 /* Pretendard-ExtraLight.otf */,
+				4723B6663EF959547B9076F4 /* Pretendard-Light.otf */,
+				499285D5E9471A23AF1BA0B8 /* Pretendard-Medium.otf */,
+				67128952FBA7CF43BB0898DA /* Pretendard-Regular.otf */,
+				62CB616CDE25E422B50032BD /* Pretendard-SemiBold.otf */,
+				DC31287397495E24EC7427B4 /* Pretendard-Thin.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		036B34C326BF639B1FBA92EF /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -588,6 +648,7 @@
 		C6337DFB4ADBEDF70EFC88A0 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				EACE48392DA44CEE00EA4048 /* Fonts.swift */,
 				54F570200CA17C0D80D9E91F /* Assets.swift */,
 				04116B0AEB1D8D37EC6A7F9D /* Color++.swift */,
 				13581ED6FBCBDE0345312E64 /* Colors.swift */,
@@ -605,6 +666,9 @@
 				7DAC6C66A98CDA81562E146E /* TuistBundle+SeoulMate.swift */,
 				847D4189DD2F76CCCAFCEE49 /* TuistBundle+SeoulMateDev.swift */,
 				2CAC1489C41C66C0A220F498 /* TuistBundle+SeoulMateKit.swift */,
+				CC580F0AD921074144BAC2D9 /* TuistFonts+SeoulMate.swift */,
+				37AC929282AA85F61F0C8944 /* TuistFonts+SeoulMateDev.swift */,
+				18EFAB24595153B32CC67D6A /* TuistFonts+SeoulMateKit.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -625,6 +689,7 @@
 			isa = PBXGroup;
 			children = (
 				96CBC42CC54BA9B5275C485C /* Assets */,
+				01EBD549967C9ABBEA6C007E /* Fonts */,
 				675C80D33A9C49246553F25B /* L10n */,
 			);
 			path = AppKit;
@@ -782,12 +847,11 @@
 			};
 			buildConfigurationList = B76C0B83AA53C9BCA1291867 /* Build configuration list for PBXProject "SeoulMate" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = ko;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				Base,
 				en,
-				ko,
 			);
 			mainGroup = 3524CB0240593CF904FD850E;
 			productRefGroup = 036B34C326BF639B1FBA92EF /* Products */;
@@ -811,6 +875,15 @@
 				9007747D7EF7FB75FEA6E32C /* Colors.xcassets in Resources */,
 				446B3E3B513F01155FB57B4E /* Icons.xcassets in Resources */,
 				DF7A7293E34942ED956BF78A /* Images.xcassets in Resources */,
+				3C3BB61B11F5068A04E514F7 /* Pretendard-Black.otf in Resources */,
+				126401EBD7A444E6954CCE08 /* Pretendard-Bold.otf in Resources */,
+				218F886ABDF57E7CF0B4B68A /* Pretendard-ExtraBold.otf in Resources */,
+				3E49B465609A77892F54C74B /* Pretendard-ExtraLight.otf in Resources */,
+				887CC205576ACB7027697115 /* Pretendard-Light.otf in Resources */,
+				A7628BC770D7DED8CFC697A9 /* Pretendard-Medium.otf in Resources */,
+				5DDDBBDF7261D801F167B01F /* Pretendard-Regular.otf in Resources */,
+				A313F26685A57131E55C5EC6 /* Pretendard-SemiBold.otf in Resources */,
+				76F8371DFDDB8BD688A61A21 /* Pretendard-Thin.otf in Resources */,
 				295E90A3A36852E5EB228F0D /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -841,6 +914,15 @@
 				05D68D2DFC506DA04BF27C1A /* Colors.xcassets in Resources */,
 				C8FC7D69C14FE5904D982342 /* Icons.xcassets in Resources */,
 				E1D144B6D8D539F691A9E17C /* Images.xcassets in Resources */,
+				F964D2A6773ACD2536436555 /* Pretendard-Black.otf in Resources */,
+				9B0B165A12ECF78FF309854F /* Pretendard-Bold.otf in Resources */,
+				9E37EC8DDB50097C4E67A315 /* Pretendard-ExtraBold.otf in Resources */,
+				F55DE23C32F6D8C04E0A155C /* Pretendard-ExtraLight.otf in Resources */,
+				DE65E9BE0EFD1DFF230ED7A0 /* Pretendard-Light.otf in Resources */,
+				711A4ED02878E02E680B47F6 /* Pretendard-Medium.otf in Resources */,
+				874E23C6844D22C0C0C9CFE5 /* Pretendard-Regular.otf in Resources */,
+				A48854342D4E013EFF7B6981 /* Pretendard-SemiBold.otf in Resources */,
+				D70AA6DF233838ED6376AFD5 /* Pretendard-Thin.otf in Resources */,
 				078F5BC9766F7BCAEC7311BC /* Localizable.xcstrings in Resources */,
 				E15C1E751AE761ADA4047E3B /* BottomSheet_BottomSheet.bundle in Resources */,
 				B254759D60DF7974A7551302 /* swift-composable-architecture_ComposableArchitecture.bundle in Resources */,
@@ -857,6 +939,15 @@
 				C97E38537DA585203D611013 /* Colors.xcassets in Resources */,
 				045EA3BB456EDDDC8CAB093C /* Icons.xcassets in Resources */,
 				430E8A92AD85A89992BA07D4 /* Images.xcassets in Resources */,
+				8BA88E851D8EA849E49DF82D /* Pretendard-Black.otf in Resources */,
+				3006D9FA154F787E5C2C97A3 /* Pretendard-Bold.otf in Resources */,
+				AAFE0079FF574C8A0F7D11DE /* Pretendard-ExtraBold.otf in Resources */,
+				12C89C361197B0B4350AEEB4 /* Pretendard-ExtraLight.otf in Resources */,
+				60370A7AFAA9AE1A15BA3F3A /* Pretendard-Light.otf in Resources */,
+				BA40A21466C5268DE4F8DDFB /* Pretendard-Medium.otf in Resources */,
+				52FF3655A000FC85053D113A /* Pretendard-Regular.otf in Resources */,
+				4AE95D53273B4FBF6A13725A /* Pretendard-SemiBold.otf in Resources */,
+				0A32AAB9F39E9345939FF6F9 /* Pretendard-Thin.otf in Resources */,
 				EAC80BBD8EB589AA19F701D1 /* Localizable.xcstrings in Resources */,
 				F0C11B526CBD98AE5A46427B /* BottomSheet_BottomSheet.bundle in Resources */,
 				B066F46602890E4E2360BA1D /* swift-composable-architecture_ComposableArchitecture.bundle in Resources */,
@@ -965,6 +1056,7 @@
 			files = (
 				0099DE467D2ACD001D0BCF93 /* TuistAssets+SeoulMateKit.swift in Sources */,
 				E219488813B5BABFBC47CA68 /* TuistBundle+SeoulMateKit.swift in Sources */,
+				DFF7D8696A3819A921417772 /* TuistFonts+SeoulMateKit.swift in Sources */,
 				597E13443994A1237435A6BE /* AppFeature.swift in Sources */,
 				E8841362E9C3274BF9782E76 /* AppView.swift in Sources */,
 				7528D40B2AEEEF0F525EC560 /* FavoritesFeature.swift in Sources */,
@@ -978,6 +1070,7 @@
 				8A727FB0FF2A4E757CFB1CA9 /* Assets.swift in Sources */,
 				6DB990F13AC37967293FF101 /* Color++.swift in Sources */,
 				B16F2340CEC9C0D7910F8FC4 /* Colors.swift in Sources */,
+				EACE483A2DA44CEE00EA4048 /* Fonts.swift in Sources */,
 				76B8A75085AF270F63EF46A0 /* ShadowModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -989,6 +1082,7 @@
 				5791DE2672F7458384575832 /* SeoulMateApp.swift in Sources */,
 				BD04C84A671BF78B2732FE9F /* TuistAssets+SeoulMateDev.swift in Sources */,
 				300E48F050B571D3E7CA020C /* TuistBundle+SeoulMateDev.swift in Sources */,
+				C1EC0B45F0907063287A9302 /* TuistFonts+SeoulMateDev.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -999,6 +1093,7 @@
 				EA3F39992F6BCD43747FFFA4 /* SeoulMateApp.swift in Sources */,
 				BDAA0879D2D3D27A5795BBF1 /* TuistAssets+SeoulMate.swift in Sources */,
 				CAE21738DDC4216478D2E4D8 /* TuistBundle+SeoulMate.swift in Sources */,
+				1537A1C108ED45025CE536D0 /* TuistFonts+SeoulMate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1181,56 +1276,56 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-sharing_Sharing",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/BottomSheet",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing2",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableCoreLocation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Perception",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftDiagnostics",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPlugin",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacroExpansion",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-composable-architecture_ComposableArchitecture",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/OrderedCollections",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParser",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IssueReporting",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftUIIntrospect",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Logging",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax510",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPluginMessageHandling",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/InternalCollectionsUtilities",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacrosPlugin",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/XCTestDynamicOverlay",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftOperators",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ConcurrencyExtras",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IdentifiedCollections",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Clocks",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePaths",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftBasicFormat",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax509",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Dependencies",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing1",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitectureMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Common",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax600",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CombineSchedulers",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/BottomSheet_BottomSheet",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/_SwiftSyntaxCShims",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftNavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxBuilder",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitecture",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigationShim",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftOperators",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePaths",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IssueReporting",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CombineSchedulers",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Clocks",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax600",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax509",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParser",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing2",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax510",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IdentifiedCollections",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-sharing_Sharing",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Logging",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableCoreLocation",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftUINavigation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitectureMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftNavigation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Perception",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/BottomSheet_BottomSheet",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxBuilder",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsCore",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParserDiagnostics",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ConcurrencyExtras",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/XCTestDynamicOverlay",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftUIIntrospect",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftBasicFormat",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-composable-architecture_ComposableArchitecture",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/InternalCollectionsUtilities",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPluginMessageHandling",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftDiagnostics",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing1",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPlugin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Common",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigationShim",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/OrderedCollections",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Dependencies",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/BottomSheet",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacrosPlugin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/_SwiftSyntaxCShims",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CustomDump",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacros",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1385,52 +1480,52 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IssueReporting",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/_SwiftSyntaxCShims",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftOperators",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/OrderedCollections",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax509",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IdentifiedCollections",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPlugin",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxBuilder",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing1",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CombineSchedulers",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-sharing_Sharing",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftUINavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPluginMessageHandling",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParserDiagnostics",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacrosPlugin",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Clocks",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitectureMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax600",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Perception",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigationShim",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-composable-architecture_ComposableArchitecture",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CustomDump",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Dependencies",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax510",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftBasicFormat",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePaths",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ConcurrencyExtras",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/XCTestDynamicOverlay",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/InternalCollectionsUtilities",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing2",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax600",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IdentifiedCollections",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsMacros",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParser",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/OrderedCollections",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax510",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxBuilder",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionCore",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacroExpansion",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Logging",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftNavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableCoreLocation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitecture",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IssueReporting",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/_SwiftSyntaxCShims",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/XCTestDynamicOverlay",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ConcurrencyExtras",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftDiagnostics",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing2",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-sharing_Sharing",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftBasicFormat",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Dependencies",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CombineSchedulers",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitecture",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/InternalCollectionsUtilities",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CustomDump",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Perception",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing1",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPlugin",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftOperators",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax509",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Clocks",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPluginMessageHandling",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacrosPlugin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePaths",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftNavigation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitectureMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Logging",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-composable-architecture_ComposableArchitecture",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableCoreLocation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParserDiagnostics",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",

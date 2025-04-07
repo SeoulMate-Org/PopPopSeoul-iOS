@@ -56,10 +56,11 @@ public struct MainTabView: View {
           icon
             .resizable()
             .frame(width: 24, height: 24)
+            .foregroundColor(Colors.gray300.swiftUIColor)
 
           Text(label)
-            .font(.system(size: 12))
-            .foregroundColor(.black)
+            .font(Fonts.Pretendard.semiBold.swiftUIFont(size: 12))
+            .foregroundColor(Colors.gray300.swiftUIColor)
         }
       }
       .buttonStyle(PlainButtonStyle())

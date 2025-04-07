@@ -42,6 +42,17 @@ let appInfoPlist: [String: Plist.Value] = [
         "UIInterfaceOrientationPortraitUpsideDown",
         "UIInterfaceOrientationLandscapeLeft",
         "UIInterfaceOrientationLandscapeRight"
+    ],
+    "UIAppFonts": [
+        "Pretendard-Thin",
+        "Pretendard-ExtraLight",
+        "Pretendard-Light",
+        "Pretendard-Regular",
+        "Pretendard-Medium",
+        "Pretendard-SemiBold",
+        "Pretendard-Bold",
+        "Pretendard-ExtraBold",
+        "Pretendard-Black"
     ]
 ]
 
