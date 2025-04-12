@@ -92,3 +92,5 @@ TuistEnv/
 
 ### SnapshotTesting (optional) ###
 __Snapshots__/
+
+*.p8
