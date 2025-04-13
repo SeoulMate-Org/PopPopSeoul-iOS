@@ -58,10 +58,10 @@ let appInfoPlist: [String: Plist.Value] = [
 
 func createAppTarget(suffix: String = "", isDev: Bool = false, scripts: [TargetScript] = [], dependencies: [TargetDependency] = []) -> Target {
     .target(
-        name: "SeoulMate" + suffix,
+        name: "PopPopSeoul" + suffix,
         destinations: appDestinations,
         product: .app,
-        bundleId: "dev.suni.SeoulMate",
+        bundleId: "dev.suni.PopPopSeoul",
         deploymentTargets: appDeploymentTargets,
         infoPlist: .extendingDefault(with: appInfoPlist),
         sources: "App/Sources/**",
@@ -72,7 +72,7 @@ func createAppTarget(suffix: String = "", isDev: Bool = false, scripts: [TargetS
         scripts: scripts
         + [swiftlintScript],
         
-        dependencies: [.target(name: "SeoulMateKit")]
+        dependencies: [.target(name: "PopPopSeoulKit")]
         + dependencies,
         
         settings: .settings(
@@ -96,7 +96,7 @@ func createAppTarget(suffix: String = "", isDev: Bool = false, scripts: [TargetS
 
 
 let project = Project(
-    name: "SeoulMate",
+    name: "PopPopSeoul",
     options: .options(
         disableShowEnvironmentVarsInScriptPhases: true,
         textSettings: .textSettings(indentWidth: 2, tabWidth: 2)
@@ -127,10 +127,10 @@ let project = Project(
             dependencies: []
         ),
         .target(
-            name: "SeoulMateKit",
+            name: "PopPopSeoulKit",
             destinations: appDestinations,
             product: Environment.forPreview.getBoolean(default: false) ? .framework : .staticFramework,
-            bundleId: "dev.suni.SeoulMateKit",
+            bundleId: "dev.suni.PopPopSeoulKit",
             deploymentTargets: appDeploymentTargets,
             infoPlist: .extendingDefault(with: [:]),
             sources: "Sources/AppKit/**",
@@ -144,25 +144,26 @@ let project = Project(
                 .external(name: "ComposableCoreLocation"),
                 .external(name: "SwiftUIIntrospect"),
                 .external(name: "Logging"),
+                .external(name: "NMapsMap"),
                 .target(name: "Common"),
             ]
         ),
         .target(
-            name: "SeoulMateKitTests",
+            name: "PopPopSeoulKitTests",
             destinations: appDestinations,
             product: .unitTests,
-            bundleId: "dev.suni.SeoulMatekitTests",
+            bundleId: "dev.suni.PopPopSeoulkitTests",
             infoPlist: .default,
             sources: "Tests/AppKit/**",
             dependencies: [
-                .target(name: "SeoulMateKit")
+                .target(name: "PopPopSeoulKit")
             ]
         ),
         .target(
             name: "Common",
             destinations: appDestinations,
             product: .staticFramework,
-            bundleId: "dev.sunidev.seoulmate.common",
+            bundleId: "dev.sunidev.poppopseoul.common",
             infoPlist: .default,
             sources: "Sources/Common/**",
             dependencies: [

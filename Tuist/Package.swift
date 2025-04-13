@@ -29,6 +29,10 @@ let package = Package(
         .package(
             url: "https://github.com/siteline/SwiftUI-Introspect.git",
             .upToNextMajor(from: "1.0.0")
+        ),
+        .package(
+            url: "https://github.com/navermaps/SPM-NMapsMap.git",
+            .upToNextMajor(from: "3.16.1")
         )
     ]
 )

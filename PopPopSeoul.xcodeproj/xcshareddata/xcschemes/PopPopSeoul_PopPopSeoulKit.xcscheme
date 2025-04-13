@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "096047DC2A848A5F8087ADAB"
-               BuildableName = "SeoulMateKit.framework"
-               BlueprintName = "SeoulMateKit"
-               ReferencedContainer = "container:SeoulMate.xcodeproj">
+               BlueprintIdentifier = "1C5CB80E07369F65CF579DE2"
+               BuildableName = "PopPopSeoul_PopPopSeoulKit.bundle"
+               BlueprintName = "PopPopSeoul_PopPopSeoulKit"
+               ReferencedContainer = "container:PopPopSeoul.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -26,19 +26,9 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      disableMainThreadChecker = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6C47BB480F102EDF0C27BE4D"
-               BuildableName = "SeoulMateKitTests.xctest"
-               BlueprintName = "SeoulMateKitTests"
-               ReferencedContainer = "container:SeoulMate.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -54,10 +44,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "096047DC2A848A5F8087ADAB"
-            BuildableName = "SeoulMateKit.framework"
-            BlueprintName = "SeoulMateKit"
-            ReferencedContainer = "container:SeoulMate.xcodeproj">
+            BlueprintIdentifier = "1C5CB80E07369F65CF579DE2"
+            BuildableName = "PopPopSeoul_PopPopSeoulKit.bundle"
+            BlueprintName = "PopPopSeoul_PopPopSeoulKit"
+            ReferencedContainer = "container:PopPopSeoul.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </LaunchAction>
@@ -70,10 +60,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "096047DC2A848A5F8087ADAB"
-            BuildableName = "SeoulMateKit.framework"
-            BlueprintName = "SeoulMateKit"
-            ReferencedContainer = "container:SeoulMate.xcodeproj">
+            BlueprintIdentifier = "1C5CB80E07369F65CF579DE2"
+            BuildableName = "PopPopSeoul_PopPopSeoulKit.bundle"
+            BlueprintName = "PopPopSeoul_PopPopSeoulKit"
+            ReferencedContainer = "container:PopPopSeoul.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

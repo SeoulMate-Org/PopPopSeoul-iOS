@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4411C7BD319E0E303D893A16"
-               BuildableName = "Common.framework"
-               BlueprintName = "Common"
-               ReferencedContainer = "container:SeoulMate.xcodeproj">
+               BlueprintIdentifier = "40ABD32B4672CDF574E1C584"
+               BuildableName = "PopPopSeoulDev.app"
+               BlueprintName = "PopPopSeoulDev"
+               ReferencedContainer = "container:PopPopSeoul.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -41,15 +41,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4411C7BD319E0E303D893A16"
-            BuildableName = "Common.framework"
-            BlueprintName = "Common"
-            ReferencedContainer = "container:SeoulMate.xcodeproj">
+            BlueprintIdentifier = "40ABD32B4672CDF574E1C584"
+            BuildableName = "PopPopSeoulDev.app"
+            BlueprintName = "PopPopSeoulDev"
+            ReferencedContainer = "container:PopPopSeoul.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -57,15 +58,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4411C7BD319E0E303D893A16"
-            BuildableName = "Common.framework"
-            BlueprintName = "Common"
-            ReferencedContainer = "container:SeoulMate.xcodeproj">
+            BlueprintIdentifier = "40ABD32B4672CDF574E1C584"
+            BuildableName = "PopPopSeoulDev.app"
+            BlueprintName = "PopPopSeoulDev"
+            ReferencedContainer = "container:PopPopSeoul.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
