@@ -1,5 +1,5 @@
 import SwiftUI
-import SeoulMateKit
+import PopPopSeoulKit
 import ComposableArchitecture
 
 // MARK: - AppDelegate
@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 // MARK: - SeoulMateApp
 
 @main
-struct SeoulMateApp: App {
+struct PopPopSeoulApp: App {
   @UIApplicationDelegateAdaptor(AppDelegate.self)
   var appDelegate
 

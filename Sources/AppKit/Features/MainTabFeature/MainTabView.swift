@@ -33,7 +33,7 @@ public struct MainTabView: View {
         
         VStack(spacing: 0) {
           Rectangle()
-            .foregroundColor(Color(.gray25))
+            .foregroundColor(Colors.gray25.swiftUIColor)
             .frame(height: 1)
           
           HStack {
@@ -50,12 +50,12 @@ public struct MainTabView: View {
             }
           }
           .frame(height: 58)
-          .background(Color(.appWhite))
+          .background(Color(Colors.appWhite.swiftUIColor))
           .contentMargins(.horizontal, 20)
         }
         .modifier(ShadowModifier(
           shadow: AppShadow(
-            color: Color(.trueBlack).opacity(0.08),
+            color: Color(Colors.trueBlack.swiftUIColor).opacity(0.08),
             x: 0,
             y: -4,
             blur: 12,
@@ -108,11 +108,11 @@ public struct MainTabView: View {
 
 extension MainTabFeature.State.Tab {
   var color: Color {
-    Color(.gray300)
+    Color(Colors.gray300.swiftUIColor)
   }
 
   var selectedColor: Color {
-    Color(.blue500)
+    Color(Colors.blue500.swiftUIColor)
   }
   
   var title: String {
