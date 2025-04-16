@@ -1,53 +1,53 @@
 {
   "sourceLanguage" : "ko",
   "strings" : {
-    "tab_like" : {
+    "tab_home" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "like"
+            "value" : "Home"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "좋아요"
+            "value" : "홈"
           }
         }
       }
     },
-    "tab_map" : {
+    "tab_mychallenge" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "map"
+            "value" : "My Challenge"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "지도"
+            "value" : "나의 챌린지"
           }
         }
       }
     },
-    "tab_theme" : {
+    "tab_profile" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "theme"
+            "value" : "MY"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "테마 추천"
+            "value" : "MY"
           }
         }
       }

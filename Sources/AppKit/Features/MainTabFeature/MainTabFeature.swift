@@ -16,10 +16,10 @@ public struct MainTabFeature {
 
   @ObservableState
   public struct State: Equatable {
-    public var selectedTab: Tab = .theme
+    public var selectedTab: Tab = .home
 
     public enum Tab {
-      case theme, map, likes
+      case home, myPop, profile
     }
   }
   
@@ -27,9 +27,9 @@ public struct MainTabFeature {
   
   @CasePathable
   public enum Action: Equatable {
-    case themeTapped
-    case mapTapped
-    case likesTapped
+    case homeTapped
+    case myPopTapped
+    case profileTapped
   }
   
   // MARK: Reducer
@@ -39,14 +39,14 @@ public struct MainTabFeature {
     
     Reduce { state, action in
       switch action {
-      case .themeTapped:
-        state.selectedTab = .theme
+      case .homeTapped:
+        state.selectedTab = .home
         return .none
-      case .mapTapped:
-        state.selectedTab = .map
+      case .myPopTapped:
+        state.selectedTab = .myPop
         return .none
-      case .likesTapped:
-        state.selectedTab = .likes
+      case .profileTapped:
+        state.selectedTab = .profile
         return .none
       }
     }

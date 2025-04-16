@@ -21,11 +21,11 @@ public struct MainTabView: View {
       VStack(spacing: 0) {
         Group {
           switch viewStore.state {
-          case .theme:
+          case .home:
             Spacer()
-          case .map:
+          case .myPop:
             Spacer()
-          case .likes:
+          case .profile:
             Spacer()
           }
         }
@@ -37,16 +37,16 @@ public struct MainTabView: View {
             .frame(height: 1)
           
           HStack {
-            tabItem(tab: .theme, isSelected: viewStore.state == .theme) {
-              store.send(.themeTapped)
+            tabItem(tab: .home, isSelected: viewStore.state == .home) {
+              store.send(.homeTapped)
             }
             
-            tabItem(tab: .map, isSelected: viewStore.state == .map) {
-              store.send(.mapTapped)
+            tabItem(tab: .myPop, isSelected: viewStore.state == .myPop) {
+              store.send(.myPopTapped)
             }
             
-            tabItem(tab: .likes, isSelected: viewStore.state == .likes) {
-              store.send(.likesTapped)
+            tabItem(tab: .profile, isSelected: viewStore.state == .profile) {
+              store.send(.profileTapped)
             }
           }
           .frame(height: 58)
@@ -117,25 +117,25 @@ extension MainTabFeature.State.Tab {
   
   var title: String {
     switch self {
-    case .theme: "tab_theme".localized
-    case .map: "tab_map".localized
-    case .likes: "tab_like".localized
+    case .home: "tab_home".localized
+    case .myPop: "tab_mychallenge".localized
+    case .profile: "tab_profile".localized
     }
   }
   
   var icon: Image {
     switch self {
-    case .theme: Assets.Icons.themeLine.swiftUIImage
-    case .map: Assets.Icons.mapLine.swiftUIImage
-    case .likes: Assets.Icons.heartLine.swiftUIImage
+    case .home: Assets.Icons.homeLine.swiftUIImage
+    case .myPop: Assets.Icons.popLine.swiftUIImage
+    case .profile: Assets.Icons.profileLine.swiftUIImage
     }
   }
   
   var selectedIcon: Image {
     switch self {
-    case .theme: Assets.Icons.themeFill.swiftUIImage
-    case .map: Assets.Icons.mapFill.swiftUIImage
-    case .likes: Assets.Icons.heartFill.swiftUIImage
+    case .home: Assets.Icons.homeFill.swiftUIImage
+    case .myPop: Assets.Icons.popFill.swiftUIImage
+    case .profile: Assets.Icons.profileLine.swiftUIImage
     }
   }
 }
