@@ -22,11 +22,11 @@ public struct MainTabView: View {
         Group {
           switch viewStore.state {
           case .home:
-            Spacer()
+            HomeTabView()
           case .myPop:
-            Spacer()
+            MyPopTabView()
           case .profile:
-            Spacer()
+            ProfileTabView()
           }
         }
         .frame(maxHeight: .infinity)
