@@ -51,6 +51,7 @@ public enum Assets {
     public static let xLine = ImageAsset(name: "x_line")
   }
   public enum Images {
+    public static let emptyPop = ImageAsset(name: "empty_pop")
     public static let splash = ImageAsset(name: "splash")
   }
 }

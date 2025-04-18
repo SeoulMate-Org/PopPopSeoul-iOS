@@ -17,6 +17,7 @@ public extension Font {
   static let captionSB: Font = pretendard(size: 13, weight: .semibold)
   static let buttonL: Font = pretendard(size: 18, weight: .semibold)
   static let buttonM: Font = pretendard(size: 16, weight: .semibold)
+  static let buttonS: Font = pretendard(size: 12, weight: .semibold)
   
   static func pretendard(size: CGFloat, weight: Font.Weight = .regular) -> Font {
       let name: String
@@ -33,3 +34,16 @@ public extension Font {
       return .custom(name, size: size)
   }
 }
+
+
+//    Button(action: onTap) {
+//      Text(title)
+//        .font(.system(size: 14, weight: .semibold))
+//        .multilineTextAlignment(.center)
+//        .padding(.vertical, 7)
+//        .padding(.horizontal, 20)
+//        .background(Colors.blue500.swiftUIColor)
+//        .foregroundColor(Colors.appWhite.swiftUIColor)
+//        .cornerRadius(8)
+//    }
+//    .buttonStyle(PlainButtonStyle())

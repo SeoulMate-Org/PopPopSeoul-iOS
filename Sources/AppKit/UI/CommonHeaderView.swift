@@ -31,7 +31,7 @@ struct CommonHeaderView: View {
     }
     .padding(.horizontal, 8)
     .frame(height: 44)
-    .background(Colors.appWhite.swiftUIColor)
+    .background(Colors.trueWhite.swiftUIColor)
   }
   
   private var centerTitle: some View {
