@@ -82,7 +82,7 @@ public struct MainTabView: View {
             .foregroundColor(color)
           
           Text(label)
-            .font(Fonts.Pretendard.semiBold.swiftUIFont(size: 12))
+            .font(.pretendard(size: 12, weight: .semibold))
             .foregroundColor(color)
         }
       }

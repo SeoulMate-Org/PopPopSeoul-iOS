@@ -17,13 +17,3 @@ xcassets:
         params:
           enumName: Colors
           publicAccess: true
-
-fonts:
-  inputs:
-    - Resources/AppKit/Fonts
-  outputs:
-    - templateName: swift5
-      output: Sources/AppKit/UI/DesignSystem/Fonts.swift
-      params:
-        enumName: Fonts
-        publicAccess: true

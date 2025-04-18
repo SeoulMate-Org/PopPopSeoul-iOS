@@ -7,15 +7,29 @@
 
 import SwiftUI
 
-public extension FontConvertible.Font {
-  static let title1 = Fonts.Pretendard.semiBold.font(size: 22)
-  static let title2 = Fonts.Pretendard.semiBold.font(size: 20)
-  static let title3 = Fonts.Pretendard.semiBold.font(size: 18)
-  static let bodyM = Fonts.Pretendard.medium.font(size: 16)
-  static let bodyS = Fonts.Pretendard.medium.font(size: 14)
-  static let captionL = Fonts.Pretendard.medium.font(size: 13)
-  static let captionSB = Fonts.Pretendard.semiBold.font(size: 13)
-  static let buttonL = Fonts.Pretendard.semiBold.font(size: 18)
-  static let buttonM = Fonts.Pretendard.semiBold.font(size: 16)
-  static let buttonS = Fonts.Pretendard.semiBold.font(size: 12)
+public extension Font {
+  static let appTitle1: Font = pretendard(size: 22, weight: .semibold)
+  static let appTitle2: Font = pretendard(size: 20, weight: .semibold)
+  static let appTitle3: Font = pretendard(size: 18, weight: .semibold)
+  static let bodyM: Font = pretendard(size: 16, weight: .medium)
+  static let bodyS: Font = pretendard(size: 14, weight: .medium)
+  static let captionL: Font = pretendard(size: 13, weight: .medium)
+  static let captionSB: Font = pretendard(size: 13, weight: .semibold)
+  static let buttonL: Font = pretendard(size: 18, weight: .semibold)
+  static let buttonM: Font = pretendard(size: 16, weight: .semibold)
+  
+  static func pretendard(size: CGFloat, weight: Font.Weight = .regular) -> Font {
+      let name: String
+      switch weight {
+      case .bold:
+          name = "Pretendard-Bold"
+      case .semibold:
+          name = "Pretendard-SemiBold"
+      case .medium:
+          name = "Pretendard-Medium"
+      default:
+          name = "Pretendard-Regular"
+      }
+      return .custom(name, size: size)
+  }
 }

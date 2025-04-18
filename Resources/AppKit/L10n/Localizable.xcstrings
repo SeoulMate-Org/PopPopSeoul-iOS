@@ -1,6 +1,89 @@
 {
   "sourceLanguage" : "ko",
   "strings" : {
+    "HOME" : {
+
+    },
+    "MY" : {
+
+    },
+    "mypop_completed_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "완료"
+          }
+        }
+      }
+    },
+    "mypop_header_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "나의 챌린지"
+          }
+        }
+      }
+    },
+    "mypop_inprogress_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "진행중"
+          }
+        }
+      }
+    },
+    "mypop_interest_empty_button" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "챌린지 찾아보기"
+          }
+        }
+      }
+    },
+    "mypop_interest_empty_des" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "여러 챌린지를 찾아보고 추가하세요."
+          }
+        }
+      }
+    },
+    "mypop_interest_empty_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아직 관심있는 챌린지가 없어요!"
+          }
+        }
+      }
+    },
+    "mypop_interest_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "관심"
+          }
+        }
+      }
+    },
     "tab_home" : {
       "extractionState" : "manual",
       "localizations" : {

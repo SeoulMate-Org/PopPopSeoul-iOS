@@ -4,13 +4,37 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
+import Common
 
 struct MyPopTabView: View {
+  
+  @State private var selectedTab: MyPopTab = .interest
+  
   var body: some View {
-    Text("Hello, World!")
+    CommonHeaderView(type: .titleOnly(title: String(sLocalization: .mypopHeaderTitle)))
   }
 }
 
+// MARK: Preview
+
 #Preview {
   MyPopTabView()
+}
+
+// MARK: - Helper
+
+enum MyPopTab: String, CaseIterable {
+  
+  case interest
+  case progress
+  case completed
+  
+  var title: String {
+    switch self {
+    case .interest: String(sLocalization: .mypopInterestTitle)
+    case .progress: String(sLocalization: .mypopInprogressTitle)
+    case .completed: String(sLocalization: .mypopCompletedTitle)
+    }
+  }
 }

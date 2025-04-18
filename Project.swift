@@ -98,6 +98,9 @@ func createAppTarget(suffix: String = "", isDev: Bool = false, scripts: [TargetS
 let project = Project(
     name: "PopPopSeoul",
     options: .options(
+        // localization 설정
+        defaultKnownRegions: ["en", "ko"],
+        developmentRegion: "ko",
         disableShowEnvironmentVarsInScriptPhases: true,
         textSettings: .textSettings(indentWidth: 2, tabWidth: 2)
     ),
@@ -108,7 +111,8 @@ let project = Project(
             "IPHONEOS_DEPLOYMENT_TARGET": SettingValue(stringLiteral: deploymentTargetString),
             "ENABLE_BITCODE": "NO",
             "CODE_SIGN_IDENTITY": "",
-            "CODE_SIGNING_REQUIRED": "NO"
+            "CODE_SIGNING_REQUIRED": "NO",
+            "DEVELOPMENT_LANGUAGE": "ko"
         ]
     ),
     targets:
