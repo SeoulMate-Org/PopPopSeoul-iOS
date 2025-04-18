@@ -12,17 +12,19 @@ struct MyPopTabView: View {
   @State private var selectedTab: MyPopTab = .interest
   
   var body: some View {
-    CommonHeaderView(
-      type: .titleOnly(title: String(sLocalization: .mypopHeaderTitle))
-    )
-    
-    CommonEmptyView(
-      image: Assets.Images.emptyPop.swiftUIImage,
-      title: String(sLocalization: .mypopInterestEmptyTitle),
-      text: String(sLocalization: .mypopInterestEmptyDes),
-      buttonTitle: String(sLocalization: .mypopInterestEmptyButton),
-      onTap: { }
-    )
+    VStack(spacing: 0) {
+      CommonHeaderView(
+        type: .titleOnly(title: String(sLocalization: .mypopHeaderTitle))
+      )
+      
+      CommonEmptyView(
+        image: Assets.Images.emptyPop.swiftUIImage,
+        title: String(sLocalization: .mypopInterestEmptyTitle),
+        text: String(sLocalization: .mypopInterestEmptyDes),
+        buttonTitle: String(sLocalization: .mypopInterestEmptyButton),
+        onTap: { }
+      )
+    }
   }
 }
 
