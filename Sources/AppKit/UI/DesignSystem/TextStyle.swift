@@ -34,16 +34,3 @@ public extension Font {
       return .custom(name, size: size)
   }
 }
-
-
-//    Button(action: onTap) {
-//      Text(title)
-//        .font(.system(size: 14, weight: .semibold))
-//        .multilineTextAlignment(.center)
-//        .padding(.vertical, 7)
-//        .padding(.horizontal, 20)
-//        .background(Colors.blue500.swiftUIColor)
-//        .foregroundColor(Colors.appWhite.swiftUIColor)
-//        .cornerRadius(8)
-//    }
-//    .buttonStyle(PlainButtonStyle())

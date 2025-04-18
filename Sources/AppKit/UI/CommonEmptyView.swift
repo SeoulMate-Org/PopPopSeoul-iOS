@@ -28,16 +28,8 @@ struct CommonEmptyView: View {
           .font(.bodyS)
           .foregroundColor(Colors.gray300.swiftUIColor)
       }
-
-      Button(action: onTap) {
-        Text(buttonTitle)
-          .multilineTextAlignment(.center)
-          .padding(.vertical, 7)
-          .padding(.horizontal, 20)
-          .background(Colors.blue500.swiftUIColor)
-          .foregroundColor(Colors.appWhite.swiftUIColor)
-          .cornerRadius(8)
-      }
+      
+      AppButton(title: buttonTitle, size: .msize, style: .primary, layout: .textOnly, state: .enabled, onTap: onTap)
     }
     .frame(maxWidth: .infinity, maxHeight: .infinity)
     .background(.clear)
