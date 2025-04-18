@@ -115,7 +115,7 @@ enum AppButtonStyleType {
   func backgroundColor(for state: AppButtonState) -> Color {
     switch (self, state) {
     case (.primary, .enabled): return Colors.blue500.swiftUIColor
-    case (.primary, .pressed): return Colors.red500.swiftUIColor
+    case (.primary, .pressed): return Colors.blue600.swiftUIColor
     case (.primary, .disabled): return Colors.gray100.swiftUIColor
       
     case (.outline, .enabled): return Colors.appWhite.swiftUIColor
