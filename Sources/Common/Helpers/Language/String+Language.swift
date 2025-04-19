@@ -36,4 +36,6 @@ public enum LocalizationsKey: String {
   case mypopInprogressTitle = "mypop_inprogress_title"
   case mypopHeaderTitle = "mypop_header_title"
   case mypopCompletedTitle = "mypop_completed_title"
+  case mypopInterestDeleteToast = "mypop_interest_delete_toast"
+  case toastButtonRestoration = "toast_button_restoration"
 }

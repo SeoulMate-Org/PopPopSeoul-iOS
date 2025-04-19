@@ -43,15 +43,34 @@ struct MyPopTabView: View {
               )
             } else {
               WithViewStore(store, observe: \.self) { viewStore in
-                MyPopListView(
-                  items: viewStore.interestList,
-                  onLikeTapped: { id in
-                    viewStore.send(.tappedInterest(id: id))
-                  }
-                )
+                ZStack {
+                  MyPopListView(
+                    items: viewStore.interestList,
+                    onLikeTapped: { id in
+                      viewStore.send(.tappedInterest(id: id))
+                    })
+                  .overlay(
+                    Group {
+                      if viewStore.showUndoToast {
+                        VStack(spacing: 0) {
+                          Spacer()
+                          AppToast(type: .iconTextWithButton(
+                            message: String(sLocalization: .mypopInterestDeleteToast),
+                            buttonTitle: String(sLocalization: .toastButtonRestoration),
+                            onTap: {
+                              viewStore.send(.undoLike)
+                            }
+                          ))
+                          .padding(.bottom, 16)
+                        }
+                        .transition(AnyTransition.opacity.animation(.easeInOut(duration: 0.2)))
+                      }
+                    }
+                  )
+                }
               }
             }
-
+            
           case .progress:
             Text("진행중")
               .frame(maxWidth: .infinity, maxHeight: .infinity)

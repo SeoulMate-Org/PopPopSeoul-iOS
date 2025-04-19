@@ -74,7 +74,7 @@ public struct MyPopFeature {
           }
         }
         return .none
-        
+         
       case .undoLike:
         if let challenge = state.recentlyDeleted {
           state.interestList.insert(challenge, at: 0)
@@ -101,4 +101,3 @@ public struct MyPopFeature {
 }
 
 // MARK: - Helper
-

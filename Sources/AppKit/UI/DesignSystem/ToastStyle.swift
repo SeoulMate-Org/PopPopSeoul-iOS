@@ -12,7 +12,6 @@ struct AppToast: View {
   
   var body: some View {
     HStack(alignment: .center, spacing: 0) {
-      
       HStack(alignment: .center, spacing: 0) {
         if case let .iconText(message, icon) = type {
           iconView(icon)

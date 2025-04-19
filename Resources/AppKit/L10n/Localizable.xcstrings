@@ -40,6 +40,17 @@
         }
       }
     },
+    "mypop_interest_delete_toast" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "관심 챌린지가 삭제되었어요"
+          }
+        }
+      }
+    },
     "mypop_interest_empty_button" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -131,6 +142,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "MY"
+          }
+        }
+      }
+    },
+    "toast_button_restoration" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "복구"
           }
         }
       }
