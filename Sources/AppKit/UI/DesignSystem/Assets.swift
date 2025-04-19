@@ -58,6 +58,8 @@ public enum Assets {
     public static let errorImage = ImageAsset(name: "error_image")
     public static let placeholderImage = ImageAsset(name: "placeholder_image")
     public static let splash = ImageAsset(name: "splash")
+    public static let stampInactive = ImageAsset(name: "stamp inactive")
+    public static let stampActive = ImageAsset(name: "stamp_active")
   }
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

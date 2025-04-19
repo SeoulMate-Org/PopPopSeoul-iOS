@@ -14,6 +14,116 @@
         }
       }
     },
+    "detailchallenge_comment_button" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "전체 댓글보기"
+          }
+        }
+      }
+    },
+    "detailchallenge_comment_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "댓글 {%@}"
+          }
+        }
+      }
+    },
+    "detailchallenge_interest_button" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "찜하기"
+          }
+        }
+      }
+    },
+    "detailchallenge_login_button" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "로그인하고 스탬프 찍기"
+          }
+        }
+      }
+    },
+    "detailchallenge_map_button" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지도로 보기"
+          }
+        }
+      }
+    },
+    "detailchallenge_place_des" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아래 장소를 방문하면 스탬프가 찍혀요"
+          }
+        }
+      }
+    },
+    "detailchallenge_place_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스탬프 미션 장소"
+          }
+        }
+      }
+    },
+    "detailchallenge_stamp_des" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지금까지 찍은 스탬프를 확인해보세요"
+          }
+        }
+      }
+    },
+    "detailchallenge_stamp_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스탬프"
+          }
+        }
+      }
+    },
+    "detailchallenge_start_button" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "챌린지 시작하기"
+          }
+        }
+      }
+    },
     "HOME" : {
 
     },
@@ -159,6 +269,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "아직 시작한 챌린지가 없어요!"
+          }
+        }
+      }
+    },
+    "mychallenge_total" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "전체 {%@}개"
+          }
+        }
+      }
+    },
+    "place_distance" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "나로부터 %@"
           }
         }
       }

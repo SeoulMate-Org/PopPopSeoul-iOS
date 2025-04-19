@@ -16,7 +16,7 @@ struct MyChallengeListView: View {
     
     ScrollView {
       LazyVStack(alignment: .leading, spacing: 4) {
-        Text("전체 {\(items.count)}개")
+        Text(String(sLocalization: .mychallengeTotal).localizedFormat("\(items.count)"))
           .font(.captionL)
           .foregroundColor(Colors.gray300.swiftUIColor)
           .padding(.leading, 28)

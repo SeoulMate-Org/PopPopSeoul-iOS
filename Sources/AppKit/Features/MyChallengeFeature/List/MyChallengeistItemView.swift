@@ -26,7 +26,7 @@ struct MyChallengeistItemView: View {
 
       VStack(alignment: .leading, spacing: 4) {
         if tab == .progress {
-          MyChallengeProgressBar(total: challenge.places.count, current: challenge.completeCount())
+          CommonProgressBar(progressType: .myChallenge, total: challenge.places.count, current: challenge.completeCount())
         }
         
         Text(challenge.theme)

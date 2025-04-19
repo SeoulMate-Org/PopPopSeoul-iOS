@@ -15,13 +15,13 @@ public extension String {
   init(sLocalization key: LocalizationsKey) {
     self = key.rawValue.localized
   }
-
+  
   func localizedFormat(_ args: CVarArg...) -> String {
     String(format: NSLocalizedString(self, comment: ""), arguments: args)
   }
-
+  
   func localizedFormat(arguments: [CVarArg]) -> String {
-      String(format: NSLocalizedString(self, comment: ""), arguments: arguments)
+    String(format: NSLocalizedString(self, comment: ""), arguments: arguments)
   }
 }
 
@@ -43,4 +43,16 @@ public enum LocalizationsKey: String {
   case mychallengeProgressEmptyDes = "mychallenge_progress_empty_des"
   case mychallengeCompletedEmptyTitle = "mychallenge_completed_empty_title"
   case mychallengeCompletedEmptyDes = "mychallenge_completed_empty_des"
+  case detailchallengeCommentButton = "detailchallenge_comment_button"
+  case detailchallengeCommentTitle = "detailchallenge_comment_title"
+  case detailchallengeInterestButton = "detailchallenge_interest_button"
+  case detailchallengeLoginButton = "detailchallenge_login_button"
+  case detailchallengeMapButton = "detailchallenge_map_button"
+  case detailchallengePlaceDes = "detailchallenge_place_des"
+  case detailchallengePlaceTitle = "detailchallenge_place_title"
+  case detailchallengeStampDes = "detailchallenge_stamp_des"
+  case detailchallengeStampTitle = "detailchallenge_stamp_title"
+  case detailchallengeStartButton = "detailchallenge_start_button"
+  case mychallengeTotal = "mychallenge_total"
+  case placeDistance = "place_distance"
 }
