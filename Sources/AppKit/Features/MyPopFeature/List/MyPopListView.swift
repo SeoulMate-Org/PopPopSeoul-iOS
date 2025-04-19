@@ -52,7 +52,7 @@ struct MyPopListView: View {
 // MARK: Preview
 
 #Preview {
-  MyPopListView(items: mockChallenges, onLikeTapped: { _ in })
+  MyPopListView(tab: .completed, items: mockChallenges, onLikeTapped: { _ in })
 }
 
 // MARK: - Helper
