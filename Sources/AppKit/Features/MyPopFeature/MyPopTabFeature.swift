@@ -27,6 +27,8 @@ public struct MyPopFeature {
     var interestList: [Challenge] = []
     var progressList: [Challenge] = []
     var completedList: [Challenge] = []
+    var recentlyDeleted: Challenge? = nil
+    var showUndoToast: Bool = false
   }
   
   // MARK: Actions
@@ -36,6 +38,8 @@ public struct MyPopFeature {
     case tabChanged(State.Tab)
     case fetchList // 최초 또는 새로고침 시
     case setInterestList([Challenge])
+    case undoLike
+    case dismissToast
     case tappedInterest(id: UUID)
     case setProgressList([Challenge])
     case setCompletedList([Challenge])
@@ -62,8 +66,26 @@ public struct MyPopFeature {
         
       case .tappedInterest(id: let id):
         if let index = state.interestList.firstIndex(where: { $0.id == id }) {
-          state.interestList.remove(at: index)
+          state.recentlyDeleted = state.interestList.remove(at: index)
+          state.showUndoToast = true
+          return .run { send in
+            try await Task.sleep(nanoseconds: 3 * 1_000_000_000)
+            await send(.dismissToast)
+          }
         }
+        return .none
+        
+      case .undoLike:
+        if let challenge = state.recentlyDeleted {
+          state.interestList.insert(challenge, at: 0)
+        }
+        state.recentlyDeleted = nil
+        state.showUndoToast = false
+        return .none
+        
+      case .dismissToast:
+        state.recentlyDeleted = nil
+        state.showUndoToast = false
         return .none
 
       case .setProgressList(let list):

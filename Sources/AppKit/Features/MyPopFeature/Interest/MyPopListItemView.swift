@@ -85,7 +85,7 @@ struct MyPopListItemView: View {
 // MARK: Preview
 
 #Preview {
-  MyPopListItemView(challenge: mockChallenges[0], onLikeTapped: {  })
+  MyPopListItemView(challenge: mockChallenges[0], onLikeTapped: { })
 }
 
 // MARK: - Helper
