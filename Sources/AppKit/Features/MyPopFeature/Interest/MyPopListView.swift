@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MyPopListView: View {
   let items: [Challenge]
+  let onLikeTapped: (UUID) -> Void
   
   var body: some View {
     
@@ -23,7 +24,10 @@ struct MyPopListView: View {
         
         ForEach(items.indices, id: \.self) { index in
           VStack(spacing: 4) {
-            MyPopListItemView(challenge: items[index])
+            MyPopListItemView(
+              challenge: items[index],
+              onLikeTapped: { onLikeTapped(items[index].id) }
+            )
               .padding(.horizontal, 20)
               .padding(.vertical, 8)
             
@@ -42,7 +46,7 @@ struct MyPopListView: View {
 // MARK: Preview
 
 #Preview {
-  MyPopListView(items: mockChallenges)
+  MyPopListView(items: mockChallenges, onLikeTapped: { _ in })
 }
 
 // MARK: - Helper

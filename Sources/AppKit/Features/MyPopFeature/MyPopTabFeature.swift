@@ -36,6 +36,7 @@ public struct MyPopFeature {
     case tabChanged(State.Tab)
     case fetchList // 최초 또는 새로고침 시
     case setInterestList([Challenge])
+    case tappedInterest(id: UUID)
     case setProgressList([Challenge])
     case setCompletedList([Challenge])
   }
@@ -57,6 +58,12 @@ public struct MyPopFeature {
 
       case .setInterestList(let list):
         state.interestList = list
+        return .none
+        
+      case .tappedInterest(id: let id):
+        if let index = state.interestList.firstIndex(where: { $0.id == id }) {
+          state.interestList.remove(at: index)
+        }
         return .none
 
       case .setProgressList(let list):

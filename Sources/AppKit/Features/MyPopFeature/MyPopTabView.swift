@@ -42,7 +42,14 @@ struct MyPopTabView: View {
                 onTap: { }
               )
             } else {
-              MyPopListView(items: viewStore.interestList)
+              WithViewStore(store, observe: \.self) { viewStore in
+                MyPopListView(
+                  items: viewStore.interestList,
+                  onLikeTapped: { id in
+                    viewStore.send(.tappedInterest(id: id))
+                  }
+                )
+              }
             }
 
           case .progress:

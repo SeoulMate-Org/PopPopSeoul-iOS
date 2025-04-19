@@ -39,7 +39,7 @@ struct CommonHeaderView: View {
     case .titleOnly(let title),
         .back(let title, _):
       return Text(title)
-        .font(.appTitle1)
+        .font(.appTitle3)
         .foregroundColor(Colors.gray900.swiftUIColor)
     }
   }

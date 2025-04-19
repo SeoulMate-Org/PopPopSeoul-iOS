@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MyPopListItemView: View {
   let challenge: Challenge
+  let onLikeTapped: () -> Void
 
   var body: some View {
     HStack(alignment: .top, spacing: 8) {
@@ -63,7 +64,7 @@ struct MyPopListItemView: View {
       VStack {
         Spacer()
         Button(action: {
-          // TODO: 좋아요 토글 처리
+          onLikeTapped()
         }) {
           Assets.Icons.heartFill.swiftUIImage
             .foregroundColor(.red)
@@ -84,7 +85,7 @@ struct MyPopListItemView: View {
 // MARK: Preview
 
 #Preview {
-  MyPopListItemView(challenge: mockChallenges[0])
+  MyPopListItemView(challenge: mockChallenges[0], onLikeTapped: {  })
 }
 
 // MARK: - Helper
