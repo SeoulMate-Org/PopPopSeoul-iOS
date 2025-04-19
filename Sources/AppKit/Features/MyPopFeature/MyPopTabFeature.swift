@@ -57,7 +57,10 @@ public struct MyPopFeature {
       case .fetchList:
         // 실제 API 연동 부분 또는 더미 데이터 삽입
         return .run { send in
-          await send(.setInterestList(mockChallenges))
+          async let interest: () = send(.setInterestList(mockChallenges))
+          async let progress: () = send(.setProgressList(mockChallenges))
+          async let completed: () = send(.setCompletedList(mockChallenges))
+          _ = await (interest, progress, completed)
         }
 
       case .setInterestList(let list):

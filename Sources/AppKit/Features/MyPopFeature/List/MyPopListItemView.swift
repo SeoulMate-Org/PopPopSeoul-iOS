@@ -25,6 +25,10 @@ struct MyPopListItemView: View {
       .clipShape(RoundedRectangle(cornerRadius: 16))
 
       VStack(alignment: .leading, spacing: 4) {
+        if tab == .progress {
+          MyPopProgressBar(total: challenge.places.count, current: challenge.completeCount())
+        }
+        
         Text(challenge.theme)
           .font(.captionL)
           .foregroundColor(Colors.gray200.swiftUIColor)
@@ -44,7 +48,7 @@ struct MyPopListItemView: View {
                 .foregroundColor(Colors.gray100.swiftUIColor)
                 .frame(width: 16, height: 16)
 
-              Text("\(challenge.places.count)")
+              Text("\(challenge.likeCount)")
                 .font(.captionL)
                 .foregroundColor(Colors.gray300.swiftUIColor)
             }
@@ -69,30 +73,31 @@ struct MyPopListItemView: View {
               .foregroundColor(Colors.gray100.swiftUIColor)
               .frame(width: 16, height: 16)
 
-            Text("\(challenge.likeCount)")
+            Text("\(challenge.places.count)")
               .font(.captionL)
               .foregroundColor(Colors.gray300.swiftUIColor)
           }
         }
-        .padding(.top, 4)
       }
       .frame(maxWidth: .infinity, alignment: .leading)
 
-      VStack {
-        Spacer()
-        Button(action: {
-          onLikeTapped()
-        }) {
-          Assets.Icons.heartFill.swiftUIImage
-            .foregroundColor(.red)
-            .frame(width: 19, height: 19)
+      if tab == .interest {
+        VStack {
+          Spacer()
+          Button(action: {
+            onLikeTapped()
+          }) {
+            Assets.Icons.heartFill.swiftUIImage
+              .foregroundColor(.red)
+              .frame(width: 19, height: 19)
+          }
+          .frame(width: 32, height: 32)
+          .background(Colors.gray25.swiftUIColor)
+          .cornerRadius(12)
+          Spacer()
         }
-        .frame(width: 32, height: 32)
-        .background(Colors.gray25.swiftUIColor)
-        .cornerRadius(12)
-        Spacer()
+        .padding(.leading, 16)
       }
-      .padding(.trailing, 16)
     }
     .background(.clear)
     .frame(height: 76)

@@ -86,8 +86,14 @@ struct MyPopTabView: View {
                 }
               )
             } else {
-              Text("진행중")
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+              WithViewStore(store, observe: \.self) { viewStore in
+                  MyPopListView(
+                    tab: .progress,
+                    items: viewStore.progressList,
+                    onLikeTapped: { id in
+                      viewStore.send(.tappedInterest(id: id))
+                    })
+              }
             }
           case .completed:
             Text("완료")

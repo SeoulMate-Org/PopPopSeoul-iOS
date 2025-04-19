@@ -13,6 +13,7 @@ public extension Font {
   static let appTitle3: Font = pretendard(size: 18, weight: .semibold)
   static let bodyM: Font = pretendard(size: 16, weight: .medium)
   static let bodyS: Font = pretendard(size: 14, weight: .medium)
+  static let captionM: Font = pretendard(size: 12, weight: .medium)
   static let captionL: Font = pretendard(size: 13, weight: .medium)
   static let captionSB: Font = pretendard(size: 13, weight: .semibold)
   static let buttonL: Font = pretendard(size: 18, weight: .semibold)

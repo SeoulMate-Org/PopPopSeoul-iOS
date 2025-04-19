@@ -144,6 +144,7 @@
 		EA89024A2DB380DD001F7B8A /* MyPopListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8902492DB380DD001F7B8A /* MyPopListView.swift */; };
 		EA89024C2DB3830F001F7B8A /* MyPopListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA89024B2DB3830F001F7B8A /* MyPopListItemView.swift */; };
 		EA8902502DB3A287001F7B8A /* ToastStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA89024F2DB3A287001F7B8A /* ToastStyle.swift */; };
+		EA8902522DB3C827001F7B8A /* MyPopProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8902512DB3C827001F7B8A /* MyPopProgressBar.swift */; };
 		F3331B1CD06987A6759E7554 /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256CCC92AC8D6EE5FACE5475 /* Dependencies.framework */; };
 		F44A496F9FDFD2FB8CC8CE33 /* PopPopSeoulKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B725C19342649283D121DE4 /* PopPopSeoulKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F5F3E3974F0EC5815DEDB580 /* swift-composable-architecture_ComposableArchitecture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 97296BA299CDC0A42867B5F2 /* swift-composable-architecture_ComposableArchitecture.bundle */; };
@@ -380,6 +381,7 @@
 		EA8902492DB380DD001F7B8A /* MyPopListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPopListView.swift; sourceTree = "<group>"; };
 		EA89024B2DB3830F001F7B8A /* MyPopListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPopListItemView.swift; sourceTree = "<group>"; };
 		EA89024F2DB3A287001F7B8A /* ToastStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastStyle.swift; sourceTree = "<group>"; };
+		EA8902512DB3C827001F7B8A /* MyPopProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPopProgressBar.swift; sourceTree = "<group>"; };
 		ED8E85747991DFD67C97C5BF /* HomeTabFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabFeature.swift; sourceTree = "<group>"; };
 		EDD27B7889EDC29093865516 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		EFE2A73738E1457A6C813045 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
@@ -857,6 +859,7 @@
 			children = (
 				EA8902492DB380DD001F7B8A /* MyPopListView.swift */,
 				EA89024B2DB3830F001F7B8A /* MyPopListItemView.swift */,
+				EA8902512DB3C827001F7B8A /* MyPopProgressBar.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -1206,6 +1209,7 @@
 				0CF92AC3CDB4A9948CA5DF33 /* AppView.swift in Sources */,
 				8B5FF2C5E6C37FD031BFE6EC /* HomeTabFeature.swift in Sources */,
 				EA8902422DB360BB001F7B8A /* CommonTopTabView.swift in Sources */,
+				EA8902522DB3C827001F7B8A /* MyPopProgressBar.swift in Sources */,
 				B2C741A67B53B5A2017E3393 /* HomeTabView.swift in Sources */,
 				6A599533FC57FADF4E92E36D /* MainTabFeature.swift in Sources */,
 				69DACC740A9E85B166973C68 /* MainTabView.swift in Sources */,
