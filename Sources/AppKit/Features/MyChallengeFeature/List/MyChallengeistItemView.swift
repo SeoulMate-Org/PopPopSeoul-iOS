@@ -1,5 +1,5 @@
 //
-//  MyPopListItemView.swift
+//  MyChallengeistItemView.swift
 //  PopPopSeoulKit
 //
 //  Created by suni on 4/19/25.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct MyPopListItemView: View {
-  let tab: MyPopFeature.State.Tab
+struct MyChallengeistItemView: View {
+  let tab: MyChallengeFeature.State.Tab
   let challenge: Challenge
   let onLikeTapped: () -> Void
 
@@ -26,7 +26,7 @@ struct MyPopListItemView: View {
 
       VStack(alignment: .leading, spacing: 4) {
         if tab == .progress {
-          MyPopProgressBar(total: challenge.places.count, current: challenge.completeCount())
+          MyChallengeProgressBar(total: challenge.places.count, current: challenge.completeCount())
         }
         
         Text(challenge.theme)
@@ -107,7 +107,7 @@ struct MyPopListItemView: View {
 // MARK: Preview
 
 #Preview {
-  MyPopListItemView(tab: .interest, challenge: mockChallenges[0], onLikeTapped: { })
+  MyChallengeistItemView(tab: .interest, challenge: mockChallenges[0], onLikeTapped: { })
 }
 
 // MARK: - Helper

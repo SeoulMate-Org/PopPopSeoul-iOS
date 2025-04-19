@@ -23,11 +23,11 @@ public struct MainTabView: View {
           switch viewStore.state {
           case .home:
             HomeTabView()
-          case .myPop:
-            MyPopTabView(
+          case .myChallenge:
+            MyChallengeTabView(
               store: store.scope(
-                state: \.myPop,
-                action: \.myPop
+                state: \.myChallenge,
+                action: \.myChallenge
               )
             )
           case .profile:
@@ -46,8 +46,8 @@ public struct MainTabView: View {
               store.send(.selectedTabChanged(.home))
             }
             
-            tabItem(tab: .myPop, isSelected: viewStore.state == .myPop) {
-              store.send(.selectedTabChanged(.myPop))
+            tabItem(tab: .myChallenge, isSelected: viewStore.state == .myChallenge) {
+              store.send(.selectedTabChanged(.myChallenge))
             }
             
             tabItem(tab: .profile, isSelected: viewStore.state == .profile) {
@@ -123,7 +123,7 @@ extension MainTabFeature.State.Tab {
   var title: String {
     switch self {
     case .home: String(sLocalization: .tabHome)
-    case .myPop: String(sLocalization: .tabMychallenge)
+    case .myChallenge: String(sLocalization: .tabMychallenge)
     case .profile: String(sLocalization: .tabProfile)
     }
   }
@@ -131,7 +131,7 @@ extension MainTabFeature.State.Tab {
   var icon: Image {
     switch self {
     case .home: Assets.Icons.homeLine.swiftUIImage
-    case .myPop: Assets.Icons.popLine.swiftUIImage
+    case .myChallenge: Assets.Icons.popLine.swiftUIImage
     case .profile: Assets.Icons.profileLine.swiftUIImage
     }
   }
@@ -139,7 +139,7 @@ extension MainTabFeature.State.Tab {
   var selectedIcon: Image {
     switch self {
     case .home: Assets.Icons.homeFill.swiftUIImage
-    case .myPop: Assets.Icons.popFill.swiftUIImage
+    case .myChallenge: Assets.Icons.popFill.swiftUIImage
     case .profile: Assets.Icons.profileLine.swiftUIImage
     }
   }

@@ -19,10 +19,10 @@ public struct MainTabFeature {
     public var selectedTab: Tab = .home
 
     public enum Tab {
-      case home, myPop, profile
+      case home, myChallenge, profile
     }
     
-    var myPop: MyPopFeature.State = .init()
+    var myChallenge: MyChallengeFeature.State = .init()
   }
   
   // MARK: Actions
@@ -31,14 +31,14 @@ public struct MainTabFeature {
   public enum Action: Equatable {
     case selectedTabChanged(State.Tab)
     
-    case myPop(MyPopFeature.Action)
+    case myChallenge(MyChallengeFeature.Action)
   }
   
   // MARK: Reducer
   
   public var body: some Reducer<State, Action> {    
-    Scope(state: \.myPop, action: \.myPop) {
-      MyPopFeature()
+    Scope(state: \.myChallenge, action: \.myChallenge) {
+      MyChallengeFeature()
     }
 
     Reduce { state, action in

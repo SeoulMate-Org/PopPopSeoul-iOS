@@ -1,5 +1,5 @@
 //
-//  MyPopProgressBar.swift
+//  MyChallengeProgressBar.swift
 //  PopPopSeoulKit
 //
 //  Created by suni on 4/19/25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MyPopProgressBar: View {
+struct MyChallengeProgressBar: View {
   let total: Int
   let current: Int // 0-based index
   
@@ -43,7 +43,7 @@ struct MyPopProgressBar: View {
 // MARK: Preview
 
 #Preview {
-  MyPopProgressBar(total: 3, current: 2)
+  MyChallengeProgressBar(total: 3, current: 2)
 }
 
 // MARK: - Helper

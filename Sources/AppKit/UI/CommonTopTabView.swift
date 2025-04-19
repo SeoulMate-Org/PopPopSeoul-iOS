@@ -45,9 +45,9 @@ struct CommonTopTabView<T: Hashable>: View {
 }
 
 #Preview {
-  @Previewable @State var selectedTab: MyPopFeature.State.Tab = .interest
+  @Previewable @State var selectedTab: MyChallengeFeature.State.Tab = .interest
   CommonTopTabView(
-    tabs: MyPopFeature.State.Tab.allCases,
+    tabs: MyChallengeFeature.State.Tab.allCases,
     titleProvider: { $0.title },
     selectedTab: $selectedTab
   )

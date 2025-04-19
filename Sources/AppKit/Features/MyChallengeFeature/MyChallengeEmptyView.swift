@@ -1,5 +1,5 @@
 //
-//  MyPopEmptyView.swift
+//  MyChallengeEmptyView.swift
 //  PopPopSeoulKit
 //
 //  Created by suni on 4/18/25.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct MyPopEmptyView: View {
-  let tab: MyPopFeature.State.Tab
+struct MyChallengeEmptyView: View {
+  let tab: MyChallengeFeature.State.Tab
   let image: Image = Assets.Images.emptyPop.swiftUIImage
   let onTap: () -> Void
 
@@ -39,32 +39,32 @@ struct MyPopEmptyView: View {
 // MARK: Preview
 
 #Preview {
-  MyPopEmptyView(tab: .interest, onTap: { })
+  MyChallengeEmptyView(tab: .interest, onTap: { })
 }
 
 // MARK: - Helper
 
-extension MyPopFeature.State.Tab {
+extension MyChallengeFeature.State.Tab {
   var emptyTitle: String {
     switch self {
-    case .interest: return String(sLocalization: .mypopInterestEmptyTitle)
-    case .progress: return String(sLocalization: .mypopProgressEmptyTitle)
-    case .completed: return String(sLocalization: .mypopCompletedEmptyTitle)
+    case .interest: return String(sLocalization: .mychallengeInterestEmptyTitle)
+    case .progress: return String(sLocalization: .mychallengeProgressEmptyTitle)
+    case .completed: return String(sLocalization: .mychallengeCompletedEmptyTitle)
     }
   }
   
   var emptyText: String {
     switch self {
-    case .interest: return String(sLocalization: .mypopInterestEmptyDes)
-    case .progress: return String(sLocalization: .mypopProgressEmptyDes)
-    case .completed: return String(sLocalization: .mypopCompletedEmptyDes)
+    case .interest: return String(sLocalization: .mychallengeInterestEmptyDes)
+    case .progress: return String(sLocalization: .mychallengeProgressEmptyDes)
+    case .completed: return String(sLocalization: .mychallengeCompletedEmptyDes)
     }
   }
   
   var buttonTitle: String? {
     switch self {
-    case .interest: return String(sLocalization: .mypopInterestEmptyButton)
-    case .progress: return String(sLocalization: .mypopProgressEmptyButton)
+    case .interest: return String(sLocalization: .mychallengeInterestEmptyButton)
+    case .progress: return String(sLocalization: .mychallengeProgressEmptyButton)
     case .completed: return nil
     }
   }

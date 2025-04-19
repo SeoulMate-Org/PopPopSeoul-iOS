@@ -1,5 +1,5 @@
 //
-//  MyPopListView.swift
+//  MyChallengeListView.swift
 //  PopPopSeoulKit
 //
 //  Created by suni on 4/19/25.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct MyPopListView: View {
-  let tab: MyPopFeature.State.Tab
+struct MyChallengeListView: View {
+  let tab: MyChallengeFeature.State.Tab
   let items: [Challenge]
   let onLikeTapped: (UUID) -> Void
   
@@ -25,7 +25,7 @@ struct MyPopListView: View {
         
         ForEach(items.indices, id: \.self) { index in
           VStack(spacing: 4) {
-            MyPopListItemView(
+            MyChallengeistItemView(
               tab: tab,
               challenge: items[index],
               onLikeTapped: { onLikeTapped(items[index].id) }
@@ -48,7 +48,7 @@ struct MyPopListView: View {
 // MARK: Preview
 
 #Preview {
-  MyPopListView(tab: .completed, items: mockChallenges, onLikeTapped: { _ in })
+  MyChallengeListView(tab: .completed, items: mockChallenges, onLikeTapped: { _ in })
 }
 
 // MARK: - Helper

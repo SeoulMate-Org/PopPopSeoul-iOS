@@ -1,5 +1,5 @@
 //
-//  MyPopTabView.swift
+//  MyChallengeTabView.swift
 //
 //
 
@@ -7,10 +7,10 @@ import SwiftUI
 import ComposableArchitecture
 import Common
 
-struct MyPopTabView: View {
-  @State private var store: StoreOf<MyPopFeature>
+struct MyChallengeTabView: View {
+  @State private var store: StoreOf<MyChallengeFeature>
   
-  public init(store: StoreOf<MyPopFeature>) {
+  public init(store: StoreOf<MyChallengeFeature>) {
     self.store = store
   }
   
@@ -18,15 +18,15 @@ struct MyPopTabView: View {
     WithViewStore(store, observe: \.self) { viewStore in
       VStack(spacing: 0) {
         CommonHeaderView(
-          type: .titleOnly(title: String(sLocalization: .mypopHeaderTitle))
+          type: .titleOnly(title: String(sLocalization: .mychallengeHeaderTitle))
         )
         
         CommonTopTabView(
-          tabs: MyPopFeature.State.Tab.allCases,
+          tabs: MyChallengeFeature.State.Tab.allCases,
           titleProvider: { $0.title },
           selectedTab: viewStore.binding(
             get: \.tab,
-            send: MyPopFeature.Action.tabChanged
+            send: MyChallengeFeature.Action.tabChanged
           )
         )
         
@@ -34,7 +34,7 @@ struct MyPopTabView: View {
           switch viewStore.tab {
           case .interest:
             if viewStore.interestList.isEmpty {
-              MyPopEmptyView(
+              MyChallengeEmptyView(
                 tab: .interest,
                 onTap: {
                   // TODO: - 챌린지 찾아보기 이동
@@ -43,7 +43,7 @@ struct MyPopTabView: View {
             } else {
               WithViewStore(store, observe: \.self) { viewStore in
                 ZStack {
-                  MyPopListView(
+                  MyChallengeListView(
                     tab: .interest,
                     items: viewStore.interestList,
                     onLikeTapped: { id in
@@ -55,7 +55,7 @@ struct MyPopTabView: View {
                         VStack(spacing: 0) {
                           Spacer()
                           AppToast(type: .iconTextWithButton(
-                            message: String(sLocalization: .mypopInterestDeleteToast),
+                            message: String(sLocalization: .mychallengeInterestDeleteToast),
                             buttonTitle: String(sLocalization: .toastButtonRestoration),
                             onTap: {
                               viewStore.send(.undoLike)
@@ -73,7 +73,7 @@ struct MyPopTabView: View {
             
           case .progress:
             if viewStore.progressList.isEmpty {
-              MyPopEmptyView(
+              MyChallengeEmptyView(
                 tab: .progress,
                 onTap: {
                   // TODO: - 챌린지 찾아보기 이동
@@ -81,7 +81,7 @@ struct MyPopTabView: View {
               )
             } else {
               WithViewStore(store, observe: \.self) { viewStore in
-                  MyPopListView(
+                  MyChallengeListView(
                     tab: .progress,
                     items: viewStore.progressList,
                     onLikeTapped: { id in
@@ -91,10 +91,10 @@ struct MyPopTabView: View {
             }
           case .completed:
             if viewStore.completedList.isEmpty {
-              MyPopEmptyView(tab: .completed, onTap: { })
+              MyChallengeEmptyView(tab: .completed, onTap: { })
             } else {
               WithViewStore(store, observe: \.self) { viewStore in
-                  MyPopListView(
+                MyChallengeListView(
                     tab: .completed,
                     items: viewStore.completedList,
                     onLikeTapped: { id in
@@ -115,22 +115,22 @@ struct MyPopTabView: View {
 // MARK: Preview
 
 #Preview {
-  MyPopTabView(
-    store: Store<MyPopFeature.State, MyPopFeature.Action>(
+  MyChallengeTabView(
+    store: Store<MyChallengeFeature.State, MyChallengeFeature.Action>(
       initialState: .init(),
-      reducer: { MyPopFeature() }
+      reducer: { MyChallengeFeature() }
     )
   )
 }
 
 // MARK: - Helper
 
-extension MyPopFeature.State.Tab {
+extension MyChallengeFeature.State.Tab {
   var title: String {
     switch self {
-    case .interest: String(sLocalization: .mypopInterestTitle)
-    case .progress: String(sLocalization: .mypopInprogressTitle)
-    case .completed: String(sLocalization: .mypopCompletedTitle)
+    case .interest: String(sLocalization: .mychallengeInterestTitle)
+    case .progress: String(sLocalization: .mychallengeInprogressTitle)
+    case .completed: String(sLocalization: .mychallengeCompletedTitle)
     }
   }
 }
