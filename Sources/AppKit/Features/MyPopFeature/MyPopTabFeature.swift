@@ -59,7 +59,7 @@ public struct MyPopFeature {
         return .run { send in
           async let interest: () = send(.setInterestList(mockChallenges))
           async let progress: () = send(.setProgressList(mockChallenges))
-          async let completed: () = send(.setCompletedList([]))
+          async let completed: () = send(.setCompletedList(mockChallenges))
           _ = await (interest, progress, completed)
         }
 
