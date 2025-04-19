@@ -17,7 +17,7 @@ struct MyPopListItemView: View {
           .resizable()
           .scaledToFill()
       } placeholder: {
-        Colors.gray75.swiftUIColor
+        Assets.Images.placeholderImage.swiftUIImage
       }
       .frame(width: 76, height: 76)
       .clipShape(RoundedRectangle(cornerRadius: 16))

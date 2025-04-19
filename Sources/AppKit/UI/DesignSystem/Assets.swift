@@ -53,6 +53,8 @@ public enum Assets {
   }
   public enum Images {
     public static let emptyPop = ImageAsset(name: "empty_pop")
+    public static let errorImage = ImageAsset(name: "error_image")
+    public static let placeholderImage = ImageAsset(name: "placeholder_image")
     public static let splash = ImageAsset(name: "splash")
   }
 }
