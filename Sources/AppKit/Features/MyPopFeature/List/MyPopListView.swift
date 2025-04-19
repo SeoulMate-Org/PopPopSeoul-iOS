@@ -25,17 +25,13 @@ struct MyPopListView: View {
         
         ForEach(items.indices, id: \.self) { index in
           VStack(spacing: 4) {
-            switch tab {
-            case .interest, .completed:
-              MyPopListItemView(
-                challenge: items[index],
-                onLikeTapped: { onLikeTapped(items[index].id) }
-              )
-              .padding(.horizontal, 20)
-              .padding(.vertical, 8)
-            case .progress:
-              EmptyView()
-            }
+            MyPopListItemView(
+              tab: tab,
+              challenge: items[index],
+              onLikeTapped: { onLikeTapped(items[index].id) }
+            )
+            .padding(.horizontal, 20)
+            .padding(.vertical, 8)
             
             // 마지막 아이템 제외하고만 Divider 추가
             if index < items.count - 1 {

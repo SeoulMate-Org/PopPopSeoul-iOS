@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MyPopListItemView: View {
+  let tab: MyPopFeature.State.Tab
   let challenge: Challenge
   let onLikeTapped: () -> Void
 
@@ -35,15 +36,31 @@ struct MyPopListItemView: View {
           .lineLimit(1)
         
         HStack(spacing: 10) {
-          HStack(spacing: 2) {
-            Assets.Icons.heartFill.swiftUIImage
-              .resizable()
-              .foregroundColor(Colors.gray100.swiftUIColor)
-              .frame(width: 16, height: 16)
+          
+          if challenge.likeCount > 0 {
+            HStack(spacing: 2) {
+              Assets.Icons.heartFill.swiftUIImage
+                .resizable()
+                .foregroundColor(Colors.gray100.swiftUIColor)
+                .frame(width: 16, height: 16)
 
-            Text("\(challenge.places.count)")
-              .font(.captionL)
-              .foregroundColor(Colors.gray300.swiftUIColor)
+              Text("\(challenge.places.count)")
+                .font(.captionL)
+                .foregroundColor(Colors.gray300.swiftUIColor)
+            }
+          }
+          
+          if challenge.commentCount > 0 {
+            HStack(spacing: 2) {
+              Assets.Icons.commentFill.swiftUIImage
+                .resizable()
+                .foregroundColor(Colors.gray100.swiftUIColor)
+                .frame(width: 16, height: 16)
+              
+              Text("\(challenge.commentCount)")
+                .font(.captionL)
+                .foregroundColor(Colors.gray300.swiftUIColor)
+            }
           }
           
           HStack(spacing: 2) {
@@ -52,7 +69,7 @@ struct MyPopListItemView: View {
               .foregroundColor(Colors.gray100.swiftUIColor)
               .frame(width: 16, height: 16)
 
-            Text("\(challenge.places.count)")
+            Text("\(challenge.likeCount)")
               .font(.captionL)
               .foregroundColor(Colors.gray300.swiftUIColor)
           }
@@ -85,7 +102,7 @@ struct MyPopListItemView: View {
 // MARK: Preview
 
 #Preview {
-  MyPopListItemView(challenge: mockChallenges[0], onLikeTapped: { })
+  MyPopListItemView(tab: .interest, challenge: mockChallenges[0], onLikeTapped: { })
 }
 
 // MARK: - Helper

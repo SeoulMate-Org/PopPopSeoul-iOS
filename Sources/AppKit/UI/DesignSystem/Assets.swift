@@ -26,6 +26,8 @@ public enum Assets {
     public static let arrowLeftLine = ImageAsset(name: "arrow_left_line")
     public static let arrowRightLine = ImageAsset(name: "arrow_right_line")
     public static let checkLine = ImageAsset(name: "check_line")
+    public static let commentFill = ImageAsset(name: "comment_fill")
+    public static let commentLine = ImageAsset(name: "comment_line")
     public static let deleteBtnLine = ImageAsset(name: "delete_btn_line")
     public static let embassyLine = ImageAsset(name: "embassy_line")
     public static let emptyLine = ImageAsset(name: "empty_line")

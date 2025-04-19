@@ -14,7 +14,8 @@ public struct Challenge: Equatable, Identifiable {
   let name: String
   let subtitle: String
   let description: String
-  let likeCount: Int = 252
+  let likeCount: Int = 12
+  let commentCount: Int = 3
   let places: [Place]
 }
 
