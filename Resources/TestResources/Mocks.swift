@@ -16,6 +16,7 @@ public struct Challenge: Equatable, Identifiable {
   let description: String
   let likeCount: Int = Int.random(in: 0..<20)
   let commentCount: Int = Int.random(in: 0..<20)
+  let participantCount: Int = Int.random(in: 0..<20)
   let places: [Place]
   
   func completeCount() -> Int {
@@ -37,11 +38,11 @@ public struct Place: Equatable, Identifiable {
 
 public let mockChallenges: [Challenge] = [
   Challenge(
-    theme: "역사 속 서울 걷기",
+    theme: "🏯 테마테마/테마테마",
     imageURL: "https://example.com/challenge1.jpg",
-    name: "조선의 수도, 한양을 걷다",
-    subtitle: "경복궁부터 인사동까지",
-    description: "서울의 역사 중심지인 종로 일대를 걸으며 조선시대의 흔적을 느껴보세요.",
+    name: "🏯 조선의 수도, 한양을 걷다",
+    subtitle: "경복궁부터 인사동까지 경복궁부터 인사동까지 경복궁부터 인사동까지 경복궁부터 인사동까지",
+    description: "서울의 역사 중심지인 종로 일대를 걸으며 조선시대의 흔적을 느껴보세요.\n서울의 역사 중심지인 종로 일대를 걸으며 조선시대의 흔적을 느껴보세요.서울의 역사 중심지인 종로 일대를 걸으며 조선시대의 흔적을 느껴보세요.\n서울의 역사 중심지인 종로 일대를 걸으며 조선시대의 흔적을 느껴보세요.",
     places: [
       Place(
         imageURL: "https://example.com/gyeongbokgung.jpg",

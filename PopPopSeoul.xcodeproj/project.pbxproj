@@ -145,6 +145,8 @@
 		EA89024C2DB3830F001F7B8A /* MyChallengeistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA89024B2DB3830F001F7B8A /* MyChallengeistItemView.swift */; };
 		EA8902502DB3A287001F7B8A /* ToastStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA89024F2DB3A287001F7B8A /* ToastStyle.swift */; };
 		EA8902522DB3C827001F7B8A /* MyChallengeProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8902512DB3C827001F7B8A /* MyChallengeProgressBar.swift */; };
+		EA8902592DB42109001F7B8A /* ChallengeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8902582DB42109001F7B8A /* ChallengeDetailView.swift */; };
+		EA89025B2DB42113001F7B8A /* ChallengeDetailFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA89025A2DB42113001F7B8A /* ChallengeDetailFeature.swift */; };
 		F3331B1CD06987A6759E7554 /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256CCC92AC8D6EE5FACE5475 /* Dependencies.framework */; };
 		F44A496F9FDFD2FB8CC8CE33 /* PopPopSeoulKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B725C19342649283D121DE4 /* PopPopSeoulKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F5F3E3974F0EC5815DEDB580 /* swift-composable-architecture_ComposableArchitecture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 97296BA299CDC0A42867B5F2 /* swift-composable-architecture_ComposableArchitecture.bundle */; };
@@ -382,6 +384,8 @@
 		EA89024B2DB3830F001F7B8A /* MyChallengeistItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChallengeistItemView.swift; sourceTree = "<group>"; };
 		EA89024F2DB3A287001F7B8A /* ToastStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastStyle.swift; sourceTree = "<group>"; };
 		EA8902512DB3C827001F7B8A /* MyChallengeProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChallengeProgressBar.swift; sourceTree = "<group>"; };
+		EA8902582DB42109001F7B8A /* ChallengeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetailView.swift; sourceTree = "<group>"; };
+		EA89025A2DB42113001F7B8A /* ChallengeDetailFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetailFeature.swift; sourceTree = "<group>"; };
 		ED8E85747991DFD67C97C5BF /* HomeTabFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabFeature.swift; sourceTree = "<group>"; };
 		EDD27B7889EDC29093865516 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		EFE2A73738E1457A6C813045 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
@@ -662,6 +666,7 @@
 				9A51848C6AF443FB43EB04C4 /* MainTabFeature */,
 				264F5A4A7B0C22454888670B /* HomeFeature */,
 				476CC18CCC336CF34F02D41D /* MyChallengeFeature */,
+				EA8902572DB420BA001F7B8A /* DetailChallengeFeature */,
 				CF47B8F8E2D72DC31510B573 /* ProfileFeature */,
 				8F90808C345AC22932CAD360 /* MapFeature */,
 			);
@@ -862,6 +867,15 @@
 				EA8902512DB3C827001F7B8A /* MyChallengeProgressBar.swift */,
 			);
 			path = List;
+			sourceTree = "<group>";
+		};
+		EA8902572DB420BA001F7B8A /* DetailChallengeFeature */ = {
+			isa = PBXGroup;
+			children = (
+				EA8902582DB42109001F7B8A /* ChallengeDetailView.swift */,
+				EA89025A2DB42113001F7B8A /* ChallengeDetailFeature.swift */,
+			);
+			path = DetailChallengeFeature;
 			sourceTree = "<group>";
 		};
 		FC1D52F63EA1276E29AA94B9 /* UI */ = {
@@ -1202,6 +1216,7 @@
 			files = (
 				7CA9AB1339EB984749FB5B28 /* TuistAssets+PopPopSeoulKit.swift in Sources */,
 				0EC2753855C5F63EABF56E6A /* TuistBundle+PopPopSeoulKit.swift in Sources */,
+				EA89025B2DB42113001F7B8A /* ChallengeDetailFeature.swift in Sources */,
 				36DAC9AE1FC4BB4B4F01737A /* TuistFonts+PopPopSeoulKit.swift in Sources */,
 				39ECFBB5679467FFD0F183F9 /* AppFeature.swift in Sources */,
 				EA1814092DB2451200CE8D52 /* ButtonStyle.swift in Sources */,
@@ -1227,6 +1242,7 @@
 				1698E08E92737934BB589FD5 /* Assets.swift in Sources */,
 				C2D0604868F7CAA99F1D101B /* Color++.swift in Sources */,
 				0C94ADF1AF8DD4968F34D23F /* Colors.swift in Sources */,
+				EA8902592DB42109001F7B8A /* ChallengeDetailView.swift in Sources */,
 				DCD01D7A4B209FBCB2125C85 /* ShadowModifier.swift in Sources */,
 				38B6A4CC40F13A56E063408A /* TextStyle.swift in Sources */,
 			);
