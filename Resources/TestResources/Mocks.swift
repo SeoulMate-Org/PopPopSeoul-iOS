@@ -18,6 +18,7 @@ public struct Challenge: Equatable, Identifiable {
   let commentCount: Int = Int.random(in: 0..<20)
   let participantCount: Int = Int.random(in: 0..<20)
   let places: [Place]
+  let comments: [Comment] = mockComments
   
   func completeCount() -> Int {
     return Int.random(in: 0..<places.count)
@@ -39,6 +40,48 @@ public struct Place: Equatable, Identifiable {
   let likeCount: Int = Int.random(in: 0..<20)
   let participantCount: Int = Int.random(in: 0..<20)
 }
+
+public struct Comment: Equatable, Identifiable {
+  public let id: UUID = .init()
+  let userId: UUID
+  let userNickname: String
+  let userState: String
+  let isCompleteUser: Bool
+  let createdAt: String
+  let content: String
+  
+  var isMine: Bool {
+    return self.userId == myId
+  }
+}
+
+public let myId = UUID(uuidString: "00000000-0000-0000-0000-000000000001")
+public let mockComments: [Comment] = [
+  Comment(
+    userId: UUID(uuidString: "00000000-0000-0000-0000-000000000001")!,
+    userNickname: "방랑하는 배낭여행자",
+    userState: "서울 강남구",
+    isCompleteUser: true,
+    createdAt: "2025.04.04 11:02",
+    content: "코엑스 너무 예뻐요! 사진 맛집이네요 :) 코엑스 너무 예뻐요! 사진 맛집이네요 :) 코엑스 너무 예뻐요! 사진 맛집이네요 :) 코엑스 너무 예뻐요! 사진 맛집이네요 :) 코엑스 너무 예뻐요! 사진 맛집이네요 :) 코엑스 너무 예뻐요! 사진 맛집이네요 :) 코엑스 너무 예뻐요! 사진 맛집이네요 :) 코엑스 너무 예뻐요! 사진 맛집이네요 :) 코엑스 너무 예뻐요! 사진 맛집이네요 :) v "
+  ),
+  Comment(
+    userId: UUID(uuidString: "00000000-0000-0000-0000-000000000002")!,
+    userNickname: "한옥러버",
+    userState: "서울 종로구",
+    isCompleteUser: false,
+    createdAt: "2025.04.04 11:02",
+    content: "북촌은 언제 가도 좋네요~"
+  ),
+  Comment(
+    userId: UUID(uuidString: "00000000-0000-0000-0000-000000000003")!,
+    userNickname: "서울첫여행",
+    userState: "서울 중구",
+    isCompleteUser: true,
+    createdAt: "2025.04.04 11:02",
+    content: "스탬프 찍으려고 왔는데 진짜 재미있어요!!"
+  )
+]
 
 public let mockPlace1: Place =  Place(
   imageURL: "https://example.com/gyeongbokgung.jpg",

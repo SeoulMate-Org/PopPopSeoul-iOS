@@ -40,6 +40,7 @@ public enum Assets {
     public static let locationLine = ImageAsset(name: "location_line")
     public static let mapFill = ImageAsset(name: "map_fill")
     public static let mapLine = ImageAsset(name: "map_line")
+    public static let more = ImageAsset(name: "more")
     public static let popFill = ImageAsset(name: "pop_fill")
     public static let popLine = ImageAsset(name: "pop_line")
     public static let profileFill = ImageAsset(name: "profile_fill")

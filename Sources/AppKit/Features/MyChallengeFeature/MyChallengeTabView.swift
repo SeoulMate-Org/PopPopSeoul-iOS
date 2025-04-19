@@ -17,11 +17,11 @@ struct MyChallengeTabView: View {
   var body: some View {
     WithViewStore(store, observe: \.self) { viewStore in
       VStack(spacing: 0) {
-        CommonHeaderView(
+        HeaderView(
           type: .titleOnly(title: String(sLocalization: .mychallengeHeaderTitle))
         )
         
-        CommonTopTabView(
+        TopTabView(
           tabs: MyChallengeFeature.State.Tab.allCases,
           titleProvider: { $0.title },
           selectedTab: viewStore.binding(

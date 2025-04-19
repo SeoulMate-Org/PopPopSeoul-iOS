@@ -31,7 +31,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "댓글 {%@}"
+            "value" : "댓글"
           }
         }
       }
@@ -224,7 +224,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "아직 관심있는 챌린지가 없어요!"
+            "value" : "아직 찜한 챌린지가 없어요!"
           }
         }
       }

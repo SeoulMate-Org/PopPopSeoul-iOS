@@ -1,5 +1,5 @@
 //
-//  CommonHeaderView.swift
+//  HeaderView.swift
 //  Common
 //
 //  Created by suni on 4/8/25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CommonHeaderView: View {
+struct HeaderView: View {
   let type: HeaderType
   
   var body: some View {
@@ -48,7 +48,7 @@ struct CommonHeaderView: View {
 // MARK: Preview
 
 #Preview {
-  CommonHeaderView(type: .back(title: "Title", onBack: { }))
+  HeaderView(type: .back(title: "Title", onBack: { }))
 }
 
 // MARK: - Helper

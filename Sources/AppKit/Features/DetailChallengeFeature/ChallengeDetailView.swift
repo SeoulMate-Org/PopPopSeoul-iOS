@@ -13,11 +13,11 @@ struct ChallengeDetailView: View {
   let challenge: Challenge
 
   var body: some View {
+    // 헤더
+    HeaderView(type: .back(title: "", onBack: { }))
+    
     ScrollView {
       VStack(alignment: .leading, spacing: 0) {
-        // 헤더
-        CommonHeaderView(type: .back(title: "", onBack: { }))
-        
         // 이미지
         AsyncImage(url: URL(string: challenge.imageURL)) { image in
           image
@@ -84,7 +84,7 @@ struct ChallengeDetailView: View {
 
           // 3. 회색 배경 박스
           VStack(spacing: 0) {
-            CommonProgressBar(progressType: .detailChallenge, total: challenge.places.count, current: challenge.completeCount())
+            ProgressBar(progressType: .detailChallenge, total: challenge.places.count, current: challenge.completeCount())
               .padding(.horizontal, 20)
               .padding(.vertical, 17)
             Divider()
@@ -102,6 +102,7 @@ struct ChallengeDetailView: View {
           .foregroundColor(Colors.gray25.swiftUIColor)
           .padding(.vertical, 28)
         
+        // 스탬프 미션 장소
         VStack(alignment: .leading, spacing: 0) {
           // 1. 제목
           Text(String(sLocalization: .detailchallengePlaceTitle))
@@ -115,8 +116,12 @@ struct ChallengeDetailView: View {
             .padding(.top, 2)
           
           // 장소 리스트
-          ChallengePlaceListView(places: challenge.places, onToggle: { _ in })
-            .padding(.top, 4)
+          VStack(spacing: 16) {
+            ForEach(challenge.places) { place in
+              ChallengePlaceListItemView(place: place, onLikeTapped: {  })
+            }
+          }
+          .padding(.top, 4)
         }
         .padding(.horizontal, 20)
         
@@ -124,6 +129,34 @@ struct ChallengeDetailView: View {
           .frame(height: 2)
           .foregroundColor(Colors.gray25.swiftUIColor)
           .padding(.vertical, 28)
+        
+        // 댓글
+        VStack(alignment: .leading, spacing: 0) {
+          // 1. 제목
+          let countString = challenge.comments.count > 0 ? " {\(challenge.comments.count)}" : ""
+          Text(String(sLocalization: .detailchallengeCommentTitle) + countString)
+              .font(.appTitle3)
+              .foregroundColor(Colors.gray900.swiftUIColor)
+              .padding(.horizontal, 20)
+          
+          // 2. 댓글 리스트
+          VStack(spacing: 16) {
+            ForEach(challenge.comments.indices, id: \.self) { index in
+              CommentListItemView(comment: challenge.comments[index], onEditTapped: nil, onDeleteTapped: nil)
+              
+              // 마지막 아이템 제외하고만 Divider 추가
+              if index < challenge.comments.count - 1 {
+                Divider()
+                  .frame(height: 1)
+                  .foregroundColor(Colors.gray25.swiftUIColor)
+                  .padding(.horizontal, 20)
+              }
+            }
+          }
+          .padding(.top, 16)
+          
+        }
+        
       }
     }
   }

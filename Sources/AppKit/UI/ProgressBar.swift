@@ -1,5 +1,5 @@
 //
-//  CommonProgressBar.swift
+//  ProgressBar.swift
 //  PopPopSeoulKit
 //
 //  Created by suni on 4/19/25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CommonProgressBar: View {
+struct ProgressBar: View {
   let progressType: ProgressType
   let total: Int
   let current: Int // 0-based index
@@ -44,12 +44,12 @@ struct CommonProgressBar: View {
 // MARK: Preview
 
 #Preview {
-  CommonProgressBar(progressType: .detailChallenge, total: 3, current: 2)
+  ProgressBar(progressType: .detailChallenge, total: 3, current: 2)
 }
 
 // MARK: - Helper
 
-extension CommonProgressBar {
+extension ProgressBar {
   enum ProgressType {
     case myChallenge
     case detailChallenge

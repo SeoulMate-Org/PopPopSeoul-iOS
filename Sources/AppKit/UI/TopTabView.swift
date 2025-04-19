@@ -1,5 +1,5 @@
 //
-//  CommonTopTabView.swift
+//  TopTabView.swift
 //  PopPopSeoulKit
 //
 //  Created by suni on 4/19/25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CommonTopTabView<T: Hashable>: View {
+struct TopTabView<T: Hashable>: View {
   let tabs: [T]
   let titleProvider: (T) -> String
   
@@ -46,7 +46,7 @@ struct CommonTopTabView<T: Hashable>: View {
 
 #Preview {
   @Previewable @State var selectedTab: MyChallengeFeature.State.Tab = .interest
-  CommonTopTabView(
+  TopTabView(
     tabs: MyChallengeFeature.State.Tab.allCases,
     titleProvider: { $0.title },
     selectedTab: $selectedTab

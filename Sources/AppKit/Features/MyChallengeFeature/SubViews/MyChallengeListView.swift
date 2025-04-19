@@ -36,6 +36,8 @@ struct MyChallengeListView: View {
             // 마지막 아이템 제외하고만 Divider 추가
             if index < items.count - 1 {
               Divider()
+                .frame(height: 1)
+                .foregroundColor(Colors.gray25.swiftUIColor)
                 .padding(.horizontal, 20)
             }
           }
