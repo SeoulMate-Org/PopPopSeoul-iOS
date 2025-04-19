@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MyPopListView: View {
+  let tab: MyPopFeature.State.Tab
   let items: [Challenge]
   let onLikeTapped: (UUID) -> Void
   
@@ -24,12 +25,17 @@ struct MyPopListView: View {
         
         ForEach(items.indices, id: \.self) { index in
           VStack(spacing: 4) {
-            MyPopListItemView(
-              challenge: items[index],
-              onLikeTapped: { onLikeTapped(items[index].id) }
-            )
+            switch tab {
+            case .interest, .completed:
+              MyPopListItemView(
+                challenge: items[index],
+                onLikeTapped: { onLikeTapped(items[index].id) }
+              )
               .padding(.horizontal, 20)
               .padding(.vertical, 8)
+            case .progress:
+              EmptyView()
+            }
             
             // 마지막 아이템 제외하고만 Divider 추가
             if index < items.count - 1 {
@@ -50,3 +56,4 @@ struct MyPopListView: View {
 }
 
 // MARK: - Helper
+

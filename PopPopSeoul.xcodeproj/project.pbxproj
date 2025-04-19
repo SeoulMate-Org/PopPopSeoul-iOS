@@ -61,7 +61,7 @@
 		55836D9CB2390C348EF9C72D /* Logging.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 2555DC89EFEF0FE59E26DB82 /* Logging.framework */; };
 		56B1DCA6518548911C10E3D1 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8609EF56D0937265092D5D36 /* Pretendard-ExtraLight.otf */; };
 		58390E7B5B94591F72E36E98 /* BottomSheet_BottomSheet.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 23FF6506217F3B29FA216666 /* BottomSheet_BottomSheet.bundle */; };
-		5946ABEA7C636B526BA1907B /* CommonEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A5C014435D33BC2A5FDAAD /* CommonEmptyView.swift */; };
+		5946ABEA7C636B526BA1907B /* MyPopEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A5C014435D33BC2A5FDAAD /* MyPopEmptyView.swift */; };
 		5A6C75631B7A7B33696AFA67 /* NMapsGeometry.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7470E1490679F3CE7452AF3 /* NMapsGeometry.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5E032BDD6065BFB7D7D2BC85 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8609EF56D0937265092D5D36 /* Pretendard-ExtraLight.otf */; };
 		5E5EA4362A415137B6BE10A3 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E4D5476FC354FD8133DF1816 /* Pretendard-Light.otf */; };
@@ -357,7 +357,7 @@
 		B27C25F2BA3E54050B29B957 /* BottomSheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BottomSheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2CF13F3E25FE22CE8CD6092 /* SwiftNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE7236D817F53669BEBC2145 /* TuistBundle+PopPopSeoulKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+PopPopSeoulKit.swift"; sourceTree = "<group>"; };
-		C2A5C014435D33BC2A5FDAAD /* CommonEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonEmptyView.swift; sourceTree = "<group>"; };
+		C2A5C014435D33BC2A5FDAAD /* MyPopEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPopEmptyView.swift; sourceTree = "<group>"; };
 		C3584C3DE304E2C8A4FD6B95 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		C7470E1490679F3CE7452AF3 /* NMapsGeometry.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = NMapsGeometry.xcframework; sourceTree = "<group>"; };
 		C8EC2B4C824DB1404597122B /* PopPopSeoulKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopPopSeoulKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -538,9 +538,10 @@
 		476CC18CCC336CF34F02D41D /* MyPopFeature */ = {
 			isa = PBXGroup;
 			children = (
-				EA8902482DB380C0001F7B8A /* Interest */,
+				EA8902482DB380C0001F7B8A /* List */,
 				47AD68720976BF00B8B00988 /* MyPopTabFeature.swift */,
 				0084C50FE70A9A28D7515595 /* MyPopTabView.swift */,
+				C2A5C014435D33BC2A5FDAAD /* MyPopEmptyView.swift */,
 			);
 			path = MyPopFeature;
 			sourceTree = "<group>";
@@ -851,20 +852,19 @@
 			path = TestResources;
 			sourceTree = "<group>";
 		};
-		EA8902482DB380C0001F7B8A /* Interest */ = {
+		EA8902482DB380C0001F7B8A /* List */ = {
 			isa = PBXGroup;
 			children = (
 				EA8902492DB380DD001F7B8A /* MyPopListView.swift */,
 				EA89024B2DB3830F001F7B8A /* MyPopListItemView.swift */,
 			);
-			path = Interest;
+			path = List;
 			sourceTree = "<group>";
 		};
 		FC1D52F63EA1276E29AA94B9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				BB95D3E563B8121A779B6663 /* DesignSystem */,
-				C2A5C014435D33BC2A5FDAAD /* CommonEmptyView.swift */,
 				5FD5771D551B4551AAEAA9B7 /* CommonHeaderView.swift */,
 				EA8902412DB360BB001F7B8A /* CommonTopTabView.swift */,
 			);
@@ -1217,7 +1217,7 @@
 				6686EB0B936EDC8C565CEB9E /* MapView.swift in Sources */,
 				21361487C7AA6831B4A832A5 /* MapViewController.swift in Sources */,
 				EA8902502DB3A287001F7B8A /* ToastStyle.swift in Sources */,
-				5946ABEA7C636B526BA1907B /* CommonEmptyView.swift in Sources */,
+				5946ABEA7C636B526BA1907B /* MyPopEmptyView.swift in Sources */,
 				9BB0C2419429BE1B42DC2122 /* CommonHeaderView.swift in Sources */,
 				EA8902472DB370AB001F7B8A /* Mocks.swift in Sources */,
 				1698E08E92737934BB589FD5 /* Assets.swift in Sources */,

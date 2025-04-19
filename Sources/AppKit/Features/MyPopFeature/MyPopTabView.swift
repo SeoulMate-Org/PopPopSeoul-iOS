@@ -34,17 +34,20 @@ struct MyPopTabView: View {
           switch viewStore.tab {
           case .interest:
             if viewStore.interestList.isEmpty {
-              CommonEmptyView(
+              MyPopEmptyView(
                 image: Assets.Images.emptyPop.swiftUIImage,
                 title: String(sLocalization: .mypopInterestEmptyTitle),
                 text: String(sLocalization: .mypopInterestEmptyDes),
                 buttonTitle: String(sLocalization: .mypopInterestEmptyButton),
-                onTap: { }
+                onTap: {
+                  // TODO: - 챌린지 찾아보기 이동
+                }
               )
             } else {
               WithViewStore(store, observe: \.self) { viewStore in
                 ZStack {
                   MyPopListView(
+                    tab: .interest,
                     items: viewStore.interestList,
                     onLikeTapped: { id in
                       viewStore.send(.tappedInterest(id: id))
@@ -72,8 +75,20 @@ struct MyPopTabView: View {
             }
             
           case .progress:
-            Text("진행중")
-              .frame(maxWidth: .infinity, maxHeight: .infinity)
+            if viewStore.progressList.isEmpty {
+              MyPopEmptyView(
+                image: Assets.Images.emptyPop.swiftUIImage,
+                title: String(sLocalization: .mypopProgressEmptyTitle),
+                text: String(sLocalization: .mypopProgressEmptyDes),
+                buttonTitle: String(sLocalization: .mypopProgressEmptyButton),
+                onTap: {
+                  // TODO: - 챌린지 찾아보기 이동
+                }
+              )
+            } else {
+              Text("진행중")
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            }
           case .completed:
             Text("완료")
               .frame(maxWidth: .infinity, maxHeight: .infinity)

@@ -90,7 +90,40 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "관심"
+            "value" : "찜"
+          }
+        }
+      }
+    },
+    "mypop_progress_empty_button" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "챌린지 찾아보기"
+          }
+        }
+      }
+    },
+    "mypop_progress_empty_des" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "여러 챌린지를 찾아보고 추가하세요."
+          }
+        }
+      }
+    },
+    "mypop_progress_empty_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아직 시작한 챌린지가 없어요!"
           }
         }
       }

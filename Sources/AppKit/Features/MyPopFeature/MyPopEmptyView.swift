@@ -1,5 +1,5 @@
 //
-//  CommonEmptyView.swift
+//  MyPopEmptyView.swift
 //  PopPopSeoulKit
 //
 //  Created by suni on 4/18/25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CommonEmptyView: View {
+struct MyPopEmptyView: View {
   var image: Image = Assets.Images.emptyPop.swiftUIImage
   let title: String
   let text: String
@@ -24,7 +24,7 @@ struct CommonEmptyView: View {
         Text(title)
           .font(.appTitle3)
           .foregroundColor(Colors.gray900.swiftUIColor)
-        Text(title)
+        Text(text)
           .font(.bodyS)
           .foregroundColor(Colors.gray300.swiftUIColor)
       }
@@ -37,5 +37,5 @@ struct CommonEmptyView: View {
 }
 
 #Preview {
-  CommonEmptyView(title: "title", text: "text", buttonTitle: "button", onTap: {})
+  MyPopEmptyView(title: "title", text: "text", buttonTitle: "button", onTap: {})
 }
