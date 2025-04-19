@@ -44,6 +44,7 @@ public enum Assets {
     public static let popLine = ImageAsset(name: "pop_line")
     public static let profileFill = ImageAsset(name: "profile_fill")
     public static let profileLine = ImageAsset(name: "profile_line")
+    public static let route = ImageAsset(name: "route")
     public static let searchLine = ImageAsset(name: "search_line")
     public static let shareLine = ImageAsset(name: "share_line")
     public static let themeFill = ImageAsset(name: "theme_fill")

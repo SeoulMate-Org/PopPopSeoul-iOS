@@ -67,7 +67,7 @@ struct ChallengeDetailView: View {
         Divider()
           .frame(height: 2)
           .foregroundColor(Colors.gray25.swiftUIColor)
-          .padding(.top, 28)
+          .padding(.vertical, 28)
         
         // 스탬프 정보
         VStack(alignment: .leading, spacing: 0) {
@@ -88,7 +88,7 @@ struct ChallengeDetailView: View {
               .padding(.horizontal, 20)
               .padding(.vertical, 17)
             Divider()
-            ChallengeStampRow(items: challenge.places)
+            ChallengeStampView(items: challenge.places)
               .padding(.vertical, 16)
           }
           .background(Colors.gray25.swiftUIColor)
@@ -96,12 +96,34 @@ struct ChallengeDetailView: View {
           .padding(.top, 16)
         }
         .padding(.horizontal, 20)
-        .padding(.top, 28)
         
         Divider()
           .frame(height: 2)
           .foregroundColor(Colors.gray25.swiftUIColor)
-          .padding(.top, 28)
+          .padding(.vertical, 28)
+        
+        VStack(alignment: .leading, spacing: 0) {
+          // 1. 제목
+          Text(String(sLocalization: .detailchallengePlaceTitle))
+            .font(.appTitle3)
+            .foregroundColor(Colors.gray900.swiftUIColor)
+
+          // 2. 설명
+          Text(String(sLocalization: .detailchallengePlaceDes))
+            .font(.captionL)
+            .foregroundColor(Colors.gray400.swiftUIColor)
+            .padding(.top, 2)
+          
+          // 장소 리스트
+          ChallengePlaceListView(places: challenge.places, onToggle: { _ in })
+            .padding(.top, 4)
+        }
+        .padding(.horizontal, 20)
+        
+        Divider()
+          .frame(height: 2)
+          .foregroundColor(Colors.gray25.swiftUIColor)
+          .padding(.vertical, 28)
       }
     }
   }
@@ -122,7 +144,7 @@ struct ChallengeDetailView: View {
 // MARK: Preview
 
 #Preview {
-  ChallengeDetailView(challenge: mockChallenges[0])
+  ChallengeDetailView(challenge: mockChallenges[1])
 }
 
 // MARK: - Helper

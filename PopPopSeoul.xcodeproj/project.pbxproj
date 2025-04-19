@@ -147,7 +147,9 @@
 		EA8902522DB3C827001F7B8A /* CommonProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8902512DB3C827001F7B8A /* CommonProgressBar.swift */; };
 		EA8902592DB42109001F7B8A /* ChallengeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8902582DB42109001F7B8A /* ChallengeDetailView.swift */; };
 		EA89025B2DB42113001F7B8A /* ChallengeDetailFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA89025A2DB42113001F7B8A /* ChallengeDetailFeature.swift */; };
-		EA89025D2DB4318B001F7B8A /* ChallengeStampRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA89025C2DB4318B001F7B8A /* ChallengeStampRow.swift */; };
+		EA89025D2DB4318B001F7B8A /* ChallengeStampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA89025C2DB4318B001F7B8A /* ChallengeStampView.swift */; };
+		EA8902602DB43E32001F7B8A /* ChallengePlaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA89025F2DB43E32001F7B8A /* ChallengePlaceListView.swift */; };
+		EA8902622DB44621001F7B8A /* ChallengePlaceListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8902612DB44621001F7B8A /* ChallengePlaceListItemView.swift */; };
 		F3331B1CD06987A6759E7554 /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256CCC92AC8D6EE5FACE5475 /* Dependencies.framework */; };
 		F44A496F9FDFD2FB8CC8CE33 /* PopPopSeoulKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B725C19342649283D121DE4 /* PopPopSeoulKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F5F3E3974F0EC5815DEDB580 /* swift-composable-architecture_ComposableArchitecture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 97296BA299CDC0A42867B5F2 /* swift-composable-architecture_ComposableArchitecture.bundle */; };
@@ -387,7 +389,9 @@
 		EA8902512DB3C827001F7B8A /* CommonProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonProgressBar.swift; sourceTree = "<group>"; };
 		EA8902582DB42109001F7B8A /* ChallengeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetailView.swift; sourceTree = "<group>"; };
 		EA89025A2DB42113001F7B8A /* ChallengeDetailFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetailFeature.swift; sourceTree = "<group>"; };
-		EA89025C2DB4318B001F7B8A /* ChallengeStampRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeStampRow.swift; sourceTree = "<group>"; };
+		EA89025C2DB4318B001F7B8A /* ChallengeStampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeStampView.swift; sourceTree = "<group>"; };
+		EA89025F2DB43E32001F7B8A /* ChallengePlaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengePlaceListView.swift; sourceTree = "<group>"; };
+		EA8902612DB44621001F7B8A /* ChallengePlaceListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengePlaceListItemView.swift; sourceTree = "<group>"; };
 		ED8E85747991DFD67C97C5BF /* HomeTabFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabFeature.swift; sourceTree = "<group>"; };
 		EDD27B7889EDC29093865516 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		EFE2A73738E1457A6C813045 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
@@ -546,10 +550,9 @@
 		476CC18CCC336CF34F02D41D /* MyChallengeFeature */ = {
 			isa = PBXGroup;
 			children = (
-				EA8902482DB380C0001F7B8A /* List */,
+				EA8902482DB380C0001F7B8A /* SubViews */,
 				47AD68720976BF00B8B00988 /* MyChallengeFeature.swift */,
 				0084C50FE70A9A28D7515595 /* MyChallengeTabView.swift */,
-				C2A5C014435D33BC2A5FDAAD /* MyChallengeEmptyView.swift */,
 			);
 			path = MyChallengeFeature;
 			sourceTree = "<group>";
@@ -861,23 +864,34 @@
 			path = TestResources;
 			sourceTree = "<group>";
 		};
-		EA8902482DB380C0001F7B8A /* List */ = {
+		EA8902482DB380C0001F7B8A /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				C2A5C014435D33BC2A5FDAAD /* MyChallengeEmptyView.swift */,
 				EA8902492DB380DD001F7B8A /* MyChallengeListView.swift */,
 				EA89024B2DB3830F001F7B8A /* MyChallengeistItemView.swift */,
 			);
-			path = List;
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 		EA8902572DB420BA001F7B8A /* DetailChallengeFeature */ = {
 			isa = PBXGroup;
 			children = (
+				EA89025E2DB43DDE001F7B8A /* SubViews */,
 				EA8902582DB42109001F7B8A /* ChallengeDetailView.swift */,
 				EA89025A2DB42113001F7B8A /* ChallengeDetailFeature.swift */,
-				EA89025C2DB4318B001F7B8A /* ChallengeStampRow.swift */,
 			);
 			path = DetailChallengeFeature;
+			sourceTree = "<group>";
+		};
+		EA89025E2DB43DDE001F7B8A /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				EA89025C2DB4318B001F7B8A /* ChallengeStampView.swift */,
+				EA89025F2DB43E32001F7B8A /* ChallengePlaceListView.swift */,
+				EA8902612DB44621001F7B8A /* ChallengePlaceListItemView.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 		FC1D52F63EA1276E29AA94B9 /* UI */ = {
@@ -1225,6 +1239,7 @@
 				EA1814092DB2451200CE8D52 /* ButtonStyle.swift in Sources */,
 				EA89024C2DB3830F001F7B8A /* MyChallengeistItemView.swift in Sources */,
 				0CF92AC3CDB4A9948CA5DF33 /* AppView.swift in Sources */,
+				EA8902622DB44621001F7B8A /* ChallengePlaceListItemView.swift in Sources */,
 				8B5FF2C5E6C37FD031BFE6EC /* HomeTabFeature.swift in Sources */,
 				EA8902422DB360BB001F7B8A /* CommonTopTabView.swift in Sources */,
 				EA8902522DB3C827001F7B8A /* CommonProgressBar.swift in Sources */,
@@ -1235,7 +1250,7 @@
 				EA89024A2DB380DD001F7B8A /* MyChallengeListView.swift in Sources */,
 				556058DE19284C66705EE43D /* MyChallengeTabView.swift in Sources */,
 				8984B3E1AB32308C051931BC /* ProfileTabFeature.swift in Sources */,
-				EA89025D2DB4318B001F7B8A /* ChallengeStampRow.swift in Sources */,
+				EA89025D2DB4318B001F7B8A /* ChallengeStampView.swift in Sources */,
 				8E47E6D3718721F6A12481E3 /* ProfileTabView.swift in Sources */,
 				6686EB0B936EDC8C565CEB9E /* MapView.swift in Sources */,
 				21361487C7AA6831B4A832A5 /* MapViewController.swift in Sources */,
@@ -1248,6 +1263,7 @@
 				0C94ADF1AF8DD4968F34D23F /* Colors.swift in Sources */,
 				EA8902592DB42109001F7B8A /* ChallengeDetailView.swift in Sources */,
 				DCD01D7A4B209FBCB2125C85 /* ShadowModifier.swift in Sources */,
+				EA8902602DB43E32001F7B8A /* ChallengePlaceListView.swift in Sources */,
 				38B6A4CC40F13A56E063408A /* TextStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
