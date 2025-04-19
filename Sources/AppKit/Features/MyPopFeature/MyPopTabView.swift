@@ -35,10 +35,7 @@ struct MyPopTabView: View {
           case .interest:
             if viewStore.interestList.isEmpty {
               MyPopEmptyView(
-                image: Assets.Images.emptyPop.swiftUIImage,
-                title: String(sLocalization: .mypopInterestEmptyTitle),
-                text: String(sLocalization: .mypopInterestEmptyDes),
-                buttonTitle: String(sLocalization: .mypopInterestEmptyButton),
+                tab: .interest,
                 onTap: {
                   // TODO: - 챌린지 찾아보기 이동
                 }
@@ -77,10 +74,7 @@ struct MyPopTabView: View {
           case .progress:
             if viewStore.progressList.isEmpty {
               MyPopEmptyView(
-                image: Assets.Images.emptyPop.swiftUIImage,
-                title: String(sLocalization: .mypopProgressEmptyTitle),
-                text: String(sLocalization: .mypopProgressEmptyDes),
-                buttonTitle: String(sLocalization: .mypopProgressEmptyButton),
+                tab: .progress,
                 onTap: {
                   // TODO: - 챌린지 찾아보기 이동
                 }
@@ -96,8 +90,18 @@ struct MyPopTabView: View {
               }
             }
           case .completed:
-            Text("완료")
-              .frame(maxWidth: .infinity, maxHeight: .infinity)
+            if viewStore.completedList.isEmpty {
+              MyPopEmptyView(tab: .completed, onTap: { })
+            } else {
+              WithViewStore(store, observe: \.self) { viewStore in
+                  MyPopListView(
+                    tab: .completed,
+                    items: viewStore.completedList,
+                    onLikeTapped: { id in
+                      viewStore.send(.tappedInterest(id: id))
+                    })
+              }
+            }
           }
         }
       }

@@ -41,4 +41,7 @@ public enum LocalizationsKey: String {
   case mypopProgressEmptyButton = "mypop_progress_empty_button"
   case mypopProgressEmptyTitle = "mypop_progress_empty_title"
   case mypopProgressEmptyDes = "mypop_progress_empty_des"
+  case mypopCompletedEmptyTitle = "mypop_completed_empty_title"
+  case mypopCompletedEmptyDes = "mypop_completed_empty_des"
+
 }

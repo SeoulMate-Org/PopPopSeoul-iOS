@@ -52,4 +52,3 @@ struct MyPopListView: View {
 }
 
 // MARK: - Helper
-

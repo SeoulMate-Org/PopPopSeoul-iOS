@@ -10,6 +10,28 @@
     "MY" : {
 
     },
+    "mypop_completed_empty_des" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가벼운 챌린지부터 완료해보세요."
+          }
+        }
+      }
+    },
+    "mypop_completed_empty_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아직 완료한 챌린지가 없어요!"
+          }
+        }
+      }
+    },
     "mypop_completed_title" : {
       "extractionState" : "manual",
       "localizations" : {
