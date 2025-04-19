@@ -47,9 +47,9 @@ public struct AppFeature {
   // MARK: Reducer
   
   public var body: some ReducerOf<Self> {
-    Scope(state: \.mainTab, action: \.mainTab) {
-      MainTabFeature()
-    }
+//    Scope(state: \.mainTab, action: \.mainTab) {
+//      MainTabFeature()
+//    }
     
     Reduce { state, action in
       switch action {

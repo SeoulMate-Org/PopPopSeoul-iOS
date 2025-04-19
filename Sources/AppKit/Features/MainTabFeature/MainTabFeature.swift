@@ -21,32 +21,32 @@ public struct MainTabFeature {
     public enum Tab {
       case home, myPop, profile
     }
+    
+    var myPop: MyPopFeature.State = .init()
   }
   
   // MARK: Actions
   
   @CasePathable
   public enum Action: Equatable {
-    case homeTapped
-    case myPopTapped
-    case profileTapped
+    case selectedTabChanged(State.Tab)
+    
+    case myPop(MyPopFeature.Action)
   }
   
   // MARK: Reducer
   
-  public var body: some Reducer<State, Action> {
-//    BindingReducer()
-    
+  public var body: some Reducer<State, Action> {    
+    Scope(state: \.myPop, action: \.myPop) {
+      MyPopFeature()
+    }
+
     Reduce { state, action in
       switch action {
-      case .homeTapped:
-        state.selectedTab = .home
+      case .selectedTabChanged(let tab):
+        state.selectedTab = tab
         return .none
-      case .myPopTapped:
-        state.selectedTab = .myPop
-        return .none
-      case .profileTapped:
-        state.selectedTab = .profile
+      default:
         return .none
       }
     }

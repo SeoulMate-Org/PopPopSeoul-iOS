@@ -24,7 +24,12 @@ public struct MainTabView: View {
           case .home:
             HomeTabView()
           case .myPop:
-            MyPopTabView()
+            MyPopTabView(
+              store: store.scope(
+                state: \.myPop,
+                action: \.myPop
+              )
+            )
           case .profile:
             ProfileTabView()
           }
@@ -38,15 +43,15 @@ public struct MainTabView: View {
           
           HStack {
             tabItem(tab: .home, isSelected: viewStore.state == .home) {
-              store.send(.homeTapped)
+              store.send(.selectedTabChanged(.home))
             }
             
             tabItem(tab: .myPop, isSelected: viewStore.state == .myPop) {
-              store.send(.myPopTapped)
+              store.send(.selectedTabChanged(.myPop))
             }
             
             tabItem(tab: .profile, isSelected: viewStore.state == .profile) {
-              store.send(.profileTapped)
+              store.send(.selectedTabChanged(.profile))
             }
           }
           .frame(height: 58)

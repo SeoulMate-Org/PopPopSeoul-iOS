@@ -34,6 +34,7 @@ public enum Assets {
     public static let homeFill = ImageAsset(name: "home_fill")
     public static let homeLine = ImageAsset(name: "home_line")
     public static let hospitalLine = ImageAsset(name: "hospital_line")
+    public static let locationFill = ImageAsset(name: "location_fill")
     public static let locationLine = ImageAsset(name: "location_line")
     public static let mapFill = ImageAsset(name: "map_fill")
     public static let mapLine = ImageAsset(name: "map_line")
