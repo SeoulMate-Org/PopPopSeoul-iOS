@@ -16,7 +16,7 @@ struct MyPopProgressBar: View {
       HStack(spacing: 4) {
         let numberWidth: CGFloat = 24 // 숫자 영역 고정 너비
         let availableWidth = geo.size.width - 36 - numberWidth - CGFloat(total - 1) * 5
-        let barWidth = availableWidth / CGFloat(5)
+        let barWidth = availableWidth / CGFloat(total)
         
         // 바들
         HStack(spacing: 4) {
@@ -43,7 +43,7 @@ struct MyPopProgressBar: View {
 // MARK: Preview
 
 #Preview {
-  MyPopProgressBar(total: 4, current: 2)
+  MyPopProgressBar(total: 3, current: 2)
 }
 
 // MARK: - Helper
