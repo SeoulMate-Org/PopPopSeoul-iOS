@@ -17,6 +17,12 @@ struct MyPopTabView: View {
         type: .titleOnly(title: String(sLocalization: .mypopHeaderTitle))
       )
       
+      CommonTopTabView(
+        tabs: MyPopTab.allCases,
+        titleProvider: { $0.title },
+        selectedTab: $selectedTab
+      )
+      
       CommonEmptyView(
         image: Assets.Images.emptyPop.swiftUIImage,
         title: String(sLocalization: .mypopInterestEmptyTitle),
@@ -37,7 +43,7 @@ struct MyPopTabView: View {
 // MARK: - Helper
 
 enum MyPopTab: String, CaseIterable {
-  
+
   case interest
   case progress
   case completed

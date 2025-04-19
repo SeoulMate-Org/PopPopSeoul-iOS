@@ -137,6 +137,7 @@
 		E61EFF54D5A75686328C4A92 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E4D5476FC354FD8133DF1816 /* Pretendard-Light.otf */; };
 		E91C0B814A653815C9087B86 /* UIKitNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883C2DDDE23D8048FA4E3E71 /* UIKitNavigation.framework */; };
 		EA1814092DB2451200CE8D52 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1814082DB2451200CE8D52 /* ButtonStyle.swift */; };
+		EA8902422DB360BB001F7B8A /* CommonTopTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8902412DB360BB001F7B8A /* CommonTopTabView.swift */; };
 		F3331B1CD06987A6759E7554 /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256CCC92AC8D6EE5FACE5475 /* Dependencies.framework */; };
 		F44A496F9FDFD2FB8CC8CE33 /* PopPopSeoulKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B725C19342649283D121DE4 /* PopPopSeoulKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F5F3E3974F0EC5815DEDB580 /* swift-composable-architecture_ComposableArchitecture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 97296BA299CDC0A42867B5F2 /* swift-composable-architecture_ComposableArchitecture.bundle */; };
@@ -368,6 +369,7 @@
 		E85D8F1AB9B0F2707E456267 /* ComposableArchitecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ComposableArchitecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA1814082DB2451200CE8D52 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		EA26B67DE986D8D090F59956 /* CombineSchedulers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CombineSchedulers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA8902412DB360BB001F7B8A /* CommonTopTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTopTabView.swift; sourceTree = "<group>"; };
 		ED8E85747991DFD67C97C5BF /* HomeTabFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabFeature.swift; sourceTree = "<group>"; };
 		EDD27B7889EDC29093865516 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		EFE2A73738E1457A6C813045 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
@@ -834,6 +836,7 @@
 				BB95D3E563B8121A779B6663 /* DesignSystem */,
 				C2A5C014435D33BC2A5FDAAD /* CommonEmptyView.swift */,
 				5FD5771D551B4551AAEAA9B7 /* CommonHeaderView.swift */,
+				EA8902412DB360BB001F7B8A /* CommonTopTabView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -1171,6 +1174,7 @@
 				EA1814092DB2451200CE8D52 /* ButtonStyle.swift in Sources */,
 				0CF92AC3CDB4A9948CA5DF33 /* AppView.swift in Sources */,
 				8B5FF2C5E6C37FD031BFE6EC /* HomeTabFeature.swift in Sources */,
+				EA8902422DB360BB001F7B8A /* CommonTopTabView.swift in Sources */,
 				B2C741A67B53B5A2017E3393 /* HomeTabView.swift in Sources */,
 				6A599533FC57FADF4E92E36D /* MainTabFeature.swift in Sources */,
 				69DACC740A9E85B166973C68 /* MainTabView.swift in Sources */,
