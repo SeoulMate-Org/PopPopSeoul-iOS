@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CommentListItemView: View {
+  let type: CommentType
   let comment: Comment
   let onEditTapped: (() -> Void)?
   let onDeleteTapped: (() -> Void)?
@@ -21,7 +22,7 @@ struct CommentListItemView: View {
             .frame(width: 16, height: 16)
         }
         .frame(width: 36, height: 36)
-        .padding(.top, 10)
+        .padding(.top, type.verticalPadding - 2)
         .padding(.trailing, 10)
       }
       
@@ -36,6 +37,7 @@ struct CommentListItemView: View {
             .foregroundColor(Colors.gray700.swiftUIColor)
         }
         .frame(height: 32)
+        .padding(.vertical, 6)
         
         Text(comment.content)
           .font(.bodyS)
@@ -47,6 +49,7 @@ struct CommentListItemView: View {
           .padding(.top, 4)
       }
       .padding(.horizontal, 20)
+      .padding(.vertical, type.verticalPadding)
       .frame(maxWidth: .infinity, alignment: .leading)
     }
   }
@@ -61,7 +64,21 @@ struct CommentListItemView: View {
 // MARK: Preview
 
 #Preview {
-  CommentListItemView(comment: mockComments[1], onEditTapped: nil, onDeleteTapped: nil)
+  CommentListItemView(type: .detailChallenge, comment: mockComments[0], onEditTapped: nil, onDeleteTapped: nil)
 }
 
 // MARK: - Helper
+
+enum CommentType {
+  case detailChallenge
+  case myComment
+  case challengeComment
+  
+  var verticalPadding: CGFloat {
+    switch self {
+    case .detailChallenge: return 16
+    case .myComment: return 12
+    case .challengeComment: return 12
+    }
+  }
+}

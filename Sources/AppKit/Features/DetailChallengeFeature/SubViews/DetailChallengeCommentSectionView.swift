@@ -24,9 +24,9 @@ struct DetailChallengeCommentSectionView: View {
       if challenge.comments.count > 0 {
         let displayedComments = challenge.comments.prefix(10)
         
-        VStack(spacing: 16) {
+        VStack(spacing: 0) {
           ForEach(displayedComments.indices, id: \.self) { index in
-            CommentListItemView(comment: displayedComments[index], onEditTapped: nil, onDeleteTapped: nil)
+            CommentListItemView(type: .detailChallenge, comment: displayedComments[index], onEditTapped: nil, onDeleteTapped: nil)
             
             // 마지막 아이템 제외하고만 Divider 추가
             if index < displayedComments.count - 1 {
@@ -45,7 +45,6 @@ struct DetailChallengeCommentSectionView: View {
             .frame(height: 1)
             .foregroundColor(Colors.gray25.swiftUIColor)
             .padding(.horizontal, 20)
-            .padding(.top, 16)
         } else {
           AppButton(title: String(sLocalization: .detailchallengeCommentButton),
                     size: .ssize,
