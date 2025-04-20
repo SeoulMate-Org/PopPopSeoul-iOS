@@ -1,5 +1,5 @@
 //
-//  ChallengeDetailView.swift
+//  DetailChallengeView.swift
 //  PopPopSeoulKit
 //
 //  Created by suni on 4/20/25.
@@ -9,7 +9,7 @@ import SwiftUI
 import ComposableArchitecture
 import Common
 
-struct ChallengeDetailView: View {
+struct DetailChallengeView: View {
   let challenge: Challenge
   @State private var showMenu = false
   @State private var isParticipating = true
@@ -140,7 +140,7 @@ struct ChallengeDetailView: View {
 // MARK: Preview
 
 #Preview {
-  ChallengeDetailView(challenge: mockChallenges[0])
+  DetailChallengeView(challenge: mockChallenges[0])
 }
 
 // MARK: - Helper

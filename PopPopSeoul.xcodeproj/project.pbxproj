@@ -145,8 +145,8 @@
 		EA89024C2DB3830F001F7B8A /* MyChallengeistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA89024B2DB3830F001F7B8A /* MyChallengeistItemView.swift */; };
 		EA8902502DB3A287001F7B8A /* ToastStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA89024F2DB3A287001F7B8A /* ToastStyle.swift */; };
 		EA8902522DB3C827001F7B8A /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8902512DB3C827001F7B8A /* ProgressBar.swift */; };
-		EA8902592DB42109001F7B8A /* ChallengeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8902582DB42109001F7B8A /* ChallengeDetailView.swift */; };
-		EA89025B2DB42113001F7B8A /* ChallengeDetailFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA89025A2DB42113001F7B8A /* ChallengeDetailFeature.swift */; };
+		EA8902592DB42109001F7B8A /* DetailChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8902582DB42109001F7B8A /* DetailChallengeView.swift */; };
+		EA89025B2DB42113001F7B8A /* DetailChallengeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA89025A2DB42113001F7B8A /* DetailChallengeFeature.swift */; };
 		EA89025D2DB4318B001F7B8A /* ChallengeStampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA89025C2DB4318B001F7B8A /* ChallengeStampView.swift */; };
 		EA8902622DB44621001F7B8A /* ChallengePlaceListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8902612DB44621001F7B8A /* ChallengePlaceListItemView.swift */; };
 		EA8902682DB44ECB001F7B8A /* CommentListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8902672DB44ECB001F7B8A /* CommentListItemView.swift */; };
@@ -157,6 +157,12 @@
 		EA8902732DB50C21001F7B8A /* DetailChallengeStampSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8902722DB50C21001F7B8A /* DetailChallengeStampSectionView.swift */; };
 		EA8902752DB5184B001F7B8A /* DetailChallengePlaceSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8902742DB5184B001F7B8A /* DetailChallengePlaceSectionView.swift */; };
 		EA8902772DB51896001F7B8A /* DetailChallengeCommentSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8902762DB51896001F7B8A /* DetailChallengeCommentSectionView.swift */; };
+		EA89027A2DB56A4A001F7B8A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8902792DB56A4A001F7B8A /* LoginView.swift */; };
+		EA89027C2DB56A53001F7B8A /* LoginFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA89027B2DB56A53001F7B8A /* LoginFeature.swift */; };
+		EA89027F2DB56BA4001F7B8A /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA89027E2DB56BA4001F7B8A /* AuthClient.swift */; };
+		EA8902812DB57195001F7B8A /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA8902802DB57195001F7B8A /* Secrets.plist */; };
+		EA8902822DB57195001F7B8A /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA8902802DB57195001F7B8A /* Secrets.plist */; };
+		EA8902832DB57195001F7B8A /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA8902802DB57195001F7B8A /* Secrets.plist */; };
 		F3331B1CD06987A6759E7554 /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256CCC92AC8D6EE5FACE5475 /* Dependencies.framework */; };
 		F44A496F9FDFD2FB8CC8CE33 /* PopPopSeoulKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B725C19342649283D121DE4 /* PopPopSeoulKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F5F3E3974F0EC5815DEDB580 /* swift-composable-architecture_ComposableArchitecture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 97296BA299CDC0A42867B5F2 /* swift-composable-architecture_ComposableArchitecture.bundle */; };
@@ -394,8 +400,8 @@
 		EA89024B2DB3830F001F7B8A /* MyChallengeistItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChallengeistItemView.swift; sourceTree = "<group>"; };
 		EA89024F2DB3A287001F7B8A /* ToastStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastStyle.swift; sourceTree = "<group>"; };
 		EA8902512DB3C827001F7B8A /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
-		EA8902582DB42109001F7B8A /* ChallengeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetailView.swift; sourceTree = "<group>"; };
-		EA89025A2DB42113001F7B8A /* ChallengeDetailFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeDetailFeature.swift; sourceTree = "<group>"; };
+		EA8902582DB42109001F7B8A /* DetailChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailChallengeView.swift; sourceTree = "<group>"; };
+		EA89025A2DB42113001F7B8A /* DetailChallengeFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailChallengeFeature.swift; sourceTree = "<group>"; };
 		EA89025C2DB4318B001F7B8A /* ChallengeStampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeStampView.swift; sourceTree = "<group>"; };
 		EA8902612DB44621001F7B8A /* ChallengePlaceListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengePlaceListItemView.swift; sourceTree = "<group>"; };
 		EA8902672DB44ECB001F7B8A /* CommentListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListItemView.swift; sourceTree = "<group>"; };
@@ -405,6 +411,10 @@
 		EA8902722DB50C21001F7B8A /* DetailChallengeStampSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailChallengeStampSectionView.swift; sourceTree = "<group>"; };
 		EA8902742DB5184B001F7B8A /* DetailChallengePlaceSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailChallengePlaceSectionView.swift; sourceTree = "<group>"; };
 		EA8902762DB51896001F7B8A /* DetailChallengeCommentSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailChallengeCommentSectionView.swift; sourceTree = "<group>"; };
+		EA8902792DB56A4A001F7B8A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		EA89027B2DB56A53001F7B8A /* LoginFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFeature.swift; sourceTree = "<group>"; };
+		EA89027E2DB56BA4001F7B8A /* AuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; };
+		EA8902802DB57195001F7B8A /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		ED8E85747991DFD67C97C5BF /* HomeTabFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabFeature.swift; sourceTree = "<group>"; };
 		EDD27B7889EDC29093865516 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		EFE2A73738E1457A6C813045 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
@@ -601,6 +611,7 @@
 		717EB2AA8668CB693F3ACDC7 /* AppKit */ = {
 			isa = PBXGroup;
 			children = (
+				EA89027D2DB56ACD001F7B8A /* Clients */,
 				85521E7028624C4C99191F72 /* Features */,
 				FC1D52F63EA1276E29AA94B9 /* UI */,
 			);
@@ -680,11 +691,12 @@
 		85521E7028624C4C99191F72 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				EA8902652DB44DE3001F7B8A /* MyCommentFeature */,
-				EA8902642DB44DD2001F7B8A /* ChallengeCommentFeature */,
 				BDB0B200FDC442C77D85F387 /* AppFeature */,
+				EA8902782DB56A04001F7B8A /* LoginFeature */,
 				9A51848C6AF443FB43EB04C4 /* MainTabFeature */,
 				264F5A4A7B0C22454888670B /* HomeFeature */,
+				EA8902652DB44DE3001F7B8A /* MyCommentFeature */,
+				EA8902642DB44DD2001F7B8A /* ChallengeCommentFeature */,
 				476CC18CCC336CF34F02D41D /* MyChallengeFeature */,
 				EA8902572DB420BA001F7B8A /* DetailChallengeFeature */,
 				CF47B8F8E2D72DC31510B573 /* ProfileFeature */,
@@ -861,6 +873,7 @@
 			children = (
 				21F1198C49E87E8F197837EE /* Assets.xcassets */,
 				5055D6B79A3002E12D64D945 /* Launch Screen.storyboard */,
+				EA8902802DB57195001F7B8A /* Secrets.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -895,8 +908,8 @@
 			isa = PBXGroup;
 			children = (
 				EA89025E2DB43DDE001F7B8A /* SubViews */,
-				EA8902582DB42109001F7B8A /* ChallengeDetailView.swift */,
-				EA89025A2DB42113001F7B8A /* ChallengeDetailFeature.swift */,
+				EA8902582DB42109001F7B8A /* DetailChallengeView.swift */,
+				EA89025A2DB42113001F7B8A /* DetailChallengeFeature.swift */,
 			);
 			path = DetailChallengeFeature;
 			sourceTree = "<group>";
@@ -926,6 +939,23 @@
 			children = (
 			);
 			path = MyCommentFeature;
+			sourceTree = "<group>";
+		};
+		EA8902782DB56A04001F7B8A /* LoginFeature */ = {
+			isa = PBXGroup;
+			children = (
+				EA8902792DB56A4A001F7B8A /* LoginView.swift */,
+				EA89027B2DB56A53001F7B8A /* LoginFeature.swift */,
+			);
+			path = LoginFeature;
+			sourceTree = "<group>";
+		};
+		EA89027D2DB56ACD001F7B8A /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				EA89027E2DB56BA4001F7B8A /* AuthClient.swift */,
+			);
+			path = Clients;
 			sourceTree = "<group>";
 		};
 		FC1D52F63EA1276E29AA94B9 /* UI */ = {
@@ -1113,6 +1143,7 @@
 				44E1EDA308BCF5FDC3001713 /* Pretendard-SemiBold.otf in Resources */,
 				29BCD0D08C8D36C1AB666C1A /* Pretendard-Thin.otf in Resources */,
 				0AA1411D4020152E99262DD7 /* Localizable.xcstrings in Resources */,
+				EA8902812DB57195001F7B8A /* Secrets.plist in Resources */,
 				3DBCD5F641C93CC2E090A7A1 /* BottomSheet_BottomSheet.bundle in Resources */,
 				2E07869F75040C1CFA7F6226 /* swift-composable-architecture_ComposableArchitecture.bundle in Resources */,
 				3FDF2A1E729BCF6DCD79B7B7 /* swift-sharing_Sharing.bundle in Resources */,
@@ -1123,6 +1154,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA8902832DB57195001F7B8A /* Secrets.plist in Resources */,
 				C5C014EF3150FDE93197FD79 /* Assets.xcassets in Resources */,
 				2D5B21E3DCDC1C1E05850837 /* Launch Screen.storyboard in Resources */,
 				BF4151C4834DC553BEE865EC /* Colors.xcassets in Resources */,
@@ -1160,6 +1192,7 @@
 				2050201117C43CC8CA9BE981 /* Pretendard-SemiBold.otf in Resources */,
 				389384E2483E8EF40B87653C /* Pretendard-Thin.otf in Resources */,
 				C65A600002199304A18650E8 /* Localizable.xcstrings in Resources */,
+				EA8902822DB57195001F7B8A /* Secrets.plist in Resources */,
 				58390E7B5B94591F72E36E98 /* BottomSheet_BottomSheet.bundle in Resources */,
 				8FEBD3666807BB87BFCF635B /* swift-composable-architecture_ComposableArchitecture.bundle in Resources */,
 				4FFBF4547D0A8AD777748DCA /* swift-sharing_Sharing.bundle in Resources */,
@@ -1268,7 +1301,8 @@
 			files = (
 				7CA9AB1339EB984749FB5B28 /* TuistAssets+PopPopSeoulKit.swift in Sources */,
 				0EC2753855C5F63EABF56E6A /* TuistBundle+PopPopSeoulKit.swift in Sources */,
-				EA89025B2DB42113001F7B8A /* ChallengeDetailFeature.swift in Sources */,
+				EA89025B2DB42113001F7B8A /* DetailChallengeFeature.swift in Sources */,
+				EA89027F2DB56BA4001F7B8A /* AuthClient.swift in Sources */,
 				36DAC9AE1FC4BB4B4F01737A /* TuistFonts+PopPopSeoulKit.swift in Sources */,
 				EA8902712DB509A3001F7B8A /* DetailChallengeInfoSectionView.swift in Sources */,
 				39ECFBB5679467FFD0F183F9 /* AppFeature.swift in Sources */,
@@ -1286,6 +1320,7 @@
 				69DACC740A9E85B166973C68 /* MainTabView.swift in Sources */,
 				E2D2C49932524CF43E0066F3 /* MyChallengeFeature.swift in Sources */,
 				EA8902772DB51896001F7B8A /* DetailChallengeCommentSectionView.swift in Sources */,
+				EA89027C2DB56A53001F7B8A /* LoginFeature.swift in Sources */,
 				EA89024A2DB380DD001F7B8A /* MyChallengeListView.swift in Sources */,
 				556058DE19284C66705EE43D /* MyChallengeTabView.swift in Sources */,
 				8984B3E1AB32308C051931BC /* ProfileTabFeature.swift in Sources */,
@@ -1303,8 +1338,9 @@
 				C2D0604868F7CAA99F1D101B /* Color++.swift in Sources */,
 				EA89026D2DB4F673001F7B8A /* View++.swift in Sources */,
 				0C94ADF1AF8DD4968F34D23F /* Colors.swift in Sources */,
-				EA8902592DB42109001F7B8A /* ChallengeDetailView.swift in Sources */,
+				EA8902592DB42109001F7B8A /* DetailChallengeView.swift in Sources */,
 				DCD01D7A4B209FBCB2125C85 /* ShadowModifier.swift in Sources */,
+				EA89027A2DB56A4A001F7B8A /* LoginView.swift in Sources */,
 				38B6A4CC40F13A56E063408A /* TextStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

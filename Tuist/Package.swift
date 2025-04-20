@@ -33,6 +33,14 @@ let package = Package(
         .package(
             url: "https://github.com/navermaps/SPM-NMapsMap.git",
             .upToNextMajor(from: "3.16.1")
+        ),
+        .package(
+            url: "https://github.com/google/GoogleSignIn-iOS",
+            .upToNextMajor(from: "8.0.0")
+        ),
+        .package(
+            url: "https://github.com/facebook/facebook-ios-sdk",
+            .upToNextMajor(from: "18.0.0")
         )
     ]
 )
