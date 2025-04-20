@@ -25,6 +25,17 @@
         }
       }
     },
+    "detailchallenge_comment_des" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "댓글은 하나의 스탬프를 찍어야 쓸 수 있어요!"
+          }
+        }
+      }
+    },
     "detailchallenge_comment_title" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -32,6 +43,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "댓글"
+          }
+        }
+      }
+    },
+    "detailchallenge_end_button" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "챌린지 그만두기"
           }
         }
       }
@@ -191,7 +213,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "관심 챌린지가 삭제되었어요"
+            "value" : "찜한 챌린지가 삭제되었어요"
           }
         }
       }

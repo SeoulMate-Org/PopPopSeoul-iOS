@@ -15,12 +15,16 @@ public struct Challenge: Equatable, Identifiable {
   let subtitle: String
   let description: String
   let likeCount: Int = Int.random(in: 0..<20)
-  let commentCount: Int = Int.random(in: 0..<20)
   let participantCount: Int = Int.random(in: 0..<20)
   let places: [Place]
-  let comments: [Comment] = mockComments
+  var comments: [Comment] = mockComments
+  var commentCount: Int {
+    return comments.count
+  }
   
-  func completeCount() -> Int {
+  var isParticipating: Bool = true
+  
+  var completeCount: Int {
     return Int.random(in: 0..<places.count)
   }
 }
@@ -55,6 +59,7 @@ public struct Comment: Equatable, Identifiable {
   }
 }
 
+public let isLogined = true
 public let myId = UUID(uuidString: "00000000-0000-0000-0000-000000000001")
 public let mockComments: [Comment] = [
   Comment(
@@ -120,7 +125,8 @@ public let mockChallenges: [Challenge] = [
     name: "🏯 조선의 수도, 한양을 걷다",
     subtitle: "경복궁부터 인사동까지 경복궁부터 인사동까지 경복궁부터 인사동까지 경복궁부터 인사동까지",
     description: "서울의 역사 중심지인 종로 일대를 걸으며 조선시대의 흔적을 느껴보세요.\n서울의 역사 중심지인 종로 일대를 걸으며 조선시대의 흔적을 느껴보세요.서울의 역사 중심지인 종로 일대를 걸으며 조선시대의 흔적을 느껴보세요.\n서울의 역사 중심지인 종로 일대를 걸으며 조선시대의 흔적을 느껴보세요.",
-    places: [mockPlace1, mockPlace2, mockPlace3, mockPlace1, mockPlace2]
+    places: [mockPlace1, mockPlace2, mockPlace3, mockPlace1, mockPlace2],
+    comments: mockComments + mockComments + mockComments + mockComments + mockComments
   ),
   Challenge(
     theme: "역사 속 서울 걷기",
@@ -128,7 +134,9 @@ public let mockChallenges: [Challenge] = [
     name: "조선의 수도, 한양을 걷다",
     subtitle: "경복궁부터 인사동까지",
     description: "서울의 역사 중심지인 종로 일대를 걸으며 조선시대의 흔적을 느껴보세요.",
-    places: [mockPlace1, mockPlace2, mockPlace3, mockPlace1]
+    places: [mockPlace1, mockPlace2, mockPlace3, mockPlace1],
+    comments: [],
+    isParticipating: false
   ),
   Challenge(
     theme: "역사 속 서울 걷기",
@@ -144,7 +152,9 @@ public let mockChallenges: [Challenge] = [
     name: "조선의 수도, 한양을 걷다",
     subtitle: "경복궁부터 인사동까지",
     description: "서울의 역사 중심지인 종로 일대를 걸으며 조선시대의 흔적을 느껴보세요.",
-    places: [mockPlace1, mockPlace2]
+    places: [mockPlace1, mockPlace2],
+    comments: [],
+    isParticipating: false
   ),
   Challenge(
     theme: "역사 속 서울 걷기",

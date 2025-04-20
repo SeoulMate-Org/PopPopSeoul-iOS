@@ -1,0 +1,19 @@
+//
+//  View++.swift
+//  PopPopSeoulKit
+//
+//  Created by suni on 4/20/25.
+//
+
+import SwiftUI
+
+extension View {
+  @ViewBuilder
+  func `if`<Content: View>(_ condition: Bool, transform: (Self) -> Content) -> some View {
+    if condition {
+      transform(self)
+    } else {
+      self
+    }
+  }
+}

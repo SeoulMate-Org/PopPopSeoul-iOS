@@ -55,4 +55,6 @@ public enum LocalizationsKey: String {
   case detailchallengeStartButton = "detailchallenge_start_button"
   case mychallengeTotal = "mychallenge_total"
   case placeDistance = "place_distance"
+  case detailchallengeCommentDes = "detailchallenge_comment_des"
+  case detailchallengeEndButton = "detailchallenge_end_button"
 }

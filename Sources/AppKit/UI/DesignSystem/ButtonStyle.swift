@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Common
 
 struct AppButton: View {
   let title: String
@@ -14,6 +15,7 @@ struct AppButton: View {
   let layout: AppButtonLayout
   let state: AppButtonState
   let onTap: () -> Void
+  var isFullWidth: Bool = false
 
   var body: some View {
     Button(action: {
@@ -28,7 +30,8 @@ struct AppButton: View {
       style: style,
       layout: layout,
       state: state,
-      title: title
+      title: title,
+      isFullWidth: isFullWidth
     ))
     .disabled(state == .disabled)
   }
@@ -37,7 +40,7 @@ struct AppButton: View {
 // MARK: Preview
 
 #Preview {
-  AppButton(title: "버튼", size: .lsize, style: .primary, layout: .textOnly, state: .enabled, onTap: {})
+  AppButton(title: "버튼", size: .ssize, style: .neutral, layout: .textOnly, state: .enabled, onTap: {})
 }
 
 // MARK: - Helper
@@ -48,6 +51,7 @@ struct AppButtonStyle: ButtonStyle {
   let layout: AppButtonLayout
   let state: AppButtonState
   let title: String
+  let isFullWidth: Bool
 
   func makeBody(configuration: Configuration) -> some View {
     let currentState: AppButtonState = {
@@ -75,6 +79,10 @@ struct AppButtonStyle: ButtonStyle {
     .foregroundColor(style.foregroundColor(for: currentState))
     .padding(.vertical, size.verticalPadding)
     .padding(.horizontal, size.horizontalPadding)
+    .frame(maxHeight: .infinity)
+    .if(isFullWidth) { view in
+      view.frame(maxWidth: .infinity)
+    }
     .background(style.backgroundColor(for: currentState))
     .overlay(
       RoundedRectangle(cornerRadius: 10)

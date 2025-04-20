@@ -28,7 +28,8 @@ struct MyChallengeEmptyView: View {
       }
       
       if let buttonTitle = tab.buttonTitle {
-        AppButton(title: buttonTitle, size: .msize, style: .primary, layout: .textOnly, state: .enabled, onTap: onTap)
+        AppButton(title: buttonTitle, size: .msize, style: .primary, layout: .textOnly, state: .enabled, onTap: onTap, isFullWidth: false)
+          .frame(height: 38)
       }
     }
     .frame(maxWidth: .infinity, maxHeight: .infinity)
