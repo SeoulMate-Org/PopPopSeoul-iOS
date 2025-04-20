@@ -22,39 +22,73 @@ let swiftlintScript: TargetScript = .pre(
     basedOnDependencyAnalysis: false
 )
 
-let appInfoPlist: [String: Plist.Value] = [
-    "CFBundleShortVersionString": Plist.Value(stringLiteral: version),
-    "UILaunchStoryboardName": "Launch Screen",
-    "UIApplicationSceneManifest": [
-        "UIApplicationSupportsMultipleScenes": false,
-        "UISceneConfigurations": []
-    ],
-    "CFBundleDevelopmentRegion": "ko",
-    "CFBundleLocalizations": [
-        "ko",
-        "en"
-    ],
-    "ITSAppUsesNonExemptEncryption": false,
-    "UIUserInterfaceStyle": "Light",
-    "UISupportedInterfaceOrientations": ["UIInterfaceOrientationPortrait"],
-    "UISupportedInterfaceOrientations~ipad": [
-        "UIInterfaceOrientationPortrait",
-        "UIInterfaceOrientationPortraitUpsideDown",
-        "UIInterfaceOrientationLandscapeLeft",
-        "UIInterfaceOrientationLandscapeRight"
-    ],
-    "UIAppFonts": [
-        "Pretendard-Black.otf",
-        "Pretendard-Bold.otf",
-        "Pretendard-ExtraBold.otf",
-        "Pretendard-ExtraLight.otf",
-        "Pretendard-Light.otf",
-        "Pretendard-Medium.otf",
-        "Pretendard-Regular.otf",
-        "Pretendard-SemiBold.otf",
-        "Pretendard-Thin.otf",
+let appInfoPlist: [String: Plist.Value] = {
+    var base: [String: Plist.Value] = [
+        "CFBundleShortVersionString": Plist.Value(stringLiteral: version),
+        "UILaunchStoryboardName": "Launch Screen",
+        "UIApplicationSceneManifest": [
+            "UIApplicationSupportsMultipleScenes": false,
+            "UISceneConfigurations": []
+        ],
+        "CFBundleDevelopmentRegion": "ko",
+        "CFBundleLocalizations": [
+            "ko",
+            "en"
+        ],
+        "ITSAppUsesNonExemptEncryption": false,
+        "UIUserInterfaceStyle": "Light",
+        "UISupportedInterfaceOrientations": ["UIInterfaceOrientationPortrait"],
+        "UISupportedInterfaceOrientations~ipad": [
+            "UIInterfaceOrientationPortrait",
+            "UIInterfaceOrientationPortraitUpsideDown",
+            "UIInterfaceOrientationLandscapeLeft",
+            "UIInterfaceOrientationLandscapeRight"
+        ],
+        "UIAppFonts": [
+            "Pretendard-Black.otf",
+            "Pretendard-Bold.otf",
+            "Pretendard-ExtraBold.otf",
+            "Pretendard-ExtraLight.otf",
+            "Pretendard-Light.otf",
+            "Pretendard-Medium.otf",
+            "Pretendard-Regular.otf",
+            "Pretendard-SemiBold.otf",
+            "Pretendard-Thin.otf",
+        ]
     ]
-]
+    
+    let secretsPath = "App/Resources/Secrets.plist"
+    if let data = try? Data(contentsOf: URL(fileURLWithPath: secretsPath)),
+       let secretsPlist = try? PropertyListSerialization.propertyList(
+        from: data,
+        options: [],
+        format: nil
+       ) as? [String: Any] {
+        
+        let convertedSecrets = secretsPlist.compactMapValues { convertToPlistValue($0) }
+        return base.merging(convertedSecrets) { $1 }
+    } else {
+        return base // ✅ fallback return!
+    }
+}()
+
+func convertToPlistValue(_ any: Any) -> Plist.Value? {
+    switch any {
+    case let string as String:
+        return .string(string)
+    case let int as Int:
+        return .integer(int)
+    case let bool as Bool:
+        return .boolean(bool)
+    case let array as [Any]:
+        return .array(array.compactMap { convertToPlistValue($0) })
+    case let dict as [String: Any]:
+        let converted = dict.compactMapValues { convertToPlistValue($0) }
+        return .dictionary(converted)
+    default:
+        return nil
+    }
+}
 
 func createAppTarget(suffix: String = "", isDev: Bool = false, scripts: [TargetScript] = [], dependencies: [TargetDependency] = []) -> Target {
     .target(
@@ -149,6 +183,8 @@ let project = Project(
                 .external(name: "SwiftUIIntrospect"),
                 .external(name: "Logging"),
                 .external(name: "NMapsMap"),
+                .external(name: "FacebookLogin"),
+                .external(name: "GoogleSignIn"),
                 .target(name: "Common"),
             ]
         ),
