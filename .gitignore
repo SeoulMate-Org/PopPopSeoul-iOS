@@ -94,3 +94,4 @@ TuistEnv/
 __Snapshots__/
 
 *.p8
+Secrets.plist
