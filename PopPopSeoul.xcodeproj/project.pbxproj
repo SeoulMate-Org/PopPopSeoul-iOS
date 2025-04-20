@@ -153,6 +153,10 @@
 		EA89026C2DB4F673001F7B8A /* View++.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA89026B2DB4F673001F7B8A /* View++.swift */; };
 		EA89026D2DB4F673001F7B8A /* View++.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA89026B2DB4F673001F7B8A /* View++.swift */; };
 		EA89026F2DB4F9F7001F7B8A /* MenuStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA89026E2DB4F9F7001F7B8A /* MenuStyle.swift */; };
+		EA8902712DB509A3001F7B8A /* DetailChallengeInfoSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8902702DB509A3001F7B8A /* DetailChallengeInfoSectionView.swift */; };
+		EA8902732DB50C21001F7B8A /* DetailChallengeStampSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8902722DB50C21001F7B8A /* DetailChallengeStampSectionView.swift */; };
+		EA8902752DB5184B001F7B8A /* DetailChallengePlaceSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8902742DB5184B001F7B8A /* DetailChallengePlaceSectionView.swift */; };
+		EA8902772DB51896001F7B8A /* DetailChallengeCommentSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8902762DB51896001F7B8A /* DetailChallengeCommentSectionView.swift */; };
 		F3331B1CD06987A6759E7554 /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256CCC92AC8D6EE5FACE5475 /* Dependencies.framework */; };
 		F44A496F9FDFD2FB8CC8CE33 /* PopPopSeoulKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B725C19342649283D121DE4 /* PopPopSeoulKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F5F3E3974F0EC5815DEDB580 /* swift-composable-architecture_ComposableArchitecture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 97296BA299CDC0A42867B5F2 /* swift-composable-architecture_ComposableArchitecture.bundle */; };
@@ -397,6 +401,10 @@
 		EA8902672DB44ECB001F7B8A /* CommentListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListItemView.swift; sourceTree = "<group>"; };
 		EA89026B2DB4F673001F7B8A /* View++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View++.swift"; sourceTree = "<group>"; };
 		EA89026E2DB4F9F7001F7B8A /* MenuStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuStyle.swift; sourceTree = "<group>"; };
+		EA8902702DB509A3001F7B8A /* DetailChallengeInfoSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailChallengeInfoSectionView.swift; sourceTree = "<group>"; };
+		EA8902722DB50C21001F7B8A /* DetailChallengeStampSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailChallengeStampSectionView.swift; sourceTree = "<group>"; };
+		EA8902742DB5184B001F7B8A /* DetailChallengePlaceSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailChallengePlaceSectionView.swift; sourceTree = "<group>"; };
+		EA8902762DB51896001F7B8A /* DetailChallengeCommentSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailChallengeCommentSectionView.swift; sourceTree = "<group>"; };
 		ED8E85747991DFD67C97C5BF /* HomeTabFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabFeature.swift; sourceTree = "<group>"; };
 		EDD27B7889EDC29093865516 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		EFE2A73738E1457A6C813045 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
@@ -896,8 +904,12 @@
 		EA89025E2DB43DDE001F7B8A /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				EA8902702DB509A3001F7B8A /* DetailChallengeInfoSectionView.swift */,
+				EA8902722DB50C21001F7B8A /* DetailChallengeStampSectionView.swift */,
 				EA89025C2DB4318B001F7B8A /* ChallengeStampView.swift */,
+				EA8902742DB5184B001F7B8A /* DetailChallengePlaceSectionView.swift */,
 				EA8902612DB44621001F7B8A /* ChallengePlaceListItemView.swift */,
+				EA8902762DB51896001F7B8A /* DetailChallengeCommentSectionView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -1258,11 +1270,13 @@
 				0EC2753855C5F63EABF56E6A /* TuistBundle+PopPopSeoulKit.swift in Sources */,
 				EA89025B2DB42113001F7B8A /* ChallengeDetailFeature.swift in Sources */,
 				36DAC9AE1FC4BB4B4F01737A /* TuistFonts+PopPopSeoulKit.swift in Sources */,
+				EA8902712DB509A3001F7B8A /* DetailChallengeInfoSectionView.swift in Sources */,
 				39ECFBB5679467FFD0F183F9 /* AppFeature.swift in Sources */,
 				EA1814092DB2451200CE8D52 /* ButtonStyle.swift in Sources */,
 				EA89024C2DB3830F001F7B8A /* MyChallengeistItemView.swift in Sources */,
 				0CF92AC3CDB4A9948CA5DF33 /* AppView.swift in Sources */,
 				EA89026F2DB4F9F7001F7B8A /* MenuStyle.swift in Sources */,
+				EA8902752DB5184B001F7B8A /* DetailChallengePlaceSectionView.swift in Sources */,
 				EA8902622DB44621001F7B8A /* ChallengePlaceListItemView.swift in Sources */,
 				8B5FF2C5E6C37FD031BFE6EC /* HomeTabFeature.swift in Sources */,
 				EA8902422DB360BB001F7B8A /* TopTabView.swift in Sources */,
@@ -1271,11 +1285,13 @@
 				6A599533FC57FADF4E92E36D /* MainTabFeature.swift in Sources */,
 				69DACC740A9E85B166973C68 /* MainTabView.swift in Sources */,
 				E2D2C49932524CF43E0066F3 /* MyChallengeFeature.swift in Sources */,
+				EA8902772DB51896001F7B8A /* DetailChallengeCommentSectionView.swift in Sources */,
 				EA89024A2DB380DD001F7B8A /* MyChallengeListView.swift in Sources */,
 				556058DE19284C66705EE43D /* MyChallengeTabView.swift in Sources */,
 				8984B3E1AB32308C051931BC /* ProfileTabFeature.swift in Sources */,
 				EA89025D2DB4318B001F7B8A /* ChallengeStampView.swift in Sources */,
 				8E47E6D3718721F6A12481E3 /* ProfileTabView.swift in Sources */,
+				EA8902732DB50C21001F7B8A /* DetailChallengeStampSectionView.swift in Sources */,
 				6686EB0B936EDC8C565CEB9E /* MapView.swift in Sources */,
 				EA8902682DB44ECB001F7B8A /* CommentListItemView.swift in Sources */,
 				21361487C7AA6831B4A832A5 /* MapViewController.swift in Sources */,
