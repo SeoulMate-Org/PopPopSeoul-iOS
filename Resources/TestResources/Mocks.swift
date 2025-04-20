@@ -27,6 +27,8 @@ public struct Challenge: Equatable, Identifiable {
   var completeCount: Int {
     return Int.random(in: 0..<places.count)
   }
+  
+  var isLike: Bool = false
 }
 
 public struct Place: Equatable, Identifiable {
@@ -129,7 +131,8 @@ public let mockChallenges: [Challenge] = [
     subtitle: "경복궁부터 인사동까지 경복궁부터 인사동까지 경복궁부터 인사동까지 경복궁부터 인사동까지",
     description: "서울의 역사 중심지인 종로 일대를 걸으며 조선시대의 흔적을 느껴보세요.\n서울의 역사 중심지인 종로 일대를 걸으며 조선시대의 흔적을 느껴보세요.서울의 역사 중심지인 종로 일대를 걸으며 조선시대의 흔적을 느껴보세요.\n서울의 역사 중심지인 종로 일대를 걸으며 조선시대의 흔적을 느껴보세요.",
     places: [mockPlace1, mockPlace2, mockPlace3, mockPlace1, mockPlace2],
-    comments: mockComments + mockComments + mockComments + mockComments + mockComments
+    comments: mockComments + mockComments + mockComments + mockComments + mockComments,
+    isLike: true
   ),
   Challenge(
     theme: "역사 속 서울 걷기",

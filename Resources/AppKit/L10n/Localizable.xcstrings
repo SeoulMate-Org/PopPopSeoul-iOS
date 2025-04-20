@@ -58,6 +58,17 @@
         }
       }
     },
+    "detailchallenge_floating_text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "남은 장소 방문하고 뱃지 받기!"
+          }
+        }
+      }
+    },
     "detailchallenge_interest_button" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -109,6 +120,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "스탬프 미션 장소"
+          }
+        }
+      }
+    },
+    "detailchallenge_stamp_button" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스탬프 찍기"
           }
         }
       }

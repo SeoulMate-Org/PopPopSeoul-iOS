@@ -58,15 +58,19 @@ public struct MainTabView: View {
           .background(Color(Colors.appWhite.swiftUIColor))
           .contentMargins(.horizontal, 20)
         }
-        .modifier(ShadowModifier(
-          shadow: AppShadow(
-            color: Color(Colors.trueBlack.swiftUIColor).opacity(0.08),
-            x: 0,
-            y: -4,
-            blur: 12,
-            spread: 0
-          )
-        ))
+        .background(
+          Color(Colors.appWhite.swiftUIColor)
+            .modifier(ShadowModifier(
+              shadow: AppShadow(
+                color: Color(Colors.trueBlack.swiftUIColor).opacity(0.08),
+                x: 0,
+                y: -4,
+                blur: 12,
+                spread: 0
+              ))
+            )
+            .edgesIgnoringSafeArea(.bottom)
+        )
       }
     }
   }
