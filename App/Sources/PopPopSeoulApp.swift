@@ -1,7 +1,7 @@
 import SwiftUI
-import PopPopSeoulKit
 import ComposableArchitecture
 import FacebookCore
+import Features
 
 // MARK: - AppDelegate
 

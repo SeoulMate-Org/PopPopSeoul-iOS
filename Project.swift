@@ -106,7 +106,7 @@ func createAppTarget(suffix: String = "", isDev: Bool = false, scripts: [TargetS
         scripts: scripts
         + [swiftlintScript],
         
-        dependencies: [.target(name: "PopPopSeoulKit")]
+        dependencies: [.target(name: "Features")]
         + dependencies,
         
         settings: .settings(
@@ -165,30 +165,6 @@ let project = Project(
             dependencies: []
         ),
         .target(
-            name: "PopPopSeoulKit",
-            destinations: appDestinations,
-            product: Environment.forPreview.getBoolean(default: false) ? .framework : .staticFramework,
-            bundleId: "dev.suni.poppopseoulkit",
-            deploymentTargets: appDeploymentTargets,
-            infoPlist: .extendingDefault(with: [:]),
-            sources: "Sources/AppKit/**",
-            resources: .resources([
-                "App/Resources/**",
-                "Resources/AppKit/**"
-            ]),
-            dependencies: [
-                .external(name: "ComposableArchitecture"),
-                .external(name: "BottomSheet"),
-                .external(name: "ComposableCoreLocation"),
-                .external(name: "SwiftUIIntrospect"),
-                .external(name: "Logging"),
-                .external(name: "NMapsMap"),
-                .external(name: "FacebookLogin"),
-                .external(name: "GoogleSignIn"),
-                .target(name: "Common"),
-            ]
-        ),
-        .target(
             name: "PopPopSeoulKitTests",
             destinations: appDestinations,
             product: .unitTests,
@@ -196,7 +172,62 @@ let project = Project(
             infoPlist: .default,
             sources: "Tests/AppKit/**",
             dependencies: [
-                .target(name: "PopPopSeoulKit")
+                .target(name: "Features")
+            ]
+        ),
+        .target(
+            name: "Clients",
+            destinations: appDestinations,
+            product: .staticFramework,
+            bundleId: "dev.sunidev.poppopseoul.clients",
+            infoPlist: .default,
+            sources: "Sources/Clients/**",
+            dependencies: [
+                .external(name: "ComposableArchitecture"),
+                .external(name: "Logging"),
+                .target(name: "Common"),
+            ]
+        ),
+        .target(
+            name: "DesignSystem",
+            destinations: appDestinations,
+            product: .staticFramework,
+            bundleId: "dev.sunidev.poppopseoul.clients",
+            infoPlist: .default,
+            sources: "Sources/DesignSystem/**",
+            resources: .resources([
+                "App/Resources/**",
+                "Resources/AppKit/**"
+            ]),
+            dependencies: [
+                .external(name: "Logging"),
+                .target(name: "Common"),
+            ]
+        ),
+        .target(
+            name: "Features",
+            destinations: appDestinations,
+            product: Environment.forPreview.getBoolean(default: false) ? .framework : .staticFramework,
+            bundleId: "dev.suni.poppopseoul.features",
+            deploymentTargets: appDeploymentTargets,
+            infoPlist: .extendingDefault(with: [:]),
+            sources: "Sources/Features/**",
+            resources: .resources([
+                "App/Resources/**",
+                "Resources/AppKit/**"
+            ]),
+            dependencies: [
+                .external(name: "ComposableArchitecture"),
+                .external(name: "ComposableCoreLocation"),
+                .external(name: "SwiftUIIntrospect"),
+                .external(name: "BottomSheet"),
+                .external(name: "Logging"),
+                .external(name: "NMapsMap"),
+                .external(name: "FacebookLogin"),
+                .external(name: "GoogleSignIn"),
+                .target(name: "Common"),
+                .target(name: "DesignSystem"),
+                .target(name: "Clients"),
             ]
         ),
         .target(
@@ -207,8 +238,6 @@ let project = Project(
             infoPlist: .default,
             sources: "Sources/Common/**",
             dependencies: [
-                .external(name: "ComposableCoreLocation"),
-                .external(name: "ComposableArchitecture"),
                 .external(name: "Logging"),
             ]
         )

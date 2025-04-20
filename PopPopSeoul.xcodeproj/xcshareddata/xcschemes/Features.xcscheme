@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7086056460516E2E4B84DDB0"
-               BuildableName = "PopPopSeoul.app"
-               BlueprintName = "PopPopSeoul"
+               BlueprintIdentifier = "2F22AB7E71BDF492BAC659CD"
+               BuildableName = "Features.framework"
+               BlueprintName = "Features"
                ReferencedContainer = "container:PopPopSeoul.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -41,16 +41,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7086056460516E2E4B84DDB0"
-            BuildableName = "PopPopSeoul.app"
-            BlueprintName = "PopPopSeoul"
+            BlueprintIdentifier = "2F22AB7E71BDF492BAC659CD"
+            BuildableName = "Features.framework"
+            BlueprintName = "Features"
             ReferencedContainer = "container:PopPopSeoul.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -58,16 +57,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7086056460516E2E4B84DDB0"
-            BuildableName = "PopPopSeoul.app"
-            BlueprintName = "PopPopSeoul"
+            BlueprintIdentifier = "2F22AB7E71BDF492BAC659CD"
+            BuildableName = "Features.framework"
+            BlueprintName = "Features"
             ReferencedContainer = "container:PopPopSeoul.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
