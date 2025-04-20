@@ -111,5 +111,5 @@ struct ChallengePlaceListItemView: View {
 }
 
 #Preview {
-  ChallengePlaceListItemView(place: mockPlace1, onLikeTapped: { })
+  ChallengePlaceListItemView(place: mockPlace2, onLikeTapped: { })
 }

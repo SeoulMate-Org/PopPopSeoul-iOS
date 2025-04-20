@@ -41,8 +41,8 @@ public struct Place: Equatable, Identifiable {
   let transportation: String
   var isCompleted = false
   var isLike = false
-  let likeCount: Int = Int.random(in: 0..<20)
-  let participantCount: Int = Int.random(in: 0..<20)
+  var likeCount: Int = Int.random(in: 0..<20)
+  var participantCount: Int = Int.random(in: 0..<20)
 }
 
 public struct Comment: Equatable, Identifiable {
@@ -107,7 +107,9 @@ public let mockPlace2: Place =  Place(
   openingHours: "상점마다 다름 (대부분 10:00~20:00)",
   website: "https://korean.visitseoul.net",
   phone: "02-1330",
-  transportation: "3호선 안국역 6번 출구, 도보 3분"
+  transportation: "3호선 안국역 6번 출구, 도보 3분",
+  likeCount: 0,
+  participantCount: 0
 )
 public let mockPlace3: Place =  Place(
   imageURL: "https://example.com/bukchon.jpg",
