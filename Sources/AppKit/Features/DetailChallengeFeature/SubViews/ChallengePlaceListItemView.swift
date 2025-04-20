@@ -13,17 +13,27 @@ struct ChallengePlaceListItemView: View {
   
   var body: some View {
     HStack(alignment: .center, spacing: 8) {
-      AsyncImage(url: URL(string: place.imageURL)) { image in
-        image
-          .resizable()
-          .scaledToFill()
-      } placeholder: {
-        Assets.Images.placeholderImage.swiftUIImage
-          .resizable()
-          .scaledToFill()
+      ZStack(alignment: .bottomTrailing) {
+        AsyncImage(url: URL(string: place.imageURL)) { image in
+          image
+            .resizable()
+            .scaledToFill()
+        } placeholder: {
+          Assets.Images.placeholderImage.swiftUIImage
+            .resizable()
+            .scaledToFill()
+        }
+        .frame(width: 76, height: 76)
+        .clipShape(RoundedRectangle(cornerRadius: 16))
+        
+        if place.isCompleted {
+          Assets.Images.stampActive.swiftUIImage
+            .resizable()
+            .frame(width: 28, height: 28)
+            .padding(.bottom, 4)
+            .padding(.trailing, 4)
+        }
       }
-      .frame(width: 76, height: 76)
-      .clipShape(RoundedRectangle(cornerRadius: 16))
       
       VStack(alignment: .leading, spacing: 4) {
         Text(place.name)

@@ -96,7 +96,8 @@ public let mockPlace1: Place =  Place(
   openingHours: "09:00~18:00 (화요일 휴무)",
   website: "https://www.royalpalace.go.kr",
   phone: "02-3700-3900",
-  transportation: "3호선 경복궁역 5번 출구, 도보 5분"
+  transportation: "3호선 경복궁역 5번 출구, 도보 5분",
+  isCompleted: true
 )
 public let mockPlace2: Place =  Place(
   imageURL: "https://example.com/insadong.jpg",
