@@ -41,6 +41,10 @@ let package = Package(
         .package(
             url: "https://github.com/facebook/facebook-ios-sdk",
             .upToNextMajor(from: "18.0.0")
+        ),
+        .package(
+            url: "https://github.com/firebase/firebase-ios-sdk",
+            .upToNextMajor(from: "11.0.0")
         )
     ]
 )

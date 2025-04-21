@@ -54,7 +54,8 @@ let appInfoPlist: [String: Plist.Value] = {
             "Pretendard-Regular.otf",
             "Pretendard-SemiBold.otf",
             "Pretendard-Thin.otf",
-        ]
+        ],
+        "NSUserTrackingUsageDescription": "로그인을 위해 Apple 계정을 사용합니다."
     ]
     
     let secretsPath = "App/Resources/Secrets.plist"
@@ -225,6 +226,8 @@ let project = Project(
                 .external(name: "NMapsMap"),
                 .external(name: "FacebookLogin"),
                 .external(name: "GoogleSignIn"),
+                .external(name: "GoogleSignInSwift"),
+                .external(name: "FirebaseAuth"),
                 .target(name: "Common"),
                 .target(name: "DesignSystem"),
                 .target(name: "Clients"),
