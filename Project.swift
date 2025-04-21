@@ -116,6 +116,7 @@ func createAppTarget(suffix: String = "", isDev: Bool = false, scripts: [TargetS
                 "MARKETING_VERSION": SettingValue(stringLiteral: version),
                 "CODE_SIGN_IDENTITY": "iPhone Developer",
                 "CODE_SIGNING_REQUIRED": "YES",
+                "OTHER_LDFLAGS": "-ObjC",
             ],
             debug: [
                 "OTHER_SWIFT_FLAGS": "-D DEBUG $(inherited) -Xfrontend -warn-long-function-bodies=500 -Xfrontend -warn-long-expression-type-checking=500 -Xfrontend -debug-time-function-bodies -Xfrontend -debug-time-expression-type-checking -Xfrontend -enable-actor-data-race-checks",
@@ -123,6 +124,7 @@ func createAppTarget(suffix: String = "", isDev: Bool = false, scripts: [TargetS
                 "SWIFT_ACTIVE_COMPILATION_CONDITIONS": "\(additionalCondition) \(isDev ? "DEV" : "") DEBUG",
             ],
             release: [
+                "OTHER_LDFLAGS": "$(inherited)",
                 "SWIFT_ACTIVE_COMPILATION_CONDITIONS": "\(additionalCondition) \(isDev ? "DEV" : "")",
             ]
         )
@@ -228,6 +230,7 @@ let project = Project(
                 .external(name: "GoogleSignIn"),
                 .external(name: "GoogleSignInSwift"),
                 .external(name: "FirebaseAuth"),
+                .external(name: "AppAuth"),
                 .target(name: "Common"),
                 .target(name: "DesignSystem"),
                 .target(name: "Clients"),

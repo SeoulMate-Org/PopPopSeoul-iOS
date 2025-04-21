@@ -2,6 +2,7 @@ import SwiftUI
 import DesignSystem
 import ComposableArchitecture
 import Common
+import FirebaseCore
 
 // MARK: - AppView
 

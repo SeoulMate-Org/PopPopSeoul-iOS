@@ -4,7 +4,17 @@ import PackageDescription
 #if TUIST
 import ProjectDescription
 
-let packageSettings = PackageSettings()
+let packageSettings = PackageSettings(
+    productTypes: [
+//        "FBLPromises": .framework,
+//        "GTMSessionFetcher": .framework,
+//        "GoogleUtilities": .framework,
+//        "AppCheckCore": .framework,
+//        "GoogleSignIn": .framework,
+//        "GTMAppAuth": .framework,
+        "AppAuth": .framework,
+    ]
+)
 #endif
 
 let package = Package(
@@ -36,7 +46,7 @@ let package = Package(
         ),
         .package(
             url: "https://github.com/google/GoogleSignIn-iOS",
-            .upToNextMajor(from: "8.0.0")
+            .upToNextMajor(from: "7.1.0")
         ),
         .package(
             url: "https://github.com/facebook/facebook-ios-sdk",
@@ -44,7 +54,11 @@ let package = Package(
         ),
         .package(
             url: "https://github.com/firebase/firebase-ios-sdk",
-            .upToNextMajor(from: "11.0.0")
+            .upToNextMajor(from: "10.27.0")
+        ),
+        .package(
+            url: "https://github.com/openid/AppAuth-iOS",
+            .upToNextMajor(from: "1.7.6")
         )
     ]
 )
