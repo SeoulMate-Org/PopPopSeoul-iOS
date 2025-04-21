@@ -5,7 +5,7 @@ public let version = "0.0.1"
 
 public let deploymentTargetString = "17.0"
 public let appDeploymentTargets: DeploymentTargets = .iOS(deploymentTargetString)
-public let appDestinations: Destinations = [.iPhone, .iPad]
+public let appDestinations: Destinations = [.iPhone]
 
 let isAppStore = Environment.isAppStore.getBoolean(default: false)
 let additionalCondition = isAppStore ? "APPSTORE" : ""
@@ -55,7 +55,8 @@ let appInfoPlist: [String: Plist.Value] = {
             "Pretendard-SemiBold.otf",
             "Pretendard-Thin.otf",
         ],
-        "NSUserTrackingUsageDescription": "로그인을 위해 Apple 계정을 사용합니다."
+        "NSUserTrackingUsageDescription": "로그인을 위해 Apple 계정을 사용합니다.",
+        "FacebookAdvertiserIDCollectionEnabled": true
     ]
     
     let secretsPath = "App/Resources/Secrets.plist"
@@ -116,6 +117,7 @@ func createAppTarget(suffix: String = "", isDev: Bool = false, scripts: [TargetS
                 "MARKETING_VERSION": SettingValue(stringLiteral: version),
                 "CODE_SIGN_IDENTITY": "iPhone Developer",
                 "CODE_SIGNING_REQUIRED": "YES",
+                "OTHER_LDFLAGS": ["-all_load -Objc"]
             ],
             debug: [
                 "OTHER_SWIFT_FLAGS": "-D DEBUG $(inherited) -Xfrontend -warn-long-function-bodies=500 -Xfrontend -warn-long-expression-type-checking=500 -Xfrontend -debug-time-function-bodies -Xfrontend -debug-time-expression-type-checking -Xfrontend -enable-actor-data-race-checks",
@@ -197,7 +199,6 @@ let project = Project(
             infoPlist: .default,
             sources: "Sources/DesignSystem/**",
             resources: .resources([
-                "App/Resources/**",
                 "Resources/AppKit/**"
             ]),
             dependencies: [
