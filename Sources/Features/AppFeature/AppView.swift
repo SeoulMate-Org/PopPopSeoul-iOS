@@ -26,13 +26,13 @@ public struct AppView: View {
             .ignoresSafeArea()
           
         case .mainTab:
-//          LoginView()
-          MainTabView(
-            store: Store<MainTabFeature.State, MainTabFeature.Action>(
-              initialState: .init(),
-              reducer: { MainTabFeature() }
-            )
-          )
+          LoginView()
+//          MainTabView(
+//            store: Store<MainTabFeature.State, MainTabFeature.Action>(
+//              initialState: .init(),
+//              reducer: { MainTabFeature() }
+//            )
+//          )
         }
       }
     }

@@ -1,7 +1,7 @@
 import ComposableArchitecture
 
 @Reducer
-public struct AppFeature: Reducer {
+public struct AppFeature {
   public init() {}
   
   @Dependency(\.continuousClock) var clock
@@ -47,6 +47,10 @@ public struct AppFeature: Reducer {
   // MARK: Reducer
   
   public var body: some ReducerOf<Self> {
+    //    Scope(state: \.mainTab, action: \.mainTab) {
+    //      MainTabFeature()
+    //    }
+    
     Reduce { state, action in
       switch action {
       case .onAppear:
