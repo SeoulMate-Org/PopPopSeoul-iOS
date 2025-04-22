@@ -105,3 +105,35 @@ public struct MyChallengeFeature {
 }
 
 // MARK: - Helper
+//@Reducer
+//public struct AppFeature {
+//  public init() {}
+//  
+//  // MARK: State
+//  
+//  @ObservableState
+//  public struct State {
+//    var path = StackState<Path.State>()
+//  }
+//  
+//  // MARK: Actions
+//  
+//  public enum Action {
+//    case path(StackActionOf<Path>)
+//  }
+//  
+//  @Reducer
+//  public enum Path {
+//    case splash(SplashFeature)
+//  }
+//  
+//  // MARK: Reducer
+//  
+//  var body: some ReducerOf<Self> {
+//    Reduce { state, action in
+//      // TODO: -
+//      return .none
+//    }
+//    .forEach(\.path, action: \.path)
+//  }
+//}

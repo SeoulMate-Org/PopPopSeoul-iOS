@@ -3,19 +3,8 @@ import ComposableArchitecture
 @Reducer
 public struct AppFeature {
   public init() {}
-  
-  @Dependency(\.continuousClock) var clock
-  
-  @Reducer
-  public enum Destination {
-    case alert(AlertState<Alert>)
     
-    public enum Alert: Equatable {
-      case forceUpdate
-      case latestUpdate
-    }
-  }
-  
+  @Reducer(state: .equatable, action: .equatable)
   public enum Route {
     case launching
     case mainTab
@@ -24,59 +13,47 @@ public struct AppFeature {
   // MARK: State
   
   @ObservableState
-  public struct State {
+  public struct State: Equatable {
     public init() {}
     
     // Navigation
     var route: Route = .launching
-    var mainTab: MainTabFeature.State = .init()
-    @Presents var destination: Destination.State?
+    var splash: SplashFeature.State = .init()
   }
   
   // MARK: Actions
   
-  public enum Action {
+  @CasePathable
+  public enum Action: Equatable {
     case onAppear
     
     // Navigation
     case routeChanged(Route)
-    case mainTab(MainTabFeature.Action)
-    case destination(PresentationAction<Destination.Action>)
+    case splash(SplashFeature.Action)
   }
   
   // MARK: Reducer
   
   public var body: some ReducerOf<Self> {
-    //    Scope(state: \.mainTab, action: \.mainTab) {
-    //      MainTabFeature()
-    //    }
+    Scope(state: \.splash, action: \.splash) {
+      SplashFeature()
+    }
     
     Reduce { state, action in
       switch action {
       case .onAppear:
-        return .run { send in
-          //          let updateNeeded = await checkAppUpdate()
-          // TODO: - Update Check
-          let updateNeeded = false
-          if updateNeeded {
-            await send(.destination(.presented(.alert(.forceUpdate))))
-          } else {
-            try? await clock.sleep(for: .seconds(2))
-            await send(.routeChanged(.mainTab))
-          }
-        }
+        return .none
         
       case let .routeChanged(route):
         state.route = route
         return .none
         
-      case .destination:
+      case .splash(.didFinish): // ✅ 여기서 감지!
+        state.route = .mainTab // 또는 .onboarding 등
         return .none
         
-      case .mainTab:
-        return .none
+      default: return .none
       }
     }
-    .ifLet(\.$destination, action: \.destination)
   }
 }

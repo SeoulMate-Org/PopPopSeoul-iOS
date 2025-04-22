@@ -9,12 +9,12 @@ import FirebaseCore
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        
+    
     ApplicationDelegate.shared.application(
       application,
       didFinishLaunchingWithOptions: launchOptions
     )
-//    FirebaseApp.configure()
+    //    FirebaseApp.configure()
     
     return true
   }
@@ -24,28 +24,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     options: [UIApplication.OpenURLOptionsKey : Any] = [:]
   ) -> Bool {
     
-//    var handled: Bool
-//    handled = GIDSignIn.sharedInstance.handle(url)
-//    if handled {
-//      // Handle other custom URL types.
-//      return true
-//    }
+    //    var handled: Bool
+    //    handled = GIDSignIn.sharedInstance.handle(url)
+    //    if handled {
+    //      // Handle other custom URL types.
+    //      return true
+    //    }
     
     return ApplicationDelegate.shared.application(app, open: url,
-                                           sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
-                                           annotation: options[UIApplication.OpenURLOptionsKey.annotation])
+                                                  sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+                                                  annotation: options[UIApplication.OpenURLOptionsKey.annotation])
   }
 }
 
 // MARK: - SceneDelegate
 //
 //class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-//  
+//
 //  func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
 //    guard let url = URLContexts.first?.url else {
 //      return
 //    }
-//    
+//
 //    ApplicationDelegate.shared.application(UIApplication.shared, open: url,
 //                                           sourceApplication: nil, annotation: [UIApplication.OpenURLOptionsKey.annotation])
 //  }
@@ -58,10 +58,6 @@ struct PopPopSeoulApp: App {
   @UIApplicationDelegateAdaptor(AppDelegate.self)
   var appDelegate
   
-  static let store = Store(initialState: AppFeature.State()) {
-    AppFeature()
-  }
-  
   init() {
     FirebaseApp.configure()
   }
@@ -71,15 +67,18 @@ struct PopPopSeoulApp: App {
       if ProcessInfo.processInfo.environment["UITesting"] == "true" {
         EmptyView()
       } else {
-        AppView(store: Self.store)
-          .onAppear {
-              GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
-                  // Check if `user` exists; otherwise, do something with `error`
-              }
+        AppView(store: Store<AppFeature.State, AppFeature.Action>(
+          initialState: .init(),
+          reducer: { AppFeature() }
+        ))
+        .onAppear {
+          GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
+            // Check if `user` exists; otherwise, do something with `error`
           }
-          .onOpenURL { url in
-              GIDSignIn.sharedInstance.handle(url)
-         }
+        }
+        .onOpenURL { url in
+          GIDSignIn.sharedInstance.handle(url)
+        }
       }
       //      } else if _XCTIsTesting {
       //        EmptyView()

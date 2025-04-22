@@ -15,33 +15,19 @@ public struct AppView: View {
   }
   
   public var body: some View {
-    WithViewStore(store, observe: \.route) { viewStore in
-      ZStack {
-        switch viewStore.state {
+    WithViewStore(store, observe: { $0 }) { viewStore in
+      Group {
+        switch viewStore.route {
         case .launching:
-          Assets.Images.splash.swiftUIImage
-            .resizable()
-            .scaledToFill()
-            .frame(maxWidth: CGFloat.infinity, maxHeight: CGFloat.infinity)
-            .clipped()
-            .ignoresSafeArea()
-          
+          SplashView(store: store.scope(state: \.splash, action: \.splash))
         case .mainTab:
-          LoginView()
-//          MainTabView(
-//            store: Store<MainTabFeature.State, MainTabFeature.Action>(
-//              initialState: .init(),
-//              reducer: { MainTabFeature() }
-//            )
-//          )
+          // TODO: mainTabFeature 연결 시 교체
+          Text("MainTabView Placeholder")
         }
       }
+      .onAppear {
+        viewStore.send(.onAppear)
+      }
     }
-    .alert(
-      store: store.scope(state: \.$destination.alert,
-                         action: \.destination.alert)
-    )
-    .onAppear { store.send(.onAppear) }
-    
   }
 }

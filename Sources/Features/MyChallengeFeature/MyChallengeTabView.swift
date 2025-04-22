@@ -135,3 +135,24 @@ extension MyChallengeFeature.State.Tab {
     }
   }
 }
+//
+//public struct AppView: View {
+//  @Bindable var store: StoreOf<AppFeature>
+//  
+//  public init(store: StoreOf<AppFeature>) {
+//    self.store = store
+//  }
+//    
+//  public var body: some View {
+//    NavigationStack(
+//      path: $store.scope(state: \.path, action: \.path)
+//    ) {
+//      // Root view of the navigation stack
+//    } destination: { store in
+//      switch store.case {
+//      case .splash(let store):
+//        SplashView(store: store)
+//      }
+//    }
+//  }
+//}
