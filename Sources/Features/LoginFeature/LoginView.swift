@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
+import DesignSystem
 import FacebookLogin
 import Common
 import GoogleSignIn
@@ -14,12 +16,20 @@ import FirebaseCore
 import AuthenticationServices
 
 struct LoginView: View {
+  @State var store: StoreOf<LoginFeature>
+  
+  init(store: StoreOf<LoginFeature>) {
+    self.store = store
+  }
+  
   var body: some View {
     VStack {
-      GoogleSignInButton(action: handleSignInButton)
+      GoogleSignInButton {
+        store.send(.googleButtonTapped)
+      }
       
       Button {
-        handleFacebookLogin()
+        store.send(.facebookButtonTapped)
       } label: {
         Text("페이스북 로그인")
           .fontWeight(.bold)
@@ -31,13 +41,13 @@ struct LoginView: View {
       }
       
       SignInWithAppleButton(.signIn) { request in
-        request.requestedScopes = [.fullName, .email]
+        request.requestedScopes = []
       } onCompletion: { result in
         switch result {
         case .success(let authResults):
-          handleAppleAuth(credential: authResults.credential)
+          store.send(.appleSignInCompleted(authResults))
         case .failure(let error):
-          print("❌ Apple 로그인 실패: \(error.localizedDescription)")
+          store.send(.appleSignInFailed(error.localizedDescription))
         }
       }
       .signInWithAppleButtonStyle(.black)
@@ -112,20 +122,10 @@ struct LoginView: View {
 }
 
 #Preview {
-  LoginView()
-}
-
-final class ApplicationUtil {
-  static var rootViewController: UIViewController {
-    guard let screen = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
-      return .init()
-      
-    }
-    
-    guard let root = screen.windows.first?.rootViewController else {
-      return .init()
-    }
-    
-    return root
-  }
+  LoginView(
+    store: Store<LoginFeature.State, LoginFeature.Action>(
+      initialState: .init(),
+      reducer: { LoginFeature() }
+    )
+  )
 }

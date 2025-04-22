@@ -12,6 +12,7 @@ public struct AppFeature {
     case splash(SplashFeature)
     case onboarding(OnboardingFeature)
     case mainTab(MainTabFeature)
+    case login(LoginFeature)
   }
   
   // MARK: State
@@ -47,6 +48,10 @@ public struct AppFeature {
           // 온보딩 체크
           state.destination = .onboarding(.init())
         }
+        return .none
+        
+      case .destination(.presented(.onboarding(.didFinish))):
+        state.destination = .login(.init())
         return .none
         
       case .destination:

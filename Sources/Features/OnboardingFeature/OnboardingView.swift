@@ -19,9 +19,9 @@ struct OnboardingView: View {
   
     var body: some View {
       Button {
-        // TODO: - Next
+        store.send(.didFinish)
       } label: {
-        Text("닫기")
+        Text("온보딩 닫기")
       }
     }
 }

@@ -52,7 +52,6 @@ public struct SplashFeature {
       switch action {
         
       case .onAppear:
-        logs.debug("onAppear 실행") // 여기서 실행되지 않음!!
         return .send(.checkRouting)
         
       case .checkRouting:
@@ -89,7 +88,7 @@ public struct SplashFeature {
         return .none
         
       case .alert(.presented(.goToUpdateTapped)):
-        // 👉 앱스토어 이동 처리
+        // TODO: - 👉 앱스토어 이동 처리
         print("앱스토어로 이동")
         return .none
         

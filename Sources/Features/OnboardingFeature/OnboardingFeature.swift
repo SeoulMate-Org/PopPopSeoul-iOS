@@ -13,7 +13,7 @@ public struct OnboardingFeature {
   public init() {}
   
   // MARK: State
-
+  
   @ObservableState
   public struct State: Equatable {
     
@@ -23,17 +23,20 @@ public struct OnboardingFeature {
   
   @CasePathable
   public enum Action: Equatable {
-    
+    case didFinish
   }
   
   // MARK: Reducer
   
-//  public var body: some Reducer<State, Action> {
+  public var body: some Reducer<State, Action> {
     
-//    Reduce { state, action in
-//      return .none
-//    }
-//  }
+    Reduce { state, action in
+      switch action {
+      case .didFinish:
+        return .none
+      }
+    }
+  }
 }
 
 // MARK: - Helper

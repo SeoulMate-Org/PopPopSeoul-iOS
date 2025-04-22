@@ -30,6 +30,11 @@ public struct AppView: View {
       if let mainTabStore = store.scope(state: \.destination?.mainTab, action: \.destination.mainTab) {
         MainTabView(store: mainTabStore)
       }
+      
+    case .login:
+      if let loginStore = store.scope(state: \.destination?.login, action: \.destination.login) {
+        LoginView(store: loginStore)
+      }
     case .none:
       EmptyView()
     }
