@@ -56,7 +56,10 @@ let appInfoPlist: [String: Plist.Value] = {
             "Pretendard-Thin.otf",
         ],
         "NSUserTrackingUsageDescription": "로그인을 위해 Apple 계정을 사용합니다.",
-        "FacebookAdvertiserIDCollectionEnabled": false
+        "FacebookAdvertiserIDCollectionEnabled": false,
+        "NSAppTransportSecurity": [
+            "NSAllowsArbitraryLoads": true
+        ]
     ]
     
     let secretsPath = "App/Resources/Secrets.plist"

@@ -17,7 +17,8 @@ import FirebaseCore
 public struct LoginFeature {
   init() {}
   
-//  @Dependency(\.authClient) var authClient
+  //  @Dependency(\.authClient) var authClient
+  @Dependency(\.authService) var authService
   
   // MARK: State
   
@@ -34,6 +35,8 @@ public struct LoginFeature {
     case facebookSignInCompleted(String)
     case appleSignInCompleted(String)
     case loginError
+    case authLogin(String, LoginType)
+    case loginResponse(TaskResult<Auth>)
   }
   
   // MARK: Reducer
@@ -42,24 +45,40 @@ public struct LoginFeature {
     Reduce { state, action in
       switch action {
       case let .googleSignInCompleted(token):
-        // TODO: - App Login
         print("로그인 성공 \(token)")
-        return .none
+        return .send(.authLogin(token, .google))
         
       case let .facebookSignInCompleted(token):
-        // TODO: - App Login
         print("로그인 성공 \(token)")
-        return .none
+        return .send(.authLogin(token, .facebook))
         
       case let .appleSignInCompleted(token):
-        // TODO: - App Login
         print("로그인 성공 \(token)")
-        return .none
+        return .send(.authLogin(token, .apple))
         
       case .loginError:
-        print("❌ Apple 로그인 실패")
+        print("❌ 로그인 실패")
         return .none
         
+      case let .authLogin(token, loginType):
+        let body = AuthLoginBody(token: token, loginType: loginType.rawValue, languageCode: "KOR")
+        return .run { send in
+          await send(
+            .loginResponse(
+              TaskResult {
+                try await authService.postAuthLogin(body)
+              }
+            )
+          )
+        }
+        
+      case let .loginResponse(.success(result)):
+        print("Login Response \(result)")
+        return .none
+        
+      case let .loginResponse(.failure(error)):
+        print("❌ APP 로그인 실패 \(error)")
+        return .none
       }
     }
   }
