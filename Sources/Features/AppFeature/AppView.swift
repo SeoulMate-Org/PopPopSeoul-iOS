@@ -15,19 +15,18 @@ public struct AppView: View {
   }
   
   public var body: some View {
-    WithViewStore(store, observe: { $0 }) { viewStore in
-      Group {
-        switch viewStore.route {
-        case .launching:
-          SplashView(store: store.scope(state: \.splash, action: \.splash))
-        case .mainTab:
-          // TODO: mainTabFeature 연결 시 교체
-          Text("MainTabView Placeholder")
-        }
+    switch store.state.destination {
+    case .splash:
+      if let splashStore = store.scope(state: \.destination?.splash, action: \.destination.splash) {
+        SplashView(store: splashStore)
       }
-      .onAppear {
-        viewStore.send(.onAppear)
+      
+    case .mainTab:
+      if let mainTabStore = store.scope(state: \.destination?.mainTab, action: \.destination.mainTab) {
+        MainTabView(store: mainTabStore)
       }
+    case .none:
+      EmptyView()
     }
   }
 }
