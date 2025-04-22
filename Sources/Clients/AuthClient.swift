@@ -36,4 +36,3 @@ extension DependencyValues {
     set { self[AuthClient.self] = newValue }
   }
 }
-

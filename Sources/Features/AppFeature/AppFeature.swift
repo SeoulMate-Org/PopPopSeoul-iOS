@@ -34,7 +34,7 @@ public struct AppFeature {
   
   public var body: some ReducerOf<Self> {
     Reduce { state, action in
-      switch action {        
+      switch action {
       case .destination(.presented(.splash(.didFinish))):
         state.destination = .mainTab(.init())
         return .none

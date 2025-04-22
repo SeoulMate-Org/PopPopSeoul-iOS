@@ -8,11 +8,13 @@
 import Foundation
 import ComposableArchitecture
 import Common
+import Clients
 
 @Reducer
 public struct SplashFeature {
   public init() {}
   
+  @Dependency(\.appUpdateClient) var appUpdateClient
   @Dependency(\.continuousClock) var clock
   
   // MARK: - State
@@ -34,9 +36,10 @@ public struct SplashFeature {
     case checkAppUpdate
     case didFinish
     
+    case showForceUpdateAlert
+    
     case alert(PresentationAction<Alert>)
     
-    @CasePathable
     public enum Alert: Equatable {
       case goToUpdateTapped
     }
@@ -59,28 +62,28 @@ public struct SplashFeature {
         return .send(.checkAppUpdate)
         
       case .checkAppUpdate:
-        let updateNeeded = true // ✅ 실제 업데이트 필요 여부 체크 로직으로 대체
-        
-        if updateNeeded {
-          state.alert = AlertState(
-            title: { TextState("업데이트")
-            }, actions: {
-              ButtonState(action: .goToUpdateTapped) {
-                TextState("업데이트 하러가기")
-              }
-            }, message: {
-              TextState("앱을 사용하려면 업데이트가 필요합니다.")
-            })
-          return .none
+        return .run { send in
+          let (updateType, _) = try await appUpdateClient.checkForUpdate()
           
-        } else {
-          state.alert = nil
-          
-          return .run { send in
+          if updateType == .forceUpdate {
+            await send(.showForceUpdateAlert)
+          } else {
             try? await clock.sleep(for: .seconds(1))
             await send(.didFinish)
           }
         }
+      
+      case .showForceUpdateAlert:
+        state.alert = AlertState(
+          title: { TextState("업데이트")
+          }, actions: {
+            ButtonState(action: .goToUpdateTapped) {
+              TextState("업데이트 하러가기")
+            }
+          }, message: {
+            TextState("앱을 사용하려면 업데이트가 필요합니다.")
+          })
+        return .none
         
       case .didFinish:
         return .none
@@ -93,6 +96,7 @@ public struct SplashFeature {
       default: return .none
       }
     }
+    .ifLet(\.$alert, action: \.alert)
   }
 }
 

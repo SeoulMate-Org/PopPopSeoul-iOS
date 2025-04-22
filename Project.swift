@@ -55,7 +55,8 @@ let appInfoPlist: [String: Plist.Value] = {
             "Pretendard-SemiBold.otf",
             "Pretendard-Thin.otf",
         ],
-        "NSUserTrackingUsageDescription": "로그인을 위해 Apple 계정을 사용합니다."
+        "NSUserTrackingUsageDescription": "로그인을 위해 Apple 계정을 사용합니다.",
+        "FacebookAdvertiserIDCollectionEnabled": false
     ]
     
     let secretsPath = "App/Resources/Secrets.plist"
@@ -185,8 +186,14 @@ let project = Project(
             bundleId: "dev.sunidev.poppopseoul.clients",
             infoPlist: .default,
             sources: "Sources/Clients/**",
+            resources: .resources([
+                "App/Resources/**",
+                "Resources/AppKit/**"
+            ]),
             dependencies: [
                 .external(name: "ComposableArchitecture"),
+                .external(name: "FirebaseRemoteConfig"),
+                .external(name: "FirebaseRemoteConfigSwift"),
                 .external(name: "Logging"),
                 .target(name: "Common"),
             ]
@@ -243,6 +250,10 @@ let project = Project(
             bundleId: "dev.sunidev.poppopseoul.common",
             infoPlist: .default,
             sources: "Sources/Common/**",
+            resources: .resources([
+                "App/Resources/**",
+                "Resources/AppKit/**"
+            ]),
             dependencies: [
                 .external(name: "Logging"),
             ]

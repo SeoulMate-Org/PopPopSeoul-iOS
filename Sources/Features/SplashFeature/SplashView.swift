@@ -10,7 +10,7 @@ import ComposableArchitecture
 import DesignSystem
 
 struct SplashView: View {
-  let store: StoreOf<SplashFeature>
+  @State var store: StoreOf<SplashFeature>
   
   init(store: StoreOf<SplashFeature>) {
     self.store = store
