@@ -1,12 +1,16 @@
 import ComposableArchitecture
+import Clients
 
 @Reducer
 public struct AppFeature {
   public init() {}
+  
+  @Dependency(\.userDefaultsClient) var userDefaultsClient
     
   @Reducer(state: .equatable, action: .equatable)
   public enum Destination {
     case splash(SplashFeature)
+    case onboarding(OnboardingFeature)
     case mainTab(MainTabFeature)
   }
   
@@ -36,7 +40,13 @@ public struct AppFeature {
     Reduce { state, action in
       switch action {
       case .destination(.presented(.splash(.didFinish))):
-        state.destination = .mainTab(.init())
+        if userDefaultsClient.hasSeenOnboarding {
+          // TODO: AutoLogin Check
+          state.destination = .mainTab(.init())
+        } else {
+          // 온보딩 체크
+          state.destination = .onboarding(.init())
+        }
         return .none
         
       case .destination:

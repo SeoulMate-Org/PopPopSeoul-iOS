@@ -13,7 +13,7 @@ import Common
 struct OnboardingView: View {
   let store: StoreOf<OnboardingFeature>
   
-  public init(store: StoreOf<OnboardingFeature>) {
+  init(store: StoreOf<OnboardingFeature>) {
     self.store = store
   }
   
