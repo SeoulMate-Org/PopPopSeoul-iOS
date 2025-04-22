@@ -25,11 +25,11 @@ struct LoginView: View {
   var body: some View {
     VStack {
       GoogleSignInButton {
-        store.send(.googleButtonTapped)
+        handleGoogleSignInButton()
       }
       
       Button {
-        store.send(.facebookButtonTapped)
+        handleFacebookLogin()
       } label: {
         Text("페이스북 로그인")
           .fontWeight(.bold)
@@ -45,9 +45,9 @@ struct LoginView: View {
       } onCompletion: { result in
         switch result {
         case .success(let authResults):
-          store.send(.appleSignInCompleted(authResults))
-        case .failure(let error):
-          store.send(.appleSignInFailed(error.localizedDescription))
+          handleAppleAuth(credential: authResults.credential)
+        case .failure:
+          store.send(.loginError)
         }
       }
       .signInWithAppleButtonStyle(.black)
@@ -59,9 +59,10 @@ struct LoginView: View {
     
   }
   
-  func handleSignInButton() {
+  func handleGoogleSignInButton() {
     guard let clientID = FirebaseApp.app()?.options.clientID else {
       logs.debug("❌ clientID 가져오기 실패")
+      store.send(.loginError)
       return
     }
     
@@ -72,10 +73,12 @@ struct LoginView: View {
     guard let presentingViewController = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first?.rootViewController else {return}
     
     GIDSignIn.sharedInstance.signIn(withPresenting: presentingViewController) { signInResult, error in
-      guard let result = signInResult else {
+      guard let result = signInResult, let token = result.user.idToken?.tokenString else {
+        store.send(.loginError)
         return
       }
-      print(result)
+      
+      store.send(.googleSignInCompleted(token))
     }
   }
   
@@ -85,22 +88,22 @@ struct LoginView: View {
     manager.logIn(permissions: ["public_profile", "email"], from: nil) { result, error in
       if let error = error {
         logs.debug("❌ Facebook 로그인 오류: \(error.localizedDescription)")
+        store.send(.loginError)
         return
       }
       
       guard let result = result, !result.isCancelled else {
         logs.debug("⛔️ 로그인 취소됨")
+        store.send(.loginError)
         return
       }
       
       // ✅ 로그인 성공 시 access token 획득
       if let token = AccessToken.current?.tokenString {
-        logs.debug("📦 Facebook Access Token: \(token)")
-        
-        // 👉 여기서 token을 서버에 전달하거나, 사용자 정보 요청 등 처리
-        // ex) AuthClient.loginWithFacebookToken(token)
+        store.send(.facebookSignInCompleted(token))
       } else {
         logs.debug("⚠️ Access token을 가져올 수 없음")
+        store.send(.loginError)
       }
     }
   }
@@ -110,6 +113,7 @@ struct LoginView: View {
           let identityTokenData = appleIDCredential.identityToken,
           let identityToken = String(data: identityTokenData, encoding: .utf8) else {
       print("⚠️ Apple ID Credential or token missing")
+      store.send(.loginError)
       return
     }
     
@@ -117,7 +121,7 @@ struct LoginView: View {
     print("🧑‍💼 userID: \(appleIDCredential.user)")
     print("📧 email: \(appleIDCredential.email ?? "-")")
     
-    // TODO: 서버에 identityToken 전달해서 인증 처리
+    store.send(.appleSignInCompleted(identityToken))
   }
 }
 
