@@ -108,7 +108,8 @@ func createAppTarget(suffix: String = "", isDev: Bool = false, scripts: [TargetS
             "App/Resources/**",
             "Resources/AppKit/**"
         ]),
-        scripts: scripts
+        entitlements: "PopPopSeoul.entitlements",
+        scripts: scripts고
         + [swiftlintScript],
         
         dependencies: [.target(name: "Features")]
@@ -196,7 +197,7 @@ let project = Project(
             dependencies: [
                 .external(name: "ComposableArchitecture"),
                 .external(name: "FirebaseRemoteConfig"),
-                .external(name: "FirebaseRemoteConfigSwift"),
+                .external(name: "FirebaseAnalytics"),
                 .external(name: "Logging"),
                 .target(name: "Common"),
             ]
@@ -232,7 +233,6 @@ let project = Project(
             dependencies: [
                 .external(name: "ComposableArchitecture"),
                 .external(name: "ComposableCoreLocation"),
-                .external(name: "SwiftUIIntrospect"),
                 .external(name: "BottomSheet"),
                 .external(name: "Logging"),
                 .external(name: "NMapsMap"),
@@ -240,7 +240,6 @@ let project = Project(
                 .external(name: "GoogleSignIn"),
                 .external(name: "GoogleSignInSwift"),
                 .external(name: "FirebaseAuth"),
-                .external(name: "AppAuth"),
                 .target(name: "Common"),
                 .target(name: "DesignSystem"),
                 .target(name: "Clients"),

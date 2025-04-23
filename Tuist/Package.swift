@@ -22,7 +22,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/pointfreeco/swift-composable-architecture.git",
-            .upToNextMajor(from: "1.0.0")
+            branch: "main"
         ),
         .package(
             url: "https://github.com/apple/swift-log.git",
@@ -37,28 +37,20 @@ let package = Package(
             .upToNextMajor(from: "3.1.0")
         ),
         .package(
-            url: "https://github.com/siteline/SwiftUI-Introspect.git",
-            .upToNextMajor(from: "1.0.0")
-        ),
-        .package(
             url: "https://github.com/navermaps/SPM-NMapsMap.git",
-            .upToNextMajor(from: "3.16.1")
+            branch: "main"
         ),
         .package(
             url: "https://github.com/google/GoogleSignIn-iOS",
-            .upToNextMajor(from: "7.1.0")
+            branch: "main"
         ),
         .package(
             url: "https://github.com/facebook/facebook-ios-sdk",
-            .upToNextMajor(from: "18.0.0")
+            branch: "main"
         ),
         .package(
             url: "https://github.com/firebase/firebase-ios-sdk",
-            .upToNextMajor(from: "10.27.0")
-        ),
-        .package(
-            url: "https://github.com/openid/AppAuth-iOS",
-            .upToNextMajor(from: "1.7.6")
+            branch: "main"
         )
     ]
 )

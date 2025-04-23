@@ -85,6 +85,8 @@ struct LoginView: View {
   func handleFacebookLogin() {
     let manager = LoginManager()
     
+    manager.logOut()
+    
     manager.logIn(permissions: ["public_profile", "email"], from: nil) { result, error in
       if let error = error {
         logs.debug("❌ Facebook 로그인 오류: \(error.localizedDescription)")

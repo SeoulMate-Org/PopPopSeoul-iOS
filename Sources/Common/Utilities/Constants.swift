@@ -11,4 +11,8 @@ public enum Constants {
   public static var appVersion: String {
     Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "0.0.1"
   }
+  
+  public static var appStoreId: String {
+    return "6744961871"
+  }
 }

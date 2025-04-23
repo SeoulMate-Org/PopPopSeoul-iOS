@@ -20,7 +20,7 @@ public struct Endpoint: Sendable {
 }
 
 public extension Endpoint {
-  static let authLogin = Self(baseUrl: apiBaseUrl, pathComponents: ["auth","login"])
+  static let authLogin = Self(baseUrl: apiBaseUrl, pathComponents: ["auth", "login"])
 }
 
 var apiBaseUrl: String {
