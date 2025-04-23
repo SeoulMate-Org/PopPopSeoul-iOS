@@ -12,54 +12,48 @@ import DesignSystem
 struct HomeChallengeBannerItem: View {
   let challenge: Challenge
   let onLikeTapped: () -> Void
-  
-    var body: some View {
-      let screenWidth = UIScreen.main.bounds.width
-      let cardWidth = screenWidth * (300.0 / 375.0)
-      let cardHeight = cardWidth * (280.0 / 300.0)
-      
-      ZStack(alignment: .bottom) {
-        AsyncImage(url: URL(string: challenge.imageURL)) { image in
-          image
-            .resizable()
-            .scaledToFill()
-        } placeholder: {
-          Assets.Images.placeholderImage.swiftUIImage
-            .resizable()
-            .scaledToFill()
-        }
-        .frame(maxWidth: cardWidth, maxHeight: cardHeight)
-        
-        Rectangle()
-          .fill(LinearGradient.blackFadeBottomToTop)
-          .frame(width: cardWidth, height: 106)
-      
-        HStack(spacing: 8) {
-          Text(challenge.name)
-            .lineLimit(1)
-            .font(.appTitle3)
-            .foregroundColor(Colors.appWhite.swiftUIColor)
-            .padding(.leading, 16)
-            .frame(maxWidth: .infinity, alignment: .leading)
-          
-          Button(action: onLikeTapped) {
-            let image = challenge.isLike ? Assets.Icons.heartFill : Assets.Icons.heartLine
-            image.swiftUIImage
-              .foregroundColor(challenge.isLike ? Colors.red500.swiftUIColor : Colors.appWhite.swiftUIColor)
-              .frame(width: 36, height: 36)
-              .padding(.trailing, 10)
-          }
-        }
-        .padding(.bottom, 10)
-        .frame(width: cardWidth)
+  let cardWidth: CGFloat
+  let cardHeight: CGFloat
+  var body: some View {
+    
+    ZStack(alignment: .bottom) {
+      AsyncImage(url: URL(string: challenge.imageURL)) { image in
+        image
+          .resizable()
+          .scaledToFill()
+      } placeholder: {
+        Assets.Images.placeholderImage.swiftUIImage
+          .resizable()
+          .scaledToFill()
       }
       .frame(maxWidth: cardWidth, maxHeight: cardHeight)
-      .cornerRadius(16)
+      
+      Rectangle()
+        .fill(LinearGradient.blackFadeBottomToTop)
+        .frame(width: cardWidth, height: 106)
+      
+      HStack(spacing: 8) {
+        Text(challenge.name)
+          .lineLimit(1)
+          .font(.appTitle3)
+          .foregroundColor(Colors.appWhite.swiftUIColor)
+          .padding(.leading, 16)
+          .frame(maxWidth: .infinity, alignment: .leading)
+        
+        Button(action: onLikeTapped) {
+          let image = challenge.isLike ? Assets.Icons.heartFill : Assets.Icons.heartLine
+          image.swiftUIImage
+            .foregroundColor(challenge.isLike ? Colors.red500.swiftUIColor : Colors.appWhite.swiftUIColor)
+            .frame(width: 36, height: 36)
+            .padding(.trailing, 10)
+        }
+      }
+      .padding(.bottom, 10)
+      .frame(width: cardWidth)
     }
-}
-
-#Preview {
-  HomeChallengeBannerItem(challenge: mockChallenges[0], onLikeTapped: { })
+    .frame(maxWidth: cardWidth, maxHeight: cardHeight)
+    .cornerRadius(16)
+  }
 }
 
 extension LinearGradient {

@@ -50,7 +50,9 @@ struct HomeChallengeBannerSection: View {
                 challenge: challenge,
                 onLikeTapped: {
                   onLikeTapped(challenge.id)
-                }
+                },
+                cardWidth: cardWidth,
+                cardHeight: cardHeight
               )
             } // ForEach
           } // HStack
