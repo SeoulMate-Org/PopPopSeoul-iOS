@@ -1,5 +1,5 @@
 //
-//  DetailChallengePlaceSectionView.swift
+//  DetailChallengePlaceSection.swift
 //  PopPopSeoulKit
 //
 //  Created by suni on 4/20/25.
@@ -9,7 +9,7 @@ import SwiftUI
 import Common
 import DesignSystem
 
-struct DetailChallengePlaceSectionView: View {
+struct DetailChallengePlaceSection: View {
   let challenge: Challenge
   
   var body: some View {
@@ -29,7 +29,7 @@ struct DetailChallengePlaceSectionView: View {
       // 장소 리스트
       VStack(spacing: 16) {
         ForEach(challenge.places) { place in
-          ChallengePlaceListItemView(place: place, onLikeTapped: { })
+          ChallengePlaceListItem(place: place, onLikeTapped: { })
         }
       }
       .padding(.top, 4)
@@ -39,5 +39,5 @@ struct DetailChallengePlaceSectionView: View {
 }
 
 #Preview {
-  DetailChallengePlaceSectionView(challenge: mockChallenges[0])
+  DetailChallengePlaceSection(challenge: mockChallenges[0])
 }

@@ -32,13 +32,13 @@ struct DetailChallengeView: View {
         ZStack(alignment: .bottom) {
           ScrollView {
             VStack(alignment: .leading, spacing: 0) {
-              DetailChallengeInfoSectionView(challenge: challenge)
+              DetailChallengeInfoSection(challenge: challenge)
               divider()
-              DetailChallengeStampSectionView(challenge: challenge)
+              DetailChallengeStampSection(challenge: challenge)
               divider()
-              DetailChallengePlaceSectionView(challenge: challenge)
+              DetailChallengePlaceSection(challenge: challenge)
               divider()
-              DetailChallengeCommentSectionView(challenge: challenge)
+              DetailChallengeCommentSection(challenge: challenge)
             }
             .padding(.bottom, 100)
           }

@@ -55,6 +55,6 @@ extension Auth: Codable {
 
 public enum LoginType: String, Equatable {
   case google = "GOOGLE"
-  case facebook = "FACEBOOK"
+  case facebook = "FACEBOOK_IOS"
   case apple = "APPLE"
 }

@@ -14,6 +14,7 @@ import GoogleSignIn
 import GoogleSignInSwift
 import FirebaseCore
 import AuthenticationServices
+import FBSDKCoreKit
 
 struct LoginView: View {
   @State var store: StoreOf<LoginFeature>
@@ -41,7 +42,7 @@ struct LoginView: View {
       }
       
       SignInWithAppleButton(.signIn) { request in
-        request.requestedScopes = []
+        request.requestedScopes = [.email]
       } onCompletion: { result in
         switch result {
         case .success(let authResults):
@@ -74,6 +75,7 @@ struct LoginView: View {
     
     GIDSignIn.sharedInstance.signIn(withPresenting: presentingViewController) { signInResult, error in
       guard let result = signInResult, let token = result.user.idToken?.tokenString else {
+        logs.debug("❌ Google 로그인 오류: \(error?.localizedDescription ?? "")")
         store.send(.loginError)
         return
       }
@@ -101,11 +103,38 @@ struct LoginView: View {
       }
       
       // ✅ 로그인 성공 시 access token 획득
-      if let token = AccessToken.current?.tokenString {
+      if let token = AuthenticationToken.current?.tokenString {
+        print("📌 Facebook token: \(token)")
         store.send(.facebookSignInCompleted(token))
       } else {
         logs.debug("⚠️ Access token을 가져올 수 없음")
         store.send(.loginError)
+      }
+    }
+  }
+  
+  func fetchFacebookUserInfo(withToken token: String) {
+    let graphRequest = GraphRequest(graphPath: "me",
+                                    parameters: ["fields": "id, name, email"],
+                                    tokenString: token,
+                                    version: nil,
+                                    httpMethod: .get)
+    
+    print("📌 Facebook token: \(token)")
+    graphRequest.start { _, result, error in
+      if let error = error {
+        print("❌ 사용자 정보 요청 실패: \(error.localizedDescription)")
+        return
+      }
+      
+      if let result = result as? [String: Any] {
+        let id = result["id"] as? String ?? "-"
+        let name = result["name"] as? String ?? "-"
+        let email = result["email"] as? String ?? "-"
+        
+        print("📌 Facebook ID: \(id)")
+        print("👤 이름: \(name)")
+        print("📧 이메일: \(email)")
       }
     }
   }
@@ -134,4 +163,10 @@ struct LoginView: View {
       reducer: { LoginFeature() }
     )
   )
+}
+
+extension LoginManager {
+    func isLimitedLogin() -> Bool {
+        return _DomainHandler.sharedInstance().isDomainHandlingEnabled() && !Settings.shared.isAdvertiserTrackingEnabled
+    }
 }

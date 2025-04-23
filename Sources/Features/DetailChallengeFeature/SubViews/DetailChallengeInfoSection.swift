@@ -1,5 +1,5 @@
 //
-//  DetailChallengeInfoSectionView.swift
+//  DetailChallengeInfoSection.swift
 //  PopPopSeoulKit
 //
 //  Created by suni on 4/20/25.
@@ -9,7 +9,7 @@ import SwiftUI
 import Common
 import DesignSystem
 
-struct DetailChallengeInfoSectionView: View {
+struct DetailChallengeInfoSection: View {
   let challenge: Challenge
   
   var body: some View {
@@ -77,5 +77,5 @@ struct DetailChallengeInfoSectionView: View {
 }
 
 #Preview {
-  DetailChallengeInfoSectionView(challenge: mockChallenges[0])
+  DetailChallengeInfoSection(challenge: mockChallenges[0])
 }

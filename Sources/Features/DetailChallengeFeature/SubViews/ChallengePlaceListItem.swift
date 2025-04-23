@@ -1,5 +1,5 @@
 //
-//  ChallengePlaceListItemView.swift
+//  ChallengePlaceListItem.swift
 //  PopPopSeoulKit
 //
 //  Created by suni on 4/20/25.
@@ -9,7 +9,7 @@ import SwiftUI
 import Common
 import DesignSystem
 
-struct ChallengePlaceListItemView: View {
+struct ChallengePlaceListItem: View {
   let place: Place
   let onLikeTapped: () -> Void
   
@@ -113,5 +113,5 @@ struct ChallengePlaceListItemView: View {
 }
 
 #Preview {
-  ChallengePlaceListItemView(place: mockPlace2, onLikeTapped: { })
+  ChallengePlaceListItem(place: mockPlace2, onLikeTapped: { })
 }

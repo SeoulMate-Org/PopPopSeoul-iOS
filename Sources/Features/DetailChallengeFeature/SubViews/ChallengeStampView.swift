@@ -1,5 +1,5 @@
 //
-//  StampRowView.swift
+//  ChallengeStampView.swift
 //  PopPopSeoulKit
 //
 //  Created by suni on 4/20/25.
@@ -9,7 +9,7 @@ import SwiftUI
 import Common
 import DesignSystem
 
-struct StampRowView: View {
+struct ChallengeStampView: View {
   let items: [Place]
   private let itemSize: CGFloat = 48
   
@@ -62,5 +62,5 @@ struct StampRowView: View {
 }
 
 #Preview {
-  StampRowView(items: mockChallenges[0].places)
+  ChallengeStampView(items: mockChallenges[0].places)
 }

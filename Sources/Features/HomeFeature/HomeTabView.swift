@@ -18,12 +18,19 @@ struct HomeTabView: View {
   
   var body: some View {
     WithViewStore(store, observe: { $0 }) { viewStore in
-      VStack(spacing: 16) {
-        Text("위치 권한: \(viewStore.authorizationStatus.rawValue)")
-        if let location = viewStore.userLocation {
-          Text("현재 위치: \(location.latitude), \(location.longitude)")
+      VStack(spacing: 0) {
+        HeaderView(type: .titleOnly(title: "Logo"))
+        
+        ScrollView {
+          VStack(spacing: 0) {
+            HomeChallengeBannerSection(challenges: mockChallenges) { _ in }
+            HomeAccessPromptSection(type: .login)
+              .padding(.top, 48)
+          }
+          .frame(maxWidth: .infinity)
         }
       }
+      .frame(maxHeight: .infinity)
       .onAppear {
         viewStore.send(.onAppear)
       }

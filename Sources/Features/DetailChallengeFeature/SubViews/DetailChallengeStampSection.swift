@@ -1,5 +1,5 @@
 //
-//  DetailChallengeStampSectionView.swift
+//  DetailChallengeStampSection.swift
 //  PopPopSeoulKit
 //
 //  Created by suni on 4/20/25.
@@ -9,7 +9,7 @@ import SwiftUI
 import Common
 import DesignSystem
 
-struct DetailChallengeStampSectionView: View {
+struct DetailChallengeStampSection: View {
   let challenge: Challenge
   
   var body: some View {
@@ -33,7 +33,7 @@ struct DetailChallengeStampSectionView: View {
           .padding(.horizontal, 20)
           .padding(.vertical, 17)
         Divider()
-        StampRowView(items: challenge.places)
+        ChallengeStampView(items: challenge.places)
           .padding(.vertical, 16)
       }
       .background(Colors.gray25.swiftUIColor)
@@ -45,5 +45,5 @@ struct DetailChallengeStampSectionView: View {
 }
 
 #Preview {
-  DetailChallengeStampSectionView(challenge: mockChallenges[0])
+  DetailChallengeStampSection(challenge: mockChallenges[0])
 }

@@ -58,6 +58,9 @@ public enum Assets {
   public enum Images {
     public static let emptyPop = ImageAsset(name: "empty_pop")
     public static let errorImage = ImageAsset(name: "error_image")
+    public static let homeBanner = ImageAsset(name: "home_banner")
+    public static let homePromptLocation = ImageAsset(name: "home_prompt_location")
+    public static let homePromptLogin = ImageAsset(name: "home_prompt_login")
     public static let placeholderImage = ImageAsset(name: "placeholder_image")
     public static let splash = ImageAsset(name: "splash")
     public static let stampInactive = ImageAsset(name: "stamp inactive")
