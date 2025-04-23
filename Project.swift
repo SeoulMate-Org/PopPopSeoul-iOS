@@ -59,7 +59,8 @@ let appInfoPlist: [String: Plist.Value] = {
         "FacebookAdvertiserIDCollectionEnabled": false,
         "NSAppTransportSecurity": [
             "NSAllowsArbitraryLoads": true
-        ]
+        ],
+        "NSLocationWhenInUseUsageDescription": "앱 사용 중 사용자의 위치를 확인하기 위해 필요합니다."
     ]
     
     let secretsPath = "App/Resources/Secrets.plist"
@@ -109,7 +110,7 @@ func createAppTarget(suffix: String = "", isDev: Bool = false, scripts: [TargetS
             "Resources/AppKit/**"
         ]),
         entitlements: "PopPopSeoul.entitlements",
-        scripts: scripts고
+        scripts: scripts
         + [swiftlintScript],
         
         dependencies: [.target(name: "Features")]
@@ -196,6 +197,7 @@ let project = Project(
             ]),
             dependencies: [
                 .external(name: "ComposableArchitecture"),
+                .external(name: "ComposableCoreLocation"),
                 .external(name: "FirebaseRemoteConfig"),
                 .external(name: "FirebaseAnalytics"),
                 .external(name: "Logging"),

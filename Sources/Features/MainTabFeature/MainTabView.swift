@@ -23,7 +23,12 @@ public struct MainTabView: View {
         Group {
           switch viewStore.state {
           case .home:
-            HomeTabView()
+            HomeTabView(
+              store: store.scope(
+                state: \.home,
+                action: \.home
+              )
+            )
           case .myChallenge:
             MyChallengeTabView(
               store: store.scope(
@@ -120,7 +125,7 @@ extension MainTabFeature.State.Tab {
   var color: Color {
     Color(Colors.gray300.swiftUIColor)
   }
-
+  
   var selectedColor: Color {
     Color(Colors.blue500.swiftUIColor)
   }

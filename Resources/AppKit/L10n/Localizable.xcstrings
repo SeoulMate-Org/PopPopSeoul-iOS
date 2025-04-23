@@ -14,6 +14,9 @@
         }
       }
     },
+    "%lld" : {
+
+    },
     "detailchallenge_comment_button" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -407,11 +410,33 @@
     "닫기" : {
 
     },
+    "앱을 사용하려면 업데이트가 필요합니다." : {
+
+    },
+    "업데이트" : {
+
+    },
+    "업데이트 하러가기" : {
+
+    },
     "온보딩 닫기" : {
+
+    },
+    "위치 권한: %d" : {
 
     },
     "페이스북 로그인" : {
 
+    },
+    "현재 위치: %lf, %lf" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "현재 위치: %1$lf, %2$lf"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

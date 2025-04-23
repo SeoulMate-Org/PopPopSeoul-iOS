@@ -23,6 +23,7 @@ public struct MainTabFeature {
     }
     
     var myChallenge: MyChallengeFeature.State = .init()
+    var home: HomeTabFeature.State = .init()
   }
   
   // MARK: Actions
@@ -32,6 +33,7 @@ public struct MainTabFeature {
     case selectedTabChanged(State.Tab)
     
     case myChallenge(MyChallengeFeature.Action)
+    case home(HomeTabFeature.Action)
   }
   
   // MARK: Reducer
@@ -39,6 +41,10 @@ public struct MainTabFeature {
   public var body: some Reducer<State, Action> {    
     Scope(state: \.myChallenge, action: \.myChallenge) {
       MyChallengeFeature()
+    }
+
+    Scope(state: \.home, action: \.home) {
+      HomeTabFeature()
     }
 
     Reduce { state, action in
