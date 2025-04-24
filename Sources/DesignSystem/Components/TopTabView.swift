@@ -7,6 +7,8 @@
 
 import SwiftUI
 import Common
+import SharedAssets
+import SharedTypes
 
 public struct TopTabView<T: Hashable>: View {
   let tabs: [T]

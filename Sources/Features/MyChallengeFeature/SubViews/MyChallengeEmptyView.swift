@@ -8,6 +8,7 @@
 import SwiftUI
 import Common
 import DesignSystem
+import SharedAssets
 
 struct MyChallengeEmptyView: View {
   let tab: MyChallengeFeature.State.Tab

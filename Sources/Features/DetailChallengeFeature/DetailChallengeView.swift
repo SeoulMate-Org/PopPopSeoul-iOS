@@ -9,6 +9,7 @@ import SwiftUI
 import ComposableArchitecture
 import Common
 import DesignSystem
+import SharedAssets
 
 struct DetailChallengeView: View {
   let challenge: Challenge

@@ -9,6 +9,7 @@ import SwiftUI
 import ComposableArchitecture
 import DesignSystem
 import Common
+import SharedAssets
 
 public struct MainTabView: View {
   @State private var store: StoreOf<MainTabFeature>

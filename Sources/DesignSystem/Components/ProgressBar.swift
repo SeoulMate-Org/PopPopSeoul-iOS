@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Common
+import SharedAssets
 
 public struct ProgressBar: View {  
   let progressType: ProgressType

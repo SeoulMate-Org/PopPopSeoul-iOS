@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BDADB3EE6F8FCBC1CA207403"
-               BuildableName = "PopPopSeoul_DesignSystem.bundle"
-               BlueprintName = "PopPopSeoul_DesignSystem"
+               BlueprintIdentifier = "5E9F56C6712853F55E59247F"
+               BuildableName = "SharedTypes.framework"
+               BlueprintName = "SharedTypes"
                ReferencedContainer = "container:PopPopSeoul.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,9 +44,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BDADB3EE6F8FCBC1CA207403"
-            BuildableName = "PopPopSeoul_DesignSystem.bundle"
-            BlueprintName = "PopPopSeoul_DesignSystem"
+            BlueprintIdentifier = "5E9F56C6712853F55E59247F"
+            BuildableName = "SharedTypes.framework"
+            BlueprintName = "SharedTypes"
             ReferencedContainer = "container:PopPopSeoul.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -60,9 +60,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BDADB3EE6F8FCBC1CA207403"
-            BuildableName = "PopPopSeoul_DesignSystem.bundle"
-            BlueprintName = "PopPopSeoul_DesignSystem"
+            BlueprintIdentifier = "5E9F56C6712853F55E59247F"
+            BuildableName = "SharedTypes.framework"
+            BlueprintName = "SharedTypes"
             ReferencedContainer = "container:PopPopSeoul.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Common
+import SharedAssets
 
 public struct CommentListItemView: View {
   let type: CommentType

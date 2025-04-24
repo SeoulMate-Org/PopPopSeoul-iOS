@@ -17,6 +17,7 @@ public struct Challenge: Equatable, Identifiable {
   public let likeCount: Int = Int.random(in: 0..<20)
   public let participantCount: Int = Int.random(in: 0..<20)
   public let places: [Place]
+  public let mainLocal: String = "한남동/이태원"
   public var comments: [Comment] = mockComments
   public var commentCount: Int {
     return comments.count

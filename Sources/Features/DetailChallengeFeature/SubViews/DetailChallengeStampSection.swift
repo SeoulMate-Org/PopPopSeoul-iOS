@@ -8,6 +8,7 @@
 import SwiftUI
 import Common
 import DesignSystem
+import SharedAssets
 
 struct DetailChallengeStampSection: View {
   let challenge: Challenge

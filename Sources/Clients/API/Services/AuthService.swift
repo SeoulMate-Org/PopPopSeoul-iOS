@@ -5,8 +5,9 @@
 //  Created by suni on 4/23/25.
 //
 
-import ComposableArchitecture
 import Foundation
+import ComposableArchitecture
+import Models
 
 // MARK: Interface
 

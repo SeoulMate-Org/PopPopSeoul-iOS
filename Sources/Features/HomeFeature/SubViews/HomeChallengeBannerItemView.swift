@@ -1,5 +1,5 @@
 //
-//  HomeChallengeBannerItem.swift
+//  HomeChallengeBannerItemView.swift
 //  Clients
 //
 //  Created by suni on 4/23/25.
@@ -8,8 +8,9 @@
 import SwiftUI
 import Common
 import DesignSystem
+import SharedAssets
 
-struct HomeChallengeBannerItem: View {
+struct HomeChallengeBannerItemView: View {
   let challenge: Challenge
   let onLikeTapped: () -> Void
   let cardWidth: CGFloat

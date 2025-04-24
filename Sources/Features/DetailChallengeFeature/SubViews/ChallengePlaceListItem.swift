@@ -8,6 +8,7 @@
 import SwiftUI
 import Common
 import DesignSystem
+import SharedAssets
 
 struct ChallengePlaceListItem: View {
   let place: Place

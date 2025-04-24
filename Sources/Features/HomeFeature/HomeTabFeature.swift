@@ -3,6 +3,8 @@ import ComposableArchitecture
 import ComposableCoreLocation
 import Common
 import Clients
+import Models
+import SharedTypes
 
 @Reducer
 public struct HomeTabFeature {
@@ -19,6 +21,19 @@ public struct HomeTabFeature {
     
     var authorizationStatus: CLAuthorizationStatus = .notDetermined
     var userLocation: Coordinate?
+    
+    var selectedThemeTab: ChallengeTheme = .localExploration
+    let themeChallenges: [ChallengeTheme: [Challenge]] = [
+      .localExploration: mockChallenges,
+      .historyCulture: mockChallenges,
+      .artExhibition: mockChallenges,
+      .gourmetAndLegacy: mockChallenges,
+      .nightscapeAndMood: mockChallenges,
+      .walkingTour: mockChallenges,
+      .photoTour: mockChallenges,
+      .mustVisit: mockChallenges,
+      .culturalEvent: mockChallenges
+    ]
   }
   
   // MARK: - Action
@@ -27,6 +42,7 @@ public struct HomeTabFeature {
   public enum Action: Equatable {
     case onAppear
     case locationManager(LocationManager.Action)
+    case selectedThemeTabChanged(ChallengeTheme)
   }
   
   // MARK: - Reducer
@@ -59,6 +75,10 @@ public struct HomeTabFeature {
         if let location = locations.first {
           state.userLocation = Coordinate(location.coordinate)
         }
+        return .none
+        
+      case let .selectedThemeTabChanged(tab):
+        state.selectedThemeTab = tab
         return .none
         
       default: return .none

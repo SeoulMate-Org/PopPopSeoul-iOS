@@ -8,6 +8,7 @@ import SwiftUI
 import ComposableArchitecture
 import DesignSystem
 import Common
+import SharedTypes
 
 struct HomeTabView: View {
   @State var store: StoreOf<HomeTabFeature>
@@ -26,6 +27,19 @@ struct HomeTabView: View {
             HomeChallengeBannerSection(challenges: mockChallenges) { _ in }
             HomeAccessPromptSection(type: .login)
               .padding(.top, 48)
+            
+            HomeThemeChallengeSection(
+              selectedTab: viewStore.binding(
+                get: \.selectedThemeTab,
+                send: HomeTabFeature.Action.selectedThemeTabChanged
+              ),
+              challengesByTheme: viewStore.themeChallenges,
+              themeTabChanged: { tab in
+                store.send(.selectedThemeTabChanged(tab))
+              }
+            )
+            .padding(.top, 48)
+            
           }
           .frame(maxWidth: .infinity)
         }

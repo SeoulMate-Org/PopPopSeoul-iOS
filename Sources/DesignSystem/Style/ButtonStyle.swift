@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Common
+import SharedAssets
 
 public struct AppButton: View {
   let title: String

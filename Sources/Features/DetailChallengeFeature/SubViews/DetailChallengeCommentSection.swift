@@ -8,6 +8,7 @@
 import SwiftUI
 import Common
 import DesignSystem
+import SharedAssets
 
 struct DetailChallengeCommentSection: View {
   let challenge: Challenge

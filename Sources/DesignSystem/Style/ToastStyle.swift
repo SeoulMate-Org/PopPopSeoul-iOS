@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SharedAssets
 
 public struct AppToast: View {
   let type: AppToastType

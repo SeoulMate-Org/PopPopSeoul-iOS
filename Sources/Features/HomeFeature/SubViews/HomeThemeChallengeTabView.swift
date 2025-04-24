@@ -1,5 +1,5 @@
 //
-//  HomeThemeChallengeTab.swift
+//  HomeThemeChallengeTabView.swift
 //  Clients
 //
 //  Created by suni on 4/24/25.
@@ -9,8 +9,10 @@ import SwiftUI
 import DesignSystem
 import Common
 import Clients
+import SharedAssets
+import SharedTypes
 
-struct HomeThemeChallengeTab: View {
+struct HomeThemeChallengeTabView: View {
   let tab: ChallengeTheme
   let isSelected: Bool
   let onTapped: () -> Void
@@ -40,5 +42,5 @@ struct HomeThemeChallengeTab: View {
 }
 
 #Preview {
-  HomeThemeChallengeTab(tab: .artExhibition, isSelected: true, onTapped: { })
+  HomeThemeChallengeTabView(tab: .artExhibition, isSelected: true, onTapped: { })
 }

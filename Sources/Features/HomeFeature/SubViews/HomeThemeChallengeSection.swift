@@ -9,12 +9,16 @@ import SwiftUI
 import Common
 import DesignSystem
 import Clients
+import SharedAssets
+import SharedTypes
 
 struct HomeThemeChallengeSection: View {
   @Binding var selectedTab: ChallengeTheme
+  let challengesByTheme: [ChallengeTheme: [Challenge]]
+  let themeTabChanged: (ChallengeTheme) -> ()
   
   var body: some View {
-    VStack(alignment: .leading, spacing: 0) {
+    VStack(alignment: .center, spacing: 0) {
       
       // MARK: - 헤더 타이틀 + 더보기
       HStack(alignment: .bottom) {
@@ -39,10 +43,10 @@ struct HomeThemeChallengeSection: View {
       ScrollView(.horizontal, showsIndicators: false) {
         HStack(spacing: 8) {
           ForEach(ChallengeTheme.allCases, id: \.self) { tab in
-            HomeThemeChallengeTab(
+            HomeThemeChallengeTabView(
               tab: tab,
               isSelected: selectedTab == tab,
-              onTapped: { }
+              onTapped: { themeTabChanged(tab) }
             )
             .frame(height: 30)
           }
@@ -51,21 +55,30 @@ struct HomeThemeChallengeSection: View {
       }
       .padding(.top, 16)
       
-      // TODO: - 챌린지 리스트 (기획 논의 중)
-//      VStack {
-//        Text("챌린지 리스트는 추후 구현 예정입니다.")
-//          .font(.appTitle3)
-//          .foregroundColor(Colors.gray400.swiftUIColor)
-//      }
-//      .frame(height: 200)
-//      .frame(maxWidth: .infinity)
-//      .padding(.top, 20)
+      ThemeChallengeListView(
+        listType: .home,
+        selectedTab: $selectedTab,
+        challengesByTheme: challengesByTheme
+      )
+      .padding(.top, 20)
+      
+      HomeThemeChallengeIndicatorView(currentTab: selectedTab)
+        .padding(.top, 16)
     }
   }
 }
 
 #Preview {
+  let dummyData: [ChallengeTheme: [Challenge]] = [
+    .localExploration: mockChallenges,
+    .historyCulture: mockChallenges,
+    .artExhibition: mockChallenges,
+    .culturalEvent: mockChallenges
+  ]
   StatefulPreviewWrapper(ChallengeTheme.localExploration) { binding in
-    HomeThemeChallengeSection(selectedTab: binding)
+    HomeThemeChallengeSection(
+      selectedTab: binding,
+      challengesByTheme: dummyData,
+      themeTabChanged: { _ in })
   }
 }

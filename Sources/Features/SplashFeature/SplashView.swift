@@ -8,6 +8,7 @@
 import SwiftUI
 import ComposableArchitecture
 import DesignSystem
+import SharedAssets
 
 struct SplashView: View {
   @State var store: StoreOf<SplashFeature>

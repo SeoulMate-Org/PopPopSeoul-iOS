@@ -185,6 +185,85 @@ let project = Project(
             ]
         ),
         .target(
+            name: "SharedAssets",
+            destinations: appDestinations,
+            product: .staticFramework,
+            bundleId: "dev.sunidev.poppopseoul.sharedassets",
+            infoPlist: .default,
+            sources: "Sources/SharedAssets/**",
+            resources: .resources([
+                "App/Resources/**",
+                "Resources/AppKit/**"
+            ]),
+            dependencies: [ ]
+        ),
+        .target(
+            name: "SharedTypes",
+            destinations: appDestinations,
+            product: .staticFramework,
+            bundleId: "dev.sunidev.poppopseoul.sharedtypes",
+            infoPlist: .default,
+            sources: "Sources/SharedTypes/**",
+            resources: .resources([
+                "App/Resources/**",
+                "Resources/AppKit/**"
+            ]),
+            dependencies: [ ]
+        ),
+        .target(
+            name: "Common",
+            destinations: appDestinations,
+            product: .staticFramework,
+            bundleId: "dev.sunidev.poppopseoul.common",
+            infoPlist: .default,
+            sources: "Sources/Common/**",
+            resources: .resources([
+                "App/Resources/**",
+                "Resources/AppKit/**"
+            ]),
+            dependencies: [
+                .external(name: "Logging"),
+                .target(name: "SharedAssets"),
+                .target(name: "SharedTypes"),
+            ]
+        ),
+        .target(
+            name: "Models",
+            destinations: appDestinations,
+            product: .staticFramework,
+            bundleId: "dev.sunidev.poppopseoul.models",
+            infoPlist: .default,
+            sources: "Sources/Models/**",
+            resources: .resources([
+                "App/Resources/**",
+                "Resources/AppKit/**"
+            ]),
+            dependencies: [
+                .external(name: "ComposableCoreLocation"),
+                .target(name: "SharedTypes"),
+                .target(name: "SharedAssets"),
+                .target(name: "Common"),
+            ]
+        ),
+        .target(
+            name: "DesignSystem",
+            destinations: appDestinations,
+            product: Environment.forPreview.getBoolean(default: false) ? .framework : .staticFramework,
+            bundleId: "dev.sunidev.poppopseoul.clients",
+            infoPlist: .default,
+            sources: "Sources/DesignSystem/**",
+            resources: .resources([
+                "App/Resources/**",
+                "Resources/AppKit/**"
+            ]),
+            dependencies: [
+                .external(name: "Logging"),
+                .target(name: "SharedTypes"),
+                .target(name: "SharedAssets"),
+                .target(name: "Common"),
+            ]
+        ),
+        .target(
             name: "Clients",
             destinations: appDestinations,
             product: .staticFramework,
@@ -202,22 +281,7 @@ let project = Project(
                 .external(name: "FirebaseAnalytics"),
                 .external(name: "Logging"),
                 .target(name: "Common"),
-            ]
-        ),
-        .target(
-            name: "DesignSystem",
-            destinations: appDestinations,
-            product: .staticFramework,
-            bundleId: "dev.sunidev.poppopseoul.clients",
-            infoPlist: .default,
-            sources: "Sources/DesignSystem/**",
-            resources: .resources([
-                "App/Resources/**",
-                "Resources/AppKit/**"
-            ]),
-            dependencies: [
-                .external(name: "Logging"),
-                .target(name: "Common"),
+                .target(name: "Models"),
             ]
         ),
         .target(
@@ -242,24 +306,12 @@ let project = Project(
                 .external(name: "GoogleSignIn"),
                 .external(name: "GoogleSignInSwift"),
                 .external(name: "FirebaseAuth"),
-                .target(name: "Common"),
-                .target(name: "DesignSystem"),
                 .target(name: "Clients"),
-            ]
-        ),
-        .target(
-            name: "Common",
-            destinations: appDestinations,
-            product: .staticFramework,
-            bundleId: "dev.sunidev.poppopseoul.common",
-            infoPlist: .default,
-            sources: "Sources/Common/**",
-            resources: .resources([
-                "App/Resources/**",
-                "Resources/AppKit/**"
-            ]),
-            dependencies: [
-                .external(name: "Logging"),
+                .target(name: "Models"),
+                .target(name: "DesignSystem"),
+                .target(name: "SharedTypes"),
+                .target(name: "SharedAssets"),
+                .target(name: "Common"),
             ]
         )
        ]

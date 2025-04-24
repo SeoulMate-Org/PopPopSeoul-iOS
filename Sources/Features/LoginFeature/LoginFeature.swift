@@ -12,6 +12,8 @@ import AuthenticationServices
 import FacebookLogin
 import GoogleSignIn
 import FirebaseCore
+import Models
+import SharedTypes
 
 @Reducer
 public struct LoginFeature {

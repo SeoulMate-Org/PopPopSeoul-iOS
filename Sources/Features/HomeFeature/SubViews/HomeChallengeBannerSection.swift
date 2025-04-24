@@ -8,6 +8,7 @@
 import SwiftUI
 import Common
 import DesignSystem
+import SharedAssets
 
 struct HomeChallengeBannerSection: View {
   var challenges: [Challenge]
@@ -46,7 +47,7 @@ struct HomeChallengeBannerSection: View {
         ScrollView(.horizontal) {
           HStack(spacing: 12) {
             ForEach(challenges) { challenge in
-              HomeChallengeBannerItem(
+              HomeChallengeBannerItemView(
                 challenge: challenge,
                 onLikeTapped: {
                   onLikeTapped(challenge.id)

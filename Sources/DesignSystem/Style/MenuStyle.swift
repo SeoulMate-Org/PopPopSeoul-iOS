@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SharedAssets
 
 public struct AppMoreMenu: View {
   let items: [AppMoreMenuItem]
