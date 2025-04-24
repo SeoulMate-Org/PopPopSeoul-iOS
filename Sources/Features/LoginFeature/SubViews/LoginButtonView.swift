@@ -36,6 +36,8 @@ struct LoginButtonView: View {
           .font(.buttonM)
           .foregroundColor(isLight ? Color.hex(0xFFFFFF) : Color.hex(0x1F1F1F))
           .padding(.trailing, 15)
+        
+        Spacer()
       }
       .frame(maxWidth: .infinity)
       .frame(height: 52)
