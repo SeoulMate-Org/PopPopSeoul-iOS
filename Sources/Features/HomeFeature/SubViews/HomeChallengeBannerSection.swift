@@ -68,9 +68,9 @@ struct HomeChallengeBannerSection: View {
   }
 }
 
-#Preview {
-  HomeChallengeBannerSection(challenges: mockChallenges, onLikeTapped: { _ in })
-}
+//#Preview {
+//  HomeChallengeBannerSection(challenges: mockChallenges, onLikeTapped: { _ in })
+//}
 
 extension LinearGradient {
   static let blueFadeTopToBottom = LinearGradient(

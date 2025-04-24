@@ -51,9 +51,11 @@ public struct AppFeature {
         return .none
         
       case .destination(.presented(.onboarding(.didFinish))):
-        // TODO: - 로그인으로 변경
         state.destination = .login(.init())
-//        state.destination = .mainTab(.init())
+        return .none
+        
+      case .destination(.presented(.login(.aroundTapped))):
+        state.destination = .mainTab(.init())
         return .none
         
       case .destination:

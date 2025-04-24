@@ -111,14 +111,14 @@ public struct MainTabView: View {
 
 // MARK: Preview
 
-#Preview {
-  MainTabView(
-    store: Store<MainTabFeature.State, MainTabFeature.Action>(
-      initialState: .init(),
-      reducer: { MainTabFeature() }
-    )
-  )
-}
+//#Preview {
+//  MainTabView(
+//    store: Store<MainTabFeature.State, MainTabFeature.Action>(
+//      initialState: .init(),
+//      reducer: { MainTabFeature() }
+//    )
+//  )
+//}
 
 // MARK: - Helper
 

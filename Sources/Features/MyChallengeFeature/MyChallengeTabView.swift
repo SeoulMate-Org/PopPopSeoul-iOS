@@ -115,14 +115,14 @@ struct MyChallengeTabView: View {
 
 // MARK: Preview
 
-#Preview {
-  MyChallengeTabView(
-    store: Store<MyChallengeFeature.State, MyChallengeFeature.Action>(
-      initialState: .init(),
-      reducer: { MyChallengeFeature() }
-    )
-  )
-}
+//#Preview {
+//  MyChallengeTabView(
+//    store: Store<MyChallengeFeature.State, MyChallengeFeature.Action>(
+//      initialState: .init(),
+//      reducer: { MyChallengeFeature() }
+//    )
+//  )
+//}
 
 // MARK: - Helper
 

@@ -109,8 +109,8 @@ struct MyChallengeistItemView: View {
 
 // MARK: Preview
 
-#Preview {
-  MyChallengeistItemView(tab: .interest, challenge: mockChallenges[0], onLikeTapped: { })
-}
+//#Preview {
+//  MyChallengeistItemView(tab: .interest, challenge: mockChallenges[0], onLikeTapped: { })
+//}
 
 // MARK: - Helper

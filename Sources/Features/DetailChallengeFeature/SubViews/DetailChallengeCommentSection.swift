@@ -78,6 +78,6 @@ struct DetailChallengeCommentSection: View {
   }
 }
 
-#Preview {
-  DetailChallengeCommentSection(challenge: mockChallenges[0])
-}
+//#Preview {
+//  DetailChallengeCommentSection(challenge: mockChallenges[0])
+//}

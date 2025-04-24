@@ -77,6 +77,6 @@ struct DetailChallengeInfoSection: View {
   }
 }
 
-#Preview {
-  DetailChallengeInfoSection(challenge: mockChallenges[0])
-}
+//#Preview {
+//  DetailChallengeInfoSection(challenge: mockChallenges[0])
+//}

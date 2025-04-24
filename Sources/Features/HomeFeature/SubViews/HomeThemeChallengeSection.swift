@@ -68,17 +68,17 @@ struct HomeThemeChallengeSection: View {
   }
 }
 
-#Preview {
-  let dummyData: [ChallengeTheme: [Challenge]] = [
-    .localExploration: mockChallenges,
-    .historyCulture: mockChallenges,
-    .artExhibition: mockChallenges,
-    .culturalEvent: mockChallenges
-  ]
-  StatefulPreviewWrapper(ChallengeTheme.localExploration) { binding in
-    HomeThemeChallengeSection(
-      selectedTab: binding,
-      challengesByTheme: dummyData,
-      themeTabChanged: { _ in })
-  }
-}
+//#Preview {
+//  let dummyData: [ChallengeTheme: [Challenge]] = [
+//    .localExploration: mockChallenges,
+//    .historyCulture: mockChallenges,
+//    .artExhibition: mockChallenges,
+//    .culturalEvent: mockChallenges
+//  ]
+//  StatefulPreviewWrapper(ChallengeTheme.localExploration) { binding in
+//    HomeThemeChallengeSection(
+//      selectedTab: binding,
+//      challengesByTheme: dummyData,
+//      themeTabChanged: { _ in })
+//  }
+//}

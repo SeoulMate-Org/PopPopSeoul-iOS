@@ -10,7 +10,7 @@ import Foundation
 public struct Challenge: Equatable, Identifiable {
   public let id: UUID = .init()
   public let theme: String
-  public let imageURL: String
+  public let imageURL: String = "http://sohohaneulbit.cafe24.com/files/attach/images/357/358/b6f2a6a51114cd78ae4d64840f0ccb46.jpg"
   public let name: String
   public let subtitle: String
   public let description: String
@@ -34,7 +34,7 @@ public struct Challenge: Equatable, Identifiable {
 
 public struct Place: Equatable, Identifiable {
   public let id: UUID = .init()
-  public let imageURL: String
+  public let imageURL: String = "http://sohohaneulbit.cafe24.com/files/attach/images/357/358/b6f2a6a51114cd78ae4d64840f0ccb46.jpg"
   public let name: String
   public let description: String
   public let address: String
@@ -92,7 +92,6 @@ public let mockComments: [Comment] = [
 ]
 
 public let mockPlace1: Place =  Place(
-  imageURL: "https://example.com/gyeongbokgung.jpg",
   name: "경복궁",
   description: "조선의 정궁으로 웅장한 건축미를 자랑하는 대표 명소.",
   address: "서울 종로구 사직로 161",
@@ -103,7 +102,6 @@ public let mockPlace1: Place =  Place(
   isCompleted: true
 )
 public let mockPlace2: Place =  Place(
-  imageURL: "https://example.com/insadong.jpg",
   name: "인사동 거리",
   description: "전통과 현대가 어우러진 예술 거리, 기념품 쇼핑 최적지.",
   address: "서울 종로구 인사동길",
@@ -115,7 +113,6 @@ public let mockPlace2: Place =  Place(
   participantCount: 0
 )
 public let mockPlace3: Place =  Place(
-  imageURL: "https://example.com/bukchon.jpg",
   name: "북촌한옥마을",
   description: "서울 도심 속 전통 한옥 주거지, 인생 사진 명소!",
   address: "서울 종로구 계동길 37",
@@ -127,7 +124,6 @@ public let mockPlace3: Place =  Place(
 public let mockChallenges: [Challenge] = [
   Challenge(
     theme: "🏯 테마테마/테마테마",
-    imageURL: "https://example.com/challenge1.jpg",
     name: "🏯 조선의 수도, 한양을 걷다 🏯 조선의 수도, 한양을 걷다",
     subtitle: "경복궁부터 인사동까지 경복궁부터 인사동까지 경복궁부터 인사동까지 경복궁부터 인사동까지",
     description: "서울의 역사 중심지인 종로 일대를 걸으며 조선시대의 흔적을 느껴보세요.\n서울의 역사 중심지인 종로 일대를 걸으며 조선시대의 흔적을 느껴보세요.서울의 역사 중심지인 종로 일대를 걸으며 조선시대의 흔적을 느껴보세요.\n서울의 역사 중심지인 종로 일대를 걸으며 조선시대의 흔적을 느껴보세요.",
@@ -137,7 +133,6 @@ public let mockChallenges: [Challenge] = [
   ),
   Challenge(
     theme: "역사 속 서울 걷기",
-    imageURL: "https://example.com/challenge1.jpg",
     name: "조선의 수도, 한양을 걷다",
     subtitle: "경복궁부터 인사동까지",
     description: "서울의 역사 중심지인 종로 일대를 걸으며 조선시대의 흔적을 느껴보세요.",
@@ -147,7 +142,6 @@ public let mockChallenges: [Challenge] = [
   ),
   Challenge(
     theme: "역사 속 서울 걷기",
-    imageURL: "https://example.com/challenge1.jpg",
     name: "조선의 수도, 한양을 걷다",
     subtitle: "경복궁부터 인사동까지",
     description: "서울의 역사 중심지인 종로 일대를 걸으며 조선시대의 흔적을 느껴보세요.",
@@ -155,7 +149,6 @@ public let mockChallenges: [Challenge] = [
   ),
   Challenge(
     theme: "역사 속 서울 걷기",
-    imageURL: "https://example.com/challenge1.jpg",
     name: "조선의 수도, 한양을 걷다",
     subtitle: "경복궁부터 인사동까지",
     description: "서울의 역사 중심지인 종로 일대를 걸으며 조선시대의 흔적을 느껴보세요.",
@@ -165,7 +158,6 @@ public let mockChallenges: [Challenge] = [
   ),
   Challenge(
     theme: "역사 속 서울 걷기",
-    imageURL: "https://example.com/challenge1.jpg",
     name: "조선의 수도, 한양을 걷다",
     subtitle: "경복궁부터 인사동까지",
     description: "서울의 역사 중심지인 종로 일대를 걸으며 조선시대의 흔적을 느껴보세요.",
@@ -173,7 +165,6 @@ public let mockChallenges: [Challenge] = [
   ),
   Challenge(
     theme: "역사 속 서울 걷기",
-    imageURL: "https://example.com/challenge1.jpg",
     name: "조선의 수도, 한양을 걷다",
     subtitle: "경복궁부터 인사동까지",
     description: "서울의 역사 중심지인 종로 일대를 걸으며 조선시대의 흔적을 느껴보세요.",
@@ -181,7 +172,6 @@ public let mockChallenges: [Challenge] = [
   ),
   Challenge(
     theme: "역사 속 서울 걷기",
-    imageURL: "https://example.com/challenge1.jpg",
     name: "조선의 수도, 한양을 걷다",
     subtitle: "경복궁부터 인사동까지",
     description: "서울의 역사 중심지인 종로 일대를 걸으며 조선시대의 흔적을 느껴보세요.",
@@ -189,7 +179,6 @@ public let mockChallenges: [Challenge] = [
   ),
   Challenge(
     theme: "역사 속 서울 걷기",
-    imageURL: "https://example.com/challenge1.jpg",
     name: "조선의 수도, 한양을 걷다",
     subtitle: "경복궁부터 인사동까지",
     description: "서울의 역사 중심지인 종로 일대를 걸으며 조선시대의 흔적을 느껴보세요.",
@@ -197,7 +186,6 @@ public let mockChallenges: [Challenge] = [
   ),
   Challenge(
     theme: "역사 속 서울 걷기",
-    imageURL: "https://example.com/challenge1.jpg",
     name: "조선의 수도, 한양을 걷다",
     subtitle: "경복궁부터 인사동까지",
     description: "서울의 역사 중심지인 종로 일대를 걸으며 조선시대의 흔적을 느껴보세요.",

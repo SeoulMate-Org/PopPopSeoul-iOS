@@ -41,6 +41,6 @@ struct HomeThemeChallengeTabView: View {
   }
 }
 
-#Preview {
-  HomeThemeChallengeTabView(tab: .artExhibition, isSelected: true, onTapped: { })
-}
+//#Preview {
+//  HomeThemeChallengeTabView(tab: .artExhibition, isSelected: true, onTapped: { })
+//}

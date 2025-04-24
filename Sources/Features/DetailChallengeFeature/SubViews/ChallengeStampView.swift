@@ -61,7 +61,7 @@ struct ChallengeStampView: View {
       .scaledToFill()
   }
 }
-
-#Preview {
-  ChallengeStampView(items: mockChallenges[0].places)
-}
+//
+//#Preview {
+//  ChallengeStampView(items: mockChallenges[0].places)
+//}

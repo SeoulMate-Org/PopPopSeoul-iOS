@@ -8,8 +8,9 @@
 import SwiftUI
 import ComposableArchitecture
 import DesignSystem
-import FacebookLogin
 import Common
+import SharedAssets
+import FacebookLogin
 import GoogleSignIn
 import GoogleSignInSwift
 import FirebaseCore
@@ -18,51 +19,95 @@ import FBSDKCoreKit
 
 struct LoginView: View {
   @State var store: StoreOf<LoginFeature>
+  let isShowBack: Bool
   
-  init(store: StoreOf<LoginFeature>) {
+  init(store: StoreOf<LoginFeature>, isShowBack: Bool) {
     self.store = store
+    self.isShowBack = isShowBack
   }
   
   var body: some View {
-    VStack {
-      GoogleSignInButton {
-        handleGoogleSignInButton()
-      }
+    ZStack(alignment: .top) {
       
-      Button {
-        handleFacebookLogin()
-      } label: {
-        Text("페이스북 로그인")
-          .fontWeight(.bold)
-          .foregroundColor(.white)
-          .padding(.vertical, 13)
-          .padding(.horizontal, 95)
-          .background(Color.blue)
-          .cornerRadius(5)
-      }
+      let backWidht = Utility.screenWidth * (485.88 / 375)
+      let backHeight = backWidht * (431.79 / 485.88)
       
-      SignInWithAppleButton(.signIn) { request in
-        request.requestedScopes = [.email]
-      } onCompletion: { result in
-        switch result {
-        case .success(let authResults):
-          handleAppleAuth(credential: authResults.credential)
-        case .failure:
-          store.send(.loginError)
+      LinearGradient.blutFadeLeftToRight
+      
+      Assets.Images.loginLogo.swiftUIImage
+        .resizable()
+        .scaledToFit()
+        .frame(width: backWidht, height: backHeight)
+        .padding(.top, Utility.safeTop)
+      
+      VStack(spacing: 10) {
+        if isShowBack {
+          HStack {
+            Button {
+              store.send(.backTapped)
+            } label: {
+              Image(systemName: "chevron.left")
+                .foregroundColor(.black)
+            }
+            .padding(.top, 5)
+            .padding(.trailing, 12)
+          }
+          Spacer()
+        } else {
+          HStack {
+            Spacer()
+            Button {
+              store.send(.aroundTapped)
+            } label: {
+              Text("둘러보기")
+                .font(.bodyS)
+                .foregroundColor(Colors.appWhite.swiftUIColor)
+                .padding(8)
+            }
+            .padding(.trailing, 12)
+            .padding(.top, Utility.safeTop + 5)
+          }
         }
+        
+        Spacer()
+        
+        LoginButtonView(
+          image: Assets.Icons.facebook.swiftUIImage,
+          text: "페이스북으로 계속하기",
+          onTap: {
+            handleFacebookLogin()
+          }, isLight: false
+        )
+        LoginButtonView(
+          image: Assets.Icons.google.swiftUIImage,
+          text: "구글로 계속하기",
+          onTap: {
+            handleGoogleSignInButton()
+          }, isLight: false
+        )
+        LoginButtonView(
+          image: Assets.Icons.apple.swiftUIImage,
+          text: "애플로 계속하기",
+          onTap: {
+            let coordinator = AppleSignInCoordinator()
+            coordinator.onSuccess = { appleIDCredential in
+              handleAppleAuth(appleIDCredential: appleIDCredential)
+            }
+            coordinator.onFailure = {
+              store.send(.loginError)
+            }
+            coordinator.startSignInWithAppleFlow()
+          }, isLight: true
+        )
       }
-      .signInWithAppleButtonStyle(.black)
-      .padding(.vertical, 13)
-      .padding(.horizontal, 95)
-      .frame(height: 44)
+      .frame(width: Utility.screenWidth)
+      .padding(.bottom, Utility.safeBottom + 48)
     }
-    .padding()
-    
+    .ignoresSafeArea()
   }
   
   func handleGoogleSignInButton() {
     guard let clientID = FirebaseApp.app()?.options.clientID else {
-      logs.debug("❌ clientID 가져오기 실패")
       store.send(.loginError)
       return
     }
@@ -73,9 +118,8 @@ struct LoginView: View {
     
     guard let presentingViewController = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first?.rootViewController else {return}
     
-    GIDSignIn.sharedInstance.signIn(withPresenting: presentingViewController) { signInResult, error in
+    GIDSignIn.sharedInstance.signIn(withPresenting: presentingViewController) { signInResult, _ in
       guard let result = signInResult, let token = result.user.idToken?.tokenString else {
-        logs.debug("❌ Google 로그인 오류: \(error?.localizedDescription ?? "")")
         store.send(.loginError)
         return
       }
@@ -87,86 +131,115 @@ struct LoginView: View {
   func handleFacebookLogin() {
     let manager = LoginManager()
     
-    manager.logOut()
-    
     manager.logIn(permissions: ["public_profile", "email"], from: nil) { result, error in
       if let error = error {
-        logs.debug("❌ Facebook 로그인 오류: \(error.localizedDescription)")
+        print(error)
         store.send(.loginError)
         return
       }
       
       guard let result = result, !result.isCancelled else {
-        logs.debug("⛔️ 로그인 취소됨")
         store.send(.loginError)
         return
       }
       
       // ✅ 로그인 성공 시 access token 획득
       if let token = AuthenticationToken.current?.tokenString {
-        print("📌 Facebook token: \(token)")
         store.send(.facebookSignInCompleted(token))
       } else {
-        logs.debug("⚠️ Access token을 가져올 수 없음")
         store.send(.loginError)
       }
     }
   }
   
   func fetchFacebookUserInfo(withToken token: String) {
-    let graphRequest = GraphRequest(graphPath: "me",
-                                    parameters: ["fields": "id, name, email"],
-                                    tokenString: token,
-                                    version: nil,
-                                    httpMethod: .get)
-    
-    print("📌 Facebook token: \(token)")
+    let graphRequest = GraphRequest(
+      graphPath: "me",
+      parameters: ["fields": "id, name, email"],
+      tokenString: token,
+      version: nil,
+      httpMethod: .get
+    )
     graphRequest.start { _, result, error in
-      if let error = error {
-        print("❌ 사용자 정보 요청 실패: \(error.localizedDescription)")
-        return
-      }
-      
-      if let result = result as? [String: Any] {
-        let id = result["id"] as? String ?? "-"
-        let name = result["name"] as? String ?? "-"
-        let email = result["email"] as? String ?? "-"
-        
-        print("📌 Facebook ID: \(id)")
-        print("👤 이름: \(name)")
-        print("📧 이메일: \(email)")
-      }
+      print("\(String(describing: result)) \(String(describing: error))")
+      //      if let error = error {
+      //        return
+      //      }
+      //
+      //      if let result = result as? [String: Any] {
+      //        let id = result["id"] as? String ?? "-"
+      //        let name = result["name"] as? String ?? "-"
+      //        let email = result["email"] as? String ?? "-"
+      //      }
     }
   }
   
-  func handleAppleAuth(credential: ASAuthorizationCredential) {
-    guard let appleIDCredential = credential as? ASAuthorizationAppleIDCredential,
-          let identityTokenData = appleIDCredential.identityToken,
+  func handleAppleAuth(appleIDCredential: ASAuthorizationAppleIDCredential) {
+    guard let identityTokenData = appleIDCredential.identityToken,
           let identityToken = String(data: identityTokenData, encoding: .utf8) else {
-      print("⚠️ Apple ID Credential or token missing")
       store.send(.loginError)
       return
     }
     
-    print("✅ identityToken: \(identityToken)")
-    print("🧑‍💼 userID: \(appleIDCredential.user)")
-    print("📧 email: \(appleIDCredential.email ?? "-")")
-    
     store.send(.appleSignInCompleted(identityToken))
   }
 }
+
+// MARK: - Preview
 
 #Preview {
   LoginView(
     store: Store<LoginFeature.State, LoginFeature.Action>(
       initialState: .init(),
       reducer: { LoginFeature() }
-    )
+    ),
+    isShowBack: false
   )
 }
 
+// MARK: - Helper
+
 extension LoginManager {
-    func isLimitedLogin() -> Bool {
-        return _DomainHandler.sharedInstance().isDomainHandlingEnabled() && !Settings.shared.isAdvertiserTrackingEnabled
+  func isLimitedLogin() -> Bool {
+    return _DomainHandler.sharedInstance().isDomainHandlingEnabled() && !Settings.shared.isAdvertiserTrackingEnabled
+  }
+}
+
+final class AppleSignInCoordinator: NSObject {
+  var onSuccess: ((ASAuthorizationAppleIDCredential) -> Void)?
+  var onFailure: (() -> Void)?
+  
+  func startSignInWithAppleFlow() {
+    let request = ASAuthorizationAppleIDProvider().createRequest()
+    request.requestedScopes = [.email]
+    
+    let controller = ASAuthorizationController(authorizationRequests: [request])
+    controller.delegate = self
+    controller.presentationContextProvider = self
+    controller.performRequests()
+  }
+}
+
+extension AppleSignInCoordinator: ASAuthorizationControllerDelegate {
+  func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+    if let credential = authorization.credential as? ASAuthorizationAppleIDCredential {
+      onSuccess?(credential)
+    } else {
+      onFailure?()
     }
+  }
+  
+  func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+    onFailure?()
+  }
+}
+
+extension AppleSignInCoordinator: ASAuthorizationControllerPresentationContextProviding {
+  func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+    return UIApplication.shared
+      .connectedScenes
+      .compactMap { $0 as? UIWindowScene }
+      .flatMap { $0.windows }
+      .first { $0.isKeyWindow } ?? ASPresentationAnchor()
+  }
 }

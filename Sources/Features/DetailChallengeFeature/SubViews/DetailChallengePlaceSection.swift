@@ -39,6 +39,6 @@ struct DetailChallengePlaceSection: View {
   }
 }
 
-#Preview {
-  DetailChallengePlaceSection(challenge: mockChallenges[0])
-}
+//#Preview {
+//  DetailChallengePlaceSection(challenge: mockChallenges[0])
+//}

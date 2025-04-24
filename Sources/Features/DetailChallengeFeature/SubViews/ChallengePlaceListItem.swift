@@ -112,7 +112,7 @@ struct ChallengePlaceListItem: View {
     .frame(height: 101)
   }
 }
-
-#Preview {
-  ChallengePlaceListItem(place: mockPlace2, onLikeTapped: { })
-}
+//
+//#Preview {
+//  ChallengePlaceListItem(place: mockPlace2, onLikeTapped: { })
+//}

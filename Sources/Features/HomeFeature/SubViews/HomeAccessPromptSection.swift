@@ -82,6 +82,6 @@ struct HomeAccessPromptSection: View {
   }
 }
 
-#Preview {
-  HomeAccessPromptSection(type: .login)
-}
+//#Preview {
+//  HomeAccessPromptSection(type: .login)
+//}

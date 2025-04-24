@@ -17,7 +17,9 @@ import SharedTypes
 
 @Reducer
 public struct LoginFeature {
-  init() {}
+  init() {
+    
+  }
   
   //  @Dependency(\.authClient) var authClient
   @Dependency(\.authService) var authService
@@ -39,6 +41,8 @@ public struct LoginFeature {
     case loginError
     case authLogin(String, LoginType)
     case loginResponse(TaskResult<Auth>)
+    case backTapped
+    case aroundTapped
   }
   
   // MARK: Reducer
@@ -80,6 +84,12 @@ public struct LoginFeature {
         
       case let .loginResponse(.failure(error)):
         print("❌ APP 로그인 실패 \(error)")
+        return .none
+        
+      case .backTapped:
+        return .none
+        
+      case .aroundTapped:
         return .none
       }
     }

@@ -24,6 +24,6 @@ struct HomeThemeChallengeIndicatorView: View {
   }
 }
 
-#Preview {
-  HomeThemeChallengeIndicatorView(currentTab: .historyCulture)
-}
+//#Preview {
+//  HomeThemeChallengeIndicatorView(currentTab: .historyCulture)
+//}

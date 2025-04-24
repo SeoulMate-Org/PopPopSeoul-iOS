@@ -45,6 +45,6 @@ struct DetailChallengeStampSection: View {
   }
 }
 
-#Preview {
-  DetailChallengeStampSection(challenge: mockChallenges[0])
-}
+//#Preview {
+//  DetailChallengeStampSection(challenge: mockChallenges[0])
+//}

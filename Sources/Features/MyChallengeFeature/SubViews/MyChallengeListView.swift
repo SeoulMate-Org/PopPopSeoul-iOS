@@ -52,8 +52,8 @@ struct MyChallengeListView: View {
 
 // MARK: Preview
 
-#Preview {
-  MyChallengeListView(tab: .completed, items: mockChallenges, onLikeTapped: { _ in })
-}
+//#Preview {
+//  MyChallengeListView(tab: .completed, items: mockChallenges, onLikeTapped: { _ in })
+//}
 
 // MARK: - Helper

@@ -32,7 +32,7 @@ public struct AppView: View {
       
     case .login:
       if let loginStore = store.scope(state: \.destination?.login, action: \.destination.login) {
-        LoginView(store: loginStore)
+        LoginView(store: loginStore, isShowBack: false)
       }
     case .none:
       EmptyView()

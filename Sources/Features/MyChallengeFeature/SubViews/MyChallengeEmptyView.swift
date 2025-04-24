@@ -42,9 +42,9 @@ struct MyChallengeEmptyView: View {
 
 // MARK: Preview
 
-#Preview {
-  MyChallengeEmptyView(tab: .interest, onTap: { })
-}
+//#Preview {
+//  MyChallengeEmptyView(tab: .interest, onTap: { })
+//}
 
 // MARK: - Helper
 

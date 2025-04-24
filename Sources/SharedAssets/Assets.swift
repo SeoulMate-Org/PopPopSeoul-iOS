@@ -23,6 +23,7 @@ public typealias AssetImageTypeAlias = ImageAsset.Image
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 public enum Assets {
   public enum Icons {
+    public static let apple = ImageAsset(name: "apple")
     public static let arrowLeftLine = ImageAsset(name: "arrow_left_line")
     public static let arrowRightLine = ImageAsset(name: "arrow_right_line")
     public static let checkLine = ImageAsset(name: "check_line")
@@ -31,6 +32,8 @@ public enum Assets {
     public static let deleteBtnLine = ImageAsset(name: "delete_btn_line")
     public static let embassyLine = ImageAsset(name: "embassy_line")
     public static let emptyLine = ImageAsset(name: "empty_line")
+    public static let facebook = ImageAsset(name: "facebook")
+    public static let google = ImageAsset(name: "google")
     public static let heartFill = ImageAsset(name: "heart_fill")
     public static let heartLine = ImageAsset(name: "heart_line")
     public static let homeFill = ImageAsset(name: "home_fill")
@@ -63,8 +66,8 @@ public enum Assets {
     public static let homeBanner = ImageAsset(name: "home_banner")
     public static let homePromptLocation = ImageAsset(name: "home_prompt_location")
     public static let homePromptLogin = ImageAsset(name: "home_prompt_login")
+    public static let loginLogo = ImageAsset(name: "login_logo")
     public static let placeholderImage = ImageAsset(name: "placeholder_image")
-    public static let splash = ImageAsset(name: "splash")
     public static let splashBack = ImageAsset(name: "splash_back")
     public static let splashBackground = ImageAsset(name: "splash_background")
     public static let splashBottom = ImageAsset(name: "splash_bottom")
