@@ -56,6 +56,8 @@ public enum Assets {
     public static let xLine = ImageAsset(name: "x_line")
   }
   public enum Images {
+    public static let logoDark = ImageAsset(name: "Logo_dark")
+    public static let logoLight = ImageAsset(name: "Logo_light")
     public static let emptyPop = ImageAsset(name: "empty_pop")
     public static let errorImage = ImageAsset(name: "error_image")
     public static let homeBanner = ImageAsset(name: "home_banner")
@@ -63,6 +65,11 @@ public enum Assets {
     public static let homePromptLogin = ImageAsset(name: "home_prompt_login")
     public static let placeholderImage = ImageAsset(name: "placeholder_image")
     public static let splash = ImageAsset(name: "splash")
+    public static let splashBack = ImageAsset(name: "splash_back")
+    public static let splashBackground = ImageAsset(name: "splash_background")
+    public static let splashBottom = ImageAsset(name: "splash_bottom")
+    public static let splashLogo = ImageAsset(name: "splash_logo")
+    public static let splashTop = ImageAsset(name: "splash_top")
     public static let stampInactive = ImageAsset(name: "stamp inactive")
     public static let stampActive = ImageAsset(name: "stamp_active")
   }

@@ -4,7 +4,7 @@ xcassets:
     - Resources/AppKit/Assets/Images.xcassets
     outputs:
       - templateName: swift5
-        output: Sources/DesignSystem/Assets/Assets.swift
+        output: Sources/SharedAssets/Assets.swift
         params:
           enumName: Assets
           publicAccess: true
@@ -13,7 +13,7 @@ xcassets:
     - Resources/AppKit/Assets/Colors.xcassets
     outputs:
       - templateName: swift5
-        output: Sources/DesignSystem/Assets/Colors.swift
+        output: Sources/SharedAssets/Colors.swift
         params:
           enumName: Colors
           publicAccess: true
