@@ -79,6 +79,18 @@ public struct MainTabView: View {
             .edgesIgnoringSafeArea(.bottom)
         )
       }
+//      .overlay(
+//        Group {
+//          if viewStore.showLoginAlert {
+////            LoginAlertView(
+////              title: "로그인이 필요해요",
+////              message: "찜하기 기능은 로그인 후 이용 가능합니다.",
+////              onCancel: { viewStore.send(.loginAlert(.cancelTapped)) },
+////              onLogin: { viewStore.send(.loginAlert(.loginTapped)) }
+////            )
+//          }
+//        }
+//      )
     }
   }
   

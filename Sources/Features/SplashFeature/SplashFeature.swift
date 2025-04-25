@@ -41,7 +41,7 @@ public struct SplashFeature {
     case initializeApp // 앱 초기 상태 세팅
     case didFinishInitLaunch // 스플레시 완료 - 첫 진입
     case didFinish(Bool) // 스플레시 완료
-        
+    
     case showForceUpdateAlert
     
     case alert(PresentationAction<Alert>)
@@ -80,8 +80,8 @@ public struct SplashFeature {
       case .initializeApp:
         AppSettingManager.shared.initLanguage()
         
-        if userDefaultsClient.hasInitLaunch {
-          return .run { send in
+        return .run { send in
+          if await AppSettingManager.shared.hasInitLaunch() {
             var isLogin: Bool = false
             
             do {
@@ -91,36 +91,36 @@ public struct SplashFeature {
             }
             
             await send(.didFinish(isLogin))
-          }
-        } else {
-          return .run { send in
+            
+          } else { 
             await userDefaultsClient.setHasLaunch(true)
             await send(.didFinishInitLaunch)
+            
           }
         }
-        
-      case .showForceUpdateAlert:
-        state.alert = AlertState(
-          title: { TextState("업데이트")
-          }, actions: {
-            ButtonState(action: .goToUpdateTapped) {
-              TextState("업데이트 하러가기")
-            }
-          }, message: {
-            TextState("앱을 사용하려면 업데이트가 필요합니다.")
-          })
-        return .none
-        
-      case .alert(.presented(.goToUpdateTapped)):
-        Utility.moveAppStore()
-        return .none
-        
-      default: return .none
+          
+        case .showForceUpdateAlert:
+          state.alert = AlertState(
+            title: { TextState("업데이트")
+            }, actions: {
+              ButtonState(action: .goToUpdateTapped) {
+                TextState("업데이트 하러가기")
+              }
+            }, message: {
+              TextState("앱을 사용하려면 업데이트가 필요합니다.")
+            })
+          return .none
+          
+        case .alert(.presented(.goToUpdateTapped)):
+          Utility.moveAppStore()
+          return .none
+          
+        default: return .none
+        }
       }
+        .ifLet(\.$alert, action: \.alert)
     }
-    .ifLet(\.$alert, action: \.alert)
   }
-}
-
-// MARK: - Helper
- 
+  
+  // MARK: - Helper
+  

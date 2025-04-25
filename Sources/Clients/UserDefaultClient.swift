@@ -13,7 +13,7 @@ import SharedTypes
 
 @DependencyClient
 public struct UserDefaultsClient {
-  public var boolForKey: @Sendable (UserDefaultsKey) -> Bool = { _ in false}
+  public var boolForKey: @Sendable (UserDefaultsKey) -> Bool = { _ in false }
   public var dataForKey: @Sendable (UserDefaultsKey) -> Data?
   public var doubleForKey: @Sendable (UserDefaultsKey) -> Double = { _ in .leastNonzeroMagnitude }
   public var integerForKey: @Sendable (UserDefaultsKey) -> Int = { _ in -1 }
@@ -39,6 +39,14 @@ public struct UserDefaultsClient {
   
   public var languageKey: String? {
     return stringForKey(.languageKey)
+  }
+  
+  public var isAutoLogin: Bool {
+    boolForKey(.isAutoLogin)
+  }
+  
+  public func setIsAutoLogin(_ value: Bool) async {
+    await setBool(value, .isAutoLogin)
   }
 }
 
@@ -77,4 +85,5 @@ public extension DependencyValues {
 public enum UserDefaultsKey: String {
   case hasInitLaunch
   case languageKey
+  case isAutoLogin
 }

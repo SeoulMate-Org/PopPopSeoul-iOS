@@ -24,6 +24,8 @@ public struct MainTabFeature {
     
     var myChallenge: MyChallengeFeature.State = .init()
     var home: HomeTabFeature.State = .init()
+    
+    var showLoginAlert: Bool = false
   }
   
   // MARK: Actions
@@ -34,6 +36,13 @@ public struct MainTabFeature {
     
     case myChallenge(MyChallengeFeature.Action)
     case home(HomeTabFeature.Action)
+    
+    case loginAlert(LoginAlertAction)
+  }
+  
+  public enum LoginAlertAction {
+    case cancelTapped
+    case loginTapped
   }
   
   // MARK: Reducer
@@ -52,6 +61,16 @@ public struct MainTabFeature {
       case .selectedTabChanged(let tab):
         state.selectedTab = tab
         return .none
+        
+      case .loginAlert(.cancelTapped):
+        state.showLoginAlert = false
+        return .none
+        
+      case .loginAlert(.loginTapped):
+        state.showLoginAlert = false
+        // TODO: - 로그인 화면 이동
+        return .none
+        
       default:
         return .none
       }

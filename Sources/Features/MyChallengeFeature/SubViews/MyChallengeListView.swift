@@ -9,11 +9,13 @@ import SwiftUI
 import Common
 import DesignSystem
 import SharedAssets
+import SharedTypes
+import Models
 
 struct MyChallengeListView: View {
-  let tab: MyChallengeFeature.State.Tab
-  let items: [Challenge]
-  let onLikeTapped: (UUID) -> Void
+  let tab: MyChallengeType
+  let items: [MyChallenge]
+  let onLikeTapped: (Int) -> Void
   
   var body: some View {
     

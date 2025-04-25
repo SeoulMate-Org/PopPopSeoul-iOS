@@ -26,4 +26,3 @@ public struct PostAuthRefreshRequest: Encodable {
     try container.encode(refreshToken, forKey: .refreshToken)
   }
 }
-

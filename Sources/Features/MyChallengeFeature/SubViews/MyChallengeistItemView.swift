@@ -9,15 +9,17 @@ import SwiftUI
 import Common
 import DesignSystem
 import SharedAssets
+import SharedTypes
+import Models
 
 struct MyChallengeistItemView: View {
-  let tab: MyChallengeFeature.State.Tab
-  let challenge: Challenge
+  let tab: MyChallengeType
+  let challenge: MyChallenge
   let onLikeTapped: () -> Void
 
   var body: some View {
     HStack(alignment: .top, spacing: 8) {
-      AsyncImage(url: URL(string: challenge.imageURL)) { image in
+      AsyncImage(url: URL(string: challenge.imageUrl)) { image in
         image
           .resizable()
           .scaledToFill()
@@ -29,10 +31,10 @@ struct MyChallengeistItemView: View {
 
       VStack(alignment: .leading, spacing: 4) {
         if tab == .progress {
-          ProgressBar(progressType: .myChallenge, total: challenge.places.count, current: challenge.completeCount)
+          ProgressBar(progressType: .myChallenge, total: challenge.attractionCount, current: challenge.myStampCount)
         }
         
-        Text(challenge.theme)
+        Text(challenge.challengeThemeName)
           .font(.captionL)
           .foregroundColor(Colors.gray200.swiftUIColor)
           .lineLimit(1)
@@ -44,14 +46,14 @@ struct MyChallengeistItemView: View {
         
         HStack(spacing: 10) {
           
-          if challenge.likeCount > 0 {
+          if challenge.likes > 0 {
             HStack(spacing: 2) {
               Assets.Icons.heartFill.swiftUIImage
                 .resizable()
                 .foregroundColor(Colors.gray100.swiftUIColor)
                 .frame(width: 16, height: 16)
 
-              Text("\(challenge.likeCount)")
+              Text("\(challenge.likes)")
                 .font(.captionL)
                 .foregroundColor(Colors.gray300.swiftUIColor)
             }
@@ -76,7 +78,7 @@ struct MyChallengeistItemView: View {
               .foregroundColor(Colors.gray100.swiftUIColor)
               .frame(width: 16, height: 16)
 
-            Text("\(challenge.places.count)")
+            Text("\(challenge.attractionCount)")
               .font(.captionL)
               .foregroundColor(Colors.gray300.swiftUIColor)
           }

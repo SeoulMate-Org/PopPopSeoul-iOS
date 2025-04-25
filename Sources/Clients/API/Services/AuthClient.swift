@@ -7,6 +7,7 @@
 
 import ComposableArchitecture
 import Models
+import SharedTypes
 
 public struct AuthClient {
   public var autoLogin: @Sendable () async throws -> Bool
@@ -16,14 +17,17 @@ public struct AuthClient {
 
 extension AuthClient: DependencyKey {
   public static var liveValue: AuthClient {
-    @Dependency(\.authService) var authService
+    @Dependency(\.apiClient) var apiClient
     
     return Self(
       autoLogin: {
         if let refreshToken = TokenManager.shared.refreshToken {
           let body = PostAuthRefreshRequest(refreshToken: refreshToken)
           
-          let result = try await authService.postAuthRefresh(body)
+          let request: Request = .post(.authRefresh, body: try? body.encoded())
+          let (data, _) = try await apiClient.send(request)
+                    
+          let result: Token = try data.decoded()
           
           await TokenManager.shared.setAccessToken(result.accessToken)
           await TokenManager.shared.setRefreshToken(result.refreshToken)
@@ -34,9 +38,12 @@ extension AuthClient: DependencyKey {
         }
       },
       login: { provider in
-        let body = PostAuthLoginRequest(token: provider.token, loginType: provider.loginType, languageCode: AppSettingManager.shared.language.languageCode)
+        let body = PostAuthLoginRequest(token: provider.token, loginType: provider.loginType, languageCode: AppSettingManager.shared.language.apiCode)
         
-        let result = try await authService.postAuthLogin(body)
+        let request: Request = .post(.authLogin, body: try? body.encoded())
+        let (data, _) = try await apiClient.send(request)
+        
+        let result: Auth = try data.decoded()
         
         await TokenManager.shared.setAccessToken(result.accessToken)
         await TokenManager.shared.setRefreshToken(result.refreshToken)
@@ -57,12 +64,8 @@ public extension DependencyValues {
   }
 }
 
-public enum AuthProvider: Equatable {
-  case apple(identityToken: String)
-  case google(idToken: String)
-  case facebook(token: String)
-  
-  public var loginType: String {
+extension AuthProvider {
+  var loginType: String {
     switch self {
     case .apple: return "APPLE"
     case .google: return "GOOGLE"
@@ -70,7 +73,7 @@ public enum AuthProvider: Equatable {
     }
   }
   
-  public var token: String {
+  var token: String {
     switch self {
     case let .apple(token): return token
     case let .google(token): return token

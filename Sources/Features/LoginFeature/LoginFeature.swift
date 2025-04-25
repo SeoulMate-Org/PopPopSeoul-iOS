@@ -22,6 +22,7 @@ public struct LoginFeature {
   }
   
   @Dependency(\.authClient) var authClient
+  @Dependency(\.userDefaultsClient) var userDefaultsClient
   
   // MARK: State
   

@@ -8,13 +8,6 @@
 import Foundation
 
 public enum AppLanguage: String, Equatable {
-  case ko
-  case en
-  
-  public var languageCode: String {
-    switch self {
-    case .ko: return "KOR"
-    case .en: return "ENG"
-    }
-  }
+  case kor
+  case eng
 }

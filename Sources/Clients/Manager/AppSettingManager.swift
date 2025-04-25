@@ -13,6 +13,7 @@ public class AppSettingManager {
   public static let shared = AppSettingManager()
   
   @Dependency(\.userDefaultsClient) private var userDefaultsClient
+  @Dependency(\.authClient) private var authClient
   
   // MARK: - In-Memory Cache
   private var _language: AppLanguage?
@@ -31,9 +32,9 @@ public class AppSettingManager {
         } else {
           let systemLang = Locale.preferredLanguages.first ?? "en"
           if systemLang.starts(with: "ko") {
-            return .ko
+            return .kor
           } else {
-            return .en
+            return .eng
           }
         }
       }
@@ -47,9 +48,9 @@ public class AppSettingManager {
     } else {
       let systemLang = Locale.preferredLanguages.first ?? "en"
       if systemLang.starts(with: "ko") {
-        _language = .ko
+        _language = .kor
       } else {
-        _language = .en
+        _language = .eng
       }
     }
   }
@@ -58,5 +59,22 @@ public class AppSettingManager {
     _language = language
     await userDefaultsClient.setLanguage(language)
   }
+  
+  public func hasInitLaunch() async -> Bool {
+    if userDefaultsClient.hasInitLaunch {
+      return true
+    } else {
+      await TokenManager.shared.clearAll()
+      return false
+    }
+  }
 }
 
+extension AppLanguage {
+  var apiCode: String {
+    switch self {
+    case .kor: return "KOR"
+    case .eng: return "ENG"
+    }
+  }
+}

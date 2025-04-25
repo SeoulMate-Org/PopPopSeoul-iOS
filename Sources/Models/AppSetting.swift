@@ -9,7 +9,7 @@ import Foundation
 import SharedTypes
 
 public struct AppSetting: Equatable {
-  var language: AppLanguage = .en
+  var language: AppLanguage = .eng
   
   public init(language: AppLanguage) {
     self.language = language

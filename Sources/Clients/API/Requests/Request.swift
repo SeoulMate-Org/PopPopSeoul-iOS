@@ -51,6 +51,10 @@ public struct Request: Sendable {
     request.httpBody = body
 
     request.cachePolicy = cachePolicy
+    
+    if let token = TokenManager.shared.accessToken {
+      request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+    }
     return request
   }
 }

@@ -395,7 +395,6 @@
 		9D2C14A131E075E873E262D7 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62D1DA8ED790E2822D0D9E60 /* Pretendard-SemiBold.otf */; };
 		9D782B7496616D286069D79D /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62D1DA8ED790E2822D0D9E60 /* Pretendard-SemiBold.otf */; };
 		9E1D23C37EF9A6A03F985B28 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE45769C226498DF4026D488 /* Images.xcassets */; };
-		9E86C9D9EADAD6DC707B07DF /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD0E961787B259728E3C1C9 /* AuthService.swift */; };
 		9E9AD62C325942430F4CF495 /* TuistFonts+DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1262B3370C1F699E614A3282 /* TuistFonts+DesignSystem.swift */; };
 		9EEE516E077769ACBCA0F3E5 /* BottomSheet_BottomSheet.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 23FF6506217F3B29FA216666 /* BottomSheet_BottomSheet.bundle */; };
 		9EF3FF64FB7AF55A46002F92 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE45769C226498DF4026D488 /* Images.xcassets */; };
@@ -565,6 +564,11 @@
 		E91EFE77BFEE340B43194D47 /* Facebook_FacebookCore.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C92C2C3D8279026F9632600D /* Facebook_FacebookCore.bundle */; };
 		E9DE71C84C88288412A32A64 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8609EF56D0937265092D5D36 /* Pretendard-ExtraLight.otf */; };
 		EAE62223229FB6E39F76669F /* CasePathsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CF7412324C02D1745F0E0D /* CasePathsCore.framework */; };
+		EAE7F2F12DBB84A2002B3C9E /* MyChallengeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7F2F02DBB84A2002B3C9E /* MyChallengeType.swift */; };
+		EAE7F2FD2DBB8922002B3C9E /* GetChallengeMyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7F2FC2DBB8922002B3C9E /* GetChallengeMyRequest.swift */; };
+		EAE7F3002DBB8C81002B3C9E /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7F2FF2DBB8C81002B3C9E /* AuthProvider.swift */; };
+		EAE7F3032DBB8D43002B3C9E /* MyChallengeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7F3022DBB8D43002B3C9E /* MyChallengeClient.swift */; };
+		EAE7F3062DBB97AD002B3C9E /* MyChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7F2F52DBB8856002B3C9E /* MyChallenge.swift */; };
 		EB1B1D606C9519443C8093A6 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E58A56242DD34BBF412FCA4 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle */; };
 		EB2C1DD848ACAAE2D607CA78 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F75DBDEF31E5F47ECCF65C8 /* UIKit.framework */; };
 		EB577A8062D14CFE4FB5207F /* GoogleSignInSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E5E0505F3396FBC9194F27 /* GoogleSignInSwift.framework */; };
@@ -1307,7 +1311,6 @@
 		9A46294BCEAF8032F4DC91BC /* Firebase_FirebaseCore.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Firebase_FirebaseCore.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BCD91FDA3831C38BA0CEA23 /* swift-sharing_Sharing.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-sharing_Sharing.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC2597C20035CADBB59FBB4 /* TuistBundle+PopPopSeoulDev.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+PopPopSeoulDev.swift"; sourceTree = "<group>"; };
-		9DD0E961787B259728E3C1C9 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		9FB1E12A2FECBF861558A97F /* Facebook_FacebookAEM.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Facebook_FacebookAEM.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		A040845D9AD803CB2FE2243D /* Perception.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Perception.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1812A1D0AAC69CDC1AFC682 /* AppFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeature.swift; sourceTree = "<group>"; };
@@ -1396,6 +1399,11 @@
 		E85D8F1AB9B0F2707E456267 /* ComposableArchitecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ComposableArchitecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA14930892816AFA4A88950C /* GoogleUtilities_Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleUtilities_Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA26B67DE986D8D090F59956 /* CombineSchedulers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CombineSchedulers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAE7F2F02DBB84A2002B3C9E /* MyChallengeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChallengeType.swift; sourceTree = "<group>"; };
+		EAE7F2F52DBB8856002B3C9E /* MyChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChallenge.swift; sourceTree = "<group>"; };
+		EAE7F2FC2DBB8922002B3C9E /* GetChallengeMyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeMyRequest.swift; sourceTree = "<group>"; };
+		EAE7F2FF2DBB8C81002B3C9E /* AuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
+		EAE7F3022DBB8D43002B3C9E /* MyChallengeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChallengeClient.swift; sourceTree = "<group>"; };
 		EC4AFF88EA6DCED6098DE437 /* Clients-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Clients-Info.plist"; sourceTree = "<group>"; };
 		EDC7634792471BCEEC7B75AF /* FirebaseInstallations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FirebaseInstallations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD27B7889EDC29093865516 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
@@ -1800,6 +1808,8 @@
 			children = (
 				639706D78979DE707B493EC7 /* AppLanguage.swift */,
 				13E321B243FD5013A5F3A377 /* ChallengeTheme.swift */,
+				EAE7F2F02DBB84A2002B3C9E /* MyChallengeType.swift */,
+				EAE7F2FF2DBB8C81002B3C9E /* AuthProvider.swift */,
 			);
 			path = SharedTypes;
 			sourceTree = "<group>";
@@ -1914,6 +1924,7 @@
 		593A58E2E91B021A4AF3F884 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				EAE7F2F82DBB885C002B3C9E /* Challenge */,
 				E8BF3E18D9330646FC4B140B /* Auth */,
 			);
 			path = API;
@@ -2226,7 +2237,6 @@
 				84115C74411B41B3AF4DAC7C /* API */,
 				BC17428158DD836BD0D40BBF /* Manager */,
 				E1C2DFE92F74F7CEEECA30AE /* AppUpdateClient.swift */,
-				904CF1478E7A709578DD16A5 /* AuthClient.swift */,
 				83ABE631EB8E51E8B50AC0E5 /* KeychainClient.swift */,
 				A7C4661154860CE88FEFF6B5 /* UserDefaultClient.swift */,
 			);
@@ -2289,7 +2299,8 @@
 		C5DF212DE5F23830B14EB8DF /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				9DD0E961787B259728E3C1C9 /* AuthService.swift */,
+				904CF1478E7A709578DD16A5 /* AuthClient.swift */,
+				EAE7F3022DBB8D43002B3C9E /* MyChallengeClient.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -2298,9 +2309,10 @@
 			isa = PBXGroup;
 			children = (
 				905204ABDC93BB334A399D54 /* HTTPMethod.swift */,
+				36D9141EE48B3D34377D5F9C /* Request.swift */,
 				DE192FE54B098C9E1557C74A /* PostAuthLoginRequest.swift */,
 				38A6E84E0A71C9B7555C325D /* PostAuthRefreshRequest.swift */,
-				36D9141EE48B3D34377D5F9C /* Request.swift */,
+				EAE7F2FC2DBB8922002B3C9E /* GetChallengeMyRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -2421,6 +2433,14 @@
 				1C2C99A85F1CB627CC840BEC /* Mocks.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		EAE7F2F82DBB885C002B3C9E /* Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				EAE7F2F52DBB8856002B3C9E /* MyChallenge.swift */,
+			);
+			path = Challenge;
 			sourceTree = "<group>";
 		};
 		ED99C4FAD8250D7F8D110385 /* Style */ = {
@@ -3523,6 +3543,7 @@
 				323A6B486B2EE964D6713B21 /* Auth.swift in Sources */,
 				2AF58EFF798811C457137D04 /* Token.swift in Sources */,
 				E06CD4C9C413FFA49C7DD284 /* AppSetting.swift in Sources */,
+				EAE7F3062DBB97AD002B3C9E /* MyChallenge.swift in Sources */,
 				734EA3584D2BAFEA15E2A4D8 /* Coordinate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3599,6 +3620,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAE7F2FD2DBB8922002B3C9E /* GetChallengeMyRequest.swift in Sources */,
 				24D151BBFA2E0E11FF4626BC /* TuistAssets+Clients.swift in Sources */,
 				061DB2D0949F911138215856 /* TuistBundle+Clients.swift in Sources */,
 				C962AC6CD2A805482F874A87 /* TuistFonts+Clients.swift in Sources */,
@@ -3612,9 +3634,9 @@
 				E2316F92C0689B90B96D4F89 /* PostAuthLoginRequest.swift in Sources */,
 				B19B6637CEABF971A5EFAEA3 /* PostAuthRefreshRequest.swift in Sources */,
 				01C19861DCEBA9F2E0BB289D /* Request.swift in Sources */,
-				9E86C9D9EADAD6DC707B07DF /* AuthService.swift in Sources */,
 				5F94B7D05BD3D23DFBEAC88E /* AppUpdateClient.swift in Sources */,
 				D1848FDA9EB0F5A0EEDFD959 /* AuthClient.swift in Sources */,
+				EAE7F3032DBB8D43002B3C9E /* MyChallengeClient.swift in Sources */,
 				8619384045B4AE561C8C24DD /* KeychainClient.swift in Sources */,
 				074587511C123461DCD5567D /* AppSettingManager.swift in Sources */,
 				C81EFB1418669107B90BD912 /* TokenManager.swift in Sources */,
@@ -3710,7 +3732,9 @@
 			files = (
 				F2DC4982507A6BD9BA6502D5 /* TuistAssets+SharedTypes.swift in Sources */,
 				103FD5BD536C1A9D3F91DA5A /* TuistBundle+SharedTypes.swift in Sources */,
+				EAE7F3002DBB8C81002B3C9E /* AuthProvider.swift in Sources */,
 				620203721EABAE489BE39CD1 /* TuistFonts+SharedTypes.swift in Sources */,
+				EAE7F2F12DBB84A2002B3C9E /* MyChallengeType.swift in Sources */,
 				25EFFC1526C0C16E8D691D85 /* TuistPlists+SharedTypes.swift in Sources */,
 				711775C017C03FFA2336957E /* AppLanguage.swift in Sources */,
 				155E470CE309A58F055F17EA /* ChallengeTheme.swift in Sources */,

@@ -9,9 +9,10 @@ import SwiftUI
 import Common
 import DesignSystem
 import SharedAssets
+import SharedTypes
 
 struct MyChallengeEmptyView: View {
-  let tab: MyChallengeFeature.State.Tab
+  let tab: MyChallengeType
   let image: Image = Assets.Images.emptyPop.swiftUIImage
   let onTap: () -> Void
 
@@ -48,7 +49,7 @@ struct MyChallengeEmptyView: View {
 
 // MARK: - Helper
 
-extension MyChallengeFeature.State.Tab {
+extension MyChallengeType {
   var emptyTitle: String {
     switch self {
     case .interest: return String(sLocalization: .mychallengeInterestEmptyTitle)

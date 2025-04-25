@@ -8,27 +8,27 @@
 import Foundation
 import ComposableArchitecture
 import Common
+import SharedTypes
+import Clients
+import Models
 
 @Reducer
 public struct MyChallengeFeature {
   public init() {}
   
+  @Dependency(\.myChallengeClient) var myChallengeClient
+  
   // MARK: State
-
+  
   @ObservableState
   public struct State: Equatable {
-    public var tab: Tab = .interest
-
-    public enum Tab: CaseIterable {
-      case interest
-      case progress
-      case completed
-    }
+    var selectedTab: MyChallengeType = .interest
     
-    var interestList: [Challenge] = []
-    var progressList: [Challenge] = []
-    var completedList: [Challenge] = []
-    var recentlyDeleted: Challenge? = nil
+    var interestList: [MyChallenge] = []
+    var progressList: [MyChallenge] = []
+    var completedList: [MyChallenge] = []
+    
+    var recentlyDeleted: MyChallenge? = nil
     var showUndoToast: Bool = false
   }
   
@@ -36,14 +36,18 @@ public struct MyChallengeFeature {
   
   @CasePathable
   public enum Action: Equatable {
-    case tabChanged(State.Tab)
-    case fetchList // 최초 또는 새로고침 시
-    case setInterestList([Challenge])
+    case onApear
+    case tabChanged(MyChallengeType)
+    case fetchList(MyChallengeType)
+    case fetchListError
+    
     case undoLike
     case dismissToast
-    case tappedInterest(id: UUID)
-    case setProgressList([Challenge])
-    case setCompletedList([Challenge])
+    case tappedInterest(id: Int)
+    
+    case setInterestList([MyChallenge])
+    case setProgressList([MyChallenge])
+    case setCompletedList([MyChallenge])
   }
   
   // MARK: Reducer
@@ -51,19 +55,30 @@ public struct MyChallengeFeature {
   public var body: some Reducer<State, Action> {
     Reduce { state, action in
       switch action {
+      case .onApear:
+        return .send(.fetchList(state.selectedTab))
+        
       case .tabChanged(let tab):
-        state.tab = tab
-        return .none
-
-      case .fetchList:
-        // 실제 API 연동 부분 또는 더미 데이터 삽입
+        state.selectedTab = tab
+        return .send(.fetchList(tab))
+        
+      case .fetchList(let tab):
         return .run { send in
-          async let interest: () = send(.setInterestList(mockChallenges))
-          async let progress: () = send(.setProgressList(mockChallenges))
-          async let completed: () = send(.setCompletedList(mockChallenges))
-          _ = await (interest, progress, completed)
+          switch tab {
+          case .interest:
+            do {
+              let list = try await myChallengeClient.fetchList(tab)
+              await send(.setInterestList(list))
+            } catch {
+              await send(.fetchListError)
+            }
+          case .progress:
+            await send(.setProgressList([]))
+          case .completed:
+            await send(.setCompletedList([]))
+          }
         }
-
+        
       case .setInterestList(let list):
         state.interestList = list
         return .none
@@ -78,7 +93,7 @@ public struct MyChallengeFeature {
           }
         }
         return .none
-         
+        
       case .undoLike:
         if let challenge = state.recentlyDeleted {
           state.interestList.insert(challenge, at: 0)
@@ -91,13 +106,17 @@ public struct MyChallengeFeature {
         state.recentlyDeleted = nil
         state.showUndoToast = false
         return .none
-
+        
       case .setProgressList(let list):
         state.progressList = list
         return .none
-
+        
       case .setCompletedList(let list):
         state.completedList = list
+        return .none
+        
+      case .fetchListError:
+        // TODO: - ERROR
         return .none
       }
     }
@@ -105,35 +124,3 @@ public struct MyChallengeFeature {
 }
 
 // MARK: - Helper
-//@Reducer
-//public struct AppFeature {
-//  public init() {}
-//  
-//  // MARK: State
-//  
-//  @ObservableState
-//  public struct State {
-//    var path = StackState<Path.State>()
-//  }
-//  
-//  // MARK: Actions
-//  
-//  public enum Action {
-//    case path(StackActionOf<Path>)
-//  }
-//  
-//  @Reducer
-//  public enum Path {
-//    case splash(SplashFeature)
-//  }
-//  
-//  // MARK: Reducer
-//  
-//  var body: some ReducerOf<Self> {
-//    Reduce { state, action in
-//      // TODO: -
-//      return .none
-//    }
-//    .forEach(\.path, action: \.path)
-//  }
-//}
