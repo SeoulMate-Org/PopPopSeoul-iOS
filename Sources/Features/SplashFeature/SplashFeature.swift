@@ -9,13 +9,16 @@ import Foundation
 import ComposableArchitecture
 import Common
 import Clients
+import Models
 
 @Reducer
 public struct SplashFeature {
   public init() {}
   
-  @Dependency(\.appUpdateClient) var appUpdateClient
-  @Dependency(\.continuousClock) var clock
+  @Dependency(\.appUpdateClient) private var appUpdateClient
+  @Dependency(\.userDefaultsClient) private var userDefaultsClient
+  @Dependency(\.authClient) private var authClient
+  @Dependency(\.continuousClock) private var clock
   
   // MARK: - State
   
@@ -31,11 +34,14 @@ public struct SplashFeature {
   @CasePathable
   public enum Action: Equatable {
     case onAppear
-    case checkRouting
-    case didFinishRoutingCheck
-    case checkAppUpdate
-    case didFinish
+    case checkRouting // 루팅 체크
+    case didFinishRoutingCheck // 루팅 체크 완료
+    case checkAppUpdate // 업데이트 체크
     
+    case initializeApp // 앱 초기 상태 세팅
+    case didFinishInitLaunch // 스플레시 완료 - 첫 진입
+    case didFinish(Bool) // 스플레시 완료
+        
     case showForceUpdateAlert
     
     case alert(PresentationAction<Alert>)
@@ -67,11 +73,32 @@ public struct SplashFeature {
           if updateType == .forceUpdate {
             await send(.showForceUpdateAlert)
           } else {
-            try? await clock.sleep(for: .seconds(1))
-            await send(.didFinish)
+            await send(.initializeApp)
           }
         }
-      
+        
+      case .initializeApp:
+        AppSettingManager.shared.initLanguage()
+        
+        if userDefaultsClient.hasInitLaunch {
+          return .run { send in
+            var isLogin: Bool = false
+            
+            do {
+              isLogin = try await authClient.autoLogin()
+            } catch {
+              isLogin = false
+            }
+            
+            await send(.didFinish(isLogin))
+          }
+        } else {
+          return .run { send in
+            await userDefaultsClient.setHasLaunch(true)
+            await send(.didFinishInitLaunch)
+          }
+        }
+        
       case .showForceUpdateAlert:
         state.alert = AlertState(
           title: { TextState("업데이트")
@@ -84,12 +111,8 @@ public struct SplashFeature {
           })
         return .none
         
-      case .didFinish:
-        return .none
-        
       case .alert(.presented(.goToUpdateTapped)):
-        // TODO: - 👉 앱스토어 이동 처리
-        print("앱스토어로 이동")
+        Utility.moveAppStore()
         return .none
         
       default: return .none
@@ -100,3 +123,4 @@ public struct SplashFeature {
 }
 
 // MARK: - Helper
+ 

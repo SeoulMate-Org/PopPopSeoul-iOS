@@ -14,4 +14,6 @@ public enum NetworkRequestError: LocalizedError, Equatable {
   case decodingError
   case urlSessionFailed(_ error: URLError)
   case unknownError
+  
+  // 추가  
 }

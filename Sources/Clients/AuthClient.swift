@@ -6,33 +6,75 @@
 //
 
 import ComposableArchitecture
+import Models
 
-struct AuthClient {
-  var signInWithGoogle: () async throws -> String   // 구글 토큰
-  var signInWithFacebook: () async throws -> String // 페이스북 토큰
-  var signInWithApple: () async throws -> String    // 애플 토큰
+public struct AuthClient {
+  public var autoLogin: @Sendable () async throws -> Bool
+  public var login: @Sendable (_ provider: AuthProvider) async throws -> Auth
+  public var logout: @Sendable () async throws -> Void
 }
 
 extension AuthClient: DependencyKey {
-  static let liveValue = AuthClient(
-    signInWithGoogle: {
-      // ✅ Google SDK 연동 (GIDSignIn.sharedInstance.signIn)
-      return "google_access_token"
-    },
-    signInWithFacebook: {
-      // ✅ Facebook SDK 연동 (LoginManager().logIn)
-      return "facebook_access_token"
-    },
-    signInWithApple: {
-      // ✅ Apple Sign-In 연동 (ASAuthorizationController)
-      return "apple_identity_token"
-    }
-  )
+  public static var liveValue: AuthClient {
+    @Dependency(\.authService) var authService
+    
+    return Self(
+      autoLogin: {
+        if let refreshToken = TokenManager.shared.refreshToken {
+          let body = PostAuthRefreshRequest(refreshToken: refreshToken)
+          
+          let result = try await authService.postAuthRefresh(body)
+          
+          await TokenManager.shared.setAccessToken(result.accessToken)
+          await TokenManager.shared.setRefreshToken(result.refreshToken)
+          
+          return true
+        } else {
+          return false
+        }
+      },
+      login: { provider in
+        let body = PostAuthLoginRequest(token: provider.token, loginType: provider.loginType, languageCode: AppSettingManager.shared.language.languageCode)
+        
+        let result = try await authService.postAuthLogin(body)
+        
+        await TokenManager.shared.setAccessToken(result.accessToken)
+        await TokenManager.shared.setRefreshToken(result.refreshToken)
+        
+        return result
+      },
+      logout: {
+        await TokenManager.shared.clearAll()
+      }
+    )
+  }
 }
 
-extension DependencyValues {
+public extension DependencyValues {
   var authClient: AuthClient {
     get { self[AuthClient.self] }
     set { self[AuthClient.self] = newValue }
+  }
+}
+
+public enum AuthProvider: Equatable {
+  case apple(identityToken: String)
+  case google(idToken: String)
+  case facebook(token: String)
+  
+  public var loginType: String {
+    switch self {
+    case .apple: return "APPLE"
+    case .google: return "GOOGLE"
+    case .facebook: return "FACEBOOK"
+    }
+  }
+  
+  public var token: String {
+    switch self {
+    case let .apple(token): return token
+    case let .google(token): return token
+    case let .facebook(token): return token
+    }
   }
 }

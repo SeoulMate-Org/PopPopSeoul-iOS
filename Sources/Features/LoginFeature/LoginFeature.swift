@@ -1,4 +1,3 @@
-
 //  LoginFeature.swift
 //  PopPopSeoulKit
 //
@@ -14,6 +13,7 @@ import GoogleSignIn
 import FirebaseCore
 import Models
 import SharedTypes
+import Common
 
 @Reducer
 public struct LoginFeature {
@@ -21,8 +21,7 @@ public struct LoginFeature {
     
   }
   
-  //  @Dependency(\.authClient) var authClient
-  @Dependency(\.authService) var authService
+  @Dependency(\.authClient) var authClient
   
   // MARK: State
   
@@ -39,8 +38,8 @@ public struct LoginFeature {
     case facebookSignInCompleted(String)
     case appleSignInCompleted(String)
     case loginError
-    case authLogin(String, LoginType)
-    case loginResponse(TaskResult<Auth>)
+    case authLogin(AuthProvider)
+    case successLogin(isInit: Bool)
     case backTapped
     case aroundTapped
   }
@@ -51,45 +50,35 @@ public struct LoginFeature {
     Reduce { state, action in
       switch action {
       case let .googleSignInCompleted(token):
-        print("로그인 성공 \(token)")
-        return .send(.authLogin(token, .google))
+        return .send(.authLogin(.google(idToken: token)))
         
       case let .facebookSignInCompleted(token):
-        print("로그인 성공 \(token)")
-        return .send(.authLogin(token, .facebook))
+        return .send(.authLogin(.facebook(token: token)))
         
       case let .appleSignInCompleted(token):
-        print("로그인 성공 \(token)")
-        return .send(.authLogin(token, .apple))
+        return .send(.authLogin(.apple(identityToken: token)))
         
       case .loginError:
-        print("❌ 로그인 실패")
+        logger.error("로그인 실패")
         return .none
         
-      case let .authLogin(token, loginType):
-        let body = AuthLoginBody(token: token, loginType: loginType.rawValue, languageCode: "KOR")
+      case let .authLogin(provider):
         return .run { send in
-          await send(
-            .loginResponse(
-              TaskResult {
-                try await authService.postAuthLogin(body)
-              }
-            )
-          )
+          do {
+            let auth = try await authClient.login(provider)
+            await send(.successLogin(isInit: auth.isNewUser))
+          } catch {
+            await send(.loginError)
+          }
         }
-        
-      case let .loginResponse(.success(result)):
-        print("Login Response \(result)")
-        return .none
-        
-      case let .loginResponse(.failure(error)):
-        print("❌ APP 로그인 실패 \(error)")
-        return .none
         
       case .backTapped:
         return .none
         
       case .aroundTapped:
+        return .none
+        
+      case .successLogin:
         return .none
       }
     }

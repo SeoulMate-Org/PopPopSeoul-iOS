@@ -222,7 +222,6 @@ let project = Project(
                 "Resources/AppKit/**"
             ]),
             dependencies: [
-                .external(name: "Logging"),
                 .target(name: "SharedAssets"),
                 .target(name: "SharedTypes"),
             ]
@@ -257,7 +256,6 @@ let project = Project(
                 "Resources/AppKit/**"
             ]),
             dependencies: [
-                .external(name: "Logging"),
                 .target(name: "SharedTypes"),
                 .target(name: "SharedAssets"),
                 .target(name: "Common"),
@@ -279,7 +277,6 @@ let project = Project(
                 .external(name: "ComposableCoreLocation"),
                 .external(name: "FirebaseRemoteConfig"),
                 .external(name: "FirebaseAnalytics"),
-                .external(name: "Logging"),
                 .target(name: "Common"),
                 .target(name: "Models"),
             ]
@@ -300,7 +297,6 @@ let project = Project(
                 .external(name: "ComposableArchitecture"),
                 .external(name: "ComposableCoreLocation"),
                 .external(name: "BottomSheet"),
-                .external(name: "Logging"),
                 .external(name: "NMapsMap"),
                 .external(name: "FacebookLogin"),
                 .external(name: "GoogleSignIn"),

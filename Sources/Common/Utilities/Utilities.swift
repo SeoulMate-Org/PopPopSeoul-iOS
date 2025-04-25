@@ -18,4 +18,11 @@ public class Utility {
   public static let safeTop = window?.safeAreaInsets.top ?? 0
   public static let safeBottom = window?.safeAreaInsets.bottom ?? 0
   
+  public static func moveAppStore() {
+      if let appStoreURL = URL(string: "https://apps.apple.com/app/\(Constants.appStoreId)") {
+          DispatchQueue.main.async {
+              UIApplication.shared.open(appStoreURL, options: [:], completionHandler: nil)
+          }
+      }
+  }
 }

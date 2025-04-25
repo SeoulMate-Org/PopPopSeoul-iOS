@@ -1,5 +1,7 @@
 import ComposableArchitecture
 import Clients
+import Models
+import SharedTypes
 
 @Reducer
 public struct AppFeature {
@@ -19,6 +21,8 @@ public struct AppFeature {
   
   @ObservableState
   public struct State: Equatable {
+    var isLogin: Bool?
+    
     // Navigation
     @Presents public var destination: Destination.State?
     
@@ -40,14 +44,13 @@ public struct AppFeature {
   public var body: some ReducerOf<Self> {
     Reduce { state, action in
       switch action {
-      case .destination(.presented(.splash(.didFinish))):
-        if userDefaultsClient.hasSeenOnboarding {
-          // TODO: AutoLogin Check
-          state.destination = .mainTab(.init())
-        } else {
-          // 온보딩 체크
-          state.destination = .onboarding(.init())
-        }
+      case .destination(.presented(.splash(.didFinishInitLaunch))):
+        state.destination = .onboarding(.init())
+        return .none
+        
+      case .destination(.presented(.splash(.didFinish(let isLogin)))):
+        state.isLogin = isLogin
+        state.destination = .mainTab(.init())
         return .none
         
       case .destination(.presented(.onboarding(.didFinish))):
@@ -56,6 +59,15 @@ public struct AppFeature {
         
       case .destination(.presented(.login(.aroundTapped))):
         state.destination = .mainTab(.init())
+        return .none
+        
+      case .destination(.presented(.login(.successLogin(let isInit)))):
+        if isInit {
+          // TODO: - 회원 가입 축하 화면
+          state.destination = .mainTab(.init())
+        } else {
+          state.destination = .mainTab(.init())
+        }
         return .none
         
       case .destination:

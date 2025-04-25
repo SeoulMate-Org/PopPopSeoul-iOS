@@ -1,5 +1,6 @@
 import ComposableArchitecture
 import Foundation
+import Common
 
 /// A Client to dispatch network calls
 @DependencyClient
@@ -14,43 +15,72 @@ public struct APIClient {
 extension APIClient: DependencyKey {
   public static var liveValue: APIClient {
     @Dependency(\.networkDispatcher) var networkDispatcher
-
+    
     return Self { request in
       do {
         guard let urlRequest = try? request.makeRequest() else {
-          throw NetworkRequestError.badRequest
+          print("❌ APIClient 오류 발생 invalidRequest")
+          throw NetworkRequestError.invalidRequest
         }
         
-        // ✅ 요청 로그 출력
-        print("============================================================")
-        print("📤 [Request]")
-        print("🔹 URL: \(urlRequest.url?.absoluteString ?? "")")
-        print("🔹 Method: \(urlRequest.httpMethod ?? "")")
-        print("🔹 Headers: \(urlRequest.allHTTPHeaderFields ?? [:])")
-        if let body = urlRequest.httpBody,
-           let bodyString = String(data: body, encoding: .utf8) {
-          print("🔹 Body: \(bodyString)")
-        }
-        print("============================================================")
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(abbreviation: "UTC") // UTC 시간대 설정
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
-        // ✅ 요청 보내기
+        let utcTimeString = dateFormatter.string(from: Date())
+        
+        let headers = urlRequest.allHTTPHeaderFields ?? [:]
+        let method = urlRequest.httpMethod ?? "nil"
+        let urlStr = urlRequest.url?.absoluteString ?? "nil"
+        if let body = urlRequest.httpBody {
+          let bodyString = String(bytes: body, encoding: .utf8) ?? "nil"
+          let message: String = """
+                        
+            ================ HTTP REQUEST ================
+            url: \(urlStr) - UTC \(utcTimeString)
+            method: \(method)
+            url: \(urlStr)
+            headers: \(headers)
+            body: \(bodyString)
+            ==============================================
+            
+            """
+          logger.debug(message)
+        } else {
+          let message: String = """
+                        
+            ================ HTTP REQUEST ================
+            url: \(urlStr) - UTC \(utcTimeString)
+            method: \(method)
+            headers: \(headers)
+            body: nil
+            ==============================================
+            
+            """
+          logger.debug(message)
+        }
+        
         let (data, response) = try await networkDispatcher.dispatch(urlRequest)
         
-        // ✅ 응답 로그 출력
-        print("============================================================")
-        print("📥 [Response]")
+        // MARK: - 여기서 오류 발생
+        var message: String = """
+                        
+            ================ HTTP RESPONSE ================
+            url: \(urlStr) - UTC \(utcTimeString)
+            method: \(method)
+            """
+        
         if let httpResponse = response as? HTTPURLResponse {
-          print("🔸 Status Code: \(httpResponse.statusCode)")
-          print("🔸 Headers: \(httpResponse.allHeaderFields)")
+          message += "status Code: \(httpResponse.statusCode)\n"
         }
-        if let responseBody = String(data: data, encoding: .utf8) {
-          print("🔸 Body: \(responseBody)")
-        }
-        print("============================================================")
+        
+        message += "response: \(data.toPrettyPrintedString ?? "nil")\n"
+        message += "==============================================\n"
+        logger.debug(message)
         
         return (data, response)
       } catch {
-        print("❌ APIClient 오류 발생: \(error) \(error.localizedDescription)")
+        logger.error("API 오류 발생: \(error) - \(error.localizedDescription)")
         throw error
       }
     }
@@ -68,5 +98,14 @@ public extension DependencyValues {
   var apiClient: APIClient {
     get { self[APIClient.self] }
     set { self[APIClient.self] = newValue }
+  }
+}
+
+extension Data {
+  var toPrettyPrintedString: String? {
+    guard let object = try? JSONSerialization.jsonObject(with: self, options: []),
+          let data = try? JSONSerialization.data(withJSONObject: object, options: [.prettyPrinted]),
+          let prettyPrintedString = NSString(data: data, encoding: String.Encoding.utf8.rawValue) else { return nil }
+    return prettyPrintedString as String
   }
 }

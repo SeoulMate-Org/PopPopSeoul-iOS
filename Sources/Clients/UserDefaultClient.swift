@@ -7,37 +7,38 @@
 
 import ComposableArchitecture
 import Foundation
+import SharedTypes
 
 // MARK: - Interface
 
 @DependencyClient
 public struct UserDefaultsClient {
-  public var boolForKey: @Sendable (String) -> Bool = { _ in false }
-  public var dataForKey: @Sendable (String) -> Data?
-  public var doubleForKey: @Sendable (String) -> Double = { _ in .leastNonzeroMagnitude }
-  public var integerForKey: @Sendable (String) -> Int = { _ in -1 }
-  public var stringForKey: @Sendable (String) -> String? = { _ in nil }
-  public var remove: @Sendable (String) async -> Void
-  public var setBool: @Sendable (Bool, String) async -> Void
-  public var setData: @Sendable (Data?, String) async -> Void
-  public var setDouble: @Sendable (Double, String) async -> Void
-  public var setInteger: @Sendable (Int, String) async -> Void
-  public var setString: @Sendable (String, String) async -> Void
+  public var boolForKey: @Sendable (UserDefaultsKey) -> Bool = { _ in false}
+  public var dataForKey: @Sendable (UserDefaultsKey) -> Data?
+  public var doubleForKey: @Sendable (UserDefaultsKey) -> Double = { _ in .leastNonzeroMagnitude }
+  public var integerForKey: @Sendable (UserDefaultsKey) -> Int = { _ in -1 }
+  public var stringForKey: @Sendable (UserDefaultsKey) -> String? = { _ in nil }
+  public var remove: @Sendable (UserDefaultsKey) async -> Void
+  public var setBool: @Sendable (Bool, UserDefaultsKey) async -> Void
+  public var setData: @Sendable (Data?, UserDefaultsKey) async -> Void
+  public var setDouble: @Sendable (Double, UserDefaultsKey) async -> Void
+  public var setInteger: @Sendable (Int, UserDefaultsKey) async -> Void
+  public var setString: @Sendable (String, UserDefaultsKey) async -> Void
   
-  public var hasSeenOnboarding: Bool {
-    boolForKey(onboardingKey)
+  public var hasInitLaunch: Bool {
+    boolForKey(.hasInitLaunch)
   }
   
-  public func setHasSeenOnboarding(_ value: Bool) async {
-    await setBool(value, onboardingKey)
+  public func setHasLaunch(_ value: Bool) async {
+    await setBool(value, .hasInitLaunch)
   }
   
-  public var selectedLanguage: String? {
-    stringForKey(languageKey)
+  public func setLanguage(_ value: AppLanguage) async {
+    await setString(value.rawValue, .languageKey)
   }
   
-  public func setSelectedLanguage(_ value: String) async {
-    await setString(value, languageKey)
+  public var languageKey: String? {
+    return stringForKey(.languageKey)
   }
 }
 
@@ -47,17 +48,17 @@ extension UserDefaultsClient: DependencyKey {
   public static var liveValue: UserDefaultsClient {
     let userDefaults = UncheckedSendable(UserDefaults.standard)
     return Self(
-      boolForKey: { userDefaults.value.bool(forKey: $0) },
-      dataForKey: { userDefaults.value.data(forKey: $0) },
-      doubleForKey: { userDefaults.value.double(forKey: $0) },
-      integerForKey: { userDefaults.value.integer(forKey: $0) },
-      stringForKey: { userDefaults.value.string(forKey: $0) },
-      remove: { userDefaults.value.removeObject(forKey: $0) },
-      setBool: { userDefaults.value.set($0, forKey: $1) },
-      setData: { userDefaults.value.set($0, forKey: $1) },
-      setDouble: { userDefaults.value.set($0, forKey: $1) },
-      setInteger: { userDefaults.value.set($0, forKey: $1) },
-      setString: { userDefaults.value.set($0, forKey: $1) }
+      boolForKey: { userDefaults.value.bool(forKey: $0.rawValue) },
+      dataForKey: { userDefaults.value.data(forKey: $0.rawValue) },
+      doubleForKey: { userDefaults.value.double(forKey: $0.rawValue) },
+      integerForKey: { userDefaults.value.integer(forKey: $0.rawValue) },
+      stringForKey: { userDefaults.value.string(forKey: $0.rawValue) },
+      remove: { userDefaults.value.removeObject(forKey: $0.rawValue) },
+      setBool: { userDefaults.value.set($0, forKey: $1.rawValue) },
+      setData: { userDefaults.value.set($0, forKey: $1.rawValue) },
+      setDouble: { userDefaults.value.set($0, forKey: $1.rawValue) },
+      setInteger: { userDefaults.value.set($0, forKey: $1.rawValue) },
+      setString: { userDefaults.value.set($0, forKey: $1.rawValue) }
     )
   }
 }
@@ -73,5 +74,7 @@ public extension DependencyValues {
 
 // MARK: - UserDefaults Keys
 
-private let onboardingKey = "hasSeenOnboarding"
-private let languageKey = "selectedLanguage"
+public enum UserDefaultsKey: String {
+  case hasInitLaunch
+  case languageKey
+}

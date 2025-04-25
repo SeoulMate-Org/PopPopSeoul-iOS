@@ -1,5 +1,5 @@
 //
-//  AuthLoginPostRequest.swift
+//  PostAuthLoginRequest.swift
 //  Clients
 //
 //  Created by suni on 4/23/25.
@@ -8,7 +8,7 @@
 import Foundation
 import Common
 
-public struct AuthLoginBody: Encodable {
+public struct PostAuthLoginRequest: Encodable {
   public init(
     token: String,
     loginType: String,

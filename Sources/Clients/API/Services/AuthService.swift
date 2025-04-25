@@ -13,7 +13,8 @@ import Models
 
 @DependencyClient
 public struct AuthService {
-  public var postAuthLogin: @Sendable (AuthLoginBody) async throws -> Auth
+  public var postAuthLogin: @Sendable (PostAuthLoginRequest) async throws -> Auth
+  public var postAuthRefresh: @Sendable (PostAuthRefreshRequest) async throws -> Token
 }
 
 // MARK: Live
@@ -25,6 +26,11 @@ extension AuthService: DependencyKey {
     return Self(
       postAuthLogin: { body in
         let request: Request = .post(.authLogin, body: try? body.encoded())
+        let (data, _) = try await apiClient.send(request)
+        return try data.decoded()
+      },
+      postAuthRefresh: { body in
+        let request: Request = .post(.authRefresh, body: try? body.encoded())
         let (data, _) = try await apiClient.send(request)
         return try data.decoded()
       }

@@ -15,8 +15,7 @@ extension NetworkDispatcher {
     guard let statusCode else { return .unknownError }
     switch statusCode {
     case 400: return .badRequest
-    case 403: return .forbidden
-    case 404: return .notFound
+    case 401: return .notFound
     case 402, 405 ... 499: return .error4xx(statusCode)
     case 500: return .serverError
     case 501 ... 599: return .error5xx(statusCode)
@@ -59,7 +58,11 @@ extension NetworkDispatcher: DependencyKey {
 
       // check if response is successful
       guard response.isSuccessful else {
-        throw httpError(response.statusCode)
+        if let apiError = try? JSONDecoder().decode(APIErrorResponse.self, from: data) {
+          throw apiError
+        } else {
+          throw httpError(response.statusCode)
+        }
       }
       return (data, response)
     }
