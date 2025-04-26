@@ -15,5 +15,6 @@ public enum NetworkRequestError: LocalizedError, Equatable {
   case urlSessionFailed(_ error: URLError)
   case unknownError
   
-  // 추가  
+  // 추가
+  case dontHaveRefreshToken
 }

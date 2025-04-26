@@ -15,11 +15,11 @@ public struct APIClient {
 extension APIClient: DependencyKey {
   public static var liveValue: APIClient {
     @Dependency(\.networkDispatcher) var networkDispatcher
+    @Dependency(\.authClient) var authClient
     
     return Self { request in
       do {
         guard let urlRequest = try? request.makeRequest() else {
-          print("❌ APIClient 오류 발생 invalidRequest")
           throw NetworkRequestError.invalidRequest
         }
         
@@ -80,7 +80,39 @@ extension APIClient: DependencyKey {
         
         return (data, response)
       } catch {
-        logger.error("API 오류 발생: \(error) - \(error.localizedDescription)")
+        if let apiError = error as? APIErrorResponse {
+          let message: String = """
+            API ERROR
+            error: \(apiError.code) \(apiError.message)          
+            """
+          logger.error(message)
+          if apiError.errorCode == .expiredAccessToken {
+            if await authClient.isRefreshing() {
+              logger.error("⚠️ 이미 refresh 중입니다. 재시도하지 않습니다.")
+              throw error
+            }
+            do {
+              try await authClient.refresh() // ✅ 여기서 refresh 호출
+              logger.debug("✅ 토큰 갱신 성공. 원래 요청 재시도")
+              // ✅ 토큰 갱신에 성공했으면 원래 요청 다시 시도
+              guard let retryRequest = try? request.makeRequest() else {
+                throw NetworkRequestError.invalidRequest
+              }
+              return try await networkDispatcher.dispatch(retryRequest)
+              
+            } catch {
+              logger.error("❌ 토큰 갱신 실패. 로그아웃 진행 - error: \(error.localizedDescription)")
+              throw error // 최종 실패
+            }
+          }
+        } else {
+          let message: String = """
+            HTTP ERROR
+            error: \(error.localizedDescription)          
+            """
+          logger.error(message)
+        }
+        
         throw error
       }
     }
