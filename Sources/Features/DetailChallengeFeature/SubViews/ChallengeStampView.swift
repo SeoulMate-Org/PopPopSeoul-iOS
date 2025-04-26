@@ -9,9 +9,10 @@ import SwiftUI
 import Common
 import DesignSystem
 import SharedAssets
+import Models
 
 struct ChallengeStampView: View {
-  let items: [Place]
+  let items: [Attraction]
   private let itemSize: CGFloat = 48
   
   var body: some View {
@@ -55,13 +56,9 @@ struct ChallengeStampView: View {
   }
   
   @ViewBuilder
-  private func stampImage(for item: Place) -> some View {
-    (item.isCompleted ? Assets.Images.stampActive.swiftUIImage : Assets.Images.stampInactive.swiftUIImage)
+  private func stampImage(for item: Attraction) -> some View {
+    (item.isStamped ? Assets.Images.stampActive.swiftUIImage : Assets.Images.stampInactive.swiftUIImage)
       .resizable()
       .scaledToFill()
   }
 }
-//
-//#Preview {
-//  ChallengeStampView(items: mockChallenges[0].places)
-//}

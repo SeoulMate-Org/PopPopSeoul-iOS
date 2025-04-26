@@ -24,7 +24,7 @@ struct HomeTabView: View {
         
         ScrollView {
           VStack(spacing: 0) {
-            HomeChallengeBannerSection(challenges: mockChallenges) { _ in }
+            HomeChallengeBannerSection(challenges: []) { _ in }
             HomeAccessPromptSection(type: .login)
               .padding(.top, 48)
             

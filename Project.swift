@@ -259,6 +259,7 @@ let project = Project(
                 .target(name: "SharedTypes"),
                 .target(name: "SharedAssets"),
                 .target(name: "Common"),
+                .target(name: "Models"),
             ]
         ),
         .target(

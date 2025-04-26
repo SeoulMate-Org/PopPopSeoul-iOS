@@ -40,19 +40,6 @@ public struct ThemeChallengeListView: View {
   }
 }
 
-#Preview {
-  let dummyData: [ChallengeTheme: [Challenge]] = [
-    .localExploration: mockChallenges,
-    .historyCulture: mockChallenges,
-    .artExhibition: mockChallenges,
-    .culturalEvent: mockChallenges
-  ]
-  
-  StatefulPreviewWrapper(ChallengeTheme.localExploration) { binding in
-    ThemeChallengeListView(listType: .home, selectedTab: binding, challengesByTheme: dummyData)
-  }
-}
-
 public enum ThemeChallengeListType {
   case home
   case detail

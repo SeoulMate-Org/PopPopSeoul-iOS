@@ -9,9 +9,10 @@ import SwiftUI
 import Common
 import DesignSystem
 import SharedAssets
+import Models
 
 struct DetailChallengeStampSection: View {
-  let challenge: Challenge
+  let challenge: DetailChallenge
   
   var body: some View {
     
@@ -30,11 +31,11 @@ struct DetailChallengeStampSection: View {
       
       // 3. 회색 배경 박스
       VStack(spacing: 0) {
-        ProgressBar(progressType: .detailChallenge, total: challenge.places.count, current: challenge.completeCount)
+        ProgressBar(progressType: .detailChallenge, total: challenge.attractionCount, current: challenge.stampCount)
           .padding(.horizontal, 20)
           .padding(.vertical, 17)
         Divider()
-        ChallengeStampView(items: challenge.places)
+        ChallengeStampView(items: challenge.attractions)
           .padding(.vertical, 16)
       }
       .background(Colors.gray25.swiftUIColor)
@@ -44,7 +45,3 @@ struct DetailChallengeStampSection: View {
     .padding(.horizontal, 20)
   }
 }
-
-//#Preview {
-//  DetailChallengeStampSection(challenge: mockChallenges[0])
-//}

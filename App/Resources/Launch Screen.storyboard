@@ -15,15 +15,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_light" translatesAutoresizingMaskIntoConstraints="NO" id="kJx-zp-7B9">
-                                <rect key="frame" x="176.66666666666666" y="481" width="86.666666666666657" height="22"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_logo" translatesAutoresizingMaskIntoConstraints="NO" id="kJx-zp-7B9">
+                                <rect key="frame" x="78" y="415.66666666666669" width="284" height="153.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="283.67000000000002" id="9eO-SP-9wr"/>
+                                    <constraint firstAttribute="height" constant="153" id="doF-ea-uVi"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
-                        <color key="backgroundColor" red="0.043137254901960784" green="0.50196078431372548" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.23529411764705882" green="0.50588235294117645" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="kJx-zp-7B9" firstAttribute="centerX" secondItem="Bcu-3y-fUS" secondAttribute="centerX" id="a1O-Oq-bx1"/>
-                            <constraint firstItem="kJx-zp-7B9" firstAttribute="centerY" secondItem="Bcu-3y-fUS" secondAttribute="centerY" id="o8m-ED-isi"/>
+                            <constraint firstItem="kJx-zp-7B9" firstAttribute="centerX" secondItem="Bcu-3y-fUS" secondAttribute="centerX" id="VLj-HJ-ldG"/>
+                            <constraint firstItem="kJx-zp-7B9" firstAttribute="centerY" secondItem="Bcu-3y-fUS" secondAttribute="centerY" id="eso-ey-MFF"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -33,6 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logo_light" width="86.666664123535156" height="22"/>
+        <image name="launch_logo" width="283.66665649414062" height="153"/>
     </resources>
 </document>

@@ -9,22 +9,24 @@ import SwiftUI
 import Common
 import DesignSystem
 import SharedAssets
+import Models
+import Clients
 
 struct DetailChallengeCommentSection: View {
-  let challenge: Challenge
+  let challenge: DetailChallenge
   
   var body: some View {
     // 댓글
     VStack(alignment: .leading, spacing: 0) {
       // 1. 제목
-      let countString = challenge.comments.count > 0 ? " {\(challenge.comments.count)}" : ""
+      let countString = challenge.commentCount > 0 ? " {\(challenge.commentCount)}" : ""
       Text(String(sLocalization: .detailchallengeCommentTitle) + countString)
         .font(.appTitle3)
         .foregroundColor(Colors.gray900.swiftUIColor)
         .padding(.horizontal, 20)
       
       // 2. 댓글 리스트
-      if challenge.comments.count > 0 {
+      if challenge.commentCount > 0 {
         let displayedComments = challenge.comments.prefix(10)
         
         VStack(spacing: 0) {
@@ -65,7 +67,7 @@ struct DetailChallengeCommentSection: View {
       }
       
       // case2. 로그인 X or 참여중 챌린지 X
-      if !isLogined || !challenge.isParticipating {
+      if !TokenManager.shared.isLogin || !(challenge.challengeStatus == .progress) {
         Text(String(sLocalization: .detailchallengeCommentDes))
           .font(.bodyS)
           .foregroundStyle(Colors.gray900.swiftUIColor)

@@ -54,14 +54,14 @@ struct SplashView: View {
   }
 }
 
-//#Preview {
-//  SplashView(
-//    store: Store<SplashFeature.State, SplashFeature.Action>(
-//      initialState: .init(),
-//      reducer: { SplashFeature() }
-//    )
-//  )
-//}
+#Preview {
+  SplashView(
+    store: Store<SplashFeature.State, SplashFeature.Action>(
+      initialState: .init(),
+      reducer: { SplashFeature() }
+    )
+  )
+}
 
 extension LinearGradient {
   static let blutFadeLeftToRight = LinearGradient(

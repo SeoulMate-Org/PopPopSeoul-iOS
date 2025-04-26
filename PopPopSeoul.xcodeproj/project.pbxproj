@@ -25,6 +25,7 @@
 		05981452C3B02B0953437CB9 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3776FB055AD747BCCDF55C32 /* NetworkDispatcher.swift */; };
 		060310D17E19D629C0EBE726 /* DesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB57F84F538F6F76D73229ED /* DesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		061DB2D0949F911138215856 /* TuistBundle+Clients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B8E4DCE4DB8E6B7DE79F55 /* TuistBundle+Clients.swift */; };
+		06BED9B3F34031720AD37180 /* Perception.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A040845D9AD803CB2FE2243D /* Perception.framework */; };
 		07431CF9B7E2A41714AF4806 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43ADB16D73634BF614EAE508 /* GoogleService-Info.plist */; };
 		074587511C123461DCD5567D /* AppSettingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B34CABBB1DE0EA37447A79 /* AppSettingManager.swift */; };
 		085CBE9AC126B6C5F9E4666B /* PopPopSeoul_SharedAssets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AC1A07B868BF5B297491E7F4 /* PopPopSeoul_SharedAssets.bundle */; };
@@ -61,6 +62,7 @@
 		11E0C84213F7104D2DF51635 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D59BBB4CD30AF858BF40189 /* Colors.xcassets */; };
 		11E9EDD60785545E1A0CDBC5 /* Facebook_FacebookLogin.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 220C1E06DB94D6F39A7C2161 /* Facebook_FacebookLogin.bundle */; };
 		1250E35B7E29509FE702800D /* AppAuthCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F19DB3339F8D50838A1D327 /* AppAuthCore.framework */; };
+		12BB5DBE137A2A837C8A92A0 /* Sharing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9966F8860EC058A8321E83 /* Sharing.framework */; };
 		12E9DD9E3536C62F0D7388B6 /* HomeTabFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FF9956BBDABCE148A603E6 /* HomeTabFeature.swift */; };
 		132984BB1878C5D08806ED80 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4106973C4772F2643FF3499D /* FirebaseCore.framework */; };
 		13402C8888F98D99EE0CE665 /* BottomSheet_BottomSheet.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 23FF6506217F3B29FA216666 /* BottomSheet_BottomSheet.bundle */; };
@@ -88,12 +90,14 @@
 		19DF9FFD9F7878167E20AC33 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDD27B7889EDC29093865516 /* Pretendard-Medium.otf */; };
 		1A23027736DC3EDAFF5CA3BC /* swift-sharing_Sharing.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9BCD91FDA3831C38BA0CEA23 /* swift-sharing_Sharing.bundle */; };
 		1A762457F4375D1A66FBE09C /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 153553E89664D914E68DEFCC /* Pretendard-Thin.otf */; };
+		1B06205582E69CF46CD3BDAA /* Clocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3D497BB3165EECBEBCB1888 /* Clocks.framework */; };
 		1B2AF00ADAEA506FD9540CC4 /* PopPopSeoul_SharedAssets.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = AC1A07B868BF5B297491E7F4 /* PopPopSeoul_SharedAssets.bundle */; };
 		1B448BDD3D7B5553C6A1CA9B /* Facebook_FacebookAEM.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 9FB1E12A2FECBF861558A97F /* Facebook_FacebookAEM.bundle */; };
 		1BB5F79E2CF2DEA8F3C2F98E /* DetailChallengeStampSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D076543D5EEF0F63E0FC229 /* DetailChallengeStampSection.swift */; };
 		1CBE2EEFDDCFCEE08E3B4E2C /* GoogleAppMeasurementTarget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C385182C16710AE4608924A /* GoogleAppMeasurementTarget.framework */; };
 		1CD9059E05DB3B5B146186E0 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E4D5476FC354FD8133DF1816 /* Pretendard-Light.otf */; };
 		1D1ED05456CA3F996C44D7FD /* GoogleUtilities_GoogleUtilities_Reachability.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6146039D41909EE6CBF2131E /* GoogleUtilities_GoogleUtilities_Reachability.bundle */; };
+		1D2CFA68AA104EFF61788F5C /* UIKitNavigationShim.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39CC4165F3572ECB2761515F /* UIKitNavigationShim.framework */; };
 		1D623F092FB9E44F66F7F3B3 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E4D5476FC354FD8133DF1816 /* Pretendard-Light.otf */; };
 		1DA57B904818C089FE2D5F04 /* TuistBundle+Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5120F0D9B2E0FCAB7DB07AA /* TuistBundle+Models.swift */; };
 		1E4B75C045A2C5CD8376B2ED /* AppCheckCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D08862BFB84DD2302CF5D2 /* AppCheckCore.framework */; };
@@ -118,6 +122,7 @@
 		24CD380A427C055BE636AA45 /* Facebook_FacebookCore.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = C92C2C3D8279026F9632600D /* Facebook_FacebookCore.bundle */; };
 		24D151BBFA2E0E11FF4626BC /* TuistAssets+Clients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D86F4B6A1E8658FF210F256 /* TuistAssets+Clients.swift */; };
 		24D82CD371CDCA7DF007CCE8 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFBCCCDCEB53A5AA38BAC5CE /* Pretendard-Bold.otf */; };
+		252B8C3B7F5DC4E46E1A2D01 /* PerceptionCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D5B36A766C6B49FB39D3C7 /* PerceptionCore.framework */; };
 		25EFFC1526C0C16E8D691D85 /* TuistPlists+SharedTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04483998B0B9D6A02D594FE3 /* TuistPlists+SharedTypes.swift */; };
 		26A517737186AB25AD995220 /* GoogleUtilities_GoogleUtilities_MethodSwizzler.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 649C7C6D3899F21B7A64E2B5 /* GoogleUtilities_GoogleUtilities_MethodSwizzler.bundle */; };
 		272162B47375CB44638F84B5 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2DCA6FA638D4F5E493D8DF /* OnboardingView.swift */; };
@@ -178,7 +183,9 @@
 		3D19CD463D28DCED504799A6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5055D6B79A3002E12D64D945 /* Launch Screen.storyboard */; };
 		3D53EF0D0E195C39AD4CD9A2 /* Common.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = E47737CBD7A0BFCCB3390F28 /* Common.framework */; };
 		3D628FADBBEC23B88928214A /* Facebook_FacebookLogin.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 220C1E06DB94D6F39A7C2161 /* Facebook_FacebookLogin.bundle */; };
+		3D9021194AADC7A63F5ABB19 /* CombineSchedulers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA26B67DE986D8D090F59956 /* CombineSchedulers.framework */; };
 		3DBCD5F641C93CC2E090A7A1 /* BottomSheet_BottomSheet.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 23FF6506217F3B29FA216666 /* BottomSheet_BottomSheet.bundle */; };
+		3E19AD58936AFF48A50317A5 /* IssueReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FBE934090DCC526B1B6C788 /* IssueReporting.framework */; };
 		3FAD44719763CAB545C25E1D /* ComposableCoreLocation.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = F2AD6AD14CB5074A1880D0FC /* ComposableCoreLocation.framework */; };
 		3FDF2A1E729BCF6DCD79B7B7 /* swift-sharing_Sharing.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9BCD91FDA3831C38BA0CEA23 /* swift-sharing_Sharing.bundle */; };
 		40062A002554B6692F25F54D /* FirebaseCoreExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7EC580C8F209102ACD3085 /* FirebaseCoreExtension.framework */; };
@@ -188,8 +195,10 @@
 		412976A7577F83BEAC9B74AB /* GoogleUtilities_GoogleUtilities_Logger.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5EDA54327A28B3642629DA5F /* GoogleUtilities_GoogleUtilities_Logger.bundle */; };
 		415673039A15A6E507B16F47 /* View++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F000EF2496EC810251FC8 /* View++.swift */; };
 		415D8780C81A78EE04B272BA /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFBCCCDCEB53A5AA38BAC5CE /* Pretendard-Bold.otf */; };
+		42768142F86BC3A1BD324FF3 /* OrderedCollections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3593140F181A04CA12AD1AE1 /* OrderedCollections.framework */; };
 		42B598F3A7F181FE74D1EF3B /* FirebaseAnalyticsWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71AB9DF0584FD0B7E762A85C /* FirebaseAnalyticsWrapper.framework */; };
 		433CCF65618A9550705FC34A /* Promises_FBLPromises.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 0F21D60D642DF96328E45E8D /* Promises_FBLPromises.bundle */; };
+		43E9E84B9B311B2E1E4A3747 /* XCTestDynamicOverlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9AF0C8A95A003AF209C746 /* XCTestDynamicOverlay.framework */; };
 		44BD4D7553C9A659FAC8C330 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2258D33FCA01CD482A696A5 /* RemoteConfigDefaults.plist */; };
 		44E1EDA308BCF5FDC3001713 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62D1DA8ED790E2822D0D9E60 /* Pretendard-SemiBold.otf */; };
 		4500C8940A73649A33A96355 /* Promises_FBLPromises.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 0F21D60D642DF96328E45E8D /* Promises_FBLPromises.bundle */; };
@@ -218,10 +227,13 @@
 		4FC16E8A4B2A3728BD790E5E /* GoogleUtilities_GoogleUtilities_AppDelegateSwizzler.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1B3451ACAF4F0DAE1C400CAE /* GoogleUtilities_GoogleUtilities_AppDelegateSwizzler.bundle */; };
 		4FFBF4547D0A8AD777748DCA /* swift-sharing_Sharing.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9BCD91FDA3831C38BA0CEA23 /* swift-sharing_Sharing.bundle */; };
 		501B2C33C6D6D10AC564ECE2 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CE1FAA7B1326A358DB6CD86 /* Icons.xcassets */; };
+		50472AB0312AAC2699336912 /* IdentifiedCollections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AFAF7707DA87C6CE78F726C /* IdentifiedCollections.framework */; };
+		504C1DD69DF46C1C48914BCF /* ComposableArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E85D8F1AB9B0F2707E456267 /* ComposableArchitecture.framework */; };
 		5054B24D26BD2247BF786D9F /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CF7B0277A59F7ADB7E8805 /* Comment.swift */; };
 		50AEBCF3F1056CCCEF84FFF5 /* Features.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05330088E9012B55AB249F3B /* Features.framework */; };
 		51183EB1BE590F8083C7D7EA /* Firebase_FirebaseRemoteConfig.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = BC546639068D86ADBBB0D610 /* Firebase_FirebaseRemoteConfig.bundle */; };
 		5142B9E8768EFE9C0CAF8F1E /* FirebaseABTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7F28F303C1DDA82728FA0C /* FirebaseABTesting.framework */; };
+		515CE12F60963E9E9AAD9C36 /* CustomDump.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 900DC49D756446FE89B91726 /* CustomDump.framework */; };
 		525B75DDFDBE95D995A01ED0 /* SwiftLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F8E62DCA661935F38FDFBF /* SwiftLog.swift */; };
 		52D4D080B9844648824191AD /* SwiftNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2CF13F3E25FE22CE8CD6092 /* SwiftNavigation.framework */; };
 		5345E40E696F1F2A60AD1565 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1630C69D82905F67D14915AF /* Pretendard-Black.otf */; };
@@ -275,6 +287,7 @@
 		63C1533CD7F5C181DBB59609 /* Firebase_FirebaseCore.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 9A46294BCEAF8032F4DC91BC /* Firebase_FirebaseCore.bundle */; };
 		63F3BA3BE731CED420EBA0FC /* GoogleSignIn_GoogleSignIn.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = E7C4C3EED06772C16068149B /* GoogleSignIn_GoogleSignIn.bundle */; };
 		644164250698DBB4C9194A9B /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5355E397BCD019AF8EF299B /* Secrets.plist */; };
+		64723DE26E39D9E977943409 /* SwiftNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2CF13F3E25FE22CE8CD6092 /* SwiftNavigation.framework */; };
 		64AC553AEB4876134E27BBCB /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62D1DA8ED790E2822D0D9E60 /* Pretendard-SemiBold.otf */; };
 		64DE2B053F127A286ECAD146 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E47737CBD7A0BFCCB3390F28 /* Common.framework */; };
 		6592A24799A372D310A69D8E /* ThemeChallengeListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCD442848C28388F572A08 /* ThemeChallengeListItemView.swift */; };
@@ -355,6 +368,7 @@
 		83D2FE98E1D81556C8C30280 /* Firebase_FirebaseCore.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 9A46294BCEAF8032F4DC91BC /* Firebase_FirebaseCore.bundle */; };
 		84B90B728332F1CE16807B6F /* GTMAppAuth_GTMAppAuth.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 26A5A230A0BCACD07BCCCDAF /* GTMAppAuth_GTMAppAuth.bundle */; };
 		84C9C75468E604F9F6AF48FE /* GoogleUtilities_GoogleUtilities_Environment.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 19A2185CDE7C6234EE1DF16A /* GoogleUtilities_GoogleUtilities_Environment.bundle */; };
+		857C1B780BFC4B3CB77462A4 /* DependenciesMacros.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6072F35CECEAE437ED16D8DE /* DependenciesMacros.framework */; };
 		85CD59E529EB6870128CABEB /* GoogleUtilities_NSData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C2149AE4B08C2A77B08C5D /* GoogleUtilities_NSData.framework */; };
 		85DF2A7B75BD6FDF595962A2 /* GTMAppAuth_GTMAppAuth.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 26A5A230A0BCACD07BCCCDAF /* GTMAppAuth_GTMAppAuth.bundle */; };
 		860EC4AEFFA554CE6799AF95 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CE1FAA7B1326A358DB6CD86 /* Icons.xcassets */; };
@@ -380,6 +394,7 @@
 		90AEDB51FA2E2323914CCECD /* Promises_FBLPromises.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0F21D60D642DF96328E45E8D /* Promises_FBLPromises.bundle */; };
 		90B8DAE1E65436ED7C6DF93B /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8609EF56D0937265092D5D36 /* Pretendard-ExtraLight.otf */; };
 		90BDF6A4F7E1BD1159AE348B /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EFE2A73738E1457A6C813045 /* Pretendard-Regular.otf */; };
+		91719DD6946DD60A7C2BAA44 /* ConcurrencyExtras.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F9952AF8C2F91BEBDF80076 /* ConcurrencyExtras.framework */; };
 		9225CACA32BFF94C2A1625B4 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D59BBB4CD30AF858BF40189 /* Colors.xcassets */; };
 		936731239B4CD74F564058F8 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770D59D079BC6DD039278746 /* Firebase.framework */; };
 		9479CA263AC3DB9EBDDEE252 /* DetailChallengeCommentSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E99B5949CE98C94BAB7AA52 /* DetailChallengeCommentSection.swift */; };
@@ -423,6 +438,7 @@
 		A354D1BAB94055264FB72509 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E4D5476FC354FD8133DF1816 /* Pretendard-Light.otf */; };
 		A46CC750D4824041F8B940AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21F1198C49E87E8F197837EE /* Assets.xcassets */; };
 		A4A36B5E6E4A47F58DA5D633 /* Firebase_FirebaseCoreInternal.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = DBAE0E09BAEB98F9EB635193 /* Firebase_FirebaseCoreInternal.bundle */; };
+		A4D35499470EDBEC1C899390 /* InternalCollectionsUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B01A220D0CFFBA6E41CC67D0 /* InternalCollectionsUtilities.framework */; };
 		A5614FCE6AA0E4370E1089E5 /* GoogleUtilities_GoogleUtilities_MethodSwizzler.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 649C7C6D3899F21B7A64E2B5 /* GoogleUtilities_GoogleUtilities_MethodSwizzler.bundle */; };
 		A5B055F8BF0360808F23A389 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7E5F5F2FF69CFDE10CFEBDD5 /* Localizable.xcstrings */; };
 		A61E4A2CCEC899CBD6A571B5 /* Firebase_FirebaseInstallations.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 63810522A380D3401ECFB91E /* Firebase_FirebaseInstallations.bundle */; };
@@ -449,6 +465,7 @@
 		AD38D09882FE945D902E9E9F /* HomeChallengeBannerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD87A029BEF76C2054F5A226 /* HomeChallengeBannerItemView.swift */; };
 		AD3D2B0BC6F30FDA9521F74E /* Firebase_FirebaseRemoteConfig.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = BC546639068D86ADBBB0D610 /* Firebase_FirebaseRemoteConfig.bundle */; };
 		AD9CB7DA18911B544F4AFB3D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5055D6B79A3002E12D64D945 /* Launch Screen.storyboard */; };
+		ADD36351CBD11CC3785936BE /* Sharing2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F31B0682AA9AE7459E6012BE /* Sharing2.framework */; };
 		ADF8753D78D6AB6AF59D1F2D /* AppFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1812A1D0AAC69CDC1AFC682 /* AppFeature.swift */; };
 		AF48167009BBC5A96BAE650F /* GoogleUtilities_GoogleUtilities_Reachability.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6146039D41909EE6CBF2131E /* GoogleUtilities_GoogleUtilities_Reachability.bundle */; };
 		B0DA3A706018DD3B738DAD9A /* Firebase_FirebaseAuth.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3B3888A5733A786657329D95 /* Firebase_FirebaseAuth.bundle */; };
@@ -461,6 +478,7 @@
 		B3A28D53A457325E28582DC8 /* ComposableCoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2AD6AD14CB5074A1880D0FC /* ComposableCoreLocation.framework */; };
 		B4A41E6CA6B261D3422B5E92 /* CustomDump.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 900DC49D756446FE89B91726 /* CustomDump.framework */; };
 		B5529127694EBBCDAC846A2C /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFBCCCDCEB53A5AA38BAC5CE /* Pretendard-Bold.otf */; };
+		B5541F57328D8C8224C4B72F /* Models.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EE494055A8FF16DF0918183 /* Models.framework */; };
 		B605962AB2D9FDD869D2A32B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2FA38918E869355F1DF35A /* LoginView.swift */; };
 		B62ABAD4F67FED7F2CDD9EDB /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1630C69D82905F67D14915AF /* Pretendard-Black.otf */; };
 		B6A7523326D1D45A4C29B314 /* ChallengeStampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118A7B5552BB25A1B1BE75CA /* ChallengeStampView.swift */; };
@@ -507,6 +525,7 @@
 		C9DEBF866020AADB859FA0BD /* GoogleUtilities_GoogleUtilities_Logger.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 5EDA54327A28B3642629DA5F /* GoogleUtilities_GoogleUtilities_Logger.bundle */; };
 		CA636ADCF3372BEF92489A36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21F1198C49E87E8F197837EE /* Assets.xcassets */; };
 		CA6A1AC6F958CA055FA99194 /* FacebookCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F645A2F6DB3F5F41256B3A9 /* FacebookCore.framework */; };
+		CAAB2228D9792D83E4B58521 /* SwiftUINavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06799675636A19EFA14949F8 /* SwiftUINavigation.framework */; };
 		CB0AF933E7700037CC7DBE12 /* PopPopSeoulApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33CE81337F6D0536EA2B2BC /* PopPopSeoulApp.swift */; };
 		CBAB1CF2B6E58D82029D9F85 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CE1FAA7B1326A358DB6CD86 /* Icons.xcassets */; };
 		CE71190043C804A467BDA0E2 /* Sharing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9966F8860EC058A8321E83 /* Sharing.framework */; };
@@ -517,6 +536,7 @@
 		D1B428D8176B9129AE17723F /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D4DEE71E568B3CFAD9800EEC /* Pretendard-ExtraBold.otf */; };
 		D36803220D903AFA443830EC /* Facebook_FacebookAEM.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9FB1E12A2FECBF861558A97F /* Facebook_FacebookAEM.bundle */; };
 		D3CE5076C804834D146456E7 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A992203820C5108F6994F698 /* APIClient.swift */; };
+		D45E4CD7E153AA22AAA4920E /* PopPopSeoul_Models.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 06161994F12FC5F549E5E26C /* PopPopSeoul_Models.bundle */; };
 		D49A7BD41AF01544C0367BB6 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDD27B7889EDC29093865516 /* Pretendard-Medium.otf */; };
 		D49C3DCA0910325843D7CCD9 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2258D33FCA01CD482A696A5 /* RemoteConfigDefaults.plist */; };
 		D4AD64A3A52F29CFE3ECB2D0 /* TuistFonts+Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE85159FC743EC8C738F77B /* TuistFonts+Models.swift */; };
@@ -547,9 +567,11 @@
 		DFB3F5CB7F0D55A6CE190C51 /* Firebase_FirebaseRemoteConfig.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BC546639068D86ADBBB0D610 /* Firebase_FirebaseRemoteConfig.bundle */; };
 		E030D4CFDF244ADCD1D4F5F9 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2258D33FCA01CD482A696A5 /* RemoteConfigDefaults.plist */; };
 		E06CD4C9C413FFA49C7DD284 /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5726AEC8CEC0F67F1ACE7F5 /* AppSetting.swift */; };
+		E0A1CB56A49E385A080F3953 /* Sharing1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24AB27F4882D504C05138895 /* Sharing1.framework */; };
 		E0F3F613105C0E2D6FCF1EC4 /* GoogleSignIn_GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E7C4C3EED06772C16068149B /* GoogleSignIn_GoogleSignIn.bundle */; };
 		E104AFD80E32283CA607F74F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D59BBB4CD30AF858BF40189 /* Colors.xcassets */; };
 		E14A95C6BDA216C07695B46C /* GoogleSignIn_GoogleSignIn.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = E7C4C3EED06772C16068149B /* GoogleSignIn_GoogleSignIn.bundle */; };
+		E17B7DD4323C87244321C70C /* ComposableCoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2AD6AD14CB5074A1880D0FC /* ComposableCoreLocation.framework */; };
 		E222C3AE7763309A26F1F2E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE45769C226498DF4026D488 /* Images.xcassets */; };
 		E2266B73DDF25009617E04CF /* Facebook_FacebookCore.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = C92C2C3D8279026F9632600D /* Facebook_FacebookCore.bundle */; };
 		E2316F92C0689B90B96D4F89 /* PostAuthLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE192FE54B098C9E1557C74A /* PostAuthLoginRequest.swift */; };
@@ -561,6 +583,7 @@
 		E5575917FE90B5901CD47CAA /* PerceptionCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D5B36A766C6B49FB39D3C7 /* PerceptionCore.framework */; };
 		E5D0CF286D8BF66B231ED103 /* UIApplication++.swift in Sources */ = {isa = PBXBuildFile; fileRef = C985F6F737100BAAA169894C /* UIApplication++.swift */; };
 		E5E475098CC6AB3FEA6231B0 /* SharedTypes.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = DA06EF0C7D6E057CBEAFC24C /* SharedTypes.framework */; };
+		E600A0E6E2FFC969A744318F /* UIKitNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883C2DDDE23D8048FA4E3E71 /* UIKitNavigation.framework */; };
 		E61D4A85B462B5D5679BB113 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5055D6B79A3002E12D64D945 /* Launch Screen.storyboard */; };
 		E61EFF54D5A75686328C4A92 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E4D5476FC354FD8133DF1816 /* Pretendard-Light.otf */; };
 		E64B2FC4BB0C4BEDB2A4DED6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43ADB16D73634BF614EAE508 /* GoogleService-Info.plist */; };
@@ -575,12 +598,14 @@
 		E906803B11761D8180B20C35 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 153553E89664D914E68DEFCC /* Pretendard-Thin.otf */; };
 		E91EFE77BFEE340B43194D47 /* Facebook_FacebookCore.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C92C2C3D8279026F9632600D /* Facebook_FacebookCore.bundle */; };
 		E9DE71C84C88288412A32A64 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8609EF56D0937265092D5D36 /* Pretendard-ExtraLight.otf */; };
+		EA949284C11DB940F84888C2 /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256CCC92AC8D6EE5FACE5475 /* Dependencies.framework */; };
 		EAE62223229FB6E39F76669F /* CasePathsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CF7412324C02D1745F0E0D /* CasePathsCore.framework */; };
 		EB1B1D606C9519443C8093A6 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E58A56242DD34BBF412FCA4 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle */; };
 		EB2C1DD848ACAAE2D607CA78 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F75DBDEF31E5F47ECCF65C8 /* UIKit.framework */; };
 		EB577A8062D14CFE4FB5207F /* GoogleSignInSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E5E0505F3396FBC9194F27 /* GoogleSignInSwift.framework */; };
 		EBB70C9114A22B024B933DDC /* Firebase_FirebaseRemoteConfig.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = BC546639068D86ADBBB0D610 /* Firebase_FirebaseRemoteConfig.bundle */; };
 		EBF020E4AC4AE2646D0139DF /* PopPopSeoul_SharedTypes.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C0CB3DDDA16FCFC69781D069 /* PopPopSeoul_SharedTypes.bundle */; };
+		EC656463A3B8C5EFE639FB41 /* CasePathsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CF7412324C02D1745F0E0D /* CasePathsCore.framework */; };
 		EC91A89FCF470843C684CCA5 /* PopPopSeoul_SharedAssets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AC1A07B868BF5B297491E7F4 /* PopPopSeoul_SharedAssets.bundle */; };
 		ED991AF2C448D3EF4377E16A /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8609EF56D0937265092D5D36 /* Pretendard-ExtraLight.otf */; };
 		EEEB173922F2FB01658DF6E9 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5355E397BCD019AF8EF299B /* Secrets.plist */; };
@@ -590,6 +615,7 @@
 		F0F94F31C0B86D03E47684D6 /* AppAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7924B0080D9F90CA5714671 /* AppAuth.framework */; };
 		F1736B23ED64824E86A566D0 /* CasePaths.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40AE01B72DAE9495C40B61FB /* CasePaths.framework */; };
 		F1786D99F8C359536D48681E /* Facebook_FacebookAEM.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9FB1E12A2FECBF861558A97F /* Facebook_FacebookAEM.bundle */; };
+		F2CA6C6752ED1EAE403B541A /* CasePaths.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40AE01B72DAE9495C40B61FB /* CasePaths.framework */; };
 		F2DC4982507A6BD9BA6502D5 /* TuistAssets+SharedTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8306CE1A54581D0765474974 /* TuistAssets+SharedTypes.swift */; };
 		F2DCA76B1396CE7B197416C6 /* Firebase_FirebaseCoreExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EECB86F51B27909F700E29A0 /* Firebase_FirebaseCoreExtension.bundle */; };
 		F4698A97985594D7F4525E2F /* Facebook_FacebookAEM.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 9FB1E12A2FECBF861558A97F /* Facebook_FacebookAEM.bundle */; };
@@ -607,6 +633,7 @@
 		F6A485802FCB05C07AA0D758 /* PopPopSeoul_Common.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = BB9E5B250148C619260FF4F1 /* PopPopSeoul_Common.bundle */; };
 		F6BE3052103DBE0DE0215C65 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62D1DA8ED790E2822D0D9E60 /* Pretendard-SemiBold.otf */; };
 		F6ECDC6016DFB3F64067898D /* TuistAssets+PopPopSeoul.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E9D4C972EBECDF69395F5A /* TuistAssets+PopPopSeoul.swift */; };
+		F723F2C38AA036DA87A920BC /* PopPopSeoul_Models.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 06161994F12FC5F549E5E26C /* PopPopSeoul_Models.bundle */; };
 		F7380632790A58E04E53C580 /* GoogleUtilities_GoogleUtilities_Network.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 60EA577380D1B46D4B45A848 /* GoogleUtilities_GoogleUtilities_Network.bundle */; };
 		F760C809AE669D21872BD159 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDD27B7889EDC29093865516 /* Pretendard-Medium.otf */; };
 		F7816B31C3027B3976869F75 /* ComposableCoreLocation.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = F2AD6AD14CB5074A1880D0FC /* ComposableCoreLocation.framework */; };
@@ -725,6 +752,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 5E9F56C6712853F55E59247F;
 			remoteInfo = SharedTypes;
+		};
+		997B72717AF86CEA1F888E32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E54A57BF89BE582F4D0E668A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA997D0841AC70DE8AB32A76;
+			remoteInfo = Models;
 		};
 		9DC76FE57A45FFA264B4BEAA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1107,6 +1141,7 @@
 			dstSubfolderSpec = 16;
 			files = (
 				F6A485802FCB05C07AA0D758 /* PopPopSeoul_Common.bundle in Dependencies */,
+				D45E4CD7E153AA22AAA4920E /* PopPopSeoul_Models.bundle in Dependencies */,
 				27616A13DDEEA69F01070B3D /* PopPopSeoul_SharedAssets.bundle in Dependencies */,
 				21836F3DAD51C3443162E5AA /* PopPopSeoul_SharedTypes.bundle in Dependencies */,
 			);
@@ -1581,9 +1616,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2CA6C6752ED1EAE403B541A /* CasePaths.framework in Frameworks */,
+				EC656463A3B8C5EFE639FB41 /* CasePathsCore.framework in Frameworks */,
+				1B06205582E69CF46CD3BDAA /* Clocks.framework in Frameworks */,
+				3D9021194AADC7A63F5ABB19 /* CombineSchedulers.framework in Frameworks */,
 				64DE2B053F127A286ECAD146 /* Common.framework in Frameworks */,
+				504C1DD69DF46C1C48914BCF /* ComposableArchitecture.framework in Frameworks */,
+				E17B7DD4323C87244321C70C /* ComposableCoreLocation.framework in Frameworks */,
+				91719DD6946DD60A7C2BAA44 /* ConcurrencyExtras.framework in Frameworks */,
+				515CE12F60963E9E9AAD9C36 /* CustomDump.framework in Frameworks */,
+				EA949284C11DB940F84888C2 /* Dependencies.framework in Frameworks */,
+				857C1B780BFC4B3CB77462A4 /* DependenciesMacros.framework in Frameworks */,
+				50472AB0312AAC2699336912 /* IdentifiedCollections.framework in Frameworks */,
+				A4D35499470EDBEC1C899390 /* InternalCollectionsUtilities.framework in Frameworks */,
+				3E19AD58936AFF48A50317A5 /* IssueReporting.framework in Frameworks */,
+				B5541F57328D8C8224C4B72F /* Models.framework in Frameworks */,
+				42768142F86BC3A1BD324FF3 /* OrderedCollections.framework in Frameworks */,
+				06BED9B3F34031720AD37180 /* Perception.framework in Frameworks */,
+				252B8C3B7F5DC4E46E1A2D01 /* PerceptionCore.framework in Frameworks */,
 				D6D0E0E6DCC8DED98149691C /* SharedAssets.framework in Frameworks */,
 				3C0153ED1EF62E1866E62F83 /* SharedTypes.framework in Frameworks */,
+				12BB5DBE137A2A837C8A92A0 /* Sharing.framework in Frameworks */,
+				E0A1CB56A49E385A080F3953 /* Sharing1.framework in Frameworks */,
+				ADD36351CBD11CC3785936BE /* Sharing2.framework in Frameworks */,
+				64723DE26E39D9E977943409 /* SwiftNavigation.framework in Frameworks */,
+				CAAB2228D9792D83E4B58521 /* SwiftUINavigation.framework in Frameworks */,
+				E600A0E6E2FFC969A744318F /* UIKitNavigation.framework in Frameworks */,
+				1D2CFA68AA104EFF61788F5C /* UIKitNavigationShim.framework in Frameworks */,
+				43E9E84B9B311B2E1E4A3747 /* XCTestDynamicOverlay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2788,6 +2848,7 @@
 			);
 			dependencies = (
 				0686F68682E043D969373763 /* PBXTargetDependency */,
+				AE20AB086794BD8C3B823D14 /* PBXTargetDependency */,
 				FD647A47085D4E51E7CC8044 /* PBXTargetDependency */,
 				01B80D9E9617D9E1CA479420 /* PBXTargetDependency */,
 			);
@@ -3136,6 +3197,7 @@
 				E906803B11761D8180B20C35 /* Pretendard-Thin.otf in Resources */,
 				D8C0C2C1880199A299F7E5F3 /* Localizable.xcstrings in Resources */,
 				015E732AE4B861068B8EED78 /* PopPopSeoul_Common.bundle in Resources */,
+				F723F2C38AA036DA87A920BC /* PopPopSeoul_Models.bundle in Resources */,
 				EC91A89FCF470843C684CCA5 /* PopPopSeoul_SharedAssets.bundle in Resources */,
 				C56F458FB332CFD7C1602BED /* PopPopSeoul_SharedTypes.bundle in Resources */,
 			);
@@ -3897,6 +3959,12 @@
 			target = 75CF99DA69F6F375E108FCE2 /* Common */;
 			targetProxy = 4DEC16A119F3FE65D7DCF2C5 /* PBXContainerItemProxy */;
 		};
+		AE20AB086794BD8C3B823D14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Models;
+			target = EA997D0841AC70DE8AB32A76 /* Models */;
+			targetProxy = 997B72717AF86CEA1F888E32 /* PBXContainerItemProxy */;
+		};
 		D30E58E96D2EDDF16BED3332 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DesignSystem;
@@ -4002,11 +4070,11 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedAssets",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedTypes",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Common",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedTypes",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedTypes",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedAssets",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedAssets",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedTypes",
 				);
 				INFOPLIST_FILE = "Derived/InfoPlists/Common-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -4582,98 +4650,98 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPluginMessageHandling",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_UserDefaults",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAnalyticsTarget",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftBasicFormat",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FBLPromises",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseABTesting",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Clients",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-sharing_Sharing",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/OrderedCollections",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Environment",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/third_party_IsAppEncrypted",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxBuilder",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseABTesting",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedAssets",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParser",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitecture",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_NSData",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_UserDefaults",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/_SwiftSyntaxCShims",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ConcurrencyExtras",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Environment",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/XCTestDynamicOverlay",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Reachability",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Reachability",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Common",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Models",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseInstallations",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedAssets",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing1",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Models",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseCoreInternal",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-composable-architecture_ComposableArchitecture",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_AppDelegateSwizzler",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CustomDump",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftOperators",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseRemoteConfig",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CombineSchedulers",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseCoreInternal",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftNavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftUINavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax510",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseSharedSwift",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IdentifiedCollections",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/nanopb",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/nanopb_nanopb",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleAppMeasurementTarget",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Network",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_MethodSwizzler",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedTypes",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Dependencies",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParserDiagnostics",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax509",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_AppDelegateSwizzler",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Logger",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacrosPlugin",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseRemoteConfig",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Perception",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Promises_FBLPromises",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigationShim",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IssueReporting",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing2",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionCore",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Clocks",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftDiagnostics",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax600",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedTypes",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing1",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_NSData",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Common",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_MethodSwizzler",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_NSData",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Network",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParserDiagnostics",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IdentifiedCollections",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax509",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseRemoteConfigInternal",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseABTesting",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax600",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftNavigation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftDiagnostics",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseRemoteConfigInterop",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseInstallations",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Logger",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseInstallations",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacrosPlugin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Perception",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseCoreInternal",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftUINavigation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FBLPromises",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedAssets",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IssueReporting",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitecture",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Reachability",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Promises_FBLPromises",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseCoreInternal",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_UserDefaults",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseRemoteConfig",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/XCTestDynamicOverlay",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Dependencies",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-sharing_Sharing",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CustomDump",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ConcurrencyExtras",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAnalyticsTarget",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAnalyticsWrapper",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePaths",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Common",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPlugin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_AppDelegateSwizzler",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseABTesting",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_NSData",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/InternalCollectionsUtilities",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitectureMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableCoreLocation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Models",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Common",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/nanopb_nanopb",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CombineSchedulers",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedTypes",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftOperators",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/nanopb",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedTypes",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Environment",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacroExpansion",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseRemoteConfigInternal",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax510",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseInstallations",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleAppMeasurementTarget",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigationShim",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseSharedSwift",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftBasicFormat",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedAssets",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseRemoteConfig",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParser",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_UserDefaults",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_MethodSwizzler",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Clients",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitectureMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing2",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Models",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPluginMessageHandling",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Logger",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Reachability",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/third_party_IsAppEncrypted",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxBuilder",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Network",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableCoreLocation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Logger",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-composable-architecture_ComposableArchitecture",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/OrderedCollections",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_AppDelegateSwizzler",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPlugin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Environment",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Network",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/_SwiftSyntaxCShims",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4875,129 +4943,129 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseABTesting",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseSharedSwift",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseRemoteConfigInterop",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_AppDelegateSwizzler",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseCoreExtension",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAppCheckInterop",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseRemoteConfigInternal",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/third_party_IsAppEncrypted",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IdentifiedCollections",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/AppAuth",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleSignInSwift",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseCoreInternal",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/nanopb_nanopb",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/BottomSheet",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleAppMeasurementTarget",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseCoreExtension",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftDiagnostics",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitecture",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseRemoteConfig",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Logger",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/AppAuthCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedTypes",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftOperators",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Clocks",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParser",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax600",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleSignIn_GoogleSignIn",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_UserDefaults",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IssueReporting",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CombineSchedulers",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseABTesting",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Common",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FacebookAEM",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAnalyticsWrapper",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_NSData",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Promises_FBLPromises",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/_SwiftSyntaxCShims",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-composable-architecture_ComposableArchitecture",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GTMAppAuth",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GTMSessionFetcher_GTMSessionFetcherCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CustomDump",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax509",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxBuilder",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_MethodSwizzler",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAnalyticsTarget",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Models",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/AppCheckCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/AppAuth_AppAuthCore",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GTMAppAuth_GTMAppAuth",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_MethodSwizzler",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAuthInterop",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-sharing_Sharing",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/InternalCollectionsUtilities",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ConcurrencyExtras",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftUINavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Reachability",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Facebook_FacebookCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Facebook_FacebookAEM",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FacebookLogin",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/XCTestDynamicOverlay",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitectureMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleSignIn",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseAuth",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Environment",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedTypes",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Perception",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacroExpansion",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPlugin",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Clients",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Models",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_UserDefaults",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacrosPlugin",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPluginMessageHandling",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Common",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePaths",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAuth",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseCoreExtension",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/RecaptchaInterop",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableCoreLocation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigationShim",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseInstallations",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseCoreInternal",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/nanopb",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Environment",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FacebookCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GTMSessionFetcherCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/OrderedCollections",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Clients",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/BottomSheet_BottomSheet",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParserDiagnostics",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Dependencies",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/AppAuth_AppAuthCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAppCheckInterop",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/third_party_IsAppEncrypted",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FBLPromises",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Network",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseRemoteConfig",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing2",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsCore",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftNavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseInstallations",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAuthInternal",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedAssets",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Network",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Common",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedAssets",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DesignSystem",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Logger",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing1",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Reachability",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleSignIn_GoogleSignInSwift",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_NSData",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax510",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/NMapsMapTarget",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Facebook_FacebookLogin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPluginMessageHandling",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Environment",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseABTesting",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Logger",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftDiagnostics",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-composable-architecture_ComposableArchitecture",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAuth",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FBLPromises",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_AppDelegateSwizzler",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseAuth",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Environment",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/AppAuthCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GTMSessionFetcher_GTMSessionFetcherCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePaths",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleSignInSwift",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FacebookAEM",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitecture",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Common",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_AppDelegateSwizzler",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/InternalCollectionsUtilities",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseRemoteConfigInterop",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Clocks",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/nanopb",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleSignIn",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FacebookLogin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Logger",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseABTesting",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftOperators",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Perception",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/NMapsMapTarget",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Reachability",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/OrderedCollections",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedAssets",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftBasicFormat",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_UserDefaults",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAuthInternal",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseRemoteConfig",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseRemoteConfigInternal",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_MethodSwizzler",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Clients",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPlugin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleSignIn_GoogleSignIn",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IssueReporting",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacrosPlugin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/XCTestDynamicOverlay",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_NSData",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_NSData",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseCoreInternal",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseCoreExtension",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IdentifiedCollections",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing2",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Dependencies",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/nanopb_nanopb",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_MethodSwizzler",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedTypes",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAnalyticsWrapper",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Network",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseInstallations",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ConcurrencyExtras",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAuthInterop",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Models",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftUINavigation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax509",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedTypes",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing1",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseCoreInternal",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Facebook_FacebookCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/BottomSheet",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableCoreLocation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleSignIn_GoogleSignInSwift",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitectureMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParserDiagnostics",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CustomDump",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CombineSchedulers",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_UserDefaults",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/AppCheckCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GTMSessionFetcherCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Models",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DesignSystem",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseInstallations",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax510",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/_SwiftSyntaxCShims",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxBuilder",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Promises_FBLPromises",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GTMAppAuth",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FacebookCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Facebook_FacebookAEM",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/AppAuth",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigationShim",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleAppMeasurementTarget",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax600",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacroExpansion",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAnalyticsTarget",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Facebook_FacebookLogin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParser",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-sharing_Sharing",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseRemoteConfig",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Network",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseSharedSwift",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Clients",
 					"$(SRCROOT)/Tuist/.build/artifacts/facebook-ios-sdk/FBAEMKit",
 					"$(SRCROOT)/Tuist/.build/artifacts/facebook-ios-sdk/FBSDKCoreKit",
 					"$(SRCROOT)/Tuist/.build/artifacts/facebook-ios-sdk/FBSDKCoreKit_Basics",
@@ -5231,6 +5299,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Tuist/.build/checkouts/swift-navigation/Sources/UIKitNavigationShim/include",
+					"$(SRCROOT)/Tuist/.build/checkouts/swift-syntax/Sources/_SwiftSyntaxCShims/include",
+				);
 				INFOPLIST_FILE = "Derived/InfoPlists/DesignSystem-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -5238,6 +5311,12 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-fmodule-map-file=$(SRCROOT)/Tuist/.build/checkouts/swift-syntax/Sources/_SwiftSyntaxCShims/include/module.modulemap",
+					"-fmodule-map-file=$(SRCROOT)/Tuist/.build/tuist-derived/UIKitNavigationShim/UIKitNavigationShim.modulemap",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/Tuist/.build/checkouts/swift-syntax/Sources/_SwiftSyntaxCShims/include/module.modulemap -Xcc -fmodule-map-file=$(SRCROOT)/Tuist/.build/tuist-derived/UIKitNavigationShim/UIKitNavigationShim.modulemap -load-plugin-executable $BUILD_DIR/Debug$EFFECTIVE_PLATFORM_NAME/CasePathsMacros#CasePathsMacros -load-plugin-executable $BUILD_DIR/Debug$EFFECTIVE_PLATFORM_NAME/ComposableArchitectureMacros#ComposableArchitectureMacros -load-plugin-executable $BUILD_DIR/Debug$EFFECTIVE_PLATFORM_NAME/DependenciesMacrosPlugin#DependenciesMacrosPlugin -load-plugin-executable $BUILD_DIR/Debug$EFFECTIVE_PLATFORM_NAME/PerceptionMacros#PerceptionMacros";
 				PRODUCT_BUNDLE_IDENTIFIER = dev.sunidev.poppopseoul.clients;
 				PRODUCT_NAME = DesignSystem;
 				SDKROOT = iphoneos;
@@ -5265,12 +5344,64 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedAssets",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedTypes",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftOperators",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigationShim",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ConcurrencyExtras",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax510",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftDiagnostics",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableCoreLocation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IssueReporting",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-sharing_Sharing",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPluginMessageHandling",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacroExpansion",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacrosPlugin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Models",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitectureMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Models",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParser",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedTypes",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CustomDump",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPlugin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax509",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftNavigation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePaths",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftBasicFormat",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Common",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedAssets",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedTypes",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax600",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedAssets",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-composable-architecture_ComposableArchitecture",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/XCTestDynamicOverlay",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing2",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/_SwiftSyntaxCShims",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/OrderedCollections",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParserDiagnostics",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CombineSchedulers",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftUINavigation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Clocks",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxBuilder",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IdentifiedCollections",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Dependencies",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/InternalCollectionsUtilities",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing1",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Common",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitecture",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Perception",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Tuist/.build/checkouts/swift-navigation/Sources/UIKitNavigationShim/include",
+					"$(SRCROOT)/Tuist/.build/checkouts/swift-syntax/Sources/_SwiftSyntaxCShims/include",
 				);
 				INFOPLIST_FILE = "Derived/InfoPlists/DesignSystem-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -5279,6 +5410,12 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-fmodule-map-file=$(SRCROOT)/Tuist/.build/checkouts/swift-syntax/Sources/_SwiftSyntaxCShims/include/module.modulemap",
+					"-fmodule-map-file=$(SRCROOT)/Tuist/.build/tuist-derived/UIKitNavigationShim/UIKitNavigationShim.modulemap",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/Tuist/.build/checkouts/swift-syntax/Sources/_SwiftSyntaxCShims/include/module.modulemap -Xcc -fmodule-map-file=$(SRCROOT)/Tuist/.build/tuist-derived/UIKitNavigationShim/UIKitNavigationShim.modulemap -load-plugin-executable $BUILD_DIR/Debug$EFFECTIVE_PLATFORM_NAME/CasePathsMacros#CasePathsMacros -load-plugin-executable $BUILD_DIR/Debug$EFFECTIVE_PLATFORM_NAME/ComposableArchitectureMacros#ComposableArchitectureMacros -load-plugin-executable $BUILD_DIR/Debug$EFFECTIVE_PLATFORM_NAME/DependenciesMacrosPlugin#DependenciesMacrosPlugin -load-plugin-executable $BUILD_DIR/Debug$EFFECTIVE_PLATFORM_NAME/PerceptionMacros#PerceptionMacros";
 				PRODUCT_BUNDLE_IDENTIFIER = dev.sunidev.poppopseoul.clients;
 				PRODUCT_NAME = DesignSystem;
 				SDKROOT = iphoneos;
@@ -5483,58 +5620,58 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacroExpansion",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParser",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedTypes",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IssueReporting",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Perception",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftBasicFormat",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableCoreLocation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedAssets",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftNavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Common",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitecture",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax509",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacrosPlugin",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing2",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Clocks",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/OrderedCollections",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Dependencies",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxBuilder",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePaths",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftOperators",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CombineSchedulers",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigationShim",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedAssets",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPluginMessageHandling",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedTypes",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax510",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax600",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/InternalCollectionsUtilities",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftUINavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CustomDump",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftDiagnostics",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParserDiagnostics",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/XCTestDynamicOverlay",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-sharing_Sharing",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-composable-architecture_ComposableArchitecture",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitectureMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing1",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ConcurrencyExtras",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Common",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/_SwiftSyntaxCShims",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPlugin",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Models",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IdentifiedCollections",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Common",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing2",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftUINavigation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedAssets",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Models",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/OrderedCollections",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax600",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedTypes",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigationShim",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftBasicFormat",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitectureMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacroExpansion",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePaths",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CustomDump",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Common",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedTypes",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPluginMessageHandling",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftOperators",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IssueReporting",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/InternalCollectionsUtilities",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedAssets",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ConcurrencyExtras",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacrosPlugin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParser",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Clocks",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxBuilder",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Perception",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftNavigation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CombineSchedulers",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-sharing_Sharing",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing1",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax509",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/XCTestDynamicOverlay",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Dependencies",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax510",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-composable-architecture_ComposableArchitecture",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitecture",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParserDiagnostics",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPlugin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableCoreLocation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftDiagnostics",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/_SwiftSyntaxCShims",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsCore",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",

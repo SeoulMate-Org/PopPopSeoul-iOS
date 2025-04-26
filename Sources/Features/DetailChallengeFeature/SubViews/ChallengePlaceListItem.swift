@@ -9,15 +9,16 @@ import SwiftUI
 import Common
 import DesignSystem
 import SharedAssets
+import Models
 
 struct ChallengePlaceListItem: View {
-  let place: Place
+  let place: Attraction
   let onLikeTapped: () -> Void
   
   var body: some View {
     HStack(alignment: .center, spacing: 8) {
       ZStack(alignment: .bottomTrailing) {
-        AsyncImage(url: URL(string: place.imageURL)) { image in
+        AsyncImage(url: URL(string: place.imageUrl)) { image in
           image
             .resizable()
             .scaledToFill()
@@ -29,7 +30,7 @@ struct ChallengePlaceListItem: View {
         .frame(width: 76, height: 76)
         .clipShape(RoundedRectangle(cornerRadius: 16))
         
-        if place.isCompleted {
+        if place.isStamped {
           Assets.Images.stampActive.swiftUIImage
             .resizable()
             .frame(width: 28, height: 28)
@@ -46,27 +47,27 @@ struct ChallengePlaceListItem: View {
         
         HStack(spacing: 6) {
           
-          if place.likeCount > 0 {
+          if place.likes > 0 {
             HStack(spacing: 2) {
               Assets.Icons.heartFill.swiftUIImage
                 .resizable()
                 .foregroundColor(Colors.gray100.swiftUIColor)
                 .frame(width: 16, height: 16)
               
-              Text("\(place.likeCount)")
+              Text("\(place.likes)")
                 .font(.captionL)
                 .foregroundColor(Colors.gray300.swiftUIColor)
             }
           }
           
-          if place.participantCount > 0 {
+          if place.stampCount > 0 {
             HStack(spacing: 2) {
               Assets.Icons.profileFill.swiftUIImage
                 .resizable()
                 .foregroundColor(Colors.gray100.swiftUIColor)
                 .frame(width: 16, height: 16)
               
-              Text("\(place.participantCount)")
+              Text("\(place.stampCount)")
                 .font(.captionL)
                 .foregroundColor(Colors.gray300.swiftUIColor)
             }
@@ -91,7 +92,7 @@ struct ChallengePlaceListItem: View {
         Button(action: {
           onLikeTapped()
         }) {
-          if place.isLike {
+          if place.isLiked {
             Assets.Icons.heartFill.swiftUIImage
               .foregroundColor(Colors.red500.swiftUIColor)
               .frame(width: 24, height: 24)
@@ -112,7 +113,3 @@ struct ChallengePlaceListItem: View {
     .frame(height: 101)
   }
 }
-//
-//#Preview {
-//  ChallengePlaceListItem(place: mockPlace2, onLikeTapped: { })
-//}

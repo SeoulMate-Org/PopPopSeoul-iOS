@@ -9,9 +9,10 @@ import SwiftUI
 import Common
 import DesignSystem
 import SharedAssets
+import Models
 
 struct DetailChallengePlaceSection: View {
-  let challenge: Challenge
+  let challenge: DetailChallenge
   
   var body: some View {
     // 스탬프 미션 장소
@@ -29,7 +30,7 @@ struct DetailChallengePlaceSection: View {
       
       // 장소 리스트
       VStack(spacing: 16) {
-        ForEach(challenge.places) { place in
+        ForEach(challenge.attractions) { place in
           ChallengePlaceListItem(place: place, onLikeTapped: { })
         }
       }
@@ -38,7 +39,3 @@ struct DetailChallengePlaceSection: View {
     .padding(.horizontal, 20)
   }
 }
-
-//#Preview {
-//  DetailChallengePlaceSection(challenge: mockChallenges[0])
-//}

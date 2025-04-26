@@ -28,6 +28,9 @@ public struct DetailChallenge: Hashable, Equatable {
   public let challengeThemeId: Int
   public let challengeThemeName: String
   public let comments: [Comment]
+  public var stampCount: Int {
+    return attractions.count(where: { $0.isStamped })
+  }
 
   public init(
     id: Int,

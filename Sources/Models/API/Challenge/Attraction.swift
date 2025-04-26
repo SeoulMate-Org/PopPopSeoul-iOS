@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Attraction: Hashable, Equatable {
+public struct Attraction: Hashable, Equatable, Identifiable {
   public let id: Int
   public let name: String
   public let locationX: String
@@ -16,6 +16,7 @@ public struct Attraction: Hashable, Equatable {
   public let likes: Int
   public let isStamped: Bool
   public let stampCount: Int
+  public let imageUrl: String = "http://sohohaneulbit.cafe24.com/files/attach/images/357/358/b6f2a6a51114cd78ae4d64840f0ccb46.jpg"
 
   public init(
     id: Int,

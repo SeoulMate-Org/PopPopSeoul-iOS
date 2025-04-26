@@ -41,11 +41,11 @@ struct DetailChallengeView: View {
                 if let challenge = viewStore.challenge {
                   DetailChallengeInfoSection(challenge: challenge)
                   divider()
-                  //                DetailChallengeStampSection(challenge: challenge)
-                  //                divider()
-                  //                DetailChallengePlaceSection(challenge: challenge)
-                  //                divider()
-                  //                DetailChallengeCommentSection(challenge: challenge)
+                  DetailChallengeStampSection(challenge: challenge)
+                  divider()
+                  DetailChallengePlaceSection(challenge: challenge)
+                  divider()
+                  DetailChallengeCommentSection(challenge: challenge)
                 }
               }
               .padding(.bottom, 100)

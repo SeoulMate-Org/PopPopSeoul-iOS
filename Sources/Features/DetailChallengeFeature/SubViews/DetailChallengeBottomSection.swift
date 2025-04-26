@@ -70,7 +70,3 @@ struct DetailChallengeBottomSection: View {
     .buttonStyle(PlainButtonStyle())
   }
 }
-
-#Preview {
-  DetailChallengeBottomSection(challenge: mockChallenges[0])
-}

@@ -106,9 +106,3 @@ public struct ThemeChallengeListItemView: View {
     .frame(height: 96)
   }
 }
-
-#Preview {
-  ThemeChallengeListItemView(listType: .home,
-                             challenge: mockChallenges[0],
-                             onLikeTapped: { })
-}

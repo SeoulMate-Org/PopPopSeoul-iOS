@@ -8,6 +8,7 @@
 import SwiftUI
 import Common
 import SharedAssets
+import Models
 
 public struct CommentListItemView: View {
   let type: CommentType
@@ -46,14 +47,14 @@ public struct CommentListItemView: View {
             .frame(width: 20, height: 20)
             .foregroundColor(Color.hex(0x779BFF))
           
-          Text(comment.userNickname)
+          Text(comment.nickname)
             .font(.captionSB)
             .foregroundColor(Colors.gray700.swiftUIColor)
         }
         .frame(height: 32)
         .padding(.vertical, 6)
         
-        Text(comment.content)
+        Text(comment.comment)
           .font(.bodyS)
           .foregroundColor(Colors.gray900.swiftUIColor)
         
@@ -76,10 +77,6 @@ public struct CommentListItemView: View {
 }
 
 // MARK: Preview
-
-#Preview {
-  CommentListItemView(type: .detailChallenge, comment: mockComments[0], onEditTapped: nil, onDeleteTapped: nil)
-}
 
 // MARK: - Helper
 

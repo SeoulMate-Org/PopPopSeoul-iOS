@@ -24,15 +24,15 @@ public struct HomeTabFeature {
     
     var selectedThemeTab: ChallengeTheme = .localExploration
     let themeChallenges: [ChallengeTheme: [Challenge]] = [
-      .localExploration: mockChallenges,
-      .historyCulture: mockChallenges,
-      .artExhibition: mockChallenges,
-      .gourmetAndLegacy: mockChallenges,
-      .nightscapeAndMood: mockChallenges,
-      .walkingTour: mockChallenges,
-      .photoTour: mockChallenges,
-      .mustVisit: mockChallenges,
-      .culturalEvent: mockChallenges
+      .localExploration: [],
+      .historyCulture: [],
+      .artExhibition: [],
+      .gourmetAndLegacy: [],
+      .nightscapeAndMood: [],
+      .walkingTour: [],
+      .photoTour: [],
+      .mustVisit: [],
+      .culturalEvent: []
     ]
   }
   
