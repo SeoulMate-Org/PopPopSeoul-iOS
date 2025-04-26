@@ -17,8 +17,8 @@ public struct GetDefaultPageRequest {
   public var queryItems: [URLQueryItem] {
     return [
       URLQueryItem(name: "page", value: "\(page)"),
-      URLQueryItem(name: "size", value: "\(page)"),
-      URLQueryItem(name: "language", value: "\(page)")
+      URLQueryItem(name: "size", value: "\(size)"),
+      URLQueryItem(name: "language", value: "\(language)")
     ]
   }
 }
