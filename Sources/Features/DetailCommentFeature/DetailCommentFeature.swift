@@ -39,7 +39,7 @@ public struct DetailCommentsFeature {
   
   @CasePathable
   public enum Action: Equatable {
-    case onApear
+    case onAppear
     case updateList([Comment])
     case tappedBack
     case tappedEdit(Comment)
@@ -61,7 +61,7 @@ public struct DetailCommentsFeature {
   public var body: some ReducerOf<Self> {
     Reduce { state, action in
       switch action {
-      case .onApear:
+      case .onAppear:
         return .run { [state = state] send in
           do {
             let id = state.challengeId

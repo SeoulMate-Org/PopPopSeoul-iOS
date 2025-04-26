@@ -108,6 +108,9 @@ struct DetailCommentsView: View {
           }
         }
         .animation(.easeOut(duration: 0.25), value: viewStore.keyboardHeight)
+        .onAppear {
+          viewStore.send(.onAppear)
+        }
         .overlay(
           Group {
             if let deletingComment = viewStore.deletingComment {

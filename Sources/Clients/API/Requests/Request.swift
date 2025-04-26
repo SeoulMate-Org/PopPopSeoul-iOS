@@ -37,7 +37,7 @@ public struct Request: Sendable {
       throw APIRequestBuildError.invalidURL
     }
     
-    components.scheme = "http"
+    components.scheme = "https"
     if !queryItems.isEmpty {
       components.queryItems = queryItems
     }
