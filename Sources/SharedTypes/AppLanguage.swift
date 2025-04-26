@@ -10,4 +10,11 @@ import Foundation
 public enum AppLanguage: String, Equatable {
   case kor
   case eng
+  
+  public var apiCode: String {
+    switch self {
+    case .kor: return "KOR"
+    case .eng: return "ENG"
+    }
+  }
 }

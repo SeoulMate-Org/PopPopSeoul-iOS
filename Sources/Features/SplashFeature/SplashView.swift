@@ -12,7 +12,7 @@ import SharedAssets
 import Common
 
 struct SplashView: View {
-  @State var store: StoreOf<SplashFeature>
+  let store: StoreOf<SplashFeature>
   
   init(store: StoreOf<SplashFeature>) {
     self.store = store

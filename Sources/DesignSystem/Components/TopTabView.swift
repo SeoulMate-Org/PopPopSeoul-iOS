@@ -24,7 +24,8 @@ public struct TopTabView<T: Hashable>: View {
   
   public var body: some View {
     GeometryReader { geo in
-      let tabWidth = (geo.size.width - 40) / CGFloat(tabs.count) // 좌우 패딩 포함 계산
+      let availableWidth = max(0, geo.size.width - 40)
+      let tabWidth = tabs.isEmpty ? 0 : availableWidth / CGFloat(tabs.count) // 좌우 패딩 포함 계산
       
       HStack(spacing: 0) {
         ForEach(tabs, id: \.self) { tab in

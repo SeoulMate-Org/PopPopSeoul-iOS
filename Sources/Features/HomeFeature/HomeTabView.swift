@@ -11,7 +11,7 @@ import Common
 import SharedTypes
 
 struct HomeTabView: View {
-  @State var store: StoreOf<HomeTabFeature>
+  let store: StoreOf<HomeTabFeature>
   
   init(store: StoreOf<HomeTabFeature>) {
     self.store = store

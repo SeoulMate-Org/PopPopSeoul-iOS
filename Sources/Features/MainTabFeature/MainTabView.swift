@@ -19,83 +19,105 @@ public struct MainTabView: View {
   }
   
   public var body: some View {
-    WithViewStore(store, observe: \.selectedTab) { viewStore in
-      VStack(spacing: 0) {
-        Group {
-          switch viewStore.state {
-          case .home:
-            HomeTabView(
-              store: store.scope(
-                state: \.home,
-                action: \.home
-              )
-            )
-          case .myChallenge:
-            MyChallengeTabView(
-              store: store.scope(
-                state: \.myChallenge,
-                action: \.myChallenge
-              )
-            )
-          case .profile:
-            ProfileTabView()
-          }
-        }
-        .frame(maxHeight: .infinity)
-        
+    NavigationStack(path: $store.scope(state: \.path, action: \.path)) {
+      WithViewStore(store, observe: \.selectedTab) { viewStore in
         VStack(spacing: 0) {
-          Rectangle()
-            .foregroundColor(Colors.gray25.swiftUIColor)
-            .frame(height: 1)
-          
-          HStack {
-            tabItem(tab: .home, isSelected: viewStore.state == .home) {
-              store.send(.selectedTabChanged(.home))
-            }
-            
-            tabItem(tab: .myChallenge, isSelected: viewStore.state == .myChallenge) {
-              store.send(.selectedTabChanged(.myChallenge))
-            }
-            
-            tabItem(tab: .profile, isSelected: viewStore.state == .profile) {
-              store.send(.selectedTabChanged(.profile))
+          Group {
+            switch viewStore.state {
+            case .home:
+              HomeTabView(
+                store: store.scope(
+                  state: \.home,
+                  action: \.home
+                )
+              )
+            case .myChallenge:
+              MyChallengeTabView(
+                store: store.scope(
+                  state: \.myChallenge,
+                  action: \.myChallenge
+                )
+              )
+            case .profile:
+              ProfileTabView()
             }
           }
-          .frame(height: 58)
-          .background(Color(Colors.appWhite.swiftUIColor))
-          .contentMargins(.horizontal, 20)
+          .frame(maxHeight: .infinity)
+          
+          tabView(viewStore: viewStore)
         }
-        .background(
-          Color(Colors.appWhite.swiftUIColor)
-            .modifier(ShadowModifier(
-              shadow: AppShadow(
-                color: Color(Colors.trueBlack.swiftUIColor).opacity(0.08),
-                x: 0,
-                y: -4,
-                blur: 12,
-                spread: 0
-              ))
-            )
-            .edgesIgnoringSafeArea(.bottom)
-        )
       }
-//      .overlay(
-//        Group {
-//          if viewStore.showLoginAlert {
-////            LoginAlertView(
-////              title: "로그인이 필요해요",
-////              message: "찜하기 기능은 로그인 후 이용 가능합니다.",
-////              onCancel: { viewStore.send(.loginAlert(.cancelTapped)) },
-////              onLogin: { viewStore.send(.loginAlert(.loginTapped)) }
-////            )
-//          }
-//        }
-//      )
+    } destination: { store in
+      switch store.state {
+      case .detail:
+        if let store = store.scope(state: \.detail, action: \.detail) {
+          DetailChallengeView(store: store)
+        }
+      case .challengeMap:
+        if let store = store.scope(state: \.detail, action: \.detail) {
+          DetailChallengeView(store: store)
+        }
+      case .detailAttraction:
+        if let store = store.scope(state: \.detail, action: \.detail) {
+          DetailChallengeView(store: store)
+        }
+      }
     }
+    //      .overlay(
+    //        Group {
+    //          if viewStore.showLoginAlert {
+    ////            LoginAlertView(
+    ////              title: "로그인이 필요해요",
+    ////              message: "찜하기 기능은 로그인 후 이용 가능합니다.",
+    ////              onCancel: { viewStore.send(.loginAlert(.cancelTapped)) },
+    ////              onLogin: { viewStore.send(.loginAlert(.loginTapped)) }
+    ////            )
+    //          }
+    //        }
+    //      )
   }
   
   @ViewBuilder
-  func tabItem(tab: MainTabFeature.State.Tab, isSelected: Bool, action: @escaping () -> Void) -> some View {
+  private func tabView(viewStore: ViewStore<MainTabFeature.State.Tab, MainTabFeature.Action>) -> some View {
+    VStack(spacing: 0) {
+      Rectangle()
+        .foregroundColor(Colors.gray25.swiftUIColor)
+        .frame(height: 1)
+      
+      HStack {
+        tabItem(tab: .home, isSelected: viewStore.state == .home) {
+          store.send(.selectedTabChanged(.home))
+        }
+        
+        tabItem(tab: .myChallenge, isSelected: viewStore.state == .myChallenge) {
+          store.send(.selectedTabChanged(.myChallenge))
+        }
+        
+        tabItem(tab: .profile, isSelected: viewStore.state == .profile) {
+          store.send(.selectedTabChanged(.profile))
+        }
+      }
+      .frame(height: 58)
+      .background(Color(Colors.appWhite.swiftUIColor))
+      .contentMargins(.horizontal, 20)
+    }
+    .background(
+      Color(Colors.appWhite.swiftUIColor)
+        .modifier(ShadowModifier(
+          shadow: AppShadow(
+            color: Color(Colors.trueBlack.swiftUIColor).opacity(0.08),
+            x: 0,
+            y: -4,
+            blur: 12,
+            spread: 0
+          ))
+        )
+        .edgesIgnoringSafeArea(.bottom)
+    )
+  }
+  
+  @ViewBuilder
+  private func tabItem(tab: MainTabFeature.State.Tab, isSelected: Bool, action: @escaping () -> Void) -> some View {
     
     let icon = isSelected ? tab.selectedIcon : tab.icon
     let label = tab.title

@@ -69,12 +69,3 @@ public class AppSettingManager {
     }
   }
 }
-
-extension AppLanguage {
-  var apiCode: String {
-    switch self {
-    case .kor: return "KOR"
-    case .eng: return "ENG"
-    }
-  }
-}

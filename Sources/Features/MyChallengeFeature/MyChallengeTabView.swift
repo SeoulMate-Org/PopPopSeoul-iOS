@@ -8,103 +8,101 @@ import ComposableArchitecture
 import Common
 import DesignSystem
 import SharedTypes
+import Models
 
 struct MyChallengeTabView: View {
-  @State private var store: StoreOf<MyChallengeFeature>
+  var store: StoreOf<MyChallengeTabFeature>
   
-  public init(store: StoreOf<MyChallengeFeature>) {
+  init(store: StoreOf<MyChallengeTabFeature>) {
     self.store = store
   }
   
   var body: some View {
     WithViewStore(store, observe: { $0 }) { viewStore in
-      VStack(spacing: 0) {
-        HeaderView(
-          type: .titleOnly(title: String(sLocalization: .mychallengeHeaderTitle))
+      rootView(viewStore: viewStore)
+    }
+  }
+  
+  private func rootView(viewStore: ViewStoreOf<MyChallengeTabFeature>) -> some View {
+    VStack(spacing: 0) {
+      HeaderView(
+        type: .titleOnly(title: String(sLocalization: .mychallengeHeaderTitle))
+      )
+      
+      TopTabView(
+        tabs: ChallengeStatus.allCases,
+        titleProvider: { $0.title },
+        selectedTab: viewStore.binding(
+          get: \.selectedTab,
+          send: MyChallengeTabFeature.Action.tabChanged
         )
-        
-        TopTabView(
-          tabs: MyChallengeType.allCases,
-          titleProvider: { $0.title },
-          selectedTab: viewStore.binding(
-            get: \.selectedTab,
-            send: MyChallengeFeature.Action.tabChanged
+      )
+      tabContent(viewStore: viewStore)
+    }
+    .onAppear {
+      viewStore.send(.onApear)
+    }
+  }
+  private func tabContent(viewStore: ViewStoreOf<MyChallengeTabFeature>) -> some View {
+    VStack(spacing: 0) {
+      switch viewStore.selectedTab {
+      case .interest:
+        if viewStore.interestList.isEmpty {
+          MyChallengeEmptyView(
+            tab: .interest,
+            onTap: { /* TODO */ }
           )
-        )
-
-        switch viewStore.selectedTab {
-        case .interest:
-          if viewStore.interestList.isEmpty {
-            MyChallengeEmptyView(
-              tab: .interest,
-              onTap: {
-                // TODO: - 챌린지 찾아보기 이동
-              }
-            )
-          } else {
-            ZStack {
-              MyChallengeListView(
-                tab: .interest,
-                items: viewStore.interestList,
-                onLikeTapped: { id in
-                  viewStore.send(.tappedInterest(id: id))
-                })
-              .overlay(
-                Group {
-                  if viewStore.showUndoToast {
-                    VStack(spacing: 0) {
-                      Spacer()
-                      AppToast(type: .iconTextWithButton(
-                        message: String(sLocalization: .mychallengeInterestDeleteToast),
-                        buttonTitle: String(sLocalization: .toastButtonRestoration),
-                        onTap: {
-                          viewStore.send(.undoLike)
-                        }
-                      ))
-                      .padding(.bottom, 16)
-                    }
-                    .transition(AnyTransition.opacity.animation(.easeInOut(duration: 0.2)))
-                  }
-                }
-              )
-            }
-          }
-          
-        case .progress:
-          if viewStore.progressList.isEmpty {
-            MyChallengeEmptyView(
-              tab: .progress,
-              onTap: {
-                // TODO: - 챌린지 찾아보기 이동
-              }
-            )
-          } else {
-            MyChallengeListView(
-              tab: .progress,
-              items: viewStore.progressList,
-              onLikeTapped: { id in
-                viewStore.send(.tappedInterest(id: id))
-              })
-          }
-        case .completed:
-          if viewStore.completedList.isEmpty {
-            MyChallengeEmptyView(tab: .completed, onTap: { })
-          } else {
-            WithViewStore(store, observe: \.self) { viewStore in
-              MyChallengeListView(
-                tab: .completed,
-                items: viewStore.completedList,
-                onLikeTapped: { id in
-                  viewStore.send(.tappedInterest(id: id))
-                })
-            }
-          }
+        } else {
+          listView(viewStore: viewStore, items: viewStore.interestList, tab: .interest)
+        }
+        
+      case .progress:
+        if viewStore.progressList.isEmpty {
+          MyChallengeEmptyView(
+            tab: .progress,
+            onTap: { /* TODO */ }
+          )
+        } else {
+          listView(viewStore: viewStore, items: viewStore.progressList, tab: .progress)
+        }
+        
+      case .completed:
+        if viewStore.completedList.isEmpty {
+          MyChallengeEmptyView(tab: .completed, onTap: { })
+        } else {
+          listView(viewStore: viewStore, items: viewStore.completedList, tab: .completed)
         }
       }
-      .onAppear {
-        viewStore.send(.onApear)
-      }
     }
+  }
+  
+  private func listView(
+    viewStore: ViewStoreOf<MyChallengeTabFeature>,
+    items: [MyChallenge],
+    tab: ChallengeStatus
+  ) -> some View {
+    MyChallengeListView(
+      tab: tab,
+      items: items,
+      onItemTapped: { id in viewStore.send(.tappedItem(id: id)) },
+      onLikeTapped: { id in viewStore.send(.tappedInterest(id: id)) }
+    )
+    .overlay(
+      Group {
+        if viewStore.showUndoToast {
+          VStack(spacing: 0) {
+            Spacer()
+            AppToast(type: .iconTextWithButton(
+              message: String(sLocalization: .mychallengeInterestDeleteToast),
+              buttonTitle: String(sLocalization: .toastButtonRestoration),
+              onTap: { viewStore.send(.undoLike) }
+            ))
+            .padding(.bottom, 16)
+          }
+          .transition(.opacity.animation(.easeInOut(duration: 0.2)))
+        }
+      }
+    )
   }
 }
 
@@ -112,7 +110,7 @@ struct MyChallengeTabView: View {
 
 // MARK: - Helper
 
-extension MyChallengeType {
+extension ChallengeStatus {
   var title: String {
     switch self {
     case .interest: String(sLocalization: .mychallengeInterestTitle)

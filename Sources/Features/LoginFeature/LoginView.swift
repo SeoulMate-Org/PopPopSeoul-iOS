@@ -18,7 +18,7 @@ import AuthenticationServices
 import FBSDKCoreKit
 
 struct LoginView: View {
-  @State var store: StoreOf<LoginFeature>
+  let store: StoreOf<LoginFeature>
   let isShowBack: Bool
   
   init(store: StoreOf<LoginFeature>, isShowBack: Bool) {

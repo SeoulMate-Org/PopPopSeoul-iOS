@@ -1,5 +1,6 @@
 import ComposableArchitecture
 import Foundation
+import Common
 
 /// A client to dispatch network request to URLSession
 @DependencyClient
@@ -48,20 +49,41 @@ extension NetworkDispatcher: DependencyKey {
       let (data, response) = try await urlSession.data(for: urlRequest)
 
       guard let response = response as? HTTPURLResponse else {
+        let message: String = """
+          API ERROR
+          error: invalidResponse      
+          """
+        logger.error(message)
         throw NetworkRequestError.invalidResponse
       }
 
       // check for connection failure reasons
       guard !NSURLErrorConnectionFailureCodes.contains(response.statusCode) else {
+        let message: String = """
+          API ERROR
+          error: connectionLost      
+          """
+        logger.error(message)
         throw NetworkRequestError.connectionLost
       }
 
       // check if response is successful
       guard response.isSuccessful else {
         if let apiError = try? JSONDecoder().decode(APIErrorResponse.self, from: data) {
+          let message: String = """
+            API ERROR
+            error: \(apiError.code) \(apiError.message)          
+            """
+          logger.error(message)
           throw apiError
         } else {
-          throw httpError(response.statusCode)
+          let httpError = httpError(response.statusCode)
+          let message: String = """
+            API ERROR
+            error: \(response.statusCode) \(httpError.errorDescription ?? httpError.localizedDescription)
+            """
+          logger.error(message)
+          throw httpError
         }
       }
       return (data, response)

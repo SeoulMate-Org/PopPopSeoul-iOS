@@ -73,7 +73,7 @@ extension AuthClient: DependencyKey {
         return result
       },
       fbLogin: { provider in
-        let body = PostAuthLoginFbIosRequest(email: provider.token, languageCode: provider.loginType)
+        let body = PostAuthLoginFbIosRequest(email: provider.token, languageCode: AppSettingManager.shared.language.apiCode)
         
         let request: Request = .post(.authLoginFbIos, body: try? body.encoded())
         let (data, _) = try await apiClient.send(request)

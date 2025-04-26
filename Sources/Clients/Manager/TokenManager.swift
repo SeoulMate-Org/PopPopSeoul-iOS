@@ -19,16 +19,18 @@ public class TokenManager {
   
   private init() {}
   
+  public var isLogin: Bool {
+    return _accessToken != nil
+  }
+  
   // MARK: - Access Token
   public var accessToken: String? {
-    get {
-      if let token = _accessToken {
-        return token
-      } else {
-        let token = keychainClient.accessToken
-        _accessToken = token
-        return token
-      }
+    if let token = _accessToken {
+      return token
+    } else {
+      let token = keychainClient.accessToken
+      _accessToken = token
+      return token
     }
   }
   
@@ -44,14 +46,12 @@ public class TokenManager {
   
   // MARK: - Refresh Token
   public var refreshToken: String? {
-    get {
-      if let token = _refreshToken {
-        return token
-      } else {
-        let token = keychainClient.refreshToken
-        _refreshToken = token
-        return token
-      }
+    if let token = _refreshToken {
+      return token
+    } else {
+      let token = keychainClient.refreshToken
+      _refreshToken = token
+      return token
     }
   }
   
@@ -59,12 +59,12 @@ public class TokenManager {
     _refreshToken = token
     await keychainClient.setRefreshToken(token)
   }
-
+  
   public func clearRefreshToken() async {
     _refreshToken = nil
     await keychainClient.remove(.refreshToken)
   }
-
+  
   // MARK: - Clear All
   public func clearAll() async {
     await clearAccessToken()

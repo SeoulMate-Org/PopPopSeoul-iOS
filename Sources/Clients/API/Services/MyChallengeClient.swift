@@ -10,7 +10,7 @@ import Models
 import SharedTypes
 
 public struct MyChallengeClient {
-  public var fetchList: @Sendable (MyChallengeType) async throws -> [MyChallenge]
+  public var fetchList: @Sendable (ChallengeStatus) async throws -> [MyChallenge]
 }
 
 extension MyChallengeClient: DependencyKey {
@@ -35,15 +35,5 @@ public extension DependencyValues {
   var myChallengeClient: MyChallengeClient {
     get { self[MyChallengeClient.self] }
     set { self[MyChallengeClient.self] = newValue }
-  }
-}
-
-extension MyChallengeType {
-  var apiCode: String {
-    switch self {
-    case .interest: return "LIKE"
-    case .progress: return "PROGRESS"
-    case .completed: return "COMPLETE"
-    }
   }
 }

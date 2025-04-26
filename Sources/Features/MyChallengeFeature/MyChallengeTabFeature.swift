@@ -1,5 +1,5 @@
 //
-//  MyChallengeFeature.swift
+//  MyChallengeTabFeature.swift
 //  Common
 //
 //  Created by suni on 4/18/25.
@@ -13,7 +13,7 @@ import Clients
 import Models
 
 @Reducer
-public struct MyChallengeFeature {
+public struct MyChallengeTabFeature {
   public init() {}
   
   @Dependency(\.myChallengeClient) var myChallengeClient
@@ -22,7 +22,7 @@ public struct MyChallengeFeature {
   
   @ObservableState
   public struct State: Equatable {
-    var selectedTab: MyChallengeType = .interest
+    var selectedTab: ChallengeStatus = .interest
     
     var interestList: [MyChallenge] = []
     var progressList: [MyChallenge] = []
@@ -37,13 +37,14 @@ public struct MyChallengeFeature {
   @CasePathable
   public enum Action: Equatable {
     case onApear
-    case tabChanged(MyChallengeType)
-    case fetchList(MyChallengeType)
+    case tabChanged(ChallengeStatus)
+    case fetchList(ChallengeStatus)
     case fetchListError
     
     case undoLike
     case dismissToast
     case tappedInterest(id: Int)
+    case tappedItem(id: Int)
     
     case setInterestList([MyChallenge])
     case setProgressList([MyChallenge])
@@ -73,9 +74,19 @@ public struct MyChallengeFeature {
               await send(.fetchListError)
             }
           case .progress:
-            await send(.setProgressList([]))
+            do {
+              let list = try await myChallengeClient.fetchList(tab)
+              await send(.setProgressList(list))
+            } catch {
+              await send(.fetchListError)
+            }
           case .completed:
-            await send(.setCompletedList([]))
+            do {
+              let list = try await myChallengeClient.fetchList(tab)
+              await send(.setCompletedList(list))
+            } catch {
+              await send(.fetchListError)
+            }
           }
         }
         
@@ -117,6 +128,9 @@ public struct MyChallengeFeature {
         
       case .fetchListError:
         // TODO: - ERROR
+        return .none
+        
+      case .tappedItem:
         return .none
       }
     }

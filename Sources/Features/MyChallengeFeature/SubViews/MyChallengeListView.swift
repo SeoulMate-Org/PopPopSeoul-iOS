@@ -13,8 +13,9 @@ import SharedTypes
 import Models
 
 struct MyChallengeListView: View {
-  let tab: MyChallengeType
+  let tab: ChallengeStatus
   let items: [MyChallenge]
+  let onItemTapped: (Int) -> Void
   let onLikeTapped: (Int) -> Void
   
   var body: some View {
@@ -37,6 +38,9 @@ struct MyChallengeListView: View {
             )
             .padding(.horizontal, 20)
             .padding(.vertical, 8)
+            .onTapGesture {
+              onItemTapped(items[index].id)
+            }
             
             // 마지막 아이템 제외하고만 Divider 추가
             if index < items.count - 1 {

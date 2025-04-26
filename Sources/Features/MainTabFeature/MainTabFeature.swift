@@ -22,10 +22,12 @@ public struct MainTabFeature {
       case home, myChallenge, profile
     }
     
-    var myChallenge: MyChallengeFeature.State = .init()
+    var myChallenge: MyChallengeTabFeature.State = .init()
     var home: HomeTabFeature.State = .init()
     
     var showLoginAlert: Bool = false
+    
+    var path = StackState<Path.State>()
   }
   
   // MARK: Actions
@@ -34,10 +36,12 @@ public struct MainTabFeature {
   public enum Action: Equatable {
     case selectedTabChanged(State.Tab)
     
-    case myChallenge(MyChallengeFeature.Action)
+    case myChallenge(MyChallengeTabFeature.Action)
     case home(HomeTabFeature.Action)
     
     case loginAlert(LoginAlertAction)
+    
+    case path(StackActionOf<Path>)
   }
   
   public enum LoginAlertAction {
@@ -49,7 +53,7 @@ public struct MainTabFeature {
   
   public var body: some Reducer<State, Action> {    
     Scope(state: \.myChallenge, action: \.myChallenge) {
-      MyChallengeFeature()
+      MyChallengeTabFeature()
     }
 
     Scope(state: \.home, action: \.home) {
@@ -71,11 +75,26 @@ public struct MainTabFeature {
         // TODO: - 로그인 화면 이동
         return .none
         
+      case .myChallenge(.tappedItem(let id)):
+        state.path.append(.detail(DetailChallengeFeature.State(with: id)))
+        return .none
+        
       default:
         return .none
       }
     }
+    .forEach(\.path, action: \.path)
   }
 }
 
 // MARK: - Helper
+extension MainTabFeature {
+  
+  @Reducer(state: .equatable, action: .equatable)
+  public enum Path {
+    case detail(DetailChallengeFeature)
+    case challengeMap(DetailChallengeFeature)
+    case detailAttraction(DetailChallengeFeature)
+  }
+  
+}

@@ -34,7 +34,7 @@ public struct AppFeature {
   // MARK: Actions
   
   @CasePathable
-  public enum Action: Equatable {
+  public enum Action {
     // Navigation
     case destination(PresentationAction<Destination.Action>)
   }

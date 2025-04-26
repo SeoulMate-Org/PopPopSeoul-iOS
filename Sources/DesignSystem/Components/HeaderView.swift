@@ -26,7 +26,9 @@ public struct HeaderView: View {
         
       case .back(_, let onBack),
           .backWithMenu(_, let onBack, _):
-        Button(action: onBack) {
+        Button(action: {
+          onBack()
+        }) {
           Assets.Icons.arrowLeftLine.swiftUIImage
             .foregroundColor(Colors.gray900.swiftUIColor)
         }.frame(width: 50, height: 50)

@@ -13,7 +13,7 @@ import SharedTypes
 import Models
 
 struct MyChallengeistItemView: View {
-  let tab: MyChallengeType
+  let tab: ChallengeStatus
   let challenge: MyChallenge
   let onLikeTapped: () -> Void
 

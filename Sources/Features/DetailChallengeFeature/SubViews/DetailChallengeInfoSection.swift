@@ -9,14 +9,15 @@ import SwiftUI
 import Common
 import DesignSystem
 import SharedAssets
+import Models
 
 struct DetailChallengeInfoSection: View {
-  let challenge: Challenge
+  let challenge: DetailChallenge
   
   var body: some View {
     VStack(alignment: .leading, spacing: 0) {
       // 이미지
-      AsyncImage(url: URL(string: challenge.imageURL)) { image in
+      AsyncImage(url: URL(string: challenge.imageUrl)) { image in
         image
           .resizable()
           .scaledToFill()
@@ -36,7 +37,7 @@ struct DetailChallengeInfoSection: View {
           .foregroundColor(Color.hex(0x2B2B2B))
         
         // 4. 타이틀(소제목)
-        Text(challenge.subtitle)
+        Text(challenge.title)
           .font(.appTitle3)
           .foregroundColor(Color.hex(0x2B2B2B))
           .fixedSize(horizontal: false, vertical: true)
@@ -44,9 +45,9 @@ struct DetailChallengeInfoSection: View {
         
         // 5. 아이콘+수치
         HStack(spacing: 10) {
-          iconStat(image: Assets.Icons.heartFill.swiftUIImage, count: challenge.likeCount)
-          iconStat(image: Assets.Icons.profileFill.swiftUIImage, count: challenge.participantCount)
-          iconStat(image: Assets.Icons.locationFill.swiftUIImage, count: challenge.places.count)
+          iconStat(image: Assets.Icons.heartFill.swiftUIImage, count: challenge.likedCount)
+          iconStat(image: Assets.Icons.profileFill.swiftUIImage, count: challenge.progressCount)
+          iconStat(image: Assets.Icons.locationFill.swiftUIImage, count: challenge.attractionCount)
           iconStat(image: Assets.Icons.commentFill.swiftUIImage, count: challenge.commentCount)
         }
         .padding(.top, 36)
@@ -76,7 +77,3 @@ struct DetailChallengeInfoSection: View {
     }
   }
 }
-
-//#Preview {
-//  DetailChallengeInfoSection(challenge: mockChallenges[0])
-//}
