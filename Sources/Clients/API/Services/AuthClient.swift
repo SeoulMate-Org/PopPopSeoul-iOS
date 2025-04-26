@@ -16,6 +16,7 @@ public struct AuthClient {
   
   public var refresh: @Sendable () async throws -> Void
   public var login: @Sendable (_ provider: AuthProvider) async throws -> Auth
+  public var fbLogin: @Sendable (_ provider: AuthProvider) async throws -> Auth
   public var logout: @Sendable () async throws -> Void
 }
 
@@ -58,9 +59,23 @@ extension AuthClient: DependencyKey {
         }
       },
       login: { provider in
-        let body = PostAuthLoginRequest(token: provider.token, loginType: provider.loginType, languageCode: AppSettingManager.shared.language.apiCode)
+        let body = PostAuthLoginRequest(token: "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwiZW1haWwiOiJ0ZXN0QGV4YW1wbGUuY29tIiwiaXNzIjoiYWNjb3VudHMuZ29vZ2xlLmNvbSIsImF1ZCI6InlvdXItY2xpZW50LWlkIiwiZXhwIjo5OTk5OTk5OTk5fQ.dummy-signature", loginType: "GOOGLE", languageCode: "KOR")
+//        let body = PostAuthLoginRequest(token: provider.token, loginType: provider.loginType, languageCode: AppSettingManager.shared.language.apiCode)
         
         let request: Request = .post(.authLogin, body: try? body.encoded())
+        let (data, _) = try await apiClient.send(request)
+        
+        let result: Auth = try data.decoded()
+        
+        await TokenManager.shared.setAccessToken(result.accessToken)
+        await TokenManager.shared.setRefreshToken(result.refreshToken)
+        
+        return result
+      },
+      fbLogin: { provider in
+        let body = PostAuthLoginFbIosRequest(email: provider.token, languageCode: provider.loginType)
+        
+        let request: Request = .post(.authLoginFbIos, body: try? body.encoded())
         let (data, _) = try await apiClient.send(request)
         
         let result: Auth = try data.decoded()
@@ -97,7 +112,15 @@ extension AuthProvider {
     switch self {
     case let .apple(token): return token
     case let .google(token): return token
-    case let .facebook(token): return token
+    case let .facebook(email): return email
+    }
+  }
+  
+  var email: String {
+    switch self {
+    case let .apple(token): return token
+    case let .google(token): return token
+    case let .facebook(email): return email
     }
   }
 }

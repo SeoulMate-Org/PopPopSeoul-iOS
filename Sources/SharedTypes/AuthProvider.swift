@@ -10,5 +10,5 @@ import Foundation
 public enum AuthProvider: Equatable {
   case apple(identityToken: String)
   case google(idToken: String)
-  case facebook(token: String)
+  case facebook(email: String)
 }

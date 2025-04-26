@@ -564,6 +564,7 @@
 		E91EFE77BFEE340B43194D47 /* Facebook_FacebookCore.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C92C2C3D8279026F9632600D /* Facebook_FacebookCore.bundle */; };
 		E9DE71C84C88288412A32A64 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8609EF56D0937265092D5D36 /* Pretendard-ExtraLight.otf */; };
 		EA7AB37F2DBCCF1D003A391F /* AsyncBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7AB37D2DBCCE5D003A391F /* AsyncBox.swift */; };
+		EA7AB3812DBCDF45003A391F /* PostAuthLoginFbIosRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7AB3802DBCDF45003A391F /* PostAuthLoginFbIosRequest.swift */; };
 		EAE62223229FB6E39F76669F /* CasePathsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CF7412324C02D1745F0E0D /* CasePathsCore.framework */; };
 		EAE7F2F12DBB84A2002B3C9E /* MyChallengeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7F2F02DBB84A2002B3C9E /* MyChallengeType.swift */; };
 		EAE7F2FD2DBB8922002B3C9E /* GetChallengeMyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7F2FC2DBB8922002B3C9E /* GetChallengeMyRequest.swift */; };
@@ -1401,6 +1402,7 @@
 		EA14930892816AFA4A88950C /* GoogleUtilities_Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleUtilities_Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA26B67DE986D8D090F59956 /* CombineSchedulers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CombineSchedulers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7AB37D2DBCCE5D003A391F /* AsyncBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncBox.swift; sourceTree = "<group>"; };
+		EA7AB3802DBCDF45003A391F /* PostAuthLoginFbIosRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAuthLoginFbIosRequest.swift; sourceTree = "<group>"; };
 		EAE7F2F02DBB84A2002B3C9E /* MyChallengeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChallengeType.swift; sourceTree = "<group>"; };
 		EAE7F2F52DBB8856002B3C9E /* MyChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChallenge.swift; sourceTree = "<group>"; };
 		EAE7F2FC2DBB8922002B3C9E /* GetChallengeMyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeMyRequest.swift; sourceTree = "<group>"; };
@@ -2316,6 +2318,7 @@
 				DE192FE54B098C9E1557C74A /* PostAuthLoginRequest.swift */,
 				38A6E84E0A71C9B7555C325D /* PostAuthRefreshRequest.swift */,
 				EAE7F2FC2DBB8922002B3C9E /* GetChallengeMyRequest.swift */,
+				EA7AB3802DBCDF45003A391F /* PostAuthLoginFbIosRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -3628,6 +3631,7 @@
 				061DB2D0949F911138215856 /* TuistBundle+Clients.swift in Sources */,
 				C962AC6CD2A805482F874A87 /* TuistFonts+Clients.swift in Sources */,
 				051AA0FC2982A0E9210FD7EC /* TuistPlists+Clients.swift in Sources */,
+				EA7AB3812DBCDF45003A391F /* PostAuthLoginFbIosRequest.swift in Sources */,
 				D3CE5076C804834D146456E7 /* APIClient.swift in Sources */,
 				A079B3760130F59822BB68A6 /* APIErrorResponse.swift in Sources */,
 				CF0930AE7BC5CB401A2395FC /* Endpoint.swift in Sources */,

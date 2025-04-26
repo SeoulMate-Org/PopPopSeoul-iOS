@@ -21,6 +21,7 @@ public struct Endpoint: Sendable {
 
 public extension Endpoint {
   static let authLogin = Self(baseUrl: apiBaseUrl, pathComponents: ["auth", "login"])
+  static let authLoginFbIos = Self(baseUrl: apiBaseUrl, pathComponents: ["auth", "login", "fb", "ios"])
   static let authRefresh = Self(baseUrl: apiBaseUrl, pathComponents: ["auth", "refresh"])
   static let challengeMy = Self(baseUrl: apiBaseUrl, pathComponents: ["challenge", "my"])
 }

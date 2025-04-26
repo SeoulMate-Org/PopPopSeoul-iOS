@@ -40,6 +40,7 @@ public struct LoginFeature {
     case appleSignInCompleted(String)
     case loginError
     case authLogin(AuthProvider)
+    case authFbLogin(AuthProvider)
     case successLogin(isInit: Bool)
     case backTapped
     case aroundTapped
@@ -53,8 +54,8 @@ public struct LoginFeature {
       case let .googleSignInCompleted(token):
         return .send(.authLogin(.google(idToken: token)))
         
-      case let .facebookSignInCompleted(token):
-        return .send(.authLogin(.facebook(token: token)))
+      case let .facebookSignInCompleted(email):
+        return .send(.authFbLogin(.facebook(email: email)))
         
       case let .appleSignInCompleted(token):
         return .send(.authLogin(.apple(identityToken: token)))
@@ -67,6 +68,16 @@ public struct LoginFeature {
         return .run { send in
           do {
             let auth = try await authClient.login(provider)
+            await send(.successLogin(isInit: auth.isNewUser))
+          } catch {
+            await send(.loginError)
+          }
+        }
+        
+      case let .authFbLogin(provider):
+        return .run { send in
+          do {
+            let auth = try await authClient.fbLogin(provider)
             await send(.successLogin(isInit: auth.isNewUser))
           } catch {
             await send(.loginError)

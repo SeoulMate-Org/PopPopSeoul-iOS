@@ -145,7 +145,8 @@ struct LoginView: View {
       
       // ✅ 로그인 성공 시 access token 획득
       if let token = AuthenticationToken.current?.tokenString {
-        store.send(.facebookSignInCompleted(token))
+        //        store.send(.facebookSignInCompleted(token))
+        fetchFacebookUserInfo(withToken: token)
       } else {
         store.send(.loginError)
       }
@@ -161,16 +162,22 @@ struct LoginView: View {
       httpMethod: .get
     )
     graphRequest.start { _, result, error in
-      print("\(String(describing: result)) \(String(describing: error))")
-      //      if let error = error {
-      //        return
-      //      }
-      //
-      //      if let result = result as? [String: Any] {
-      //        let id = result["id"] as? String ?? "-"
-      //        let name = result["name"] as? String ?? "-"
-      //        let email = result["email"] as? String ?? "-"
-      //      }
+      if let error = error {
+        logger.error("\(String(describing: error))")
+        store.send(.loginError)
+        return
+      }
+      
+      if let result = result as? [String: Any] {
+        if let email = result["email"] as? String {
+          store.send(.facebookSignInCompleted(email))
+          return
+        } else if let id = result["id"] as? String {
+          store.send(.facebookSignInCompleted(id))
+          return
+        }
+      }
+      store.send(.loginError)
     }
   }
   
