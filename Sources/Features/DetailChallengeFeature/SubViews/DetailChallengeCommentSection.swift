@@ -78,8 +78,8 @@ struct DetailChallengeCommentSection: View {
         
       }
       
-      // case2. 로그인 X or 참여중 챌린지 X
-      if !TokenManager.shared.isLogin || !(challenge.challengeStatus == .progress) {
+      // case2. 로그인 X or Like 챌린지
+      if !TokenManager.shared.isLogin || challenge.challengeStatus == .interest {
         Text(String(sLocalization: .detailchallengeCommentDes))
           .font(.bodyS)
           .foregroundStyle(Colors.gray900.swiftUIColor)
