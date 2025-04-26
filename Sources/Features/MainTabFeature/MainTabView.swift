@@ -49,17 +49,13 @@ public struct MainTabView: View {
       }
     } destination: { store in
       switch store.state {
-      case .detail:
-        if let store = store.scope(state: \.detail, action: \.detail) {
+      case .detailChallenge:
+        if let store = store.scope(state: \.detailChallenge, action: \.detailChallenge) {
           DetailChallengeView(store: store)
         }
-      case .challengeMap:
-        if let store = store.scope(state: \.detail, action: \.detail) {
-          DetailChallengeView(store: store)
-        }
-      case .detailAttraction:
-        if let store = store.scope(state: \.detail, action: \.detail) {
-          DetailChallengeView(store: store)
+      case .detailComments:
+        if let store = store.scope(state: \.detailComments, action: \.detailComments) {
+          DetailCommentsView(store: store)
         }
       }
     }

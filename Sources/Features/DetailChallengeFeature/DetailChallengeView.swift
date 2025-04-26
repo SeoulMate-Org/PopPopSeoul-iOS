@@ -45,7 +45,17 @@ struct DetailChallengeView: View {
                   divider()
                   DetailChallengePlaceSection(challenge: challenge)
                   divider()
-                  DetailChallengeCommentSection(challenge: challenge)
+                  DetailChallengeCommentSection(
+                    challenge: challenge,
+                    onDeleteTap: { id in
+                      viewStore.send(.tappedDeleteComment(id: id))
+                    },
+                    onEditTap: { comment in
+                      viewStore.send(.tappedEditComment(id: challenge.id, comment))
+                    },
+                    onAllCommentTap: {
+                      viewStore.send(.tappedAllComments(id: challenge.id))
+                    })
                 }
               }
               .padding(.bottom, 100)
@@ -68,16 +78,28 @@ struct DetailChallengeView: View {
                 .edgesIgnoringSafeArea(.all)
             }
           }
+          
+          if let challenge = viewStore.challenge {
+            DetailChallengeBottomSection(
+              challenge: challenge,
+              onTap: { action in
+                viewStore.send(.bottomAction(action))
+              })
+          }
         }
         
-        //        DetailChallengeBottomSection(challenge: challenge)
-        
         if viewStore.showMenu {
-          AppMoreMenu(items: [AppMoreMenuItem(title: String(sLocalization: .detailchallengeEndButton), action: {
-            viewStore.send(.quitChallenge)
-          })], onDismiss: {
-            viewStore.send(.dismissMenu)
-          }, itemHeight: 40)
+          AppMoreMenu(
+            items: [
+              AppMoreMenuItem(
+              title: String(sLocalization: .detailchallengeEndButton),
+              action: {
+                viewStore.send(.quitChallenge)
+              })
+            ], onDismiss: {
+              viewStore.send(.dismissMenu)
+            }, itemHeight: 40
+          )
           .padding(.trailing, 20)
           .offset(y: 44)
           .transition(.opacity.combined(with: .move(edge: .top)))

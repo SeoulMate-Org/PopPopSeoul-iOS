@@ -34,6 +34,7 @@ public struct AppMoreMenu: View {
             .frame(height: itemHeight)
             .padding(.horizontal, 16)                // ✅ 내부 여백
         }
+        .frame(minWidth: 80)
         
         if index < items.count - 1 {
           Divider()

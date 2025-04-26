@@ -15,7 +15,7 @@ import Models
 public struct DetailChallengeFeature {
   
   @Dependency(\.detailChallengeClient) var detailChallengeClient
-    
+  
   // MARK: State
   
   @ObservableState
@@ -40,6 +40,18 @@ public struct DetailChallengeFeature {
     case dismissMenu
     case quitChallenge
     case getError
+    case tappedAllComments(id: Int)
+    case tappedEditComment(id: Int, Comment)
+    case tappedDeleteComment(id: Int)
+    case bottomAction(BottomAction)
+  }
+  
+  public enum BottomAction: Equatable {
+    case like
+    case map
+    case stamp
+    case start
+    case login
   }
   
   // MARK: Reducer
@@ -48,10 +60,10 @@ public struct DetailChallengeFeature {
     Reduce { state, action in
       switch action {
       case .onApear:
-        
-        return .run { send in
+        return .run { [state = state] send in
           do {
-            let challenge = try await detailChallengeClient.get(1)
+            let id = state.challengeId
+            let challenge = try await detailChallengeClient.get(id)
             await send(.update(challenge))
           } catch {
             await send(.getError)
@@ -60,7 +72,7 @@ public struct DetailChallengeFeature {
         
       case .tappedBack:
         return .run { _ in
-            await self.dismiss()
+          await self.dismiss()
         }
         
       case .tappedMore:
@@ -83,6 +95,22 @@ public struct DetailChallengeFeature {
       case .getError:
         // TODO: ERROR 처리
         return .none
+        
+      case let .bottomAction(action):
+        switch action {
+        case .like:
+          return .none
+        case .map:
+          return .none
+        case .stamp:
+          return .none
+        case .start:
+          return .none
+        case .login:
+          return .none
+        }
+        
+      default: return .none
       }
     }
   }

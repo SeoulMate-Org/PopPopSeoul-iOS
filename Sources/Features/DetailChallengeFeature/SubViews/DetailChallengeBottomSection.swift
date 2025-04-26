@@ -10,28 +10,31 @@ import ComposableArchitecture
 import Common
 import DesignSystem
 import SharedAssets
+import Models
+import Clients
 
 struct DetailChallengeBottomSection: View {
-  let challenge: Challenge
+  let challenge: DetailChallenge
+  let onTap: (DetailChallengeFeature.BottomAction) -> ()
   
   var body: some View {
     HStack(spacing: 8) {
-      interestButton(isSelected: challenge.isLike, action: { })
+      interestButton(isSelected: challenge.isLiked, action: { onTap(.like) })
         .frame(width: 48, height: 48)
       
-      if isLogined {
-        AppButton(title: String(sLocalization: .detailchallengeMapButton), size: .msize, style: .outline, layout: .textOnly, state: .enabled, onTap: { }, isFullWidth: true)
+      if TokenManager.shared.isLogin {
+        AppButton(title: String(sLocalization: .detailchallengeMapButton), size: .msize, style: .outline, layout: .textOnly, state: .enabled, onTap: { onTap(.map) }, isFullWidth: true)
           .padding(.vertical, 10)
         
-        if challenge.isParticipating {
-          AppButton(title: String(sLocalization: .detailchallengeStampButton), size: .msize, style: .primary, layout: .textOnly, state: .enabled, onTap: { }, isFullWidth: true)
+        if challenge.challengeStatus == .progress {
+          AppButton(title: String(sLocalization: .detailchallengeStampButton), size: .msize, style: .primary, layout: .textOnly, state: .enabled, onTap: { onTap(.stamp) }, isFullWidth: true)
             .padding(.vertical, 10)
         } else {
-          AppButton(title: String(sLocalization: .detailchallengeStartButton), size: .msize, style: .primary, layout: .textOnly, state: .enabled, onTap: { }, isFullWidth: true)
+          AppButton(title: String(sLocalization: .detailchallengeStartButton), size: .msize, style: .primary, layout: .textOnly, state: .enabled, onTap: { onTap(.start) }, isFullWidth: true)
             .padding(.vertical, 10)
         }
       } else {
-        AppButton(title: String(sLocalization: .detailchallengeLoginButton), size: .msize, style: .primary, layout: .textOnly, state: .enabled, onTap: { }, isFullWidth: true)
+        AppButton(title: String(sLocalization: .detailchallengeLoginButton), size: .msize, style: .primary, layout: .textOnly, state: .enabled, onTap: { onTap(.login) }, isFullWidth: true)
           .padding(.vertical, 10)
       }
     }
@@ -70,3 +73,5 @@ struct DetailChallengeBottomSection: View {
     .buttonStyle(PlainButtonStyle())
   }
 }
+
+// MARK: - Helper

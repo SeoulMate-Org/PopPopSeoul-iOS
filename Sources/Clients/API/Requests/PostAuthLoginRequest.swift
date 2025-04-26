@@ -11,17 +11,15 @@ import Common
 public struct PostAuthLoginRequest: Encodable {
   public init(
     token: String,
-    loginType: String,
-    languageCode: String
+    loginType: String
   ) {
     self.token = token
     self.loginType = loginType
-    self.languageCode = languageCode
   }
 
   public let token: String
   public let loginType: String
-  public let languageCode: String
+  public let languageCode: String = AppSettingManager.shared.language.apiCode
 
   enum CodingKeys: CodingKey {
     case token

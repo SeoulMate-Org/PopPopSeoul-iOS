@@ -76,8 +76,22 @@ public struct MainTabFeature {
         return .none
         
       case .myChallenge(.tappedItem(let id)):
-        state.path.append(.detail(DetailChallengeFeature.State(with: id)))
+        state.path.append(.detailChallenge(DetailChallengeFeature.State(with: id)))
         return .none
+        
+      case let .path(action):
+        switch action {
+        case .element(id: _, action: .detailChallenge(.tappedAllComments(let id))):
+          state.path.append(.detailComments(DetailCommentsFeature.State(with: id)))
+          return .none
+          
+        case let .element(id: _, action: .detailChallenge(.tappedEditComment(id, comment))):
+          state.path.append(.detailComments(DetailCommentsFeature.State(with: id, comment)))
+          return .none
+          
+        default:
+          return .none
+        }
         
       default:
         return .none
@@ -92,9 +106,8 @@ extension MainTabFeature {
   
   @Reducer(state: .equatable, action: .equatable)
   public enum Path {
-    case detail(DetailChallengeFeature)
-    case challengeMap(DetailChallengeFeature)
-    case detailAttraction(DetailChallengeFeature)
+    case detailChallenge(DetailChallengeFeature)
+    case detailComments(DetailCommentsFeature)
   }
   
 }

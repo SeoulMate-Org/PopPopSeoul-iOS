@@ -10,15 +10,13 @@ import Common
 
 public struct PostAuthLoginFbIosRequest: Encodable {
   public init(
-    email: String,
-    languageCode: String
+    email: String
   ) {
     self.email = email
-    self.languageCode = languageCode
   }
 
   public let email: String
-  public let languageCode: String
+  public let languageCode: String = AppSettingManager.shared.language.apiCode
 
   enum CodingKeys: CodingKey {
     case email

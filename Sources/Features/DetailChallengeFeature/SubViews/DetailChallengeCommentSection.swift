@@ -14,6 +14,9 @@ import Clients
 
 struct DetailChallengeCommentSection: View {
   let challenge: DetailChallenge
+  let onDeleteTap: (Int) -> Void
+  let onEditTap: (Comment) -> Void
+  let onAllCommentTap: () -> Void
   
   var body: some View {
     // 댓글
@@ -31,7 +34,14 @@ struct DetailChallengeCommentSection: View {
         
         VStack(spacing: 0) {
           ForEach(displayedComments.indices, id: \.self) { index in
-            CommentListItemView(type: .detailChallenge, comment: displayedComments[index], onEditTapped: nil, onDeleteTapped: nil)
+            CommentListItemView(
+              type: .detailChallenge,
+              comment: displayedComments[index],
+              onEditTapped: {
+                onEditTap(displayedComments[index])
+              }, onDeleteTapped: {
+                onDeleteTap(displayedComments[index].id)
+              })
             
             // 마지막 아이템 제외하고만 Divider 추가
             if index < displayedComments.count - 1 {
@@ -51,14 +61,15 @@ struct DetailChallengeCommentSection: View {
             .foregroundColor(Colors.gray25.swiftUIColor)
             .padding(.horizontal, 20)
         } else {
-          AppButton(title: String(sLocalization: .detailchallengeCommentButton),
-                    size: .ssize,
-                    style: .neutral,
-                    layout: .textOnly,
-                    state: .enabled,
-                    onTap: {
-            // TODO: 댓글 전체보기 이동
-          }, isFullWidth: true)
+          AppButton(
+            title: String(sLocalization: .detailchallengeCommentButton),
+            size: .ssize,
+            style: .neutral,
+            layout: .textOnly,
+            state: .enabled,
+            onTap: onAllCommentTap,
+            isFullWidth: true
+          )
           .frame(height: 40)
           .padding(.vertical, 20)
           .padding(.horizontal, 16)
@@ -79,7 +90,3 @@ struct DetailChallengeCommentSection: View {
     }
   }
 }
-
-//#Preview {
-//  DetailChallengeCommentSection(challenge: mockChallenges[0])
-//}

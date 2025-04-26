@@ -16,12 +16,10 @@ public struct MyChallengeClient {
 extension MyChallengeClient: DependencyKey {
   public static var liveValue: MyChallengeClient {
     @Dependency(\.apiClient) var apiClient
-    
-    let languge = AppSettingManager.shared.language
-    
+        
     return Self(
       fetchList: { type in
-        let query = GetChallengeMyRequest(myChallenge: type.apiCode, language: languge.apiCode)
+        let query = GetChallengeMyRequest(myChallenge: type.apiCode)
         let request: Request = .get(.challengeMy, query: query.queryItems)
         let (data, _) = try await apiClient.send(request)
         

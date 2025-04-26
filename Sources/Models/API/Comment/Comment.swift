@@ -7,7 +7,10 @@
 
 import Foundation
 
-public struct Comment: Hashable, Equatable {
+public struct Comment: Identifiable, Hashable, Equatable {
+  public var id: Int {
+    return commentId
+  }
   public let commentId: Int
   public let comment: String
   public let nickname: String

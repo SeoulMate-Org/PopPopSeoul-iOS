@@ -25,6 +25,7 @@ public extension Endpoint {
   static let authRefresh = Self(baseUrl: apiBaseUrl, pathComponents: ["auth", "refresh"])
   static let challengeMy = Self(baseUrl: apiBaseUrl, pathComponents: ["challenge", "my"])
   static let challenge = Self(baseUrl: apiBaseUrl, pathComponents: ["challenge"])
+  static let comment = Self(baseUrl: apiBaseUrl, pathComponents: ["comment"])
 }
 
 var apiBaseUrl: String {

@@ -9,14 +9,12 @@ import Foundation
 
 public struct GetChallengeMyRequest {
   public let myChallenge: String
-  public let language: String
+  public let language: String = AppSettingManager.shared.language.apiCode
 
   public init(
-    myChallenge: String,
-    language: String
+    myChallenge: String
   ) {
     self.myChallenge = myChallenge
-    self.language = language
   }
 
   public var queryItems: [URLQueryItem] {
