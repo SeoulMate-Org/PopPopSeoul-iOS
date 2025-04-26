@@ -4,7 +4,6 @@ import FacebookCore
 import Features
 import GoogleSignIn
 import FirebaseCore
-import Logging
 
 // MARK: - AppDelegate
 
@@ -51,7 +50,6 @@ struct PopPopSeoulApp: App {
   var appDelegate
   
   init() {
-    LoggingSystem.bootstrap(StreamLogHandler.standardOutput)
     FirebaseApp.configure()
   }
   
