@@ -9,16 +9,16 @@ import Foundation
 import Common
 
 public struct GetDefaultPageRequest {
-  public let language: String = AppSettingManager.shared.language.apiCode
+  public let languageCode: String = AppSettingManager.shared.language.apiCode
 
   public let page: Int = 0
-  public let size: Int = 100 // TODO: - 페이징
+  public let size: Int = 20 // TODO: - 페이징
   
   public var queryItems: [URLQueryItem] {
     return [
       URLQueryItem(name: "page", value: "\(page)"),
       URLQueryItem(name: "size", value: "\(size)"),
-      URLQueryItem(name: "language", value: "\(language)")
+      URLQueryItem(name: "languageCode", value: "\(languageCode)")
     ]
   }
 }
