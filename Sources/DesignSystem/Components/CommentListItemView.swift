@@ -16,33 +16,33 @@ public struct CommentListItemView: View {
   let onEditTapped: (() -> Void)?
   let onDeleteTapped: (() -> Void)?
   
-  @State var showMenu: Bool = false
+  @Binding var activeMenuCommentId: Int?
   
   public init(
     type: CommentType,
     comment: Comment,
     onEditTapped: (() -> Void)?,
-    onDeleteTapped: (() -> Void)?
+    onDeleteTapped: (() -> Void)?,
+    activeMenuCommentId: Binding<Int?>
   ) {
     self.type = type
     self.comment = comment
     self.onEditTapped = onEditTapped
     self.onDeleteTapped = onDeleteTapped
+    self._activeMenuCommentId = activeMenuCommentId
   }
   
   public var body: some View {
     ZStack(alignment: .topTrailing) {
-      if showMenu {
-        Color.black.opacity(0.001) // 거의 투명한 레이어
-          .ignoresSafeArea()
-          .onTapGesture {
-            showMenu = false
-          }
-          .zIndex(0) // AppMoreMenu 아래 깔리면 안 되므로 최소한 위로
-      }
       
       if comment.isMine {
-        Button(action: { showMenu = true }) {
+        Button(action: {
+          if activeMenuCommentId == nil {
+            activeMenuCommentId = comment.id
+          } else {
+            activeMenuCommentId = nil
+          }
+        }) {
           Assets.Icons.more.swiftUIImage
             .foregroundColor(Colors.gray300.swiftUIColor)
             .frame(width: 16, height: 16)
@@ -51,7 +51,7 @@ public struct CommentListItemView: View {
         .padding(.top, type.verticalPadding - 2)
         .padding(.trailing, 10)
         
-        if showMenu {
+        if activeMenuCommentId == comment.id {
           AppMoreMenu(
             items: [
               AppMoreMenuItem(
@@ -65,7 +65,7 @@ public struct CommentListItemView: View {
                   onDeleteTapped?()
                 })
             ], onDismiss: {
-              showMenu = false
+              activeMenuCommentId = nil
             }, itemHeight: 34
           )
           .fixedSize()
@@ -102,6 +102,12 @@ public struct CommentListItemView: View {
       .padding(.vertical, type.verticalPadding)
       .frame(maxWidth: .infinity, alignment: .leading)
     }
+    .gesture(
+      DragGesture(minimumDistance: 0)
+        .onChanged { _ in
+          activeMenuCommentId = nil
+        }
+    )
   }
   
   private func relativeDateString(from date: Date) -> String {

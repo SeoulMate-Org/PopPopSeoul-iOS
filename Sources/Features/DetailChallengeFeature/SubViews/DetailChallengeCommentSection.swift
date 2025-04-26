@@ -17,6 +17,7 @@ struct DetailChallengeCommentSection: View {
   let onDeleteTap: (Int) -> Void
   let onEditTap: (Comment) -> Void
   let onAllCommentTap: () -> Void
+  @State private var activeMenuCommentId: Int? = nil
   
   var body: some View {
     // 댓글
@@ -41,7 +42,7 @@ struct DetailChallengeCommentSection: View {
                 onEditTap(displayedComments[index])
               }, onDeleteTapped: {
                 onDeleteTap(displayedComments[index].id)
-              })
+              }, activeMenuCommentId: $activeMenuCommentId)
             
             // 마지막 아이템 제외하고만 Divider 추가
             if index < displayedComments.count - 1 {
@@ -88,5 +89,11 @@ struct DetailChallengeCommentSection: View {
           .padding(.horizontal, 16)
       }
     }
+    .gesture(
+      DragGesture(minimumDistance: 0)
+        .onChanged { _ in
+          activeMenuCommentId = nil
+        }
+    )
   }
 }
