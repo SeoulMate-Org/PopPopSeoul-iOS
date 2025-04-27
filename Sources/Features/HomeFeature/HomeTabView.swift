@@ -8,7 +8,7 @@ import SwiftUI
 import ComposableArchitecture
 import DesignSystem
 import Common
-import SharedTypes
+import SharedTypes 
 import Clients
 
 struct HomeTabView: View {
@@ -38,16 +38,16 @@ struct HomeTabView: View {
                 HomeAccessPromptSection(type: .location)
                   .padding(.top, 48)
               }
-            }
-            
-            WithViewStore(store, observe: { $0.locationList }) { listStore in
-              if listStore.count > 0 {
-                HomeChallengeLocationSection(
-                  challenges: listStore.state,
-                  onTapped: { id in
-                    store.send(.tappedChallenge(id: id))
-                })
-                .padding(.top, 48)
+              
+              WithViewStore(store, observe: { $0.locationList }) { listStore in
+                if listStore.count > 0 {
+                  HomeChallengeLocationSection(
+                    challenges: listStore.state,
+                    onTapped: { id in
+                      store.send(.tappedChallenge(id: id))
+                  })
+                  .padding(.top, 48)
+                }
               }
             }
             

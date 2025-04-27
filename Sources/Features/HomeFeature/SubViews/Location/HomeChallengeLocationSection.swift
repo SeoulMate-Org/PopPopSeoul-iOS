@@ -19,7 +19,6 @@ struct HomeChallengeLocationSection: View {
   var body: some View {
     let screenWidth = UIScreen.main.bounds.width
     let cardWidth = screenWidth * (160.0 / 375.0)
-    let cardHeight = cardWidth + 8.0 + 58.0
     
     VStack(alignment: .leading, spacing: 0) {
       // MARK: - 헤더 타이틀
@@ -38,7 +37,6 @@ struct HomeChallengeLocationSection: View {
         HStack(spacing: 8) {
           ForEach(challenges) { challenge in
             HomeChallengeLocationItemView(challenge: challenge, cardWidth: cardWidth)
-              .frame(width: cardWidth, height: cardHeight)
               .onTapGesture {
                 onTapped(challenge.id)
               }

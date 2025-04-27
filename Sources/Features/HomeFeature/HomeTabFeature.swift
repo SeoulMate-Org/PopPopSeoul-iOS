@@ -133,8 +133,10 @@ public struct HomeTabFeature {
       case let .locationManager(.didUpdateLocations(locations)):
         return .run { send in
           if let location = locations.first {
+            await send(.updateLocationListType(.list))
             await send(.updateUserCoordinate(Coordinate(location.coordinate)))
           } else {
+            await send(.updateLocationListType(.defaultList))
             await send(.updateUserCoordinate(Coordinate()))
           }
         }
@@ -147,6 +149,11 @@ public struct HomeTabFeature {
         
       case let .updateLocationListType(type):
         state.locationListType = type
+        
+        if state.locationListType != .defaultList ||
+            state.locationListType != .list {
+          state.locationList = []
+        }
         return .none
         
       case let .fetchLocationList(coordinate):

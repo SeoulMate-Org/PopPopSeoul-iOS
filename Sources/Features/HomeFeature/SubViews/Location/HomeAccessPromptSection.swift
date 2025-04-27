@@ -36,20 +36,24 @@ struct HomeAccessPromptSection: View {
       
       if type == .login {
         type.image
+          .resizable()
+          .scaledToFit()
           .frame(width: 98, height: 98)
           .padding(.top, 3)
       } else {
         type.image
+          .resizable()
+          .scaledToFit()
           .frame(width: 75, height: 92)
-          .padding(.top, 0)
+          .padding(.bottom, 11)
           .padding(.trailing, 16)
       }
     }
+    .frame(height: 100)
     .background(
       RoundedRectangle(cornerRadius: 16)
         .fill(Color.hex(0x1D8EFE))
     )
-    .frame(height: 100)
     .padding(.horizontal, 20)
   }
   

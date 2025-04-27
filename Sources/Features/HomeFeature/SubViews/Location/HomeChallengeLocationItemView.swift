@@ -16,8 +16,9 @@ struct HomeChallengeLocationItemView: View {
   let cardWidth: CGFloat
   
   var body: some View {
+    let cardHeight = cardWidth + 8.0 + 58.0
+    
     VStack(alignment: .leading, spacing: 0) {
-      
       ZStack(alignment: .topLeading) {
         AsyncImage(url: URL(string: challenge.imageUrl)) { image in
           image
@@ -64,10 +65,9 @@ struct HomeChallengeLocationItemView: View {
         iconStat(image: Assets.Icons.locationFill.swiftUIImage, count: challenge.attractionCount)
       }
       .padding(.top, 4)
-      
-      Spacer()
     }
-    .frame(maxWidth: cardWidth)
+    .frame(width: cardWidth)
+    .frame(minHeight: cardHeight, alignment: .top)
   }
   
   private func iconStat(image: Image, count: Int) -> some View {
