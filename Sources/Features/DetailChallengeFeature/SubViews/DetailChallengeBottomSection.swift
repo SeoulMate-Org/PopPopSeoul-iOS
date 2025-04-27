@@ -26,13 +26,16 @@ struct DetailChallengeBottomSection: View {
         AppButton(title: String(sLocalization: .detailchallengeMapButton), size: .msize, style: .outline, layout: .textOnly, state: .enabled, onTap: { onTap(.map) }, isFullWidth: true)
           .padding(.vertical, 10)
         
-        if challenge.challengeStatus == .progress {
+        switch challenge.challengeStatus {
+        case .progress:
           AppButton(title: String(sLocalization: .detailchallengeStampButton), size: .msize, style: .primary, layout: .textOnly, state: .enabled, onTap: { onTap(.stamp) }, isFullWidth: true)
             .padding(.vertical, 10)
-        } else {
-          // TODO: - 미진행 사용자 분리
-          AppButton(title: String(sLocalization: .detailchallengeStartButton), size: .msize, style: .primary, layout: .textOnly, state: .enabled, onTap: { onTap(.start) }, isFullWidth: true)
+        case .completed:
+          AppButton(title: String(sLocalization: .detailchallengeStartButton), size: .msize, style: .primary, layout: .textOnly, state: .disabled, onTap: { onTap(.start) }, isFullWidth: true)
             .padding(.vertical, 10)
+        default:
+            AppButton(title: String(sLocalization: .detailchallengeStartButton), size: .msize, style: .primary, layout: .textOnly, state: .enabled, onTap: { onTap(.start) }, isFullWidth: true)
+              .padding(.vertical, 10)
         }
       } else {
         AppButton(title: String(sLocalization: .detailchallengeLoginButton), size: .msize, style: .primary, layout: .textOnly, state: .enabled, onTap: { onTap(.login) }, isFullWidth: true)

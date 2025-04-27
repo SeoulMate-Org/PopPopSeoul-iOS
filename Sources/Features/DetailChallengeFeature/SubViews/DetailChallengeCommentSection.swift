@@ -80,7 +80,6 @@ struct DetailChallengeCommentSection: View {
       
       // case2. 로그인 X or Like 챌린지
       if !TokenManager.shared.isLogin || challenge.challengeStatus == nil {
-        // TODO: - 챌린지 미진행 체크
         Text(String(sLocalization: .detailchallengeCommentDes))
           .font(.bodyS)
           .foregroundStyle(Colors.gray900.swiftUIColor)
