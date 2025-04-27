@@ -7,6 +7,7 @@
 
 import Foundation
 import ComposableArchitecture
+import Clients
 
 @Reducer
 public struct MainTabFeature {
@@ -40,6 +41,7 @@ public struct MainTabFeature {
     case home(HomeTabFeature.Action)
     
     case loginAlert(LoginAlertAction)
+    case successLogin(isNewUser: Bool)
     
     case path(StackActionOf<Path>)
   }
@@ -63,7 +65,12 @@ public struct MainTabFeature {
     Reduce { state, action in
       switch action {
       case .selectedTabChanged(let tab):
-        state.selectedTab = tab
+        if tab == .myChallenge && !TokenManager.shared.isLogin {
+          // 로그인 체크
+          state.showLoginAlert = true
+        } else {
+          state.selectedTab = tab
+        }
         return .none
         
       case .loginAlert(.cancelTapped):
@@ -72,7 +79,7 @@ public struct MainTabFeature {
         
       case .loginAlert(.loginTapped):
         state.showLoginAlert = false
-        // TODO: - 로그인 화면 이동
+        state.path.append(.login(LoginFeature.State(isInit: false)))
         return .none
         
       case .myChallenge(.tappedItem(let id)):
@@ -88,6 +95,13 @@ public struct MainTabFeature {
         case let .element(id: _, action: .detailChallenge(.tappedEditComment(id, comment))):
           state.path.append(.detailComments(DetailCommentsFeature.State(with: id, comment)))
           return .none
+          
+        case .element(id: _, action: .detailChallenge(.showLoginAlert)):
+          state.showLoginAlert = true
+          return .none
+          
+        case let .element(id: _, action: .login(.successLogin(isNewUser))):
+          return .send(.successLogin(isNewUser: isNewUser))
           
         default:
           return .none
@@ -108,6 +122,7 @@ extension MainTabFeature {
   public enum Path {
     case detailChallenge(DetailChallengeFeature)
     case detailComments(DetailCommentsFeature)
+    case login(LoginFeature)
   }
   
 }

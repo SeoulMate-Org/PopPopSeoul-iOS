@@ -19,11 +19,9 @@ import FBSDKCoreKit
 
 struct LoginView: View {
   let store: StoreOf<LoginFeature>
-  let isShowBack: Bool
   
-  init(store: StoreOf<LoginFeature>, isShowBack: Bool) {
+  init(store: StoreOf<LoginFeature>) {
     self.store = store
-    self.isShowBack = isShowBack
   }
   
   var body: some View {
@@ -41,19 +39,7 @@ struct LoginView: View {
         .padding(.top, Utility.safeTop)
       
       VStack(spacing: 10) {
-        if isShowBack {
-          HStack {
-            Button {
-              store.send(.backTapped)
-            } label: {
-              Image(systemName: "chevron.left")
-                .foregroundColor(.black)
-            }
-            .padding(.top, 5)
-            .padding(.trailing, 12)
-          }
-          Spacer()
-        } else {
+        if store.isInit {
           HStack {
             Spacer()
             Button {
@@ -67,6 +53,20 @@ struct LoginView: View {
             .padding(.trailing, 12)
             .padding(.top, Utility.safeTop + 5)
           }
+        } else {
+          HStack {
+            Button {
+              store.send(.backTapped)
+            } label: {
+              Assets.Icons.arrowLeftLine.swiftUIImage
+                .foregroundColor(Colors.appWhite.swiftUIColor)
+                .frame(width: 24, height: 24)
+            }
+            .frame(width: 40, height: 40)
+            .padding(.leading, 8)
+            Spacer()
+          }
+          .padding(.top, Utility.safeTop)
         }
         
         Spacer()
@@ -104,6 +104,7 @@ struct LoginView: View {
       .padding(.bottom, Utility.safeBottom + 48)
     }
     .ignoresSafeArea()
+    .navigationBarBackButtonHidden(true)
   }
   
   func handleGoogleSignInButton() {
@@ -193,16 +194,6 @@ struct LoginView: View {
 }
 
 // MARK: - Preview
-
-#Preview {
-  LoginView(
-    store: Store<LoginFeature.State, LoginFeature.Action>(
-      initialState: .init(),
-      reducer: { LoginFeature() }
-    ),
-    isShowBack: false
-  )
-}
 
 // MARK: - Helper
 

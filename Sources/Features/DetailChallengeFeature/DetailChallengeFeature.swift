@@ -36,6 +36,7 @@ public struct DetailChallengeFeature {
     case onApear
     case update(DetailChallenge)
     case getError
+    case showLoginAlert
     
     // header
     case tappedBack
@@ -133,7 +134,7 @@ public struct DetailChallengeFeature {
         case .start:
           return .none
         case .login:
-          return .none
+          return .send(.showLoginAlert)
         }
         
       default: return .none

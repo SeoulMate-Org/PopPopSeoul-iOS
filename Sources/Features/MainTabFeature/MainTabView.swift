@@ -20,10 +20,10 @@ public struct MainTabView: View {
   
   public var body: some View {
     NavigationStack(path: $store.scope(state: \.path, action: \.path)) {
-      WithViewStore(store, observe: \.selectedTab) { viewStore in
+      WithViewStore(store, observe: { $0 }) { viewStore in
         VStack(spacing: 0) {
           Group {
-            switch viewStore.state {
+            switch viewStore.selectedTab {
             case .home:
               HomeTabView(
                 store: store.scope(
@@ -46,6 +46,23 @@ public struct MainTabView: View {
           
           tabView(viewStore: viewStore)
         }
+        .overlay(
+          Group {
+            if viewStore.showLoginAlert {
+              AppAlertView(
+                title: "로그인이 필요해요",
+                message: "해당 기능은 로그인 후 이용하실 수 있습니다.",
+                primaryButtonTitle: "로그인",
+                primaryAction: {
+                  viewStore.send(.loginAlert(.loginTapped))
+                },
+                secondaryButtonTitle: "취소",
+                secondaryAction: {
+                  viewStore.send(.loginAlert(.cancelTapped))
+                })
+            }
+          }
+        )
       }
     } destination: { store in
       switch store.state {
@@ -57,39 +74,31 @@ public struct MainTabView: View {
         if let store = store.scope(state: \.detailComments, action: \.detailComments) {
           DetailCommentsView(store: store)
         }
+      case .login:
+        if let store = store.scope(state: \.login, action: \.login) {
+          LoginView(store: store)
+        }
       }
     }
-    //      .overlay(
-    //        Group {
-    //          if viewStore.showLoginAlert {
-    ////            LoginAlertView(
-    ////              title: "로그인이 필요해요",
-    ////              message: "찜하기 기능은 로그인 후 이용 가능합니다.",
-    ////              onCancel: { viewStore.send(.loginAlert(.cancelTapped)) },
-    ////              onLogin: { viewStore.send(.loginAlert(.loginTapped)) }
-    ////            )
-    //          }
-    //        }
-    //      )
   }
   
   @ViewBuilder
-  private func tabView(viewStore: ViewStore<MainTabFeature.State.Tab, MainTabFeature.Action>) -> some View {
+  private func tabView(viewStore: ViewStore<MainTabFeature.State, MainTabFeature.Action>) -> some View {
     VStack(spacing: 0) {
       Rectangle()
         .foregroundColor(Colors.gray25.swiftUIColor)
         .frame(height: 1)
       
       HStack {
-        tabItem(tab: .home, isSelected: viewStore.state == .home) {
+        tabItem(tab: .home, isSelected: viewStore.selectedTab == .home) {
           store.send(.selectedTabChanged(.home))
         }
         
-        tabItem(tab: .myChallenge, isSelected: viewStore.state == .myChallenge) {
+        tabItem(tab: .myChallenge, isSelected: viewStore.selectedTab == .myChallenge) {
           store.send(.selectedTabChanged(.myChallenge))
         }
         
-        tabItem(tab: .profile, isSelected: viewStore.state == .profile) {
+        tabItem(tab: .profile, isSelected: viewStore.selectedTab == .profile) {
           store.send(.selectedTabChanged(.profile))
         }
       }

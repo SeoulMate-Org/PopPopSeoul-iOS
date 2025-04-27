@@ -28,7 +28,11 @@ public struct LoginFeature {
   
   @ObservableState
   public struct State: Equatable {
-    public init() { }
+    let isInit: Bool
+    
+    public init(isInit: Bool) {
+      self.isInit = isInit
+    }
   }
   
   // MARK: Actions
@@ -41,13 +45,14 @@ public struct LoginFeature {
     case loginError
     case authLogin(AuthProvider)
     case authFbLogin(AuthProvider)
-    case successLogin(isInit: Bool)
+    case successLogin(isNewUser: Bool)
     case backTapped
     case aroundTapped
   }
   
   // MARK: Reducer
   
+  @Dependency(\.dismiss) var dismiss
   public var body: some ReducerOf<Self> {
     Reduce { state, action in
       switch action {
@@ -68,7 +73,7 @@ public struct LoginFeature {
         return .run { send in
           do {
             let auth = try await authClient.login(provider)
-            await send(.successLogin(isInit: auth.isNewUser))
+            await send(.successLogin(isNewUser: auth.isNewUser))
           } catch {
             await send(.loginError)
           }
@@ -78,14 +83,16 @@ public struct LoginFeature {
         return .run { send in
           do {
             let auth = try await authClient.fbLogin(provider)
-            await send(.successLogin(isInit: auth.isNewUser))
+            await send(.successLogin(isNewUser: auth.isNewUser))
           } catch {
             await send(.loginError)
           }
         }
         
       case .backTapped:
-        return .none
+        return .run { _ in
+          await self.dismiss()
+        }
         
       case .aroundTapped:
         return .none

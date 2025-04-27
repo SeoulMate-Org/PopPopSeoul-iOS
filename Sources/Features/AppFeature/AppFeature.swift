@@ -54,15 +54,16 @@ public struct AppFeature {
         return .none
         
       case .destination(.presented(.onboarding(.didFinish))):
-        state.destination = .login(.init())
+        state.destination = .login(.init(isInit: true))
         return .none
         
       case .destination(.presented(.login(.aroundTapped))):
         state.destination = .mainTab(.init())
         return .none
         
-      case .destination(.presented(.login(.successLogin(let isInit)))):
-        if isInit {
+      case .destination(.presented(.login(.successLogin(let isNewUser)))),
+          .destination(.presented(.mainTab(.successLogin(let isNewUser)))):
+        if isNewUser {
           // TODO: - 회원 가입 축하 화면
           state.destination = .mainTab(.init())
         } else {
