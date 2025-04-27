@@ -31,30 +31,40 @@ struct DetailCommentsView: View {
             viewStore.send(.tappedBack)
           }))
           
-          ScrollView {
-            VStack(alignment: .leading, spacing: 12) {
-              ForEach(viewStore.comments, id: \.self) { comment in
-                CommentListItemView(
-                  type: .challengeComment,
-                  comment: comment,
-                  onEditTapped: {
-                    viewStore.send(.tappedEdit(comment))
-                  }, onDeleteTapped: {
-                    viewStore.send(.tappedDelete(id: comment.id))
-                  }, activeMenuCommentId: $activeMenuCommentId
-                )
+          if viewStore.comments.count > 0 {
+            ScrollView {
+              LazyVStack(alignment: .leading, spacing: 12) {
+                ForEach(viewStore.comments, id: \.self) { comment in
+                  CommentListItemView(
+                    type: .challengeComment,
+                    comment: comment,
+                    onEditTapped: {
+                      viewStore.send(.tappedEdit(comment))
+                    }, onDeleteTapped: {
+                      viewStore.send(.tappedDelete(id: comment.id))
+                    }, activeMenuCommentId: $activeMenuCommentId
+                  )
+                }
               }
             }
-          }
-          .background(Colors.appWhite.swiftUIColor)
-          .overlay {
-            if let toast = viewStore.showToast {
-              VStack(spacing: 0) {
-                Spacer()
-                AppToast(type: .iconText(message: toast.message))
-                  .padding(.bottom, 16)
+            .background(Colors.appWhite.swiftUIColor)
+            .overlay {
+              if let toast = viewStore.showToast {
+                VStack(spacing: 0) {
+                  Spacer()
+                  AppToast(type: .iconText(message: toast.message))
+                    .padding(.bottom, 16)
+                }
+                .transition(.opacity.animation(.easeInOut(duration: 0.2)))
               }
-              .transition(.opacity.animation(.easeInOut(duration: 0.2)))
+            }
+          } else {
+            VStack(alignment: .center) {
+              Text("스탬프를 찍고 첫 댓글을 남겨주세요!")
+                .font(.bodyS)
+                .foregroundStyle(Colors.gray900.swiftUIColor)
+                .padding(.top, 36)
+              Spacer()
             }
           }
           
