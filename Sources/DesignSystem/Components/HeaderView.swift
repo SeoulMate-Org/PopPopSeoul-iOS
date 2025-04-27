@@ -19,6 +19,11 @@ public struct HeaderView: View {
   public var body: some View {
     HStack {
       switch type {
+      case .logo:
+        Spacer()
+        Assets.Images.logoDark.swiftUIImage
+        Spacer()
+        
       case .titleOnly:
         Spacer()
         centerTitle
@@ -60,6 +65,8 @@ public struct HeaderView: View {
       return Text(title)
         .font(.appTitle3)
         .foregroundColor(Colors.gray900.swiftUIColor)
+    default:
+      return Text("")
     }
   }
 }
@@ -73,6 +80,7 @@ public struct HeaderView: View {
 // MARK: - Helper
 
 public enum HeaderType {
+  case logo
   case titleOnly(title: String)
   case back(title: String, onBack: () -> Void)
   case backWithMenu(title: String, onBack: () -> Void, onMore: () -> Void)

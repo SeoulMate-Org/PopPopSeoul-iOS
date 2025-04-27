@@ -20,7 +20,7 @@ struct HomeTabView: View {
   
   var body: some View {
       VStack(spacing: 0) {
-        HeaderView(type: .titleOnly(title: "Logo"))
+        HeaderView(type: .logo)
         
         ScrollView {
           VStack(spacing: 0) {
