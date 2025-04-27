@@ -22,15 +22,14 @@ extension CommentClient: DependencyKey {
     
     return Self(
       get: { id in
-        let query = GetDefaultPageRequest()
+        let query = GetDefaultRequest()
         var pathComponents = Endpoint.comment.pathComponents
         pathComponents.append("\(id)")
         let endpoint = Endpoint(baseUrl: Endpoint.comment.baseUrl, pathComponents: pathComponents)
         let request: Request = .get(endpoint, query: query.queryItems)
         let (data, _) = try await apiClient.send(request)
-        let response: CommentListResponse =  try data.decoded()
         
-        return response.content
+        return try data.decoded()
       },
       post: { id, comment in
         let body = PostCommentRequest(comment: comment, challengeId: id)
@@ -40,7 +39,7 @@ extension CommentClient: DependencyKey {
         return try data.decoded()
       },
       put: { id, comment in
-        let body = PutCommentRequest(comment: comment, challengeId: id)
+        let body = PutCommentRequest(comment: comment, commentId: id)
         let request: Request = .put(.comment, body: try? body.encoded())
         let (data, _) = try await apiClient.send(request)
         

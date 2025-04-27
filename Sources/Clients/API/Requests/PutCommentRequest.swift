@@ -11,26 +11,26 @@ import Common
 public struct PutCommentRequest: Encodable {
   public init(
     comment: String,
-    challengeId: Int
+    commentId: Int
   ) {
     self.comment = comment
-    self.challengeId = challengeId
+    self.commentId = commentId
   }
 
   public let comment: String
-  public let challengeId: Int
+  public let commentId: Int
   public let languageCode: String = AppSettingManager.shared.language.apiCode
 
   enum CodingKeys: CodingKey {
     case comment
-    case challengeId
+    case commentId
     case languageCode
   }
 
   public func encode(to encoder: Encoder) throws {
     var container = encoder.container(keyedBy: CodingKeys.self)
     try container.encode(comment, forKey: .comment)
-    try container.encode(challengeId, forKey: .challengeId)
+    try container.encode(commentId, forKey: .commentId)
     try container.encode(languageCode, forKey: .languageCode)
   }
 }

@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import SharedTypes
+import Common
 
 public struct Comment: Identifiable, Hashable, Equatable {
   public var id: Int {
@@ -17,6 +19,13 @@ public struct Comment: Identifiable, Hashable, Equatable {
   public let isMine: Bool
   public let challengeId: Int
   public let createdAt: String
+  public var created: String {
+    return createdAt.toCommentDateString()
+  }
+  public let challengeStatusCode: String
+  public var challengeStatus: ChallengeStatus? {
+    ChallengeStatus.from(apiCode: challengeStatusCode)
+  }
 
   public init(
     commentId: Int,
@@ -24,7 +33,8 @@ public struct Comment: Identifiable, Hashable, Equatable {
     nickname: String,
     isMine: Bool,
     challengeId: Int,
-    createdAt: String
+    createdAt: String,
+    challengeStatusCode: String
   ) {
     self.commentId = commentId
     self.comment = comment
@@ -32,6 +42,7 @@ public struct Comment: Identifiable, Hashable, Equatable {
     self.isMine = isMine
     self.challengeId = challengeId
     self.createdAt = createdAt
+    self.challengeStatusCode = createdAt
   }
 }
 extension Comment: Codable {
@@ -43,6 +54,7 @@ extension Comment: Codable {
     case isMine
     case challengeId
     case createdAt
+    case challengeStatusCode
   }
 
   public init(from decoder: Decoder) throws {
@@ -53,6 +65,7 @@ extension Comment: Codable {
     isMine = try container.decodeIfPresent(Bool.self, forKey: .isMine) ?? false
     challengeId = try container.decode(Int.self, forKey: .challengeId)
     createdAt = try container.decodeIfPresent(String.self, forKey: .createdAt) ?? ""
+    challengeStatusCode = try container.decodeIfPresent(String.self, forKey: .challengeStatusCode) ?? ""
   }
 
   public func encode(to encoder: Encoder) throws {
@@ -63,5 +76,6 @@ extension Comment: Codable {
     try container.encodeIfPresent(isMine, forKey: .isMine)
     try container.encode(challengeId, forKey: .challengeId)
     try container.encodeIfPresent(createdAt, forKey: .createdAt)
+    try container.encodeIfPresent(challengeStatusCode, forKey: .challengeStatusCode)
   }
 }

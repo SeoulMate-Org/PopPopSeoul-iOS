@@ -93,7 +93,7 @@ public struct CommentListItemView: View {
           .font(.bodyS)
           .foregroundColor(Colors.gray900.swiftUIColor)
         
-        Text(comment.createdAt)
+        Text(comment.created)
           .font(.captionM)
           .foregroundColor(Colors.gray300.swiftUIColor)
           .padding(.top, 4)

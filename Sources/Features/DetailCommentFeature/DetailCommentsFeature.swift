@@ -28,6 +28,7 @@ public struct DetailCommentsFeature {
     var editingComment: Comment?
     var shouldFocusTextField: Bool = false
     var deletingComment: Int?
+    var enabledSave: Bool = false
     
     public init(with id: Int, _ editingComment: Comment? = nil) {
       self.challengeId = id
@@ -40,6 +41,7 @@ public struct DetailCommentsFeature {
   @CasePathable
   public enum Action: Equatable {
     case onAppear
+    case fetchList
     case updateList([Comment])
     case tappedBack
     case tappedEdit(Comment)
@@ -47,13 +49,12 @@ public struct DetailCommentsFeature {
     case error
     
     case inputTextChanged(String)
-    case sendButtonTapped
-    case keyboardWillShow(CGFloat)
-    case keyboardWillHide
+    case tappedSave
     
     case textFieldFocusChanged(Bool)
     case cancelDeleteComment
     case deleteComment(Int)
+    case completeEdit
   }
   
   // MARK: Reducer
@@ -63,14 +64,20 @@ public struct DetailCommentsFeature {
       switch action {
       case .onAppear:
         return .run { [state = state] send in
+          await send(.fetchList)
+          
+          if let editingComment = state.editingComment {
+            await send(.inputTextChanged(editingComment.comment))
+            await send(.textFieldFocusChanged(true))
+          }
+          
+        }
+      case .fetchList:
+        return .run { [state = state] send in
           do {
             let id = state.challengeId
             let comments = try await commentClient.get(id)
             await send(.updateList(comments))
-            
-            if state.editingComment != nil {
-              await send(.textFieldFocusChanged(true))
-            }
           } catch {
             await send(.error)
           }
@@ -91,27 +98,58 @@ public struct DetailCommentsFeature {
         
       case let .inputTextChanged(text):
         state.inputText = text
+        state.enabledSave = !text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
         return .none
         
-      case .sendButtonTapped:
-        if !state.inputText.trimmingCharacters(in: .whitespaces).isEmpty {
-//          state.comments.append(state.inputText)
-          // TODO: - 댓글 생성 API
-          state.inputText = ""
+      case .tappedSave:
+        if let editigComment = state.editingComment {
+          return .run { [state = state] send in
+            do {
+              await send(.textFieldFocusChanged(false))
+              
+              let input = state.inputText
+              let comment = try await commentClient.put(editigComment.id, input)
+              
+              await send(.completeEdit)
+              
+              var list = state.comments
+              if let index = list.firstIndex(where: { $0.id == comment.id }) {
+                list[index] = comment
+                await send(.updateList(list))
+              } else {
+                await send(.fetchList)
+              }
+            } catch {
+              await send(.error)
+            }
+          }
+        } else {
+          return .run { [state = state] send in
+            do {
+              await send(.textFieldFocusChanged(false))
+              
+              let input = state.inputText
+              let id = state.challengeId
+              let comment = try await commentClient.post(id, input)
+              
+              await send(.inputTextChanged(""))
+              
+              var list = state.comments
+              list.insert(comment, at: 0)
+              
+              await send(.updateList(list))
+            } catch {
+              await send(.error)
+            }
+          }
         }
-        return .none
-        
-      case let .keyboardWillShow(height):
-        state.keyboardHeight = height
-        return .none
-        
-      case .keyboardWillHide:
-        state.keyboardHeight = 0
-        return .none
-        
+                
       case .tappedEdit(let comment):
         state.editingComment = comment
-        return .send(.textFieldFocusChanged(true))
+        return .run { send in
+          await send(.inputTextChanged(comment.comment))
+          await send(.textFieldFocusChanged(true))
+        }
         
       case .textFieldFocusChanged(let focus):
         state.shouldFocusTextField = focus
@@ -122,6 +160,7 @@ public struct DetailCommentsFeature {
         return .none
         
       case let .deleteComment(id):
+        state.deletingComment = nil
         return .run { [state = state] send in
           do {
             let result = try await commentClient.delete(id)
@@ -140,6 +179,10 @@ public struct DetailCommentsFeature {
       case .cancelDeleteComment:
         state.deletingComment = nil
         return .none
+        
+      case .completeEdit:
+        state.editingComment = nil
+        return .send(.inputTextChanged(""))
       }
     }
   }

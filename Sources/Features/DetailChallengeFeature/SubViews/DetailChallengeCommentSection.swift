@@ -56,7 +56,7 @@ struct DetailChallengeCommentSection: View {
         .padding(.top, 16)
         
         // case1. 댓글 수에 따라 Divider or 전체보기 버튼
-        if challenge.comments.count <= 10 {
+        if challenge.commentCount <= 10 {
           Divider()
             .frame(height: 1)
             .foregroundColor(Colors.gray25.swiftUIColor)

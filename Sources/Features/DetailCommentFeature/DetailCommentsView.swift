@@ -1,0 +1,160 @@
+//
+//  DetailCommentsView.swift
+//  Features
+//
+//  Created by suni on 4/27/25.
+//
+
+import SwiftUI
+import ComposableArchitecture
+import Common
+import DesignSystem
+import SharedAssets
+
+struct DetailCommentsView: View {
+  let store: StoreOf<DetailCommentsFeature>
+  @FocusState private var isTextFieldFocused: Bool
+  @State private var activeMenuCommentId: Int? = nil
+  
+  init(store: StoreOf<DetailCommentsFeature>) {
+    self.store = store
+  }
+  
+  var body: some View {
+    GeometryReader { geo in
+      WithViewStore(store, observe: { $0 }) { viewStore in
+        VStack(spacing: 0) {
+          Colors.trueWhite.swiftUIColor
+            .frame(height: geo.safeAreaInsets.top)
+          
+          HeaderView(type: .back(title: "댓글", onBack: {
+            viewStore.send(.tappedBack)
+          }))
+          
+          ScrollView {
+            VStack(alignment: .leading, spacing: 12) {
+              ForEach(viewStore.comments, id: \.self) { comment in
+                CommentListItemView(
+                  type: .challengeComment,
+                  comment: comment,
+                  onEditTapped: {
+                    viewStore.send(.tappedEdit(comment))
+                  }, onDeleteTapped: {
+                    viewStore.send(.tappedDelete(id: comment.id))
+                  }, activeMenuCommentId: $activeMenuCommentId
+                )
+              }
+            }
+          }
+          .background(Colors.appWhite.swiftUIColor)
+          
+          editCommentView(viewStore: viewStore)
+          
+          Colors.appWhite.swiftUIColor
+            .frame(height: geo.safeAreaInsets.bottom)
+        }
+        .onAppear {
+          viewStore.send(.onAppear)
+        }
+        .overlay(
+          Group {
+            if let deletingComment = viewStore.deletingComment {
+              AppAlertView(
+                title: "댓글을 삭제할까요?",
+                message: "삭제한 댓글은 복구할 수 없습니다.",
+                primaryButtonTitle: "삭제",
+                primaryAction: {
+                  viewStore.send(.deleteComment(deletingComment))
+                },
+                secondaryButtonTitle: "취소",
+                secondaryAction: {
+                  viewStore.send(.cancelDeleteComment)
+                })
+            }
+          }
+        )
+        .ignoresSafeArea(.all)
+        .background(Colors.appWhite.swiftUIColor)
+        .onTapGesture {
+          activeMenuCommentId = nil
+          viewStore.send(.textFieldFocusChanged(false))
+        }
+        .navigationBarBackButtonHidden(true)
+      }
+    }
+  }
+  
+  @ViewBuilder
+  private func editCommentView(viewStore: ViewStore<DetailCommentsFeature.State, DetailCommentsFeature.Action>) -> some View {
+    VStack(alignment: .leading) {
+      Divider()
+        .frame(height: 1)
+        .foregroundColor(Colors.gray50.swiftUIColor)
+      
+      HStack(alignment: .center, spacing: 0) {
+        TextField("", text: viewStore.binding(
+          get: \.inputText,
+          send: DetailCommentsFeature.Action.inputTextChanged
+        ))
+        .focused($isTextFieldFocused)
+        .placeholder(when: viewStore.inputText.isEmpty) {
+          Text("댓글을 입력해주세요.")
+            .font(.captionL)
+            .foregroundColor(Colors.gray300.swiftUIColor)
+        }
+        .padding(.leading, 8)
+        .padding(.trailing, 8)
+        .font(.captionL)
+        .foregroundColor(Colors.gray900.swiftUIColor)
+        .background(.clear)
+        .multilineTextAlignment(.leading)
+        .cornerRadius(0)
+        .onChange(of: viewStore.inputText, initial: true) { _, newValue in
+          if newValue.count > 400 {
+            viewStore.send(.inputTextChanged(String(newValue.prefix(400))))
+          }
+        }
+        .onChange(of: viewStore.shouldFocusTextField, initial: false) { _, newValue in
+          isTextFieldFocused = newValue
+        }
+        .onChange(of: isTextFieldFocused, initial: false, { _, newValue in
+          viewStore.send(.textFieldFocusChanged(newValue))
+        })
+        .padding(.leading, 16)
+        
+        Button(action: {
+          viewStore.send(.tappedSave)
+        }) {
+          Assets.Icons.arrowUpperLine.swiftUIImage
+            .resizable()
+            .frame(width: 16, height: 16)
+            .foregroundColor(Colors.appWhite.swiftUIColor)
+        }
+        .frame(width: 32, height: 32)
+        .background(
+          viewStore.enabledSave
+          ? Colors.blue500.swiftUIColor
+          : Colors.gray100.swiftUIColor
+        )
+        .cornerRadius(10)
+        .padding(.leading, 10)
+        .padding(.trailing, 12)
+        .disabled(!viewStore.enabledSave)
+      }
+      .frame(maxWidth: .infinity)
+      .frame(height: 48)
+      
+      Divider()
+        .frame(height: 1)
+        .foregroundColor(Colors.gray50.swiftUIColor)
+    }
+    .background(Colors.trueWhite.swiftUIColor)
+  }
+}
+
+#Preview {
+  DetailCommentsView(store: Store<DetailCommentsFeature.State, DetailCommentsFeature.Action>(
+    initialState: .init(with: 1),
+    reducer: { DetailCommentsFeature() }
+  ))
+}
