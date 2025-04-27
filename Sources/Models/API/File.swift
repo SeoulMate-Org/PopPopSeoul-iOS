@@ -1,37 +1,37 @@
 //
-//  DefaultResponse.swift
-//  Models
+//  DefaultLikeResponse.swift
+//  PopPopSeoul
 //
 //  Created by suni on 4/27/25.
 //
 
 import Foundation
 
-public struct DefaultResponse: Hashable, Equatable {
+public struct DefaultLikeResponse: Hashable, Equatable {
   public let id: Int
-  public let isProcessed: Bool
+  public let isLiked: Bool
   
-  public init(id: Int, isProcessed: Bool) {
+  public init(id: Int, isLiked: Bool) {
     self.id = id
-    self.isProcessed = isProcessed
+    self.isLiked = isLiked
   }
 }
 
-extension DefaultResponse: Codable {
+extension DefaultLikeResponse: Codable {
   private enum CodingKeys: String, CodingKey {
     case id
-    case isProcessed
+    case isLiked
   }
   
   public init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: CodingKeys.self)
     id = try container.decodeIfPresent(Int.self, forKey: .id) ?? 0
-    isProcessed = try container.decodeIfPresent(Bool.self, forKey: .isProcessed) ?? false
+    isLiked = try container.decodeIfPresent(Bool.self, forKey: .isLiked) ?? false
   }
   
   public func encode(to encoder: Encoder) throws {
     var container = encoder.container(keyedBy: CodingKeys.self)
     try container.encodeIfPresent(id, forKey: .id)
-    try container.encodeIfPresent(isProcessed, forKey: .isProcessed)
+    try container.encodeIfPresent(isLiked, forKey: .isLiked)
   }
 }

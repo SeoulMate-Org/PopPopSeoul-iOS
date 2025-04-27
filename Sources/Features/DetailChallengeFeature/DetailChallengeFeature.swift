@@ -14,7 +14,7 @@ import Models
 @Reducer
 public struct DetailChallengeFeature {
   
-  @Dependency(\.detailChallengeClient) var detailChallengeClient
+  @Dependency(\.challengeClient) var challengeClient
   
   // MARK: State
   
@@ -69,7 +69,7 @@ public struct DetailChallengeFeature {
         return .run { [state = state] send in
           do {
             let id = state.challengeId
-            let challenge = try await detailChallengeClient.get(id)
+            let challenge = try await challengeClient.get(id)
             await send(.update(challenge))
           } catch {
             await send(.getError)
@@ -105,7 +105,27 @@ public struct DetailChallengeFeature {
       case let .bottomAction(action):
         switch action {
         case .like:
-          return .none
+          return .run { [state = state] send in
+            guard let challenge = state.challenge else { return }
+            
+            // 1. 좋아요 UI 즉시 업데이트
+            var update = challenge
+            update.isLiked.toggle()
+            update.likedCount += update.isLiked ? 1 : -1
+            await send(.update(update))
+            
+            do {
+              let response = try await challengeClient.putLike(update.id)
+              
+              // 필요시 서버 데이터랑 다르면 다시 fetch
+              if response.isLiked != update.isLiked {
+                let fresh = try await challengeClient.get(response.id)
+                await send(.update(fresh))
+              }
+            } catch {
+              await send(.getError)
+            }
+          }
         case .map:
           return .none
         case .stamp:

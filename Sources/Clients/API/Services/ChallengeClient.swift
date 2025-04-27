@@ -1,5 +1,5 @@
 //
-//  DetailChallengeClient.swift
+//  ChallengeClient.swift
 //  Clients
 //
 //  Created by suni on 4/26/25.
@@ -9,12 +9,13 @@ import ComposableArchitecture
 import Models
 import SharedTypes
 
-public struct DetailChallengeClient {
+public struct ChallengeClient {
   public var get: @Sendable (Int) async throws -> DetailChallenge
+  public var putLike: @Sendable (Int) async throws -> DefaultLikeResponse
 }
 
-extension DetailChallengeClient: DependencyKey {
-  public static var liveValue: DetailChallengeClient {
+extension ChallengeClient: DependencyKey {
+  public static var liveValue: ChallengeClient {
     @Dependency(\.apiClient) var apiClient
     
     return Self(
@@ -27,14 +28,21 @@ extension DetailChallengeClient: DependencyKey {
         let (data, _) = try await apiClient.send(request)
         
         return try data.decoded()
+      },
+      putLike: { id in
+        let query = DefaultIdRequest(id: id)
+        let request: Request = .put(.challengeLike, query: query.queryItems)
+        let (data, _) = try await apiClient.send(request)
+        
+        return try data.decoded()
       }
     )
   }
 }
 
 public extension DependencyValues {
-  var detailChallengeClient: DetailChallengeClient {
-    get { self[DetailChallengeClient.self] }
-    set { self[DetailChallengeClient.self] = newValue }
+  var challengeClient: ChallengeClient {
+    get { self[ChallengeClient.self] }
+    set { self[ChallengeClient.self] = newValue }
   }
 }

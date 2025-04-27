@@ -72,6 +72,10 @@ public extension Request {
     Request(endpoint: endpoint, httpMethod: .put, body: body)
   }
   
+  static func put(_ endpoint: Endpoint, query: [URLQueryItem] = []) -> Request {
+    Request(endpoint: endpoint, httpMethod: .put, queryItems: query)
+  }
+  
   static func delete(_ endpoint: Endpoint) -> Request {
     Request(endpoint: endpoint, httpMethod: .delete)
   }

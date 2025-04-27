@@ -13,7 +13,7 @@ public struct CommentClient {
   public var get: @Sendable (Int) async throws -> [Comment]
   public var post: @Sendable (Int, String) async throws -> Comment
   public var put: @Sendable (Int, String) async throws -> Comment
-  public var delete: @Sendable (Int) async throws -> DefaultResponse
+  public var delete: @Sendable (Int) async throws -> DefaultProgressResponse
 }
 
 extension CommentClient: DependencyKey {
@@ -64,4 +64,3 @@ public extension DependencyValues {
     set { self[CommentClient.self] = newValue }
   }
 }
-

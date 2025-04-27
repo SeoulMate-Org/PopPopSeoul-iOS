@@ -14,11 +14,11 @@ public struct DetailChallenge: Hashable, Equatable {
   public let title: String
   public let description: String
   public let imageUrl: String
-  public let likedCount: Int
+  public var likedCount: Int
   public let progressCount: Int
   public let attractionCount: Int
   public let commentCount: Int
-  public let isLiked: Bool
+  public var isLiked: Bool
   public let challengeStatusCode: String
   public var challengeStatus: ChallengeStatus? {
     ChallengeStatus.from(apiCode: challengeStatusCode)
