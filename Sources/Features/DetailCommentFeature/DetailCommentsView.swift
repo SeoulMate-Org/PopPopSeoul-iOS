@@ -47,6 +47,16 @@ struct DetailCommentsView: View {
             }
           }
           .background(Colors.appWhite.swiftUIColor)
+          .overlay {
+            if let toast = viewStore.showToast {
+              VStack(spacing: 0) {
+                Spacer()
+                AppToast(type: .iconText(message: toast.message))
+                  .padding(.bottom, 16)
+              }
+              .transition(.opacity.animation(.easeInOut(duration: 0.2)))
+            }
+          }
           
           editCommentView(viewStore: viewStore)
           
@@ -152,9 +162,23 @@ struct DetailCommentsView: View {
   }
 }
 
+// MARK: Preview
+
 #Preview {
   DetailCommentsView(store: Store<DetailCommentsFeature.State, DetailCommentsFeature.Action>(
     initialState: .init(with: 1),
     reducer: { DetailCommentsFeature() }
   ))
 }
+
+// MARK: - Helper
+
+extension DetailCommentsFeature.Toast {
+  var message: String {
+    switch self {
+    case .editComplete: "댓글이 수정되었습니다."
+    case .deleteComplete: "댓글이 삭제되었습니다."
+    }
+  }
+}
+

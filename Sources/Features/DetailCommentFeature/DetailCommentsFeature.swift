@@ -29,11 +29,17 @@ public struct DetailCommentsFeature {
     var shouldFocusTextField: Bool = false
     var deletingComment: Int?
     var enabledSave: Bool = false
+    var showToast: Toast?
     
     public init(with id: Int, _ editingComment: Comment? = nil) {
       self.challengeId = id
       self.editingComment = editingComment
     }
+  }
+  
+  public enum Toast: Equatable {
+    case deleteComplete
+    case editComplete
   }
   
   // MARK: Actions
@@ -55,6 +61,8 @@ public struct DetailCommentsFeature {
     case cancelDeleteComment
     case deleteComment(Int)
     case completeEdit
+    case showToast(Toast)
+    case dismissToast
   }
   
   // MARK: Reducer
@@ -165,7 +173,8 @@ public struct DetailCommentsFeature {
           do {
             let result = try await commentClient.delete(id)
             if result.isProcessed {
-             var comments = state.comments
+              await send(.showToast(.deleteComplete))
+              var comments = state.comments
               comments.removeAll(where: { $0.id == result.id })
               await send(.updateList(comments))
             } else {
@@ -182,7 +191,23 @@ public struct DetailCommentsFeature {
         
       case .completeEdit:
         state.editingComment = nil
-        return .send(.inputTextChanged(""))
+        return .run { send in
+          await send(.inputTextChanged(""))
+          await send(.showToast(.editComplete))
+          try await Task.sleep(nanoseconds: 3 * 1_000_000_000)
+          await send(.dismissToast)
+        }
+        
+      case let .showToast(toast):
+        state.showToast = toast
+        return .run { send in
+          try await Task.sleep(nanoseconds: 3 * 1_000_000_000)
+          await send(.dismissToast)
+        }
+        
+      case .dismissToast:
+        state.showToast = nil
+        return .none
       }
     }
   }
