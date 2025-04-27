@@ -86,6 +86,10 @@ public struct MainTabFeature {
         state.path.append(.detailChallenge(DetailChallengeFeature.State(with: id)))
         return .none
         
+      case .home(.tappedChallenge(let id)):
+        state.path.append(.detailChallenge(DetailChallengeFeature.State(with: id)))
+        return .none
+        
       case let .path(action):
         switch action {
         case .element(id: _, action: .detailChallenge(.tappedAllComments(let id))):

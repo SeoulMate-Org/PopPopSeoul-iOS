@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct MyChallenge: Hashable, Equatable {
+public struct MyChallenge: Hashable, Equatable, Identifiable {
   public let id: Int
   public let name: String
   public let title: String
@@ -19,6 +19,10 @@ public struct MyChallenge: Hashable, Equatable {
   public let challengeThemeName: String
   public let mainLocation: String
   public let imageUrl: String = "http://sohohaneulbit.cafe24.com/files/attach/images/357/358/b6f2a6a51114cd78ae4d64840f0ccb46.jpg"
+  public let description: String
+  public let isLiked: Bool
+  public let distance: Int
+  public let displayRank: String
 
   public init(
     id: Int,
@@ -31,7 +35,11 @@ public struct MyChallenge: Hashable, Equatable {
     challengeThemeId: Int? = nil,
     challengeThemeName: String? = nil,
     imageUrl: String? = nil,
-    mainLocation: String? = nil
+    mainLocation: String? = nil,
+    description: String? = nil,
+    isLiked: Bool? = nil,
+    distance: Int? = nil,
+    displayRank: String? = nil
   ) {
     self.id = id
     self.name = name ?? ""
@@ -43,6 +51,10 @@ public struct MyChallenge: Hashable, Equatable {
     self.challengeThemeId = challengeThemeId ?? -1
     self.challengeThemeName = challengeThemeName ?? ""
     self.mainLocation = mainLocation ?? ""
+    self.description = description ?? ""
+    self.isLiked = isLiked ?? false
+    self.distance = distance ?? 0
+    self.displayRank = displayRank ?? ""
 //    self.imageUrl = imageUrl ?? ""
   }
 }
@@ -61,6 +73,10 @@ extension MyChallenge: Codable {
     case challengeThemeName
     case imageUrl
     case mainLocation
+    case description
+    case isLiked
+    case distance
+    case displayRank
   }
 
   public init(from decoder: Decoder) throws {
@@ -76,6 +92,10 @@ extension MyChallenge: Codable {
     challengeThemeId = try container.decodeIfPresent(Int.self, forKey: .challengeThemeId) ?? -1
     challengeThemeName = try container.decodeIfPresent(String.self, forKey: .challengeThemeName) ?? ""
     mainLocation = try container.decodeIfPresent(String.self, forKey: .mainLocation) ?? ""
+    description = try container.decodeIfPresent(String.self, forKey: .description) ?? ""
+    isLiked = try container.decodeIfPresent(Bool.self, forKey: .isLiked) ?? false
+    distance = try container.decodeIfPresent(Int.self, forKey: .distance) ?? 0
+    displayRank = try container.decodeIfPresent(String.self, forKey: .displayRank) ?? ""
 //    imageUrl = try container.decodeIfPresent(String.self, forKey: .imageUrl) ?? ""
   }
 
@@ -93,5 +113,27 @@ extension MyChallenge: Codable {
     try container.encodeIfPresent(challengeThemeName, forKey: .challengeThemeName)
     try container.encodeIfPresent(imageUrl, forKey: .imageUrl)
     try container.encodeIfPresent(mainLocation, forKey: .mainLocation)
+    try container.encodeIfPresent(description, forKey: .description)
+    try container.encodeIfPresent(isLiked, forKey: .isLiked)
+    try container.encodeIfPresent(distance, forKey: .distance)
+    try container.encodeIfPresent(displayRank, forKey: .displayRank)
   }
 }
+
+// TODD: - Mock 제거
+public let mockMyChallenge: MyChallenge = .init(
+  id: 1,
+  name: "서울 야경 탐방",
+  title: "남산타워부터 한강 야경까지",
+  likes: 128,
+  commentCount: 12,
+  attractionCount: 5,
+  myStampCount: 2,
+  challengeThemeId: 3,
+  challengeThemeName: "야경 탐방",
+  mainLocation: "서울특별시 중구",
+  description: "서울의 아름다운 야경 명소를 탐방하며 스탬프를 모아보세요. 남산타워, 한강공원 등 핫플레이스를 아우르는 챌린지입니다.",
+  isLiked: true,
+  distance: 3500, // (단위는 미터 정도 가정)
+  displayRank: "HIGH"
+)

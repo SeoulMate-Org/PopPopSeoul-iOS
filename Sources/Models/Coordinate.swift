@@ -22,6 +22,11 @@ public extension Coordinate {
     self.latitude = coordinate.latitude
     self.longitude = coordinate.longitude
   }
+  
+  init() {
+    self.latitude = 37.5701816
+    self.longitude = 126.9831213
+  }
 }
 
 public extension Coordinate {

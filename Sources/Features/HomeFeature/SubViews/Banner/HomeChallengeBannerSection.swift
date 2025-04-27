@@ -9,10 +9,11 @@ import SwiftUI
 import Common
 import DesignSystem
 import SharedAssets
+import Models
 
 struct HomeChallengeBannerSection: View {
-  var challenges: [Challenge]
-  var onLikeTapped: (UUID) -> Void
+  var challenges: [MyChallenge]
+  var onLikeTapped: (Int) -> Void
   
   var body: some View {
     let screenWidth = UIScreen.main.bounds.width
@@ -67,10 +68,6 @@ struct HomeChallengeBannerSection: View {
     }
   }
 }
-
-//#Preview {
-//  HomeChallengeBannerSection(challenges: mockChallenges, onLikeTapped: { _ in })
-//}
 
 extension LinearGradient {
   static let blueFadeTopToBottom = LinearGradient(

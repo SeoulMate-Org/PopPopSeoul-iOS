@@ -9,16 +9,17 @@ import SwiftUI
 import Common
 import DesignSystem
 import SharedAssets
+import Models
 
 struct HomeChallengeBannerItemView: View {
-  let challenge: Challenge
+  let challenge: MyChallenge
   let onLikeTapped: () -> Void
   let cardWidth: CGFloat
   let cardHeight: CGFloat
   var body: some View {
     
     ZStack(alignment: .bottom) {
-      AsyncImage(url: URL(string: challenge.imageURL)) { image in
+      AsyncImage(url: URL(string: challenge.imageUrl)) { image in
         image
           .resizable()
           .scaledToFill()
@@ -42,9 +43,9 @@ struct HomeChallengeBannerItemView: View {
           .frame(maxWidth: .infinity, alignment: .leading)
         
         Button(action: onLikeTapped) {
-          let image = challenge.isLike ? Assets.Icons.heartFill : Assets.Icons.heartLine
+          let image = challenge.isLiked ? Assets.Icons.heartFill : Assets.Icons.heartLine
           image.swiftUIImage
-            .foregroundColor(challenge.isLike ? Colors.red500.swiftUIColor : Colors.appWhite.swiftUIColor)
+            .foregroundColor(challenge.isLiked ? Colors.red500.swiftUIColor : Colors.appWhite.swiftUIColor)
             .frame(width: 36, height: 36)
             .padding(.trailing, 10)
         }

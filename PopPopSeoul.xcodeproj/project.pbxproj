@@ -612,6 +612,13 @@
 		EA71351B2DBE13A4000C9B1E /* String++.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71351A2DBE13A4000C9B1E /* String++.swift */; };
 		EA7135222DBE4BB4000C9B1E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7135212DBE4BB4000C9B1E /* File.swift */; };
 		EA7135262DBE4F54000C9B1E /* DefaultIdRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7135252DBE4F54000C9B1E /* DefaultIdRequest.swift */; };
+		EA7135292DBE6425000C9B1E /* ChallengeListClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7135282DBE6425000C9B1E /* ChallengeListClient.swift */; };
+		EA71352C2DBE64C1000C9B1E /* AppLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71352B2DBE64C1000C9B1E /* AppLocation.swift */; };
+		EA71352F2DBE6728000C9B1E /* GetChallengeListLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA71352E2DBE6728000C9B1E /* GetChallengeListLocation.swift */; };
+		EA7135342DBEC07F000C9B1E /* HomeChallengeLocationSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7135332DBEC07F000C9B1E /* HomeChallengeLocationSection.swift */; };
+		EA7135362DBEC19F000C9B1E /* HomeChallengeLocationItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7135352DBEC19F000C9B1E /* HomeChallengeLocationItemView.swift */; };
+		EA7135382DBECAA7000C9B1E /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7135372DBECAA7000C9B1E /* RoundedCorner.swift */; };
+		EA71353A2DBECBC3000C9B1E /* Int++.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7135392DBECBC3000C9B1E /* Int++.swift */; };
 		EA949284C11DB940F84888C2 /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256CCC92AC8D6EE5FACE5475 /* Dependencies.framework */; };
 		EAE62223229FB6E39F76669F /* CasePathsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CF7412324C02D1745F0E0D /* CasePathsCore.framework */; };
 		EB1B1D606C9519443C8093A6 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E58A56242DD34BBF412FCA4 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle */; };
@@ -1480,6 +1487,13 @@
 		EA71351A2DBE13A4000C9B1E /* String++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String++.swift"; sourceTree = "<group>"; };
 		EA7135212DBE4BB4000C9B1E /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		EA7135252DBE4F54000C9B1E /* DefaultIdRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultIdRequest.swift; sourceTree = "<group>"; };
+		EA7135282DBE6425000C9B1E /* ChallengeListClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeListClient.swift; sourceTree = "<group>"; };
+		EA71352B2DBE64C1000C9B1E /* AppLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocation.swift; sourceTree = "<group>"; };
+		EA71352E2DBE6728000C9B1E /* GetChallengeListLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeListLocation.swift; sourceTree = "<group>"; };
+		EA7135332DBEC07F000C9B1E /* HomeChallengeLocationSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChallengeLocationSection.swift; sourceTree = "<group>"; };
+		EA7135352DBEC19F000C9B1E /* HomeChallengeLocationItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChallengeLocationItemView.swift; sourceTree = "<group>"; };
+		EA7135372DBECAA7000C9B1E /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		EA7135392DBECBC3000C9B1E /* Int++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int++.swift"; sourceTree = "<group>"; };
 		EB1AF2F0C1D291ADEC33A0B1 /* GetChallengeMyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeMyRequest.swift; sourceTree = "<group>"; };
 		EC4AFF88EA6DCED6098DE437 /* Clients-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Clients-Info.plist"; sourceTree = "<group>"; };
 		EDC7634792471BCEEC7B75AF /* FirebaseInstallations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FirebaseInstallations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1752,6 +1766,7 @@
 				F74ABEEFFC50D57D572FEE89 /* StatefulPreviewWrapper.swift */,
 				22F8E62DCA661935F38FDFBF /* SwiftLog.swift */,
 				3AE161A4BA9FE7BAEA0BE5F6 /* Utilities.swift */,
+				EA7135372DBECAA7000C9B1E /* RoundedCorner.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -2282,6 +2297,7 @@
 				C985F6F737100BAAA169894C /* UIApplication++.swift */,
 				239F000EF2496EC810251FC8 /* View++.swift */,
 				EA71351A2DBE13A4000C9B1E /* String++.swift */,
+				EA7135392DBECBC3000C9B1E /* Int++.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -2333,12 +2349,9 @@
 		AD1CEA8C746E55EB76A85D5A /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
-				50399E2FEF604447C8BACFB9 /* HomeAccessPromptSection.swift */,
-				FD87A029BEF76C2054F5A226 /* HomeChallengeBannerItemView.swift */,
-				35DC643AEE1D4767F478C3AB /* HomeChallengeBannerSection.swift */,
-				C90C8230C0D2ADB557A6488E /* HomeThemeChallengeIndicatorView.swift */,
-				3615B74A51B897CBE31C798C /* HomeThemeChallengeSection.swift */,
-				723E426D32F3EF4A9AC83798 /* HomeThemeChallengeTabView.swift */,
+				EA7135302DBEBBE4000C9B1E /* Banner */,
+				EA7135322DBEBC13000C9B1E /* Location */,
+				EA7135312DBEBC07000C9B1E /* Theme */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -2435,6 +2448,7 @@
 				3D8A03A3CB0BE02487388DF4 /* CommentClient.swift */,
 				64E458AAD3014B528A6D9AB4 /* ChallengeClient.swift */,
 				E9D23E812DA7735D291EA0D0 /* MyChallengeClient.swift */,
+				EA7135282DBE6425000C9B1E /* ChallengeListClient.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -2453,6 +2467,7 @@
 				8B97DDA6CAFD7FF74D382F7F /* PutCommentRequest.swift */,
 				36D9141EE48B3D34377D5F9C /* Request.swift */,
 				EA7135252DBE4F54000C9B1E /* DefaultIdRequest.swift */,
+				EA71352E2DBE6728000C9B1E /* GetChallengeListLocation.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -2585,6 +2600,35 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		EA7135302DBEBBE4000C9B1E /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				35DC643AEE1D4767F478C3AB /* HomeChallengeBannerSection.swift */,
+				FD87A029BEF76C2054F5A226 /* HomeChallengeBannerItemView.swift */,
+			);
+			path = Banner;
+			sourceTree = "<group>";
+		};
+		EA7135312DBEBC07000C9B1E /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				3615B74A51B897CBE31C798C /* HomeThemeChallengeSection.swift */,
+				C90C8230C0D2ADB557A6488E /* HomeThemeChallengeIndicatorView.swift */,
+				723E426D32F3EF4A9AC83798 /* HomeThemeChallengeTabView.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		EA7135322DBEBC13000C9B1E /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				50399E2FEF604447C8BACFB9 /* HomeAccessPromptSection.swift */,
+				EA7135332DBEC07F000C9B1E /* HomeChallengeLocationSection.swift */,
+				EA7135352DBEC19F000C9B1E /* HomeChallengeLocationItemView.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
 		ED99C4FAD8250D7F8D110385 /* Style */ = {
 			isa = PBXGroup;
 			children = (
@@ -2611,6 +2655,7 @@
 				593A58E2E91B021A4AF3F884 /* API */,
 				C5726AEC8CEC0F67F1ACE7F5 /* AppSetting.swift */,
 				B525561D36C06F8525DE8E9E /* Coordinate.swift */,
+				EA71352B2DBE64C1000C9B1E /* AppLocation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -3694,6 +3739,7 @@
 				AA3FDBA7F748E148DF1A8F47 /* CommentListRseponse.swift in Sources */,
 				CAC26AB391DC07F8F898D36F /* DefaultProgressResponse.swift in Sources */,
 				D83156D2272403C24BB67079 /* Pageable.swift in Sources */,
+				EA71352C2DBE64C1000C9B1E /* AppLocation.swift in Sources */,
 				E06CD4C9C413FFA49C7DD284 /* AppSetting.swift in Sources */,
 				734EA3584D2BAFEA15E2A4D8 /* Coordinate.swift in Sources */,
 			);
@@ -3711,6 +3757,7 @@
 				8808BC3A293387F2CBCD1591 /* AppView.swift in Sources */,
 				9A7F85FEC8F2E5BD87F26052 /* DetailChallengeFeature.swift in Sources */,
 				6116ED1F4179E7BD39E538C0 /* DetailChallengeView.swift in Sources */,
+				EA7135362DBEC19F000C9B1E /* HomeChallengeLocationItemView.swift in Sources */,
 				738FF49114FA0AA199F67600 /* ChallengePlaceListItem.swift in Sources */,
 				B6A7523326D1D45A4C29B314 /* ChallengeStampView.swift in Sources */,
 				D782D3F167ECD68AFED288FE /* DetailChallengeBottomSection.swift in Sources */,
@@ -3730,6 +3777,7 @@
 				B85EB7F742A6A2141A8C64B8 /* HomeThemeChallengeTabView.swift in Sources */,
 				0EC516E2E41AB67AB1889EF1 /* LoginFeature.swift in Sources */,
 				B605962AB2D9FDD869D2A32B /* LoginView.swift in Sources */,
+				EA7135342DBEC07F000C9B1E /* HomeChallengeLocationSection.swift in Sources */,
 				F5227587CA36805F1695E0F2 /* LoginButtonView.swift in Sources */,
 				239E8938770AA385D92ED13A /* MainTabFeature.swift in Sources */,
 				E517F1F6170C269A408DB165 /* MainTabView.swift in Sources */,
@@ -3787,9 +3835,11 @@
 				455E49ABFF1B4B251C76A5F3 /* TokenManager.swift in Sources */,
 				05981452C3B02B0953437CB9 /* NetworkDispatcher.swift in Sources */,
 				E69D5CDA7CE4F3A92124FB43 /* NetworkRequestError.swift in Sources */,
+				EA7135292DBE6425000C9B1E /* ChallengeListClient.swift in Sources */,
 				7420CDA0BB3E1C7E11E07EEB /* GetChallengeMyRequest.swift in Sources */,
 				DCD9D12B7A8245E08CA943C6 /* GetDefaultPageRequest.swift in Sources */,
 				7AAF00EA3DA02B5DB9D334A8 /* GetDefaultRequest.swift in Sources */,
+				EA71352F2DBE6728000C9B1E /* GetChallengeListLocation.swift in Sources */,
 				AA18673FB5ECBF0AF2328279 /* HTTPMethod.swift in Sources */,
 				F6A2528E38E7F7A5EE2C1A7D /* PostAuthLoginFbIosRequest.swift in Sources */,
 				E2316F92C0689B90B96D4F89 /* PostAuthLoginRequest.swift in Sources */,
@@ -3835,6 +3885,8 @@
 				E8DA3E9975B4890C2B336962 /* Mocks.swift in Sources */,
 				EA71351B2DBE13A4000C9B1E /* String++.swift in Sources */,
 				4EA4C3687EC76C804D745764 /* Constants.swift in Sources */,
+				EA7135382DBECAA7000C9B1E /* RoundedCorner.swift in Sources */,
+				EA71353A2DBECBC3000C9B1E /* Int++.swift in Sources */,
 				041186D189A96D3D27D810C7 /* KeyboardObserver.swift in Sources */,
 				0FC804C30878DA0C7D6ADC5E /* Logger.swift in Sources */,
 				1E9066799BA023B7330BB2ED /* StatefulPreviewWrapper.swift in Sources */,

@@ -10,6 +10,7 @@ import ComposableArchitecture
 import Common
 import SharedTypes
 import Models
+import Clients
 
 @Reducer
 public struct DetailChallengeFeature {
@@ -106,27 +107,32 @@ public struct DetailChallengeFeature {
       case let .bottomAction(action):
         switch action {
         case .like:
-          return .run { [state = state] send in
-            guard let challenge = state.challenge else { return }
-            
-            // 1. 좋아요 UI 즉시 업데이트
-            var update = challenge
-            update.isLiked.toggle()
-            update.likedCount += update.isLiked ? 1 : -1
-            await send(.update(update))
-            
-            do {
-              let response = try await challengeClient.putLike(update.id)
+          if TokenManager.shared.isLogin {
+            return .run { [state = state] send in
+              guard let challenge = state.challenge else { return }
               
-              // 필요시 서버 데이터랑 다르면 다시 fetch
-              if response.isLiked != update.isLiked {
-                let fresh = try await challengeClient.get(response.id)
-                await send(.update(fresh))
+              // 1. 좋아요 UI 즉시 업데이트
+              var update = challenge
+              update.isLiked.toggle()
+              update.likedCount += update.isLiked ? 1 : -1
+              await send(.update(update))
+              
+              do {
+                let response = try await challengeClient.putLike(update.id)
+                
+                // 필요시 서버 데이터랑 다르면 다시 fetch
+                if response.isLiked != update.isLiked {
+                  let fresh = try await challengeClient.get(response.id)
+                  await send(.update(fresh))
+                }
+              } catch {
+                await send(.getError)
               }
-            } catch {
-              await send(.getError)
             }
+          } else {
+            return .send(.showLoginAlert)
           }
+          
         case .map:
           return .none
         case .stamp:

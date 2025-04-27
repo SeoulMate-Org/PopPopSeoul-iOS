@@ -23,7 +23,3 @@ struct HomeThemeChallengeIndicatorView: View {
     }
   }
 }
-
-//#Preview {
-//  HomeThemeChallengeIndicatorView(currentTab: .historyCulture)
-//}
