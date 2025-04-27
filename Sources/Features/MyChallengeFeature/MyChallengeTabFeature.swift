@@ -22,7 +22,7 @@ public struct MyChallengeTabFeature {
   
   @ObservableState
   public struct State: Equatable {
-    var selectedTab: ChallengeStatus = .interest
+    var selectedTab: Tab = .interest
     
     var interestList: [MyChallenge] = []
     var progressList: [MyChallenge] = []
@@ -32,13 +32,27 @@ public struct MyChallengeTabFeature {
     var showUndoToast: Bool = false
   }
   
+  public enum Tab: Equatable, CaseIterable {
+    case interest
+    case progress
+    case completed
+    
+    public var apiCode: String {
+      switch self {
+      case .interest: return "LIKE"
+      case .progress: return "PROGRESS"
+      case .completed: return "COMPLETE"
+      }
+    }
+  }
+  
   // MARK: Actions
   
   @CasePathable
   public enum Action: Equatable {
     case onApear
-    case tabChanged(ChallengeStatus)
-    case fetchList(ChallengeStatus)
+    case tabChanged(Tab)
+    case fetchList(Tab)
     case fetchListError
     
     case undoLike
@@ -68,21 +82,21 @@ public struct MyChallengeTabFeature {
           switch tab {
           case .interest:
             do {
-              let list = try await myChallengeClient.fetchList(tab)
+              let list = try await myChallengeClient.fetchList(tab.apiCode)
               await send(.setInterestList(list))
             } catch {
               await send(.fetchListError)
             }
           case .progress:
             do {
-              let list = try await myChallengeClient.fetchList(tab)
+              let list = try await myChallengeClient.fetchList(tab.apiCode)
               await send(.setProgressList(list))
             } catch {
               await send(.fetchListError)
             }
           case .completed:
             do {
-              let list = try await myChallengeClient.fetchList(tab)
+              let list = try await myChallengeClient.fetchList(tab.apiCode)
               await send(.setCompletedList(list))
             } catch {
               await send(.fetchListError)

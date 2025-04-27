@@ -30,7 +30,7 @@ struct MyChallengeTabView: View {
       )
       
       TopTabView(
-        tabs: ChallengeStatus.allCases,
+        tabs: MyChallengeTabFeature.Tab.allCases,
         titleProvider: { $0.title },
         selectedTab: viewStore.binding(
           get: \.selectedTab,
@@ -79,7 +79,7 @@ struct MyChallengeTabView: View {
   private func listView(
     viewStore: ViewStoreOf<MyChallengeTabFeature>,
     items: [MyChallenge],
-    tab: ChallengeStatus
+    tab:  MyChallengeTabFeature.Tab
   ) -> some View {
     MyChallengeListView(
       tab: tab,
@@ -110,7 +110,7 @@ struct MyChallengeTabView: View {
 
 // MARK: - Helper
 
-extension ChallengeStatus {
+extension  MyChallengeTabFeature.Tab {
   var title: String {
     switch self {
     case .interest: String(sLocalization: .mychallengeInterestTitle)

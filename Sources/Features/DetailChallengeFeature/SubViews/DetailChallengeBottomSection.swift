@@ -30,6 +30,7 @@ struct DetailChallengeBottomSection: View {
           AppButton(title: String(sLocalization: .detailchallengeStampButton), size: .msize, style: .primary, layout: .textOnly, state: .enabled, onTap: { onTap(.stamp) }, isFullWidth: true)
             .padding(.vertical, 10)
         } else {
+          // TODO: - 미진행 사용자 분리
           AppButton(title: String(sLocalization: .detailchallengeStartButton), size: .msize, style: .primary, layout: .textOnly, state: .enabled, onTap: { onTap(.start) }, isFullWidth: true)
             .padding(.vertical, 10)
         }

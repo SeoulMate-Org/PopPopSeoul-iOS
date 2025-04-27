@@ -97,8 +97,7 @@ public struct DetailCommentsFeature {
         }
         
       case let .updateList(comments):
-        print(comments)
-        state.comments = []
+        state.comments = (comments)
         return .none
         
       case .error:

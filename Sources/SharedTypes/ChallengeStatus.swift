@@ -8,13 +8,11 @@
 import Foundation
 
 public enum ChallengeStatus: String, Equatable, CaseIterable {
-  case interest
   case progress
   case completed
   
  public var apiCode: String {
     switch self {
-    case .interest: return "LIKE"
     case .progress: return "PROGRESS"
     case .completed: return "COMPLETE"
     }

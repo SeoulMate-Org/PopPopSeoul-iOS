@@ -12,7 +12,7 @@ import SharedAssets
 import SharedTypes
 
 struct MyChallengeEmptyView: View {
-  let tab: ChallengeStatus
+  let tab: MyChallengeTabFeature.Tab
   let image: Image = Assets.Images.emptyPop.swiftUIImage
   let onTap: () -> Void
 
@@ -49,7 +49,7 @@ struct MyChallengeEmptyView: View {
 
 // MARK: - Helper
 
-extension ChallengeStatus {
+extension MyChallengeTabFeature.Tab {
   var emptyTitle: String {
     switch self {
     case .interest: return String(sLocalization: .mychallengeInterestEmptyTitle)

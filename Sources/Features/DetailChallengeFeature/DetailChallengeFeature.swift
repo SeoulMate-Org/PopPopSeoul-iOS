@@ -35,14 +35,20 @@ public struct DetailChallengeFeature {
   public enum Action: Equatable {
     case onApear
     case update(DetailChallenge)
+    case getError
+    
+    // header
     case tappedBack
     case tappedMore
     case dismissMenu
     case quitChallenge
-    case getError
+    
+    // comment
     case tappedAllComments(id: Int)
     case tappedEditComment(id: Int, Comment)
     case tappedDeleteComment(id: Int)
+    
+    // bottom
     case bottomAction(BottomAction)
   }
   

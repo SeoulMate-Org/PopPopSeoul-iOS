@@ -10,7 +10,7 @@ import Models
 import SharedTypes
 
 public struct MyChallengeClient {
-  public var fetchList: @Sendable (ChallengeStatus) async throws -> [MyChallenge]
+  public var fetchList: @Sendable (String) async throws -> [MyChallenge]
 }
 
 extension MyChallengeClient: DependencyKey {
@@ -18,8 +18,8 @@ extension MyChallengeClient: DependencyKey {
     @Dependency(\.apiClient) var apiClient
         
     return Self(
-      fetchList: { type in
-        let query = GetChallengeMyRequest(myChallenge: type.apiCode)
+      fetchList: { tab in
+        let query = GetChallengeMyRequest(myChallenge: tab)
         let request: Request = .get(.challengeMy, query: query.queryItems)
         let (data, _) = try await apiClient.send(request)
         
