@@ -11,6 +11,7 @@ import SharedTypes
 
 public struct ChallengeListClient {
   public var fetchLocationList: @Sendable (Coordinate) async throws -> [MyChallenge]
+  public var fetchThemeList: @Sendable (ChallengeTheme) async throws -> (ChallengeTheme, [MyChallenge])
 }
 
 extension ChallengeListClient: DependencyKey {
@@ -27,6 +28,13 @@ extension ChallengeListClient: DependencyKey {
         let (data, _) = try await apiClient.send(request)
         
         return try data.decoded()
+      },
+      fetchThemeList: { theme in
+        let query = GetChallengeListTheme(themeId: theme.id)
+        let request: Request = .get(.challengeListTheme, query: query.queryItems)
+        let (data, _) = try await apiClient.send(request)
+        let list: [MyChallenge] = try data.decoded()
+        return (theme, list)
       }
     )
   }

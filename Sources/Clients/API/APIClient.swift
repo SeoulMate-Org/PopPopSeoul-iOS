@@ -24,7 +24,7 @@ extension APIClient: DependencyKey {
         }
         
         let dateFormatter = DateFormatter()
-        dateFormatter.timeZone = TimeZone(abbreviation: "UTC") // UTC 시간대 설정
+        dateFormatter.timeZone = TimeZone(identifier: "Asia/Seoul")// UTC 시간대 설정
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
         let utcTimeString = dateFormatter.string(from: Date())
@@ -37,7 +37,7 @@ extension APIClient: DependencyKey {
           let message: String = """
                         
             ================ HTTP REQUEST ================
-            url: \(urlStr) - UTC \(utcTimeString)
+            url: \(urlStr) - \(utcTimeString)
             method: \(method)
             url: \(urlStr)
             headers: \(headers)
@@ -50,7 +50,7 @@ extension APIClient: DependencyKey {
           let message: String = """
                         
             ================ HTTP REQUEST ================
-            url: \(urlStr) - UTC \(utcTimeString)
+            url: \(urlStr) - \(utcTimeString)
             method: \(method)
             headers: \(headers)
             body: nil
@@ -66,8 +66,8 @@ extension APIClient: DependencyKey {
         var message: String = """
                         
             ================ HTTP RESPONSE ================
-            url: \(urlStr) - UTC \(utcTimeString)
-            method: \(method)
+            url: \(urlStr) - \(utcTimeString)
+            method: \(method)\n
             """
         
         if let httpResponse = response as? HTTPURLResponse {

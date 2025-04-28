@@ -620,6 +620,7 @@
 		EA7135382DBECAA7000C9B1E /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7135372DBECAA7000C9B1E /* RoundedCorner.swift */; };
 		EA71353A2DBECBC3000C9B1E /* Int++.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7135392DBECBC3000C9B1E /* Int++.swift */; };
 		EA949284C11DB940F84888C2 /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256CCC92AC8D6EE5FACE5475 /* Dependencies.framework */; };
+		EA9740B92DBF981E00129D2A /* GetChallengeListTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9740B82DBF981E00129D2A /* GetChallengeListTheme.swift */; };
 		EAE62223229FB6E39F76669F /* CasePathsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CF7412324C02D1745F0E0D /* CasePathsCore.framework */; };
 		EB1B1D606C9519443C8093A6 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E58A56242DD34BBF412FCA4 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle */; };
 		EB2C1DD848ACAAE2D607CA78 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F75DBDEF31E5F47ECCF65C8 /* UIKit.framework */; };
@@ -1494,6 +1495,7 @@
 		EA7135352DBEC19F000C9B1E /* HomeChallengeLocationItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChallengeLocationItemView.swift; sourceTree = "<group>"; };
 		EA7135372DBECAA7000C9B1E /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 		EA7135392DBECBC3000C9B1E /* Int++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int++.swift"; sourceTree = "<group>"; };
+		EA9740B82DBF981E00129D2A /* GetChallengeListTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeListTheme.swift; sourceTree = "<group>"; };
 		EB1AF2F0C1D291ADEC33A0B1 /* GetChallengeMyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeMyRequest.swift; sourceTree = "<group>"; };
 		EC4AFF88EA6DCED6098DE437 /* Clients-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Clients-Info.plist"; sourceTree = "<group>"; };
 		EDC7634792471BCEEC7B75AF /* FirebaseInstallations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FirebaseInstallations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2468,6 +2470,7 @@
 				36D9141EE48B3D34377D5F9C /* Request.swift */,
 				EA7135252DBE4F54000C9B1E /* DefaultIdRequest.swift */,
 				EA71352E2DBE6728000C9B1E /* GetChallengeListLocation.swift */,
+				EA9740B82DBF981E00129D2A /* GetChallengeListTheme.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -3853,6 +3856,7 @@
 				2ECFBF5DF39C02584E528E4E /* MyChallengeClient.swift in Sources */,
 				5F94B7D05BD3D23DFBEAC88E /* AppUpdateClient.swift in Sources */,
 				8619384045B4AE561C8C24DD /* KeychainClient.swift in Sources */,
+				EA9740B92DBF981E00129D2A /* GetChallengeListTheme.swift in Sources */,
 				0F0ED1803938836788759A91 /* UserDefaultClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

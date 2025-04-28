@@ -11,11 +11,14 @@ import DesignSystem
 import Clients
 import SharedAssets
 import SharedTypes
+import Models
 
 struct HomeThemeChallengeSection: View {
   @Binding var selectedTab: ChallengeTheme
-  let challengesByTheme: [ChallengeTheme: [Challenge]]
-  let themeTabChanged: (ChallengeTheme) -> ()
+  let challengesByTheme: [ChallengeTheme: [MyChallenge]]
+  let themeTabChanged: (ChallengeTheme) -> Void
+  let onLikeTapped: (Int) -> Void
+  let onMoreTapped: () -> Void
   
   var body: some View {
     VStack(alignment: .center, spacing: 0) {
@@ -29,7 +32,7 @@ struct HomeThemeChallengeSection: View {
         Spacer()
         
         Button(action: {
-          // TODO: 더보기 액션
+          onMoreTapped()
         }) {
           Text("더보기")
             .font(.captionM)
@@ -40,45 +43,42 @@ struct HomeThemeChallengeSection: View {
       .padding(.horizontal, 20)
       
       // MARK: - 필터 탭
-      ScrollView(.horizontal, showsIndicators: false) {
-        HStack(spacing: 8) {
-          ForEach(ChallengeTheme.allCases, id: \.self) { tab in
-            HomeThemeChallengeTabView(
-              tab: tab,
-              isSelected: selectedTab == tab,
-              onTapped: { themeTabChanged(tab) }
-            )
-            .frame(height: 30)
+      ScrollViewReader { proxy in
+        ScrollView(.horizontal, showsIndicators: false) {
+          HStack(spacing: 8) {
+            ForEach(ChallengeTheme.sortedByPriority(), id: \.self) { tab in
+              HomeThemeChallengeTabView(
+                tab: tab,
+                isSelected: selectedTab == tab,
+                onTapped: {
+                  themeTabChanged(tab)
+                }
+              )
+              .frame(height: 30)
+              .id(tab)
+            }
+          }
+          .padding(.horizontal, 20)
+        }
+        .padding(.top, 16)
+        .onChange(of: selectedTab, initial: false) { oldTab, newTab in
+          guard oldTab != newTab else { return }
+          withAnimation {
+            proxy.scrollTo(newTab, anchor: .center)
           }
         }
-        .padding(.horizontal, 20)
       }
-      .padding(.top, 16)
       
       ThemeChallengeListView(
         listType: .home,
+        challengesByTheme: challengesByTheme,
         selectedTab: $selectedTab,
-        challengesByTheme: challengesByTheme
+        onLikeTapped: onLikeTapped
       )
       .padding(.top, 20)
       
-      HomeThemeChallengeIndicatorView(currentTab: selectedTab)
+      HomeThemeChallengeIndicatorView(currentTab: $selectedTab)
         .padding(.top, 16)
     }
   }
 }
-
-//#Preview {
-//  let dummyData: [ChallengeTheme: [Challenge]] = [
-//    .localExploration: mockChallenges,
-//    .historyCulture: mockChallenges,
-//    .artExhibition: mockChallenges,
-//    .culturalEvent: mockChallenges
-//  ]
-//  StatefulPreviewWrapper(ChallengeTheme.localExploration) { binding in
-//    HomeThemeChallengeSection(
-//      selectedTab: binding,
-//      challengesByTheme: dummyData,
-//      themeTabChanged: { _ in })
-//  }
-//}

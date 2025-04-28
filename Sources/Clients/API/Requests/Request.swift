@@ -36,8 +36,9 @@ public struct Request: Sendable {
     guard var components = URLComponents(string: endpoint.url) else {
       throw APIRequestBuildError.invalidURL
     }
-    
-    components.scheme = "https"
+    // TODO: - 테스트 서버
+    components.scheme = "http"
+//    components.scheme = "https"
     if !queryItems.isEmpty {
       components.queryItems = queryItems
     }

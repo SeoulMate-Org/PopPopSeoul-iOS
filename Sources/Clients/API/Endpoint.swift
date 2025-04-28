@@ -26,6 +26,7 @@ public extension Endpoint {
   static let challengeMy = Self(baseUrl: apiBaseUrl, pathComponents: ["challenge", "my"])
   static let challenge = Self(baseUrl: apiBaseUrl, pathComponents: ["challenge"])
   static let challengeListLocation = Self(baseUrl: apiBaseUrl, pathComponents: ["challenge", "list", "location"])
+  static let challengeListTheme = Self(baseUrl: apiBaseUrl, pathComponents: ["challenge", "list", "theme"])
   static let challengeLike = Self(baseUrl: apiBaseUrl, pathComponents: ["challenge", "like"])
   static let comment = Self(baseUrl: apiBaseUrl, pathComponents: ["comment"])
 }
@@ -33,7 +34,9 @@ public extension Endpoint {
 var apiBaseUrl: String {
   guard let path = Bundle.main.path(forResource: "Secrets", ofType: "plist"),
         let dict = NSDictionary(contentsOfFile: path),
-        let value = dict["BASE_URL"] as? String else {
+//        let value = dict["BASE_URL"] as? String else {
+        // TODO: - 테스트 서버
+        let value = dict["TEST_BASE_URL"] as? String else {
     fatalError("❌ secrets.plist의 BASE_URL을 읽을 수 없습니다.")
   }
   return value

@@ -18,16 +18,18 @@ struct HomeThemeChallengeTabView: View {
   let onTapped: () -> Void
     
   var body: some View {
+    let lanuage = AppSettingManager.shared.language
     Button(action: {
       onTapped()
     }) {
-      Text(tab.title)
+      Text(tab.title(lanuage))
         .font(.captionM)
         .foregroundColor(isSelected ? Colors.blue500.swiftUIColor : Colors.gray900.swiftUIColor)
         .padding(.horizontal, 10)
         .padding(.vertical, 6)
     }
     .frame(minWidth: 67)
+    .frame(height: 30)
     .background(
       isSelected
       ? Colors.blue50.swiftUIColor
@@ -40,7 +42,3 @@ struct HomeThemeChallengeTabView: View {
     .cornerRadius(12)
   }
 }
-
-//#Preview {
-//  HomeThemeChallengeTabView(tab: .artExhibition, isSelected: true, onTapped: { })
-//}

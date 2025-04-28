@@ -9,14 +9,15 @@ import SwiftUI
 import Common
 import SharedAssets
 import SharedTypes
+import Models
 
 public struct ThemeChallengeListItemView: View {
   let listType: ThemeChallengeListType
-  let challenge: Challenge
+  let challenge: MyChallenge
   let onLikeTapped: () -> Void
   
   public init(listType: ThemeChallengeListType,
-              challenge: Challenge, onLikeTapped:
+              challenge: MyChallenge, onLikeTapped:
               @escaping () -> Void) {
     self.listType = listType
     self.challenge = challenge
@@ -25,7 +26,7 @@ public struct ThemeChallengeListItemView: View {
   
   public var body: some View {
     HStack(alignment: .center, spacing: 8) {
-      AsyncImage(url: URL(string: challenge.imageURL)) { image in
+      AsyncImage(url: URL(string: challenge.imageUrl)) { image in
         image
           .resizable()
           .scaledToFill()
@@ -44,14 +45,14 @@ public struct ThemeChallengeListItemView: View {
           .lineLimit(2)
         
         HStack(spacing: 10) {
-          if challenge.likeCount > 0 {
+          if challenge.likes > 0 {
             HStack(spacing: 2) {
               Assets.Icons.heartFill.swiftUIImage
                 .resizable()
                 .foregroundColor(Colors.gray100.swiftUIColor)
                 .frame(width: 16, height: 16)
               
-              Text("\(challenge.likeCount)")
+              Text("\(challenge.likes)")
                 .font(.captionL)
                 .foregroundColor(Colors.gray300.swiftUIColor)
             }
@@ -82,7 +83,7 @@ public struct ThemeChallengeListItemView: View {
                 .fill(Colors.blue50.swiftUIColor)
             )
           
-          Text("\(challenge.mainLocal)")
+          Text("\(challenge.mainLocation)")
             .font(.captionL)
             .foregroundColor(Colors.gray600.swiftUIColor)
         }
@@ -93,16 +94,18 @@ public struct ThemeChallengeListItemView: View {
       Button(action: {
         onLikeTapped()
       }) {
-        Assets.Icons.heartFill.swiftUIImage
-          .foregroundColor(.red)
-          .frame(width: 19, height: 19)
+        let image = challenge.isLiked ? Assets.Icons.heartFill.swiftUIImage : Assets.Icons.heartLine.swiftUIImage
+        image
+          .resizable()
+          .foregroundColor(challenge.isLiked ? Colors.red500.swiftUIColor : Colors.gray300.swiftUIColor)
+          .frame(width: 24, height: 24)
       }
-      .frame(width: 32, height: 32)
+      .frame(width: 40, height: 40)
       .background(Colors.gray25.swiftUIColor)
-      .cornerRadius(12)
+      .cornerRadius(16)
       .padding(.leading, 8)
     }
     .background(.clear)
-    .frame(height: 96)
+    .frame(height: 92)
   }
 }

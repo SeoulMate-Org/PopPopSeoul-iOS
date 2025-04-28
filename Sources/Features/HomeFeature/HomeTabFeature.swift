@@ -30,18 +30,11 @@ public struct HomeTabFeature {
     var locationListType: LocationListType = .none
     var locationList: [MyChallenge] = []
     
-    var selectedThemeTab: ChallengeTheme = .localExploration
-    let themeChallenges: [ChallengeTheme: [Challenge]] = [
-      .localExploration: [],
-      .historyCulture: [],
-      .artExhibition: [],
-      .gourmetAndLegacy: [],
-      .nightscapeAndMood: [],
-      .walkingTour: [],
-      .photoTour: [],
-      .mustVisit: [],
-      .culturalEvent: []
-    ]
+    // Theme
+    var loadingThemes: [ChallengeTheme] = [] // ✅ 로딩 중인 테마
+    var selectedTheme: ChallengeTheme = .mustSeeSpots
+    var themeChallenges: [ChallengeTheme: [MyChallenge]] = Dictionary(uniqueKeysWithValues: ChallengeTheme.sortedByPriority().map { ($0, []) })
+    
   }
   
   public enum LocationListType: Equatable {
@@ -73,8 +66,9 @@ public struct HomeTabFeature {
     case updateLocationList([MyChallenge])
     
     // Theme List
-    case selectedThemeTabChanged(ChallengeTheme)
-    case fetchThemeList
+    case themeChanged(ChallengeTheme)
+    case fetchThemeList(ChallengeTheme)
+    case updateThemeList(ChallengeTheme, [MyChallenge])
     
     // Missing List
     case fetchMissingList
@@ -92,6 +86,7 @@ public struct HomeTabFeature {
     Reduce { state, action in
       switch action {
       case .onAppear:
+        let prefetchThemes: [ChallengeTheme] = [.mustSeeSpots, .localTour, .historyCulture]
         return .merge(
           // 1. 권한 요청
           .run { _ in await locationManager.requestWhenInUseAuthorization() },
@@ -107,9 +102,13 @@ public struct HomeTabFeature {
           .run { send in
             let status = await locationManager.authorizationStatus()
             await send(.locationManager(.didChangeAuthorization(status)))
-          }
+          },
+          
+          .merge(
+            prefetchThemes.map { .send(.fetchThemeList($0)) }
+          )
         )
-
+        
       case let .locationManager(.didChangeAuthorization(status)):
         guard state.authorizationStatus != status else { return .none }
         
@@ -158,20 +157,39 @@ public struct HomeTabFeature {
         
       case let .fetchLocationList(coordinate):
         return .run { send in
-            do {
-              let list = try await callengeListClient.fetchLocationList(coordinate)
-              await send(.updateLocationList(list))
-            } catch {
-              await send(.networkError)
-            }
+          do {
+            let list = try await callengeListClient.fetchLocationList(coordinate)
+            await send(.updateLocationList(list))
+          } catch {
+            await send(.networkError)
+          }
         }
         
       case let .updateLocationList(list):
         state.locationList = list
         return .none
         
-      case let .selectedThemeTabChanged(tab):
-        state.selectedThemeTab = tab
+      case let .themeChanged(theme):
+        state.selectedTheme = theme
+        if state.themeChallenges[theme]?.isEmpty == true && !state.loadingThemes.contains(theme) {
+          return .send(.fetchThemeList(theme))
+        }
+        return .none
+        
+      case let .fetchThemeList(theme):
+        state.loadingThemes.append(theme)
+        return .run { send in
+          do {
+            let result = try await callengeListClient.fetchThemeList(theme)
+            await send(.updateThemeList(result.0, result.1))
+          } catch {
+            await send(.networkError)
+          }
+        }
+        
+      case let .updateThemeList(theme, list):
+        state.loadingThemes.removeAll(where: { $0.id == theme.id })
+        state.themeChallenges[theme] = list
         return .none
         
       default: return .none
