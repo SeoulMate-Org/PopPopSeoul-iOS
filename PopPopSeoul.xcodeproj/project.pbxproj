@@ -627,6 +627,9 @@
 		E9990850B12B4043D5B727A3 /* AppLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816E908C3AF8834E0498D994 /* AppLocation.swift */; };
 		E9DE71C84C88288412A32A64 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8609EF56D0937265092D5D36 /* Pretendard-ExtraLight.otf */; };
 		EA949284C11DB940F84888C2 /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256CCC92AC8D6EE5FACE5475 /* Dependencies.framework */; };
+		EA9740BE2DC06BFD00129D2A /* HomeChallengeMissingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9740BD2DC06BFD00129D2A /* HomeChallengeMissingSection.swift */; };
+		EA9740C02DC079B400129D2A /* HomeChallengeMissingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9740BF2DC079B400129D2A /* HomeChallengeMissingItemView.swift */; };
+		EA9740C22DC0819700129D2A /* GetChallengeListStampRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9740C12DC0819700129D2A /* GetChallengeListStampRequest.swift */; };
 		EAE62223229FB6E39F76669F /* CasePathsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CF7412324C02D1745F0E0D /* CasePathsCore.framework */; };
 		EB1B1D606C9519443C8093A6 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E58A56242DD34BBF412FCA4 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle */; };
 		EB2C1DD848ACAAE2D607CA78 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F75DBDEF31E5F47ECCF65C8 /* UIKit.framework */; };
@@ -1508,6 +1511,9 @@
 		E9D23E812DA7735D291EA0D0 /* MyChallengeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChallengeClient.swift; sourceTree = "<group>"; };
 		EA14930892816AFA4A88950C /* GoogleUtilities_Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleUtilities_Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA26B67DE986D8D090F59956 /* CombineSchedulers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CombineSchedulers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA9740BD2DC06BFD00129D2A /* HomeChallengeMissingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChallengeMissingSection.swift; sourceTree = "<group>"; };
+		EA9740BF2DC079B400129D2A /* HomeChallengeMissingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChallengeMissingItemView.swift; sourceTree = "<group>"; };
+		EA9740C12DC0819700129D2A /* GetChallengeListStampRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeListStampRequest.swift; sourceTree = "<group>"; };
 		EB1AF2F0C1D291ADEC33A0B1 /* GetChallengeMyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeMyRequest.swift; sourceTree = "<group>"; };
 		EC4AFF88EA6DCED6098DE437 /* Clients-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Clients-Info.plist"; sourceTree = "<group>"; };
 		ED959662DDBB4C61C02FC951 /* HomeThemeChallengeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeThemeChallengeSection.swift; sourceTree = "<group>"; };
@@ -2381,6 +2387,7 @@
 				AF8E7A30A6F5C4F9745B26E8 /* Banner */,
 				B77F5ECF39F9DA387BB2CB71 /* Location */,
 				3F8A6EF8F15C525FBA2D5DE9 /* Theme */,
+				EA9740BC2DC06B8A00129D2A /* Missing */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -2517,6 +2524,7 @@
 				B83E6A68F28C916226F76843 /* PostCommentRequest.swift */,
 				8B97DDA6CAFD7FF74D382F7F /* PutCommentRequest.swift */,
 				36D9141EE48B3D34377D5F9C /* Request.swift */,
+				EA9740C12DC0819700129D2A /* GetChallengeListStampRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -2647,6 +2655,15 @@
 				1C2C99A85F1CB627CC840BEC /* Mocks.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		EA9740BC2DC06B8A00129D2A /* Missing */ = {
+			isa = PBXGroup;
+			children = (
+				EA9740BD2DC06BFD00129D2A /* HomeChallengeMissingSection.swift */,
+				EA9740BF2DC079B400129D2A /* HomeChallengeMissingItemView.swift */,
+			);
+			path = Missing;
 			sourceTree = "<group>";
 		};
 		ED99C4FAD8250D7F8D110385 /* Style */ = {
@@ -3787,11 +3804,13 @@
 				0A8B30B48CB98F281EB0060B /* DetailChallengeInfoSection.swift in Sources */,
 				73758F1D9071EEC2DDC70A19 /* DetailChallengePlaceSection.swift in Sources */,
 				1BB5F79E2CF2DEA8F3C2F98E /* DetailChallengeStampSection.swift in Sources */,
+				EA9740BE2DC06BFD00129D2A /* HomeChallengeMissingSection.swift in Sources */,
 				9FF1A9AC7D704A390B50D7A7 /* DetailCommentsFeature.swift in Sources */,
 				B1BA03ED2D85434694697D60 /* DetailCommentsView.swift in Sources */,
 				12E9DD9E3536C62F0D7388B6 /* HomeTabFeature.swift in Sources */,
 				571CDB5667023BFCD11EAA59 /* HomeTabView.swift in Sources */,
 				6D08DDE6D93D5F5C4649E8F4 /* HomeChallengeBannerItemView.swift in Sources */,
+				EA9740C02DC079B400129D2A /* HomeChallengeMissingItemView.swift in Sources */,
 				75EED01BBDD5982E4F0144A3 /* HomeChallengeBannerSection.swift in Sources */,
 				350A0C81F5BE1390245A434B /* HomeAccessPromptSection.swift in Sources */,
 				58A1C347D71C672DF1E04064 /* HomeChallengeLocationItemView.swift in Sources */,
@@ -3871,6 +3890,7 @@
 				D1F5C74ECBC6D05372A9D465 /* PutCommentRequest.swift in Sources */,
 				01C19861DCEBA9F2E0BB289D /* Request.swift in Sources */,
 				D76F5F3CFFA895CD6679B6C0 /* AuthClient.swift in Sources */,
+				EA9740C22DC0819700129D2A /* GetChallengeListStampRequest.swift in Sources */,
 				AED4C026CDF635E7BF20967F /* ChallengeClient.swift in Sources */,
 				7057229397771FAA58EA1FA2 /* ChallengeListClient.swift in Sources */,
 				7C9B0667ACB05B192F0796BE /* CommentClient.swift in Sources */,

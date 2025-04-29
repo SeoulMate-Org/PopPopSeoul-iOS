@@ -46,5 +46,6 @@ struct HomeChallengeLocationSection: View {
       }
       .padding(.top, 16)
     }
+    .background(.clear)
   }
 }

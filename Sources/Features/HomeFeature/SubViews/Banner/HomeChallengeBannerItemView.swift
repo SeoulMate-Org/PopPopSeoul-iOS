@@ -23,6 +23,8 @@ struct HomeChallengeBannerItemView: View {
       KFImage( URL(string: challenge.imageUrl))
         .placeholder {
           Assets.Images.placeholderImage.swiftUIImage
+            .resizable()
+            .scaledToFill()
         }.retry(maxCount: 2, interval: .seconds(5))
         .resizable()
         .frame(maxWidth: cardWidth, maxHeight: cardHeight)
@@ -52,6 +54,7 @@ struct HomeChallengeBannerItemView: View {
     }
     .frame(maxWidth: cardWidth, maxHeight: cardHeight)
     .cornerRadius(16)
+    .background(.clear)
   }
 }
 

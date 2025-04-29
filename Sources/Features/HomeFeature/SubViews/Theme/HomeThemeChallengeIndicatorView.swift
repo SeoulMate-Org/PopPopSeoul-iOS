@@ -21,5 +21,6 @@ struct HomeThemeChallengeIndicatorView: View {
           .frame(width: isSelected ? 16 : 8, height: 8)
       }
     }
+    .background(.clear)
   }
 }

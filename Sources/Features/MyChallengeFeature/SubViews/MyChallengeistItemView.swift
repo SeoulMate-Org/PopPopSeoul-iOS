@@ -23,6 +23,8 @@ struct MyChallengeistItemView: View {
       KFImage( URL(string: challenge.imageUrl))
         .placeholder {
           Assets.Images.placeholderImage.swiftUIImage
+            .resizable()
+            .scaledToFill()
         }.retry(maxCount: 2, interval: .seconds(5))
         .resizable()
         .frame(width: 76, height: 76)

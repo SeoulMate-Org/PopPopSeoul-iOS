@@ -31,6 +31,8 @@ struct HomeChallengeBannerSection: View {
       HStack {
         Spacer()
         Assets.Images.homeBanner.swiftUIImage
+          .resizable()
+          .scaledToFit()
           .frame(width: 164, height: 164)
           .padding(.top, 12)
           .padding(.trailing, 16)
@@ -66,6 +68,7 @@ struct HomeChallengeBannerSection: View {
         .scrollTargetBehavior(.viewAligned)
       }
     }
+    .background(.clear)
   }
 }
 

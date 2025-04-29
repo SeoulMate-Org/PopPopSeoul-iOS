@@ -39,7 +39,7 @@ public struct ProgressBar: View {
         
         Text("\(current)/\(total)")
           .font(.captionM)
-          .foregroundStyle(Colors.gray500.swiftUIColor)
+          .foregroundStyle(progressType.textColor)
           .frame(width: numberWidth, alignment: .trailing)
 
         Spacer()
@@ -52,7 +52,7 @@ public struct ProgressBar: View {
 // MARK: Preview
 
 #Preview {
-  ProgressBar(progressType: .detailChallenge, total: 3, current: 2)
+  ProgressBar(progressType: .missingChallenge, total: 3, current: 2)
 }
 
 // MARK: - Helper
@@ -60,18 +60,29 @@ public struct ProgressBar: View {
 public enum ProgressType {
   case myChallenge
   case detailChallenge
+  case missingChallenge
   
   var rightPadding: CGFloat {
     switch self {
     case .myChallenge: return 36
     case .detailChallenge: return 0
+    case .missingChallenge: return 14
     }
   }
-
+  
   var height: CGFloat {
     switch self {
     case .myChallenge: return 5
     case .detailChallenge: return 8
+    case .missingChallenge: return 6
+    }
+  }
+  
+  var textColor: Color {
+    switch self {
+    case .myChallenge: return Colors.gray500.swiftUIColor
+    case .detailChallenge: return Colors.gray500.swiftUIColor
+    case .missingChallenge: return Colors.appWhite.swiftUIColor
     }
   }
 }

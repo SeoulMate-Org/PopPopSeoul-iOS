@@ -80,5 +80,6 @@ struct HomeThemeChallengeSection: View {
       HomeThemeChallengeIndicatorView(currentTab: $selectedTab)
         .padding(.top, 16)
     }
+    .background(.clear)
   }
 }

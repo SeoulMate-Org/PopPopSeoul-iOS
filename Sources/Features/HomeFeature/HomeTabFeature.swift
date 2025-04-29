@@ -36,6 +36,7 @@ public struct HomeTabFeature {
     var themeChallenges: [ChallengeTheme: [MyChallenge]] = Dictionary(uniqueKeysWithValues: ChallengeTheme.sortedByPriority().map { ($0, []) })
     
     // Missing List
+    var missingList: [MyChallenge] = []
   }
   
   public enum LocationListType: Equatable {
@@ -73,6 +74,7 @@ public struct HomeTabFeature {
     
     // Missing List
     case fetchMissingList
+    case updateMissingList([MyChallenge])
     
     // Similar List
     case fetchSimilarList
@@ -107,7 +109,11 @@ public struct HomeTabFeature {
           
           .merge(
             prefetchThemes.map { .send(.fetchThemeList($0)) }
-          )
+          ),
+          
+          .run { send in
+            await send(.fetchMissingList)
+          }
         )
         
       case let .locationManager(.didChangeAuthorization(status)):
@@ -191,6 +197,25 @@ public struct HomeTabFeature {
       case let .updateThemeList(theme, list):
         state.loadingThemes.removeAll(where: { $0.id == theme.id })
         state.themeChallenges[theme] = list
+        return .none
+        
+      case .fetchMissingList:
+        if TokenManager.shared.isLogin {
+          return .run { send in
+            do {
+              let list = try await callengeListClient.fetchMissingList()
+              await send(.updateMissingList(list))
+            } catch {
+              await send(.networkError)
+            }
+          }
+        } else {
+          state.missingList = []
+          return .none
+        }
+        
+      case let .updateMissingList(list):
+        state.missingList = list
         return .none
         
       default: return .none

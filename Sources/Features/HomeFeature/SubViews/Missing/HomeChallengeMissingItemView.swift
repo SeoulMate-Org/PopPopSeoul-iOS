@@ -1,26 +1,28 @@
 //
-//  HomeChallengeLocationItemView.swift
+//  HomeChallengeMissingItemView.swift
 //  Features
 //
-//  Created by suni on 4/28/25.
+//  Created by suni on 4/29/25.
 //
 
 import SwiftUI
-import Common
-import DesignSystem
+import SharedTypes
 import SharedAssets
 import Models
+import Common
+import DesignSystem
 import Kingfisher
 
-struct HomeChallengeLocationItemView: View {
+struct HomeChallengeMissingItemView: View {
   let challenge: MyChallenge
   let cardWidth: CGFloat
+  let onStartTapped: () -> Void
   
   var body: some View {
-    let cardHeight = cardWidth + 8.0 + 58.0
+    let cardHeight = cardWidth + 48 + 58
     
     VStack(alignment: .leading, spacing: 0) {
-      ZStack(alignment: .topLeading) {
+      ZStack(alignment: .bottom) {
         KFImage( URL(string: challenge.imageUrl))
           .placeholder {
             Assets.Images.placeholderImage.swiftUIImage
@@ -28,29 +30,37 @@ struct HomeChallengeLocationItemView: View {
               .scaledToFill()
           }.retry(maxCount: 2, interval: .seconds(5))
           .resizable()
-          .frame(maxWidth: cardWidth, maxHeight: cardWidth)
+          .scaledToFill()
+          .frame(width: cardWidth, height: cardWidth)
         
-        HStack(spacing: 4) {
-          Assets.Icons.route.swiftUIImage
-            .resizable()
-            .scaledToFit()
-            .foregroundStyle(Colors.blue50.swiftUIColor)
-            .frame(width: 16, height: 16) // 이미지가 너무 크게 나옴!!
-            .padding(.vertical, 6)
-            .padding(.leading, 6)
-          
-          Text(challenge.distance.formattedDistance)
-            .font(.captionM)
-            .foregroundColor(Colors.blue50.swiftUIColor)
-            .padding(.vertical, 6)
-            .padding(.trailing, 8)
-        }
-        .background(Colors.blue500.swiftUIColor)
-        .frame(height: 28)
-        .cornerRadius(10, corners: [.bottomRight])
+        ProgressBar(
+          progressType: .missingChallenge,
+          total: challenge.attractionCount,
+          current: challenge.myStampCount
+        )
+        .frame(height: 14)
+        .padding(.vertical, 8)
+        .padding(.leading, 14)
       }
       .frame(maxWidth: cardWidth, maxHeight: cardWidth)
       .cornerRadius(16, corners: .allCorners)
+            
+      Button(action: {
+        onStartTapped()
+      }) {
+        Text("챌린지 시작하기")
+          .font(.buttonS)
+          .foregroundColor(Colors.blue500.swiftUIColor)
+          .padding(.vertical, 6)
+      }
+      .frame(width: cardWidth, height: 32)
+      .background(Colors.appWhite.swiftUIColor)
+      .overlay(
+        RoundedRectangle(cornerRadius: 10)
+          .stroke(Colors.blue200.swiftUIColor, lineWidth: 1.5)
+      )
+      .cornerRadius(10)
+      .padding(.top, 8)
       
       Text(challenge.name)
         .lineLimit(2)
@@ -84,5 +94,5 @@ struct HomeChallengeLocationItemView: View {
 }
 
 #Preview {
-  HomeChallengeLocationItemView(challenge: mockMyChallenge, cardWidth: 160)
+  HomeChallengeMissingItemView(challenge: mockMyChallenge, cardWidth: 160, onStartTapped: { })
 }
