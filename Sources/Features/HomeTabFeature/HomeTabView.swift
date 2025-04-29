@@ -88,7 +88,6 @@ struct HomeTabView: View {
           if viewStore.rankList.count > 0 {
             HomeRankSection(
               challenges: viewStore.rankList,
-              onMoreTapped: { },
               onLikeTapped: { _ in })
             .padding(.top, 48)
           }

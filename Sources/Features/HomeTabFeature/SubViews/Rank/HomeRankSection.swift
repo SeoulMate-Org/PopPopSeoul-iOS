@@ -15,7 +15,7 @@ import Models
 
 struct HomeRankSection: View {
   let challenges: [Challenge]
-  let onMoreTapped: () -> Void
+//  let onMoreTapped: () -> Void // FIXME: - 1차 오픈에서 hidden
   let onLikeTapped: (Int) -> Void
   
   var body: some View {
@@ -28,19 +28,19 @@ struct HomeRankSection: View {
           .foregroundStyle(Colors.gray900.swiftUIColor)
         
         HStack(alignment: .bottom) {
-          Text("바로 근처에서 스탬프를 찍을 수 있어요")
+          Text("많이 참여한 챌린지를 순위로 보여드려요!")
             .font(.captionL)
             .foregroundStyle(Colors.gray600.swiftUIColor)
           
           Spacer()
           
-          Button(action: {
-            onMoreTapped()
-          }) {
-            Text("더보기")
-              .font(.captionM)
-              .foregroundColor(Colors.gray400.swiftUIColor)
-          }
+//          Button(action: {
+//            onMoreTapped()
+//          }) {
+//            Text("더보기")
+//              .font(.captionM)
+//              .foregroundColor(Colors.gray400.swiftUIColor)
+//          }
         }
         .padding(.top, 4)
       }

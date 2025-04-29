@@ -92,6 +92,8 @@ public struct HomeTabFeature {
     // Rnaking List
     case fetchRankList
     case updateRankList([Challenge])
+    case tappedRankMore
+    case moveToRank
   }
   
   // MARK: - Reducer
@@ -242,6 +244,7 @@ public struct HomeTabFeature {
         state.missingList = list
         return .none
         
+        // MARK: - Similar Reducer
       case .fetchSimilarList:
         return .run { send in
           do {
@@ -261,7 +264,8 @@ public struct HomeTabFeature {
         state.similarList = list
         return .none
         
-      case .fetchRankList:
+        // MARK: - Rank Reducer
+              case .fetchRankList:
         return .run { send in
           do {
             let list = try await callengeListClient.fetchRankList()
@@ -274,6 +278,9 @@ public struct HomeTabFeature {
       case let .updateRankList(list):
         state.rankList = list
         return .none
+        
+      case .tappedRankMore:
+        return .send(.moveToRank)
         
       default: return .none
       }

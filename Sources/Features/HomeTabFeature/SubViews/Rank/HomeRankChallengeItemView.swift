@@ -67,6 +67,7 @@ public struct HomeRankChallengeItemView: View {
           .frame(width: 24, height: 24)
       }
       .frame(width: 40, height: 40)
+      .padding(.leading, 8)
       .background(Colors.gray25.swiftUIColor)
       .cornerRadius(16)
     }

@@ -95,6 +95,10 @@ public struct MainTabFeature {
         state.path.append(.themeChallenge(ThemeChallengeFeature.State(with: theme)))
         return .none
         
+      case .home(.moveToRank):
+        state.path.append(.rankChallenge(RankChallengeFeature.State()))
+        return .none
+        
         // MARK: - Path Reducer
       case let .path(action):
         switch action {
@@ -135,6 +139,7 @@ extension MainTabFeature {
     case detailComments(DetailCommentsFeature)
     case login(LoginFeature)
     case themeChallenge(ThemeChallengeFeature)
+    case rankChallenge(RankChallengeFeature)
   }
   
 }

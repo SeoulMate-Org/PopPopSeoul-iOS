@@ -82,6 +82,10 @@ public struct MainTabView: View {
         if let store = store.scope(state: \.themeChallenge, action: \.themeChallenge) {
           ThemeChallengeView(store: store)
         }
+      case .rankChallenge:
+        if let store = store.scope(state: \.rankChallenge, action: \.rankChallenge) {
+          RankChallengeView(store: store)
+        }
       }
     }
   }
