@@ -10,6 +10,7 @@ import Common
 import SharedAssets
 import SharedTypes
 import Models
+import Kingfisher
 
 public struct ThemeChallengeListItemView: View {
   let listType: ThemeChallengeListType
@@ -26,17 +27,14 @@ public struct ThemeChallengeListItemView: View {
   
   public var body: some View {
     HStack(alignment: .center, spacing: 8) {
-      AsyncImage(url: URL(string: challenge.imageUrl)) { image in
-        image
-          .resizable()
-          .scaledToFill()
-      } placeholder: {
-        Assets.Images.placeholderImage.swiftUIImage
-          .resizable()
-          .scaledToFill()
-      }
-      .frame(width: 76, height: 76)
-      .clipShape(RoundedRectangle(cornerRadius: 16))
+      KFImage( URL(string: challenge.imageUrl))
+        .placeholder {
+          Assets.Images.placeholderImage.swiftUIImage
+        }.retry(maxCount: 2, interval: .seconds(5))
+        .resizable()
+        .scaledToFill()
+        .frame(width: 76, height: 76)
+        .clipShape(RoundedRectangle(cornerRadius: 16))
       
       VStack(alignment: .leading, spacing: 2) {
         Text(challenge.name)

@@ -10,6 +10,7 @@ import Common
 import DesignSystem
 import SharedAssets
 import Models
+import Kingfisher
 
 struct HomeChallengeLocationItemView: View {
   let challenge: MyChallenge
@@ -20,16 +21,12 @@ struct HomeChallengeLocationItemView: View {
     
     VStack(alignment: .leading, spacing: 0) {
       ZStack(alignment: .topLeading) {
-        AsyncImage(url: URL(string: challenge.imageUrl)) { image in
-          image
-            .resizable()
-            .scaledToFill()
-        } placeholder: {
-          Assets.Images.placeholderImage.swiftUIImage
-            .resizable()
-            .scaledToFill()
-        }
-        .frame(maxWidth: cardWidth, maxHeight: cardWidth)
+        KFImage( URL(string: challenge.imageUrl))
+          .placeholder {
+            Assets.Images.placeholderImage.swiftUIImage
+          }.retry(maxCount: 2, interval: .seconds(5))
+          .resizable()
+          .frame(maxWidth: cardWidth, maxHeight: cardWidth)
         
         HStack(spacing: 4) {
           Assets.Icons.route.swiftUIImage

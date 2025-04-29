@@ -11,6 +11,7 @@ import DesignSystem
 import SharedAssets
 import SharedTypes
 import Models
+import Kingfisher
 
 struct MyChallengeistItemView: View {
   let tab: MyChallengeTabFeature.Tab
@@ -19,15 +20,13 @@ struct MyChallengeistItemView: View {
 
   var body: some View {
     HStack(alignment: .top, spacing: 8) {
-      AsyncImage(url: URL(string: challenge.imageUrl)) { image in
-        image
-          .resizable()
-          .scaledToFill()
-      } placeholder: {
-        Assets.Images.placeholderImage.swiftUIImage
-      }
-      .frame(width: 76, height: 76)
-      .clipShape(RoundedRectangle(cornerRadius: 16))
+      KFImage( URL(string: challenge.imageUrl))
+        .placeholder {
+          Assets.Images.placeholderImage.swiftUIImage
+        }.retry(maxCount: 2, interval: .seconds(5))
+        .resizable()
+        .frame(width: 76, height: 76)
+        .clipShape(RoundedRectangle(cornerRadius: 16))
 
       VStack(alignment: .leading, spacing: 4) {
         if tab == .progress {

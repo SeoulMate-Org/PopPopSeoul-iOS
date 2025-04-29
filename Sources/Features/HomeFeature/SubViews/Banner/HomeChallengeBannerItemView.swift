@@ -10,6 +10,7 @@ import Common
 import DesignSystem
 import SharedAssets
 import Models
+import Kingfisher
 
 struct HomeChallengeBannerItemView: View {
   let challenge: MyChallenge
@@ -19,16 +20,12 @@ struct HomeChallengeBannerItemView: View {
   var body: some View {
     
     ZStack(alignment: .bottom) {
-      AsyncImage(url: URL(string: challenge.imageUrl)) { image in
-        image
-          .resizable()
-          .scaledToFill()
-      } placeholder: {
-        Assets.Images.placeholderImage.swiftUIImage
-          .resizable()
-          .scaledToFill()
-      }
-      .frame(maxWidth: cardWidth, maxHeight: cardHeight)
+      KFImage( URL(string: challenge.imageUrl))
+        .placeholder {
+          Assets.Images.placeholderImage.swiftUIImage
+        }.retry(maxCount: 2, interval: .seconds(5))
+        .resizable()
+        .frame(maxWidth: cardWidth, maxHeight: cardHeight)
       
       Rectangle()
         .fill(LinearGradient.blackFadeBottomToTop)

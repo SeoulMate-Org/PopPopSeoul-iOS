@@ -35,6 +35,7 @@ public struct HomeTabFeature {
     var selectedTheme: ChallengeTheme = .mustSeeSpots
     var themeChallenges: [ChallengeTheme: [MyChallenge]] = Dictionary(uniqueKeysWithValues: ChallengeTheme.sortedByPriority().map { ($0, []) })
     
+    // Missing List
   }
   
   public enum LocationListType: Equatable {

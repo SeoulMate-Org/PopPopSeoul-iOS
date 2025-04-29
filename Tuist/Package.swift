@@ -47,6 +47,10 @@ let package = Package(
         .package(
             url: "https://github.com/firebase/firebase-ios-sdk",
             branch: "main"
+        ),
+        .package(
+            url: "https://github.com/onevcat/Kingfisher.git",
+            .upToNextMajor(from: "8.3.2")
         )
     ]
 )

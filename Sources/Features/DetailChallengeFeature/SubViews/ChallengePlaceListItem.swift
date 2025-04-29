@@ -10,6 +10,7 @@ import Common
 import DesignSystem
 import SharedAssets
 import Models
+import Kingfisher
 
 struct ChallengePlaceListItem: View {
   let place: Attraction
@@ -18,17 +19,13 @@ struct ChallengePlaceListItem: View {
   var body: some View {
     HStack(alignment: .center, spacing: 8) {
       ZStack(alignment: .bottomTrailing) {
-        AsyncImage(url: URL(string: place.imageUrl)) { image in
-          image
-            .resizable()
-            .scaledToFill()
-        } placeholder: {
-          Assets.Images.placeholderImage.swiftUIImage
-            .resizable()
-            .scaledToFill()
-        }
-        .frame(width: 76, height: 76)
-        .clipShape(RoundedRectangle(cornerRadius: 16))
+        KFImage( URL(string: place.imageUrl))
+          .placeholder {
+            Assets.Images.placeholderImage.swiftUIImage
+          }.retry(maxCount: 2, interval: .seconds(5))
+          .resizable()
+          .frame(width: 76, height: 76)
+          .clipShape(RoundedRectangle(cornerRadius: 16))
         
         if place.isStamped {
           Assets.Images.stampActive.swiftUIImage

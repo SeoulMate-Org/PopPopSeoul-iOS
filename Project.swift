@@ -256,6 +256,7 @@ let project = Project(
                 "Resources/AppKit/**"
             ]),
             dependencies: [
+                .external(name: "Kingfisher"),
                 .target(name: "SharedTypes"),
                 .target(name: "SharedAssets"),
                 .target(name: "Common"),
@@ -303,6 +304,7 @@ let project = Project(
                 .external(name: "GoogleSignIn"),
                 .external(name: "GoogleSignInSwift"),
                 .external(name: "FirebaseAuth"),
+                .external(name: "Kingfisher"),
                 .target(name: "Clients"),
                 .target(name: "Models"),
                 .target(name: "DesignSystem"),

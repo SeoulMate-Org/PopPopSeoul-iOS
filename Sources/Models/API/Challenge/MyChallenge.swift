@@ -18,7 +18,7 @@ public struct MyChallenge: Hashable, Equatable, Identifiable {
   public let challengeThemeId: Int
   public let challengeThemeName: String
   public let mainLocation: String
-  public let imageUrl: String = "http://sohohaneulbit.cafe24.com/files/attach/images/357/358/b6f2a6a51114cd78ae4d64840f0ccb46.jpg"
+  public let imageUrl: String
   public let description: String
   public let isLiked: Bool
   public let distance: Int
@@ -55,7 +55,7 @@ public struct MyChallenge: Hashable, Equatable, Identifiable {
     self.isLiked = isLiked ?? false
     self.distance = distance ?? 0
     self.displayRank = displayRank ?? ""
-//    self.imageUrl = imageUrl ?? ""
+    self.imageUrl = imageUrl ?? ""
   }
 }
 
@@ -96,7 +96,7 @@ extension MyChallenge: Codable {
     isLiked = try container.decodeIfPresent(Bool.self, forKey: .isLiked) ?? false
     distance = try container.decodeIfPresent(Int.self, forKey: .distance) ?? 0
     displayRank = try container.decodeIfPresent(String.self, forKey: .displayRank) ?? ""
-//    imageUrl = try container.decodeIfPresent(String.self, forKey: .imageUrl) ?? ""
+    imageUrl = try container.decodeIfPresent(String.self, forKey: .imageUrl) ?? ""
   }
 
   public func encode(to encoder: Encoder) throws {
