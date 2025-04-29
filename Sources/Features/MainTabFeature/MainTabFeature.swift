@@ -86,10 +86,16 @@ public struct MainTabFeature {
         state.path.append(.detailChallenge(DetailChallengeFeature.State(with: id)))
         return .none
         
+        // MARK: - Home Reducer
       case .home(.tappedChallenge(let id)):
         state.path.append(.detailChallenge(DetailChallengeFeature.State(with: id)))
         return .none
         
+      case .home(.moveToThemeChallenge(let theme)):
+        state.path.append(.themeChallenge(ThemeChallengeFeature.State(with: theme)))
+        return .none
+        
+        // MARK: - Path Reducer
       case let .path(action):
         switch action {
         case .element(id: _, action: .detailChallenge(.tappedAllComments(let id))):
@@ -100,7 +106,8 @@ public struct MainTabFeature {
           state.path.append(.detailComments(DetailCommentsFeature.State(with: id, comment)))
           return .none
           
-        case .element(id: _, action: .detailChallenge(.showLoginAlert)):
+        case .element(id: _, action: .detailChallenge(.showLoginAlert)),
+            .element(id: _, action: .themeChallenge(.showLoginAlert)):
           state.showLoginAlert = true
           return .none
           
@@ -127,6 +134,7 @@ extension MainTabFeature {
     case detailChallenge(DetailChallengeFeature)
     case detailComments(DetailCommentsFeature)
     case login(LoginFeature)
+    case themeChallenge(ThemeChallengeFeature)
   }
   
 }

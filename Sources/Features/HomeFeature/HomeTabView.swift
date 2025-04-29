@@ -48,18 +48,22 @@ struct HomeTabView: View {
             .padding(.top, 48)
           }
           
-          HomeThemeSection(
-            selectedTab: viewStore.binding(
-              get: \.selectedTheme,
-              send: HomeTabFeature.Action.themeChanged
-            ),
-            challengesByTheme: viewStore.themeChallenges,
-            themeTabChanged: { tab in
-              viewStore.send(.themeChanged(tab))
-            },
-            onLikeTapped: { _ in },
-            onMoreTapped: { })
-          .padding(.top, 48)
+          if viewStore.themeChallenges[.mustSeeSpots]?.count ?? 0 > 0 {
+            HomeThemeSection(
+              selectedTab: viewStore.binding(
+                get: \.selectedTheme,
+                send: HomeTabFeature.Action.themeChanged
+              ),
+              challengesByTheme: viewStore.themeChallenges,
+              themeTabChanged: { tab in
+                viewStore.send(.themeChanged(tab))
+              },
+              onLikeTapped: { _ in },
+              onMoreTapped: {
+                viewStore.send(.tappedThemeMore)
+              })
+            .padding(.top, 48)
+          }
           
           if viewStore.missingList.count > 0 {
             HomeMissingSection(

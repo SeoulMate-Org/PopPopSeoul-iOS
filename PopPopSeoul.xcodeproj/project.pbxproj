@@ -658,6 +658,11 @@
 		EA68103BE802BEBD67434D79 /* SB 어그로OTF M.otf in Resources */ = {isa = PBXBuildFile; fileRef = E283BF28611FAF81E991ABF5 /* SB 어그로OTF M.otf */; };
 		EA949284C11DB940F84888C2 /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256CCC92AC8D6EE5FACE5475 /* Dependencies.framework */; };
 		EA9740F02DC0DF0600129D2A /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9740EF2DC0DF0600129D2A /* Challenge.swift */; };
+		EA9740F52DC0ED6100129D2A /* ThemeChallengeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9740F42DC0ED6100129D2A /* ThemeChallengeFeature.swift */; };
+		EA9740F72DC0F0D100129D2A /* ThemeChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9740F62DC0F0D100129D2A /* ThemeChallengeView.swift */; };
+		EA9740FA2DC0F14B00129D2A /* ThemeChallengeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9740F92DC0F14B00129D2A /* ThemeChallengeTabView.swift */; };
+		EA9740FE2DC0F72700129D2A /* ThemeLoginPromptSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9740FD2DC0F72700129D2A /* ThemeLoginPromptSection.swift */; };
+		EA9741002DC0FA8700129D2A /* ThemeChallengeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9740FF2DC0FA8700129D2A /* ThemeChallengeListView.swift */; };
 		EAE62223229FB6E39F76669F /* CasePathsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CF7412324C02D1745F0E0D /* CasePathsCore.framework */; };
 		EB1B1D606C9519443C8093A6 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E58A56242DD34BBF412FCA4 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle */; };
 		EB2C1DD848ACAAE2D607CA78 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F75DBDEF31E5F47ECCF65C8 /* UIKit.framework */; };
@@ -1545,6 +1550,11 @@
 		EA14930892816AFA4A88950C /* GoogleUtilities_Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleUtilities_Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA26B67DE986D8D090F59956 /* CombineSchedulers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CombineSchedulers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9740EF2DC0DF0600129D2A /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		EA9740F42DC0ED6100129D2A /* ThemeChallengeFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChallengeFeature.swift; sourceTree = "<group>"; };
+		EA9740F62DC0F0D100129D2A /* ThemeChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChallengeView.swift; sourceTree = "<group>"; };
+		EA9740F92DC0F14B00129D2A /* ThemeChallengeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChallengeTabView.swift; sourceTree = "<group>"; };
+		EA9740FD2DC0F72700129D2A /* ThemeLoginPromptSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeLoginPromptSection.swift; sourceTree = "<group>"; };
+		EA9740FF2DC0FA8700129D2A /* ThemeChallengeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChallengeListView.swift; sourceTree = "<group>"; };
 		EB1AF2F0C1D291ADEC33A0B1 /* GetChallengeMyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeMyRequest.swift; sourceTree = "<group>"; };
 		EBF96D1563C11F15649A41DA /* HomeThemeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeThemeTabView.swift; sourceTree = "<group>"; };
 		EC4AFF88EA6DCED6098DE437 /* Clients-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Clients-Info.plist"; sourceTree = "<group>"; };
@@ -1884,6 +1894,7 @@
 		0F8CB34F211D8DD893B340D5 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				EA9740F32DC0ED4700129D2A /* ThemeChallengeFeature */,
 				50D08A2820E72D31CB6D5921 /* AppFeature */,
 				C14829B0D69DDA71F6117608 /* DetailChallengeFeature */,
 				9A6922F48EA003901E26B624 /* DetailCommentFeature */,
@@ -2708,6 +2719,26 @@
 				F99617B18462AF6792D66AAC /* Token.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		EA9740F32DC0ED4700129D2A /* ThemeChallengeFeature */ = {
+			isa = PBXGroup;
+			children = (
+				EA9740F82DC0F13500129D2A /* SubViews */,
+				EA9740F42DC0ED6100129D2A /* ThemeChallengeFeature.swift */,
+				EA9740F62DC0F0D100129D2A /* ThemeChallengeView.swift */,
+			);
+			path = ThemeChallengeFeature;
+			sourceTree = "<group>";
+		};
+		EA9740F82DC0F13500129D2A /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				EA9740F92DC0F14B00129D2A /* ThemeChallengeTabView.swift */,
+				EA9740FD2DC0F72700129D2A /* ThemeLoginPromptSection.swift */,
+				EA9740FF2DC0FA8700129D2A /* ThemeChallengeListView.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 		ED99C4FAD8250D7F8D110385 /* Style */ = {
@@ -3863,11 +3894,14 @@
 				6DFB5DB914729D4119554D3F /* TuistBundle+Features.swift in Sources */,
 				87391382403D3A8CCD28CBB7 /* TuistFonts+Features.swift in Sources */,
 				02D79A3E568314F99704AB42 /* TuistPlists+Features.swift in Sources */,
+				EA9741002DC0FA8700129D2A /* ThemeChallengeListView.swift in Sources */,
+				EA9740FE2DC0F72700129D2A /* ThemeLoginPromptSection.swift in Sources */,
 				ADF8753D78D6AB6AF59D1F2D /* AppFeature.swift in Sources */,
 				8808BC3A293387F2CBCD1591 /* AppView.swift in Sources */,
 				9A7F85FEC8F2E5BD87F26052 /* DetailChallengeFeature.swift in Sources */,
 				6116ED1F4179E7BD39E538C0 /* DetailChallengeView.swift in Sources */,
 				738FF49114FA0AA199F67600 /* ChallengePlaceListItem.swift in Sources */,
+				EA9740F72DC0F0D100129D2A /* ThemeChallengeView.swift in Sources */,
 				B6A7523326D1D45A4C29B314 /* ChallengeStampView.swift in Sources */,
 				D782D3F167ECD68AFED288FE /* DetailChallengeBottomSection.swift in Sources */,
 				9479CA263AC3DB9EBDDEE252 /* DetailChallengeCommentSection.swift in Sources */,
@@ -3892,9 +3926,11 @@
 				B96262AFC8542494D920DEA2 /* HomeThemeIndicatorView.swift in Sources */,
 				67918C3B77703BF88766AB26 /* HomeThemeSection.swift in Sources */,
 				7ED85CD6CBD4027D13C653FF /* HomeThemeTabView.swift in Sources */,
+				EA9740FA2DC0F14B00129D2A /* ThemeChallengeTabView.swift in Sources */,
 				0EC516E2E41AB67AB1889EF1 /* LoginFeature.swift in Sources */,
 				B605962AB2D9FDD869D2A32B /* LoginView.swift in Sources */,
 				F5227587CA36805F1695E0F2 /* LoginButtonView.swift in Sources */,
+				EA9740F52DC0ED6100129D2A /* ThemeChallengeFeature.swift in Sources */,
 				239E8938770AA385D92ED13A /* MainTabFeature.swift in Sources */,
 				E517F1F6170C269A408DB165 /* MainTabView.swift in Sources */,
 				FB9912A86546585E3CED40CA /* MapView.swift in Sources */,

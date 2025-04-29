@@ -78,6 +78,8 @@ public struct HomeTabFeature {
     case themeChanged(ChallengeTheme)
     case fetchThemeList(ChallengeTheme)
     case updateThemeList(ChallengeTheme, [Challenge])
+    case tappedThemeMore
+    case moveToThemeChallenge(ChallengeTheme)
     
     // Missing List
     case fetchMissingList
@@ -193,6 +195,7 @@ public struct HomeTabFeature {
         state.locationList = list
         return .none
         
+        // MARK: - Theme Reducer
       case let .themeChanged(theme):
         state.selectedTheme = theme
         if state.themeChallenges[theme]?.isEmpty == true && !state.loadingThemes.contains(theme) {
@@ -216,6 +219,10 @@ public struct HomeTabFeature {
         state.themeChallenges[theme] = list
         return .none
         
+      case .tappedThemeMore:
+        return .send(.moveToThemeChallenge(state.selectedTheme))
+        
+        // MARK: - Missing Reducer
       case .fetchMissingList:
         if TokenManager.shared.isLogin {
           return .run { send in

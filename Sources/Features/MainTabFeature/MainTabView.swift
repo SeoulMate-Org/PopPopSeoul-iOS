@@ -78,6 +78,10 @@ public struct MainTabView: View {
         if let store = store.scope(state: \.login, action: \.login) {
           LoginView(store: store)
         }
+      case .themeChallenge:
+        if let store = store.scope(state: \.themeChallenge, action: \.themeChallenge) {
+          ThemeChallengeView(store: store)
+        }
       }
     }
   }

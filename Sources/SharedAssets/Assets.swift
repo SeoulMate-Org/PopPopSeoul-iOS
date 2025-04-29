@@ -78,6 +78,7 @@ public enum Assets {
     public static let splashTop = ImageAsset(name: "splash_top")
     public static let stampInactive = ImageAsset(name: "stamp inactive")
     public static let stampActive = ImageAsset(name: "stamp_active")
+    public static let themePromptLogin = ImageAsset(name: "theme_prompt_login")
   }
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

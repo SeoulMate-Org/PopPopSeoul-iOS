@@ -28,6 +28,7 @@ struct HomeAccessPromptSection: View {
             .lineLimit(2)
             .font(.captionM)
             .foregroundColor(Colors.trueWhite.swiftUIColor)
+            .opacity(0.6)
         }
       }
       .padding(.leading, 16)

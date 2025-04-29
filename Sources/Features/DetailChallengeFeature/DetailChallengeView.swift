@@ -123,8 +123,4 @@ struct DetailChallengeView: View {
 
 // MARK: Preview
 
-#Preview {
-  //  DetailChallengeView(challenge: mockChallenges[0])
-}
-
 // MARK: - Helper

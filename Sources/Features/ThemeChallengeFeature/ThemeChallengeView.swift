@@ -1,0 +1,59 @@
+//
+//  ThemeChallengeView.swift
+//  Features
+//
+//  Created by suni on 4/29/25.
+//
+
+import SwiftUI
+import ComposableArchitecture
+import Common
+import DesignSystem
+import SharedAssets
+import Clients
+
+struct ThemeChallengeView: View {
+  let store: StoreOf<ThemeChallengeFeature>
+  @ObservedObject var viewStore: ViewStore<ThemeChallengeFeature.State, ThemeChallengeFeature.Action>
+  
+  init(store: StoreOf<ThemeChallengeFeature>) {
+    self.store = store
+    self.viewStore = ViewStore(self.store, observe: { $0 })
+  }
+  
+  var body: some View {
+    VStack(alignment: .center, spacing: 0) {
+      HeaderView(type: .back(title: "테마별 챌린지", onBack: {
+        viewStore.send(.tappedBack)
+      }))
+      
+      ThemeChallengeTabView(
+        selectedTab: viewStore.binding(
+          get: \.selectedTheme,
+          send: ThemeChallengeFeature.Action.themeChanged
+        ),
+        themeTabChanged: { tab in
+          viewStore.send(.themeChanged(tab))
+        })
+            
+      // MARK: - 리스트
+      if viewStore.themeChallenges.count > 0 {
+        ThemeChallengeListView(
+          challenges: viewStore.themeChallenges,
+          onTapped: { _ in },
+          onLikeTapped: { _ in },
+          shouldScrollToTop: viewStore.binding(
+            get: \.shouldScrollToTop,
+            send: ThemeChallengeFeature.Action.setShouldScrollToTop)
+        )
+      } else {
+        Spacer()
+      }
+      
+    }
+    .onAppear {
+      viewStore.send(.onApear)
+    }
+    .navigationBarBackButtonHidden(true)
+  }
+}
