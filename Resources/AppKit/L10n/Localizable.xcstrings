@@ -350,7 +350,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "전체 {%@}개"
+            "value" : "전체 %@개"
           }
         }
       }

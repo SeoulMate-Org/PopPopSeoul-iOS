@@ -23,7 +23,7 @@ struct DetailChallengeCommentSection: View {
     // 댓글
     VStack(alignment: .leading, spacing: 0) {
       // 1. 제목
-      let countString = challenge.commentCount > 0 ? " {\(challenge.commentCount)}" : ""
+      let countString = challenge.commentCount > 0 ? " \(challenge.commentCount)" : ""
       Text(String(sLocalization: .detailchallengeCommentTitle) + countString)
         .font(.appTitle3)
         .foregroundColor(Colors.gray900.swiftUIColor)
