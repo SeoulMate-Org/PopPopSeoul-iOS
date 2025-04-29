@@ -8,7 +8,7 @@
 import Foundation
 import SharedTypes
 
-public struct DetailChallenge: Hashable, Equatable {
+public struct DetailChallenge: Hashable, Equatable, Identifiable {
   public let id: Int
   public let name: String
   public let title: String

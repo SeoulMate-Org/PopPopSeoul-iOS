@@ -1,5 +1,5 @@
 //
-//  HomeThemeChallengeSection.swift
+//  HomeThemeSection.swift
 //  Clients
 //
 //  Created by suni on 4/24/25.
@@ -13,7 +13,7 @@ import SharedAssets
 import SharedTypes
 import Models
 
-struct HomeThemeChallengeSection: View {
+struct HomeThemeSection: View {
   @Binding var selectedTab: ChallengeTheme
   let challengesByTheme: [ChallengeTheme: [MyChallenge]]
   let themeTabChanged: (ChallengeTheme) -> Void
@@ -47,7 +47,7 @@ struct HomeThemeChallengeSection: View {
         ScrollView(.horizontal, showsIndicators: false) {
           HStack(spacing: 8) {
             ForEach(ChallengeTheme.sortedByPriority(), id: \.self) { tab in
-              HomeThemeChallengeTabView(
+              HomeThemeTabView(
                 tab: tab,
                 isSelected: selectedTab == tab,
                 onTapped: {
@@ -69,15 +69,14 @@ struct HomeThemeChallengeSection: View {
         }
       }
       
-      ThemeChallengeListView(
-        listType: .home,
+      HomeThemeChallengeListView(
         challengesByTheme: challengesByTheme,
         selectedTab: $selectedTab,
         onLikeTapped: onLikeTapped
       )
       .padding(.top, 20)
       
-      HomeThemeChallengeIndicatorView(currentTab: $selectedTab)
+      HomeThemeIndicatorView(currentTab: $selectedTab)
         .padding(.top, 16)
     }
     .background(.clear)

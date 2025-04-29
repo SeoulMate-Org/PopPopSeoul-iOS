@@ -1,5 +1,5 @@
 //
-//  HomeThemeChallengeIndicatorView.swift
+//  HomeThemeIndicatorView.swift
 //  Features
 //
 //  Created by suni on 4/24/25.
@@ -9,7 +9,7 @@ import SwiftUI
 import SharedAssets
 import SharedTypes
 
-struct HomeThemeChallengeIndicatorView: View {
+struct HomeThemeIndicatorView: View {
   @Binding var currentTab: ChallengeTheme
   
   var body: some View {

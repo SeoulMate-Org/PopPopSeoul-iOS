@@ -109,3 +109,8 @@ public struct ThemeChallengeListItemView: View {
     .frame(height: 92)
   }
 }
+
+public enum ThemeChallengeListType {
+  case home
+  case detail
+}

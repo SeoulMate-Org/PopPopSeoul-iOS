@@ -12,7 +12,7 @@ import SharedAssets
 import Models
 import Kingfisher
 
-struct HomeChallengeBannerItemView: View {
+struct HomeBannerItemView: View {
   let challenge: MyChallenge
   let onLikeTapped: () -> Void
   let cardWidth: CGFloat

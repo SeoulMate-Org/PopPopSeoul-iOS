@@ -1,5 +1,5 @@
 //
-//  HomeThemeChallengeTabView.swift
+//  HomeThemeTabView.swift
 //  Clients
 //
 //  Created by suni on 4/24/25.
@@ -12,7 +12,7 @@ import Clients
 import SharedAssets
 import SharedTypes
 
-struct HomeThemeChallengeTabView: View {
+struct HomeThemeTabView: View {
   let tab: ChallengeTheme
   let isSelected: Bool
   let onTapped: () -> Void

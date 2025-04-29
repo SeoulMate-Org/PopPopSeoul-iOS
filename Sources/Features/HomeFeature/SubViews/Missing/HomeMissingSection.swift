@@ -1,5 +1,5 @@
 //
-//  HomeChallengeMissingSection.swift
+//  HomeMissingSection.swift
 //  Features
 //
 //  Created by suni on 4/29/25.
@@ -11,7 +11,7 @@ import DesignSystem
 import SharedAssets
 import Models
 
-struct HomeChallengeMissingSection: View {
+struct HomeMissingSection: View {
   var challenges: [MyChallenge]
   var onTapped: (Int) -> Void
   var onStartTapped: (Int) -> Void
@@ -59,7 +59,7 @@ struct HomeChallengeMissingSection: View {
         ScrollView(.horizontal, showsIndicators: false) {
           HStack(spacing: 8) {
             ForEach(challenges) { challenge in
-              HomeChallengeMissingItemView(
+              HomeMissingChallengeItemView(
                 challenge: challenge,
                 cardWidth: cardWidth,
                 onStartTapped: {
@@ -77,7 +77,7 @@ struct HomeChallengeMissingSection: View {
 }
 
 #Preview {
-  HomeChallengeMissingSection(challenges: [mockMyChallenge, mockMyChallenge, mockMyChallenge], onTapped: { _ in }, onStartTapped: { _ in })
+  HomeMissingSection(challenges: [mockMyChallenge, mockMyChallenge, mockMyChallenge], onTapped: { _ in }, onStartTapped: { _ in })
 }
 
 extension LinearGradient {

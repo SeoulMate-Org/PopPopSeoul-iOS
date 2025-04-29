@@ -1,5 +1,5 @@
 //
-//  HomeChallengeMissingItemView.swift
+//  HomeMissingChallengeItemView.swift
 //  Features
 //
 //  Created by suni on 4/29/25.
@@ -13,7 +13,7 @@ import Common
 import DesignSystem
 import Kingfisher
 
-struct HomeChallengeMissingItemView: View {
+struct HomeMissingChallengeItemView: View {
   let challenge: MyChallenge
   let cardWidth: CGFloat
   let onStartTapped: () -> Void
@@ -94,5 +94,5 @@ struct HomeChallengeMissingItemView: View {
 }
 
 #Preview {
-  HomeChallengeMissingItemView(challenge: mockMyChallenge, cardWidth: 160, onStartTapped: { })
+  HomeMissingChallengeItemView(challenge: mockMyChallenge, cardWidth: 160, onStartTapped: { })
 }

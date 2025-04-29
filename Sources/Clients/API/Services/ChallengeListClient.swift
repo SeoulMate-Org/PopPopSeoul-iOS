@@ -14,13 +14,14 @@ public struct ChallengeListClient {
   public var fetchThemeList: @Sendable (ChallengeTheme) async throws -> (ChallengeTheme, [MyChallenge])
   public var fetchMissingList: @Sendable () async throws -> [MyChallenge]
   public var fetchSimilarList: @Sendable () async throws -> (attraction: String?, list: [MyChallenge])
+  public var fetchRankList: @Sendable () async throws -> [UnifiedChallenge]
 }
 
 extension ChallengeListClient: DependencyKey {
   public static var liveValue: ChallengeListClient {
     @Dependency(\.apiClient) var apiClient
     @Dependency(\.userDefaultsClient) var userDefaultsClient
-        
+    
     return Self(
       fetchLocationList: { coordinate in
         let query = GetChallengeListLocation(
@@ -61,6 +62,12 @@ extension ChallengeListClient: DependencyKey {
         } else {
           return (nil, [])
         }
+      },
+      fetchRankList: {
+        let query = GetDefaultRequest()
+        let request: Request = .get(.challengeListRank, query: query.queryItems)
+        let (data, _) = try await apiClient.send(request)
+        return try data.decoded()
       }
     )
   }

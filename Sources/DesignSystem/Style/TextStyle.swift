@@ -34,4 +34,19 @@ public extension Font {
       }
       return .custom(name, size: size)
   }
+  
+  static func smAggro(size: CGFloat, weight: Font.Weight = .regular) -> Font {
+      let name: String
+      switch weight {
+      case .bold:
+          name = "OTSBAggroB"
+      case .light:
+          name = "OTSBAggroL"
+      case .medium:
+          name = "OTSBAggroM"
+      default:
+          name = "OTSBAggroM"
+      }
+      return .custom(name, size: size)
+  }
 }

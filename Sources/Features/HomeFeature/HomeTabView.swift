@@ -28,7 +28,7 @@ struct HomeTabView: View {
       ScrollView(showsIndicators: false) {
         VStack(spacing: 0) {
           if viewStore.bannerList.count > 0 {
-            HomeChallengeBannerSection(challenges: viewStore.bannerList) { _ in }
+            HomeBannerSection(challenges: viewStore.bannerList) { _ in }
           }
           
           if viewStore.locationListType == .loginRequired {
@@ -40,7 +40,7 @@ struct HomeTabView: View {
           }
           
           if viewStore.locationList.count > 0 {
-            HomeChallengeLocationSection(
+            HomeLocationSection(
               challenges: viewStore.locationList,
               onTapped: { id in
                 store.send(.tappedChallenge(id: id))
@@ -48,7 +48,7 @@ struct HomeTabView: View {
             .padding(.top, 48)
           }
           
-          HomeThemeChallengeSection(
+          HomeThemeSection(
             selectedTab: viewStore.binding(
               get: \.selectedTheme,
               send: HomeTabFeature.Action.themeChanged
@@ -62,7 +62,7 @@ struct HomeTabView: View {
           .padding(.top, 48)
           
           if viewStore.missingList.count > 0 {
-            HomeChallengeMissingSection(
+            HomeMissingSection(
               challenges: viewStore.missingList,
               onTapped: { _ in
                 
@@ -73,15 +73,22 @@ struct HomeTabView: View {
           }
           
           if viewStore.similarList.count > 0 {
-            HomeChallengeSimilarSection(
+            HomeSimilarSection(
               lastAttractionName: viewStore.similarAttraction,
               challenges: viewStore.similarList,
               onTapped: { _ in
               })
             .padding(.top, 48)
           }
+          
+          if viewStore.rankList.count > 0 {
+            HomeRankSection(
+              challenges: viewStore.rankList,
+              onMoreTapped: { },
+              onLikeTapped: { _ in })
+            .padding(.top, 48)
+          }
         }
-        .padding(.bottom, 48)
         .frame(maxWidth: .infinity)
       }
     }

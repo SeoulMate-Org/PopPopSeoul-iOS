@@ -41,6 +41,9 @@ public struct HomeTabFeature {
     // Similar List
     var similarAttraction: String = ""
     var similarList: [MyChallenge] = []
+    
+    // Rnaking List
+    var rankList: [UnifiedChallenge] = []
   }
   
   public enum LocationListType: Equatable {
@@ -85,7 +88,8 @@ public struct HomeTabFeature {
     case updateSimilarList(String, [MyChallenge])
     
     // Rnaking List
-    case fetchRankingList
+    case fetchRankList
+    case updateRankList([UnifiedChallenge])
   }
   
   // MARK: - Reducer
@@ -122,6 +126,10 @@ public struct HomeTabFeature {
           
           .run { send in
             await send(.fetchSimilarList)
+          },
+          
+          .run { send in
+            await send(.fetchRankList)
           }
         )
         
@@ -244,6 +252,20 @@ public struct HomeTabFeature {
       case let .updateSimilarList(attraction, list):
         state.similarAttraction = attraction
         state.similarList = list
+        return .none
+        
+      case .fetchRankList:
+        return .run { send in
+          do {
+            let list = try await callengeListClient.fetchRankList()
+            await send(.updateRankList(list))
+          } catch {
+            await send(.networkError)
+          }
+        }
+        
+      case let .updateRankList(list):
+        state.rankList = list
         return .none
         
       default: return .none

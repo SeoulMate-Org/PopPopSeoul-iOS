@@ -1,5 +1,5 @@
 //
-//  HomeChallengeBannerSection.swift
+//  HomeBannerSection.swift
 //  Clients
 //
 //  Created by suni on 4/23/25.
@@ -11,7 +11,7 @@ import DesignSystem
 import SharedAssets
 import Models
 
-struct HomeChallengeBannerSection: View {
+struct HomeBannerSection: View {
   var challenges: [MyChallenge]
   var onLikeTapped: (Int) -> Void
   
@@ -50,7 +50,7 @@ struct HomeChallengeBannerSection: View {
         ScrollView(.horizontal) {
           HStack(spacing: 12) {
             ForEach(challenges) { challenge in
-              HomeChallengeBannerItemView(
+              HomeBannerItemView(
                 challenge: challenge,
                 onLikeTapped: {
                   onLikeTapped(challenge.id)
