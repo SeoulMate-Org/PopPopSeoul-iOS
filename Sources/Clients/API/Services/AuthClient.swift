@@ -23,6 +23,7 @@ public struct AuthClient {
 extension AuthClient: DependencyKey {
   public static var liveValue: AuthClient {
     @Dependency(\.apiClient) var apiClient
+    @Dependency(\.userDefaultsClient) var userDefaultsClient
     
     let isRefreshingBox = AsyncBox(value: false) // ✨ 내부 상태 관리용
     
@@ -86,7 +87,13 @@ extension AuthClient: DependencyKey {
         return result
       },
       logout: {
-        await TokenManager.shared.clearAll()
+        try await withThrowingTaskGroup(of: Void.self) { group in
+          group.addTask { await userDefaultsClient.remove(.isAutoLogin) }
+          group.addTask { await userDefaultsClient.remove(.lastStampAttractionId) }
+          group.addTask { await userDefaultsClient.remove(.lastStampAttractionName) }
+          group.addTask { await TokenManager.shared.clearAll() }
+          try await group.waitForAll()
+        }
       }
     )
   }

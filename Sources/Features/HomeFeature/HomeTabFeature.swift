@@ -37,6 +37,10 @@ public struct HomeTabFeature {
     
     // Missing List
     var missingList: [MyChallenge] = []
+    
+    // Similar List
+    var similarAttraction: String = ""
+    var similarList: [MyChallenge] = []
   }
   
   public enum LocationListType: Equatable {
@@ -78,6 +82,7 @@ public struct HomeTabFeature {
     
     // Similar List
     case fetchSimilarList
+    case updateSimilarList(String, [MyChallenge])
     
     // Rnaking List
     case fetchRankingList
@@ -113,6 +118,10 @@ public struct HomeTabFeature {
           
           .run { send in
             await send(.fetchMissingList)
+          },
+          
+          .run { send in
+            await send(.fetchSimilarList)
           }
         )
         
@@ -216,6 +225,25 @@ public struct HomeTabFeature {
         
       case let .updateMissingList(list):
         state.missingList = list
+        return .none
+        
+      case .fetchSimilarList:
+        return .run { send in
+          do {
+            let result = try await callengeListClient.fetchSimilarList()
+            if let attraction = result.attraction {
+              await send(.updateSimilarList(attraction, result.list))
+            } else {
+              await send(.updateSimilarList("", []))
+            }
+          } catch {
+            await send(.networkError)
+          }
+        }
+        
+      case let .updateSimilarList(attraction, list):
+        state.similarAttraction = attraction
+        state.similarList = list
         return .none
         
       default: return .none

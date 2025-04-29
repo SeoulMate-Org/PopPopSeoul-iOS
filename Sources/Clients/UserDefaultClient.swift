@@ -48,6 +48,22 @@ public struct UserDefaultsClient {
   public func setIsAutoLogin(_ value: Bool) async {
     await setBool(value, .isAutoLogin)
   }
+  
+  public var lastStampAttractionId: Int {
+    integerForKey(.lastStampAttractionId)
+  }
+  
+  public func setLastStampAttractionId(_ value: Int) async {
+    await setInteger(value, .lastStampAttractionId)
+  }
+  
+  public var lastStampAttractionName: String? {
+    stringForKey(.lastStampAttractionName)
+  }
+  
+  public func setLastStampAttractionName(_ value: String) async {
+    await setString(value, .lastStampAttractionName)
+  }
 }
 
 // MARK: - DependencyKey
@@ -86,4 +102,6 @@ public enum UserDefaultsKey: String {
   case hasInitLaunch
   case languageKey
   case isAutoLogin
+  case lastStampAttractionId
+  case lastStampAttractionName
 }

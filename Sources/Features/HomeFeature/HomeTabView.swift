@@ -25,7 +25,7 @@ struct HomeTabView: View {
     VStack(spacing: 0) {
       HeaderView(type: .logo)
       
-      ScrollView {
+      ScrollView(showsIndicators: false) {
         VStack(spacing: 0) {
           if viewStore.bannerList.count > 0 {
             HomeChallengeBannerSection(challenges: viewStore.bannerList) { _ in }
@@ -71,7 +71,17 @@ struct HomeTabView: View {
               })
             .padding(.top, 48)
           }
+          
+          if viewStore.similarList.count > 0 {
+            HomeChallengeSimilarSection(
+              lastAttractionName: viewStore.similarAttraction,
+              challenges: viewStore.similarList,
+              onTapped: { _ in
+              })
+            .padding(.top, 48)
+          }
         }
+        .padding(.bottom, 48)
         .frame(maxWidth: .infinity)
       }
     }

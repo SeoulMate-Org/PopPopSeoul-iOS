@@ -1,5 +1,5 @@
 //
-//  HomeChallengeLocationItemView.swift
+//  HomeChallengeItemView.swift
 //  Features
 //
 //  Created by suni on 4/28/25.
@@ -12,7 +12,7 @@ import SharedAssets
 import Models
 import Kingfisher
 
-struct HomeChallengeLocationItemView: View {
+struct HomeChallengeItemView: View {
   let challenge: MyChallenge
   let cardWidth: CGFloat
   
@@ -84,5 +84,5 @@ struct HomeChallengeLocationItemView: View {
 }
 
 #Preview {
-  HomeChallengeLocationItemView(challenge: mockMyChallenge, cardWidth: 160)
+  HomeChallengeItemView(challenge: mockMyChallenge, cardWidth: 160)
 }

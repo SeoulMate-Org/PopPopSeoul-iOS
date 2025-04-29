@@ -1,8 +1,8 @@
 //
-//  HomeChallengeLocationSection.swift
+//  HomeChallengeSimilarSection.swift
 //  Features
 //
-//  Created by suni on 4/28/25.
+//  Created by suni on 4/29/25.
 //
 
 import SwiftUI
@@ -12,7 +12,8 @@ import SharedAssets
 import SharedTypes
 import Models
 
-struct HomeChallengeLocationSection: View {
+struct HomeChallengeSimilarSection: View {
+  let lastAttractionName: String
   let challenges: [MyChallenge]
   var onTapped: (Int) -> Void
   
@@ -22,12 +23,12 @@ struct HomeChallengeLocationSection: View {
     
     VStack(alignment: .leading, spacing: 0) {
       // MARK: - 헤더 타이틀
-      Text("🏅 근처 챌린지, 놓치지 마세요!")
+      Text("😎 ‘{\(lastAttractionName)}’과 비슷한 챌린지")
         .font(.appTitle2)
         .foregroundStyle(Colors.gray900.swiftUIColor)
         .padding(.horizontal, 20)
       
-      Text("바로 근처에서 스탬프를 찍을 수 있어요")
+      Text("최근에 스탬프한 장소가 포함된 챌린지예요")
         .font(.captionL)
         .foregroundStyle(Colors.gray600.swiftUIColor)
         .padding(.top, 4)
