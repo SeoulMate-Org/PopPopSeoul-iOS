@@ -29,7 +29,7 @@ public struct HomeRankChallengeItemView: View {
       Text("\(rank)")
         .font(.smAggro(size: 18, weight: .medium))
         .foregroundColor(Colors.gray600.swiftUIColor)
-        .padding(.leading, 4)
+        .frame(width: 18, alignment: .trailing)
       
       KFImage( URL(string: challenge.imageUrl))
         .placeholder {
