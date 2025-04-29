@@ -13,7 +13,7 @@ import Models
 import Kingfisher
 
 struct HomeChallengeItemView: View {
-  let challenge: MyChallenge
+  let challenge: Challenge
   let cardWidth: CGFloat
   
   var body: some View {
@@ -81,8 +81,4 @@ struct HomeChallengeItemView: View {
         .foregroundColor(Colors.gray300.swiftUIColor)
     }
   }
-}
-
-#Preview {
-  HomeChallengeItemView(challenge: mockMyChallenge, cardWidth: 160)
 }

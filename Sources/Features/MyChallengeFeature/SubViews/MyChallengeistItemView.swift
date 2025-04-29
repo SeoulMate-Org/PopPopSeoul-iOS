@@ -15,7 +15,7 @@ import Kingfisher
 
 struct MyChallengeistItemView: View {
   let tab: MyChallengeTabFeature.Tab
-  let challenge: MyChallenge
+  let challenge: Challenge
   let onLikeTapped: () -> Void
 
   var body: some View {
@@ -111,9 +111,5 @@ struct MyChallengeistItemView: View {
 }
 
 // MARK: Preview
-
-//#Preview {
-//  MyChallengeistItemView(tab: .interest, challenge: mockChallenges[0], onLikeTapped: { })
-//}
 
 // MARK: - Helper

@@ -13,7 +13,7 @@ import SharedTypes
 import Models
 
 struct HomeLocationSection: View {
-  let challenges: [MyChallenge]
+  let challenges: [Challenge]
   var onTapped: (Int) -> Void
   
   var body: some View {

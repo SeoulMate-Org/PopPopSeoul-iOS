@@ -13,7 +13,7 @@ import Models
 import Kingfisher
 
 struct HomeBannerItemView: View {
-  let challenge: MyChallenge
+  let challenge: Challenge
   let onLikeTapped: () -> Void
   let cardWidth: CGFloat
   let cardHeight: CGFloat

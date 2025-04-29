@@ -24,11 +24,11 @@ public struct MyChallengeTabFeature {
   public struct State: Equatable {
     var selectedTab: Tab = .interest
     
-    var interestList: [MyChallenge] = []
-    var progressList: [MyChallenge] = []
-    var completedList: [MyChallenge] = []
+    var interestList: [Challenge] = []
+    var progressList: [Challenge] = []
+    var completedList: [Challenge] = []
     
-    var recentlyDeleted: MyChallenge? = nil
+    var recentlyDeleted: Challenge? = nil
     var showUndoToast: Bool = false
   }
   
@@ -60,9 +60,9 @@ public struct MyChallengeTabFeature {
     case tappedInterest(id: Int)
     case tappedItem(id: Int)
     
-    case setInterestList([MyChallenge])
-    case setProgressList([MyChallenge])
-    case setCompletedList([MyChallenge])
+    case setInterestList([Challenge])
+    case setProgressList([Challenge])
+    case setCompletedList([Challenge])
   }
   
   // MARK: Reducer

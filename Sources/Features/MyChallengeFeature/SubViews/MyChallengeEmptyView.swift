@@ -43,10 +43,6 @@ struct MyChallengeEmptyView: View {
 
 // MARK: Preview
 
-//#Preview {
-//  MyChallengeEmptyView(tab: .interest, onTap: { })
-//}
-
 // MARK: - Helper
 
 extension MyChallengeTabFeature.Tab {

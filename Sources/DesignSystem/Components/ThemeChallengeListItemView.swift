@@ -14,12 +14,12 @@ import Kingfisher
 
 public struct ThemeChallengeListItemView: View {
   let listType: ThemeChallengeListType
-  let challenge: MyChallenge
+  let challenge: Challenge
   let onLikeTapped: () -> Void
   
   public init(listType: ThemeChallengeListType,
-              challenge: MyChallenge, onLikeTapped:
-              @escaping () -> Void) {
+              challenge: Challenge,
+              onLikeTapped: @escaping () -> Void) {
     self.listType = listType
     self.challenge = challenge
     self.onLikeTapped = onLikeTapped

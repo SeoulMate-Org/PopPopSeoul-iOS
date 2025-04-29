@@ -379,7 +379,6 @@
 		7AD3400B9BFDCACE1DF0E8A3 /* FBSDKCoreKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 55A3B62F816276CCCEF90303 /* FBSDKCoreKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7B3C95AEC4B5E16AEFB4EB46 /* Facebook_FacebookLogin.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 220C1E06DB94D6F39A7C2161 /* Facebook_FacebookLogin.bundle */; };
 		7B6A6BD16B576F6B50F59DA7 /* Firebase_FirebaseRemoteConfig.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BC546639068D86ADBBB0D610 /* Firebase_FirebaseRemoteConfig.bundle */; };
-		7BDEB5511B1D7FEF7B0CE8F7 /* DetailChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5204E40216CE8D40C15BB /* DetailChallenge.swift */; };
 		7C4B0F6A5730CD38E809E614 /* GoogleUtilities_UserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2086846C58E35270D5D3D08 /* GoogleUtilities_UserDefaults.framework */; };
 		7C9B0667ACB05B192F0796BE /* CommentClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A03A3CB0BE02487388DF4 /* CommentClient.swift */; };
 		7D93E8D0D27E19DC700BEED2 /* MyChallengeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3143F3F1894ECDA31FBF1 /* MyChallengeTabView.swift */; };
@@ -562,7 +561,6 @@
 		C56059106B3C746523E031A1 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EFE2A73738E1457A6C813045 /* Pretendard-Regular.otf */; };
 		C56F458FB332CFD7C1602BED /* PopPopSeoul_SharedTypes.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C0CB3DDDA16FCFC69781D069 /* PopPopSeoul_SharedTypes.bundle */; };
 		C65A600002199304A18650E8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7E5F5F2FF69CFDE10CFEBDD5 /* Localizable.xcstrings */; };
-		C691A7B2B73963EE02EE9A40 /* MyChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738B42B51AA0005F8C6B9A5A /* MyChallenge.swift */; };
 		C6ABCFB758437E04B0AD3FDB /* Kingfisher_Kingfisher.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 083204ACFC456BC221AF0C3A /* Kingfisher_Kingfisher.bundle */; };
 		C7CE0C6213D9FDB4454B5B6F /* SB 어그로OTF L.otf in Resources */ = {isa = PBXBuildFile; fileRef = 19B09F83E09267FC7013EB98 /* SB 어그로OTF L.otf */; };
 		C7F650AF1B74121C99AA7518 /* FirebaseInstallations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDC7634792471BCEEC7B75AF /* FirebaseInstallations.framework */; };
@@ -652,7 +650,6 @@
 		E7BEEFC0422D8664D445E15B /* AppAuth_AppAuthCore.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = BB0596D73CAD6AA1EB814E87 /* AppAuth_AppAuthCore.bundle */; };
 		E8324C9D067B52F06D848AAA /* Facebook_FacebookLogin.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 220C1E06DB94D6F39A7C2161 /* Facebook_FacebookLogin.bundle */; };
 		E8B7EA5D67F13A437692FDEB /* AppAuth_AppAuthCore.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = BB0596D73CAD6AA1EB814E87 /* AppAuth_AppAuthCore.bundle */; };
-		E8DA3E9975B4890C2B336962 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2C99A85F1CB627CC840BEC /* Mocks.swift */; };
 		E8EB01889B6C1C6A20EE834A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43ADB16D73634BF614EAE508 /* GoogleService-Info.plist */; };
 		E906803B11761D8180B20C35 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 153553E89664D914E68DEFCC /* Pretendard-Thin.otf */; };
 		E91EFE77BFEE340B43194D47 /* Facebook_FacebookCore.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C92C2C3D8279026F9632600D /* Facebook_FacebookCore.bundle */; };
@@ -660,7 +657,7 @@
 		E9DE71C84C88288412A32A64 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8609EF56D0937265092D5D36 /* Pretendard-ExtraLight.otf */; };
 		EA68103BE802BEBD67434D79 /* SB 어그로OTF M.otf in Resources */ = {isa = PBXBuildFile; fileRef = E283BF28611FAF81E991ABF5 /* SB 어그로OTF M.otf */; };
 		EA949284C11DB940F84888C2 /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256CCC92AC8D6EE5FACE5475 /* Dependencies.framework */; };
-		EA9740F02DC0DF0600129D2A /* UnifiedChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9740EF2DC0DF0600129D2A /* UnifiedChallenge.swift */; };
+		EA9740F02DC0DF0600129D2A /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9740EF2DC0DF0600129D2A /* Challenge.swift */; };
 		EAE62223229FB6E39F76669F /* CasePathsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CF7412324C02D1745F0E0D /* CasePathsCore.framework */; };
 		EB1B1D606C9519443C8093A6 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E58A56242DD34BBF412FCA4 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle */; };
 		EB2C1DD848ACAAE2D607CA78 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F75DBDEF31E5F47ECCF65C8 /* UIKit.framework */; };
@@ -1289,7 +1286,6 @@
 		1B3451ACAF4F0DAE1C400CAE /* GoogleUtilities_GoogleUtilities_AppDelegateSwizzler.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoogleUtilities_GoogleUtilities_AppDelegateSwizzler.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B82A2C652AC08DF83E34D9A /* SharedAssets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SharedAssets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BF219FE3C8560FF910E884D /* MainTabFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabFeature.swift; sourceTree = "<group>"; };
-		1C2C99A85F1CB627CC840BEC /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		1D076543D5EEF0F63E0FC229 /* DetailChallengeStampSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailChallengeStampSection.swift; sourceTree = "<group>"; };
 		1EA76DB319D9E3830D09BD0D /* PopPopSeoulKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "PopPopSeoulKitTests-Info.plist"; sourceTree = "<group>"; };
 		21C2149AE4B08C2A77B08C5D /* GoogleUtilities_NSData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleUtilities_NSData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1386,7 +1382,6 @@
 		7104DF43C3143966B2E868E5 /* PopPopSeoul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopPopSeoul.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71AB9DF0584FD0B7E762A85C /* FirebaseAnalyticsWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FirebaseAnalyticsWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7288EA3CAB750A44B5725505 /* ProfileTabFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabFeature.swift; sourceTree = "<group>"; };
-		738B42B51AA0005F8C6B9A5A /* MyChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChallenge.swift; sourceTree = "<group>"; };
 		73D47D1B7ADDFDEA24FE2887 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/lib/libsqlite3.tbd; sourceTree = DEVELOPER_DIR; };
 		74D9A1524B8FD0B51D7ADF54 /* GoogleUtilities_MethodSwizzler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleUtilities_MethodSwizzler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75E5E0505F3396FBC9194F27 /* GoogleSignInSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleSignInSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1526,7 +1521,6 @@
 		DE192FE54B098C9E1557C74A /* PostAuthLoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAuthLoginRequest.swift; sourceTree = "<group>"; };
 		DEC9ECE6708411451F4BC5D0 /* DesignSystem-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "DesignSystem-Info.plist"; sourceTree = "<group>"; };
 		E039136E45B903CC48D5397A /* GetChallengeListTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeListTheme.swift; sourceTree = "<group>"; };
-		E0A5204E40216CE8D40C15BB /* DetailChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailChallenge.swift; sourceTree = "<group>"; };
 		E0FE2E7C1A9CFE6B68EF1849 /* PopPopSeoul_SharedAssets-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "PopPopSeoul_SharedAssets-Info.plist"; sourceTree = "<group>"; };
 		E198B0DBC4469496B39253F5 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		E1C2DFE92F74F7CEEECA30AE /* AppUpdateClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUpdateClient.swift; sourceTree = "<group>"; };
@@ -1550,7 +1544,7 @@
 		E9D23E812DA7735D291EA0D0 /* MyChallengeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChallengeClient.swift; sourceTree = "<group>"; };
 		EA14930892816AFA4A88950C /* GoogleUtilities_Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleUtilities_Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA26B67DE986D8D090F59956 /* CombineSchedulers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CombineSchedulers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA9740EF2DC0DF0600129D2A /* UnifiedChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnifiedChallenge.swift; sourceTree = "<group>"; };
+		EA9740EF2DC0DF0600129D2A /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		EB1AF2F0C1D291ADEC33A0B1 /* GetChallengeMyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeMyRequest.swift; sourceTree = "<group>"; };
 		EBF96D1563C11F15649A41DA /* HomeThemeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeThemeTabView.swift; sourceTree = "<group>"; };
 		EC4AFF88EA6DCED6098DE437 /* Clients-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Clients-Info.plist"; sourceTree = "<group>"; };
@@ -2435,9 +2429,7 @@
 			isa = PBXGroup;
 			children = (
 				6EDB40F90FD3412C20162CD2 /* Attraction.swift */,
-				E0A5204E40216CE8D40C15BB /* DetailChallenge.swift */,
-				738B42B51AA0005F8C6B9A5A /* MyChallenge.swift */,
-				EA9740EF2DC0DF0600129D2A /* UnifiedChallenge.swift */,
+				EA9740EF2DC0DF0600129D2A /* Challenge.swift */,
 			);
 			path = Challenge;
 			sourceTree = "<group>";
@@ -2680,7 +2672,6 @@
 			isa = PBXGroup;
 			children = (
 				9A50BFFEDEFDC3C5339D7A83 /* Extensions */,
-				EA70985CEA0F63FB2D753D4F /* Mocks */,
 				00F916ABF3FF4341DD07BFE1 /* Utilities */,
 			);
 			path = Common;
@@ -2717,14 +2708,6 @@
 				F99617B18462AF6792D66AAC /* Token.swift */,
 			);
 			path = Auth;
-			sourceTree = "<group>";
-		};
-		EA70985CEA0F63FB2D753D4F /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-				1C2C99A85F1CB627CC840BEC /* Mocks.swift */,
-			);
-			path = Mocks;
 			sourceTree = "<group>";
 		};
 		ED99C4FAD8250D7F8D110385 /* Style */ = {
@@ -3860,8 +3843,6 @@
 				323A6B486B2EE964D6713B21 /* Auth.swift in Sources */,
 				2AF58EFF798811C457137D04 /* Token.swift in Sources */,
 				17D6DC7F1B2B65662937F369 /* Attraction.swift in Sources */,
-				7BDEB5511B1D7FEF7B0CE8F7 /* DetailChallenge.swift in Sources */,
-				C691A7B2B73963EE02EE9A40 /* MyChallenge.swift in Sources */,
 				5E92D79480225B86B215E07C /* Comment.swift in Sources */,
 				AA3FDBA7F748E148DF1A8F47 /* CommentListRseponse.swift in Sources */,
 				5B1D7526574694AA04BF21B2 /* DefaultProgressResponse.swift in Sources */,
@@ -3869,7 +3850,7 @@
 				D83156D2272403C24BB67079 /* Pageable.swift in Sources */,
 				E9990850B12B4043D5B727A3 /* AppLocation.swift in Sources */,
 				E06CD4C9C413FFA49C7DD284 /* AppSetting.swift in Sources */,
-				EA9740F02DC0DF0600129D2A /* UnifiedChallenge.swift in Sources */,
+				EA9740F02DC0DF0600129D2A /* Challenge.swift in Sources */,
 				734EA3584D2BAFEA15E2A4D8 /* Coordinate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4021,7 +4002,6 @@
 				4D32F217C394B4B4C48041A7 /* String+Language.swift in Sources */,
 				E5D0CF286D8BF66B231ED103 /* UIApplication++.swift in Sources */,
 				415673039A15A6E507B16F47 /* View++.swift in Sources */,
-				E8DA3E9975B4890C2B336962 /* Mocks.swift in Sources */,
 				4EA4C3687EC76C804D745764 /* Constants.swift in Sources */,
 				041186D189A96D3D27D810C7 /* KeyboardObserver.swift in Sources */,
 				0FC804C30878DA0C7D6ADC5E /* Logger.swift in Sources */,

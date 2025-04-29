@@ -1,5 +1,5 @@
 //
-//  UnifiedChallenge.swift
+//  Challenge.swift
 //  Models
 //
 //  Created by suni on 4/29/25.
@@ -8,7 +8,7 @@
 import Foundation
 import SharedTypes
 
-public struct UnifiedChallenge: Hashable, Equatable, Identifiable {
+public struct Challenge: Hashable, Equatable, Identifiable {
   public let id: Int
   public let name: String
   public let title: String
@@ -19,6 +19,7 @@ public struct UnifiedChallenge: Hashable, Equatable, Identifiable {
   public let challengeThemeName: String
 
   public var likes: Int
+  public var likedCount: Int
   public var isLiked: Bool
 
   public let progressCount: Int
@@ -26,8 +27,8 @@ public struct UnifiedChallenge: Hashable, Equatable, Identifiable {
   public let attractionCount: Int
   public let myStampCount: Int
 
-  public let distance: Int?
-  public let displayRank: String?
+  public let distance: Int
+  public let displayRank: String
 
   public let challengeStatusCode: String
   public var challengeStatus: ChallengeStatus? {
@@ -51,6 +52,7 @@ public struct UnifiedChallenge: Hashable, Equatable, Identifiable {
     challengeThemeId: Int,
     challengeThemeName: String,
     likes: Int,
+    likedCount: Int,
     isLiked: Bool,
     progressCount: Int,
     commentCount: Int,
@@ -71,6 +73,7 @@ public struct UnifiedChallenge: Hashable, Equatable, Identifiable {
     self.challengeThemeId = challengeThemeId
     self.challengeThemeName = challengeThemeName
     self.likes = likes
+    self.likedCount = likedCount
     self.isLiked = isLiked
     self.progressCount = progressCount
     self.commentCount = commentCount
@@ -84,7 +87,7 @@ public struct UnifiedChallenge: Hashable, Equatable, Identifiable {
   }
 }
 
-extension UnifiedChallenge: Codable {
+extension Challenge: Codable {
   private enum CodingKeys: String, CodingKey {
     case id
     case name
@@ -95,6 +98,7 @@ extension UnifiedChallenge: Codable {
     case challengeThemeId
     case challengeThemeName
     case likes
+    case likedCount
     case isLiked
     case progressCount
     case commentCount
@@ -120,6 +124,7 @@ extension UnifiedChallenge: Codable {
       challengeThemeName = try container.decodeIfPresent(String.self, forKey: .challengeThemeName) ?? ""
 
       likes = try container.decodeIfPresent(Int.self, forKey: .likes) ?? 0
+      likedCount = try container.decodeIfPresent(Int.self, forKey: .likedCount) ?? 0
       isLiked = try container.decodeIfPresent(Bool.self, forKey: .isLiked) ?? false
 
       progressCount = try container.decodeIfPresent(Int.self, forKey: .progressCount) ?? 0
@@ -127,7 +132,7 @@ extension UnifiedChallenge: Codable {
       attractionCount = try container.decodeIfPresent(Int.self, forKey: .attractionCount) ?? 0
       myStampCount = try container.decodeIfPresent(Int.self, forKey: .myStampCount) ?? 0
 
-      distance = try container.decodeIfPresent(Int.self, forKey: .distance)
+      distance = try container.decodeIfPresent(Int.self, forKey: .distance) ?? 0
       displayRank = try container.decodeIfPresent(String.self, forKey: .displayRank) ?? ""
 
       challengeStatusCode = try container.decodeIfPresent(String.self, forKey: .challengeStatusCode) ?? ""
@@ -148,6 +153,7 @@ extension UnifiedChallenge: Codable {
       try container.encodeIfPresent(challengeThemeName, forKey: .challengeThemeName)
 
       try container.encodeIfPresent(likes, forKey: .likes)
+      try container.encodeIfPresent(likedCount, forKey: .likedCount)
       try container.encodeIfPresent(isLiked, forKey: .isLiked)
       
       try container.encodeIfPresent(progressCount, forKey: .progressCount)

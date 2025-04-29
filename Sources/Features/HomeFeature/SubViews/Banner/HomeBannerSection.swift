@@ -12,7 +12,7 @@ import SharedAssets
 import Models
 
 struct HomeBannerSection: View {
-  var challenges: [MyChallenge]
+  var challenges: [Challenge]
   var onLikeTapped: (Int) -> Void
   
   var body: some View {

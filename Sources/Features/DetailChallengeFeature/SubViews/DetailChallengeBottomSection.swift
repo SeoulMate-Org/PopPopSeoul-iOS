@@ -14,8 +14,8 @@ import Models
 import Clients
 
 struct DetailChallengeBottomSection: View {
-  let challenge: DetailChallenge
-  let onTap: (DetailChallengeFeature.BottomAction) -> ()
+  let challenge: Challenge
+  let onTap: (DetailChallengeFeature.BottomAction) -> Void
   
   var body: some View {
     HStack(spacing: 8) {

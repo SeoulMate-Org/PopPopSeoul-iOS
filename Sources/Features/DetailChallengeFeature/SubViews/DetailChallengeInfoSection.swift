@@ -13,7 +13,7 @@ import Models
 import Kingfisher
 
 struct DetailChallengeInfoSection: View {
-  let challenge: DetailChallenge
+  let challenge: Challenge
   
   var body: some View {
     VStack(alignment: .leading, spacing: 0) {

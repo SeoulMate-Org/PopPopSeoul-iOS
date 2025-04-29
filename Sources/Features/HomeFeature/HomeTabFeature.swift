@@ -24,26 +24,26 @@ public struct HomeTabFeature {
     var userCoordinate: Coordinate?
     
     // Banner
-    var bannerList: [MyChallenge] = []
+    var bannerList: [Challenge] = []
     
     // Location
     var locationListType: LocationListType = .none
-    var locationList: [MyChallenge] = []
+    var locationList: [Challenge] = []
     
     // Theme
     var loadingThemes: [ChallengeTheme] = [] // ✅ 로딩 중인 테마
     var selectedTheme: ChallengeTheme = .mustSeeSpots
-    var themeChallenges: [ChallengeTheme: [MyChallenge]] = Dictionary(uniqueKeysWithValues: ChallengeTheme.sortedByPriority().map { ($0, []) })
+    var themeChallenges: [ChallengeTheme: [Challenge]] = Dictionary(uniqueKeysWithValues: ChallengeTheme.sortedByPriority().map { ($0, []) })
     
     // Missing List
-    var missingList: [MyChallenge] = []
+    var missingList: [Challenge] = []
     
     // Similar List
     var similarAttraction: String = ""
-    var similarList: [MyChallenge] = []
+    var similarList: [Challenge] = []
     
     // Rnaking List
-    var rankList: [UnifiedChallenge] = []
+    var rankList: [Challenge] = []
   }
   
   public enum LocationListType: Equatable {
@@ -72,24 +72,24 @@ public struct HomeTabFeature {
     case updateUserCoordinate(Coordinate)
     case updateLocationListType(LocationListType)
     case fetchLocationList(Coordinate)
-    case updateLocationList([MyChallenge])
+    case updateLocationList([Challenge])
     
     // Theme List
     case themeChanged(ChallengeTheme)
     case fetchThemeList(ChallengeTheme)
-    case updateThemeList(ChallengeTheme, [MyChallenge])
+    case updateThemeList(ChallengeTheme, [Challenge])
     
     // Missing List
     case fetchMissingList
-    case updateMissingList([MyChallenge])
+    case updateMissingList([Challenge])
     
     // Similar List
     case fetchSimilarList
-    case updateSimilarList(String, [MyChallenge])
+    case updateSimilarList(String, [Challenge])
     
     // Rnaking List
     case fetchRankList
-    case updateRankList([UnifiedChallenge])
+    case updateRankList([Challenge])
   }
   
   // MARK: - Reducer

@@ -10,11 +10,11 @@ import Models
 import SharedTypes
 
 public struct ChallengeListClient {
-  public var fetchLocationList: @Sendable (Coordinate) async throws -> [MyChallenge]
-  public var fetchThemeList: @Sendable (ChallengeTheme) async throws -> (ChallengeTheme, [MyChallenge])
-  public var fetchMissingList: @Sendable () async throws -> [MyChallenge]
-  public var fetchSimilarList: @Sendable () async throws -> (attraction: String?, list: [MyChallenge])
-  public var fetchRankList: @Sendable () async throws -> [UnifiedChallenge]
+  public var fetchLocationList: @Sendable (Coordinate) async throws -> [Challenge]
+  public var fetchThemeList: @Sendable (ChallengeTheme) async throws -> (ChallengeTheme, [Challenge])
+  public var fetchMissingList: @Sendable () async throws -> [Challenge]
+  public var fetchSimilarList: @Sendable () async throws -> (attraction: String?, list: [Challenge])
+  public var fetchRankList: @Sendable () async throws -> [Challenge]
 }
 
 extension ChallengeListClient: DependencyKey {
@@ -37,7 +37,7 @@ extension ChallengeListClient: DependencyKey {
         let query = GetChallengeListTheme(themeId: theme.id)
         let request: Request = .get(.challengeListTheme, query: query.queryItems)
         let (data, _) = try await apiClient.send(request)
-        let list: [MyChallenge] = try data.decoded()
+        let list: [Challenge] = try data.decoded()
         return (theme, list)
       },
       fetchMissingList: {
@@ -57,7 +57,7 @@ extension ChallengeListClient: DependencyKey {
           let query = GetChallengeListStampRequest(attractionId: lastId)
           let request: Request = .get(.challengeListStamp, query: query.queryItems)
           let (data, _) = try await apiClient.send(request)
-          let list: [MyChallenge] = try data.decoded()
+          let list: [Challenge] = try data.decoded()
           return (lastName, list)
         } else {
           return (nil, [])

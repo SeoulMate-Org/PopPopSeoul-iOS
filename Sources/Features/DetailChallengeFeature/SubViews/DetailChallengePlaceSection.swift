@@ -12,7 +12,7 @@ import SharedAssets
 import Models
 
 struct DetailChallengePlaceSection: View {
-  let challenge: DetailChallenge
+  let challenge: Challenge
   
   var body: some View {
     // 스탬프 미션 장소

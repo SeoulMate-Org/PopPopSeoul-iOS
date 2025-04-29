@@ -15,10 +15,10 @@ import DesignSystem
 
 public struct HomeRankChallengeItemView: View {
   let rank: Int
-  let challenge: UnifiedChallenge
+  let challenge: Challenge
   let onLikeTapped: () -> Void
   
-  public init(rank: Int, challenge: UnifiedChallenge, onLikeTapped: @escaping () -> Void) {
+  public init(rank: Int, challenge: Challenge, onLikeTapped: @escaping () -> Void) {
     self.rank = rank
     self.challenge = challenge
     self.onLikeTapped = onLikeTapped

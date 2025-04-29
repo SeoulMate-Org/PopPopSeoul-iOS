@@ -14,7 +14,7 @@ import DesignSystem
 import Kingfisher
 
 struct HomeMissingChallengeItemView: View {
-  let challenge: MyChallenge
+  let challenge: Challenge
   let cardWidth: CGFloat
   let onStartTapped: () -> Void
   
@@ -91,8 +91,4 @@ struct HomeMissingChallengeItemView: View {
         .foregroundColor(Colors.gray300.swiftUIColor)
     }
   }
-}
-
-#Preview {
-  HomeMissingChallengeItemView(challenge: mockMyChallenge, cardWidth: 160, onStartTapped: { })
 }

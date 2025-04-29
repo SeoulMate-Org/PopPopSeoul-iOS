@@ -10,7 +10,7 @@ import Models
 import SharedTypes
 
 public struct MyChallengeClient {
-  public var fetchList: @Sendable (String) async throws -> [MyChallenge]
+  public var fetchList: @Sendable (String) async throws -> [Challenge]
 }
 
 extension MyChallengeClient: DependencyKey {

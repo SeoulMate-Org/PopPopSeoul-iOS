@@ -14,7 +14,7 @@ import Models
 
 struct HomeSimilarSection: View {
   let lastAttractionName: String
-  let challenges: [MyChallenge]
+  let challenges: [Challenge]
   var onTapped: (Int) -> Void
   
   var body: some View {

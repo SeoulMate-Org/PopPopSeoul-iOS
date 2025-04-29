@@ -14,7 +14,7 @@ import SharedTypes
 import Models
 
 struct HomeRankSection: View {
-  let challenges: [UnifiedChallenge]
+  let challenges: [Challenge]
   let onMoreTapped: () -> Void
   let onLikeTapped: (Int) -> Void
   

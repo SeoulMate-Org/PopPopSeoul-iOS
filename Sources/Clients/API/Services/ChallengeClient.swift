@@ -10,7 +10,7 @@ import Models
 import SharedTypes
 
 public struct ChallengeClient {
-  public var get: @Sendable (Int) async throws -> DetailChallenge
+  public var get: @Sendable (Int) async throws -> Challenge
   public var putLike: @Sendable (Int) async throws -> DefaultLikeResponse
 }
 

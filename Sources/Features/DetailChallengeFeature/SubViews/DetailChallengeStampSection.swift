@@ -12,7 +12,7 @@ import SharedAssets
 import Models
 
 struct DetailChallengeStampSection: View {
-  let challenge: DetailChallenge
+  let challenge: Challenge
   
   var body: some View {
     

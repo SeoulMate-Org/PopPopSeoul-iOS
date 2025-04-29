@@ -12,7 +12,7 @@ import SharedAssets
 import Models
 
 struct HomeMissingSection: View {
-  var challenges: [MyChallenge]
+  var challenges: [Challenge]
   var onTapped: (Int) -> Void
   var onStartTapped: (Int) -> Void
   
@@ -74,10 +74,6 @@ struct HomeMissingSection: View {
     }
     .background(.clear)
   }
-}
-
-#Preview {
-  HomeMissingSection(challenges: [mockMyChallenge, mockMyChallenge, mockMyChallenge], onTapped: { _ in }, onStartTapped: { _ in })
 }
 
 extension LinearGradient {

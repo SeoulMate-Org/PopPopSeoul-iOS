@@ -78,7 +78,7 @@ struct MyChallengeTabView: View {
   
   private func listView(
     viewStore: ViewStoreOf<MyChallengeTabFeature>,
-    items: [MyChallenge],
+    items: [Challenge],
     tab: MyChallengeTabFeature.Tab
   ) -> some View {
     MyChallengeListView(

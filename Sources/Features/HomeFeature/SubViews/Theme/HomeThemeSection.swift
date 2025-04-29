@@ -15,7 +15,7 @@ import Models
 
 struct HomeThemeSection: View {
   @Binding var selectedTab: ChallengeTheme
-  let challengesByTheme: [ChallengeTheme: [MyChallenge]]
+  let challengesByTheme: [ChallengeTheme: [Challenge]]
   let themeTabChanged: (ChallengeTheme) -> Void
   let onLikeTapped: (Int) -> Void
   let onMoreTapped: () -> Void

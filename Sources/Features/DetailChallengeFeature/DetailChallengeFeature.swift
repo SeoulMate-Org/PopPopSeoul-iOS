@@ -22,7 +22,7 @@ public struct DetailChallengeFeature {
   @ObservableState
   public struct State: Equatable {
     let challengeId: Int
-    var challenge: DetailChallenge?
+    var challenge: Challenge?
     var showMenu: Bool = false
     
     public init(with id: Int) {
@@ -35,7 +35,7 @@ public struct DetailChallengeFeature {
   @CasePathable
   public enum Action: Equatable {
     case onApear
-    case update(DetailChallenge)
+    case update(Challenge)
     case getError
     case showLoginAlert
     

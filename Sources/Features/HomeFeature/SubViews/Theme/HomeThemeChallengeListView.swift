@@ -13,11 +13,11 @@ import Models
 import DesignSystem
 
 public struct HomeThemeChallengeListView: View {
-  let challengesByTheme: [ChallengeTheme: [MyChallenge]]
+  let challengesByTheme: [ChallengeTheme: [Challenge]]
   @Binding var selectedTab: ChallengeTheme
   let onLikeTapped: (Int) -> Void
 
-  public init(challengesByTheme: [ChallengeTheme: [MyChallenge]],
+  public init(challengesByTheme: [ChallengeTheme: [Challenge]],
               selectedTab: Binding<ChallengeTheme>,
               onLikeTapped: @escaping (Int) -> Void) {
     self._selectedTab = selectedTab

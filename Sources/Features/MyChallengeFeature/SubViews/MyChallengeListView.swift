@@ -14,7 +14,7 @@ import Models
 
 struct MyChallengeListView: View {
   let tab: MyChallengeTabFeature.Tab
-  let items: [MyChallenge]
+  let items: [Challenge]
   let onItemTapped: (Int) -> Void
   let onLikeTapped: (Int) -> Void
   
@@ -57,9 +57,5 @@ struct MyChallengeListView: View {
 }
 
 // MARK: Preview
-
-//#Preview {
-//  MyChallengeListView(tab: .completed, items: mockChallenges, onLikeTapped: { _ in })
-//}
 
 // MARK: - Helper

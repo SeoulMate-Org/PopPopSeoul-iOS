@@ -13,7 +13,7 @@ import Models
 import Clients
 
 struct DetailChallengeCommentSection: View {
-  let challenge: DetailChallenge
+  let challenge: Challenge
   let onDeleteTap: (Int) -> Void
   let onEditTap: (Comment) -> Void
   let onAllCommentTap: () -> Void
