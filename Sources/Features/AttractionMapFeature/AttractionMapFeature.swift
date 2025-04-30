@@ -103,7 +103,7 @@ public struct AttractionMapFeature {
             // 1. 좋아요 UI 즉시 업데이트
             var update = attraction
             update.isLiked.toggle()
-            update.likes += update.isLiked ? 1 : -1
+            update.likes = max(0, update.likes + (update.isLiked ? 1 : -1))
             await send(.update(update))
             
             do {

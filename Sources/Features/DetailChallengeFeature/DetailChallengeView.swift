@@ -47,6 +47,8 @@ struct DetailChallengeView: View {
                     challenge: challenge,
                     onAttractionTap: { id in
                       viewStore.send(.tappedAttraction(id: id))
+                    }, onLikeTap: { id in
+                      viewStore.send(.tappedAttractionLike(id: id))
                     })
                   divider()
                   DetailChallengeCommentSection(

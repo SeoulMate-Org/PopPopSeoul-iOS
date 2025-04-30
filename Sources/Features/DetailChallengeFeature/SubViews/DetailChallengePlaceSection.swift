@@ -14,6 +14,7 @@ import Models
 struct DetailChallengePlaceSection: View {
   let challenge: Challenge
   let onAttractionTap: (Int) -> Void
+  let onLikeTap: (Int) -> Void
   
   var body: some View {
     // 스탬프 미션 장소
@@ -32,10 +33,12 @@ struct DetailChallengePlaceSection: View {
       // 장소 리스트
       VStack(spacing: 16) {
         ForEach(challenge.attractions) { place in
-          ChallengePlaceListItem(place: place, onLikeTapped: { })
-            .onTapGesture {
-              onAttractionTap(place.id)
-            }
+          ChallengePlaceListItem(place: place, onLikeTapped: {
+            onLikeTap(place.id)
+          })
+          .onTapGesture {
+            onAttractionTap(place.id)
+          }
         }
       }
       .padding(.top, 4)

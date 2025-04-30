@@ -15,6 +15,7 @@ import Clients
 @Reducer
 public struct DetailChallengeFeature {
   
+  @Dependency(\.attractionClient) var attractionClient
   @Dependency(\.challengeClient) var challengeClient
   @Dependency(\.locationClient) var locationClient
   
@@ -49,6 +50,8 @@ public struct DetailChallengeFeature {
     
     // attraction
     case tappedAttraction(id: Int)
+    case tappedAttractionLike(id: Int)
+    case updateAttraction(Attraction)
     case requestLocation
     case locationResult(LocationResult)
     
@@ -119,6 +122,40 @@ public struct DetailChallengeFeature {
         // TODO: ERROR 처리
         return .none
         
+        // Attraction
+      case let .tappedAttractionLike(id):
+        if TokenManager.shared.isLogin {
+          return .run { [state = state] send in
+            guard let attraction = state.challenge?.attractions.first(where: { $0.id == id }) else { return }
+            
+            // 1. 좋아요 UI 즉시 업데이트
+            var update = attraction
+            update.isLiked.toggle()
+            update.likes = max(0, update.likes + (update.isLiked ? 1 : -1))
+            await send(.updateAttraction(update))
+            
+            do {
+              let response = try await attractionClient.putLike(update.id)
+              
+              // 필요시 서버 데이터랑 다르면 다시 fetch
+              if response.isLiked != update.isLiked {
+                let fresh = try await attractionClient.get(response.id)
+                await send(.updateAttraction(fresh))
+              }
+            } catch {
+              await send(.getError)
+            }
+          }
+        } else {
+          return .send(.showLoginAlert)
+        }
+        
+      case let .updateAttraction(new):
+        guard let index = state.challenge?.attractions.firstIndex(where: { $0.id == new.id }) else { return .none }
+        
+        state.challenge?.attractions[index] = new
+        return .none
+                
       case .requestLocation:
         return .run { send in
           let result = await locationClient.getCurrentLocation()
