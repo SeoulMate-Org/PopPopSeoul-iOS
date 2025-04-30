@@ -96,3 +96,4 @@ __Snapshots__/
 *.p8
 Secrets.plist
 GoogleService-Info.plist
+Secrets.xcconfig
