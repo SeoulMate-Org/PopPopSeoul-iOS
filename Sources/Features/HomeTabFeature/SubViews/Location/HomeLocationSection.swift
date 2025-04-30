@@ -47,6 +47,6 @@ struct HomeLocationSection: View {
       }
       .padding(.top, 16)
     }
-    .background(.clear)
+    .background(Colors.appWhite.swiftUIColor)
   }
 }

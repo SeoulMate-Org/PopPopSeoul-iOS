@@ -67,6 +67,6 @@ struct AttractionMapListItem: View {
     }
     .padding(.vertical, 8)
     .frame(height: 88)
-    .background(Color.clear)
+    .background(Colors.appWhite.swiftUIColor)
   }
 }

@@ -105,7 +105,7 @@ public struct ThemeChallengeListItemView: View {
       .cornerRadius(16)
       .padding(.leading, 8)
     }
-    .background(.clear)
+    .background(Colors.appWhite.swiftUIColor)
     .frame(height: 92)
   }
 }

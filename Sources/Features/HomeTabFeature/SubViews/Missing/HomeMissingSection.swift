@@ -76,7 +76,7 @@ struct HomeMissingSection: View {
         .padding(.top, 36)
       }
     }
-    .background(.clear)
+    .background(Colors.appWhite.swiftUIColor)
   }
 }
 

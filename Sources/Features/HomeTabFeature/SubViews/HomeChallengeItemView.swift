@@ -67,7 +67,7 @@ struct HomeChallengeItemView: View {
     }
     .frame(width: cardWidth)
     .frame(minHeight: cardHeight, alignment: .top)
-    .background(.clear)
+    .background(Colors.appWhite.swiftUIColor)
   }
   
   private func iconStat(image: Image, count: Int) -> some View {

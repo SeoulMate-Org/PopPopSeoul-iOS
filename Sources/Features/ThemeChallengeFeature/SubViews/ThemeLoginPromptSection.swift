@@ -44,6 +44,6 @@ struct ThemeLoginPromptSection: View {
         .fill(Color.hex(0x1D8EFE))
     )
     .padding(.horizontal, 20)
-    .background(.clear)
+    .background(Colors.appWhite.swiftUIColor)
   }
 }

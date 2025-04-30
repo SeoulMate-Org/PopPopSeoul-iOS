@@ -105,7 +105,7 @@ struct MyChallengeistItemView: View {
         .padding(.leading, 16)
       }
     }
-    .background(.clear)
+    .background(Colors.appWhite.swiftUIColor)
     .frame(height: 76)
   }
 }

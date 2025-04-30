@@ -37,7 +37,7 @@ struct MyChallengeEmptyView: View {
       }
     }
     .frame(maxWidth: .infinity, maxHeight: .infinity)
-    .background(.clear)
+    .background(Colors.appWhite.swiftUIColor)
   }
 }
 

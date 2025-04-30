@@ -126,7 +126,7 @@ struct DetailCommentsView: View {
         .padding(.trailing, 8)
         .font(.captionL)
         .foregroundColor(Colors.gray900.swiftUIColor)
-        .background(.clear)
+        .background(Colors.appWhite.swiftUIColor)
         .multilineTextAlignment(.leading)
         .cornerRadius(0)
         .onChange(of: viewStore.inputText, initial: true) { _, newValue in
