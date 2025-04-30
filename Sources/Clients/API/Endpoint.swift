@@ -36,12 +36,5 @@ public extension Endpoint {
 }
 
 var apiBaseUrl: String {
-  guard let path = Bundle.main.path(forResource: "Secrets", ofType: "plist"),
-        let dict = NSDictionary(contentsOfFile: path),
-        let value = dict["BASE_URL"] as? String else {
-        // TODO: - 테스트 서버
-//        let value = dict["TEST_BASE_URL"] as? String else {
-    fatalError("❌ secrets.plist의 BASE_URL을 읽을 수 없습니다.")
-  }
-  return value
+  return Bundle.main.object(forInfoDictionaryKey: "BASE_URL") as? String ?? "https://"
 }

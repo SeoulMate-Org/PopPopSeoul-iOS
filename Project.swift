@@ -64,22 +64,38 @@ let appInfoPlist: [String: Plist.Value] = {
             "NSAllowsArbitraryLoads": true
         ],
         "NSLocationWhenInUseUsageDescription": "앱 사용 중 사용자의 위치를 확인하기 위해 필요합니다.",
-        "NSLocationAlwaysAndWhenInUseUsageDescription": "앱이 백그라운드에서도 위치를 사용할 수 있도록 하기 위해 필요합니다."
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "앱이 백그라운드에서도 위치를 사용할 수 있도록 하기 위해 필요합니다.",
+        // ✅ Facebook & Google 관련 설정
+        "CFBundleURLTypes": [
+            [
+                "CFBundleURLSchemes": ["com.googleusercontent.apps.$(GOOGLE_CLIENT_ID)"]
+            ],
+            [
+                "CFBundleURLSchemes": ["fb$(FACEBOOK_APP_ID)"]
+            ]
+        ],
+        "FacebookAppID": "$(FACEBOOK_APP_ID)",
+        "FacebookClientToken": "$(FACEBOOK_CLIENT_TOKEN)",
+        "FacebookDisplayName": "PopPopSeoul",
+        "GoogleSignIn": "$(GOOGLE_SIGN_IN)",
+        "BASE_URL": "$(BASE_URL)",
+        "TEST_BASE_URL": "$(TEST_BASE_URL)"
     ]
+    return base
     
-    let secretsPath = "App/Resources/Secrets.plist"
-    if let data = try? Data(contentsOf: URL(fileURLWithPath: secretsPath)),
-       let secretsPlist = try? PropertyListSerialization.propertyList(
-        from: data,
-        options: [],
-        format: nil
-       ) as? [String: Any] {
-        
-        let convertedSecrets = secretsPlist.compactMapValues { convertToPlistValue($0) }
-        return base.merging(convertedSecrets) { $1 }
-    } else {
-        return base // ✅ fallback return!
-    }
+    //    let secretsPath = "App/Resources/Secrets.plist"
+    //    if let data = try? Data(contentsOf: URL(fileURLWithPath: secretsPath)),
+    //       let secretsPlist = try? PropertyListSerialization.propertyList(
+    //        from: data,
+    //        options: [],
+    //        format: nil
+    //       ) as? [String: Any] {
+    //
+    //        let convertedSecrets = secretsPlist.compactMapValues { convertToPlistValue($0) }
+    //        return base.merging(convertedSecrets) { $1 }
+    //    } else {
+    //        return base // ✅ fallback return!
+    //    }
 }()
 
 func convertToPlistValue(_ any: Any) -> Plist.Value? {
@@ -160,6 +176,10 @@ let project = Project(
             "CODE_SIGN_IDENTITY": "",
             "CODE_SIGNING_REQUIRED": "NO",
             "DEVELOPMENT_LANGUAGE": "ko"
+        ],
+        configurations: [
+            .debug(name: "Debug", xcconfig: .relativeToRoot("App/Resources/Secrets.xcconfig")),
+            .release(name: "Release", xcconfig: .relativeToRoot("App/Resources/Secrets.xcconfig"))
         ]
     ),
     targets:
