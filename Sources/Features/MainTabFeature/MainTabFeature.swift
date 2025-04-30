@@ -87,6 +87,10 @@ public struct MainTabFeature {
         return .none
         
         // MARK: - Home Reducer
+      case .home(.showLoginAlert):
+        state.showLoginAlert = true
+        return .none
+        
       case .home(.tappedChallenge(let id)):
         state.path.append(.detailChallenge(DetailChallengeFeature.State(with: id)))
         return .none
@@ -102,7 +106,7 @@ public struct MainTabFeature {
         // MARK: - Path Reducer
       case let .path(action):
         switch action {
-          // detail comments
+          // move to detail comments
         case .element(id: _, action: .detailChallenge(.tappedAllComments(let id))):
           state.path.append(.detailComments(DetailCommentsFeature.State(with: id)))
           return .none
@@ -111,7 +115,7 @@ public struct MainTabFeature {
           state.path.append(.detailComments(DetailCommentsFeature.State(with: id, comment)))
           return .none
           
-          // detail attraction
+          // move to detail attraction
         case .element(id: _, action: .detailChallenge(.tappedAttraction(let id))),
             .element(id: _, action: .attractionMap(.tappedDetail(let id))):
           state.path.append(.detailAttraction(DetailAttractionFeature.State(with: id)))
@@ -121,10 +125,11 @@ public struct MainTabFeature {
           state.path.append(.attractionMap(AttractionMapFeature.State(with: challenge)))
           return .none
           
-          // login
+          // move to login
         case .element(id: _, action: .detailChallenge(.showLoginAlert)),
             .element(id: _, action: .themeChallenge(.showLoginAlert)),
-            .element(id: _, action: .detailAttraction(.showLoginAlert)):
+            .element(id: _, action: .detailAttraction(.showLoginAlert)),
+            .element(id: _, action: .attractionMap(.showLoginAlert)):
           state.showLoginAlert = true
           return .none
           

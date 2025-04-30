@@ -41,18 +41,14 @@ extension ChallengeListClient: DependencyKey {
         return (theme, list)
       },
       fetchMissingList: {
-        if TokenManager.shared.isLogin {
-          let query = GetDefaultRequest()
-          let request: Request = .get(.challengeListStamp, query: query.queryItems)
-          let (data, _) = try await apiClient.send(request)
-          let result: StampChallenges = try data.decoded()
-          if let type = StampChallenge.from(apiCode: result.dataCode) {
-            return (type, result.challenges)
-          } else {
-            return (nil, result.challenges)
-          }
+        let query = GetDefaultRequest()
+        let request: Request = .get(.challengeListStamp, query: query.queryItems)
+        let (data, _) = try await apiClient.send(request)
+        let result: StampChallenges = try data.decoded()
+        if let type = StampChallenge.from(apiCode: result.dataCode) {
+          return (type, result.challenges)
         } else {
-          return (nil, [])
+          return (nil, result.challenges)
         }
       },
       fetchSimilarList: {

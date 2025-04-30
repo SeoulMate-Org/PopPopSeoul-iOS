@@ -114,32 +114,25 @@ public struct HomeTabFeature {
         
         return .merge(
           .run { [state = state] send in
-            
-            if TokenManager.shared.isLogin {
-              if state.isInit {
-                await send(.requestLocation)
-              }
-            } else {
-              await send(.updateLocationListType(.loginRequired))
-            }
+            await send(.requestLocation)
           },
-          
-            .merge(
-              prefetchThemes.map { .send(.fetchThemeList($0)) }
-            ),
-          
-            .run { send in
-              await send(.fetchMissingList)
-            },
-          
-            .run { send in
-              await send(.fetchSimilarList)
-            },
-          
-            .run { send in
-              await send(.fetchRankList)
-            }
-        )
+        
+          .merge(
+            prefetchThemes.map { .send(.fetchThemeList($0)) }
+          ),
+        
+          .run { send in
+            await send(.fetchMissingList)
+          },
+        
+          .run { send in
+            await send(.fetchSimilarList)
+          },
+        
+          .run { send in
+            await send(.fetchRankList)
+          }
+      )
       case let .tappedLike(challenge):
         if TokenManager.shared.isLogin {
           return .run { send in
@@ -176,17 +169,17 @@ public struct HomeTabFeature {
         if state.isInit {
           state.isInit = false
           return .merge(
-              .run { _ in await locationClient.requestAuthorization() },
-              .run { send in
-                for await action in await locationClient.startMonitoring() {
-                  await send(.locationClient(action), animation: .default)
-                }
-              },
-              .run { send in
-                let status = await locationClient.getAuthorizationStatus()
-                await send(.locationClient(.didChangeAuthorization(status)))
+            .run { _ in await locationClient.requestAuthorization() },
+            .run { send in
+              for await action in await locationClient.startMonitoring() {
+                await send(.locationClient(action), animation: .default)
               }
-            )
+            },
+            .run { send in
+              let status = await locationClient.getAuthorizationStatus()
+              await send(.locationClient(.didChangeAuthorization(status)))
+            }
+          )
         } else {
           return .run { send in
             let result = await locationClient.getCurrentLocation()
@@ -223,11 +216,15 @@ public struct HomeTabFeature {
         }
         
       case let .updateLocationListType(type):
-        state.locationListType = type
-        
-        if state.locationListType != .defaultList ||
-            state.locationListType != .list {
-          state.locationList = []
+        if TokenManager.shared.isLogin {
+          state.locationListType = type
+          
+          if state.locationListType != .defaultList ||
+              state.locationListType != .list {
+            state.locationList = []
+          }
+        } else {
+          state.locationListType = .loginRequired
         }
         return .none
         
