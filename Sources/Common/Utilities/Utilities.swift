@@ -32,7 +32,7 @@ public class Utility {
   }
   
   public static func openInNaveMap(lat: Double, lng: Double, name: String) {
-    let urlString = "nmap://place?dlat=\(lat)&dlng=\(lng)&dname=\(name)&appname=\(Bundle.main.bundleIdentifier ?? "")"
+    let urlString = "nmap://place?lat=\(lat)&lng=\(lng)&name=\(name)&appname=\(Bundle.main.bundleIdentifier ?? "")"
     openInSafari(urlString: urlString)
   }
 }
