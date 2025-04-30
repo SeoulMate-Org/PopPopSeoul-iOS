@@ -138,7 +138,6 @@ public struct HomeTabFeature {
         
       case let .locationResult(.success(coordinate)):
         return .run { send in
-          await send(.updateLocationListType(.list))
           await send(.updateUserCoordinate(coordinate))
         }
         
@@ -171,8 +170,9 @@ public struct HomeTabFeature {
       case let .fetchLocationList(coordinate):
         return .run { send in
           do {
-            let list = try await callengeListClient.fetchLocationList(coordinate)
-            await send(.updateLocationList(list))
+            let result = try await callengeListClient.fetchLocationList(coordinate)
+            await send(.updateLocationListType(result.jongGak ? .defaultList : .list))
+            await send(.updateLocationList(result.challenges))
           } catch {
             await send(.networkError)
           }

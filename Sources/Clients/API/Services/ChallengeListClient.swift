@@ -10,7 +10,7 @@ import Models
 import SharedTypes
 
 public struct ChallengeListClient {
-  public var fetchLocationList: @Sendable (Coordinate) async throws -> [Challenge]
+  public var fetchLocationList: @Sendable (Coordinate) async throws -> LocationChallenges
   public var fetchThemeList: @Sendable (ChallengeTheme) async throws -> (theme: ChallengeTheme, list: [Challenge])
   public var fetchMissingList: @Sendable () async throws -> [Challenge]
   public var fetchSimilarList: @Sendable () async throws -> (attraction: String?, list: [Challenge])

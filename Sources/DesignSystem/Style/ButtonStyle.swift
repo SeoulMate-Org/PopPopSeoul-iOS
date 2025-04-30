@@ -17,6 +17,8 @@ public struct AppButton: View {
   let state: AppButtonState
   let onTap: () -> Void
   var isFullWidth: Bool = false
+  let verticalPadding: CGFloat?
+  let horizontalPadding: CGFloat?
 
   public init(
     title: String,
@@ -25,7 +27,9 @@ public struct AppButton: View {
     layout: AppButtonLayout,
     state: AppButtonState,
     onTap: @escaping () -> Void,
-    isFullWidth: Bool = false
+    isFullWidth: Bool = false,
+    verticalPadding: CGFloat? = nil,
+    horizontalPadding: CGFloat? = nil
   ) {
     self.title = title
     self.size = size
@@ -34,6 +38,8 @@ public struct AppButton: View {
     self.state = state
     self.onTap = onTap
     self.isFullWidth = isFullWidth
+    self.verticalPadding = verticalPadding
+    self.horizontalPadding = horizontalPadding
   }
   
   public var body: some View {
@@ -50,7 +56,9 @@ public struct AppButton: View {
       layout: layout,
       state: state,
       title: title,
-      isFullWidth: isFullWidth
+      isFullWidth: isFullWidth,
+      verticalPadding: verticalPadding,
+      horizontalPadding: horizontalPadding
     ))
     .disabled(state == .disabled)
   }
@@ -71,6 +79,8 @@ struct AppButtonStyle: ButtonStyle {
   let state: AppButtonState
   let title: String
   let isFullWidth: Bool
+  let verticalPadding: CGFloat?
+  let horizontalPadding: CGFloat?
 
   func makeBody(configuration: Configuration) -> some View {
     let currentState: AppButtonState = {
@@ -96,8 +106,8 @@ struct AppButtonStyle: ButtonStyle {
     }
     .font(size.font)
     .foregroundColor(style.foregroundColor(for: currentState))
-    .padding(.vertical, size.verticalPadding)
-    .padding(.horizontal, size.horizontalPadding)
+    .padding(.vertical, verticalPadding ?? size.verticalPadding)
+    .padding(.horizontal, horizontalPadding ?? size.horizontalPadding)
     .frame(maxHeight: .infinity)
     .if(isFullWidth) { view in
       view.frame(maxWidth: .infinity)

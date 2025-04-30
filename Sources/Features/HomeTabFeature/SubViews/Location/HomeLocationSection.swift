@@ -13,6 +13,7 @@ import SharedTypes
 import Models
 
 struct HomeLocationSection: View {
+  let isDefault: Bool
   let challenges: [Challenge]
   var onTapped: (Int) -> Void
   
@@ -22,12 +23,12 @@ struct HomeLocationSection: View {
     
     VStack(alignment: .leading, spacing: 0) {
       // MARK: - 헤더 타이틀
-      Text("🏅 근처 챌린지, 놓치지 마세요!")
+      Text( "🏅 근처 챌린지, 놓치지 마세요!")
         .font(.appTitle2)
         .foregroundStyle(Colors.gray900.swiftUIColor)
         .padding(.horizontal, 20)
       
-      Text("바로 근처에서 스탬프를 찍을 수 있어요")
+      Text(isDefault ? "근처 챌린지가 없을 경우, 종각역 기준으로 보여드려요" : "바로 근처에서 스탬프를 찍을 수 있어요")
         .font(.captionL)
         .foregroundStyle(Colors.gray600.swiftUIColor)
         .padding(.top, 4)

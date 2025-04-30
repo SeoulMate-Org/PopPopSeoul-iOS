@@ -14,10 +14,11 @@ import Models
 struct AttractionMapListView: View {
   
   let attractions: [Attraction]
+  let onTapped: (Int) -> Void
   let onLikeTapped: (Int) -> Void
   
   var body: some View {
-    VStack(alignment: .leading, spacing: 10) {
+    VStack(alignment: .leading, spacing: 0) {
       ForEach(attractions.indices, id: \.self) { index in
         let attraction = attractions[index]
         AttractionMapListItem(
@@ -26,6 +27,9 @@ struct AttractionMapListView: View {
             onLikeTapped(attraction.id)
           }
         )
+        .onTapGesture {
+          onTapped(attraction.id)
+        }
         
         if index < attractions.count - 1 {
           Divider()
@@ -35,9 +39,9 @@ struct AttractionMapListView: View {
         }
       }
     }
-    .padding(.top, 20)
-    .padding(.bottom, 16 + Utility.safeBottom)
     .padding(.horizontal, 20)
+    .padding(.top, 20)
+    .padding(.bottom, 16)
     .background(Color.clear)
   }
 }

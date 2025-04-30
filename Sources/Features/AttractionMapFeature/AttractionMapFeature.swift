@@ -21,10 +21,26 @@ public struct AttractionMapFeature {
   public struct State: Equatable {
     var challengeName: String
     var attractions: [Attraction]
+    var showAttractions: [Attraction]
+    var bottomSheetType: BottomSheetType = .expand
     
     public init(with challenge: Challenge) {
       self.attractions = challenge.attractions
       self.challengeName = challenge.name
+      self.showAttractions = challenge.attractions
+    }
+  }
+  
+  public enum BottomSheetType: Equatable {
+    case expand
+    case fold
+    case detail(attraction: Attraction)
+    
+    public var attraction: Attraction? {
+      switch self {
+      case .detail(let attraction): return attraction
+      default: return nil
+      }
     }
   }
   
@@ -34,7 +50,10 @@ public struct AttractionMapFeature {
   public enum Action: Equatable {
     case onApear
     
+    case tappedAttraction(Int)
     case tappedBack
+    
+    case updateBottomSheetType(BottomSheetType)
   }
   
   // MARK: Reducer
@@ -46,10 +65,27 @@ public struct AttractionMapFeature {
       case .onApear:
         return .none
         
-      case .tappedBack:
-        return .run { _ in
-          await self.dismiss()
+      case let .tappedAttraction(id):
+        if let first = state.attractions.first(where: { $0.id == id }) {
+          state.showAttractions = [first]
+          state.bottomSheetType = .detail(attraction: first)
         }
+        return .none
+        
+      case .tappedBack:
+        switch state.bottomSheetType {
+        case .detail:
+          state.bottomSheetType = .expand
+          return .none
+        default:
+          return .run { _ in
+            await self.dismiss()
+          }
+        }
+        
+      case let .updateBottomSheetType(type):
+        state.bottomSheetType = type
+        return .none
       }
     }
   }

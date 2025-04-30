@@ -41,6 +41,7 @@ struct HomeTabView: View {
           
           if viewStore.locationList.count > 0 {
             HomeLocationSection(
+              isDefault: viewStore.locationListType == .defaultList,
               challenges: viewStore.locationList,
               onTapped: { id in
                 store.send(.tappedChallenge(id: id))

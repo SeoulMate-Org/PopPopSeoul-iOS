@@ -679,6 +679,8 @@
 		E9DE71C84C88288412A32A64 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8609EF56D0937265092D5D36 /* Pretendard-ExtraLight.otf */; };
 		EA538B02E6EFCB8F46D36669 /* HomeChallengeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3A6CFAA5F6821C6DF932F /* HomeChallengeItemView.swift */; };
 		EA68103BE802BEBD67434D79 /* SB 어그로OTF M.otf in Resources */ = {isa = PBXBuildFile; fileRef = E283BF28611FAF81E991ABF5 /* SB 어그로OTF M.otf */; };
+		EA7822772DC278A9009B6E47 /* AttractionMapDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7822762DC278A9009B6E47 /* AttractionMapDetailView.swift */; };
+		EA7822792DC28027009B6E47 /* LocationChallenges.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7822782DC28027009B6E47 /* LocationChallenges.swift */; };
 		EA949284C11DB940F84888C2 /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256CCC92AC8D6EE5FACE5475 /* Dependencies.framework */; };
 		EAE62223229FB6E39F76669F /* CasePathsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CF7412324C02D1745F0E0D /* CasePathsCore.framework */; };
 		EB1B1D606C9519443C8093A6 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E58A56242DD34BBF412FCA4 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle */; };
@@ -1591,6 +1593,8 @@
 		E9D23E812DA7735D291EA0D0 /* MyChallengeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChallengeClient.swift; sourceTree = "<group>"; };
 		EA14930892816AFA4A88950C /* GoogleUtilities_Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleUtilities_Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA26B67DE986D8D090F59956 /* CombineSchedulers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CombineSchedulers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA7822762DC278A9009B6E47 /* AttractionMapDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionMapDetailView.swift; sourceTree = "<group>"; };
+		EA7822782DC28027009B6E47 /* LocationChallenges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationChallenges.swift; sourceTree = "<group>"; };
 		EB1AF2F0C1D291ADEC33A0B1 /* GetChallengeMyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeMyRequest.swift; sourceTree = "<group>"; };
 		EB50FD060BF7A2400BB005A7 /* ThemeChallengeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChallengeTabView.swift; sourceTree = "<group>"; };
 		EC4AFF88EA6DCED6098DE437 /* Clients-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Clients-Info.plist"; sourceTree = "<group>"; };
@@ -2214,6 +2218,7 @@
 				182711EDD635A74307BC0535 /* AttractionMapListItem.swift */,
 				F427C08FEFC2EDD598A1E9E9 /* AttractionMapListView.swift */,
 				FFBD730C5857B9488BBFB40B /* NaverMapView.swift */,
+				EA7822762DC278A9009B6E47 /* AttractionMapDetailView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -2559,6 +2564,7 @@
 			children = (
 				6EDB40F90FD3412C20162CD2 /* Attraction.swift */,
 				28106CA4FD800F7ABCF2FADF /* Challenge.swift */,
+				EA7822782DC28027009B6E47 /* LocationChallenges.swift */,
 			);
 			path = Challenge;
 			sourceTree = "<group>";
@@ -3993,6 +3999,7 @@
 				E9990850B12B4043D5B727A3 /* AppLocation.swift in Sources */,
 				E06CD4C9C413FFA49C7DD284 /* AppSetting.swift in Sources */,
 				734EA3584D2BAFEA15E2A4D8 /* Coordinate.swift in Sources */,
+				EA7822792DC28027009B6E47 /* LocationChallenges.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4045,6 +4052,7 @@
 				19CE3DB262A71B88AA42F2D7 /* HomeSimilarSection.swift in Sources */,
 				5C5F891B06547F5498BBEA2F /* HomeThemeChallengeListView.swift in Sources */,
 				4C51B7E0EA4B09C1CA72E4D7 /* HomeThemeIndicatorView.swift in Sources */,
+				EA7822772DC278A9009B6E47 /* AttractionMapDetailView.swift in Sources */,
 				08F395DD70DC7EF2B83A164E /* HomeThemeSection.swift in Sources */,
 				3256A9D6730D50DA2EFE14E8 /* HomeThemeTabView.swift in Sources */,
 				0EC516E2E41AB67AB1889EF1 /* LoginFeature.swift in Sources */,
