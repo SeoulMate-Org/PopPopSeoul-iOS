@@ -56,7 +56,7 @@ struct HomeAccessPromptSection: View {
         .fill(Color.hex(0x1D8EFE))
     )
     .padding(.horizontal, 20)
-    .background(Colors.appWhite.swiftUIColor)
+    .background(.clear)
   }
   
   enum PromptType {

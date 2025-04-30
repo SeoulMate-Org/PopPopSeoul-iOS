@@ -53,8 +53,8 @@ struct HomeBannerItemView: View {
       .frame(width: cardWidth)
     }
     .frame(maxWidth: cardWidth, maxHeight: cardHeight)
-    .background(Colors.appWhite.swiftUIColor)
     .cornerRadius(16)
+    .background(.clear)
   }
 }
 

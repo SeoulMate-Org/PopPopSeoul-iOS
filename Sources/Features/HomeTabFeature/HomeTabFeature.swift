@@ -113,24 +113,29 @@ public struct HomeTabFeature {
         let prefetchThemes: [ChallengeTheme] = [.mustSeeSpots, .localTour, .historyCulture]
         return .merge(
           .run { send in
-              if TokenManager.shared.isLogin {
-                await send(.requestLocation)
-              } else {
-                await send(.updateLocationListType(.loginRequired))
-              }
+            
+            if TokenManager.shared.isLogin {
+              await send(.requestLocation)
+            } else {
+              await send(.updateLocationListType(.loginRequired))
+            }
+          },
+          
+            .merge(
+              prefetchThemes.map { .send(.fetchThemeList($0)) }
+            ),
+          
+            .run { send in
+              await send(.fetchMissingList)
             },
-          .merge(
-            prefetchThemes.map { .send(.fetchThemeList($0)) }
-          ),
-          .run { send in
-            await send(.fetchMissingList)
-          },
-          .run { send in
-            await send(.fetchSimilarList)
-          },
-          .run { send in
-            await send(.fetchRankList)
-          }
+          
+            .run { send in
+              await send(.fetchSimilarList)
+            },
+          
+            .run { send in
+              await send(.fetchRankList)
+            }
         )
       case let .tappedLike(challenge):
         if TokenManager.shared.isLogin {
@@ -186,7 +191,7 @@ public struct HomeTabFeature {
           }
         }
         
-      case .locationClient(.didChangeAuthorization):
+      case .locationClient(.didChangeAuthorization(_)):
         return .run { send in
           let result = await locationClient.getCurrentLocation()
           await send(.locationResult(result))

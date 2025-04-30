@@ -56,7 +56,7 @@ public struct DetailChallengeFeature {
     case locationResult(LocationResult)
     
     // comment
-    case tappedAllComments(id: Int, isFocus: Bool)
+    case tappedAllComments(id: Int)
     case tappedEditComment(id: Int, Comment)
     case tappedDeleteComment(id: Int)
     

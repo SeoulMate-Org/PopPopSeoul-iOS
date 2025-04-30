@@ -76,6 +76,6 @@ public struct RankChallengeItemView: View {
     .frame(maxWidth: .infinity)
     .padding(.vertical, 12.5)
     .padding(.horizontal, 20)
-    .background(Colors.appWhite.swiftUIColor)
+    .background(.clear)
   }
 }

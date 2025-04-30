@@ -79,7 +79,7 @@ struct HomeMissingChallengeItemView: View {
     }
     .frame(width: cardWidth)
     .frame(minHeight: cardHeight, alignment: .top)
-    .background(Colors.appWhite.swiftUIColor)
+    .background(.clear)
   }
   
   private func iconStat(image: Image, count: Int) -> some View {

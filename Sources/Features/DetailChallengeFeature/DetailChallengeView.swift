@@ -59,8 +59,8 @@ struct DetailChallengeView: View {
                     onEditTap: { comment in
                       viewStore.send(.tappedEditComment(id: challenge.id, comment))
                     },
-                    onAllCommentTap: { isFocus in
-                      viewStore.send(.tappedAllComments(id: challenge.id, isFocus: isFocus))
+                    onAllCommentTap: {
+                      viewStore.send(.tappedAllComments(id: challenge.id))
                     })
                 }
               }
@@ -80,7 +80,7 @@ struct DetailChallengeView: View {
                 )
                 .cornerRadius(18)
                 .padding(.bottom, 10)
-                .background(Colors.appWhite.swiftUIColor)
+                .background(Color.clear)
                 .edgesIgnoringSafeArea(.all)
             }
           }

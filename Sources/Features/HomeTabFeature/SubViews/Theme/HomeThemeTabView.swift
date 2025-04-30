@@ -40,6 +40,6 @@ struct HomeThemeTabView: View {
         .stroke(isSelected ? Colors.blue500.swiftUIColor : Colors.gray200.swiftUIColor, lineWidth: 1)
     )
     .cornerRadius(12)
-    .background(Colors.appWhite.swiftUIColor)
+    .background(.clear)
   }
 }

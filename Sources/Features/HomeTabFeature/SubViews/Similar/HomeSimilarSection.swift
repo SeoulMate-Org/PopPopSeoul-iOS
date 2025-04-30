@@ -47,6 +47,6 @@ struct HomeSimilarSection: View {
       }
       .padding(.top, 16)
     }
-    .background(Colors.appWhite.swiftUIColor)
+    .background(.clear)
   }
 }

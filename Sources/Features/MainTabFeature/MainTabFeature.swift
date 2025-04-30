@@ -103,12 +103,12 @@ public struct MainTabFeature {
       case let .path(action):
         switch action {
           // detail comments
-        case let .element(id: _, action: .detailChallenge(.tappedAllComments(id, isFocus))):
-          state.path.append(.detailComments(DetailCommentsFeature.State(with: id, isFocus: isFocus)))
+        case .element(id: _, action: .detailChallenge(.tappedAllComments(let id))):
+          state.path.append(.detailComments(DetailCommentsFeature.State(with: id)))
           return .none
           
         case let .element(id: _, action: .detailChallenge(.tappedEditComment(id, comment))):
-          state.path.append(.detailComments(DetailCommentsFeature.State(with: id, comment, isFocus: true)))
+          state.path.append(.detailComments(DetailCommentsFeature.State(with: id, comment)))
           return .none
           
           // detail attraction

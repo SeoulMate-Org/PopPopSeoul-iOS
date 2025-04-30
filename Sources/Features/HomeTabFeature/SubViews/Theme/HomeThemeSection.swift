@@ -81,6 +81,6 @@ struct HomeThemeSection: View {
       HomeThemeIndicatorView(currentTab: $selectedTab)
         .padding(.top, 16)
     }
-    .background(Colors.appWhite.swiftUIColor)
+    .background(.clear)
   }
 }

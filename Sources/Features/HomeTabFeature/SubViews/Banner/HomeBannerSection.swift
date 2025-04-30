@@ -72,7 +72,7 @@ struct HomeBannerSection: View {
         .scrollTargetBehavior(.viewAligned)
       }
     }
-    .background(Colors.appWhite.swiftUIColor)
+    .background(.clear)
   }
 }
 
