@@ -26,6 +26,7 @@ public struct DetailChallengeFeature {
     let challengeId: Int
     var challenge: Challenge?
     var showMenu: Bool = false
+    var showLoginAlert: Bool = false
     
     public init(with id: Int) {
       self.challengeId = id
@@ -40,6 +41,7 @@ public struct DetailChallengeFeature {
     case update(Challenge)
     case getError
     case showLoginAlert
+    case loginAlert(LoginAlertAction)
     case moveToMap(Challenge)
     
     // header
@@ -239,6 +241,18 @@ public struct DetailChallengeFeature {
         case .login:
           return .send(.showLoginAlert)
         }
+        
+      case .showLoginAlert:
+        state.showLoginAlert = true
+        return .none
+        
+      case .loginAlert(.cancelTapped):
+        state.showLoginAlert = false
+        return .none
+        
+      case .loginAlert(.loginTapped):
+        state.showLoginAlert = false
+        return .none
         
       default: return .none
       }

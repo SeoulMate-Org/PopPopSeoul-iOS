@@ -49,8 +49,18 @@ struct ThemeChallengeView: View {
       } else {
         Spacer()
       }
-      
     }
+    .overlay(
+      Group {
+        if viewStore.showLoginAlert {
+          AppLoginAlertView(onLoginTapped: {
+            viewStore.send(.loginAlert(.loginTapped))
+          }, onCancelTapped: {
+            viewStore.send(.loginAlert(.cancelTapped))
+          })
+        }
+      }
+    )
     .onAppear {
       viewStore.send(.onApear)
     }

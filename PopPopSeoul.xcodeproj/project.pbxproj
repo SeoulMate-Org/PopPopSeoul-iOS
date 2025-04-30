@@ -685,6 +685,7 @@
 		EA78227D2DC29E27009B6E47 /* StampChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA78227C2DC29E27009B6E47 /* StampChallenge.swift */; };
 		EA78227F2DC2AC9B009B6E47 /* PutChallengeStatusRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA78227E2DC2AC9B009B6E47 /* PutChallengeStatusRequest.swift */; };
 		EA7822822DC2AD54009B6E47 /* DefaultStatusResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7822812DC2AD54009B6E47 /* DefaultStatusResponse.swift */; };
+		EA7822852DC2BF62009B6E47 /* AppLoginAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7822842DC2BF62009B6E47 /* AppLoginAlertView.swift */; };
 		EA949284C11DB940F84888C2 /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256CCC92AC8D6EE5FACE5475 /* Dependencies.framework */; };
 		EAE62223229FB6E39F76669F /* CasePathsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CF7412324C02D1745F0E0D /* CasePathsCore.framework */; };
 		EB1B1D606C9519443C8093A6 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E58A56242DD34BBF412FCA4 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle */; };
@@ -1603,6 +1604,7 @@
 		EA78227C2DC29E27009B6E47 /* StampChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampChallenge.swift; sourceTree = "<group>"; };
 		EA78227E2DC2AC9B009B6E47 /* PutChallengeStatusRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PutChallengeStatusRequest.swift; sourceTree = "<group>"; };
 		EA7822812DC2AD54009B6E47 /* DefaultStatusResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStatusResponse.swift; sourceTree = "<group>"; };
+		EA7822842DC2BF62009B6E47 /* AppLoginAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoginAlertView.swift; sourceTree = "<group>"; };
 		EB1AF2F0C1D291ADEC33A0B1 /* GetChallengeMyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeMyRequest.swift; sourceTree = "<group>"; };
 		EB50FD060BF7A2400BB005A7 /* ThemeChallengeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChallengeTabView.swift; sourceTree = "<group>"; };
 		EC4AFF88EA6DCED6098DE437 /* Clients-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Clients-Info.plist"; sourceTree = "<group>"; };
@@ -2613,6 +2615,7 @@
 				BC64F0561B3D5CFFCAFB3C08 /* ProgressBar.swift */,
 				7FFCD442848C28388F572A08 /* ThemeChallengeListItemView.swift */,
 				4440191745BD246EF39FD43B /* TopTabView.swift */,
+				EA7822842DC2BF62009B6E47 /* AppLoginAlertView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -4220,6 +4223,7 @@
 				3122C2393A42290A8B77AE4F /* ShadowModifier.swift in Sources */,
 				60621E63DE891F560C449771 /* TextStyle.swift in Sources */,
 				0BB1533AD11E1C57B21E8000 /* ToastStyle.swift in Sources */,
+				EA7822852DC2BF62009B6E47 /* AppLoginAlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

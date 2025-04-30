@@ -112,6 +112,17 @@ struct DetailChallengeView: View {
           .zIndex(1) // ✅ 위에 떠야 하므로 zIndex 필요
         }
       }
+      .overlay(
+        Group {
+          if viewStore.showLoginAlert {
+            AppLoginAlertView(onLoginTapped: {
+              viewStore.send(.loginAlert(.loginTapped))
+            }, onCancelTapped: {
+              viewStore.send(.loginAlert(.cancelTapped))
+            })
+          }
+        }
+      )
       .onAppear {
         viewStore.send(.onApear)
       }

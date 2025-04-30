@@ -27,6 +27,7 @@ public struct DetailAttractionFeature {
     let attractionId: Int
     var attraction: Attraction?
     var map: Data?
+    var showLoginAlert: Bool = false
     
     public init(with id: Int) {
       self.attractionId = id
@@ -41,6 +42,7 @@ public struct DetailAttractionFeature {
     case getError
     case getMapError
     case showLoginAlert
+    case loginAlert(LoginAlertAction)
     
     case update(Attraction)
     case fetchMap(Coordinate?)
@@ -155,6 +157,18 @@ public struct DetailAttractionFeature {
         if let from = state.attraction?.coordinate {
           state.attraction?.distance = coordinate.distanceFormatted(from: from)
         }
+        return .none
+        
+      case .showLoginAlert:
+        state.showLoginAlert = true
+        return .none
+        
+      case .loginAlert(.cancelTapped):
+        state.showLoginAlert = false
+        return .none
+        
+      case .loginAlert(.loginTapped):
+        state.showLoginAlert = false
         return .none
         
       default: return .none

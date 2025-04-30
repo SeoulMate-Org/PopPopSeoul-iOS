@@ -24,6 +24,7 @@ public struct ThemeChallengeFeature {
     var selectedTheme: ChallengeTheme = .mustSeeSpots
     var themeChallenges: [Challenge] = []
     var shouldScrollToTop: Bool = false
+    var showLoginAlert: Bool = false
     
     public init(with theme: ChallengeTheme) {
       self.selectedTheme = theme
@@ -36,6 +37,8 @@ public struct ThemeChallengeFeature {
   public enum Action: Equatable {
     case onApear
     case showLoginAlert
+    case loginAlert(LoginAlertAction)
+    case moveToMap(Challenge)
     case networkError
     case setShouldScrollToTop(Bool)
     
@@ -81,6 +84,18 @@ public struct ThemeChallengeFeature {
       case let .updateThemeList(list):
         state.themeChallenges = list
         return .send(.setShouldScrollToTop(true))
+        
+      case .showLoginAlert:
+        state.showLoginAlert = true
+        return .none
+        
+      case .loginAlert(.cancelTapped):
+        state.showLoginAlert = false
+        return .none
+        
+      case .loginAlert(.loginTapped):
+        state.showLoginAlert = false
+        return .none
         
       default: return .none
       }

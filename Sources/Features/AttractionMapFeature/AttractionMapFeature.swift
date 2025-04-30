@@ -21,6 +21,7 @@ public struct AttractionMapFeature {
   
   @ObservableState
   public struct State: Equatable {
+    var showLoginAlert: Bool = false
     var challengeName: String
     var attractions: [Attraction]
     var showAttractions: [Attraction]
@@ -53,6 +54,7 @@ public struct AttractionMapFeature {
     case onApear
     case networkError
     case showLoginAlert
+    case loginAlert(LoginAlertAction)
     case update(Attraction)
     
     case tappedAttraction(Int)
@@ -133,6 +135,18 @@ public struct AttractionMapFeature {
           state.bottomSheetType = .detail(attraction: attraction)
         }
         
+        return .none
+        
+      case .showLoginAlert:
+        state.showLoginAlert = true
+        return .none
+        
+      case .loginAlert(.cancelTapped):
+        state.showLoginAlert = false
+        return .none
+        
+      case .loginAlert(.loginTapped):
+        state.showLoginAlert = false
         return .none
         
       default: return .none

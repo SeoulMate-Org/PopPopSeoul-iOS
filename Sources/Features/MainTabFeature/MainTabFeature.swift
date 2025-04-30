@@ -46,11 +46,6 @@ public struct MainTabFeature {
     case path(StackActionOf<Path>)
   }
   
-  public enum LoginAlertAction {
-    case cancelTapped
-    case loginTapped
-  }
-  
   // MARK: Reducer
   
   public var body: some Reducer<State, Action> {
@@ -126,11 +121,11 @@ public struct MainTabFeature {
           return .none
           
           // move to login
-        case .element(id: _, action: .detailChallenge(.showLoginAlert)),
-            .element(id: _, action: .themeChallenge(.showLoginAlert)),
-            .element(id: _, action: .detailAttraction(.showLoginAlert)),
-            .element(id: _, action: .attractionMap(.showLoginAlert)):
-          state.showLoginAlert = true
+        case .element(id: _, action: .detailChallenge(.loginAlert(.loginTapped))),
+            .element(id: _, action: .themeChallenge(.loginAlert(.loginTapped))),
+            .element(id: _, action: .detailAttraction(.loginAlert(.loginTapped))),
+            .element(id: _, action: .attractionMap(.loginAlert(.loginTapped))):
+          state.path.append(.login(LoginFeature.State(isInit: false)))
           return .none
           
         case let .element(id: _, action: .login(.successLogin(isNewUser))):
@@ -162,4 +157,10 @@ extension MainTabFeature {
     case attractionMap(AttractionMapFeature)
   }
   
+}
+
+
+public enum LoginAlertAction {
+  case cancelTapped
+  case loginTapped
 }

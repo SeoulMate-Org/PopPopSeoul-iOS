@@ -49,17 +49,11 @@ public struct MainTabView: View {
         .overlay(
           Group {
             if viewStore.showLoginAlert {
-              AppAlertView(
-                title: "로그인이 필요해요",
-                message: "해당 기능은 로그인 후 이용하실 수 있습니다.",
-                primaryButtonTitle: "로그인",
-                primaryAction: {
-                  viewStore.send(.loginAlert(.loginTapped))
-                },
-                secondaryButtonTitle: "취소",
-                secondaryAction: {
-                  viewStore.send(.loginAlert(.cancelTapped))
-                })
+              AppLoginAlertView(onLoginTapped: {
+                viewStore.send(.loginAlert(.loginTapped))
+              }, onCancelTapped: {
+                viewStore.send(.loginAlert(.cancelTapped))
+              })
             }
           }
         )

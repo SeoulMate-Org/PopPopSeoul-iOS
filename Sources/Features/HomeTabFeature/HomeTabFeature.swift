@@ -113,7 +113,7 @@ public struct HomeTabFeature {
         let prefetchThemes: [ChallengeTheme] = [.mustSeeSpots, .localTour, .historyCulture]
         
         return .merge(
-          .run { [state = state] send in
+          .run { send in
             await send(.requestLocation)
           },
         
@@ -187,7 +187,7 @@ public struct HomeTabFeature {
           }
         }
         
-      case .locationClient(.didChangeAuthorization(_)):
+      case .locationClient(.didChangeAuthorization):
         return .run { send in
           let result = await locationClient.getCurrentLocation()
           await send(.locationResult(result))
@@ -207,27 +207,27 @@ public struct HomeTabFeature {
       case let .updateUserCoordinate(coordinate):
         state.userCoordinate = coordinate
         
-        if let coordinate {
-          return .run { send in
-            await send(.fetchLocationList(coordinate))
+        if TokenManager.shared.isLogin {
+          if let coordinate {
+            return .run { send in
+              await send(.fetchLocationList(coordinate))
+            }
+          } else {
+            return .send(.updateLocationListType(.locationAuthRequired))
           }
         } else {
-          return .none
+          return .send(.updateLocationListType(.loginRequired))
         }
         
       case let .updateLocationListType(type):
-        if TokenManager.shared.isLogin {
-          state.locationListType = type
-          
-          if state.locationListType != .defaultList ||
-              state.locationListType != .list {
-            state.locationList = []
-          }
-        } else {
-          state.locationListType = .loginRequired
+        state.locationListType = type
+        
+        if state.locationListType != .defaultList ||
+            state.locationListType != .list {
+          state.locationList = []
         }
         return .none
-        
+      
       case let .fetchLocationList(coordinate):
         return .run { send in
           do {
@@ -272,22 +272,17 @@ public struct HomeTabFeature {
         
         // MARK: - Missing Reducer
       case .fetchMissingList:
-        if TokenManager.shared.isLogin {
-          return .run { send in
-            do {
-              let (type, list) = try await callengeListClient.fetchMissingList()
-              if type == .missed {
-                await send(.updateMissingList(list))
-              } else if type == .challenge {
-                await send(.updateChallengeList(list))
-              }
-            } catch {
-              await send(.networkError)
+        return .run { send in
+          do {
+            let (type, list) = try await callengeListClient.fetchMissingList()
+            if type == .missed {
+              await send(.updateMissingList(list))
+            } else if type == .challenge {
+              await send(.updateChallengeList(list))
             }
+          } catch {
+            await send(.networkError)
           }
-        } else {
-          state.missingList = []
-          return .none
         }
         
       case let .updateMissingList(list):
