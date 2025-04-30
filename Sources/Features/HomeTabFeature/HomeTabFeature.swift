@@ -12,6 +12,7 @@ public struct HomeTabFeature {
   
   @Dependency(\.locationClient) var locationClient
   @Dependency(\.callengeListClient) var callengeListClient
+  @Dependency(\.challengeClient) var challengeClient
   
   // MARK: - State
   
@@ -60,7 +61,10 @@ public struct HomeTabFeature {
   public enum Action: Equatable {
     case onAppear
     case networkError
+    case showLoginAlert
     case tappedChallenge(id: Int)
+    case tappedLike(Challenge)
+    case updateLikeList(Challenge)
     
     // Banner
     case fetchBannerList
@@ -133,6 +137,37 @@ public struct HomeTabFeature {
               await send(.fetchRankList)
             }
         )
+      case let .tappedLike(challenge):
+        if TokenManager.shared.isLogin {
+          return .run { send in
+            
+            // 1. 좋아요 UI 즉시 업데이트
+            var update = challenge
+            update.isLiked.toggle()
+            update.likedCount += update.isLiked ? 1 : -1
+            
+            await send(.updateLikeList(update))
+            
+            do {
+              let response = try await challengeClient.putLike(update.id)
+              // 필요시 서버 데이터랑 다르면 다시 fetch
+              if response.isLiked != update.isLiked {
+                let fresh = try await challengeClient.get(response.id)
+                await send(.updateLikeList(fresh))
+              }
+            } catch {
+              await send(.networkError)
+            }
+          }
+        } else {
+          return .send(.showLoginAlert)
+        }
+        
+      case let .updateLikeList(update):
+        replace(&state.bannerList, with: update)
+        replace(&state.rankList, with: update)
+        replace(&state.themeChallenges, with: update)
+        return .none
         
       case .requestLocation:
         if state.isInit {
@@ -310,3 +345,21 @@ public struct HomeTabFeature {
 }
 
 // MARK: - Helper
+
+extension HomeTabFeature {
+  func replace(_ list: inout [Challenge], with updated: Challenge) {
+    if let index = list.firstIndex(where: { $0.id == updated.id }) {
+      list[index] = updated
+    }
+  }
+  
+  func replace(_ dict: inout [ChallengeTheme: [Challenge]], with updated: Challenge) {
+    for (theme, challenges) in dict {
+      if let index = challenges.firstIndex(where: { $0.id == updated.id }) {
+        var updatedList = challenges
+        updatedList[index] = updated
+        dict[theme] = updatedList
+      }
+    }
+  }
+}

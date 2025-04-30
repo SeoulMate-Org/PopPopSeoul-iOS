@@ -16,7 +16,8 @@ import Models
 struct HomeRankSection: View {
   let challenges: [Challenge]
 //  let onMoreTapped: () -> Void // FIXME: - 1차 오픈에서 hidden
-  let onLikeTapped: (Int) -> Void
+  let onLikeTapped: (Challenge) -> Void
+  let onTapped: (Int) -> Void
   
   var body: some View {
     VStack(alignment: .leading, spacing: 0) {
@@ -56,8 +57,11 @@ struct HomeRankSection: View {
             rank: index + 1,
             challenge: item,
             onLikeTapped: {
-              onLikeTapped(item.id)
+              onLikeTapped(item)
             })
+          .onTapGesture {
+            onTapped(item.id)
+          }
         }
       }
       .padding(.top, 16)

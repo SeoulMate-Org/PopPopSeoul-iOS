@@ -15,11 +15,11 @@ import DesignSystem
 public struct HomeThemeChallengeListView: View {
   let challengesByTheme: [ChallengeTheme: [Challenge]]
   @Binding var selectedTab: ChallengeTheme
-  let onLikeTapped: (Int) -> Void
+  let onLikeTapped: (Challenge) -> Void
 
   public init(challengesByTheme: [ChallengeTheme: [Challenge]],
               selectedTab: Binding<ChallengeTheme>,
-              onLikeTapped: @escaping (Int) -> Void) {
+              onLikeTapped: @escaping (Challenge) -> Void) {
     self._selectedTab = selectedTab
     self.challengesByTheme = challengesByTheme
     self.onLikeTapped = onLikeTapped
@@ -34,7 +34,7 @@ public struct HomeThemeChallengeListView: View {
               listType: .home,
               challenge: challenge,
               onLikeTapped: {
-                onLikeTapped(challenge.id)
+                onLikeTapped(challenge)
               }
             )
           }

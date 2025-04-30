@@ -13,7 +13,8 @@ import Models
 
 struct HomeBannerSection: View {
   var challenges: [Challenge]
-  var onLikeTapped: (Int) -> Void
+  var onLikeTapped: (Challenge) -> Void
+  var onTapped: (Int) -> Void
   
   var body: some View {
     let screenWidth = UIScreen.main.bounds.width
@@ -53,11 +54,14 @@ struct HomeBannerSection: View {
               HomeBannerItemView(
                 challenge: challenge,
                 onLikeTapped: {
-                  onLikeTapped(challenge.id)
+                  onLikeTapped(challenge)
                 },
                 cardWidth: cardWidth,
                 cardHeight: cardHeight
               )
+              .onTapGesture {
+                onTapped(challenge.id)
+              }
             } // ForEach
           } // HStack
           .scrollTargetLayout()

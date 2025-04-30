@@ -28,7 +28,14 @@ struct HomeTabView: View {
       ScrollView(showsIndicators: false) {
         VStack(spacing: 0) {
           if viewStore.bannerList.count > 0 {
-            HomeBannerSection(challenges: viewStore.bannerList) { _ in }
+            HomeBannerSection(
+              challenges: viewStore.bannerList,
+              onLikeTapped: { challenge in
+                viewStore.send(.tappedLike(challenge))
+              },
+              onTapped: { id in
+                viewStore.send(.tappedChallenge(id: id))
+              })
           }
           
           if viewStore.locationListType == .loginRequired {
@@ -59,7 +66,9 @@ struct HomeTabView: View {
               themeTabChanged: { tab in
                 viewStore.send(.themeChanged(tab))
               },
-              onLikeTapped: { _ in },
+              onLikeTapped: { challenge in
+                viewStore.send(.tappedLike(challenge))
+              },
               onMoreTapped: {
                 viewStore.send(.tappedThemeMore)
               })
@@ -70,8 +79,8 @@ struct HomeTabView: View {
             HomeMissingSection(
               isMissing: true,
               challenges: viewStore.missingList,
-              onTapped: { _ in
-                
+              onTapped: { id in
+                store.send(.tappedChallenge(id: id))
               },
               onStartTapped: { _ in
               })
@@ -82,8 +91,8 @@ struct HomeTabView: View {
             HomeMissingSection(
               isMissing: false,
               challenges: viewStore.challengeList,
-              onTapped: { _ in
-                
+              onTapped: { id in
+                store.send(.tappedChallenge(id: id))
               },
               onStartTapped: { _ in
               })
@@ -94,7 +103,8 @@ struct HomeTabView: View {
             HomeSimilarSection(
               lastAttractionName: viewStore.similarAttraction,
               challenges: viewStore.similarList,
-              onTapped: { _ in
+              onTapped: { id in
+                store.send(.tappedChallenge(id: id))
               })
             .padding(.top, 48)
           }
@@ -102,7 +112,11 @@ struct HomeTabView: View {
           if viewStore.rankList.count > 0 {
             HomeRankSection(
               challenges: viewStore.rankList,
-              onLikeTapped: { _ in })
+              onLikeTapped: { challenge in
+                viewStore.send(.tappedLike(challenge))
+              }, onTapped: { id in
+                viewStore.send(.tappedChallenge(id: id))
+              })
             .padding(.top, 48)
           }
         }

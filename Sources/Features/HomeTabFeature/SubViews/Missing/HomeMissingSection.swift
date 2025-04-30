@@ -66,6 +66,9 @@ struct HomeMissingSection: View {
                 onStartTapped: {
                 
               })
+              .onTapGesture {
+                onTapped(challenge.id)
+              }
             } // ForEach
           }
           .padding(.horizontal, 20)
