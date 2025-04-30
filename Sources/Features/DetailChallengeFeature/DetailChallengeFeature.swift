@@ -16,6 +16,7 @@ import Clients
 public struct DetailChallengeFeature {
   
   @Dependency(\.challengeClient) var challengeClient
+  @Dependency(\.locationClient) var locationClient
   
   // MARK: State
   
@@ -47,6 +48,8 @@ public struct DetailChallengeFeature {
     
     // attraction
     case tappedAttraction(id: Int)
+    case requestLocation
+    case locationResult(LocationResult)
     
     // comment
     case tappedAllComments(id: Int)
@@ -99,12 +102,38 @@ public struct DetailChallengeFeature {
         state.showMenu = false
         return .none
         
-      case let .update(challenge):
-        state.challenge = challenge
-        return .none
+      case let .update(new):
+        if let challenge = state.challenge,
+           challenge.attractions.count == new.attractions.count {
+          var newChallenge = new
+          copyDistances(from: challenge, to: &newChallenge)
+          state.challenge = newChallenge
+          return .none
+        } else {          
+          state.challenge = new
+          return .send(.requestLocation)
+        }
         
       case .getError:
         // TODO: ERROR 처리
+        return .none
+        
+      case .requestLocation:
+        return .run { send in
+          let result = await locationClient.getCurrentLocation()
+          await send(.locationResult(result))
+        }
+        
+      case let .locationResult(.success(coordinate)):
+        guard var challenge = state.challenge else { return .none }
+
+        for (index, attraction) in challenge.attractions.enumerated() {
+          if let from = attraction.coordinate {
+            challenge.attractions[index].distance = from.distanceFormatted(from: coordinate)
+          }
+        }
+
+        state.challenge = challenge
         return .none
         
       case let .bottomAction(action):
@@ -138,10 +167,13 @@ public struct DetailChallengeFeature {
           
         case .map:
           return .none
+          
         case .stamp:
           return .none
+          
         case .start:
           return .none
+          
         case .login:
           return .send(.showLoginAlert)
         }
@@ -153,3 +185,11 @@ public struct DetailChallengeFeature {
 }
 
 // MARK: - Helper
+
+extension DetailChallengeFeature {
+  func copyDistances(from old: Challenge, to new: inout Challenge) {
+    for (index, _) in new.attractions.enumerated() {
+      new.attractions[index].distance = old.attractions[index].distance
+    }
+  }
+}

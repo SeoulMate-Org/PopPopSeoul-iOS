@@ -36,7 +36,7 @@ public struct Challenge: Hashable, Equatable, Identifiable {
   }
 
   public let comments: [Comment]
-  public let attractions: [Attraction]
+  public var attractions: [Attraction]
 
   public var stampCount: Int {
     attractions.filter { $0.isStamped }.count

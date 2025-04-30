@@ -78,10 +78,12 @@ struct ChallengePlaceListItem: View {
             .resizable()
             .foregroundColor(Colors.gray100.swiftUIColor)
             .frame(width: 16, height: 16)
-
-          Text("나로부터 2.9km")
-            .font(.captionL)
-            .foregroundColor(Colors.gray400.swiftUIColor)
+          
+          if let distance = place.distance {
+            Text("나로부터 \(distance)")
+              .font(.captionL)
+              .foregroundColor(Colors.gray400.swiftUIColor)
+          }
         }
       }
       .frame(maxWidth: .infinity, alignment: .leading)
