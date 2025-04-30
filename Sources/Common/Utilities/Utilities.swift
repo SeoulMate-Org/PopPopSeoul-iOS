@@ -25,4 +25,14 @@ public class Utility {
           }
       }
   }
+  
+  public static func openInSafari(urlString: String) {
+    guard let url = URL(string: urlString) else { return }
+    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+  }
+  
+  public static func openInNaveMap(lat: String, lng: String, name: String) {
+    let urlString = "nmap://place?dlat=\(lat)&dlng=\(lng)&dname=\(name)&appname=\(Bundle.main.bundleIdentifier ?? "")"
+    openInSafari(urlString: urlString)
+  }
 }

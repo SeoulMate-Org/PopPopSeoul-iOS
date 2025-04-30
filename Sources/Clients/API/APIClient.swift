@@ -39,7 +39,6 @@ extension APIClient: DependencyKey {
             ================ HTTP REQUEST ================
             url: \(urlStr) - \(utcTimeString)
             method: \(method)
-            url: \(urlStr)
             headers: \(headers)
             body: \(bodyString)
             ==============================================

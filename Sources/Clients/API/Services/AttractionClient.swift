@@ -46,4 +46,3 @@ public extension DependencyValues {
     set { self[AttractionClient.self] = newValue }
   }
 }
-

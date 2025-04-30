@@ -79,7 +79,9 @@ let appInfoPlist: [String: Plist.Value] = {
         "FacebookDisplayName": "PopPopSeoul",
         "GoogleSignIn": "$(GOOGLE_SIGN_IN)",
         "BASE_URL": "$(BASE_URL)",
-        "TEST_BASE_URL": "$(TEST_BASE_URL)"
+        "TEST_BASE_URL": "$(TEST_BASE_URL)",
+        "NAVER_CLIENT_ID": "$(NAVER_CLIENT_ID)",
+        "NAVER_CLIENT_SECRET": "$(NAVER_CLIENT_SECRET)"
     ]
     return base
     

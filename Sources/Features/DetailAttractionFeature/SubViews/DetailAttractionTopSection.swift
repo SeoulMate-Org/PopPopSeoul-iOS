@@ -38,14 +38,15 @@ struct DetailAttractionTopSection: View {
           let image = attraction.isLiked ? Assets.Icons.heartFill.swiftUIImage : Assets.Icons.heartLine.swiftUIImage
           image
             .resizable()
-            .foregroundColor(attraction.isLiked ? Colors.red500.swiftUIColor : Colors.gray700.swiftUIColor)
+            .scaledToFit()
             .frame(width: 24, height: 24)
+            .foregroundColor(attraction.isLiked ? Colors.red500.swiftUIColor : Colors.gray700.swiftUIColor)
         }
         .frame(width: 40, height: 40)
+        .background(Colors.gray25.swiftUIColor)
+        .cornerRadius(12, corners: .allCorners)
         .padding(.bottom, 12)
         .padding(.trailing, 12)
-        .background(Colors.gray25.swiftUIColor)
-        .cornerRadius(12)
       }
       .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width * 234 / 375)
       

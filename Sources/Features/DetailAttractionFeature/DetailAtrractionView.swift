@@ -39,7 +39,16 @@ struct DetailAtrractionView: View {
               divider()
               
               DetailAttractionInfoSection(attraction: attraction)
-              
+            }
+            
+            if let data = viewStore.map,
+               let uiImage = UIImage(data: data) {
+              DetailAttractionMapSection(
+                image: Image(uiImage: uiImage),
+                onMapTapped: {
+                  viewStore.send(.tappedNaverMap)
+                })
+              .padding(.top, 24)
             }
           }
           .padding(.bottom, 80)

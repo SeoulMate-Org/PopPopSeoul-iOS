@@ -15,4 +15,12 @@ public enum Constants {
   public static var appStoreId: String {
     return "6744961871"
   }
+  
+  public static var naverClientId: String {
+    Bundle.main.infoDictionary?["NAVER_CLIENT_ID"] as? String ?? ""
+  }
+  
+  public static var naverClientSecret: String {
+    Bundle.main.infoDictionary?["NAVER_CLIENT_SECRET"] as? String ?? ""
+  }
 }
