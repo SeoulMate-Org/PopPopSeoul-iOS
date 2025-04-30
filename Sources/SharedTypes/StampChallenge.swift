@@ -15,7 +15,7 @@ public enum StampChallenge: String, Equatable, CaseIterable {
   public var apiCode: String {
     switch self {
     case .missed: return "MISSED"
-    case .challenge: return "CHALLENGE"
+    case .challenge: return "CAHLLENGE"
     case .place: return "PLACE"
     }
   }

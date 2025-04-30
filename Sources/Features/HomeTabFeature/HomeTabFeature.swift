@@ -19,6 +19,7 @@ public struct HomeTabFeature {
   public struct State: Equatable {
     public init() {}
     
+    var isInit: Bool = true
     var userCoordinate: Coordinate?
     
     // Banner
@@ -68,6 +69,7 @@ public struct HomeTabFeature {
     
     // Location List
     case requestLocation
+    case locationClient(LocationManager.Action)
     case locationResult(LocationResult)
     case updateUserCoordinate(Coordinate?)
     case updateLocationListType(LocationListType)
@@ -133,6 +135,28 @@ public struct HomeTabFeature {
         )
         
       case .requestLocation:
+        if state.isInit {
+          state.isInit = false
+          return .merge(
+              .run { _ in await locationClient.requestAuthorization() },
+              .run { send in
+                for await action in await locationClient.startMonitoring() {
+                  await send(.locationClient(action), animation: .default)
+                }
+              },
+              .run { send in
+                let status = await locationClient.getAuthorizationStatus()
+                await send(.locationClient(.didChangeAuthorization(status)))
+              }
+            )
+        } else {
+          return .run { send in
+            let result = await locationClient.getCurrentLocation()
+            await send(.locationResult(result))
+          }
+        }
+        
+      case .locationClient(.didChangeAuthorization(_)):
         return .run { send in
           let result = await locationClient.getCurrentLocation()
           await send(.locationResult(result))
