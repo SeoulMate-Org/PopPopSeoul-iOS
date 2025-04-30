@@ -40,8 +40,12 @@ struct ThemeChallengeView: View {
       if viewStore.themeChallenges.count > 0 {
         ThemeChallengeListView(
           challenges: viewStore.themeChallenges,
-          onTapped: { _ in },
-          onLikeTapped: { _ in },
+          onTapped: { id in
+            viewStore.send(.tappedChallenge(id))
+          },
+          onLikeTapped: { id in
+            viewStore.send(.tappedLike(id))
+          },
           shouldScrollToTop: viewStore.binding(
             get: \.shouldScrollToTop,
             send: ThemeChallengeFeature.Action.setShouldScrollToTop)

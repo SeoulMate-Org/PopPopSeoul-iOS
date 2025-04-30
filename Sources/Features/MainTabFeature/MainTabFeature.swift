@@ -131,6 +131,11 @@ public struct MainTabFeature {
         case let .element(id: _, action: .login(.successLogin(isNewUser))):
           return .send(.successLogin(isNewUser: isNewUser))
           
+          // move to detail challenge
+        case .element(id: _, action: .themeChallenge(.tappedChallenge(let id))):
+          state.path.append(.detailChallenge(DetailChallengeFeature.State(with: id)))
+          return .none
+          
         default:
           return .none
         }

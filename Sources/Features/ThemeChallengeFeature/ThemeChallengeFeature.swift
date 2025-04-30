@@ -16,6 +16,7 @@ import Clients
 public struct ThemeChallengeFeature {
   
   @Dependency(\.callengeListClient) var callengeListClient
+  @Dependency(\.challengeClient) var challengeClient
   
   // MARK: State
   
@@ -43,10 +44,13 @@ public struct ThemeChallengeFeature {
     case setShouldScrollToTop(Bool)
     
     case tappedBack
+    case tappedChallenge(Int)
+    case tappedLike(Int)
     
     case themeChanged(ChallengeTheme)
     case fetchThemeList(ChallengeTheme)
     case updateThemeList([Challenge])
+    case update(Int, Challenge)
   }
   // MARK: Reducer
   @Dependency(\.dismiss) var dismiss
@@ -66,6 +70,36 @@ public struct ThemeChallengeFeature {
         return .run { _ in
           await self.dismiss()
         }
+        
+      case let .tappedLike(id):
+        if TokenManager.shared.isLogin {
+          return .run { [state = state] send in
+            guard let index = state.themeChallenges.firstIndex(where: { $0.id == id }) else { return }
+            var update = state.themeChallenges[index]
+            update.isLiked.toggle()
+            update.likes = max(0, update.likes + (update.isLiked ? 1 : -1))
+            await send(.update(index, update))
+            
+            do {
+              let response = try await challengeClient.putLike(update.id)
+              
+              // 필요시 서버 데이터랑 다르면 다시 fetch
+              if response.isLiked != update.isLiked {
+                let fresh = try await challengeClient.get(response.id)
+                await send(.update(index, fresh))
+              }
+            } catch {
+              await send(.networkError)
+            }
+          }
+        } else {
+          return .send(.showLoginAlert)
+        }
+        
+      case let .update(index, challenge):
+        guard index < state.themeChallenges.count else { return .none }
+        state.themeChallenges[index] = challenge
+        return .none
         
       case let .themeChanged(theme):
         state.selectedTheme = theme
