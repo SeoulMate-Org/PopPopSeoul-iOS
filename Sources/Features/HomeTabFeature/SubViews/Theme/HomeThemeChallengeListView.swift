@@ -16,13 +16,16 @@ public struct HomeThemeChallengeListView: View {
   let challengesByTheme: [ChallengeTheme: [Challenge]]
   @Binding var selectedTab: ChallengeTheme
   let onLikeTapped: (Challenge) -> Void
+  let onTapped: (Int) -> Void
 
   public init(challengesByTheme: [ChallengeTheme: [Challenge]],
               selectedTab: Binding<ChallengeTheme>,
-              onLikeTapped: @escaping (Challenge) -> Void) {
+              onLikeTapped: @escaping (Challenge) -> Void,
+              onTapped: @escaping (Int) -> Void) {
     self._selectedTab = selectedTab
     self.challengesByTheme = challengesByTheme
     self.onLikeTapped = onLikeTapped
+    self.onTapped = onTapped
   }
   
   public var body: some View {
@@ -37,6 +40,9 @@ public struct HomeThemeChallengeListView: View {
                 onLikeTapped(challenge)
               }
             )
+            .onTapGesture {
+              onTapped(challenge.id)
+            }
           }
         }
         .tag(theme)

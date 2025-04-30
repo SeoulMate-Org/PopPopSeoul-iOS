@@ -71,6 +71,9 @@ struct HomeTabView: View {
               },
               onMoreTapped: {
                 viewStore.send(.tappedThemeMore)
+              },
+              onTapped: { id in
+                viewStore.send(.tappedChallenge(id: id))
               })
             .padding(.top, 48)
           }

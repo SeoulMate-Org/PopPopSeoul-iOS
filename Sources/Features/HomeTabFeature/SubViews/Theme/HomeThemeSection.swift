@@ -19,6 +19,7 @@ struct HomeThemeSection: View {
   let themeTabChanged: (ChallengeTheme) -> Void
   let onLikeTapped: (Challenge) -> Void
   let onMoreTapped: () -> Void
+  let onTapped: (Int) -> Void
   
   var body: some View {
     VStack(alignment: .center, spacing: 0) {
@@ -72,7 +73,8 @@ struct HomeThemeSection: View {
       HomeThemeChallengeListView(
         challengesByTheme: challengesByTheme,
         selectedTab: $selectedTab,
-        onLikeTapped: onLikeTapped
+        onLikeTapped: onLikeTapped,
+        onTapped: onTapped
       )
       .padding(.top, 20)
       
