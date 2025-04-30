@@ -34,7 +34,7 @@ struct DetailAtrractionView: View {
               DetailAttractionTopSection(
                 attraction: attraction,
                 onLikeTapped: {
-                  
+                  viewStore.send(.tappedLike)
                 })
               divider()
               

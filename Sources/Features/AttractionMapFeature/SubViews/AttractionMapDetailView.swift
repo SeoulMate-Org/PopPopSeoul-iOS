@@ -23,12 +23,12 @@ struct AttractionMapDetailView: View {
     VStack {
       HStack(alignment: .top, spacing: 16) {
         VStack(alignment: .leading) {
-          Text(attraction.name + attraction.name + attraction.name + attraction.name + attraction.name + attraction.name)
+          Text(attraction.name)
             .font(.bodyM)
             .foregroundColor(Colors.gray900.swiftUIColor)
             .lineLimit(2)
           
-          Text(attraction.address + attraction.address + attraction.address + attraction.address + attraction.address + attraction.address)
+          Text(attraction.address)
             .lineLimit(isExpanded ? nil : 2)
             .multilineTextAlignment(.leading)
             .font(.captionL)
@@ -99,7 +99,9 @@ struct AttractionMapDetailView: View {
           style: .neutral,
           layout: .textOnly,
           state: .enabled,
-          onTap: { },
+          onTap: {
+            UIPasteboard.general.string = attraction.address
+          },
           horizontalPadding: 15
         )
         .frame(width: 140)
@@ -111,7 +113,7 @@ struct AttractionMapDetailView: View {
           style: .primary,
           layout: .textOnly,
           state: .enabled,
-          onTap: { },
+          onTap: { onDetailTapped() },
           isFullWidth: true
         )
         .frame(maxHeight: 46)

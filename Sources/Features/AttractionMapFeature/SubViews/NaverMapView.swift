@@ -48,6 +48,10 @@ struct NaverMapView: UIViewRepresentable {
   }
   
   func updateUIView(_ uiView: NMFNaverMapView, context: Context) {
-    // 필요 시 업데이트 처리
+    if let first = attractions.first?.coordinate {
+      let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: first.latitude, lng: first.longitude))
+      cameraUpdate.animation = .easeIn
+      uiView.mapView.moveCamera(cameraUpdate)
+    }
   }
 }

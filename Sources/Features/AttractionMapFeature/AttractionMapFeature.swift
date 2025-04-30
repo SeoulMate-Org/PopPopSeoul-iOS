@@ -15,6 +15,8 @@ import Clients
 @Reducer
 public struct AttractionMapFeature {
   
+  @Dependency(\.attractionClient) var attractionClient
+  
   // MARK: State
   
   @ObservableState
@@ -49,9 +51,14 @@ public struct AttractionMapFeature {
   @CasePathable
   public enum Action: Equatable {
     case onApear
+    case networkError
+    case showLoginAlert
+    case update(Attraction)
     
     case tappedAttraction(Int)
     case tappedBack
+    case tappedDetail(Int)
+    case tappedLike(Int)
     
     case updateBottomSheetType(BottomSheetType)
   }
@@ -76,6 +83,7 @@ public struct AttractionMapFeature {
         switch state.bottomSheetType {
         case .detail:
           state.bottomSheetType = .expand
+          state.showAttractions = state.attractions
           return .none
         default:
           return .run { _ in
@@ -86,6 +94,48 @@ public struct AttractionMapFeature {
       case let .updateBottomSheetType(type):
         state.bottomSheetType = type
         return .none
+        
+      case let .tappedLike(id):
+        if TokenManager.shared.isLogin {
+          return .run { [state = state] send in
+            guard let attraction = state.attractions.first(where: { $0.id == id }) else { return }
+            
+            // 1. 좋아요 UI 즉시 업데이트
+            var update = attraction
+            update.isLiked.toggle()
+            update.likes += update.isLiked ? 1 : -1
+            await send(.update(update))
+            
+            do {
+              let response = try await attractionClient.putLike(update.id)
+              
+              // 필요시 서버 데이터랑 다르면 다시 fetch
+              if response.isLiked != update.isLiked {
+                let fresh = try await attractionClient.get(response.id)
+                await send(.update(fresh))
+              }
+            } catch {
+              await send(.networkError)
+            }
+          }
+        } else {
+          return .send(.showLoginAlert)
+        }
+        
+      case let .update(attraction):
+        guard let index = state.attractions.firstIndex(where: { $0.id == attraction.id }) else { return .none }
+        state.attractions[index] = attraction
+        
+        guard let index = state.showAttractions.firstIndex(where: { $0.id == attraction.id }) else { return .none }
+        state.showAttractions[index] = attraction
+        
+        if state.bottomSheetType != .expand && state.bottomSheetType != .fold {
+          state.bottomSheetType = .detail(attraction: attraction)
+        }
+        
+        return .none
+        
+      default: return .none
       }
     }
   }

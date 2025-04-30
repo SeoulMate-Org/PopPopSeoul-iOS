@@ -19,24 +19,24 @@ struct AttractionMapListItem: View {
   @State private var isExpanded: Bool = false
   
   var body: some View {
-    HStack(alignment: .top, spacing: 8) {
-      KFImage( URL(string: attraction.imageUrl))
-        .placeholder {
-          Assets.Images.placeholderImage.swiftUIImage
-            .resizable()
-            .scaledToFill()
-        }.retry(maxCount: 2, interval: .seconds(5))
-        .resizable()
-        .frame(width: 36, height: 36)
-        .clipShape(RoundedRectangle(cornerRadius: 10))
+    HStack(alignment: .center, spacing: 8) {
+        KFImage( URL(string: attraction.imageUrl))
+          .placeholder {
+            Assets.Images.placeholderImage.swiftUIImage
+              .resizable()
+              .scaledToFill()
+          }.retry(maxCount: 2, interval: .seconds(5))
+          .resizable()
+          .frame(width: 36, height: 36)
+          .clipShape(RoundedRectangle(cornerRadius: 10))
       
       VStack(alignment: .leading, spacing: 4) {
-        Text(attraction.name + attraction.name + attraction.name + attraction.name + attraction.name + attraction.name)
+        Text(attraction.name)
           .font(.bodyM)
           .foregroundColor(Colors.gray900.swiftUIColor)
           .lineLimit(2)
         
-        Text(attraction.address + attraction.address + attraction.address + attraction.address + attraction.address + attraction.address)
+        Text(attraction.address)
           .lineLimit(isExpanded ? nil : 1)
           .multilineTextAlignment(.leading)
           .font(.captionL)

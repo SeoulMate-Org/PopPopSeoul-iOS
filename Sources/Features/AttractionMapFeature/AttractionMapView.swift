@@ -32,7 +32,7 @@ struct AttractionMapView: View {
       
       ZStack(alignment: .bottom) {
         NaverMapView(attractions: viewStore.showAttractions)
-          .edgesIgnoringSafeArea(.all)        
+          .edgesIgnoringSafeArea(.all)
         
         Colors.appWhite.swiftUIColor
           .frame(height: Utility.safeBottom)
@@ -60,10 +60,10 @@ struct AttractionMapView: View {
       AttractionMapDetailView(
         attraction: attraction,
         onDetailTapped: {
-          
+          viewStore.send(.tappedDetail(attraction.id))
         },
         onLikeTapped: {
-          
+          viewStore.send(.tappedLike(attraction.id))
         }
       )
       .background(GeometryReader { proxy in
@@ -86,7 +86,9 @@ struct AttractionMapView: View {
         onTapped: { id in
           viewStore.send(.tappedAttraction(id))
         },
-        onLikeTapped: { _ in }
+        onLikeTapped: { id in
+          viewStore.send(.tappedLike(id))
+        }
       )
       .background(GeometryReader { proxy in
         Color.clear

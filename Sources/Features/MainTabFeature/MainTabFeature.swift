@@ -112,7 +112,8 @@ public struct MainTabFeature {
           return .none
           
           // detail attraction
-        case .element(id: _, action: .detailChallenge(.tappedAttraction(let id))):
+        case .element(id: _, action: .detailChallenge(.tappedAttraction(let id))),
+            .element(id: _, action: .attractionMap(.tappedDetail(let id))):
           state.path.append(.detailAttraction(DetailAttractionFeature.State(with: id)))
           return .none
 
@@ -122,7 +123,8 @@ public struct MainTabFeature {
           
           // login
         case .element(id: _, action: .detailChallenge(.showLoginAlert)),
-            .element(id: _, action: .themeChallenge(.showLoginAlert)):
+            .element(id: _, action: .themeChallenge(.showLoginAlert)),
+            .element(id: _, action: .detailAttraction(.showLoginAlert)):
           state.showLoginAlert = true
           return .none
           
