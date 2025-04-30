@@ -14,11 +14,11 @@ public struct MainTabFeature {
   public init() {}
   
   // MARK: State
-
+  
   @ObservableState
   public struct State: Equatable {
     public var selectedTab: Tab = .home
-
+    
     public enum Tab {
       case home, myChallenge, profile
     }
@@ -53,15 +53,15 @@ public struct MainTabFeature {
   
   // MARK: Reducer
   
-  public var body: some Reducer<State, Action> {    
+  public var body: some Reducer<State, Action> {
     Scope(state: \.myChallenge, action: \.myChallenge) {
       MyChallengeTabFeature()
     }
-
+    
     Scope(state: \.home, action: \.home) {
       HomeTabFeature()
     }
-
+    
     Reduce { state, action in
       switch action {
       case .selectedTabChanged(let tab):
@@ -102,6 +102,7 @@ public struct MainTabFeature {
         // MARK: - Path Reducer
       case let .path(action):
         switch action {
+          // detail comments
         case .element(id: _, action: .detailChallenge(.tappedAllComments(let id))):
           state.path.append(.detailComments(DetailCommentsFeature.State(with: id)))
           return .none
@@ -110,6 +111,12 @@ public struct MainTabFeature {
           state.path.append(.detailComments(DetailCommentsFeature.State(with: id, comment)))
           return .none
           
+          // detail attraction
+        case .element(id: _, action: .detailChallenge(.tappedAttraction(let id))):
+          state.path.append(.detailAttraction(DetailAttractionFeature.State(with: id)))
+          return .none          
+          
+          // login
         case .element(id: _, action: .detailChallenge(.showLoginAlert)),
             .element(id: _, action: .themeChallenge(.showLoginAlert)):
           state.showLoginAlert = true
@@ -140,6 +147,7 @@ extension MainTabFeature {
     case login(LoginFeature)
     case themeChallenge(ThemeChallengeFeature)
     case rankChallenge(RankChallengeFeature)
+    case detailAttraction(DetailAttractionFeature)
   }
   
 }

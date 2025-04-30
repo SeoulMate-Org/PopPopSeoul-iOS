@@ -63,7 +63,8 @@ let appInfoPlist: [String: Plist.Value] = {
         "NSAppTransportSecurity": [
             "NSAllowsArbitraryLoads": true
         ],
-        "NSLocationWhenInUseUsageDescription": "앱 사용 중 사용자의 위치를 확인하기 위해 필요합니다."
+        "NSLocationWhenInUseUsageDescription": "앱 사용 중 사용자의 위치를 확인하기 위해 필요합니다.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "앱이 백그라운드에서도 위치를 사용할 수 있도록 하기 위해 필요합니다."
     ]
     
     let secretsPath = "App/Resources/Secrets.plist"

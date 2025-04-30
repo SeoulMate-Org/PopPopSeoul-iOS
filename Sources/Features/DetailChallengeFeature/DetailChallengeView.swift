@@ -43,7 +43,11 @@ struct DetailChallengeView: View {
                   divider()
                   DetailChallengeStampSection(challenge: challenge)
                   divider()
-                  DetailChallengePlaceSection(challenge: challenge)
+                  DetailChallengePlaceSection(
+                    challenge: challenge,
+                    onAttractionTap: { id in
+                      viewStore.send(.tappedAttraction(id: id))
+                    })
                   divider()
                   DetailChallengeCommentSection(
                     challenge: challenge,

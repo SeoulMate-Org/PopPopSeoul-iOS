@@ -45,6 +45,9 @@ public struct DetailChallengeFeature {
     case dismissMenu
     case quitChallenge
     
+    // attraction
+    case tappedAttraction(id: Int)
+    
     // comment
     case tappedAllComments(id: Int)
     case tappedEditComment(id: Int, Comment)

@@ -265,7 +265,7 @@ public struct HomeTabFeature {
         return .none
         
         // MARK: - Rank Reducer
-              case .fetchRankList:
+      case .fetchRankList:
         return .run { send in
           do {
             let list = try await callengeListClient.fetchRankList()
