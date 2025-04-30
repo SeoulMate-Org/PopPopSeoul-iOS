@@ -111,11 +111,14 @@ public struct HomeTabFeature {
       switch action {
       case .onAppear:
         let prefetchThemes: [ChallengeTheme] = [.mustSeeSpots, .localTour, .historyCulture]
+        
         return .merge(
-          .run { send in
+          .run { [state = state] send in
             
             if TokenManager.shared.isLogin {
-              await send(.requestLocation)
+              if state.isInit {
+                await send(.requestLocation)
+              }
             } else {
               await send(.updateLocationListType(.loginRequired))
             }

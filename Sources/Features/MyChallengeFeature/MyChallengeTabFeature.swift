@@ -17,6 +17,7 @@ public struct MyChallengeTabFeature {
   public init() {}
   
   @Dependency(\.myChallengeClient) var myChallengeClient
+  @Dependency(\.challengeClient) var challengeClient
   
   // MARK: State
   
@@ -54,6 +55,7 @@ public struct MyChallengeTabFeature {
     case tabChanged(Tab)
     case fetchList(Tab)
     case fetchListError
+    case networkError
     
     case undoLike
     case dismissToast
@@ -108,24 +110,33 @@ public struct MyChallengeTabFeature {
         state.interestList = list
         return .none
         
-      case .tappedInterest(id: let id):
-        if let index = state.interestList.firstIndex(where: { $0.id == id }) {
-          state.recentlyDeleted = state.interestList.remove(at: index)
-          state.showUndoToast = true
-          return .run { send in
+      case .tappedInterest(let id):
+        guard let index = state.interestList.firstIndex(where: { $0.id == id }) else { return .none }
+        state.recentlyDeleted = state.interestList.remove(at: index)
+        state.showUndoToast = true
+        return .run { send in
+          do {
+            let _ = try await challengeClient.putLike(id)
             try await Task.sleep(nanoseconds: 3 * 1_000_000_000)
             await send(.dismissToast)
+          } catch {
+            await send(.networkError)
           }
         }
-        return .none
         
       case .undoLike:
-        if let challenge = state.recentlyDeleted {
-          state.interestList.insert(challenge, at: 0)
-        }
+        guard let challenge = state.recentlyDeleted else { return .none }
+        state.interestList.insert(challenge, at: 0)
         state.recentlyDeleted = nil
         state.showUndoToast = false
-        return .none
+        
+        return .run { send in
+          do {
+            let _ = try await challengeClient.putLike(challenge.id)
+          } catch {
+            await send(.networkError)
+          }
+        }
         
       case .dismissToast:
         state.recentlyDeleted = nil
@@ -145,6 +156,10 @@ public struct MyChallengeTabFeature {
         return .none
         
       case .tappedItem:
+        return .none
+        
+      case .networkError:
+        // TODO: - ERROR
         return .none
       }
     }
