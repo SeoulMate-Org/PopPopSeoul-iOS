@@ -683,6 +683,8 @@
 		EA7822792DC28027009B6E47 /* LocationChallenges.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7822782DC28027009B6E47 /* LocationChallenges.swift */; };
 		EA78227B2DC29DB7009B6E47 /* StampChallenges.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA78227A2DC29DB7009B6E47 /* StampChallenges.swift */; };
 		EA78227D2DC29E27009B6E47 /* StampChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA78227C2DC29E27009B6E47 /* StampChallenge.swift */; };
+		EA78227F2DC2AC9B009B6E47 /* PutChallengeStatusRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA78227E2DC2AC9B009B6E47 /* PutChallengeStatusRequest.swift */; };
+		EA7822822DC2AD54009B6E47 /* DefaultStatusResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7822812DC2AD54009B6E47 /* DefaultStatusResponse.swift */; };
 		EA949284C11DB940F84888C2 /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256CCC92AC8D6EE5FACE5475 /* Dependencies.framework */; };
 		EAE62223229FB6E39F76669F /* CasePathsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CF7412324C02D1745F0E0D /* CasePathsCore.framework */; };
 		EB1B1D606C9519443C8093A6 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E58A56242DD34BBF412FCA4 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle */; };
@@ -699,7 +701,7 @@
 		EF3038B8D8AFACB6A5F6DB92 /* String++.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39624265C0D6FAF475629C2 /* String++.swift */; };
 		EF74F6CC739AEE287D40C222 /* TuistFonts+SharedAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA72518E39187632F381511 /* TuistFonts+SharedAssets.swift */; };
 		EF82FC5CAC64BCADA9F27D38 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 439E29FD827B44FD54D99F81 /* libc++.tbd */; };
-		F08F0340A7D0CA2AE9C1A52E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F622178B346AF858FF89DAD /* File.swift */; };
+		F08F0340A7D0CA2AE9C1A52E /* DefaultLikeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F622178B346AF858FF89DAD /* DefaultLikeResponse.swift */; };
 		F09417129212C5CFF53A01A2 /* HomeBannerSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04DA2FB9EE32AF5B05711C4 /* HomeBannerSection.swift */; };
 		F0F94F31C0B86D03E47684D6 /* AppAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7924B0080D9F90CA5714671 /* AppAuth.framework */; };
 		F1736B23ED64824E86A566D0 /* CasePaths.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40AE01B72DAE9495C40B61FB /* CasePaths.framework */; };
@@ -1350,7 +1352,7 @@
 		2DE3411E90618290E371827D /* HomeLocationSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLocationSection.swift; sourceTree = "<group>"; };
 		2EE494055A8FF16DF0918183 /* Models.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Models.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F19DB3339F8D50838A1D327 /* AppAuthCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppAuthCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F622178B346AF858FF89DAD /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		2F622178B346AF858FF89DAD /* DefaultLikeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLikeResponse.swift; sourceTree = "<group>"; };
 		30CA1BF0585242D526EFDA9D /* ThemeChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChallengeView.swift; sourceTree = "<group>"; };
 		3139226AAB68996B252E4353 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		31589A353FFFA13770127E47 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -1599,6 +1601,8 @@
 		EA7822782DC28027009B6E47 /* LocationChallenges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationChallenges.swift; sourceTree = "<group>"; };
 		EA78227A2DC29DB7009B6E47 /* StampChallenges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampChallenges.swift; sourceTree = "<group>"; };
 		EA78227C2DC29E27009B6E47 /* StampChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampChallenge.swift; sourceTree = "<group>"; };
+		EA78227E2DC2AC9B009B6E47 /* PutChallengeStatusRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PutChallengeStatusRequest.swift; sourceTree = "<group>"; };
+		EA7822812DC2AD54009B6E47 /* DefaultStatusResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStatusResponse.swift; sourceTree = "<group>"; };
 		EB1AF2F0C1D291ADEC33A0B1 /* GetChallengeMyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeMyRequest.swift; sourceTree = "<group>"; };
 		EB50FD060BF7A2400BB005A7 /* ThemeChallengeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChallengeTabView.swift; sourceTree = "<group>"; };
 		EC4AFF88EA6DCED6098DE437 /* Clients-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Clients-Info.plist"; sourceTree = "<group>"; };
@@ -2201,8 +2205,9 @@
 				A8B97444BDC21E92ADCD5B72 /* Challenge */,
 				4C7CD1DE9C1766B505116142 /* Comment */,
 				BF236E4BC5803A3B1AC7418A /* DefaultProgressResponse.swift */,
-				2F622178B346AF858FF89DAD /* File.swift */,
+				2F622178B346AF858FF89DAD /* DefaultLikeResponse.swift */,
 				CFEE7E0C11807B93EFB023AA /* Pageable.swift */,
+				EA7822812DC2AD54009B6E47 /* DefaultStatusResponse.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -2698,6 +2703,7 @@
 				B83E6A68F28C916226F76843 /* PostCommentRequest.swift */,
 				8B97DDA6CAFD7FF74D382F7F /* PutCommentRequest.swift */,
 				36D9141EE48B3D34377D5F9C /* Request.swift */,
+				EA78227E2DC2AC9B009B6E47 /* PutChallengeStatusRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -3993,6 +3999,7 @@
 				1DA57B904818C089FE2D5F04 /* TuistBundle+Models.swift in Sources */,
 				D4AD64A3A52F29CFE3ECB2D0 /* TuistFonts+Models.swift in Sources */,
 				3C1EAD45DC10DB50621C67CB /* TuistPlists+Models.swift in Sources */,
+				EA7822822DC2AD54009B6E47 /* DefaultStatusResponse.swift in Sources */,
 				323A6B486B2EE964D6713B21 /* Auth.swift in Sources */,
 				2AF58EFF798811C457137D04 /* Token.swift in Sources */,
 				17D6DC7F1B2B65662937F369 /* Attraction.swift in Sources */,
@@ -4001,7 +4008,7 @@
 				EA78227B2DC29DB7009B6E47 /* StampChallenges.swift in Sources */,
 				AA3FDBA7F748E148DF1A8F47 /* CommentListRseponse.swift in Sources */,
 				5B1D7526574694AA04BF21B2 /* DefaultProgressResponse.swift in Sources */,
-				F08F0340A7D0CA2AE9C1A52E /* File.swift in Sources */,
+				F08F0340A7D0CA2AE9C1A52E /* DefaultLikeResponse.swift in Sources */,
 				D83156D2272403C24BB67079 /* Pageable.swift in Sources */,
 				E9990850B12B4043D5B727A3 /* AppLocation.swift in Sources */,
 				E06CD4C9C413FFA49C7DD284 /* AppSetting.swift in Sources */,
@@ -4149,6 +4156,7 @@
 				7057229397771FAA58EA1FA2 /* ChallengeListClient.swift in Sources */,
 				7C9B0667ACB05B192F0796BE /* CommentClient.swift in Sources */,
 				6E643EB2BEF618F5578B8A43 /* LocationClient.swift in Sources */,
+				EA78227F2DC2AC9B009B6E47 /* PutChallengeStatusRequest.swift in Sources */,
 				2ECFBF5DF39C02584E528E4E /* MyChallengeClient.swift in Sources */,
 				5F94B7D05BD3D23DFBEAC88E /* AppUpdateClient.swift in Sources */,
 				8619384045B4AE561C8C24DD /* KeychainClient.swift in Sources */,

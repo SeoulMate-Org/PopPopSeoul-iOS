@@ -214,8 +214,28 @@ public struct DetailChallengeFeature {
           return .none
           
         case .start:
-          return .none
-          
+          return .run { [state = state] send in
+            guard let challenge = state.challenge else { return }
+            
+            // 1. 좋아요 UI 즉시 업데이트
+            var update = challenge
+            update.challengeStatusCode = ChallengeStatus.progress.apiCode
+            update.progressCount += 1
+            await send(.update(update))
+            
+            do {
+              let response = try await challengeClient.putStatus(update.id, .progress)
+              
+              // 필요시 서버 데이터랑 다르면 다시 fetch
+              if response.challengeStatus != update.challengeStatus {
+                let fresh = try await challengeClient.get(response.id)
+                await send(.update(fresh))
+              }
+            } catch {
+              await send(.getError)
+            }
+          }
+        
         case .login:
           return .send(.showLoginAlert)
         }

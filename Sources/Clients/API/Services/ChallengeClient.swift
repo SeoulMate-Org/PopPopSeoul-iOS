@@ -12,6 +12,7 @@ import SharedTypes
 public struct ChallengeClient {
   public var get: @Sendable (Int) async throws -> Challenge
   public var putLike: @Sendable (Int) async throws -> DefaultLikeResponse
+  public var putStatus: @Sendable (Int, ChallengeStatus) async throws -> DefaultStatusResponse
 }
 
 extension ChallengeClient: DependencyKey {
@@ -32,6 +33,13 @@ extension ChallengeClient: DependencyKey {
       putLike: { id in
         let query = DefaultIdRequest(id: id)
         let request: Request = .put(.challengeLike, query: query.queryItems)
+        let (data, _) = try await apiClient.send(request)
+        
+        return try data.decoded()
+      },
+      putStatus: { id, status in
+        let query = PutChallengeStatusRequest(id: id, status: status.apiCode)
+        let request: Request = .put(.challengeStatus, query: query.queryItems)
         let (data, _) = try await apiClient.send(request)
         
         return try data.decoded()

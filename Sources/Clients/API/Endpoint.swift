@@ -30,6 +30,7 @@ public extension Endpoint {
   static let challengeListStamp = Self(baseUrl: apiBaseUrl, pathComponents: ["challenge", "list", "stamp"])
   static let challengeListRank = Self(baseUrl: apiBaseUrl, pathComponents: ["challenge", "list", "rank"])
   static let challengeLike = Self(baseUrl: apiBaseUrl, pathComponents: ["challenge", "like"])
+  static let challengeStatus = Self(baseUrl: apiBaseUrl, pathComponents: ["challenge", "status"])
   static let comment = Self(baseUrl: apiBaseUrl, pathComponents: ["comment"])
   static let attraction = Self(baseUrl: apiBaseUrl, pathComponents: ["attraction"])
   static let attractionLike = Self(baseUrl: apiBaseUrl, pathComponents: ["attraction", "like"])
