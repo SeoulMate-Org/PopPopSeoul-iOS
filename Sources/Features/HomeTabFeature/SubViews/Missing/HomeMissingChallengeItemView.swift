@@ -33,14 +33,16 @@ struct HomeMissingChallengeItemView: View {
           .scaledToFill()
           .frame(width: cardWidth, height: cardWidth)
         
-        ProgressBar(
-          progressType: .missingChallenge,
-          total: challenge.attractionCount,
-          current: challenge.myStampCount
-        )
-        .frame(height: 14)
-        .padding(.vertical, 8)
-        .padding(.leading, 14)
+        if challenge.myStampCount > 0 {
+          ProgressBar(
+            progressType: .missingChallenge,
+            total: challenge.attractionCount,
+            current: challenge.myStampCount
+          )
+          .frame(height: 14)
+          .padding(.vertical, 8)
+          .padding(.leading, 14)
+        }
       }
       .frame(maxWidth: cardWidth, maxHeight: cardWidth)
       .cornerRadius(16, corners: .allCorners)

@@ -60,8 +60,7 @@ extension AuthClient: DependencyKey {
         }
       },
       login: { provider in
-        let body = PostAuthLoginRequest(token: "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwiZW1haWwiOiJ0ZXN0QGV4YW1wbGUuY29tIiwiaXNzIjoiYWNjb3VudHMuZ29vZ2xlLmNvbSIsImF1ZCI6InlvdXItY2xpZW50LWlkIiwiZXhwIjo5OTk5OTk5OTk5fQ.dummy-signature", loginType: "GOOGLE")
-//        let body = PostAuthLoginRequest(token: provider.token, loginType: provider.loginType, languageCode: AppSettingManager.shared.language.apiCode)
+        let body = PostAuthLoginRequest(token: provider.token, loginType: provider.loginType)
         
         let request: Request = .post(.authLogin, body: try? body.encoded())
         let (data, _) = try await apiClient.send(request)

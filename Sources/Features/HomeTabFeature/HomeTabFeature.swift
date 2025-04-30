@@ -35,6 +35,7 @@ public struct HomeTabFeature {
     
     // Missing List
     var missingList: [Challenge] = []
+    var challengeList: [Challenge] = []
     
     // Similar List
     var similarAttraction: String = ""
@@ -84,6 +85,7 @@ public struct HomeTabFeature {
     // Missing List
     case fetchMissingList
     case updateMissingList([Challenge])
+    case updateChallengeList([Challenge])
     
     // Similar List
     case fetchSimilarList
@@ -214,8 +216,12 @@ public struct HomeTabFeature {
         if TokenManager.shared.isLogin {
           return .run { send in
             do {
-              let list = try await callengeListClient.fetchMissingList()
-              await send(.updateMissingList(list))
+              let (type, list) = try await callengeListClient.fetchMissingList()
+              if type == .missed {
+                await send(.updateMissingList(list))
+              } else if type == .challenge {
+                await send(.updateChallengeList(list))
+              }
             } catch {
               await send(.networkError)
             }
@@ -226,7 +232,13 @@ public struct HomeTabFeature {
         }
         
       case let .updateMissingList(list):
+        state.challengeList = []
         state.missingList = list
+        return .none
+        
+      case let .updateChallengeList(list):
+        state.missingList = []
+        state.challengeList = list
         return .none
         
         // MARK: - Similar Reducer

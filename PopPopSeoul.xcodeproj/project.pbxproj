@@ -681,6 +681,8 @@
 		EA68103BE802BEBD67434D79 /* SB 어그로OTF M.otf in Resources */ = {isa = PBXBuildFile; fileRef = E283BF28611FAF81E991ABF5 /* SB 어그로OTF M.otf */; };
 		EA7822772DC278A9009B6E47 /* AttractionMapDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7822762DC278A9009B6E47 /* AttractionMapDetailView.swift */; };
 		EA7822792DC28027009B6E47 /* LocationChallenges.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7822782DC28027009B6E47 /* LocationChallenges.swift */; };
+		EA78227B2DC29DB7009B6E47 /* StampChallenges.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA78227A2DC29DB7009B6E47 /* StampChallenges.swift */; };
+		EA78227D2DC29E27009B6E47 /* StampChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA78227C2DC29E27009B6E47 /* StampChallenge.swift */; };
 		EA949284C11DB940F84888C2 /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256CCC92AC8D6EE5FACE5475 /* Dependencies.framework */; };
 		EAE62223229FB6E39F76669F /* CasePathsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CF7412324C02D1745F0E0D /* CasePathsCore.framework */; };
 		EB1B1D606C9519443C8093A6 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E58A56242DD34BBF412FCA4 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle */; };
@@ -1595,6 +1597,8 @@
 		EA26B67DE986D8D090F59956 /* CombineSchedulers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CombineSchedulers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7822762DC278A9009B6E47 /* AttractionMapDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionMapDetailView.swift; sourceTree = "<group>"; };
 		EA7822782DC28027009B6E47 /* LocationChallenges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationChallenges.swift; sourceTree = "<group>"; };
+		EA78227A2DC29DB7009B6E47 /* StampChallenges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampChallenges.swift; sourceTree = "<group>"; };
+		EA78227C2DC29E27009B6E47 /* StampChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampChallenge.swift; sourceTree = "<group>"; };
 		EB1AF2F0C1D291ADEC33A0B1 /* GetChallengeMyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeMyRequest.swift; sourceTree = "<group>"; };
 		EB50FD060BF7A2400BB005A7 /* ThemeChallengeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChallengeTabView.swift; sourceTree = "<group>"; };
 		EC4AFF88EA6DCED6098DE437 /* Clients-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Clients-Info.plist"; sourceTree = "<group>"; };
@@ -2051,6 +2055,7 @@
 				0F294A4517EDB4132704F925 /* AuthProvider.swift */,
 				A42F83AEBA48033FAC2BD18D /* ChallengeStatus.swift */,
 				13E321B243FD5013A5F3A377 /* ChallengeTheme.swift */,
+				EA78227C2DC29E27009B6E47 /* StampChallenge.swift */,
 			);
 			path = SharedTypes;
 			sourceTree = "<group>";
@@ -2565,6 +2570,7 @@
 				6EDB40F90FD3412C20162CD2 /* Attraction.swift */,
 				28106CA4FD800F7ABCF2FADF /* Challenge.swift */,
 				EA7822782DC28027009B6E47 /* LocationChallenges.swift */,
+				EA78227A2DC29DB7009B6E47 /* StampChallenges.swift */,
 			);
 			path = Challenge;
 			sourceTree = "<group>";
@@ -3992,6 +3998,7 @@
 				17D6DC7F1B2B65662937F369 /* Attraction.swift in Sources */,
 				51F102BB491F6FEFF9F37E98 /* Challenge.swift in Sources */,
 				5E92D79480225B86B215E07C /* Comment.swift in Sources */,
+				EA78227B2DC29DB7009B6E47 /* StampChallenges.swift in Sources */,
 				AA3FDBA7F748E148DF1A8F47 /* CommentListRseponse.swift in Sources */,
 				5B1D7526574694AA04BF21B2 /* DefaultProgressResponse.swift in Sources */,
 				F08F0340A7D0CA2AE9C1A52E /* File.swift in Sources */,
@@ -4239,6 +4246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2DC4982507A6BD9BA6502D5 /* TuistAssets+SharedTypes.swift in Sources */,
+				EA78227D2DC29E27009B6E47 /* StampChallenge.swift in Sources */,
 				103FD5BD536C1A9D3F91DA5A /* TuistBundle+SharedTypes.swift in Sources */,
 				620203721EABAE489BE39CD1 /* TuistFonts+SharedTypes.swift in Sources */,
 				25EFFC1526C0C16E8D691D85 /* TuistPlists+SharedTypes.swift in Sources */,

@@ -68,6 +68,19 @@ struct HomeTabView: View {
           
           if viewStore.missingList.count > 0 {
             HomeMissingSection(
+              isMissing: true,
+              challenges: viewStore.missingList,
+              onTapped: { _ in
+                
+              },
+              onStartTapped: { _ in
+              })
+            .padding(.top, 48)
+          }
+          
+          if viewStore.challengeList.count > 0 {
+            HomeMissingSection(
+              isMissing: false,
               challenges: viewStore.missingList,
               onTapped: { _ in
                 
