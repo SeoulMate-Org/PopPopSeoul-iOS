@@ -114,7 +114,11 @@ public struct MainTabFeature {
           // detail attraction
         case .element(id: _, action: .detailChallenge(.tappedAttraction(let id))):
           state.path.append(.detailAttraction(DetailAttractionFeature.State(with: id)))
-          return .none          
+          return .none
+
+        case .element(id: _, action: .detailChallenge(.moveToMap(let challenge))):
+          state.path.append(.attractionMap(AttractionMapFeature.State(with: challenge)))
+          return .none
           
           // login
         case .element(id: _, action: .detailChallenge(.showLoginAlert)),
@@ -148,6 +152,7 @@ extension MainTabFeature {
     case themeChallenge(ThemeChallengeFeature)
     case rankChallenge(RankChallengeFeature)
     case detailAttraction(DetailAttractionFeature)
+    case attractionMap(AttractionMapFeature)
   }
   
 }

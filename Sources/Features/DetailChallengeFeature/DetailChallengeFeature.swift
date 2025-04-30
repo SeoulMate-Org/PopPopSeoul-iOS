@@ -39,6 +39,7 @@ public struct DetailChallengeFeature {
     case update(Challenge)
     case getError
     case showLoginAlert
+    case moveToMap(Challenge)
     
     // header
     case tappedBack
@@ -109,7 +110,7 @@ public struct DetailChallengeFeature {
           copyDistances(from: challenge, to: &newChallenge)
           state.challenge = newChallenge
           return .none
-        } else {          
+        } else {
           state.challenge = new
           return .send(.requestLocation)
         }
@@ -166,7 +167,11 @@ public struct DetailChallengeFeature {
           }
           
         case .map:
-          return .none
+          if let challenge = state.challenge {
+            return .send(.moveToMap(challenge))
+          } else {
+            return .none
+          }
           
         case .stamp:
           return .none

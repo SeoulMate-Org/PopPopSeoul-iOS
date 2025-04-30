@@ -90,6 +90,10 @@ public struct MainTabView: View {
         if let store = store.scope(state: \.detailAttraction, action: \.detailAttraction) {
           DetailAtrractionView(store: store)
         }
+      case .attractionMap:
+        if let store = store.scope(state: \.attractionMap, action: \.attractionMap) {
+          AttractionMapView(store: store)
+        }
       }
     }
   }

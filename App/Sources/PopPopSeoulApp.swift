@@ -4,6 +4,8 @@ import FacebookCore
 import Features
 import GoogleSignIn
 import FirebaseCore
+import NMapsMap
+import Common
 
 // MARK: - AppDelegate
 
@@ -28,20 +30,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 }
 
-// MARK: - SceneDelegate
-//
-//class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-//
-//  func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-//    guard let url = URLContexts.first?.url else {
-//      return
-//    }
-//
-//    ApplicationDelegate.shared.application(UIApplication.shared, open: url,
-//                                           sourceApplication: nil, annotation: [UIApplication.OpenURLOptionsKey.annotation])
-//  }
-//}
-
 // MARK: - SeoulMateApp
 
 @main
@@ -51,6 +39,7 @@ struct PopPopSeoulApp: App {
   
   init() {
     FirebaseApp.configure()
+    NMFAuthManager.shared().ncpKeyId = Constants.naverClientId
   }
   
   var body: some Scene {
@@ -71,8 +60,6 @@ struct PopPopSeoulApp: App {
           GIDSignIn.sharedInstance.handle(url)
         }
       }
-      //      } else if _XCTIsTesting {
-      //        EmptyView()
     }
   }
 }

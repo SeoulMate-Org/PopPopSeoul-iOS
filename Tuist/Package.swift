@@ -29,10 +29,6 @@ let package = Package(
             branch: "main"
         ),
         .package(
-            url: "https://github.com/lucaszischka/BottomSheet.git",
-            .upToNextMajor(from: "3.1.0")
-        ),
-        .package(
             url: "https://github.com/navermaps/SPM-NMapsMap.git",
             branch: "main"
         ),
