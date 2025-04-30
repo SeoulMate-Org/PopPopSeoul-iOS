@@ -10,8 +10,7 @@ import SharedTypes
 public struct HomeTabFeature {
   public init() {}
   
-  @Dependency(\.continuousClock) var clock
-  @Dependency(\.locationManager) var locationManager
+  @Dependency(\.locationClient) var locationClient
   @Dependency(\.callengeListClient) var callengeListClient
   
   // MARK: - State
@@ -20,7 +19,6 @@ public struct HomeTabFeature {
   public struct State: Equatable {
     public init() {}
     
-    var authorizationStatus: CLAuthorizationStatus = .notDetermined
     var userCoordinate: Coordinate?
     
     // Banner
@@ -68,9 +66,11 @@ public struct HomeTabFeature {
     case fetchParticipationList // 참여형
     
     // Location List
-    case locationManager(LocationManager.Action)
-    case updateUserCoordinate(Coordinate)
+    case requestLocation
+    case locationResult(LocationResult)
+    case updateUserCoordinate(Coordinate?)
     case updateLocationListType(LocationListType)
+    
     case fetchLocationList(Coordinate)
     case updateLocationList([Challenge])
     
@@ -104,74 +104,59 @@ public struct HomeTabFeature {
       case .onAppear:
         let prefetchThemes: [ChallengeTheme] = [.mustSeeSpots, .localTour, .historyCulture]
         return .merge(
-          // 1. 권한 요청
-          .run { _ in await locationManager.requestWhenInUseAuthorization() },
-          
-          // 2. delegate로부터 변경 사항 감지
           .run { send in
-            for await action in await locationManager.delegate() {
-              await send(.locationManager(action), animation: .default)
-            }
-          },
-          
-          // 3. 현재 권한 상태 직접 조회
-          .run { send in
-            let status = await locationManager.authorizationStatus()
-            await send(.locationManager(.didChangeAuthorization(status)))
-          },
-          
-          .merge(
-            prefetchThemes.map { .send(.fetchThemeList($0)) }
-          ),
-          
-          .run { send in
-            await send(.fetchMissingList)
-          },
-          
-          .run { send in
-            await send(.fetchSimilarList)
-          },
-          
-          .run { send in
-            await send(.fetchRankList)
-          }
-        )
-        
-      case let .locationManager(.didChangeAuthorization(status)):
-        guard state.authorizationStatus != status else { return .none }
-        
-        state.authorizationStatus = status
-        if status == .authorizedAlways || status == .authorizedWhenInUse {
-          return .run { send in
-            // 위치 허용
+            
             if TokenManager.shared.isLogin {
-              await locationManager.requestLocation()
+              await send(.requestLocation)
             } else {
               await send(.updateLocationListType(.loginRequired))
             }
-          }
-        } else {
-          // 위치 비허용
-          return .run { send in
-            await send(.updateLocationListType(.locationAuthRequired))
-          }
+          },
+          
+            .merge(
+              prefetchThemes.map { .send(.fetchThemeList($0)) }
+            ),
+          
+            .run { send in
+              await send(.fetchMissingList)
+            },
+          
+            .run { send in
+              await send(.fetchSimilarList)
+            },
+          
+            .run { send in
+              await send(.fetchRankList)
+            }
+        )
+        
+      case .requestLocation:
+        return .run { send in
+          let result = await locationClient.getCurrentLocation()
+          await send(.locationResult(result))
         }
         
-      case let .locationManager(.didUpdateLocations(locations)):
+      case let .locationResult(.success(coordinate)):
         return .run { send in
-          if let location = locations.first {
-            await send(.updateLocationListType(.list))
-            await send(.updateUserCoordinate(Coordinate(location.coordinate)))
-          } else {
-            await send(.updateLocationListType(.defaultList))
-            await send(.updateUserCoordinate(Coordinate()))
-          }
+          await send(.updateLocationListType(.list))
+          await send(.updateUserCoordinate(coordinate))
+        }
+        
+      case .locationResult(.fail):
+        return .run { send in
+          await send(.updateLocationListType(.locationAuthRequired))
+          await send(.updateUserCoordinate(nil))
         }
         
       case let .updateUserCoordinate(coordinate):
         state.userCoordinate = coordinate
-        return .run { send in
-          await send(.fetchLocationList(coordinate))
+        
+        if let coordinate {
+          return .run { send in
+            await send(.fetchLocationList(coordinate))
+          }
+        } else {
+          return .none
         }
         
       case let .updateLocationListType(type):
@@ -289,15 +274,3 @@ public struct HomeTabFeature {
 }
 
 // MARK: - Helper
-
-enum LocationManagerKey: DependencyKey {
-  static let liveValue = LocationManager.live
-  static let testValue = LocationManager.failing
-}
-
-public extension DependencyValues {
-  var locationManager: LocationManager {
-    get { self[LocationManagerKey.self] }
-    set { self[LocationManagerKey.self] = newValue }
-  }
-}

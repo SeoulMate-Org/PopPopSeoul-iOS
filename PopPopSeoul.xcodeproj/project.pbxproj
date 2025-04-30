@@ -680,6 +680,7 @@
 		EA0E36552DC2078A00A5DCA0 /* NaverMapsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E36542DC2078A00A5DCA0 /* NaverMapsEndpoint.swift */; };
 		EA0E36572DC207D400A5DCA0 /* StaticMapParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E36562DC207D400A5DCA0 /* StaticMapParameters.swift */; };
 		EA0E36592DC20CB300A5DCA0 /* DetailAttractionMapSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E36582DC20CB300A5DCA0 /* DetailAttractionMapSection.swift */; };
+		EA0E365B2DC2276E00A5DCA0 /* LocationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E365A2DC2276E00A5DCA0 /* LocationClient.swift */; };
 		EA538B02E6EFCB8F46D36669 /* HomeChallengeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3A6CFAA5F6821C6DF932F /* HomeChallengeItemView.swift */; };
 		EA68103BE802BEBD67434D79 /* SB 어그로OTF M.otf in Resources */ = {isa = PBXBuildFile; fileRef = E283BF28611FAF81E991ABF5 /* SB 어그로OTF M.otf */; };
 		EA949284C11DB940F84888C2 /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256CCC92AC8D6EE5FACE5475 /* Dependencies.framework */; };
@@ -1595,6 +1596,7 @@
 		EA0E36542DC2078A00A5DCA0 /* NaverMapsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverMapsEndpoint.swift; sourceTree = "<group>"; };
 		EA0E36562DC207D400A5DCA0 /* StaticMapParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticMapParameters.swift; sourceTree = "<group>"; };
 		EA0E36582DC20CB300A5DCA0 /* DetailAttractionMapSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAttractionMapSection.swift; sourceTree = "<group>"; };
+		EA0E365A2DC2276E00A5DCA0 /* LocationClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationClient.swift; sourceTree = "<group>"; };
 		EA14930892816AFA4A88950C /* GoogleUtilities_Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleUtilities_Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA26B67DE986D8D090F59956 /* CombineSchedulers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CombineSchedulers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB1AF2F0C1D291ADEC33A0B1 /* GetChallengeMyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeMyRequest.swift; sourceTree = "<group>"; };
@@ -2650,6 +2652,7 @@
 				A6B95880DD1F10361C61889E /* ChallengeListClient.swift */,
 				3D8A03A3CB0BE02487388DF4 /* CommentClient.swift */,
 				E9D23E812DA7735D291EA0D0 /* MyChallengeClient.swift */,
+				EA0E365A2DC2276E00A5DCA0 /* LocationClient.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -4128,6 +4131,7 @@
 				AED4C026CDF635E7BF20967F /* ChallengeClient.swift in Sources */,
 				7057229397771FAA58EA1FA2 /* ChallengeListClient.swift in Sources */,
 				7C9B0667ACB05B192F0796BE /* CommentClient.swift in Sources */,
+				EA0E365B2DC2276E00A5DCA0 /* LocationClient.swift in Sources */,
 				2ECFBF5DF39C02584E528E4E /* MyChallengeClient.swift in Sources */,
 				5F94B7D05BD3D23DFBEAC88E /* AppUpdateClient.swift in Sources */,
 				8619384045B4AE561C8C24DD /* KeychainClient.swift in Sources */,

@@ -31,7 +31,7 @@ public class Utility {
     UIApplication.shared.open(url, options: [:], completionHandler: nil)
   }
   
-  public static func openInNaveMap(lat: String, lng: String, name: String) {
+  public static func openInNaveMap(lat: Double, lng: Double, name: String) {
     let urlString = "nmap://place?dlat=\(lat)&dlng=\(lng)&dname=\(name)&appname=\(Bundle.main.bundleIdentifier ?? "")"
     openInSafari(urlString: urlString)
   }

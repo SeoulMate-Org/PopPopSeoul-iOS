@@ -22,9 +22,9 @@ public struct StaticMapParameters: Sendable {
 
   public struct Marker: Sendable {
     public var color: String
-    public var position: (lat: String, lng: String)
+    public var position: (lat: Double, lng: Double)
 
-    public init(color: String = "red", position: (String, String)) {
+    public init(color: String = "red", position: (Double, Double)) {
       self.color = color
       self.position = position
     }

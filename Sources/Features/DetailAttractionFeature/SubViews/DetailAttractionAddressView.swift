@@ -14,7 +14,7 @@ import DesignSystem
 
 struct DetailAttractionAddressView: View {
   let text: String
-  let subText: String
+  let distance: String?
   
   @State private var isExpanded: Bool = false
   
@@ -59,21 +59,23 @@ struct DetailAttractionAddressView: View {
         } // HStack (top)
         
         // 하단 서브텍스트 (거리 등)
-        HStack(alignment: .center, spacing: 6) {
-          Assets.Icons.route.swiftUIImage
-            .resizable()
-            .frame(width: 16, height: 16)
-            .foregroundStyle(Colors.blue500.swiftUIColor)
-            .padding(.horizontal, 4)
-            .padding(.vertical, 4)
-            .background(
-              RoundedRectangle(cornerRadius: 10)
-                .fill(Colors.blue50.swiftUIColor)
-            )
-          
-          Text(subText)
-            .font(.bodyS)
-            .foregroundStyle(Colors.gray900.swiftUIColor)
+        if let distance {
+          HStack(alignment: .center, spacing: 6) {
+            Assets.Icons.route.swiftUIImage
+              .resizable()
+              .frame(width: 16, height: 16)
+              .foregroundStyle(Colors.blue500.swiftUIColor)
+              .padding(.horizontal, 4)
+              .padding(.vertical, 4)
+              .background(
+                RoundedRectangle(cornerRadius: 10)
+                  .fill(Colors.blue50.swiftUIColor)
+              )
+            
+            Text("나로부터 \(distance)")
+              .font(.bodyS)
+              .foregroundStyle(Colors.gray900.swiftUIColor)
+          }
         }
       } // VStack (leading)
     } // HStack (top)

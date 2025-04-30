@@ -14,13 +14,14 @@ import DesignSystem
 
 struct DetailAttractionInfoSection: View {
   let attraction: Attraction
+  
   var body: some View {
     
     VStack(spacing: 8) {
       if !attraction.address.isEmpty {
         DetailAttractionAddressView(
           text: attraction.address,
-          subText: "나로부터 2.4km"
+          distance: attraction.distance
         )
       }
       

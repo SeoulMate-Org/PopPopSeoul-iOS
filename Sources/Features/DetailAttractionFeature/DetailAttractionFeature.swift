@@ -7,6 +7,7 @@
 
 import Foundation
 import ComposableArchitecture
+import ComposableCoreLocation
 import Common
 import SharedTypes
 import Models
@@ -17,6 +18,7 @@ public struct DetailAttractionFeature {
   
   @Dependency(\.attractionClient) var attractionClient
   @Dependency(\.naverMapsClient) var naverMapsClient
+  @Dependency(\.locationClient) var locationClient
   
   // MARK: State
   
@@ -41,12 +43,16 @@ public struct DetailAttractionFeature {
     case showLoginAlert
     
     case update(Attraction)
-    case fetchMap(Attraction)
+    case fetchMap(Coordinate?)
     case updateMap(Data)
     
     case tappedBack
     case tappedLike
     case tappedNaverMap
+    
+    // Location
+    case requestLocation
+    case locationResult(LocationResult)
   }
   
   // MARK: Reducer
@@ -61,7 +67,8 @@ public struct DetailAttractionFeature {
             let id = state.attractionId
             let attraction = try await attractionClient.get(id)
             await send(.update(attraction))
-            await send(.fetchMap(attraction))
+            await send(.fetchMap(attraction.coordinate))
+            await send(.requestLocation)
           } catch {
             await send(.getError)
           }
@@ -71,19 +78,23 @@ public struct DetailAttractionFeature {
         state.attraction = attraction
         return .none
         
-      case let .fetchMap(attraction):
-        return .run { send in
-          do {
-            let param = StaticMapParameters(
-              markers: [
-                .init(position: (attraction.locationY, attraction.locationX))
-              ]
-            )
-            let data = try await naverMapsClient.send(.staticMap(param))
-            await send(.updateMap(data))
-          } catch {
-            await send(.getMapError)
+      case let .fetchMap(coordinate):
+        if let coordinate {
+          return .run { send in
+            do {
+              let param = StaticMapParameters(
+                markers: [
+                  .init(position: (coordinate.latitude, coordinate.longitude))
+                ]
+              )
+              let data = try await naverMapsClient.send(.staticMap(param))
+              await send(.updateMap(data))
+            } catch {
+              await send(.getMapError)
+            }
           }
+        } else {
+          return .send(.getMapError)
         }
         
       case let .updateMap(data):
@@ -127,8 +138,22 @@ public struct DetailAttractionFeature {
         }
         
       case .tappedNaverMap:
-        if let attraction = state.attraction {
-          Utility.openInNaveMap(lat: attraction.locationY, lng: attraction.locationX, name: attraction.name)
+        if let attraction = state.attraction,
+            let latitude = attraction.latitude,
+            let longitude = attraction.longitude {
+          Utility.openInNaveMap(lat: latitude, lng: longitude, name: attraction.name)
+        }
+        return .none
+        
+      case .requestLocation:
+        return .run { send in
+          let result = await locationClient.getCurrentLocation()
+          await send(.locationResult(result))
+        }
+        
+      case let .locationResult(.success(coordinate)):
+        if let from = state.attraction?.coordinate {
+          state.attraction?.distance = coordinate.distanceFormatted(from: from)
         }
         return .none
         

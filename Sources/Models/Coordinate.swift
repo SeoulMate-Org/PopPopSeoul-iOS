@@ -8,8 +8,8 @@ public struct Coordinate: Codable, Hashable {
     self.longitude = longitude
   }
 
-  public let latitude: Double
-  public let longitude: Double
+  public let latitude: Double  // 위도
+  public let longitude: Double  // 경도
 }
 
 public extension Coordinate {
@@ -36,6 +36,16 @@ public extension Coordinate {
 
   func distance(from coordinate: Coordinate) -> Double {
     CLLocation(self).distance(from: CLLocation(coordinate))
+  }
+  
+  func distanceFormatted(from coordinate: Coordinate) -> String {
+    let distance = self.distance(from: coordinate)
+    if distance < 1000 {
+      return "\(Int(distance))m"
+    } else {
+      let km = distance / 1000
+      return String(format: "%.1fkm", km)
+    }
   }
 }
 

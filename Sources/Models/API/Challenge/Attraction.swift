@@ -15,7 +15,18 @@ public struct Attraction: Hashable, Equatable, Identifiable {
   public let businessHours: String
   public let homepageUrl: String
   public let locationX: String
+  public var longitude: Double? {
+    return Double(locationX)
+  }
   public let locationY: String
+  public var latitude: Double? {
+    return Double(locationY)
+  }
+  public var coordinate: Coordinate? {
+    guard let latitude, let longitude else { return nil }
+    return Coordinate(latitude: latitude, longitude: longitude)
+  }
+  public var distance: String?
   public let tel: String
   public let subway: String
   public var isLiked: Bool
