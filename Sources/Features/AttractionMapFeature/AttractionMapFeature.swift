@@ -149,7 +149,13 @@ public struct AttractionMapFeature {
         state.showLoginAlert = false
         return .none
         
-      default: return .none
+      case .networkError:
+        // TODO: - 네트워크 오류
+        return .none
+        
+      case .tappedDetail:
+        return .none
+        
       }
     }
   }

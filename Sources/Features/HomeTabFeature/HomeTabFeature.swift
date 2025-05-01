@@ -8,19 +8,20 @@ import SharedTypes
 
 @Reducer
 public struct HomeTabFeature {
-  public init() {}
+  public init() { }
   
   @Dependency(\.locationClient) var locationClient
   @Dependency(\.callengeListClient) var callengeListClient
   @Dependency(\.challengeClient) var challengeClient
   
+  
   // MARK: - State
   
   @ObservableState
   public struct State: Equatable {
-    public init() {}
+    public init() { }
     
-    var isInit: Bool = true
+    public var onAppearType: OnAppearType = .firstTime
     var userCoordinate: Coordinate?
     
     // Banner
@@ -59,7 +60,8 @@ public struct HomeTabFeature {
   
   @CasePathable
   public enum Action: Equatable {
-    case onAppear
+    case initialize
+    case refetch
     case networkError
     case showLoginAlert
     case tappedChallenge(id: Int)
@@ -109,14 +111,14 @@ public struct HomeTabFeature {
   public var body: some ReducerOf<Self> {
     Reduce { state, action in
       switch action {
-      case .onAppear:
+      case .initialize:
+        state.onAppearType = .retained
         let prefetchThemes: [ChallengeTheme] = [.mustSeeSpots, .localTour, .historyCulture]
-        
         return .merge(
           .run { send in
             await send(.requestLocation)
           },
-        
+          
           .merge(
             prefetchThemes.map { .send(.fetchThemeList($0)) }
           ),
@@ -133,6 +135,18 @@ public struct HomeTabFeature {
             await send(.fetchRankList)
           }
       )
+        
+      case .refetch:
+        state.onAppearType = .retained
+        return .merge(
+          .run { send in
+            await send(.fetchMissingList)
+          },
+          .run { send in
+            await send(.fetchSimilarList)
+          }
+        )
+        
       case let .tappedLike(challenge):
         if TokenManager.shared.isLogin {
           return .run { send in
@@ -140,7 +154,7 @@ public struct HomeTabFeature {
             // 1. 좋아요 UI 즉시 업데이트
             var update = challenge
             update.isLiked.toggle()
-            update.likedCount += update.isLiked ? 1 : -1
+            update.likedCount = max(0, update.likes + (update.isLiked ? 1 : -1))
             
             await send(.updateLikeList(update))
             
@@ -166,8 +180,6 @@ public struct HomeTabFeature {
         return .none
         
       case .requestLocation:
-        if state.isInit {
-          state.isInit = false
           return .merge(
             .run { _ in await locationClient.requestAuthorization() },
             .run { send in
@@ -178,20 +190,15 @@ public struct HomeTabFeature {
             .run { send in
               let status = await locationClient.getAuthorizationStatus()
               await send(.locationClient(.didChangeAuthorization(status)))
+            },
+            .run { send in
+              let result = await locationClient.getCurrentLocation()
+              await send(.locationResult(result))
             }
           )
-        } else {
-          return .run { send in
-            let result = await locationClient.getCurrentLocation()
-            await send(.locationResult(result))
-          }
-        }
         
       case .locationClient(.didChangeAuthorization):
-        return .run { send in
-          let result = await locationClient.getCurrentLocation()
-          await send(.locationResult(result))
-        }
+        return .none
         
       case let .locationResult(.success(coordinate)):
         return .run { send in
@@ -209,6 +216,7 @@ public struct HomeTabFeature {
         
         if TokenManager.shared.isLogin {
           if let coordinate {
+            AppSettingManager.shared.setCoordinate(coordinate)
             return .run { send in
               await send(.fetchLocationList(coordinate))
             }

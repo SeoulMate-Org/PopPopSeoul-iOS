@@ -53,13 +53,14 @@ extension ChallengeListClient: DependencyKey {
       },
       fetchSimilarList: {
         let lastId = userDefaultsClient.lastStampAttractionId
-        if TokenManager.shared.isLogin, lastId > 0,
+        if TokenManager.shared.isLogin,
+           lastId > 0,
            let lastName = userDefaultsClient.lastStampAttractionName {
           let query = GetChallengeListStampRequest(attractionId: lastId)
           let request: Request = .get(.challengeListStamp, query: query.queryItems)
           let (data, _) = try await apiClient.send(request)
-          let list: [Challenge] = try data.decoded()
-          return (lastName, list)
+          let result: StampChallenges = try data.decoded()
+          return (lastName, result.challenges)
         } else {
           return (nil, [])
         }

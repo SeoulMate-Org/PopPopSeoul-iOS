@@ -60,11 +60,18 @@ public struct MainTabFeature {
     Reduce { state, action in
       switch action {
       case .selectedTabChanged(let tab):
-        if tab == .myChallenge && !TokenManager.shared.isLogin {
-          // 로그인 체크
-          state.showLoginAlert = true
-        } else {
+        
+        switch tab {
+        case .home:
           state.selectedTab = tab
+          state.home.onAppearType = .tabReappeared
+        case .myChallenge:
+          if !TokenManager.shared.isLogin {
+            state.showLoginAlert = true
+          }
+        case .profile:
+          state.selectedTab = tab
+          break
         }
         return .none
         
@@ -102,12 +109,8 @@ public struct MainTabFeature {
       case let .path(action):
         switch action {
           // move to detail comments
-        case let .element(id: _, action: .detailChallenge(.tappedAllComments(id, isFocus))):
-          state.path.append(.detailComments(DetailCommentsFeature.State(with: id, isFocus: isFocus)))
-          return .none
-          
-        case let .element(id: _, action: .detailChallenge(.tappedEditComment(id, comment))):
-          state.path.append(.detailComments(DetailCommentsFeature.State(with: id, comment, isFocus: true)))
+        case let .element(id: _, action: .detailChallenge(.moveToAllComment(id, comment,  isFocus))):
+          state.path.append(.detailComments(DetailCommentsFeature.State(with: id, comment: comment, isFocus: isFocus)))
           return .none
           
           // move to detail attraction
@@ -164,8 +167,13 @@ extension MainTabFeature {
   
 }
 
-
 public enum LoginAlertAction {
   case cancelTapped
   case loginTapped
+}
+
+public enum OnAppearType {
+  case firstTime
+  case tabReappeared
+  case retained
 }

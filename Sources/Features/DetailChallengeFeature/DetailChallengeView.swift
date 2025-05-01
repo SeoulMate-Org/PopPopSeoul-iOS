@@ -67,22 +67,29 @@ struct DetailChallengeView: View {
               .padding(.bottom, 100)
             }
             
-            if viewStore.challenge?.challengeStatus == .progress {
-              Text(String(sLocalization: .detailchallengeFloatingText))
-                .font(.captionM)
-                .foregroundColor(Colors.blue500.swiftUIColor)
-                .padding(.vertical, 11)
-                .padding(.horizontal, 24)
-                .background(Color.hex(0xEDF4FF))
-                .overlay(
-                  RoundedRectangle(cornerRadius: 18)
-                    .stroke(Colors.blue400.swiftUIColor, lineWidth: 1)
-                )
-                .cornerRadius(18)
-                .padding(.bottom, 10)
-                .background(Color.clear)
-                .edgesIgnoringSafeArea(.all)
+            VStack(spacing: 8) {
+              if let toast = viewStore.showToast {
+                AppToast(type: .iconText(message: toast.message))
+                  .transition(.opacity.animation(.easeInOut(duration: 0.2)))
+              }
+              
+              if viewStore.challenge?.challengeStatus == .progress {
+                Text(String(sLocalization: .detailchallengeFloatingText))
+                  .font(.captionM)
+                  .foregroundColor(Colors.blue500.swiftUIColor)
+                  .padding(.vertical, 11)
+                  .padding(.horizontal, 24)
+                  .background(Color.hex(0xEDF4FF))
+                  .overlay(
+                    RoundedRectangle(cornerRadius: 18)
+                      .stroke(Colors.blue400.swiftUIColor, lineWidth: 1)
+                  )
+                  .cornerRadius(18)
+                  .background(Color.clear)
+                  .edgesIgnoringSafeArea(.all)
+              }
             }
+            .padding(.bottom, 10)
           }
           
           if let challenge = viewStore.challenge {
@@ -112,6 +119,9 @@ struct DetailChallengeView: View {
           .zIndex(1) // ✅ 위에 떠야 하므로 zIndex 필요
         }
       }
+      .onAppear {
+        viewStore.send(.onApear)
+      }
       .overlay(
         Group {
           if viewStore.showLoginAlert {
@@ -121,11 +131,22 @@ struct DetailChallengeView: View {
               viewStore.send(.loginAlert(.cancelTapped))
             })
           }
+          
+          if let deletingComment = viewStore.deletingComment {
+            AppAlertView(
+              title: "댓글을 삭제할까요?",
+              message: "삭제한 댓글은 복구할 수 없습니다.",
+              primaryButtonTitle: "삭제",
+              primaryAction: {
+                viewStore.send(.deleteComment(deletingComment))
+              },
+              secondaryButtonTitle: "취소",
+              secondaryAction: {
+                viewStore.send(.cancelDeleteComment)
+              })
+          }
         }
       )
-      .onAppear {
-        viewStore.send(.onApear)
-      }
       .navigationBarBackButtonHidden(true)
     }
   }
@@ -141,3 +162,11 @@ struct DetailChallengeView: View {
 // MARK: Preview
 
 // MARK: - Helper
+extension DetailChallengeFeature.Toast {
+  var message: String {
+    switch self {
+    case .deleteComplete: "댓글이 삭제되었습니다."
+    case .notNearAttraction: "장소 근처에서만 스탬프를 찍을 수 있어요"
+    }
+  }
+}

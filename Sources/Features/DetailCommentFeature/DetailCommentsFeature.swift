@@ -32,9 +32,9 @@ public struct DetailCommentsFeature {
     var enabledSave: Bool = false
     var showToast: Toast?
     
-    public init(with id: Int, _ editingComment: Comment? = nil, isFocus: Bool = false) {
+    public init(with id: Int, comment: Comment? = nil, isFocus: Bool = false) {
       self.challengeId = id
-      self.editingComment = editingComment
+      self.editingComment = comment
       self.initFoucus = isFocus
     }
   }
@@ -115,6 +115,8 @@ public struct DetailCommentsFeature {
         return .none
         
       case .tappedSave:
+        let input = state.inputText
+        
         if let editigComment = state.editingComment {
           return .run { [state = state] send in
             do {
@@ -137,12 +139,12 @@ public struct DetailCommentsFeature {
             }
           }
         } else {
+          let id = state.challengeId
+          
           return .run { [state = state] send in
             do {
               await send(.textFieldFocusChanged(false))
               
-              let input = state.inputText
-              let id = state.challengeId
               let comment = try await commentClient.post(id, input)
               
               await send(.inputTextChanged(""))

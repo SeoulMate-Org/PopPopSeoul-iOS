@@ -129,8 +129,12 @@ struct HomeTabView: View {
     .frame(maxHeight: .infinity)
     .background(Colors.appWhite.swiftUIColor)
     .onAppear {
-      store.send(.onAppear)
-      
+      switch viewStore.onAppearType {
+      case .firstTime, .tabReappeared:
+        viewStore.send(.initialize)
+      case .retained:
+        viewStore.send(.refetch)
+      }
     }
   }
 }

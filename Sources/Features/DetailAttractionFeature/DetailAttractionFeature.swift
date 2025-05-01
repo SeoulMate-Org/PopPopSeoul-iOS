@@ -171,7 +171,13 @@ public struct DetailAttractionFeature {
         state.showLoginAlert = false
         return .none
         
-      default: return .none
+      case .getMapError:
+        // TODO: - 지도 오류 처리
+        return .none
+        
+      case .locationResult(.fail):
+        // TODO: - 위치 미허용 처리
+        return .none
       }
     }
   }

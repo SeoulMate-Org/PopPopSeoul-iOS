@@ -18,6 +18,7 @@ public struct DetailChallengeFeature {
   @Dependency(\.attractionClient) var attractionClient
   @Dependency(\.challengeClient) var challengeClient
   @Dependency(\.locationClient) var locationClient
+  @Dependency(\.commentClient) var commentClient
   
   // MARK: State
   
@@ -27,10 +28,19 @@ public struct DetailChallengeFeature {
     var challenge: Challenge?
     var showMenu: Bool = false
     var showLoginAlert: Bool = false
+    var showToast: Toast?
+    
+    var deletingComment: Int?
+    var updateAttractions: [Attraction]?
     
     public init(with id: Int) {
       self.challengeId = id
     }
+  }
+  
+  public enum Toast: Equatable {
+    case deleteComplete
+    case notNearAttraction
   }
   
   // MARK: Actions
@@ -40,9 +50,13 @@ public struct DetailChallengeFeature {
     case onApear
     case update(Challenge)
     case getError
+    case networkError
     case showLoginAlert
     case loginAlert(LoginAlertAction)
     case moveToMap(Challenge)
+    case showToast(Toast)
+    case dismissToast
+    case completeStamp([Attraction])
     
     // header
     case tappedBack
@@ -56,16 +70,21 @@ public struct DetailChallengeFeature {
     case updateAttraction(Attraction)
     case requestLocation
     case locationResult(LocationResult)
+    case updateUserCoordinate(Coordinate)
     
     // comment
     case tappedAllComments(id: Int, isFocus: Bool)
     case tappedEditComment(id: Int, Comment)
     case tappedDeleteComment(id: Int)
+    case cancelDeleteComment
+    case deleteComment(Int)
+    case moveToAllComment(id: Int, comment: Comment?, isFocus: Bool)
     
     // bottom
     case bottomAction(BottomAction)
     case notNearAttraction
     case locationRequired
+    case checkStamp(Coordinate)
   }
   
   public enum BottomAction: Equatable {
@@ -119,10 +138,22 @@ public struct DetailChallengeFeature {
           return .none
         } else {
           state.challenge = new
-          return .send(.requestLocation)
+          return .merge(
+            .run { send in
+              if let coordinate = AppSettingManager.shared.coordinate {
+                await send(.updateUserCoordinate(coordinate))
+              }
+            },
+            .run { send in
+              await send(.requestLocation)
+            })
         }
         
       case .getError:
+        // TODO: ERROR 처리
+        return .none
+        
+      case .networkError:
         // TODO: ERROR 처리
         return .none
         
@@ -167,6 +198,10 @@ public struct DetailChallengeFeature {
         }
         
       case let .locationResult(.success(coordinate)):
+        AppSettingManager.shared.setCoordinate(coordinate)
+        return .send(.updateUserCoordinate(coordinate))
+        
+      case let .updateUserCoordinate(coordinate):
         guard var challenge = state.challenge else { return .none }
 
         for (index, attraction) in challenge.attractions.enumerated() {
@@ -178,6 +213,54 @@ public struct DetailChallengeFeature {
         state.challenge = challenge
         return .none
         
+      case .checkStamp(_):
+        return .run { [state = state] send in
+          guard let challenge = state.challenge else {
+            return
+          }
+          
+          // ✅ 50m 이내 명소만 필터링
+          let nearAttractions = challenge.attractions
+            .filter { ($0.distance ?? 1000) < 50 }
+
+          guard !nearAttractions.isEmpty else {
+            await send(.notNearAttraction)
+            return
+          }
+          
+          // ✅ 도장 찍기 API 호출
+          var updatedAttraction: [Attraction] = []
+          var updated = challenge
+          
+          for (i, attraction) in updated.attractions.enumerated() {
+            guard !attraction.isStamped, // ✅ 이미 도장 찍은 경우는 skip
+                  let distance = attraction.distance,
+                  distance < 50  else { continue
+            }
+            do {
+              let result = try await attractionClient.stamp(attraction.id, attraction.name)
+              if result.isProcessed {
+                updated.attractions[i].isStamped = true
+                updated.attractions[i].stampCount += 1
+                updated.myStampCount += 1
+                updatedAttraction.append(updated.attractions[i])
+              } else {
+                logger.error("Stamp API 실패: \(attraction.id)")
+              }
+            } catch {
+              logger.error("Stamp API 실패: \(attraction.id)")
+            }
+          }
+          
+          if updatedAttraction.count > 0 {
+            // ✅ 반영된 상태 업데이트
+            await send(.update(updated))
+            await send(.completeStamp(updatedAttraction))
+          } else {
+            await send(.notNearAttraction)
+          }
+        }
+        
       case let .bottomAction(action):
         switch action {
         case .like:
@@ -188,7 +271,7 @@ public struct DetailChallengeFeature {
               // 1. 좋아요 UI 즉시 업데이트
               var update = challenge
               update.isLiked.toggle()
-              update.likedCount += update.isLiked ? 1 : -1
+              update.likes = max(0, update.likes + (update.isLiked ? 1 : -1))
               await send(.update(update))
               
               do {
@@ -200,7 +283,7 @@ public struct DetailChallengeFeature {
                   await send(.update(fresh))
                 }
               } catch {
-                await send(.getError)
+                await send(.networkError)
               }
             }
           } else {
@@ -215,52 +298,19 @@ public struct DetailChallengeFeature {
           }
           
         case .stamp:
-          return .run { [state = state] send in
-            let result = await locationClient.getCurrentLocation()
-            await send(.locationResult(result))
-            
-            switch result {
-            case .success:
-              guard let challenge = state.challenge else {
-                return
+          return .run { send in
+            if let coordinate = AppSettingManager.shared.coordinate {
+              await send(.checkStamp(coordinate))
+            } else {
+              let result = await locationClient.getCurrentLocation()
+              await send(.locationResult(result))
+              
+              switch result {
+              case let .success(coordinate):
+                await send(.checkStamp(coordinate))
+              case .fail:
+                await send(.locationRequired)
               }
-              
-              // ✅ 50m 이내 명소만 필터링
-              let nearAttractions = challenge.attractions
-                .filter { ($0.distance ?? 1000) < 50 }
-
-              guard !nearAttractions.isEmpty else {
-                await send(.notNearAttraction)
-                return
-              }
-              
-              // ✅ 도장 찍기 API 호출
-              var updated = challenge
-              
-              for (i, attraction) in updated.attractions.enumerated() {
-                guard !attraction.isStamped, // ✅ 이미 도장 찍은 경우는 skip
-                      let distance = attraction.distance,
-                      distance < 50  else { continue
-                }
-                do {
-                  let result = try await attractionClient.stamp(attraction.id)
-                  if result.isProcessed {
-                    updated.attractions[i].isStamped = true
-                    updated.attractions[i].stampCount += 1
-                    updated.myStampCount += 1
-                  } else {
-                    logger.error("Stamp API 실패: \(attraction.id)")
-                  }
-                } catch {
-                  logger.error("Stamp API 실패: \(attraction.id)")
-                }
-              }
-              
-              // ✅ 반영된 상태 업데이트
-              await send(.update(updated))
-              
-            case .fail:
-              await send(.requestLocation)
             }
           }
           
@@ -303,7 +353,76 @@ public struct DetailChallengeFeature {
         state.showLoginAlert = false
         return .none
         
-      default: return .none
+      case .moveToMap:
+        return .none
+        
+      case .tappedAttraction:
+        // Main TAb Navigation
+        return .none
+        
+      case .locationResult(.fail):
+        return .none
+        
+      case let .tappedAllComments(id, isFocus):
+        return .send(.moveToAllComment(id: id, comment: nil, isFocus: isFocus))
+        
+      case let .tappedEditComment(id, comment):
+        return .send(.moveToAllComment(id: id, comment: comment, isFocus: true))
+        
+      case .tappedDeleteComment(let id):
+        state.deletingComment = id
+        return .none
+        
+      case .cancelDeleteComment:
+        state.deletingComment = nil
+        return .none
+        
+      case let .deleteComment(id):
+        state.deletingComment = nil
+        return .run { [state = state] send in
+          guard let challenge = state.challenge else { return }
+          
+          do {
+            let result = try await commentClient.delete(id)
+            if result.isProcessed {
+              var updated = challenge
+              updated.comments.removeAll(where: { $0.id == result.id })
+              updated.commentCount = max(0, updated.commentCount - 1)
+              await send(.update(updated))
+              await send(.showToast(.deleteComplete))
+            } else {
+              await send(.networkError)
+            }
+          } catch {
+            await send(.networkError)
+          }
+        }
+        
+      case .moveToAllComment:
+        // Main Tab 에서 Navigation
+        return .none
+        
+      case .notNearAttraction:
+        return .send(.showToast(.notNearAttraction))
+        
+      case .locationRequired:
+        // TODO: - 위치 미허용 처리
+        return .send(.showToast(.notNearAttraction))
+        
+      case let .showToast(toast):
+        state.showToast = toast
+        return .run { send in
+          try await Task.sleep(nanoseconds: 3 * 1_000_000_000)
+          await send(.dismissToast)
+        }
+        
+      case .dismissToast:
+        state.showToast = nil
+        return .none
+        
+      case let .completeStamp(attractions):
+        state.updateAttractions = attractions
+        return .none
       }
     }
   }

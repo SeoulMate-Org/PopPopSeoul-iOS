@@ -7,6 +7,7 @@
 
 import Foundation
 import SharedTypes
+import Models
 import ComposableArchitecture
 
 public class AppSettingManager {
@@ -17,25 +18,24 @@ public class AppSettingManager {
   
   // MARK: - In-Memory Cache
   private var _language: AppLanguage?
+  public var coordinate: Coordinate?
   
   private init() {}
   
   public var language: AppLanguage {
-    get {
-      if let language = _language {
+    if let language = _language {
+      return language
+    } else {
+      if let key = userDefaultsClient.languageKey,
+         let language = AppLanguage(rawValue: key) {
+        _language = language
         return language
       } else {
-        if let key = userDefaultsClient.languageKey,
-           let language = AppLanguage(rawValue: key) {
-          _language = language
-          return language
+        let systemLang = Locale.preferredLanguages.first ?? "en"
+        if systemLang.starts(with: "ko") {
+          return .kor
         } else {
-          let systemLang = Locale.preferredLanguages.first ?? "en"
-          if systemLang.starts(with: "ko") {
-            return .kor
-          } else {
-            return .eng
-          }
+          return .eng
         }
       }
     }
@@ -67,5 +67,9 @@ public class AppSettingManager {
       await TokenManager.shared.clearAll()
       return false
     }
+  }
+  
+  public func setCoordinate(_ coordinate: Coordinate) {
+    self.coordinate = coordinate
   }
 }

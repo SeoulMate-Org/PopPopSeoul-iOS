@@ -23,7 +23,7 @@ public struct Challenge: Hashable, Equatable, Identifiable {
   public var isLiked: Bool
 
   public var progressCount: Int
-  public let commentCount: Int
+  public var commentCount: Int
   public let attractionCount: Int
   public var myStampCount: Int
   public var myStampCountLocal: Int {
@@ -38,7 +38,7 @@ public struct Challenge: Hashable, Equatable, Identifiable {
     ChallengeStatus.from(apiCode: challengeStatusCode)
   }
 
-  public let comments: [Comment]
+  public var comments: [Comment]
   public var attractions: [Attraction]
 
   public var stampCount: Int {

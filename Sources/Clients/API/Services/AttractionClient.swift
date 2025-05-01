@@ -12,12 +12,13 @@ import SharedTypes
 public struct AttractionClient {
   public var get: @Sendable (Int) async throws -> Attraction
   public var putLike: @Sendable (Int) async throws -> DefaultLikeResponse
-  public var stamp: @Sendable (Int) async throws -> DefaultProgressResponse
+  public var stamp: @Sendable (Int, String) async throws -> DefaultProgressResponse
 }
 
 extension AttractionClient: DependencyKey {
   public static var liveValue: AttractionClient {
     @Dependency(\.apiClient) var apiClient
+    @Dependency(\.userDefaultsClient) var userDefaultsClient
     
     return Self(
       get: { id in
@@ -37,12 +38,17 @@ extension AttractionClient: DependencyKey {
         
         return try data.decoded()
       },
-      stamp: { id in
+      stamp: { id, name in
         let query = DefaultIdRequest(id: id)
         let request: Request = .post(.attractionStamp, query: query.queryItems)
         let (data, _) = try await apiClient.send(request)
+        let result: DefaultProgressResponse = try data.decoded()
         
-        return try data.decoded()
+        if result.isProcessed {
+          await userDefaultsClient.setLastStampAttractionId(id)
+          await userDefaultsClient.setLastStampAttractionName(name)
+        }
+        return result
       }
     )
   }
