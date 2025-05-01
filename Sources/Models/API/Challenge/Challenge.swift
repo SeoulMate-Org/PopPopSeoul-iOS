@@ -25,7 +25,10 @@ public struct Challenge: Hashable, Equatable, Identifiable {
   public var progressCount: Int
   public let commentCount: Int
   public let attractionCount: Int
-  public let myStampCount: Int
+  public var myStampCount: Int
+  public var myStampCountLocal: Int {
+    return attractions.count(where:  { $0.isStamped })
+  }
 
   public let distance: Int
   public let displayRank: String

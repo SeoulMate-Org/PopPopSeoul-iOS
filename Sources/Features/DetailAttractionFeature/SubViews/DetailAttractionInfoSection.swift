@@ -21,7 +21,7 @@ struct DetailAttractionInfoSection: View {
       if !attraction.address.isEmpty {
         DetailAttractionAddressView(
           text: attraction.address,
-          distance: attraction.distance
+          distance: attraction.distance?.formattedDistance
         )
       }
       

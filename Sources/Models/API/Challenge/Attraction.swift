@@ -26,13 +26,13 @@ public struct Attraction: Hashable, Equatable, Identifiable {
     guard let latitude, let longitude else { return nil }
     return Coordinate(latitude: latitude, longitude: longitude)
   }
-  public var distance: String?
+  public var distance: Double?
   public let tel: String
   public let subway: String
   public var isLiked: Bool
   public var likes: Int
-  public let isStamped: Bool
-  public let stampCount: Int
+  public var isStamped: Bool
+  public var stampCount: Int
   public let imageUrl: String
   
   public init(id: Int, name: String, description: String, address: String, businessHours: String, homepageUrl: String, locationX: String, locationY: String, tel: String, subway: String, isLiked: Bool, likes: Int, isStamped: Bool, stampCount: Int, imageUrl: String) {

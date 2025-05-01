@@ -16,18 +16,32 @@ struct DetailChallengeCommentSection: View {
   let challenge: Challenge
   let onDeleteTap: (Int) -> Void
   let onEditTap: (Comment) -> Void
-  let onAllCommentTap: () -> Void
+  let onAllCommentTap: (Bool) -> Void
   @State private var activeMenuCommentId: Int? = nil
   
   var body: some View {
     // 댓글
     VStack(alignment: .leading, spacing: 0) {
       // 1. 제목
-      let countString = challenge.commentCount > 0 ? " \(challenge.commentCount)" : ""
-      Text(String(sLocalization: .detailchallengeCommentTitle) + countString)
-        .font(.appTitle3)
-        .foregroundColor(Colors.gray900.swiftUIColor)
-        .padding(.horizontal, 20)
+      HStack(alignment: .center) {
+        let countString = challenge.commentCount > 0 ? " \(challenge.commentCount)" : ""
+        Text(String(sLocalization: .detailchallengeCommentTitle) + countString)
+          .font(.appTitle3)
+          .foregroundColor(Colors.gray900.swiftUIColor)
+        
+        Spacer()
+        if challenge.myStampCountLocal > 0 {
+          Button(action: {
+            onAllCommentTap(true)
+          }) {
+            Assets.Icons.writeLine.swiftUIImage
+              .resizable()
+              .frame(width: 20, height: 20)
+              .foregroundColor(Colors.gray300.swiftUIColor)
+          }.frame(width: 36, height: 36)
+        }
+      }
+      .padding(.horizontal, 20)
       
       // 2. 댓글 리스트
       if challenge.commentCount > 0 {
@@ -68,7 +82,7 @@ struct DetailChallengeCommentSection: View {
             style: .neutral,
             layout: .textOnly,
             state: .enabled,
-            onTap: onAllCommentTap,
+            onTap: { onAllCommentTap(false) },
             isFullWidth: true
           )
           .frame(height: 40)
@@ -78,8 +92,8 @@ struct DetailChallengeCommentSection: View {
         
       }
       
-      // case2. 로그인 X or Like 챌린지
-      if !TokenManager.shared.isLogin || challenge.challengeStatus == nil {
+      // case2. 로그인 X or 미진행 챌린지
+      if !TokenManager.shared.isLogin || challenge.myStampCountLocal <= 0 {
         Text(String(sLocalization: .detailchallengeCommentDes))
           .font(.bodyS)
           .foregroundStyle(Colors.gray900.swiftUIColor)

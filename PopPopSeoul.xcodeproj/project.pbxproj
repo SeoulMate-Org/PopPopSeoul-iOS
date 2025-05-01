@@ -686,6 +686,7 @@
 		EA78227F2DC2AC9B009B6E47 /* PutChallengeStatusRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA78227E2DC2AC9B009B6E47 /* PutChallengeStatusRequest.swift */; };
 		EA7822822DC2AD54009B6E47 /* DefaultStatusResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7822812DC2AD54009B6E47 /* DefaultStatusResponse.swift */; };
 		EA7822852DC2BF62009B6E47 /* AppLoginAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7822842DC2BF62009B6E47 /* AppLoginAlertView.swift */; };
+		EA857DB82DC33E0600A30579 /* Double++.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA857DB72DC33E0600A30579 /* Double++.swift */; };
 		EA949284C11DB940F84888C2 /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256CCC92AC8D6EE5FACE5475 /* Dependencies.framework */; };
 		EAE62223229FB6E39F76669F /* CasePathsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CF7412324C02D1745F0E0D /* CasePathsCore.framework */; };
 		EB1B1D606C9519443C8093A6 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E58A56242DD34BBF412FCA4 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle */; };
@@ -1605,6 +1606,7 @@
 		EA78227E2DC2AC9B009B6E47 /* PutChallengeStatusRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PutChallengeStatusRequest.swift; sourceTree = "<group>"; };
 		EA7822812DC2AD54009B6E47 /* DefaultStatusResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStatusResponse.swift; sourceTree = "<group>"; };
 		EA7822842DC2BF62009B6E47 /* AppLoginAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoginAlertView.swift; sourceTree = "<group>"; };
+		EA857DB72DC33E0600A30579 /* Double++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double++.swift"; sourceTree = "<group>"; };
 		EB1AF2F0C1D291ADEC33A0B1 /* GetChallengeMyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeMyRequest.swift; sourceTree = "<group>"; };
 		EB50FD060BF7A2400BB005A7 /* ThemeChallengeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChallengeTabView.swift; sourceTree = "<group>"; };
 		EC4AFF88EA6DCED6098DE437 /* Clients-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Clients-Info.plist"; sourceTree = "<group>"; };
@@ -2517,6 +2519,7 @@
 				A8A0B63B6B0C65AFDD1568D3 /* String+Language.swift */,
 				C985F6F737100BAAA169894C /* UIApplication++.swift */,
 				239F000EF2496EC810251FC8 /* View++.swift */,
+				EA857DB72DC33E0600A30579 /* Double++.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -4198,6 +4201,7 @@
 				041186D189A96D3D27D810C7 /* KeyboardObserver.swift in Sources */,
 				0FC804C30878DA0C7D6ADC5E /* Logger.swift in Sources */,
 				46EE41EB818B56B317C02E3E /* RoundedCorner.swift in Sources */,
+				EA857DB82DC33E0600A30579 /* Double++.swift in Sources */,
 				1E9066799BA023B7330BB2ED /* StatefulPreviewWrapper.swift in Sources */,
 				525B75DDFDBE95D995A01ED0 /* SwiftLog.swift in Sources */,
 				DB878FFECB5F3A66CC11D2CF /* Utilities.swift in Sources */,

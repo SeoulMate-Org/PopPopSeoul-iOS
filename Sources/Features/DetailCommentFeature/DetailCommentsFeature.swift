@@ -26,14 +26,16 @@ public struct DetailCommentsFeature {
     var inputText: String = ""
     var keyboardHeight: CGFloat = 0
     var editingComment: Comment?
+    var initFoucus: Bool
     var shouldFocusTextField: Bool = false
     var deletingComment: Int?
     var enabledSave: Bool = false
     var showToast: Toast?
     
-    public init(with id: Int, _ editingComment: Comment? = nil) {
+    public init(with id: Int, _ editingComment: Comment? = nil, isFocus: Bool = false) {
       self.challengeId = id
       self.editingComment = editingComment
+      self.initFoucus = isFocus
     }
   }
   
@@ -76,6 +78,9 @@ public struct DetailCommentsFeature {
           
           if let editingComment = state.editingComment {
             await send(.inputTextChanged(editingComment.comment))
+          }
+          
+          if state.initFoucus {
             await send(.textFieldFocusChanged(true))
           }
           

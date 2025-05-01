@@ -68,6 +68,10 @@ public extension Request {
   static func post(_ endpoint: Endpoint, body: Data?) -> Request {
     Request(endpoint: endpoint, httpMethod: .post, body: body)
   }
+  
+  static func post(_ endpoint: Endpoint, query: [URLQueryItem] = []) -> Request {
+    Request(endpoint: endpoint, httpMethod: .post, queryItems: query)
+  }
 
   static func put(_ endpoint: Endpoint, body: Data?) -> Request {
     Request(endpoint: endpoint, httpMethod: .put, body: body)

@@ -64,6 +64,7 @@ public enum Assets {
     public static let warningLine = ImageAsset(name: "warning_line")
     public static let webLine = ImageAsset(name: "web_line")
     public static let wifiLine = ImageAsset(name: "wifi_line")
+    public static let writeLine = ImageAsset(name: "write_line")
     public static let xLine = ImageAsset(name: "x_line")
   }
   public enum Images {

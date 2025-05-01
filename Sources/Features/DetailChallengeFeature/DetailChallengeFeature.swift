@@ -58,12 +58,14 @@ public struct DetailChallengeFeature {
     case locationResult(LocationResult)
     
     // comment
-    case tappedAllComments(id: Int)
+    case tappedAllComments(id: Int, isFocus: Bool)
     case tappedEditComment(id: Int, Comment)
     case tappedDeleteComment(id: Int)
     
     // bottom
     case bottomAction(BottomAction)
+    case notNearAttraction
+    case locationRequired
   }
   
   public enum BottomAction: Equatable {
@@ -169,7 +171,7 @@ public struct DetailChallengeFeature {
 
         for (index, attraction) in challenge.attractions.enumerated() {
           if let from = attraction.coordinate {
-            challenge.attractions[index].distance = from.distanceFormatted(from: coordinate)
+            challenge.attractions[index].distance = from.distance(from: coordinate)
           }
         }
 
@@ -213,7 +215,54 @@ public struct DetailChallengeFeature {
           }
           
         case .stamp:
-          return .none
+          return .run { [state = state] send in
+            let result = await locationClient.getCurrentLocation()
+            await send(.locationResult(result))
+            
+            switch result {
+            case .success:
+              guard let challenge = state.challenge else {
+                return
+              }
+              
+              // ✅ 50m 이내 명소만 필터링
+              let nearAttractions = challenge.attractions
+                .filter { ($0.distance ?? 1000) < 50 }
+
+              guard !nearAttractions.isEmpty else {
+                await send(.notNearAttraction)
+                return
+              }
+              
+              // ✅ 도장 찍기 API 호출
+              var updated = challenge
+              
+              for (i, attraction) in updated.attractions.enumerated() {
+                guard !attraction.isStamped, // ✅ 이미 도장 찍은 경우는 skip
+                      let distance = attraction.distance,
+                      distance < 50  else { continue
+                }
+                do {
+                  let result = try await attractionClient.stamp(attraction.id)
+                  if result.isProcessed {
+                    updated.attractions[i].isStamped = true
+                    updated.attractions[i].stampCount += 1
+                    updated.myStampCount += 1
+                  } else {
+                    logger.error("Stamp API 실패: \(attraction.id)")
+                  }
+                } catch {
+                  logger.error("Stamp API 실패: \(attraction.id)")
+                }
+              }
+              
+              // ✅ 반영된 상태 업데이트
+              await send(.update(updated))
+              
+            case .fail:
+              await send(.requestLocation)
+            }
+          }
           
         case .start:
           return .run { [state = state] send in

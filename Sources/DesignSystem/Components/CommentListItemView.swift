@@ -44,8 +44,9 @@ public struct CommentListItemView: View {
           }
         }) {
           Assets.Icons.more.swiftUIImage
-            .foregroundColor(Colors.gray300.swiftUIColor)
+            .resizable()
             .frame(width: 16, height: 16)
+            .foregroundColor(Colors.gray300.swiftUIColor)
         }
         .frame(width: 36, height: 36)
         .padding(.top, type.verticalPadding - 2)

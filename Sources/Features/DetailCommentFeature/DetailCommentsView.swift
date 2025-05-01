@@ -44,6 +44,12 @@ struct DetailCommentsView: View {
                       viewStore.send(.tappedDelete(id: comment.id))
                     }, activeMenuCommentId: $activeMenuCommentId
                   )
+                  
+                  Divider()
+                    .frame(height: 1)
+                    .foregroundColor(Colors.gray25.swiftUIColor)
+                    .padding(.horizontal, 20)
+                  
                 }
               }
             }
@@ -191,4 +197,3 @@ extension DetailCommentsFeature.Toast {
     }
   }
 }
-

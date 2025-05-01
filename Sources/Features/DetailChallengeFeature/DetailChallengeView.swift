@@ -59,8 +59,8 @@ struct DetailChallengeView: View {
                     onEditTap: { comment in
                       viewStore.send(.tappedEditComment(id: challenge.id, comment))
                     },
-                    onAllCommentTap: {
-                      viewStore.send(.tappedAllComments(id: challenge.id))
+                    onAllCommentTap: { isFocus in
+                      viewStore.send(.tappedAllComments(id: challenge.id, isFocus: isFocus))
                     })
                 }
               }

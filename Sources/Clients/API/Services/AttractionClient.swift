@@ -12,6 +12,7 @@ import SharedTypes
 public struct AttractionClient {
   public var get: @Sendable (Int) async throws -> Attraction
   public var putLike: @Sendable (Int) async throws -> DefaultLikeResponse
+  public var stamp: @Sendable (Int) async throws -> DefaultProgressResponse
 }
 
 extension AttractionClient: DependencyKey {
@@ -32,6 +33,13 @@ extension AttractionClient: DependencyKey {
       putLike: { id in
         let query = DefaultIdRequest(id: id)
         let request: Request = .put(.attractionLike, query: query.queryItems)
+        let (data, _) = try await apiClient.send(request)
+        
+        return try data.decoded()
+      },
+      stamp: { id in
+        let query = DefaultIdRequest(id: id)
+        let request: Request = .post(.attractionStamp, query: query.queryItems)
         let (data, _) = try await apiClient.send(request)
         
         return try data.decoded()

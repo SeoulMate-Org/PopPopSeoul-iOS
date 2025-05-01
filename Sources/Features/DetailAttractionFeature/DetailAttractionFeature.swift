@@ -155,7 +155,7 @@ public struct DetailAttractionFeature {
         
       case let .locationResult(.success(coordinate)):
         if let from = state.attraction?.coordinate {
-          state.attraction?.distance = coordinate.distanceFormatted(from: from)
+          state.attraction?.distance = coordinate.distance(from: from)
         }
         return .none
         

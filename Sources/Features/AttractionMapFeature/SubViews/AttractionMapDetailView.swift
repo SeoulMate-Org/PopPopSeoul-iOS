@@ -47,7 +47,7 @@ struct AttractionMapDetailView: View {
                     .fill(Colors.blue50.swiftUIColor)
                 )
               
-              Text("\(distance)")
+              Text("\(distance.formattedDistance)")
                 .font(.bodyS)
                 .foregroundStyle(Colors.gray900.swiftUIColor)
                 .padding(.leading, 8)

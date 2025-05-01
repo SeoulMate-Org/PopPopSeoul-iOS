@@ -47,10 +47,12 @@ extension LocationClient: DependencyKey {
         for await event in await manager.delegate() {
           switch event {
           case let .didUpdateLocations(locations):
-            if let location = locations.first {
-              return .success(Coordinate(location.coordinate))
-            }
-            return .fail
+//            if let location = locations.first {
+//              return .success(Coordinate(location.coordinate))
+//            }
+//            return .fail
+            // TODO: TEST Location
+            return .success(Coordinate(latitude: 37.5125278, longitude: 127.0588432))
           case .didFailWithError:
             return .fail
           default:
