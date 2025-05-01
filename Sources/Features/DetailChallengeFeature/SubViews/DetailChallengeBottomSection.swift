@@ -33,7 +33,7 @@ struct DetailChallengeBottomSection: View {
           AppButton(title: String(sLocalization: .detailchallengeStampButton), size: .msize, style: .primary, layout: .textOnly, state: .enabled, onTap: { onTap(.stamp) }, isFullWidth: true)
             .padding(.vertical, 10)
         case .completed:
-          AppButton(title: String(sLocalization: .detailchallengeStartButton), size: .msize, style: .primary, layout: .textOnly, state: .disabled, onTap: { onTap(.start) }, isFullWidth: true)
+          AppButton(title: String(sLocalization: .detailchallengeStampButton), size: .msize, style: .primary, layout: .textOnly, state: .disabled, onTap: { onTap(.start) }, isFullWidth: true)
             .padding(.vertical, 10)
         default:
             AppButton(title: String(sLocalization: .detailchallengeStartButton), size: .msize, style: .primary, layout: .textOnly, state: .enabled, onTap: { onTap(.start) }, isFullWidth: true)

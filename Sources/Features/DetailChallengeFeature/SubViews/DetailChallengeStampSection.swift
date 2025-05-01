@@ -35,7 +35,7 @@ struct DetailChallengeStampSection: View {
           .padding(.horizontal, 20)
           .padding(.vertical, 17)
         Divider()
-        ChallengeStampView(items: challenge.attractions, stampCount: challenge.myStampCount)
+        ChallengeStampView(items: challenge.attractions, stampCount: challenge.myStampCountLocal)
           .padding(.vertical, 16)
       }
       .background(Colors.gray25.swiftUIColor)
