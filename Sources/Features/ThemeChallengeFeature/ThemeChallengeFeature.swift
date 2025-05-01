@@ -131,7 +131,17 @@ public struct ThemeChallengeFeature {
         state.showLoginAlert = false
         return .none
         
-      default: return .none
+      case .moveToMap:
+        // Main Tab Navigation
+        return .none
+        
+      case .networkError:
+        // TODO: - Error 처리
+        return .none
+        
+      case .tappedChallenge:
+        // Main Tab Navigation
+        return .none
       }
     }
   }

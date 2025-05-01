@@ -116,7 +116,7 @@ public struct MyChallengeTabFeature {
         state.showUndoToast = true
         return .run { send in
           do {
-            let _ = try await challengeClient.putLike(id)
+            _ = try await challengeClient.putLike(id)
             try await Task.sleep(nanoseconds: 3 * 1_000_000_000)
             await send(.dismissToast)
           } catch {
@@ -132,7 +132,7 @@ public struct MyChallengeTabFeature {
         
         return .run { send in
           do {
-            let _ = try await challengeClient.putLike(challenge.id)
+            _ = try await challengeClient.putLike(challenge.id)
           } catch {
             await send(.networkError)
           }

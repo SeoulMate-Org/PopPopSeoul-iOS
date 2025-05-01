@@ -124,4 +124,3 @@ public struct SplashFeature {
 }
 
 // MARK: - Helper
-

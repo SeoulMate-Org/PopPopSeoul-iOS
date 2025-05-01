@@ -28,10 +28,11 @@ public struct DetailChallengeFeature {
     var challenge: Challenge?
     var showMenu: Bool = false
     var showLoginAlert: Bool = false
+    var successStamps: [Attraction]?
     var showToast: Toast?
+    var showDim: Bool = false
     
     var deletingComment: Int?
-    var updateAttractions: [Attraction]?
     
     public init(with id: Int) {
       self.challengeId = id
@@ -56,7 +57,6 @@ public struct DetailChallengeFeature {
     case moveToMap(Challenge)
     case showToast(Toast)
     case dismissToast
-    case completeStamp([Attraction])
     
     // header
     case tappedBack
@@ -84,7 +84,10 @@ public struct DetailChallengeFeature {
     case bottomAction(BottomAction)
     case notNearAttraction
     case locationRequired
-    case checkStamp(Coordinate)
+    case stamp(Coordinate)
+    case successStamps([Attraction])
+    case doneSuccessStamps
+    case showCompleteChallenge
   }
   
   public enum BottomAction: Equatable {
@@ -213,7 +216,7 @@ public struct DetailChallengeFeature {
         state.challenge = challenge
         return .none
         
-      case .checkStamp(_):
+      case .stamp:
         return .run { [state = state] send in
           guard let challenge = state.challenge else {
             return
@@ -251,11 +254,17 @@ public struct DetailChallengeFeature {
               logger.error("Stamp API 실패: \(attraction.id)")
             }
           }
-          
+                    
           if updatedAttraction.count > 0 {
+            if updated.myStampCount == updated.attractionCount {
+              // 챌린지 완료 상태 업데이트
+              _ = try? await challengeClient.putStatus(challenge.id, .completed)
+              
+              updated.challengeStatusCode = ChallengeStatus.completed.apiCode
+            }
             // ✅ 반영된 상태 업데이트
             await send(.update(updated))
-            await send(.completeStamp(updatedAttraction))
+            await send(.successStamps(updatedAttraction))
           } else {
             await send(.notNearAttraction)
           }
@@ -300,14 +309,14 @@ public struct DetailChallengeFeature {
         case .stamp:
           return .run { send in
             if let coordinate = AppSettingManager.shared.coordinate {
-              await send(.checkStamp(coordinate))
+              await send(.stamp(coordinate))
             } else {
               let result = await locationClient.getCurrentLocation()
               await send(.locationResult(result))
               
               switch result {
               case let .success(coordinate):
-                await send(.checkStamp(coordinate))
+                await send(.stamp(coordinate))
               case .fail:
                 await send(.locationRequired)
               }
@@ -354,6 +363,7 @@ public struct DetailChallengeFeature {
         return .none
         
       case .moveToMap:
+        // Main TAb Navigation
         return .none
         
       case .tappedAttraction:
@@ -420,8 +430,23 @@ public struct DetailChallengeFeature {
         state.showToast = nil
         return .none
         
-      case let .completeStamp(attractions):
-        state.updateAttractions = attractions
+      case let .successStamps(attractions):
+        Haptic.success()
+        state.successStamps = attractions
+        state.showDim = true
+        return .none
+        
+      case .doneSuccessStamps:
+        state.successStamps = nil
+        state.showDim = false
+        if state.challenge?.challengeStatus == .completed {
+          return .send(.showCompleteChallenge)
+        }
+        return .none
+        
+      case .showCompleteChallenge:
+        // TODO: - 배지 처리
+        
         return .none
       }
     }

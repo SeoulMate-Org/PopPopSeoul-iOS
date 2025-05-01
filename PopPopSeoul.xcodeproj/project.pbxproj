@@ -687,6 +687,8 @@
 		EA7822822DC2AD54009B6E47 /* DefaultStatusResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7822812DC2AD54009B6E47 /* DefaultStatusResponse.swift */; };
 		EA7822852DC2BF62009B6E47 /* AppLoginAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7822842DC2BF62009B6E47 /* AppLoginAlertView.swift */; };
 		EA857DB82DC33E0600A30579 /* Double++.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA857DB72DC33E0600A30579 /* Double++.swift */; };
+		EA857DBA2DC393F400A30579 /* SuccessStampAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA857DB92DC393F400A30579 /* SuccessStampAlertView.swift */; };
+		EA857DBC2DC3A5C200A30579 /* Haptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA857DBB2DC3A5C200A30579 /* Haptic.swift */; };
 		EA949284C11DB940F84888C2 /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256CCC92AC8D6EE5FACE5475 /* Dependencies.framework */; };
 		EAE62223229FB6E39F76669F /* CasePathsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CF7412324C02D1745F0E0D /* CasePathsCore.framework */; };
 		EB1B1D606C9519443C8093A6 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E58A56242DD34BBF412FCA4 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle */; };
@@ -1607,6 +1609,8 @@
 		EA7822812DC2AD54009B6E47 /* DefaultStatusResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStatusResponse.swift; sourceTree = "<group>"; };
 		EA7822842DC2BF62009B6E47 /* AppLoginAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoginAlertView.swift; sourceTree = "<group>"; };
 		EA857DB72DC33E0600A30579 /* Double++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double++.swift"; sourceTree = "<group>"; };
+		EA857DB92DC393F400A30579 /* SuccessStampAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessStampAlertView.swift; sourceTree = "<group>"; };
+		EA857DBB2DC3A5C200A30579 /* Haptic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptic.swift; sourceTree = "<group>"; };
 		EB1AF2F0C1D291ADEC33A0B1 /* GetChallengeMyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeMyRequest.swift; sourceTree = "<group>"; };
 		EB50FD060BF7A2400BB005A7 /* ThemeChallengeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChallengeTabView.swift; sourceTree = "<group>"; };
 		EC4AFF88EA6DCED6098DE437 /* Clients-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Clients-Info.plist"; sourceTree = "<group>"; };
@@ -1885,6 +1889,7 @@
 				F74ABEEFFC50D57D572FEE89 /* StatefulPreviewWrapper.swift */,
 				22F8E62DCA661935F38FDFBF /* SwiftLog.swift */,
 				3AE161A4BA9FE7BAEA0BE5F6 /* Utilities.swift */,
+				EA857DBB2DC3A5C200A30579 /* Haptic.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -2838,6 +2843,7 @@
 				3556588400F0DEF63391F2C6 /* DetailChallengeInfoSection.swift */,
 				F5DC4693CCAF3432A4781044 /* DetailChallengePlaceSection.swift */,
 				1D076543D5EEF0F63E0FC229 /* DetailChallengeStampSection.swift */,
+				EA857DB92DC393F400A30579 /* SuccessStampAlertView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -4056,6 +4062,7 @@
 				0A8B30B48CB98F281EB0060B /* DetailChallengeInfoSection.swift in Sources */,
 				73758F1D9071EEC2DDC70A19 /* DetailChallengePlaceSection.swift in Sources */,
 				1BB5F79E2CF2DEA8F3C2F98E /* DetailChallengeStampSection.swift in Sources */,
+				EA857DBA2DC393F400A30579 /* SuccessStampAlertView.swift in Sources */,
 				9FF1A9AC7D704A390B50D7A7 /* DetailCommentsFeature.swift in Sources */,
 				B1BA03ED2D85434694697D60 /* DetailCommentsView.swift in Sources */,
 				F7A8041046097A0DD7ECF952 /* HomeTabFeature.swift in Sources */,
@@ -4202,6 +4209,7 @@
 				0FC804C30878DA0C7D6ADC5E /* Logger.swift in Sources */,
 				46EE41EB818B56B317C02E3E /* RoundedCorner.swift in Sources */,
 				EA857DB82DC33E0600A30579 /* Double++.swift in Sources */,
+				EA857DBC2DC3A5C200A30579 /* Haptic.swift in Sources */,
 				1E9066799BA023B7330BB2ED /* StatefulPreviewWrapper.swift in Sources */,
 				525B75DDFDBE95D995A01ED0 /* SwiftLog.swift in Sources */,
 				DB878FFECB5F3A66CC11D2CF /* Utilities.swift in Sources */,

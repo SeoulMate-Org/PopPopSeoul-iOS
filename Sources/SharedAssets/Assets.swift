@@ -70,6 +70,7 @@ public enum Assets {
   public enum Images {
     public static let logoDark = ImageAsset(name: "Logo_dark")
     public static let logoLight = ImageAsset(name: "Logo_light")
+    public static let completeChallenge = ImageAsset(name: "complete_challenge")
     public static let emptyPop = ImageAsset(name: "empty_pop")
     public static let errorImage = ImageAsset(name: "error_image")
     public static let homeBanner = ImageAsset(name: "home_banner")
