@@ -23,8 +23,8 @@ public struct MainTabFeature {
       case home, myChallenge, profile
     }
     
-    var myChallenge: MyChallengeTabFeature.State = .init()
     var home: HomeTabFeature.State = .init()
+    var myChallenge: MyChallengeTabFeature.State = .init()
     
     var showLoginAlert: Bool = false
     
@@ -37,8 +37,8 @@ public struct MainTabFeature {
   public enum Action: Equatable {
     case selectedTabChanged(State.Tab)
     
-    case myChallenge(MyChallengeTabFeature.Action)
     case home(HomeTabFeature.Action)
+    case myChallenge(MyChallengeTabFeature.Action)
     
     case loginAlert(LoginAlertAction)
     case successLogin(isNewUser: Bool)
@@ -68,10 +68,11 @@ public struct MainTabFeature {
         case .myChallenge:
           if !TokenManager.shared.isLogin {
             state.showLoginAlert = true
+          } else {
+            state.selectedTab = tab
           }
         case .profile:
           state.selectedTab = tab
-          break
         }
         return .none
         

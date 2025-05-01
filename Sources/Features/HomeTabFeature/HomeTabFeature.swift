@@ -13,8 +13,7 @@ public struct HomeTabFeature {
   @Dependency(\.locationClient) var locationClient
   @Dependency(\.callengeListClient) var callengeListClient
   @Dependency(\.challengeClient) var challengeClient
-  
-  
+    
   // MARK: - State
   
   @ObservableState
