@@ -64,7 +64,7 @@ struct HomeMissingSection: View {
                 challenge: challenge,
                 cardWidth: cardWidth,
                 onStartTapped: {
-                
+                  onStartTapped(challenge.id)
               })
               .onTapGesture {
                 onTapped(challenge.id)
