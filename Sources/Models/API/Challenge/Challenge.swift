@@ -16,6 +16,9 @@ public struct Challenge: Hashable, Equatable, Identifiable {
   public let imageUrl: String
   public let mainLocation: String
   public let challengeThemeId: Int
+  public var challengeTheme: ChallengeTheme? {
+    return ChallengeTheme(rawValue: challengeThemeId)
+  }
   public let challengeThemeName: String
 
   public var likes: Int

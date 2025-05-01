@@ -140,6 +140,11 @@ public struct MainTabFeature {
           state.path.append(.detailChallenge(DetailChallengeFeature.State(with: id)))
           return .none
           
+          // move to complete challenge
+        case .element(id: _, action: .detailChallenge(.showCompleteChallenge(let theme))):
+          state.path.append(.completeChallenge(CompleteChallengeFeature.State(with: theme)))
+          return .none
+          
         default:
           return .none
         }
@@ -164,6 +169,7 @@ extension MainTabFeature {
     case rankChallenge(RankChallengeFeature)
     case detailAttraction(DetailAttractionFeature)
     case attractionMap(AttractionMapFeature)
+    case completeChallenge(CompleteChallengeFeature)
   }
   
 }

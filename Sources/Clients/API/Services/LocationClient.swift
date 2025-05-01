@@ -51,7 +51,7 @@ extension LocationClient: DependencyKey {
 //              return .success(Coordinate(location.coordinate))
 //            }
 //            return .fail
-            // FIXME: TEST Location
+            // FIXME: [TEST] Location
             return .success(Coordinate(latitude: 37.5803346, longitude: 126.980303))
           case .didFailWithError:
             return .fail

@@ -88,6 +88,10 @@ public struct MainTabView: View {
         if let store = store.scope(state: \.attractionMap, action: \.attractionMap) {
           AttractionMapView(store: store)
         }
+      case .completeChallenge:
+        if let store = store.scope(state: \.completeChallenge, action: \.completeChallenge) {
+          CompleteChallengeView(store: store)
+        }
       }
     }
   }

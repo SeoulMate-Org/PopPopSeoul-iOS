@@ -87,7 +87,7 @@ public struct DetailChallengeFeature {
     case stamp(Coordinate)
     case successStamps([Attraction])
     case doneSuccessStamps
-    case showCompleteChallenge
+    case showCompleteChallenge(ChallengeTheme)
   }
   
   public enum BottomAction: Equatable {
@@ -193,7 +193,7 @@ public struct DetailChallengeFeature {
         
         state.challenge?.attractions[index] = new
         return .none
-                
+        
       case .requestLocation:
         return .run { send in
           let result = await locationClient.getCurrentLocation()
@@ -206,13 +206,13 @@ public struct DetailChallengeFeature {
         
       case let .updateUserCoordinate(coordinate):
         guard var challenge = state.challenge else { return .none }
-
+        
         for (index, attraction) in challenge.attractions.enumerated() {
           if let from = attraction.coordinate {
             challenge.attractions[index].distance = from.distance(from: coordinate)
           }
         }
-
+        
         state.challenge = challenge
         return .none
         
@@ -225,7 +225,7 @@ public struct DetailChallengeFeature {
           // ✅ 50m 이내 명소만 필터링
           let nearAttractions = challenge.attractions
             .filter { ($0.distance ?? 1000) < 50 }
-
+          
           guard !nearAttractions.isEmpty else {
             await send(.notNearAttraction)
             return
@@ -254,7 +254,7 @@ public struct DetailChallengeFeature {
               logger.error("Stamp API 실패: \(attraction.id)")
             }
           }
-                    
+          
           if updatedAttraction.count > 0 {
             if updated.myStampCount == updated.attractionCount {
               // 챌린지 완료 상태 업데이트
@@ -345,7 +345,7 @@ public struct DetailChallengeFeature {
               await send(.getError)
             }
           }
-        
+          
         case .login:
           return .send(.showLoginAlert)
         }
@@ -439,14 +439,14 @@ public struct DetailChallengeFeature {
       case .doneSuccessStamps:
         state.successStamps = nil
         state.showDim = false
-        if state.challenge?.challengeStatus == .completed {
-          return .send(.showCompleteChallenge)
+        if let challenge = state.challenge,
+           challenge.challengeStatus == .completed,
+           let theme = challenge.challengeTheme {
+          return .send(.showCompleteChallenge(theme))
         }
         return .none
         
       case .showCompleteChallenge:
-        // TODO: - 배지 처리
-        
         return .none
       }
     }
@@ -457,7 +457,7 @@ public struct DetailChallengeFeature {
 
 extension DetailChallengeFeature {
   func copyDistances(from old: Challenge, to new: inout Challenge) {
-    for (index, _) in new.attractions.enumerated() {
+    for index in new.attractions.indices {
       new.attractions[index].distance = old.attractions[index].distance
     }
   }
