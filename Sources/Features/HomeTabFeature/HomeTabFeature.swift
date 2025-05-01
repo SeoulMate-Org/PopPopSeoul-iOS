@@ -105,6 +105,8 @@ public struct HomeTabFeature {
     case fetchMissingList
     case updateMissingList([Challenge])
     case updateChallengeList([Challenge])
+    case tappedStart(Int)
+    case updateStartList(Int)
     
     // Similar List
     case fetchSimilarList
@@ -310,6 +312,24 @@ public struct HomeTabFeature {
       case let .updateChallengeList(list):
         state.missingList = []
         state.challengeList = list
+        return .none
+        
+      case let .tappedStart(id):
+        return .run { send in
+          do {
+            let response = try await challengeClient.putStatus(id, .progress)
+            if response.challengeStatus == .progress {
+              await send(.updateStartList(id))
+            } else {
+              await send(.networkError)
+            }
+          } catch {
+            await send(.networkError)
+          }
+        }
+        
+      case let .updateStartList(id):
+        state.missingList.removeAll(where: { $0.id == id })
         return .none
         
         // MARK: - Similar Reducer

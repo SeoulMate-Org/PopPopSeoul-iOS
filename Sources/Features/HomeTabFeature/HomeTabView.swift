@@ -86,7 +86,8 @@ struct HomeTabView: View {
               onTapped: { id in
                 store.send(.tappedChallenge(id: id))
               },
-              onStartTapped: { _ in
+              onStartTapped: { id in
+                store.send(.tappedStart(id))
               })
             .padding(.top, 48)
           }
@@ -98,7 +99,8 @@ struct HomeTabView: View {
               onTapped: { id in
                 store.send(.tappedChallenge(id: id))
               },
-              onStartTapped: { _ in
+              onStartTapped: { id in
+                store.send(.tappedStart(id))
               })
             .padding(.top, 48)
           }
