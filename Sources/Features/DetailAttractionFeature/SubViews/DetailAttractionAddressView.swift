@@ -19,7 +19,6 @@ struct DetailAttractionAddressView: View {
   @State private var isExpanded: Bool = false
   
   var body: some View {
-    //    VStack(alignment: .leading, spacing: 0) {
     HStack(alignment: .top, spacing: 16) {
       Assets.Icons.mapLine.swiftUIImage
         .resizable()

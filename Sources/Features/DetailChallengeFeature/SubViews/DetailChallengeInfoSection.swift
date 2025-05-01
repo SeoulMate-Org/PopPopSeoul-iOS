@@ -18,16 +18,21 @@ struct DetailChallengeInfoSection: View {
   var body: some View {
     VStack(alignment: .leading, spacing: 0) {
       // 이미지
-      KFImage( URL(string: challenge.imageUrl))
-        .placeholder {
-          Assets.Images.placeholderImage.swiftUIImage
-            .resizable()
-            .scaledToFill()
-        }.retry(maxCount: 2, interval: .seconds(5))
-        .resizable()
-        .scaledToFill()
-        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width * 234 / 375)
-        .clipped()
+      if challenge.isEventChallenge {
+        EventChallengeImageView(imageURL: URL(string: challenge.imageUrl))
+          .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width * 280 / 375)
+      } else {
+        KFImage( URL(string: challenge.imageUrl))
+          .placeholder {
+            Assets.Images.placeholderImage.swiftUIImage
+              .resizable()
+              .scaledToFill()
+          }.retry(maxCount: 2, interval: .seconds(5))
+          .resizable()
+          .scaledToFill()
+          .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width * 234 / 375)
+          .clipped()
+      }
       
       // 챌린지 정보
       VStack(alignment: .leading, spacing: 0) {

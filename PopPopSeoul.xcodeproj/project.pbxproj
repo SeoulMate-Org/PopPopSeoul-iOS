@@ -691,6 +691,8 @@
 		EA857DBC2DC3A5C200A30579 /* Haptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA857DBB2DC3A5C200A30579 /* Haptic.swift */; };
 		EA857DC02DC3A89B00A30579 /* CompleteChallengeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA857DBF2DC3A89B00A30579 /* CompleteChallengeFeature.swift */; };
 		EA857DC22DC3A93300A30579 /* CompleteChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA857DC12DC3A93300A30579 /* CompleteChallengeView.swift */; };
+		EA857DC72DC3B5E600A30579 /* EventChallengeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA857DC62DC3B5E600A30579 /* EventChallengeImageView.swift */; };
+		EA857DC92DC3DDB400A30579 /* EventChallengePlaceSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA857DC82DC3DDB400A30579 /* EventChallengePlaceSection.swift */; };
 		EA949284C11DB940F84888C2 /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256CCC92AC8D6EE5FACE5475 /* Dependencies.framework */; };
 		EAE62223229FB6E39F76669F /* CasePathsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CF7412324C02D1745F0E0D /* CasePathsCore.framework */; };
 		EB1B1D606C9519443C8093A6 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E58A56242DD34BBF412FCA4 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle */; };
@@ -1615,6 +1617,8 @@
 		EA857DBB2DC3A5C200A30579 /* Haptic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptic.swift; sourceTree = "<group>"; };
 		EA857DBF2DC3A89B00A30579 /* CompleteChallengeFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteChallengeFeature.swift; sourceTree = "<group>"; };
 		EA857DC12DC3A93300A30579 /* CompleteChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteChallengeView.swift; sourceTree = "<group>"; };
+		EA857DC62DC3B5E600A30579 /* EventChallengeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventChallengeImageView.swift; sourceTree = "<group>"; };
+		EA857DC82DC3DDB400A30579 /* EventChallengePlaceSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventChallengePlaceSection.swift; sourceTree = "<group>"; };
 		EB1AF2F0C1D291ADEC33A0B1 /* GetChallengeMyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeMyRequest.swift; sourceTree = "<group>"; };
 		EB50FD060BF7A2400BB005A7 /* ThemeChallengeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChallengeTabView.swift; sourceTree = "<group>"; };
 		EC4AFF88EA6DCED6098DE437 /* Clients-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Clients-Info.plist"; sourceTree = "<group>"; };
@@ -1969,8 +1973,8 @@
 				DB667ECAC5873E01395208FB /* ProfileFeature */,
 				C99DA2EC3C6B0AF00F1959E4 /* RankChallengeFeature */,
 				142E0F7C1044ACD1A196A16A /* SplashFeature */,
-				1C2086CB3AA94D77956863A9 /* ThemeChallengeFeature */,
 				C14829B0D69DDA71F6117608 /* DetailChallengeFeature */,
+				1C2086CB3AA94D77956863A9 /* ThemeChallengeFeature */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -2841,6 +2845,7 @@
 		E3A9C18AF46DEEAA0A847620 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				EA857DC62DC3B5E600A30579 /* EventChallengeImageView.swift */,
 				37D2C0136512A02CDF410C8B /* ChallengePlaceListItem.swift */,
 				118A7B5552BB25A1B1BE75CA /* ChallengeStampView.swift */,
 				A9FFF658871EDA115BCFB975 /* DetailChallengeBottomSection.swift */,
@@ -2849,6 +2854,7 @@
 				F5DC4693CCAF3432A4781044 /* DetailChallengePlaceSection.swift */,
 				1D076543D5EEF0F63E0FC229 /* DetailChallengeStampSection.swift */,
 				EA857DB92DC393F400A30579 /* SuccessStampAlertView.swift */,
+				EA857DC82DC3DDB400A30579 /* EventChallengePlaceSection.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -4053,6 +4059,7 @@
 				02D79A3E568314F99704AB42 /* TuistPlists+Features.swift in Sources */,
 				EA857DC22DC3A93300A30579 /* CompleteChallengeView.swift in Sources */,
 				ADF8753D78D6AB6AF59D1F2D /* AppFeature.swift in Sources */,
+				EA857DC72DC3B5E600A30579 /* EventChallengeImageView.swift in Sources */,
 				8808BC3A293387F2CBCD1591 /* AppView.swift in Sources */,
 				8251585596373E172367FA5B /* AttractionMapFeature.swift in Sources */,
 				2D2C6BED5A6A966415BCFD97 /* AttractionMapView.swift in Sources */,
@@ -4097,6 +4104,7 @@
 				4C51B7E0EA4B09C1CA72E4D7 /* HomeThemeIndicatorView.swift in Sources */,
 				EA7822772DC278A9009B6E47 /* AttractionMapDetailView.swift in Sources */,
 				08F395DD70DC7EF2B83A164E /* HomeThemeSection.swift in Sources */,
+				EA857DC92DC3DDB400A30579 /* EventChallengePlaceSection.swift in Sources */,
 				3256A9D6730D50DA2EFE14E8 /* HomeThemeTabView.swift in Sources */,
 				0EC516E2E41AB67AB1889EF1 /* LoginFeature.swift in Sources */,
 				B605962AB2D9FDD869D2A32B /* LoginView.swift in Sources */,

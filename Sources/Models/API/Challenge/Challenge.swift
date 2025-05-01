@@ -20,6 +20,9 @@ public struct Challenge: Hashable, Equatable, Identifiable {
     return ChallengeTheme(rawValue: challengeThemeId)
   }
   public let challengeThemeName: String
+  public var isEventChallenge: Bool {
+    return challengeThemeId == 2
+  }
 
   public var likes: Int
   public var likedCount: Int
@@ -30,7 +33,7 @@ public struct Challenge: Hashable, Equatable, Identifiable {
   public let attractionCount: Int
   public var myStampCount: Int
   public var myStampCountLocal: Int {
-    return attractions.count(where:  { $0.isStamped })
+    return attractions.count(where: { $0.isStamped })
   }
 
   public let distance: Int

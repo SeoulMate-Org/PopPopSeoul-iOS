@@ -22,6 +22,8 @@ public struct ThemeChallengeFeature {
   
   @ObservableState
   public struct State: Equatable {
+    public var fetchType: FetchType = .initial
+    
     var selectedTheme: ChallengeTheme = .mustSeeSpots
     var themeChallenges: [Challenge] = []
     var shouldScrollToTop: Bool = false
@@ -58,6 +60,7 @@ public struct ThemeChallengeFeature {
     Reduce { state, action in
       switch action {
       case .onApear:
+        state.fetchType = .resumed
         return .run { [state = state] send in
           let theme = state.selectedTheme
           await send(.fetchThemeList(theme))
@@ -103,6 +106,7 @@ public struct ThemeChallengeFeature {
         
       case let .themeChanged(theme):
         state.selectedTheme = theme
+        state.fetchType = .tabChanged
         return .send(.fetchThemeList(theme))
         
       case let .fetchThemeList(theme):
@@ -117,7 +121,12 @@ public struct ThemeChallengeFeature {
         
       case let .updateThemeList(list):
         state.themeChallenges = list
-        return .send(.setShouldScrollToTop(true))
+        
+        if state.fetchType == .tabChanged {
+          state.fetchType = .resumed
+          return .send(.setShouldScrollToTop(true))
+        }
+        return .none
         
       case .showLoginAlert:
         state.showLoginAlert = true
@@ -148,3 +157,9 @@ public struct ThemeChallengeFeature {
 }
 
 // MARK: - Helper
+
+public enum FetchType: Equatable {
+  case initial        // 최초 패치
+  case tabChanged     // 탭 변경
+  case resumed        // 디테일 → 뒤로 돌아올 때
+}

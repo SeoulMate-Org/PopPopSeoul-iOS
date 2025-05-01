@@ -44,14 +44,23 @@ struct DetailChallengeView: View {
                 divider()
                 DetailChallengeStampSection(challenge: challenge)
                 divider()
-                DetailChallengePlaceSection(
-                  challenge: challenge,
-                  onAttractionTap: { id in
-                    viewStore.send(.tappedAttraction(id: id))
-                  }, onLikeTap: { id in
-                    viewStore.send(.tappedAttractionLike(id: id))
-                  })
-                divider()
+                
+                if challenge.isEventChallenge {
+                  if let attraction = challenge.attractions.first {
+                    EventChallengePlaceSection(attraction: attraction)
+                    divider()
+                  }
+                } else {
+                  DetailChallengePlaceSection(
+                    challenge: challenge,
+                    onAttractionTap: { id in
+                      viewStore.send(.tappedAttraction(id: id))
+                    }, onLikeTap: { id in
+                      viewStore.send(.tappedAttractionLike(id: id))
+                    })
+                  divider()
+                }
+                
                 DetailChallengeCommentSection(
                   challenge: challenge,
                   onDeleteTap: { id in

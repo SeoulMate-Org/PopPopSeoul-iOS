@@ -23,8 +23,10 @@ struct DetailChallengeBottomSection: View {
         .frame(width: 48, height: 48)
       
       if TokenManager.shared.isLogin {
-        AppButton(title: String(sLocalization: .detailchallengeMapButton), size: .msize, style: .outline, layout: .textOnly, state: .enabled, onTap: { onTap(.map) }, isFullWidth: true)
-          .padding(.vertical, 10)
+        if !challenge.isEventChallenge {
+          AppButton(title: String(sLocalization: .detailchallengeMapButton), size: .msize, style: .outline, layout: .textOnly, state: .enabled, onTap: { onTap(.map) }, isFullWidth: true)
+            .padding(.vertical, 10)
+        }
         
         switch challenge.challengeStatus {
         case .progress:

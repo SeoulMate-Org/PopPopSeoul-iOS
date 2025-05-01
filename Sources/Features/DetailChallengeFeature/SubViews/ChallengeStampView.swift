@@ -13,6 +13,7 @@ import Models
 
 struct ChallengeStampView: View {
   let items: [Attraction]
+  let stampCount: Int
   private let itemSize: CGFloat = 48
   
   var body: some View {
@@ -20,7 +21,7 @@ struct ChallengeStampView: View {
       if items.count == 5 {
         // ✅ 정확한 균등 정렬
         ForEach(0..<items.count, id: \.self) { index in
-          stampImage(for: items[index])
+          stampImage(for: index < stampCount)
             .frame(width: itemSize, height: itemSize)
             .clipShape(RoundedRectangle(cornerRadius: itemSize / 2))
           
@@ -33,8 +34,8 @@ struct ChallengeStampView: View {
         let spacing = spacing(for: items.count)
         
         HStack(spacing: spacing) {
-          ForEach(items) { item in
-            stampImage(for: item)
+          ForEach(0..<items.count, id: \.self) { index in
+            stampImage(for: index < stampCount)
               .frame(width: itemSize, height: itemSize)
               .clipShape(RoundedRectangle(cornerRadius: itemSize / 2))
           }
@@ -56,8 +57,8 @@ struct ChallengeStampView: View {
   }
   
   @ViewBuilder
-  private func stampImage(for item: Attraction) -> some View {
-    (item.isStamped ? Assets.Images.stampActive.swiftUIImage : Assets.Images.stampInactive.swiftUIImage)
+  private func stampImage(for isStamped: Bool) -> some View {
+    (isStamped ? Assets.Images.stampActive.swiftUIImage : Assets.Images.stampInactive.swiftUIImage)
       .resizable()
       .scaledToFill()
   }
