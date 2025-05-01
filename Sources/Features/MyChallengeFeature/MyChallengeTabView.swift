@@ -40,7 +40,7 @@ struct MyChallengeTabView: View {
       tabContent(viewStore: viewStore)
     }
     .onAppear {
-      viewStore.send(.onApear)
+      viewStore.send(.onAppear)
     }
   }
   private func tabContent(viewStore: ViewStoreOf<MyChallengeTabFeature>) -> some View {

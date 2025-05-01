@@ -25,6 +25,8 @@ public extension Endpoint {
   static let authRefresh = Self(baseUrl: apiBaseUrl, pathComponents: ["auth", "refresh"])
   static let challengeMy = Self(baseUrl: apiBaseUrl, pathComponents: ["challenge", "my"])
   static let challenge = Self(baseUrl: apiBaseUrl, pathComponents: ["challenge"])
+  static let challengeListSeoul = Self(baseUrl: apiBaseUrl, pathComponents: ["challenge", "list", "seoul-master"])
+  static let challengeListCultural = Self(baseUrl: apiBaseUrl, pathComponents: ["challenge", "list", "cultural-event"])
   static let challengeListLocation = Self(baseUrl: apiBaseUrl, pathComponents: ["challenge", "list", "location"])
   static let challengeListTheme = Self(baseUrl: apiBaseUrl, pathComponents: ["challenge", "list", "theme"])
   static let challengeListStamp = Self(baseUrl: apiBaseUrl, pathComponents: ["challenge", "list", "stamp"])

@@ -27,6 +27,7 @@ struct HomeBannerItemView: View {
             .scaledToFill()
         }.retry(maxCount: 2, interval: .seconds(5))
         .resizable()
+        .scaledToFill()
         .frame(maxWidth: cardWidth, maxHeight: cardHeight)
       
       Rectangle()

@@ -27,6 +27,7 @@ struct AttractionMapListItem: View {
               .scaledToFill()
           }.retry(maxCount: 2, interval: .seconds(5))
           .resizable()
+          .scaledToFill()
           .frame(width: 36, height: 36)
           .clipShape(RoundedRectangle(cornerRadius: 10))
       

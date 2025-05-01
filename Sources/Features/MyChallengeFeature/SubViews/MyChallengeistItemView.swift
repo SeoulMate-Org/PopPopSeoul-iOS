@@ -27,6 +27,7 @@ struct MyChallengeistItemView: View {
             .scaledToFill()
         }.retry(maxCount: 2, interval: .seconds(5))
         .resizable()
+        .scaledToFill()
         .frame(width: 76, height: 76)
         .clipShape(RoundedRectangle(cornerRadius: 16))
 

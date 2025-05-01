@@ -25,6 +25,7 @@ struct DetailChallengeInfoSection: View {
             .scaledToFill()
         }.retry(maxCount: 2, interval: .seconds(5))
         .resizable()
+        .scaledToFill()
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width * 234 / 375)
         .clipped()
       

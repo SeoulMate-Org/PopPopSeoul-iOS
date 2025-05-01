@@ -35,20 +35,11 @@ struct HomeAccessPromptSection: View {
       
       Spacer()
       
-      if type == .login {
-        type.image
-          .resizable()
-          .scaledToFit()
-          .frame(width: 98, height: 98)
-          .padding(.top, 3)
-      } else {
-        type.image
-          .resizable()
-          .scaledToFit()
-          .frame(width: 75, height: 92)
-          .padding(.bottom, 11)
-          .padding(.trailing, 16)
-      }
+      Assets.Images.homePrompt.swiftUIImage
+        .resizable()
+        .scaledToFit()
+        .frame(width: 98, height: 98)
+        .padding(.top, 3)
     }
     .frame(height: 100)
     .background(
@@ -74,15 +65,6 @@ struct HomeAccessPromptSection: View {
       switch self {
       case .login: return "근처 장소부터 쉽게 참여할 수 있어요"
       case .location: return ""
-      }
-    }
-    
-    var image: Image {
-      switch self {
-      case .login:
-        return Assets.Images.homePromptLogin.swiftUIImage
-      case .location:
-        return Assets.Images.homePromptLocation.swiftUIImage
       }
     }
   }

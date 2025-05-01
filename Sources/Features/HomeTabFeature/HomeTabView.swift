@@ -29,6 +29,7 @@ struct HomeTabView: View {
         VStack(spacing: 0) {
           if viewStore.bannerList.count > 0 {
             HomeBannerSection(
+              isCultural: store.bannerState?.currentType == .cultural,
               challenges: viewStore.bannerList,
               onLikeTapped: { challenge in
                 viewStore.send(.tappedLike(challenge))

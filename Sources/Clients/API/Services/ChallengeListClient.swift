@@ -10,6 +10,8 @@ import Models
 import SharedTypes
 
 public struct ChallengeListClient {
+  public var fetchSeoulList: @Sendable () async throws -> [Challenge]
+  public var fetchCulturalList: @Sendable () async throws -> [Challenge]
   public var fetchLocationList: @Sendable (Coordinate) async throws -> LocationChallenges
   public var fetchThemeList: @Sendable (ChallengeTheme) async throws -> (theme: ChallengeTheme, list: [Challenge])
   public var fetchMissingList: @Sendable () async throws -> (tyoe: StampChallenge?, list: [Challenge])
@@ -23,6 +25,18 @@ extension ChallengeListClient: DependencyKey {
     @Dependency(\.userDefaultsClient) var userDefaultsClient
     
     return Self(
+      fetchSeoulList: {
+        let query = GetDefaultRequest()
+        let request: Request = .get(.challengeListSeoul, query: query.queryItems)
+        let (data, _) = try await apiClient.send(request)
+        return try data.decoded()
+      },
+      fetchCulturalList: {
+        let query = GetDefaultRequest()
+        let request: Request = .get(.challengeListCultural, query: query.queryItems)
+        let (data, _) = try await apiClient.send(request)
+        return try data.decoded()
+      },
       fetchLocationList: { coordinate in
         let query = GetChallengeListLocation(
           locationX: coordinate.longitude,

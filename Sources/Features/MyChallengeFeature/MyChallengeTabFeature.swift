@@ -51,7 +51,7 @@ public struct MyChallengeTabFeature {
   
   @CasePathable
   public enum Action: Equatable {
-    case onApear
+    case onAppear
     case tabChanged(Tab)
     case fetchList(Tab)
     case fetchListError
@@ -72,7 +72,7 @@ public struct MyChallengeTabFeature {
   public var body: some Reducer<State, Action> {
     Reduce { state, action in
       switch action {
-      case .onApear:
+      case .onAppear:
         return .send(.fetchList(state.selectedTab))
         
       case .tabChanged(let tab):

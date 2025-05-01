@@ -28,6 +28,7 @@ struct HomeChallengeItemView: View {
               .scaledToFill()
           }.retry(maxCount: 2, interval: .seconds(5))
           .resizable()
+          .scaledToFill()
           .frame(maxWidth: cardWidth, maxHeight: cardWidth)
         
         HStack(spacing: 4) {

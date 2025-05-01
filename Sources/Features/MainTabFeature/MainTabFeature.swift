@@ -110,7 +110,7 @@ public struct MainTabFeature {
       case let .path(action):
         switch action {
           // move to detail comments
-        case let .element(id: _, action: .detailChallenge(.moveToAllComment(id, comment,  isFocus))):
+        case let .element(id: _, action: .detailChallenge(.moveToAllComment(id, comment, isFocus))):
           state.path.append(.detailComments(DetailCommentsFeature.State(with: id, comment: comment, isFocus: isFocus)))
           return .none
           

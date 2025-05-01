@@ -12,6 +12,7 @@ import SharedAssets
 import Models
 
 struct HomeBannerSection: View {
+  var isCultural: Bool
   var challenges: [Challenge]
   var onLikeTapped: (Challenge) -> Void
   var onTapped: (Int) -> Void
@@ -40,7 +41,7 @@ struct HomeBannerSection: View {
       }
       
       VStack(alignment: .leading, spacing: 16) {
-        Text("⛳️ 지금 바로\n도전 가능한 챌린지!")
+        Text(isCultural ? "⛳️ 지금 바로\n도전 가능한 챌린지!" : "⛳️ 서울 여행 마스터를 위한\n필수 챌린지!")
           .font(.appTitle1)
           .lineLimit(2)
           .lineSpacing(9)

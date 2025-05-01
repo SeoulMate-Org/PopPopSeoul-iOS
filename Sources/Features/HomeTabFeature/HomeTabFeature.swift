@@ -13,7 +13,7 @@ public struct HomeTabFeature {
   @Dependency(\.locationClient) var locationClient
   @Dependency(\.callengeListClient) var callengeListClient
   @Dependency(\.challengeClient) var challengeClient
-    
+  
   // MARK: - State
   
   @ObservableState
@@ -24,6 +24,7 @@ public struct HomeTabFeature {
     var userCoordinate: Coordinate?
     
     // Banner
+    var bannerState: BannerState?
     var bannerList: [Challenge] = []
     
     // Location
@@ -55,6 +56,17 @@ public struct HomeTabFeature {
     case none
   }
   
+  public struct BannerState: Equatable {
+    var currentType: BannerType
+    var lastUpdated: Date
+    
+    public enum BannerType: Equatable {
+      case seoul
+      case cultural
+      case none
+    }
+  }
+  
   // MARK: - Action
   
   @CasePathable
@@ -69,12 +81,12 @@ public struct HomeTabFeature {
     
     // Banner
     case fetchBannerList
-    case fetchExplorationList // 탐방형
-    case fetchParticipationList // 참여형
+    case fetchSeoulList// 탐방형
+    case fetchCulturalList // 참여형
+    case updateBannerList(BannerState, [Challenge])
     
     // Location List
     case requestLocation
-    case locationClient(LocationManager.Action)
     case locationResult(LocationResult)
     case updateUserCoordinate(Coordinate?)
     case updateLocationListType(LocationListType)
@@ -118,22 +130,26 @@ public struct HomeTabFeature {
             await send(.requestLocation)
           },
           
-          .merge(
-            prefetchThemes.map { .send(.fetchThemeList($0)) }
-          ),
-        
-          .run { send in
-            await send(.fetchMissingList)
-          },
-        
-          .run { send in
-            await send(.fetchSimilarList)
-          },
-        
-          .run { send in
-            await send(.fetchRankList)
-          }
-      )
+            .run { send in
+              await send(.fetchBannerList)
+            },
+          
+            .merge(
+              prefetchThemes.map { .send(.fetchThemeList($0)) }
+            ),
+          
+            .run { send in
+              await send(.fetchMissingList)
+            },
+          
+            .run { send in
+              await send(.fetchSimilarList)
+            },
+          
+            .run { send in
+              await send(.fetchRankList)
+            }
+        )
         
       case .refetch:
         state.onAppearType = .retained
@@ -179,25 +195,19 @@ public struct HomeTabFeature {
         return .none
         
       case .requestLocation:
-          return .merge(
-            .run { _ in await locationClient.requestAuthorization() },
-            .run { send in
-              for await action in await locationClient.startMonitoring() {
-                await send(.locationClient(action), animation: .default)
-              }
-            },
-            .run { send in
-              let status = await locationClient.getAuthorizationStatus()
-              await send(.locationClient(.didChangeAuthorization(status)))
-            },
-            .run { send in
-              let result = await locationClient.getCurrentLocation()
-              await send(.locationResult(result))
-            }
-          )
-        
-      case .locationClient(.didChangeAuthorization):
-        return .none
+        return .merge(
+          .run { _ in await locationClient.requestAuthorization() },
+          .run { _ in
+            _ = await locationClient.startMonitoring()
+          },
+          .run { _ in
+            _ = await locationClient.getAuthorizationStatus()
+          },
+          .run { send in
+            let result = await locationClient.getCurrentLocation()
+            await send(.locationResult(result))
+          }
+        )
         
       case let .locationResult(.success(coordinate)):
         return .run { send in
@@ -234,7 +244,7 @@ public struct HomeTabFeature {
           state.locationList = []
         }
         return .none
-      
+        
       case let .fetchLocationList(coordinate):
         return .run { send in
           do {
@@ -340,7 +350,66 @@ public struct HomeTabFeature {
       case .tappedRankMore:
         return .send(.moveToRank)
         
-      default: return .none
+      case .networkError:
+        // TODO: - Error 처리
+        return .none
+        
+      case .showLoginAlert:
+        // Main Tab Navigation
+        return .none
+        
+      case .tappedChallenge:
+        // Main Tab Navigation
+        return .none
+        
+      case .fetchBannerList:
+        if let bannerState = state.bannerState {
+          let now = Date()
+          let diff = now.timeIntervalSince(bannerState.lastUpdated)
+          if diff >= 300 {
+            if bannerState.currentType == .seoul {
+              return .send(.fetchCulturalList)
+            } else {
+              return .send(.fetchSeoulList)
+            }
+          }
+        }
+        return .send(.fetchSeoulList)
+        
+      case .fetchSeoulList:
+        return .run { send in
+          do {
+            let list = try await callengeListClient.fetchSeoulList()
+            let bannerState = BannerState(currentType: .seoul, lastUpdated: Date())
+            await send(.updateBannerList(bannerState, list))
+          } catch {
+            await send(.networkError)
+          }
+        }
+        
+      case .fetchCulturalList:
+        return .run { send in
+          do {
+            let list = try await callengeListClient.fetchCulturalList()
+            let bannerState = BannerState(currentType: .cultural, lastUpdated: Date())
+            await send(.updateBannerList(bannerState, list))
+          } catch {
+            await send(.networkError)
+          }
+        }
+        
+      case let .updateBannerList(bannerState, list):
+        state.bannerState = bannerState
+        state.bannerList = list
+        return .none
+        
+      case .moveToThemeChallenge:
+        // Main Tab Navigation
+        return .none
+        
+      case .moveToRank:
+        // Main Tab Navigation
+        return .none
       }
     }
   }
