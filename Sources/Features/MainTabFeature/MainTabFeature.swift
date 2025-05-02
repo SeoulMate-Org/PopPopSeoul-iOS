@@ -8,6 +8,7 @@
 import Foundation
 import ComposableArchitecture
 import Clients
+import Common
 
 @Reducer
 public struct MainTabFeature {
@@ -27,7 +28,7 @@ public struct MainTabFeature {
     var myChallenge: MyChallengeTabFeature.State = .init()
     var profile: ProfileTabFeature.State = .init()
     
-    var showLoginAlert: Bool = false
+    var showAlert: Alert?
     
     var path = StackState<Path.State>()
   }
@@ -42,12 +43,19 @@ public struct MainTabFeature {
     case myChallenge(MyChallengeTabFeature.Action)
     case profile(ProfileTabFeature.Action)
     
-    case loginAlert(LoginAlertAction)
+    case alertAction(Alert, Bool)
     case successLogin(isNewUser: Bool)
     
     case path(StackActionOf<Path>)
     
     case appReLaunch
+  }
+  
+  public enum Alert: Equatable {
+    case login
+    case logout
+    case onLocation
+    case offLocation
   }
   
   // MARK: Reducer
@@ -74,7 +82,7 @@ public struct MainTabFeature {
           state.selectedTab = tab
         case .myChallenge:
           if !TokenManager.shared.isLogin {
-            state.showLoginAlert = true
+            state.showAlert = .login
           } else {
             state.selectedTab = tab
           }
@@ -84,14 +92,32 @@ public struct MainTabFeature {
         }
         return .none
         
-      case .loginAlert(.cancelTapped):
-        state.showLoginAlert = false
-        return .none
-        
-      case .loginAlert(.loginTapped):
-        state.showLoginAlert = false
-        state.path.append(.login(LoginFeature.State(isInit: false)))
-        return .none
+      case let .alertAction(alert, isDone):
+        switch alert {
+        case .login:
+          state.showAlert = nil
+          if isDone {
+            state.path.append(.login(LoginFeature.State(isInit: false)))
+            return .none
+          } else {
+            return .none
+          }
+        case .logout:
+          state.showAlert = nil
+          if isDone {
+            return .send(.profile(.tappedLogout))
+          } else {
+            return .none
+          }
+        case .onLocation, .offLocation:
+          state.showAlert = nil
+          if isDone {
+            Utility.moveAppSetting()
+            return .none
+          } else {
+            return .none
+          }
+        }
         
         // MARK: - My Challenge Reducer
       case .myChallenge(.tappedItem(let id)):
@@ -100,7 +126,7 @@ public struct MainTabFeature {
         
         // MARK: - Home Reducer
       case .home(.showLoginAlert):
-        state.showLoginAlert = true
+        state.showAlert = .login
         return .none
         
       case .home(.tappedChallenge(let id)):
@@ -139,9 +165,30 @@ public struct MainTabFeature {
           
         case .notification:
           return .none
+          
         case .onboarding:
           return .none
+          
         case .withdraw:
+          return .none
+        }
+        
+      case .profile(.showAlert(let alert)):
+        switch alert {
+        case .login:
+          state.showAlert = .login
+          return .none
+          
+        case .logout:
+          state.showAlert = .logout
+          return .none
+          
+        case .onLocation:
+          state.showAlert = .onLocation
+          return .none
+          
+        case .offLocation:
+          state.showAlert = .offLocation
           return .none
         }
         

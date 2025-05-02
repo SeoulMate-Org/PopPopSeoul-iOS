@@ -25,6 +25,9 @@ struct ProfileServiceSection: View {
         }
         .frame(width: 40, height: 40)
       }
+      .onTapGesture {
+        onOnboardingTapped()
+      }
       .padding(.leading, 16)
       .padding(.trailing, 8)
       
@@ -35,6 +38,9 @@ struct ProfileServiceSection: View {
             .frame(width: 24, height: 24)
         }
         .frame(width: 40, height: 40)
+      }
+      .onTapGesture {
+        onFAQTapped()
       }
       .padding(.leading, 16)
       .padding(.trailing, 8)

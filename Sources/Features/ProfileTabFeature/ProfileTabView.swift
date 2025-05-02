@@ -18,6 +18,8 @@ struct ProfileTabView: View {
   init(store: StoreOf<ProfileTabFeature>) {
     self.store = store
     self.viewStore = ViewStore(self.store, observe: { $0 })
+    
+    UIScrollView.appearance().bounces = false
   }
   
   var body: some View {
@@ -31,8 +33,8 @@ struct ProfileTabView: View {
             isLogin: viewStore.isLogin,
             user: viewStore.user,
             onTapped: {
-            viewStore.send(.tappedNickname)
-          })
+              viewStore.send(.tappedNickname)
+            })
           
           ProfileCountView(
             user: viewStore.user,
@@ -63,17 +65,17 @@ struct ProfileTabView: View {
             onOnboardingTapped: {
               viewStore.send(.move(.onboarding))
             }, onFAQTapped: {
-              viewStore.send(.moveWeb(.faq))
+              viewStore.send(.tappedFAQ)
             })
           .padding(.top, 16)
           
           ProfilePolicySection(
             onServiceTapped: {
-              viewStore.send(.moveWeb(.termsOfService))
+              viewStore.send(.tappedTermsOfService)
             }, onPrivacyTapped: {
-              viewStore.send(.moveWeb(.privacyPolicy))
+              viewStore.send(.tappedPrivacyPolicy)
             }, onLocationTapped: {
-              viewStore.send(.moveWeb(.locationPrivacy))
+              viewStore.send(.tappedLocationPrivacy)
             })
           .padding(.top, 16)
           
@@ -96,6 +98,17 @@ struct ProfileTabView: View {
     }
     .onAppear {
       viewStore.send(.initialize)
+    }
+    .sheet(item: viewStore.binding(
+      get: \.showWeb,
+      send: ProfileTabFeature.Action.dismissWeb
+    )) { web in
+      SafariView(url: {
+        switch web {
+        case let .faq(url), let .termsOfService(url), let .privacyPolicy(url), let .locationPrivacy(url):
+          return url
+        }
+      }())
     }
   }
 }

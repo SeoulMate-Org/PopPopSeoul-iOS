@@ -43,5 +43,6 @@ public struct SettingRowView<Trailing: View>: View {
       trailing()
     }
     .frame(height: 40)
+    .frame(maxWidth: .infinity)
   }
 }

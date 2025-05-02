@@ -53,12 +53,51 @@ public struct MainTabView: View {
         }
         .overlay(
           Group {
-            if viewStore.showLoginAlert {
-              AppLoginAlertView(onLoginTapped: {
-                viewStore.send(.loginAlert(.loginTapped))
-              }, onCancelTapped: {
-                viewStore.send(.loginAlert(.cancelTapped))
-              })
+            if let showAlert = viewStore.showAlert {
+              switch showAlert {
+              case .login:
+                AppLoginAlertView(onLoginTapped: {
+                  viewStore.send(.alertAction(.login, true))
+                }, onCancelTapped: {
+                  viewStore.send(.alertAction(.login, false))
+                })
+              case .logout:
+                AppAlertView(
+                  title: "로그아웃할까요?",
+                  message: "앱에서 로그아웃됩니다.",
+                  primaryButtonTitle: "로그인",
+                  primaryAction: {
+                    viewStore.send(.alertAction(.logout, true))
+                  },
+                  secondaryButtonTitle: "취소",
+                  secondaryAction: {
+                    viewStore.send(.alertAction(.logout, false))
+                  })
+              case .onLocation:
+                AppAlertView(
+                  title: "위치 권한을 설정할까요?",
+                  message: "챌린지 진행을 위해 위치 정보가 필요해요.",
+                  primaryButtonTitle: "설정하러 가기",
+                  primaryAction: {
+                    viewStore.send(.alertAction(.onLocation, true))
+                  },
+                  secondaryButtonTitle: "취소",
+                  secondaryAction: {
+                    viewStore.send(.alertAction(.onLocation, false))
+                  })
+              case .offLocation:
+                AppAlertView(
+                  title: "위치 권한을 해제할까요?",
+                  message: "챌린지 진행을 위해 위치 정보가 필요해요.",
+                  primaryButtonTitle: "해제하러 가기",
+                  primaryAction: {
+                    viewStore.send(.alertAction(.offLocation, true))
+                  },
+                  secondaryButtonTitle: "나중에",
+                  secondaryAction: {
+                    viewStore.send(.alertAction(.offLocation, false))
+                  })
+              }
             }
           }
         )

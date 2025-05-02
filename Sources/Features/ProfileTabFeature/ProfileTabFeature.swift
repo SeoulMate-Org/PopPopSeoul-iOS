@@ -13,23 +13,21 @@ public struct ProfileTabFeature {
   @Dependency(\.userDefaultsClient) var userDefaultsClient
   @Dependency(\.locationClient) var locationClient
   @Dependency(\.userClient) var userClient
+  @Dependency(\.authClient) var authClient
   
   // MARK: - State
   
   @ObservableState
   public struct State: Equatable {
-    public init() {
-      self.isLogin = TokenManager.shared.isLogin
-    }
-    
     public var onAppearType: OnAppearType = .firstTime
     
     var language: AppLanguage = .kor
     var appVersion: String = ""
-    var isLogin: Bool
+    var isLogin: Bool = false
     var user: User?
     var isLocationAuth: Bool  = false
     var showAlert: Alert?
+    var showWeb: Web?
   }
   
   public enum Alert: Equatable {
@@ -55,7 +53,12 @@ public struct ProfileTabFeature {
     case tappedAlertCancel
     
     case move(MoveAction)
-    case moveWeb(MoveWeb)
+    case tappedFAQ
+    case tappedTermsOfService
+    case tappedPrivacyPolicy
+    case tappedLocationPrivacy
+    case showWeb(Web)
+    case dismissWeb
     
     case tappedNickname
     case tappedLoginCheckMove(MoveAction)
@@ -64,11 +67,20 @@ public struct ProfileTabFeature {
     case tappetGoToSetting
   }
   
-  public enum MoveWeb: Equatable {
-    case faq
-    case termsOfService
-    case privacyPolicy
-    case locationPrivacy
+  public enum Web: Equatable, Identifiable {
+    case faq(url: URL)
+    case termsOfService(url: URL)
+    case privacyPolicy(url: URL)
+    case locationPrivacy(url: URL)
+    
+    public var id: String {
+      switch self {
+      case .faq: return "faq"
+      case .termsOfService: return "terms"
+      case .privacyPolicy: return "privacy"
+      case .locationPrivacy: return "location"
+      }
+    }
   }
   
   public enum MoveAction: Equatable {
@@ -87,16 +99,25 @@ public struct ProfileTabFeature {
     Reduce { state, action in
       switch action {
       case .initialize:
+        state.isLogin = TokenManager.shared.isLogin
         state.language = AppSettingManager.shared.language
         state.appVersion = Constants.appVersion
-        return .merge(
-          .run { send in
-            await send(.fetchUser)
-          },
-          .run { send in
+        
+        if state.isLogin {
+          return .merge(
+            .run { send in
+              await send(.fetchUser)
+            },
+            .run { send in
+              await send(.requestLocation)
+            }
+          )
+        } else {
+          state.user = nil
+          return .run { send in
             await send(.requestLocation)
           }
-        )
+        }
         
       case .networkError:
         // TODO: - Network Error 처리
@@ -143,10 +164,11 @@ public struct ProfileTabFeature {
         }
         
       case let .toggleLocationAuth(isOn):
+        state.isLocationAuth = isOn
         if isOn {
-          return .none
+          return .send(.showAlert(.onLocation))
         } else {
-          return .none
+          return .send(.showAlert(.offLocation))
         }
         
         // MARK: - Move Action
@@ -158,28 +180,57 @@ public struct ProfileTabFeature {
         state.showAlert = alert
         return .none
         
-      case let .moveWeb(web):
-        switch web {
-        case .faq:
-          return .none
-        case .termsOfService:
-          return .none
-        case .privacyPolicy:
-          return .none
-        case .locationPrivacy:
-          return .none
+      case let .showWeb(web):
+        state.showWeb = web
+        return .none
+        
+      case .dismissWeb:
+        state.showWeb = nil
+        return .none
+        
+      case .tappedFAQ:
+        if state.language == .kor {
+          return .send(.showWeb(.faq(url: URL(string: "https://early-palladium-c40.notion.site/1e3bde6bd69580c89725e7b2399baadb?pvs=74")!)))
+        } else {
+          return .send(.showWeb(.faq(url: URL(string: "https://early-palladium-c40.notion.site/Seoul-Tourism-FAQ-1e3bde6bd6958018b538c35bf630ca0b")!)))
+        }
+      case .tappedTermsOfService:
+        if state.language == .kor {
+          return .send(.showWeb(.faq(url: URL(string: "https://early-palladium-c40.notion.site/1e3bde6bd6958065a15fc07db4fb67d1?pvs=74")!)))
+        } else {
+          return .send(.showWeb(.faq(url: URL(string: "https://early-palladium-c40.notion.site/Terms-and-Conditions-of-Service-1e3bde6bd695809c8437f8d794829836?pvs=74")!)))
+        }
+        
+      case .tappedPrivacyPolicy:
+        if state.language == .kor {
+          return .send(.showWeb(.faq(url: URL(string: "https://early-palladium-c40.notion.site/1e3bde6bd69580acbecdd6e595e1f7b8")!)))
+        } else {
+          return .send(.showWeb(.faq(url: URL(string: "https://early-palladium-c40.notion.site/Privacy-Policy-1e3bde6bd69580bcb074c603910d8c55")!)))
+        }
+        
+      case .tappedLocationPrivacy:
+        if state.language == .kor {
+          return .send(.showWeb(.faq(url: URL(string: "https://early-palladium-c40.notion.site/1e3bde6bd6958076ac0ac01e78dda837?pvs=74")!)))
+        } else {
+          return .send(.showWeb(.faq(url: URL(string: "https://early-palladium-c40.notion.site/Location-Information-Processing-Policy-1e3bde6bd69580609698fd3b570eb124?pvs=74")!)))
         }
         
       case let .tappedLoginCheckMove(action):
         if TokenManager.shared.isLogin {
           return .send(.move(action))
         } else {
-          return .none
+          return .send(.showAlert(.login))
         }
         
       case .tappedLogout:
-        // TODO: Logout
-        return .none
+        return .run { send in
+          do {
+            try await authClient.logout()
+            await send(.initialize)
+          } catch {
+            await send(.networkError)
+          }
+        }
         
       case .tappedAlertCancel:
         state.showAlert = nil
