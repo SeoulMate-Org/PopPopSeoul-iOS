@@ -25,6 +25,7 @@ public struct MainTabFeature {
     
     var home: HomeTabFeature.State = .init()
     var myChallenge: MyChallengeTabFeature.State = .init()
+    var profile: ProfileTabFeature.State = .init()
     
     var showLoginAlert: Bool = false
     
@@ -39,6 +40,7 @@ public struct MainTabFeature {
     
     case home(HomeTabFeature.Action)
     case myChallenge(MyChallengeTabFeature.Action)
+    case profile(ProfileTabFeature.Action)
     
     case loginAlert(LoginAlertAction)
     case successLogin(isNewUser: Bool)
@@ -57,6 +59,10 @@ public struct MainTabFeature {
       HomeTabFeature()
     }
     
+    Scope(state: \.profile, action: \.profile) {
+      ProfileTabFeature()
+    }
+    
     Reduce { state, action in
       switch action {
       case .selectedTabChanged(let tab):
@@ -73,6 +79,7 @@ public struct MainTabFeature {
           }
         case .profile:
           state.selectedTab = tab
+          state.profile.onAppearType = .tabReappeared
         }
         return .none
         
@@ -174,12 +181,12 @@ extension MainTabFeature {
   
 }
 
-public enum LoginAlertAction {
+public enum LoginAlertAction: Equatable {
   case cancelTapped
   case loginTapped
 }
 
-public enum OnAppearType {
+public enum OnAppearType: Equatable {
   case firstTime
   case tabReappeared
   case retained

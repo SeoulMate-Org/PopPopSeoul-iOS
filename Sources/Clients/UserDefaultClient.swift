@@ -64,6 +64,22 @@ public struct UserDefaultsClient {
   public func setLastStampAttractionName(_ value: String) async {
     await setString(value, .lastStampAttractionName)
   }
+  
+  public var isLocationRequestBlocked: Bool {
+    boolForKey(.isLocationRequestBlocked)
+  }
+  
+  public func setIsLocationRequestBlocked(_ value: Bool) async {
+    await setBool(value, .isLocationRequestBlocked)
+  }
+  
+  public var isLocationNotiEnabled: Bool {
+    boolForKey(.isLocationNotiEnabled)
+  }
+  
+  public func setIsLocationNotiEnabled(_ value: Bool) async {
+    await setBool(value, .isLocationNotiEnabled)
+  }
 }
 
 // MARK: - DependencyKey
@@ -104,4 +120,6 @@ public enum UserDefaultsKey: String {
   case isAutoLogin
   case lastStampAttractionId
   case lastStampAttractionName
+  case isLocationRequestBlocked
+  case isLocationNotiEnabled
 }

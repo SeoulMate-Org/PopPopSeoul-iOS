@@ -28,7 +28,7 @@ struct RankChallengeView: View {
       }))
       
       // MARK: - 리스트
-      ScrollView {
+      ScrollView(showsIndicators: false) {
         VStack(alignment: .leading, spacing: 0) {
           Text("🏅 챌린지 랭킹")
             .font(.appTitle2)

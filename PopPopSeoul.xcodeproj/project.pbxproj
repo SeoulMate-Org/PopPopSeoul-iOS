@@ -243,7 +243,7 @@
 		4CD22CF613C5E318AD801E15 /* GoogleUtilities_Logger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5FF10C42D9A65BAE46267BA /* GoogleUtilities_Logger.framework */; };
 		4D238D3B4EA20A3B741A8D20 /* GoogleUtilities_GoogleUtilities_NSData.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = D33356F810759666121A369E /* GoogleUtilities_GoogleUtilities_NSData.bundle */; };
 		4D32F217C394B4B4C48041A7 /* String+Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A0B63B6B0C65AFDD1568D3 /* String+Language.swift */; };
-		4DB78142CE9018F793C0FB23 /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F294A4517EDB4132704F925 /* AuthProvider.swift */; };
+		4DB78142CE9018F793C0FB23 /* AppLoginType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F294A4517EDB4132704F925 /* AppLoginType.swift */; };
 		4E1F1ECD510729F5C3EADA25 /* FBSDKLoginKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 98321F2355BA270BBC51DF0D /* FBSDKLoginKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4E2FCB1941DA444D76021ACA /* Firebase_FirebaseCoreInternal.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DBAE0E09BAEB98F9EB635193 /* Firebase_FirebaseCoreInternal.bundle */; };
 		4E43810AC3286D79283DE369 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21F1198C49E87E8F197837EE /* Assets.xcassets */; };
@@ -694,6 +694,12 @@
 		EA857DC72DC3B5E600A30579 /* EventChallengeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA857DC62DC3B5E600A30579 /* EventChallengeImageView.swift */; };
 		EA857DC92DC3DDB400A30579 /* EventChallengePlaceSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA857DC82DC3DDB400A30579 /* EventChallengePlaceSection.swift */; };
 		EA949284C11DB940F84888C2 /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256CCC92AC8D6EE5FACE5475 /* Dependencies.framework */; };
+		EA9B83622DC4792800BF6EF8 /* ProfileNicknameSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B83612DC4792800BF6EF8 /* ProfileNicknameSection.swift */; };
+		EA9B83652DC483B400BF6EF8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B83642DC483B400BF6EF8 /* User.swift */; };
+		EA9B83672DC4964600BF6EF8 /* ProfileCountSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B83662DC4964600BF6EF8 /* ProfileCountSection.swift */; };
+		EA9B83692DC49CA600BF6EF8 /* ProfileSettingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B83682DC49CA600BF6EF8 /* ProfileSettingSection.swift */; };
+		EA9B836B2DC4A61000BF6EF8 /* ProfileServiceSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B836A2DC4A61000BF6EF8 /* ProfileServiceSection.swift */; };
+		EA9B836D2DC4A67A00BF6EF8 /* ProfileSettingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B836C2DC4A67A00BF6EF8 /* ProfileSettingRow.swift */; };
 		EAE62223229FB6E39F76669F /* CasePathsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CF7412324C02D1745F0E0D /* CasePathsCore.framework */; };
 		EB1B1D606C9519443C8093A6 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E58A56242DD34BBF412FCA4 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle */; };
 		EB2C1DD848ACAAE2D607CA78 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F75DBDEF31E5F47ECCF65C8 /* UIKit.framework */; };
@@ -1309,7 +1315,7 @@
 		0E58A56242DD34BBF412FCA4 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoogleUtilities_GoogleUtilities_UserDefaults.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EBF9F8340D192E1DFF2DE0C /* FirebaseAuthInterop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FirebaseAuthInterop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F21D60D642DF96328E45E8D /* Promises_FBLPromises.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Promises_FBLPromises.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F294A4517EDB4132704F925 /* AuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
+		0F294A4517EDB4132704F925 /* AppLoginType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoginType.swift; sourceTree = "<group>"; };
 		0FDADD6234ECCBB55ACF071F /* LoginFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFeature.swift; sourceTree = "<group>"; };
 		118A7B5552BB25A1B1BE75CA /* ChallengeStampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeStampView.swift; sourceTree = "<group>"; };
 		12027B3AAE4122CAB10D8966 /* GetDefaultRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDefaultRequest.swift; sourceTree = "<group>"; };
@@ -1619,6 +1625,12 @@
 		EA857DC12DC3A93300A30579 /* CompleteChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteChallengeView.swift; sourceTree = "<group>"; };
 		EA857DC62DC3B5E600A30579 /* EventChallengeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventChallengeImageView.swift; sourceTree = "<group>"; };
 		EA857DC82DC3DDB400A30579 /* EventChallengePlaceSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventChallengePlaceSection.swift; sourceTree = "<group>"; };
+		EA9B83612DC4792800BF6EF8 /* ProfileNicknameSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNicknameSection.swift; sourceTree = "<group>"; };
+		EA9B83642DC483B400BF6EF8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EA9B83662DC4964600BF6EF8 /* ProfileCountSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCountSection.swift; sourceTree = "<group>"; };
+		EA9B83682DC49CA600BF6EF8 /* ProfileSettingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingSection.swift; sourceTree = "<group>"; };
+		EA9B836A2DC4A61000BF6EF8 /* ProfileServiceSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileServiceSection.swift; sourceTree = "<group>"; };
+		EA9B836C2DC4A67A00BF6EF8 /* ProfileSettingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingRow.swift; sourceTree = "<group>"; };
 		EB1AF2F0C1D291ADEC33A0B1 /* GetChallengeMyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeMyRequest.swift; sourceTree = "<group>"; };
 		EB50FD060BF7A2400BB005A7 /* ThemeChallengeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChallengeTabView.swift; sourceTree = "<group>"; };
 		EC4AFF88EA6DCED6098DE437 /* Clients-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Clients-Info.plist"; sourceTree = "<group>"; };
@@ -1970,7 +1982,7 @@
 				06A50B4F21C07B459EBFDACA /* MainTabFeature */,
 				BB86FC6468239EFC712C137E /* MyChallengeFeature */,
 				80562B2A00C4143FCC139C05 /* OnboardingFeature */,
-				DB667ECAC5873E01395208FB /* ProfileFeature */,
+				DB667ECAC5873E01395208FB /* ProfileTabFeature */,
 				C99DA2EC3C6B0AF00F1959E4 /* RankChallengeFeature */,
 				142E0F7C1044ACD1A196A16A /* SplashFeature */,
 				C14829B0D69DDA71F6117608 /* DetailChallengeFeature */,
@@ -2074,7 +2086,7 @@
 			isa = PBXGroup;
 			children = (
 				639706D78979DE707B493EC7 /* AppLanguage.swift */,
-				0F294A4517EDB4132704F925 /* AuthProvider.swift */,
+				0F294A4517EDB4132704F925 /* AppLoginType.swift */,
 				A42F83AEBA48033FAC2BD18D /* ChallengeStatus.swift */,
 				13E321B243FD5013A5F3A377 /* ChallengeTheme.swift */,
 				EA78227C2DC29E27009B6E47 /* StampChallenge.swift */,
@@ -2219,6 +2231,7 @@
 		593A58E2E91B021A4AF3F884 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				EA9B83632DC483A800BF6EF8 /* User */,
 				E8BF3E18D9330646FC4B140B /* Auth */,
 				A8B97444BDC21E92ADCD5B72 /* Challenge */,
 				4C7CD1DE9C1766B505116142 /* Comment */,
@@ -2644,6 +2657,7 @@
 				E1C2DFE92F74F7CEEECA30AE /* AppUpdateClient.swift */,
 				83ABE631EB8E51E8B50AC0E5 /* KeychainClient.swift */,
 				A7C4661154860CE88FEFF6B5 /* UserDefaultClient.swift */,
+				BC3C194AFE031F351846B808 /* LocationClient.swift */,
 			);
 			path = Clients;
 			sourceTree = "<group>";
@@ -2700,7 +2714,6 @@
 				D81D115D59B6ABEBFBF0F2EE /* ChallengeClient.swift */,
 				A6B95880DD1F10361C61889E /* ChallengeListClient.swift */,
 				3D8A03A3CB0BE02487388DF4 /* CommentClient.swift */,
-				BC3C194AFE031F351846B808 /* LocationClient.swift */,
 				E9D23E812DA7735D291EA0D0 /* MyChallengeClient.swift */,
 			);
 			path = Services;
@@ -2800,13 +2813,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		DB667ECAC5873E01395208FB /* ProfileFeature */ = {
+		DB667ECAC5873E01395208FB /* ProfileTabFeature */ = {
 			isa = PBXGroup;
 			children = (
+				EA9B83602DC4790400BF6EF8 /* SubViews */,
 				7288EA3CAB750A44B5725505 /* ProfileTabFeature.swift */,
 				03D0DD13A2EBD72C6B41330A /* ProfileTabView.swift */,
 			);
-			path = ProfileFeature;
+			path = ProfileTabFeature;
 			sourceTree = "<group>";
 		};
 		DDCA4F81E1CF37CBDDCD0464 /* firebase-ios-sdk */ = {
@@ -2885,6 +2899,26 @@
 				EA857DC12DC3A93300A30579 /* CompleteChallengeView.swift */,
 			);
 			path = CompleteChallengeFeature;
+			sourceTree = "<group>";
+		};
+		EA9B83602DC4790400BF6EF8 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				EA9B83612DC4792800BF6EF8 /* ProfileNicknameSection.swift */,
+				EA9B83662DC4964600BF6EF8 /* ProfileCountSection.swift */,
+				EA9B83682DC49CA600BF6EF8 /* ProfileSettingSection.swift */,
+				EA9B836A2DC4A61000BF6EF8 /* ProfileServiceSection.swift */,
+				EA9B836C2DC4A67A00BF6EF8 /* ProfileSettingRow.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		EA9B83632DC483A800BF6EF8 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				EA9B83642DC483B400BF6EF8 /* User.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		ECAA166E243FFD9AE32214FD /* SubViews */ = {
@@ -4035,6 +4069,7 @@
 				323A6B486B2EE964D6713B21 /* Auth.swift in Sources */,
 				2AF58EFF798811C457137D04 /* Token.swift in Sources */,
 				17D6DC7F1B2B65662937F369 /* Attraction.swift in Sources */,
+				EA9B83652DC483B400BF6EF8 /* User.swift in Sources */,
 				51F102BB491F6FEFF9F37E98 /* Challenge.swift in Sources */,
 				5E92D79480225B86B215E07C /* Comment.swift in Sources */,
 				EA78227B2DC29DB7009B6E47 /* StampChallenges.swift in Sources */,
@@ -4060,6 +4095,7 @@
 				EA857DC22DC3A93300A30579 /* CompleteChallengeView.swift in Sources */,
 				ADF8753D78D6AB6AF59D1F2D /* AppFeature.swift in Sources */,
 				EA857DC72DC3B5E600A30579 /* EventChallengeImageView.swift in Sources */,
+				EA9B836B2DC4A61000BF6EF8 /* ProfileServiceSection.swift in Sources */,
 				8808BC3A293387F2CBCD1591 /* AppView.swift in Sources */,
 				8251585596373E172367FA5B /* AttractionMapFeature.swift in Sources */,
 				2D2C6BED5A6A966415BCFD97 /* AttractionMapView.swift in Sources */,
@@ -4087,6 +4123,7 @@
 				EA857DBA2DC393F400A30579 /* SuccessStampAlertView.swift in Sources */,
 				9FF1A9AC7D704A390B50D7A7 /* DetailCommentsFeature.swift in Sources */,
 				B1BA03ED2D85434694697D60 /* DetailCommentsView.swift in Sources */,
+				EA9B83622DC4792800BF6EF8 /* ProfileNicknameSection.swift in Sources */,
 				F7A8041046097A0DD7ECF952 /* HomeTabFeature.swift in Sources */,
 				99D2FCFE5C99E482481F1C1F /* HomeTabView.swift in Sources */,
 				24E623B17F84E2C71AB91851 /* HomeBannerItemView.swift in Sources */,
@@ -4100,6 +4137,8 @@
 				695A8C4D1888B6776C3DD0CF /* HomeRankSection.swift in Sources */,
 				EA857DC02DC3A89B00A30579 /* CompleteChallengeFeature.swift in Sources */,
 				19CE3DB262A71B88AA42F2D7 /* HomeSimilarSection.swift in Sources */,
+				EA9B836D2DC4A67A00BF6EF8 /* ProfileSettingRow.swift in Sources */,
+				EA9B83672DC4964600BF6EF8 /* ProfileCountSection.swift in Sources */,
 				5C5F891B06547F5498BBEA2F /* HomeThemeChallengeListView.swift in Sources */,
 				4C51B7E0EA4B09C1CA72E4D7 /* HomeThemeIndicatorView.swift in Sources */,
 				EA7822772DC278A9009B6E47 /* AttractionMapDetailView.swift in Sources */,
@@ -4125,6 +4164,7 @@
 				37BEC83C0D51EACE22A8B99B /* RankChallengeItemView.swift in Sources */,
 				8D12753644E1D2AA1FFE753A /* SplashFeature.swift in Sources */,
 				800D6CA88DCE555BD656C21A /* SplashView.swift in Sources */,
+				EA9B83692DC49CA600BF6EF8 /* ProfileSettingSection.swift in Sources */,
 				86A470D2C2491F90CBAEEB43 /* ThemeChallengeListView.swift in Sources */,
 				504E1A3626E5C8DB1EC8BD33 /* ThemeChallengeTabView.swift in Sources */,
 				5DCE30C3BE48CFE03CBFAF95 /* ThemeLoginPromptSection.swift in Sources */,
@@ -4299,7 +4339,7 @@
 				620203721EABAE489BE39CD1 /* TuistFonts+SharedTypes.swift in Sources */,
 				25EFFC1526C0C16E8D691D85 /* TuistPlists+SharedTypes.swift in Sources */,
 				711775C017C03FFA2336957E /* AppLanguage.swift in Sources */,
-				4DB78142CE9018F793C0FB23 /* AuthProvider.swift in Sources */,
+				4DB78142CE9018F793C0FB23 /* AppLoginType.swift in Sources */,
 				A87B2527AC10797CC53830A3 /* ChallengeStatus.swift in Sources */,
 				155E470CE309A58F055F17EA /* ChallengeTheme.swift in Sources */,
 			);

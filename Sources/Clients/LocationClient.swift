@@ -19,6 +19,8 @@ public struct LocationClient {
 
 extension LocationClient: DependencyKey {
   public static let liveValue: LocationClient = {
+    @Dependency(\.userDefaultsClient) var userDefaultsClient
+    
     let manager = LocationManager.live
 
     return LocationClient(
@@ -30,13 +32,17 @@ extension LocationClient: DependencyKey {
       },
       getAuthorizationStatus: {
         await manager.authorizationStatus()
+        
       },
       requestLocation: {
         await manager.requestLocation()
       },
       getCurrentLocation: {
+        guard !userDefaultsClient.isLocationRequestBlocked else {
+          return .fail
+        }
+        
         let status = await manager.authorizationStatus()
-
         guard status == .authorizedWhenInUse || status == .authorizedAlways else {
           return .fail
         }
@@ -52,7 +58,7 @@ extension LocationClient: DependencyKey {
 //            }
 //            return .fail
             // FIXME: [TEST] Location
-            return .success(Coordinate(latitude: 37.5803346, longitude: 126.980303))
+            return .success(Coordinate(latitude: 37.516920655117, longitude: 127.118166964751))
           case .didFailWithError:
             return .fail
           default:

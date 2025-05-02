@@ -24,8 +24,10 @@ public typealias AssetImageTypeAlias = ImageAsset.Image
 public enum Assets {
   public enum Icons {
     public static let apple = ImageAsset(name: "apple")
+    public static let appleProfile = ImageAsset(name: "apple_profile")
     public static let arrowLeftLine = ImageAsset(name: "arrow_left_line")
     public static let arrowRightLine = ImageAsset(name: "arrow_right_line")
+    public static let arrowRightSmall = ImageAsset(name: "arrow_right_small")
     public static let arrowUnderSmall = ImageAsset(name: "arrow_under_small")
     public static let arrowUpperLine = ImageAsset(name: "arrow_upper_line")
     public static let arrowUpperSmall = ImageAsset(name: "arrow_upper_small")
@@ -38,7 +40,9 @@ public enum Assets {
     public static let embassyLine = ImageAsset(name: "embassy_line")
     public static let emptyLine = ImageAsset(name: "empty_line")
     public static let facebook = ImageAsset(name: "facebook")
+    public static let facebookProfile = ImageAsset(name: "facebook_profile")
     public static let google = ImageAsset(name: "google")
+    public static let googleProfile = ImageAsset(name: "google_profile")
     public static let heartFill = ImageAsset(name: "heart_fill")
     public static let heartLine = ImageAsset(name: "heart_line")
     public static let homeFill = ImageAsset(name: "home_fill")

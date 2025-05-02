@@ -12,3 +12,10 @@ public enum AuthProvider: Equatable {
   case google(idToken: String)
   case facebook(email: String)
 }
+
+public enum AppLoginType: String, Equatable {
+  case apple = "APPLE"
+  case google = "GOOGLE"
+  case facebook = "FACEBOOK"
+  case none
+}

@@ -20,7 +20,7 @@ struct MyChallengeListView: View {
   
   var body: some View {
     
-    ScrollView {
+    ScrollView(showsIndicators: false) {
       LazyVStack(alignment: .leading, spacing: 4) {
         Text(String(sLocalization: .mychallengeTotal).localizedFormat("\(items.count)"))
           .font(.captionL)

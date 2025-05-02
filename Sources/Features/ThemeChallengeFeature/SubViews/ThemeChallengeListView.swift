@@ -21,7 +21,7 @@ struct ThemeChallengeListView: View {
   
   var body: some View {
     ScrollViewReader { proxy in
-      ScrollView {
+      ScrollView(showsIndicators: false) {
         Color.clear
           .frame(height: 0)
           .id("top")

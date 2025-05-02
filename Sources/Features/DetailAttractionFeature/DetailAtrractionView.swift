@@ -28,7 +28,7 @@ struct DetailAtrractionView: View {
           viewStore.send(.tappedBack)
         }))
         
-        ScrollView {
+        ScrollView(showsIndicators: false) {
           VStack(alignment: .leading, spacing: 0) {
             if let attraction = viewStore.attraction {
               DetailAttractionTopSection(

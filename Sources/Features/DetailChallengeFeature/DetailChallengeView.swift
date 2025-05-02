@@ -37,7 +37,7 @@ struct DetailChallengeView: View {
         }
         
         ZStack(alignment: .bottom) {
-          ScrollView {
+          ScrollView(showsIndicators: false) {
             VStack(alignment: .leading, spacing: 0) {
               if let challenge = viewStore.challenge {
                 DetailChallengeInfoSection(challenge: challenge)
@@ -170,7 +170,7 @@ struct DetailChallengeView: View {
         )
         .opacity(viewStore.successStamps != nil ? 1 : 0)
         .offset(y: viewStore.successStamps != nil ? 0 : UIScreen.main.bounds.height)
-        .animation(.spring(response: 0.5, dampingFraction: 0.7), value: viewStore.successStamps != nil)
+        .animation(.spring(response: 0.4, dampingFraction: 0.7), value: viewStore.successStamps != nil)
       }
     )
     .navigationBarBackButtonHidden(true)

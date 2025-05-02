@@ -197,19 +197,26 @@ public struct HomeTabFeature {
         return .none
         
       case .requestLocation:
-        return .merge(
-          .run { _ in await locationClient.requestAuthorization() },
-          .run { _ in
-            _ = await locationClient.startMonitoring()
-          },
-          .run { _ in
-            _ = await locationClient.getAuthorizationStatus()
-          },
-          .run { send in
-            let result = await locationClient.getCurrentLocation()
-            await send(.locationResult(result))
+        return .run { send in
+          
+          // 1. 권한 요청
+          await locationClient.requestAuthorization()
+          
+          // 2. 권한 상태 확인
+          let status = await locationClient.getAuthorizationStatus()
+          guard status == .authorizedAlways || status == .authorizedWhenInUse else {
+            await send(.locationResult(.fail))
+            return
           }
-        )
+          
+          // 3. delegate 연결 (중복 방지를 위해 최초 한 번만)
+          _ = await locationClient.startMonitoring()
+          
+          // 4. 위치 요청
+          let result = await locationClient.getCurrentLocation()
+          await send(.locationResult(result))
+          
+        }
         
       case let .locationResult(.success(coordinate)):
         return .run { send in

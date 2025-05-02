@@ -39,7 +39,12 @@ public struct MainTabView: View {
                 )
               )
             case .profile:
-              ProfileTabView()
+              ProfileTabView(
+                store: store.scope(
+                  state: \.profile,
+                  action: \.profile
+                )
+              )
             }
           }
           .frame(maxHeight: .infinity)
@@ -164,14 +169,6 @@ public struct MainTabView: View {
 
 // MARK: Preview
 
-//#Preview {
-//  MainTabView(
-//    store: Store<MainTabFeature.State, MainTabFeature.Action>(
-//      initialState: .init(),
-//      reducer: { MainTabFeature() }
-//    )
-//  )
-//}
 
 // MARK: - Helper
 

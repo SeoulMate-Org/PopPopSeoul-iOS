@@ -32,7 +32,7 @@ struct DetailCommentsView: View {
           }))
           
           if viewStore.comments.count > 0 {
-            ScrollView {
+            ScrollView(showsIndicators: false) {
               LazyVStack(alignment: .leading, spacing: 12) {
                 ForEach(viewStore.comments, id: \.self) { comment in
                   CommentListItemView(
