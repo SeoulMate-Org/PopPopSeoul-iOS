@@ -16,7 +16,7 @@ import Models
 public struct MyChallengeTabFeature {
   public init() {}
   
-  @Dependency(\.myChallengeClient) var myChallengeClient
+  @Dependency(\.myClient) var myClient
   @Dependency(\.challengeClient) var challengeClient
   
   // MARK: State
@@ -84,21 +84,21 @@ public struct MyChallengeTabFeature {
           switch tab {
           case .interest:
             do {
-              let list = try await myChallengeClient.fetchList(tab.apiCode)
+              let list = try await myClient.fetchChallengeList(tab.apiCode)
               await send(.setInterestList(list))
             } catch {
               await send(.fetchListError)
             }
           case .progress:
             do {
-              let list = try await myChallengeClient.fetchList(tab.apiCode)
+              let list = try await myClient.fetchChallengeList(tab.apiCode)
               await send(.setProgressList(list))
             } catch {
               await send(.fetchListError)
             }
           case .completed:
             do {
-              let list = try await myChallengeClient.fetchList(tab.apiCode)
+              let list = try await myClient.fetchChallengeList(tab.apiCode)
               await send(.setCompletedList(list))
             } catch {
               await send(.fetchListError)

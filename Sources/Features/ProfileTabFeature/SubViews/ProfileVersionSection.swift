@@ -18,7 +18,7 @@ struct ProfileVersionSection: View {
       SettingRowView(title: "버전 정보") {
         Text(version)
           .font(.captionM)
-          .foregroundStyle(Colors.blue600.swiftUIColor)
+          .foregroundStyle(Colors.gray600.swiftUIColor)
           .frame(height: 24)
       }
       .padding(.horizontal, 16)

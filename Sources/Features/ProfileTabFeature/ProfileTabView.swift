@@ -15,7 +15,7 @@ struct ProfileTabView: View {
   let store: StoreOf<ProfileTabFeature>
   @ObservedObject var viewStore: ViewStore<ProfileTabFeature.State, ProfileTabFeature.Action>
   
-  public init(store: StoreOf<ProfileTabFeature>) {
+  init(store: StoreOf<ProfileTabFeature>) {
     self.store = store
     self.viewStore = ViewStore(self.store, observe: { $0 })
   }
@@ -34,55 +34,55 @@ struct ProfileTabView: View {
           ProfileCountView(
             user: viewStore.user,
             onbadgeTapped: {
-              
+              viewStore.send(.tappedLoginCheckMove(.badge))
             }, onLikeTapped: {
-              
+              viewStore.send(.tappedLoginCheckMove(.likeAttraction))
             }, onCommentTapped: {
-              
+              viewStore.send(.tappedLoginCheckMove(.comment))
             })
           
           ProfileSettingSection(
             language: viewStore.language.title,
             isLocationAuth: viewStore.binding(
               get: \.isLocationAuth,
-              send: ProfileTabFeature.Action.locationAuthToggle
+              send: ProfileTabFeature.Action.toggleLocationAuth
             ),
             onLanguageTapped: {
-              
+              viewStore.send(.move(.language(viewStore.language)))
             }, onNotiTapped: {
-              
-            }, onLocationTapped: { _ in
-              
+              viewStore.send(.move(.notification))
+            }, onLocationTapped: { isOn in
+              viewStore.send(.toggleLocationAuth(isOn))
             })
           .padding(.top, 16)
           
           ProfileServiceSection(
             onOnboardingTapped: {
-              
+              viewStore.send(.move(.onboarding))
             }, onFAQTapped: {
-              
+              viewStore.send(.moveWeb(.faq))
             })
           .padding(.top, 16)
           
           ProfilePolicySection(
             onServiceTapped: {
-              
+              viewStore.send(.moveWeb(.termsOfService))
             }, onPrivacyTapped: {
-              
+              viewStore.send(.moveWeb(.privacyPolicy))
             }, onLocationTapped: {
-              
+              viewStore.send(.moveWeb(.locationPrivacy))
             })
           .padding(.top, 16)
           
-          ProfileVersionSection(version: "1.0.0")
+          ProfileVersionSection(version: viewStore.appVersion)
             .padding(.top, 16)
           
           if TokenManager.shared.isLogin {
             ProfileLoginSection(
               onLogoutTapped: {
-                
+                viewStore.send(.showAlert(.logout))
               }, onWithdrawTapped: {
-                
+                viewStore.send(.move(.withdraw))
               })
             .padding(.top, 16)
           }

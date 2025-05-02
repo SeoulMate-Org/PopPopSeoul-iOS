@@ -24,6 +24,7 @@ public extension Endpoint {
   static let authLoginFbIos = Self(baseUrl: apiBaseUrl, pathComponents: ["auth", "logint", "fb", "ios"])
   static let authRefresh = Self(baseUrl: apiBaseUrl, pathComponents: ["auth", "refresh"])
   static let challengeMy = Self(baseUrl: apiBaseUrl, pathComponents: ["challenge", "my"])
+  static let challengeMyBadge = Self(baseUrl: apiBaseUrl, pathComponents: ["challenge", "my", "badge"])
   static let challenge = Self(baseUrl: apiBaseUrl, pathComponents: ["challenge"])
   static let challengeListSeoul = Self(baseUrl: apiBaseUrl, pathComponents: ["challenge", "list", "seoul-master"])
   static let challengeListCultural = Self(baseUrl: apiBaseUrl, pathComponents: ["challenge", "list", "cultural-event"])
@@ -37,6 +38,7 @@ public extension Endpoint {
   static let attraction = Self(baseUrl: apiBaseUrl, pathComponents: ["attraction"])
   static let attractionLike = Self(baseUrl: apiBaseUrl, pathComponents: ["attraction", "like"])
   static let attractionStamp = Self(baseUrl: apiBaseUrl, pathComponents: ["attraction", "stamp"])
+  static let attractionMy = Self(baseUrl: apiBaseUrl, pathComponents: ["attraction", "my"])
   
   // MARK: - MAPS
   static let mapsStaticRaster = Self(baseUrl: mapsUrl, pathComponents: ["map-static", "v2", "raster"])

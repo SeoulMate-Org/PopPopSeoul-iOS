@@ -92,6 +92,7 @@ public struct MainTabFeature {
         state.path.append(.login(LoginFeature.State(isInit: false)))
         return .none
         
+        // MARK: - My Challenge Reducer
       case .myChallenge(.tappedItem(let id)):
         state.path.append(.detailChallenge(DetailChallengeFeature.State(with: id)))
         return .none
@@ -112,6 +113,32 @@ public struct MainTabFeature {
       case .home(.moveToRank):
         state.path.append(.rankChallenge(RankChallengeFeature.State()))
         return .none
+        
+        // MARK: - Profile Reducer
+      case .profile(.move(let action)):
+        switch action {
+        case .nicknameSetting(_):
+          return .none
+          
+        case .badge:
+          state.path.append(.myBadge(MyBadgeFeature.State()))
+          return .none
+          
+        case .likeAttraction:
+          state.path.append(.likeAttraction(LikeAttractionFeature.State()))
+          return .none
+          
+        case .comment:
+          return .none
+        case .language(_):
+          return .none
+        case .notification:
+          return .none
+        case .onboarding:
+          return .none
+        case .withdraw:
+          return .none
+        }
         
         // MARK: - Path Reducer
       case let .path(action):
@@ -177,6 +204,8 @@ extension MainTabFeature {
     case detailAttraction(DetailAttractionFeature)
     case attractionMap(AttractionMapFeature)
     case completeChallenge(CompleteChallengeFeature)
+    case myBadge(MyBadgeFeature)
+    case likeAttraction(LikeAttractionFeature)
   }
   
 }

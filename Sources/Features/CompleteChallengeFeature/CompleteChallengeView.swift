@@ -95,4 +95,18 @@ extension ChallengeTheme {
     case .historyCulture: return Assets.Images.badgeHistoryCulture.swiftUIImage
     }
   }
+  
+  var badgeDisable: Image {
+    switch self {
+    case .localTour: return Assets.Images.badgeLocalTourDis.swiftUIImage
+    case .culturalEvent: return Assets.Images.badgeCulturalEventDis.swiftUIImage
+    case .mustSeeSpots: return Assets.Images.badgeMustSeeSpotsDis.swiftUIImage
+    case .photoSpot: return Assets.Images.badgePhotoSpotDis.swiftUIImage
+    case .walkingTour: return Assets.Images.badgeWalkingTourDis.swiftUIImage
+    case .nightViewsMood: return Assets.Images.badgeNightViewsMoodDis.swiftUIImage
+    case .foodieHiddenGemes: return Assets.Images.badgeFoodieHiddenGemesDis.swiftUIImage
+    case .exhibitionArt: return Assets.Images.badgeExhibitionArtDis.swiftUIImage
+    case .historyCulture: return Assets.Images.badgeHistoryCultureDis.swiftUIImage
+    }
+  }
 }

@@ -65,13 +65,13 @@ public struct UserDefaultsClient {
     await setString(value, .lastStampAttractionName)
   }
   
-  public var isLocationRequestBlocked: Bool {
-    boolForKey(.isLocationRequestBlocked)
-  }
-  
-  public func setIsLocationRequestBlocked(_ value: Bool) async {
-    await setBool(value, .isLocationRequestBlocked)
-  }
+//  public var isLocationRequestBlocked: Bool {
+//    boolForKey(.isLocationRequestBlocked)
+//  }
+//  
+//  public func setIsLocationRequestBlocked(_ value: Bool) async {
+//    await setBool(value, .isLocationRequestBlocked)
+//  }
   
   public var isLocationNotiEnabled: Bool {
     boolForKey(.isLocationNotiEnabled)
@@ -120,6 +120,6 @@ public enum UserDefaultsKey: String {
   case isAutoLogin
   case lastStampAttractionId
   case lastStampAttractionName
-  case isLocationRequestBlocked
+//  case isLocationRequestBlocked
   case isLocationNotiEnabled
 }

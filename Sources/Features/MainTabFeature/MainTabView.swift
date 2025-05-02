@@ -97,6 +97,14 @@ public struct MainTabView: View {
         if let store = store.scope(state: \.completeChallenge, action: \.completeChallenge) {
           CompleteChallengeView(store: store)
         }
+      case .myBadge:
+        if let store = store.scope(state: \.myBadge, action: \.myBadge) {
+          MyBadgeView(store: store)
+        }
+      case .likeAttraction:
+        if let store = store.scope(state: \.likeAttraction, action: \.likeAttraction) {
+          LikeAttractionView(store: store)
+        }
       }
     }
   }

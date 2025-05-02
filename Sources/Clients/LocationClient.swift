@@ -38,9 +38,9 @@ extension LocationClient: DependencyKey {
         await manager.requestLocation()
       },
       getCurrentLocation: {
-        guard !userDefaultsClient.isLocationRequestBlocked else {
-          return .fail
-        }
+//        guard !userDefaultsClient.isLocationRequestBlocked else {
+//          return .fail
+//        }
         
         let status = await manager.authorizationStatus()
         guard status == .authorizedWhenInUse || status == .authorizedAlways else {
@@ -58,7 +58,7 @@ extension LocationClient: DependencyKey {
 //            }
 //            return .fail
             // FIXME: [TEST] Location
-            return .success(Coordinate(latitude: 37.516920655117, longitude: 127.118166964751))
+            return .success(Coordinate(latitude: 37.5119943, longitude: 127.0870561))
           case .didFailWithError:
             return .fail
           default:

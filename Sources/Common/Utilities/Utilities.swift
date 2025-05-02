@@ -19,11 +19,11 @@ public class Utility {
   public static let safeBottom = window?.safeAreaInsets.bottom ?? 0
   
   public static func moveAppStore() {
-      if let appStoreURL = URL(string: "https://apps.apple.com/app/\(Constants.appStoreId)") {
-          DispatchQueue.main.async {
-              UIApplication.shared.open(appStoreURL, options: [:], completionHandler: nil)
-          }
+    if let appStoreURL = URL(string: "https://apps.apple.com/app/\(Constants.appStoreId)") {
+      DispatchQueue.main.async {
+        UIApplication.shared.open(appStoreURL, options: [:], completionHandler: nil)
       }
+    }
   }
   
   public static func openInSafari(urlString: String) {
@@ -34,5 +34,13 @@ public class Utility {
   public static func openInNaveMap(lat: Double, lng: Double, name: String) {
     let urlString = "nmap://place?lat=\(lat)&lng=\(lng)&name=\(name)&appname=\(Bundle.main.bundleIdentifier ?? "")"
     openInSafari(urlString: urlString)
+  }
+  
+  public static func moveAppSetting() {
+    if let appSetting = URL(string: UIApplication.openSettingsURLString) {
+      DispatchQueue.main.async {
+        UIApplication.shared.open(appSetting, options: [:], completionHandler: nil)
+      }
+    }
   }
 }
