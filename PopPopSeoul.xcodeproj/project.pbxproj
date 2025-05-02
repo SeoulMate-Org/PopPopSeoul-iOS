@@ -712,6 +712,9 @@
 		EA9B83882DC5098B00BF6EF8 /* LikeAttractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B83872DC5098B00BF6EF8 /* LikeAttractionView.swift */; };
 		EA9B838B2DC50A0300BF6EF8 /* LikeAttractionEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B838A2DC50A0300BF6EF8 /* LikeAttractionEmptyView.swift */; };
 		EA9B838E2DC50BF900BF6EF8 /* BadgeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B838D2DC50BF900BF6EF8 /* BadgeCardView.swift */; };
+		EA9B83912DC50E4C00BF6EF8 /* UserClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B83902DC50E4C00BF6EF8 /* UserClient.swift */; };
+		EA9B83932DC5144400BF6EF8 /* LikeAttractionItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B83922DC5144400BF6EF8 /* LikeAttractionItemView.swift */; };
+		EA9B83952DC515B900BF6EF8 /* LikeAttractionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B83942DC515B900BF6EF8 /* LikeAttractionListView.swift */; };
 		EAE62223229FB6E39F76669F /* CasePathsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CF7412324C02D1745F0E0D /* CasePathsCore.framework */; };
 		EB1B1D606C9519443C8093A6 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E58A56242DD34BBF412FCA4 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle */; };
 		EB2C1DD848ACAAE2D607CA78 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F75DBDEF31E5F47ECCF65C8 /* UIKit.framework */; };
@@ -1655,6 +1658,9 @@
 		EA9B83872DC5098B00BF6EF8 /* LikeAttractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeAttractionView.swift; sourceTree = "<group>"; };
 		EA9B838A2DC50A0300BF6EF8 /* LikeAttractionEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeAttractionEmptyView.swift; sourceTree = "<group>"; };
 		EA9B838D2DC50BF900BF6EF8 /* BadgeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeCardView.swift; sourceTree = "<group>"; };
+		EA9B83902DC50E4C00BF6EF8 /* UserClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserClient.swift; sourceTree = "<group>"; };
+		EA9B83922DC5144400BF6EF8 /* LikeAttractionItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeAttractionItemView.swift; sourceTree = "<group>"; };
+		EA9B83942DC515B900BF6EF8 /* LikeAttractionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeAttractionListView.swift; sourceTree = "<group>"; };
 		EB1AF2F0C1D291ADEC33A0B1 /* GetChallengeMyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeMyRequest.swift; sourceTree = "<group>"; };
 		EB50FD060BF7A2400BB005A7 /* ThemeChallengeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChallengeTabView.swift; sourceTree = "<group>"; };
 		EC4AFF88EA6DCED6098DE437 /* Clients-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Clients-Info.plist"; sourceTree = "<group>"; };
@@ -2743,6 +2749,7 @@
 				A6B95880DD1F10361C61889E /* ChallengeListClient.swift */,
 				3D8A03A3CB0BE02487388DF4 /* CommentClient.swift */,
 				E9D23E812DA7735D291EA0D0 /* MyClient.swift */,
+				EA9B83902DC50E4C00BF6EF8 /* UserClient.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -2985,6 +2992,8 @@
 			isa = PBXGroup;
 			children = (
 				EA9B838A2DC50A0300BF6EF8 /* LikeAttractionEmptyView.swift */,
+				EA9B83922DC5144400BF6EF8 /* LikeAttractionItemView.swift */,
+				EA9B83942DC515B900BF6EF8 /* LikeAttractionListView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -4189,6 +4198,7 @@
 				DA4DF0B8FC0EC0A9EA3BDCF8 /* DetailAttractionSubwayView.swift in Sources */,
 				500A80898DB9650C7F2BF562 /* DetailAttractionTelView.swift in Sources */,
 				E70F672B57441E5AE6A7C219 /* DetailAttractionTopSection.swift in Sources */,
+				EA9B83952DC515B900BF6EF8 /* LikeAttractionListView.swift in Sources */,
 				9A7F85FEC8F2E5BD87F26052 /* DetailChallengeFeature.swift in Sources */,
 				6116ED1F4179E7BD39E538C0 /* DetailChallengeView.swift in Sources */,
 				738FF49114FA0AA199F67600 /* ChallengePlaceListItem.swift in Sources */,
@@ -4208,6 +4218,7 @@
 				99D2FCFE5C99E482481F1C1F /* HomeTabView.swift in Sources */,
 				24E623B17F84E2C71AB91851 /* HomeBannerItemView.swift in Sources */,
 				F09417129212C5CFF53A01A2 /* HomeBannerSection.swift in Sources */,
+				EA9B83932DC5144400BF6EF8 /* LikeAttractionItemView.swift in Sources */,
 				EA538B02E6EFCB8F46D36669 /* HomeChallengeItemView.swift in Sources */,
 				B6B121B3954FD0F55244EC83 /* HomeAccessPromptSection.swift in Sources */,
 				16CD3894D23183FE8BDCD6FE /* HomeLocationSection.swift in Sources */,
@@ -4297,6 +4308,7 @@
 				455E49ABFF1B4B251C76A5F3 /* TokenManager.swift in Sources */,
 				0DD54B850FB8D2D0D567E0DD /* NaverMapsClient.swift in Sources */,
 				ECB5D4E109BF2CCB78E304F4 /* NaverMapsEndpoint.swift in Sources */,
+				EA9B83912DC50E4C00BF6EF8 /* UserClient.swift in Sources */,
 				1655024D20135DBBD4E960A0 /* StaticMapParameters.swift in Sources */,
 				05981452C3B02B0953437CB9 /* NetworkDispatcher.swift in Sources */,
 				E69D5CDA7CE4F3A92124FB43 /* NetworkRequestError.swift in Sources */,

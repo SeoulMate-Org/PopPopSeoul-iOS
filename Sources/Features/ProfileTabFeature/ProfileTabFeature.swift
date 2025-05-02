@@ -12,6 +12,7 @@ public struct ProfileTabFeature {
   
   @Dependency(\.userDefaultsClient) var userDefaultsClient
   @Dependency(\.locationClient) var locationClient
+  @Dependency(\.userClient) var userClient
   
   // MARK: - State
   
@@ -40,7 +41,10 @@ public struct ProfileTabFeature {
   @CasePathable
   public enum Action: Equatable {
     case initialize
+    case networkError
     
+    case fetchUser
+    case update(User)
     case requestLocation
     case updateLocationAuth(Bool)
     
@@ -80,13 +84,34 @@ public struct ProfileTabFeature {
     Reduce { state, action in
       switch action {
       case .initialize:
-        // TODO: - API 연동
-        state.user = User(id: 1, nickname: "닉네임", loginType: "FACEBOOK", badgeCount: 0, likeCount: 0, commentCount: 0)
         state.language = AppSettingManager.shared.language
         state.appVersion = Constants.appVersion
+        return .merge(
+          .run { send in
+            await send(.fetchUser)
+          },
+          .run { send in
+            await send(.requestLocation)
+          }
+        )
+        
+      case .networkError:
+        // TODO: - Network Error 처리
+        return .none
+        
+      case .fetchUser:
         return .run { send in
-          await send(.requestLocation)
+          do {
+            let user = try await userClient.fetch()
+            await send(.update(user))
+          } catch {
+            await send(.networkError)
+          }
         }
+        
+      case let .update(user):
+        state.user = user
+        return .none
         
       case .requestLocation:
         return .run { send in

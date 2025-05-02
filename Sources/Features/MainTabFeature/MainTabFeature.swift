@@ -150,7 +150,8 @@ public struct MainTabFeature {
           
           // move to detail attraction
         case .element(id: _, action: .detailChallenge(.tappedAttraction(let id))),
-            .element(id: _, action: .attractionMap(.tappedDetail(let id))):
+            .element(id: _, action: .attractionMap(.tappedDetail(let id))),
+            .element(id: _, action: .likeAttraction(.tappedDetail(let id))):
           state.path.append(.detailAttraction(DetailAttractionFeature.State(with: id)))
           return .none
 

@@ -24,7 +24,7 @@ struct ProfileCountView: View {
       
       divider
       
-      profileCountItem(title: "찜한 장소", count: user?.likeCount ?? 0, onTap: onLikeTapped)
+      profileCountItem(title: "찜한 장소", count: user?.likedCount ?? 0, onTap: onLikeTapped)
       
       divider
       
@@ -51,7 +51,7 @@ struct ProfileCountView: View {
           .foregroundStyle(Colors.gray400.swiftUIColor)
         
         Text(count > 0 ? "\(count)" : "-")
-          .font(.captionSB)
+          .font(.bodyM)
           .foregroundStyle(Colors.trueBlack.swiftUIColor)
       }
       .frame(maxWidth: .infinity)

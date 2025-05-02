@@ -23,6 +23,43 @@ struct LikeAttractionView: View {
   }
   
   var body: some View {
-    LikeAttractionEmptyView()
+    VStack(spacing: 0) {
+      HeaderView(type: .back(title: "찜한 장소", onBack: {
+        viewStore.send(.tappedBack)
+      }))
+      
+      if viewStore.attractions.isEmpty {
+        LikeAttractionEmptyView()
+      } else {
+        LikeAttractionListView(
+          attractions: viewStore.attractions,
+          onTapped: { id in
+            viewStore.send(.tappedDetail(id))
+          },
+          onLikeTapped: { id in
+            viewStore.send(.tappedLike(id))
+          })
+      }
+    }
+    .overlay(
+      Group {
+        if viewStore.showUndoToast {
+          VStack(spacing: 0) {
+            Spacer()
+            AppToast(type: .iconTextWithButton(
+              message: String(sLocalization: .mychallengeInterestDeleteToast),
+              buttonTitle: String(sLocalization: .toastButtonRestoration),
+              onTap: { viewStore.send(.undoLike) }
+            ))
+            .padding(.bottom, 16)
+          }
+          .transition(.opacity.animation(.easeInOut(duration: 0.2)))
+        }
+      }
+    )
+    .onAppear {
+      viewStore.send(.onApear)
+    }
+    .navigationBarHidden(true)
   }
 }

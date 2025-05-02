@@ -95,7 +95,7 @@ struct MyChallengeistItemView: View {
             onLikeTapped()
           }) {
             Assets.Icons.heartFill.swiftUIImage
-              .foregroundColor(.red)
+              .foregroundColor(Colors.red500.swiftUIColor)
               .frame(width: 19, height: 19)
           }
           .frame(width: 32, height: 32)
