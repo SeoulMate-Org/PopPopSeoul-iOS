@@ -13,15 +13,22 @@ import SharedTypes
 import Models
 
 struct ProfileNicknameSection: View {
+  let isLogin: Bool
   let user: User?
   let onTapped: () -> Void
   
   var body: some View {
     VStack(alignment: .leading) {
       HStack {
-        Text(user?.nickname ?? "로그인이 필요해요")
-          .font(.appTitle1)
-          .foregroundStyle(Colors.gray900.swiftUIColor)
+        if isLogin {
+          Text(user?.nickname ?? "")
+            .font(.appTitle1)
+            .foregroundStyle(Colors.gray900.swiftUIColor)
+        } else {
+          Text("로그인이 필요해요")
+            .font(.appTitle1)
+            .foregroundStyle(Colors.gray900.swiftUIColor)
+        }
         
         Spacer()
         
@@ -45,7 +52,7 @@ struct ProfileNicknameSection: View {
             .frame(height: 26)
             .padding(.top, 5)
         }
-      } else {
+      } else if !isLogin {
         Text("챌린지도 찜하고, 배지도 모을 수 있어요")
           .font(.captionM)
           .foregroundColor(Colors.appWhite.swiftUIColor)

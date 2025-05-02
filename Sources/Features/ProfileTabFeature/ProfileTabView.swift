@@ -27,7 +27,10 @@ struct ProfileTabView: View {
       
       ScrollView(showsIndicators: false) {
         VStack(spacing: 0) {
-          ProfileNicknameSection(user: viewStore.user, onTapped: {
+          ProfileNicknameSection(
+            isLogin: viewStore.isLogin,
+            user: viewStore.user,
+            onTapped: {
             viewStore.send(.tappedNickname)
           })
           

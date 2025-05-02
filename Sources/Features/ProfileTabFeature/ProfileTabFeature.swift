@@ -18,12 +18,15 @@ public struct ProfileTabFeature {
   
   @ObservableState
   public struct State: Equatable {
-    public init() { }
+    public init() {
+      self.isLogin = TokenManager.shared.isLogin
+    }
     
     public var onAppearType: OnAppearType = .firstTime
     
     var language: AppLanguage = .kor
     var appVersion: String = ""
+    var isLogin: Bool
     var user: User?
     var isLocationAuth: Bool  = false
     var showAlert: Alert?
