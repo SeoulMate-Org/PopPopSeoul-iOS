@@ -109,6 +109,10 @@ public struct MainTabView: View {
         if let store = store.scope(state: \.myComment, action: \.myComment) {
           MyCommentView(store: store)
         }
+      case .languageSetting:
+        if let store = store.scope(state: \.languageSetting, action: \.languageSetting) {
+          LanguageSettingView(store: store)
+        }
       }
     }
   }

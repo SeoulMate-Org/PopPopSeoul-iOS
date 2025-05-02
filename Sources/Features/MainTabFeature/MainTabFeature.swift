@@ -46,6 +46,8 @@ public struct MainTabFeature {
     case successLogin(isNewUser: Bool)
     
     case path(StackActionOf<Path>)
+    
+    case appReLaunch
   }
   
   // MARK: Reducer
@@ -131,8 +133,10 @@ public struct MainTabFeature {
           state.path.append(.myComment(MyCommentFeature.State()))
           return .none
           
-        case .language(_):
+        case let .language(language):
+          state.path.append(.languageSetting(LanguageSettingFeature.State(language: language)))
           return .none
+          
         case .notification:
           return .none
         case .onboarding:
@@ -188,6 +192,10 @@ public struct MainTabFeature {
           state.selectedTab = .home
           return .none
           
+          // app re launch
+        case .element(id: _, action: .languageSetting(.appReLaunch)):
+          return .send(.appReLaunch)
+          
         default:
           return .none
         }
@@ -216,6 +224,7 @@ extension MainTabFeature {
     case myBadge(MyBadgeFeature)
     case likeAttraction(LikeAttractionFeature)
     case myComment(MyCommentFeature)
+    case languageSetting(LanguageSettingFeature)
   }
   
 }

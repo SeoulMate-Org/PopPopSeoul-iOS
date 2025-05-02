@@ -718,6 +718,9 @@
 		EA9B839A2DC51B6D00BF6EF8 /* MyCommentFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B83992DC51B6D00BF6EF8 /* MyCommentFeature.swift */; };
 		EA9B839D2DC51CCA00BF6EF8 /* MyCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B839C2DC51CCA00BF6EF8 /* MyCommentView.swift */; };
 		EA9B839F2DC51D2A00BF6EF8 /* MyCommentEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B839E2DC51D2A00BF6EF8 /* MyCommentEmptyView.swift */; };
+		EA9B83A22DC5233300BF6EF8 /* LanguageSettingFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B83A12DC5233300BF6EF8 /* LanguageSettingFeature.swift */; };
+		EA9B83A42DC523E800BF6EF8 /* LanguageSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B83A32DC523E800BF6EF8 /* LanguageSettingView.swift */; };
+		EA9B83AA2DC52C1100BF6EF8 /* LanguageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B83A92DC52C1100BF6EF8 /* LanguageRow.swift */; };
 		EAE62223229FB6E39F76669F /* CasePathsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CF7412324C02D1745F0E0D /* CasePathsCore.framework */; };
 		EB1B1D606C9519443C8093A6 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E58A56242DD34BBF412FCA4 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle */; };
 		EB2C1DD848ACAAE2D607CA78 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F75DBDEF31E5F47ECCF65C8 /* UIKit.framework */; };
@@ -1667,6 +1670,9 @@
 		EA9B83992DC51B6D00BF6EF8 /* MyCommentFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCommentFeature.swift; sourceTree = "<group>"; };
 		EA9B839C2DC51CCA00BF6EF8 /* MyCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCommentView.swift; sourceTree = "<group>"; };
 		EA9B839E2DC51D2A00BF6EF8 /* MyCommentEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCommentEmptyView.swift; sourceTree = "<group>"; };
+		EA9B83A12DC5233300BF6EF8 /* LanguageSettingFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSettingFeature.swift; sourceTree = "<group>"; };
+		EA9B83A32DC523E800BF6EF8 /* LanguageSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSettingView.swift; sourceTree = "<group>"; };
+		EA9B83A92DC52C1100BF6EF8 /* LanguageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageRow.swift; sourceTree = "<group>"; };
 		EB1AF2F0C1D291ADEC33A0B1 /* GetChallengeMyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeMyRequest.swift; sourceTree = "<group>"; };
 		EB50FD060BF7A2400BB005A7 /* ThemeChallengeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChallengeTabView.swift; sourceTree = "<group>"; };
 		EC4AFF88EA6DCED6098DE437 /* Clients-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Clients-Info.plist"; sourceTree = "<group>"; };
@@ -3035,8 +3041,19 @@
 		EA9B83A02DC5229000BF6EF8 /* LanguageSettingFeature */ = {
 			isa = PBXGroup;
 			children = (
+				EA9B83A52DC52BA400BF6EF8 /* SubViews */,
+				EA9B83A12DC5233300BF6EF8 /* LanguageSettingFeature.swift */,
+				EA9B83A32DC523E800BF6EF8 /* LanguageSettingView.swift */,
 			);
 			path = LanguageSettingFeature;
+			sourceTree = "<group>";
+		};
+		EA9B83A52DC52BA400BF6EF8 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				EA9B83A92DC52C1100BF6EF8 /* LanguageRow.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 		ECAA166E243FFD9AE32214FD /* SubViews */ = {
@@ -4244,6 +4261,7 @@
 				73758F1D9071EEC2DDC70A19 /* DetailChallengePlaceSection.swift in Sources */,
 				1BB5F79E2CF2DEA8F3C2F98E /* DetailChallengeStampSection.swift in Sources */,
 				EA857DBA2DC393F400A30579 /* SuccessStampAlertView.swift in Sources */,
+				EA9B83A22DC5233300BF6EF8 /* LanguageSettingFeature.swift in Sources */,
 				9FF1A9AC7D704A390B50D7A7 /* DetailCommentsFeature.swift in Sources */,
 				B1BA03ED2D85434694697D60 /* DetailCommentsView.swift in Sources */,
 				EA9B83622DC4792800BF6EF8 /* ProfileNicknameSection.swift in Sources */,
@@ -4289,6 +4307,7 @@
 				33037A9C1FA6D2D7D88CE1BA /* MyChallengeistItemView.swift in Sources */,
 				EA9B83882DC5098B00BF6EF8 /* LikeAttractionView.swift in Sources */,
 				366D6C342A1B9C6136A29509 /* OnboardingFeature.swift in Sources */,
+				EA9B83A42DC523E800BF6EF8 /* LanguageSettingView.swift in Sources */,
 				272162B47375CB44638F84B5 /* OnboardingView.swift in Sources */,
 				7F894DD18B0BF0D07ECB851F /* ProfileTabFeature.swift in Sources */,
 				977BE98EA86CE22604707534 /* ProfileTabView.swift in Sources */,
@@ -4301,6 +4320,7 @@
 				EA9B83692DC49CA600BF6EF8 /* ProfileSettingSection.swift in Sources */,
 				86A470D2C2491F90CBAEEB43 /* ThemeChallengeListView.swift in Sources */,
 				504E1A3626E5C8DB1EC8BD33 /* ThemeChallengeTabView.swift in Sources */,
+				EA9B83AA2DC52C1100BF6EF8 /* LanguageRow.swift in Sources */,
 				5DCE30C3BE48CFE03CBFAF95 /* ThemeLoginPromptSection.swift in Sources */,
 				93BF4B91F439728916FB9AD4 /* ThemeChallengeFeature.swift in Sources */,
 				594CE6C3E6FD076D16DAAA0A /* ThemeChallengeView.swift in Sources */,

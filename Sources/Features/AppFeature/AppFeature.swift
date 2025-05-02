@@ -70,6 +70,9 @@ public struct AppFeature {
           state.destination = .mainTab(.init())
         }
         return .none
+      case .destination(.presented(.mainTab(.appReLaunch))):
+        state.destination = .splash(.init())
+        return .none
         
       case .destination:
         return .none
