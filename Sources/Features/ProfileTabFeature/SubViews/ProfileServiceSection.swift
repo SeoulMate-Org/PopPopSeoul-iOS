@@ -12,14 +12,13 @@ import SharedAssets
 import SharedTypes
 
 struct ProfileServiceSection: View {
-  let onTermsTapped: () -> Void
+  let onOnboardingTapped: () -> Void
   let onFAQTapped: () -> Void
   
   var body: some View {
-    VStack(alignment: .center, spacing: 4) {
-      
+    SettingSectionContainer {
       SettingRowView(title: "서비스 소개") {
-        Button(action: onTermsTapped) {
+        Button(action: onOnboardingTapped) {
           Assets.Icons.arrowRightSmall.swiftUIImage
             .resizable()
             .frame(width: 24, height: 24)
@@ -28,7 +27,6 @@ struct ProfileServiceSection: View {
       }
       .padding(.leading, 16)
       .padding(.trailing, 8)
-      
       
       SettingRowView(title: "자주 묻는 질문") {
         Button(action: onFAQTapped) {
@@ -42,12 +40,5 @@ struct ProfileServiceSection: View {
       .padding(.trailing, 8)
       
     }
-    .frame(maxWidth: .infinity)
-    .padding(.vertical, 8)
-    .background(
-      RoundedRectangle(cornerRadius: 16)
-        .fill(Colors.appWhite.swiftUIColor)
-    )
-    .padding(.horizontal, 20)
   }
 }

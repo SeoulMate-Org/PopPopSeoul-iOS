@@ -9,6 +9,7 @@ import ComposableArchitecture
 import DesignSystem
 import Common
 import SharedAssets
+import Clients
 
 struct ProfileTabView: View {
   let store: StoreOf<ProfileTabFeature>
@@ -54,7 +55,39 @@ struct ProfileTabView: View {
               
             })
           .padding(.top, 16)
+          
+          ProfileServiceSection(
+            onOnboardingTapped: {
+              
+            }, onFAQTapped: {
+              
+            })
+          .padding(.top, 16)
+          
+          ProfilePolicySection(
+            onServiceTapped: {
+              
+            }, onPrivacyTapped: {
+              
+            }, onLocationTapped: {
+              
+            })
+          .padding(.top, 16)
+          
+          ProfileVersionSection(version: "1.0.0")
+            .padding(.top, 16)
+          
+          if TokenManager.shared.isLogin {
+            ProfileLoginSection(
+              onLogoutTapped: {
+                
+              }, onWithdrawTapped: {
+                
+              })
+            .padding(.top, 16)
+          }
         }
+        .padding(.bottom, 34)
       }
       .background(Colors.gray25.swiftUIColor)
     }

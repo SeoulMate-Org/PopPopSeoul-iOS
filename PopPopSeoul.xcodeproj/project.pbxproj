@@ -700,6 +700,10 @@
 		EA9B83692DC49CA600BF6EF8 /* ProfileSettingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B83682DC49CA600BF6EF8 /* ProfileSettingSection.swift */; };
 		EA9B836B2DC4A61000BF6EF8 /* ProfileServiceSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B836A2DC4A61000BF6EF8 /* ProfileServiceSection.swift */; };
 		EA9B836D2DC4A67A00BF6EF8 /* ProfileSettingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B836C2DC4A67A00BF6EF8 /* ProfileSettingRow.swift */; };
+		EA9B836F2DC4AA2200BF6EF8 /* SettingSectionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B836E2DC4AA2200BF6EF8 /* SettingSectionContainer.swift */; };
+		EA9B83712DC4AC0F00BF6EF8 /* ProfilePolicySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B83702DC4AC0F00BF6EF8 /* ProfilePolicySection.swift */; };
+		EA9B83732DC4ACCA00BF6EF8 /* ProfileVersionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B83722DC4ACCA00BF6EF8 /* ProfileVersionSection.swift */; };
+		EA9B83752DC4AD5900BF6EF8 /* ProfileLoginSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B83742DC4AD5900BF6EF8 /* ProfileLoginSection.swift */; };
 		EAE62223229FB6E39F76669F /* CasePathsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CF7412324C02D1745F0E0D /* CasePathsCore.framework */; };
 		EB1B1D606C9519443C8093A6 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E58A56242DD34BBF412FCA4 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle */; };
 		EB2C1DD848ACAAE2D607CA78 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F75DBDEF31E5F47ECCF65C8 /* UIKit.framework */; };
@@ -1631,6 +1635,10 @@
 		EA9B83682DC49CA600BF6EF8 /* ProfileSettingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingSection.swift; sourceTree = "<group>"; };
 		EA9B836A2DC4A61000BF6EF8 /* ProfileServiceSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileServiceSection.swift; sourceTree = "<group>"; };
 		EA9B836C2DC4A67A00BF6EF8 /* ProfileSettingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingRow.swift; sourceTree = "<group>"; };
+		EA9B836E2DC4AA2200BF6EF8 /* SettingSectionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSectionContainer.swift; sourceTree = "<group>"; };
+		EA9B83702DC4AC0F00BF6EF8 /* ProfilePolicySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePolicySection.swift; sourceTree = "<group>"; };
+		EA9B83722DC4ACCA00BF6EF8 /* ProfileVersionSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVersionSection.swift; sourceTree = "<group>"; };
+		EA9B83742DC4AD5900BF6EF8 /* ProfileLoginSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLoginSection.swift; sourceTree = "<group>"; };
 		EB1AF2F0C1D291ADEC33A0B1 /* GetChallengeMyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeMyRequest.swift; sourceTree = "<group>"; };
 		EB50FD060BF7A2400BB005A7 /* ThemeChallengeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChallengeTabView.swift; sourceTree = "<group>"; };
 		EC4AFF88EA6DCED6098DE437 /* Clients-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Clients-Info.plist"; sourceTree = "<group>"; };
@@ -2904,11 +2912,15 @@
 		EA9B83602DC4790400BF6EF8 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				EA9B836E2DC4AA2200BF6EF8 /* SettingSectionContainer.swift */,
+				EA9B836C2DC4A67A00BF6EF8 /* ProfileSettingRow.swift */,
 				EA9B83612DC4792800BF6EF8 /* ProfileNicknameSection.swift */,
 				EA9B83662DC4964600BF6EF8 /* ProfileCountSection.swift */,
 				EA9B83682DC49CA600BF6EF8 /* ProfileSettingSection.swift */,
 				EA9B836A2DC4A61000BF6EF8 /* ProfileServiceSection.swift */,
-				EA9B836C2DC4A67A00BF6EF8 /* ProfileSettingRow.swift */,
+				EA9B83702DC4AC0F00BF6EF8 /* ProfilePolicySection.swift */,
+				EA9B83722DC4ACCA00BF6EF8 /* ProfileVersionSection.swift */,
+				EA9B83742DC4AD5900BF6EF8 /* ProfileLoginSection.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -4101,6 +4113,7 @@
 				2D2C6BED5A6A966415BCFD97 /* AttractionMapView.swift in Sources */,
 				A809AFD74912D337269D8566 /* AttractionMapListItem.swift in Sources */,
 				A60D757C75D4F55A4C2B4D6D /* AttractionMapListView.swift in Sources */,
+				EA9B83752DC4AD5900BF6EF8 /* ProfileLoginSection.swift in Sources */,
 				024453A762D3AB2480E27BB1 /* NaverMapView.swift in Sources */,
 				F6BADB1DD27252D4E5D341C2 /* DetailAtrractionView.swift in Sources */,
 				9F698CE22F41C505155136F9 /* DetailAttractionFeature.swift in Sources */,
@@ -4124,6 +4137,7 @@
 				9FF1A9AC7D704A390B50D7A7 /* DetailCommentsFeature.swift in Sources */,
 				B1BA03ED2D85434694697D60 /* DetailCommentsView.swift in Sources */,
 				EA9B83622DC4792800BF6EF8 /* ProfileNicknameSection.swift in Sources */,
+				EA9B836F2DC4AA2200BF6EF8 /* SettingSectionContainer.swift in Sources */,
 				F7A8041046097A0DD7ECF952 /* HomeTabFeature.swift in Sources */,
 				99D2FCFE5C99E482481F1C1F /* HomeTabView.swift in Sources */,
 				24E623B17F84E2C71AB91851 /* HomeBannerItemView.swift in Sources */,
@@ -4136,8 +4150,10 @@
 				422082606DFD8D03AAD1758C /* HomeRankChallengeItemView.swift in Sources */,
 				695A8C4D1888B6776C3DD0CF /* HomeRankSection.swift in Sources */,
 				EA857DC02DC3A89B00A30579 /* CompleteChallengeFeature.swift in Sources */,
+				EA9B83732DC4ACCA00BF6EF8 /* ProfileVersionSection.swift in Sources */,
 				19CE3DB262A71B88AA42F2D7 /* HomeSimilarSection.swift in Sources */,
 				EA9B836D2DC4A67A00BF6EF8 /* ProfileSettingRow.swift in Sources */,
+				EA9B83712DC4AC0F00BF6EF8 /* ProfilePolicySection.swift in Sources */,
 				EA9B83672DC4964600BF6EF8 /* ProfileCountSection.swift in Sources */,
 				5C5F891B06547F5498BBEA2F /* HomeThemeChallengeListView.swift in Sources */,
 				4C51B7E0EA4B09C1CA72E4D7 /* HomeThemeIndicatorView.swift in Sources */,
