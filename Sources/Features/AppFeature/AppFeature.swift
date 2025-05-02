@@ -45,7 +45,7 @@ public struct AppFeature {
     Reduce { state, action in
       switch action {
       case .destination(.presented(.splash(.didFinishInitLaunch))):
-        state.destination = .onboarding(.init())
+        state.destination = .onboarding(.init(isInit: true))
         return .none
         
       case .destination(.presented(.splash(.didFinish(let isLogin)))):

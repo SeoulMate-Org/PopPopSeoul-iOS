@@ -54,7 +54,7 @@ extension AppUpdateClient: DependencyKey {
     
     print("latestVersion \(latestVersion() ?? "nil")")
     
-    let storeVersion = latestVersion() ?? "0.0.1"
+    let storeVersion = latestVersion() ?? "1.0.0"
     let currentVersion = Constants.appVersion
     let currentComponents = currentVersion.split(separator: ".").map { Int($0) ?? 0 }
     let storeComponents = storeVersion.split(separator: ".").map { Int($0) ?? 0 }

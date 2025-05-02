@@ -9,7 +9,7 @@ import Foundation
 
 public enum Constants {
   public static var appVersion: String {
-    Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "0.0.1"
+    Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0.0"
   }
   
   public static var appStoreId: String {

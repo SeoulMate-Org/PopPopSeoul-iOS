@@ -160,6 +160,10 @@ public struct MainTabView: View {
         if let store = store.scope(state: \.withdraw, action: \.withdraw) {
           WithdrawView(store: store)
         }
+      case .onboarding:
+        if let store = store.scope(state: \.onboarding, action: \.onboarding) {
+          OnboardingView(store: store)
+        }
       }
     }
   }
@@ -231,7 +235,6 @@ public struct MainTabView: View {
 }
 
 // MARK: Preview
-
 
 // MARK: - Helper
 
