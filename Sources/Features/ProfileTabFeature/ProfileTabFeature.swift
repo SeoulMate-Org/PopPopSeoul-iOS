@@ -65,6 +65,7 @@ public struct ProfileTabFeature {
     case toggleLocationAuth(Bool)
     case tappedLogout
     case tappetGoToSetting
+    case tappedWithdraw
   }
   
   public enum Web: Equatable, Identifiable {
@@ -91,7 +92,7 @@ public struct ProfileTabFeature {
     case language(AppLanguage)
     case notification
     case onboarding
-    case withdraw
+    case withdraw(User)
   }
   // MARK: - Reducer
   
@@ -239,6 +240,13 @@ public struct ProfileTabFeature {
       case .tappetGoToSetting:
         Utility.moveAppSetting()
         return .none
+        
+      case .tappedWithdraw:
+        if let user = state.user {
+          return .send(.move(.withdraw(user)))
+        } else {
+          return .none
+        }
       }
     }
   }

@@ -87,7 +87,7 @@ struct ProfileTabView: View {
               onLogoutTapped: {
                 viewStore.send(.showAlert(.logout))
               }, onWithdrawTapped: {
-                viewStore.send(.move(.withdraw))
+                viewStore.send(.tappedWithdraw)
               })
             .padding(.top, 16)
           }

@@ -723,6 +723,8 @@
 		EA9B83AD2DC52ED700BF6EF8 /* NicknameSettingFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B83AC2DC52ED700BF6EF8 /* NicknameSettingFeature.swift */; };
 		EA9B83AE2DC53CB100BF6EF8 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B83762DC4D11500BF6EF8 /* SafariView.swift */; };
 		EA9B83B02DC5428E00BF6EF8 /* NicknameSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B83AF2DC5428E00BF6EF8 /* NicknameSettingView.swift */; };
+		EA9B83B32DC54E3300BF6EF8 /* WithdrawFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B83B22DC54E3300BF6EF8 /* WithdrawFeature.swift */; };
+		EA9B83B52DC54F0600BF6EF8 /* WithdrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B83B42DC54F0600BF6EF8 /* WithdrawView.swift */; };
 		EAE62223229FB6E39F76669F /* CasePathsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CF7412324C02D1745F0E0D /* CasePathsCore.framework */; };
 		EB1B1D606C9519443C8093A6 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E58A56242DD34BBF412FCA4 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle */; };
 		EB2C1DD848ACAAE2D607CA78 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F75DBDEF31E5F47ECCF65C8 /* UIKit.framework */; };
@@ -1677,6 +1679,8 @@
 		EA9B83A92DC52C1100BF6EF8 /* LanguageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageRow.swift; sourceTree = "<group>"; };
 		EA9B83AC2DC52ED700BF6EF8 /* NicknameSettingFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameSettingFeature.swift; sourceTree = "<group>"; };
 		EA9B83AF2DC5428E00BF6EF8 /* NicknameSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameSettingView.swift; sourceTree = "<group>"; };
+		EA9B83B22DC54E3300BF6EF8 /* WithdrawFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawFeature.swift; sourceTree = "<group>"; };
+		EA9B83B42DC54F0600BF6EF8 /* WithdrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawView.swift; sourceTree = "<group>"; };
 		EB1AF2F0C1D291ADEC33A0B1 /* GetChallengeMyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeMyRequest.swift; sourceTree = "<group>"; };
 		EB50FD060BF7A2400BB005A7 /* ThemeChallengeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChallengeTabView.swift; sourceTree = "<group>"; };
 		EC4AFF88EA6DCED6098DE437 /* Clients-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Clients-Info.plist"; sourceTree = "<group>"; };
@@ -2018,6 +2022,7 @@
 		0F8CB34F211D8DD893B340D5 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				EA9B83B12DC54E2300BF6EF8 /* WithdrawFeature */,
 				EA9B83AB2DC52EC500BF6EF8 /* NicknameSettingFeature */,
 				EA9B83A02DC5229000BF6EF8 /* LanguageSettingFeature */,
 				EA9B83982DC51B5E00BF6EF8 /* MyCommentFeature */,
@@ -3068,6 +3073,15 @@
 				EA9B83AF2DC5428E00BF6EF8 /* NicknameSettingView.swift */,
 			);
 			path = NicknameSettingFeature;
+			sourceTree = "<group>";
+		};
+		EA9B83B12DC54E2300BF6EF8 /* WithdrawFeature */ = {
+			isa = PBXGroup;
+			children = (
+				EA9B83B22DC54E3300BF6EF8 /* WithdrawFeature.swift */,
+				EA9B83B42DC54F0600BF6EF8 /* WithdrawView.swift */,
+			);
+			path = WithdrawFeature;
 			sourceTree = "<group>";
 		};
 		ECAA166E243FFD9AE32214FD /* SubViews */ = {
@@ -4244,6 +4258,7 @@
 				02D79A3E568314F99704AB42 /* TuistPlists+Features.swift in Sources */,
 				EA857DC22DC3A93300A30579 /* CompleteChallengeView.swift in Sources */,
 				ADF8753D78D6AB6AF59D1F2D /* AppFeature.swift in Sources */,
+				EA9B83B32DC54E3300BF6EF8 /* WithdrawFeature.swift in Sources */,
 				EA857DC72DC3B5E600A30579 /* EventChallengeImageView.swift in Sources */,
 				EA9B836B2DC4A61000BF6EF8 /* ProfileServiceSection.swift in Sources */,
 				8808BC3A293387F2CBCD1591 /* AppView.swift in Sources */,
@@ -4278,6 +4293,7 @@
 				EA857DBA2DC393F400A30579 /* SuccessStampAlertView.swift in Sources */,
 				EA9B83A22DC5233300BF6EF8 /* LanguageSettingFeature.swift in Sources */,
 				EA9B83AD2DC52ED700BF6EF8 /* NicknameSettingFeature.swift in Sources */,
+				EA9B83B52DC54F0600BF6EF8 /* WithdrawView.swift in Sources */,
 				9FF1A9AC7D704A390B50D7A7 /* DetailCommentsFeature.swift in Sources */,
 				B1BA03ED2D85434694697D60 /* DetailCommentsView.swift in Sources */,
 				EA9B83622DC4792800BF6EF8 /* ProfileNicknameSection.swift in Sources */,

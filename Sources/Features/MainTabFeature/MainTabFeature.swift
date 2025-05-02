@@ -170,7 +170,8 @@ public struct MainTabFeature {
         case .onboarding:
           return .none
           
-        case .withdraw:
+        case let .withdraw(user):
+          state.path.append(.withdraw(WithdrawFeature.State(user: user)))
           return .none
         }
         
@@ -274,6 +275,7 @@ extension MainTabFeature {
     case myComment(MyCommentFeature)
     case languageSetting(LanguageSettingFeature)
     case nicknameSetting(NicknameSettingFeature)
+    case withdraw(WithdrawFeature)
   }
   
 }
