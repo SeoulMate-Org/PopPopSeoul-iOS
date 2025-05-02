@@ -144,7 +144,8 @@ public struct MainTabFeature {
         // MARK: - Profile Reducer
       case .profile(.move(let action)):
         switch action {
-        case .nicknameSetting(_):
+        case let .nicknameSetting(nickname):
+          state.path.append(.nicknameSetting(NicknameSettingFeature.State(nickname: nickname)))
           return .none
           
         case .badge:
@@ -272,6 +273,7 @@ extension MainTabFeature {
     case likeAttraction(LikeAttractionFeature)
     case myComment(MyCommentFeature)
     case languageSetting(LanguageSettingFeature)
+    case nicknameSetting(NicknameSettingFeature)
   }
   
 }

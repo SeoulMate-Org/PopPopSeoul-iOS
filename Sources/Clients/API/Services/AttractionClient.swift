@@ -12,7 +12,7 @@ import SharedTypes
 public struct AttractionClient {
   public var get: @Sendable (Int) async throws -> Attraction
   public var putLike: @Sendable (Int) async throws -> DefaultLikeResponse
-  public var stamp: @Sendable (Int, String) async throws -> DefaultProgressResponse
+  public var stamp: @Sendable (Int, String) async throws -> DefaultProcessResponse
 }
 
 extension AttractionClient: DependencyKey {
@@ -42,7 +42,7 @@ extension AttractionClient: DependencyKey {
         let query = DefaultIdRequest(id: id)
         let request: Request = .post(.attractionStamp, query: query.queryItems)
         let (data, _) = try await apiClient.send(request)
-        let result: DefaultProgressResponse = try data.decoded()
+        let result: DefaultProcessResponse = try data.decoded()
         
         if result.isProcessed {
           await userDefaultsClient.setLastStampAttractionId(id)

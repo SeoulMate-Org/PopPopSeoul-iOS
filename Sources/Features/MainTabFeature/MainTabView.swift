@@ -152,6 +152,10 @@ public struct MainTabView: View {
         if let store = store.scope(state: \.languageSetting, action: \.languageSetting) {
           LanguageSettingView(store: store)
         }
+      case .nicknameSetting:
+        if let store = store.scope(state: \.nicknameSetting, action: \.nicknameSetting) {
+          NicknameSettingView(store: store)
+        }
       }
     }
   }

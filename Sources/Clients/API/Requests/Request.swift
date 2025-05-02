@@ -84,6 +84,10 @@ public extension Request {
   static func delete(_ endpoint: Endpoint) -> Request {
     Request(endpoint: endpoint, httpMethod: .delete)
   }
+  
+  static func delete(_ endpoint: Endpoint, query: [URLQueryItem] = []) -> Request {
+    Request(endpoint: endpoint, httpMethod: .delete, queryItems: query)
+  }
 }
 
 // MARK: Helper

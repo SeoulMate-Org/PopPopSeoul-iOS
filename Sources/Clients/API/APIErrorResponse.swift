@@ -23,6 +23,7 @@ public enum APIErrorCode: String, Equatable {
   // 유저
   case userNotFound = "U0002"
   case loginRequired = "U0001"
+  case nickDuplicate = "R0009"
   
   // 챌린지
   case challengeNotFound = "R0002"
@@ -36,6 +37,7 @@ public enum APIErrorCode: String, Equatable {
   // 인증
   case expiredAccessToken = "A0010"
   case invalidTokenType = "A0002"
+  
   
   // 알 수 없는 에러
   case unknown

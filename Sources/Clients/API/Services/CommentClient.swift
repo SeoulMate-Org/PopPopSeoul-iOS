@@ -13,7 +13,7 @@ public struct CommentClient {
   public var get: @Sendable (Int) async throws -> [Comment]
   public var post: @Sendable (Int, String) async throws -> Comment
   public var put: @Sendable (Int, String) async throws -> Comment
-  public var delete: @Sendable (Int) async throws -> DefaultProgressResponse
+  public var delete: @Sendable (Int) async throws -> DefaultProcessResponse
   public var getMy: @Sendable () async throws -> [Comment]
 }
 

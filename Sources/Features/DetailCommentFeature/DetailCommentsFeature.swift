@@ -24,7 +24,6 @@ public struct DetailCommentsFeature {
     let challengeId: Int
     var comments: [Comment] = []
     var inputText: String = ""
-    var keyboardHeight: CGFloat = 0
     var editingComment: Comment?
     var initFoucus: Bool
     var shouldFocusTextField: Bool = false

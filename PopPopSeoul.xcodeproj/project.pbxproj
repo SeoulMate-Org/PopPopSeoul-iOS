@@ -290,7 +290,7 @@
 		5A6C75631B7A7B33696AFA67 /* NMapsGeometry.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7470E1490679F3CE7452AF3 /* NMapsGeometry.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5A80FEB41CAB71A5EE854408 /* GTMAppAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE9553B0CAF5BC4F64B04A2 /* GTMAppAuth.framework */; };
 		5AEBBF70E62061F627BC8FDB /* Firebase_FirebaseABTesting.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 8E6C40C4E64943D6CB7F026D /* Firebase_FirebaseABTesting.bundle */; };
-		5B1D7526574694AA04BF21B2 /* DefaultProgressResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF236E4BC5803A3B1AC7418A /* DefaultProgressResponse.swift */; };
+		5B1D7526574694AA04BF21B2 /* DefaultProcessResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF236E4BC5803A3B1AC7418A /* DefaultProcessResponse.swift */; };
 		5B8F01FFCA9A4DE9D3C03566 /* SharedAssets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B82A2C652AC08DF83E34D9A /* SharedAssets.framework */; };
 		5C192DB3C23595EDA028F262 /* ComposableArchitecture.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = E85D8F1AB9B0F2707E456267 /* ComposableArchitecture.framework */; };
 		5C46EA0F2C1BA65107171565 /* Firebase_FirebaseCoreExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EECB86F51B27909F700E29A0 /* Firebase_FirebaseCoreExtension.bundle */; };
@@ -722,6 +722,7 @@
 		EA9B83AA2DC52C1100BF6EF8 /* LanguageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B83A92DC52C1100BF6EF8 /* LanguageRow.swift */; };
 		EA9B83AD2DC52ED700BF6EF8 /* NicknameSettingFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B83AC2DC52ED700BF6EF8 /* NicknameSettingFeature.swift */; };
 		EA9B83AE2DC53CB100BF6EF8 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B83762DC4D11500BF6EF8 /* SafariView.swift */; };
+		EA9B83B02DC5428E00BF6EF8 /* NicknameSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B83AF2DC5428E00BF6EF8 /* NicknameSettingView.swift */; };
 		EAE62223229FB6E39F76669F /* CasePathsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CF7412324C02D1745F0E0D /* CasePathsCore.framework */; };
 		EB1B1D606C9519443C8093A6 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E58A56242DD34BBF412FCA4 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle */; };
 		EB2C1DD848ACAAE2D607CA78 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F75DBDEF31E5F47ECCF65C8 /* UIKit.framework */; };
@@ -1559,7 +1560,7 @@
 		BD7EA88B3C127B12E7A5FEE8 /* GTMSessionFetcher_GTMSessionFetcherCore.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GTMSessionFetcher_GTMSessionFetcherCore.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9767E2AC080051315814DE /* GoogleSignIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleSignIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE1FC2554D805875BFC793CC /* SharedAssets-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SharedAssets-Info.plist"; sourceTree = "<group>"; };
-		BF236E4BC5803A3B1AC7418A /* DefaultProgressResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultProgressResponse.swift; sourceTree = "<group>"; };
+		BF236E4BC5803A3B1AC7418A /* DefaultProcessResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultProcessResponse.swift; sourceTree = "<group>"; };
 		BF88EC2F7FFAA7F8220985F8 /* TuistPlists+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistPlists+Common.swift"; sourceTree = "<group>"; };
 		BFE9553B0CAF5BC4F64B04A2 /* GTMAppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GTMAppAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0448D1514AFC44DEA9C731D /* GoogleUtilities_Environment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleUtilities_Environment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1675,6 +1676,7 @@
 		EA9B83A32DC523E800BF6EF8 /* LanguageSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSettingView.swift; sourceTree = "<group>"; };
 		EA9B83A92DC52C1100BF6EF8 /* LanguageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageRow.swift; sourceTree = "<group>"; };
 		EA9B83AC2DC52ED700BF6EF8 /* NicknameSettingFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameSettingFeature.swift; sourceTree = "<group>"; };
+		EA9B83AF2DC5428E00BF6EF8 /* NicknameSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameSettingView.swift; sourceTree = "<group>"; };
 		EB1AF2F0C1D291ADEC33A0B1 /* GetChallengeMyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeMyRequest.swift; sourceTree = "<group>"; };
 		EB50FD060BF7A2400BB005A7 /* ThemeChallengeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChallengeTabView.swift; sourceTree = "<group>"; };
 		EC4AFF88EA6DCED6098DE437 /* Clients-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Clients-Info.plist"; sourceTree = "<group>"; };
@@ -2285,7 +2287,7 @@
 				E8BF3E18D9330646FC4B140B /* Auth */,
 				A8B97444BDC21E92ADCD5B72 /* Challenge */,
 				4C7CD1DE9C1766B505116142 /* Comment */,
-				BF236E4BC5803A3B1AC7418A /* DefaultProgressResponse.swift */,
+				BF236E4BC5803A3B1AC7418A /* DefaultProcessResponse.swift */,
 				2F622178B346AF858FF89DAD /* DefaultLikeResponse.swift */,
 				CFEE7E0C11807B93EFB023AA /* Pageable.swift */,
 				EA7822812DC2AD54009B6E47 /* DefaultStatusResponse.swift */,
@@ -3063,6 +3065,7 @@
 			isa = PBXGroup;
 			children = (
 				EA9B83AC2DC52ED700BF6EF8 /* NicknameSettingFeature.swift */,
+				EA9B83AF2DC5428E00BF6EF8 /* NicknameSettingView.swift */,
 			);
 			path = NicknameSettingFeature;
 			sourceTree = "<group>";
@@ -4221,7 +4224,7 @@
 				5E92D79480225B86B215E07C /* Comment.swift in Sources */,
 				EA78227B2DC29DB7009B6E47 /* StampChallenges.swift in Sources */,
 				AA3FDBA7F748E148DF1A8F47 /* CommentListRseponse.swift in Sources */,
-				5B1D7526574694AA04BF21B2 /* DefaultProgressResponse.swift in Sources */,
+				5B1D7526574694AA04BF21B2 /* DefaultProcessResponse.swift in Sources */,
 				F08F0340A7D0CA2AE9C1A52E /* DefaultLikeResponse.swift in Sources */,
 				D83156D2272403C24BB67079 /* Pageable.swift in Sources */,
 				E9990850B12B4043D5B727A3 /* AppLocation.swift in Sources */,
@@ -4245,6 +4248,7 @@
 				EA9B836B2DC4A61000BF6EF8 /* ProfileServiceSection.swift in Sources */,
 				8808BC3A293387F2CBCD1591 /* AppView.swift in Sources */,
 				8251585596373E172367FA5B /* AttractionMapFeature.swift in Sources */,
+				EA9B83B02DC5428E00BF6EF8 /* NicknameSettingView.swift in Sources */,
 				2D2C6BED5A6A966415BCFD97 /* AttractionMapView.swift in Sources */,
 				A809AFD74912D337269D8566 /* AttractionMapListItem.swift in Sources */,
 				A60D757C75D4F55A4C2B4D6D /* AttractionMapListView.swift in Sources */,

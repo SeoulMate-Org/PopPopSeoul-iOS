@@ -84,7 +84,7 @@ public struct ProfileTabFeature {
   }
   
   public enum MoveAction: Equatable {
-    case nicknameSetting(User)
+    case nicknameSetting(String)
     case badge
     case likeAttraction
     case comment
@@ -158,7 +158,7 @@ public struct ProfileTabFeature {
         
       case .tappedNickname:
         if let user = state.user {
-          return .send(.move(.nicknameSetting(user)))
+          return .send(.move(.nicknameSetting(user.nickname)))
         } else {
           return .send(.showAlert(.login))
         }

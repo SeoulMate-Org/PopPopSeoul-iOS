@@ -1,5 +1,5 @@
 //
-//  DefaultProgressResponse.swift
+//  DefaultProcessResponse.swift
 //  Models
 //
 //  Created by suni on 4/27/25.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct DefaultProgressResponse: Hashable, Equatable {
+public struct DefaultProcessResponse: Hashable, Equatable {
   public let id: Int
   public let isProcessed: Bool
   
@@ -17,7 +17,7 @@ public struct DefaultProgressResponse: Hashable, Equatable {
   }
 }
 
-extension DefaultProgressResponse: Codable {
+extension DefaultProcessResponse: Codable {
   private enum CodingKeys: String, CodingKey {
     case id
     case isProcessed

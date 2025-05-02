@@ -8,20 +8,29 @@
 import Combine
 import UIKit
 
-public class KeyboardObserver: ObservableObject {
-  @Published public var height: CGFloat = 0
-  public var cancellables = Set<AnyCancellable>()
-
-  public init() {
-    NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification)
-      .compactMap { $0.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect }
-      .map { $0.height }
-      .assign(to: \.height, on: self)
-      .store(in: &cancellables)
-
-    NotificationCenter.default.publisher(for: UIResponder.keyboardWillHideNotification)
-      .map { _ in CGFloat(0) }
-      .assign(to: \.height, on: self)
-      .store(in: &cancellables)
+public class KeyboardResponder: ObservableObject {
+  private var notificationCenter: NotificationCenter
+  @Published private(set) var currentHeight: CGFloat = 0
+  
+  public init(center: NotificationCenter = .default) {
+    notificationCenter = center
+    notificationCenter.addObserver(self, selector: #selector(keyBoardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+    notificationCenter.addObserver(self, selector: #selector(keyBoardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+  }
+  
+  deinit {
+    notificationCenter.removeObserver(self)
+  }
+  
+  @objc
+  public func keyBoardWillShow(notification: Notification) {
+    if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+      currentHeight = keyboardSize.height
+    }
+  }
+  
+  @objc
+  public func keyBoardWillHide(notification: Notification) {
+    currentHeight = 0
   }
 }

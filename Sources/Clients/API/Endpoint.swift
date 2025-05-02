@@ -40,7 +40,9 @@ public extension Endpoint {
   static let attractionLike = Self(baseUrl: apiBaseUrl, pathComponents: ["attraction", "like"])
   static let attractionStamp = Self(baseUrl: apiBaseUrl, pathComponents: ["attraction", "stamp"])
   static let attractionMy = Self(baseUrl: apiBaseUrl, pathComponents: ["attraction", "my"])
+  static let user = Self(baseUrl: apiBaseUrl, pathComponents: ["user"])
   static let userInfo = Self(baseUrl: apiBaseUrl, pathComponents: ["user", "info"])
+  static let userNickname = Self(baseUrl: apiBaseUrl, pathComponents: ["user", "nickname"])
   
   // MARK: - MAPS
   static let mapsStaticRaster = Self(baseUrl: mapsUrl, pathComponents: ["map-static", "v2", "raster"])
