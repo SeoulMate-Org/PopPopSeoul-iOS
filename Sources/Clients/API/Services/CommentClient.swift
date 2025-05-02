@@ -14,6 +14,7 @@ public struct CommentClient {
   public var post: @Sendable (Int, String) async throws -> Comment
   public var put: @Sendable (Int, String) async throws -> Comment
   public var delete: @Sendable (Int) async throws -> DefaultProgressResponse
+  public var getMy: @Sendable () async throws -> [Comment]
 }
 
 extension CommentClient: DependencyKey {
@@ -50,6 +51,13 @@ extension CommentClient: DependencyKey {
         pathComponents.append("\(id)")
         let endpoint = Endpoint(baseUrl: Endpoint.comment.baseUrl, pathComponents: pathComponents)
         let request: Request = .delete(endpoint)
+        let (data, _) = try await apiClient.send(request)
+        
+        return try data.decoded()
+      },
+      getMy: {
+        let query = GetDefaultRequest()
+        let request: Request = .get(.commentMy, query: query.queryItems)
         let (data, _) = try await apiClient.send(request)
         
         return try data.decoded()

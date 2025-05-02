@@ -47,7 +47,7 @@ struct LikeAttractionView: View {
           VStack(spacing: 0) {
             Spacer()
             AppToast(type: .iconTextWithButton(
-              message: String(sLocalization: .mychallengeInterestDeleteToast),
+              message: "찜한 장소가 삭제되었어요",
               buttonTitle: String(sLocalization: .toastButtonRestoration),
               onTap: { viewStore.send(.undoLike) }
             ))

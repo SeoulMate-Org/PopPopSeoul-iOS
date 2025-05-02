@@ -105,6 +105,10 @@ public struct MainTabView: View {
         if let store = store.scope(state: \.likeAttraction, action: \.likeAttraction) {
           LikeAttractionView(store: store)
         }
+      case .myComment:
+        if let store = store.scope(state: \.myComment, action: \.myComment) {
+          MyCommentView(store: store)
+        }
       }
     }
   }

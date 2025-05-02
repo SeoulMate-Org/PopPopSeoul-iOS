@@ -66,11 +66,10 @@ public struct MainTabFeature {
     Reduce { state, action in
       switch action {
       case .selectedTabChanged(let tab):
-        
         switch tab {
         case .home:
-          state.selectedTab = tab
           state.home.onAppearType = .tabReappeared
+          state.selectedTab = tab
         case .myChallenge:
           if !TokenManager.shared.isLogin {
             state.showLoginAlert = true
@@ -78,8 +77,8 @@ public struct MainTabFeature {
             state.selectedTab = tab
           }
         case .profile:
-          state.selectedTab = tab
           state.profile.onAppearType = .tabReappeared
+          state.selectedTab = tab
         }
         return .none
         
@@ -129,7 +128,9 @@ public struct MainTabFeature {
           return .none
           
         case .comment:
+          state.path.append(.myComment(MyCommentFeature.State()))
           return .none
+          
         case .language(_):
           return .none
         case .notification:
@@ -154,7 +155,7 @@ public struct MainTabFeature {
             .element(id: _, action: .likeAttraction(.tappedDetail(let id))):
           state.path.append(.detailAttraction(DetailAttractionFeature.State(with: id)))
           return .none
-
+          
         case .element(id: _, action: .detailChallenge(.moveToMap(let challenge))):
           state.path.append(.attractionMap(AttractionMapFeature.State(with: challenge)))
           return .none
@@ -178,6 +179,13 @@ public struct MainTabFeature {
           // move to complete challenge
         case .element(id: _, action: .detailChallenge(.showCompleteChallenge(let theme))):
           state.path.append(.completeChallenge(CompleteChallengeFeature.State(with: theme)))
+          return .none
+          
+          // move to home
+        case .element(id: _, action: .myComment(.moveToHome)):
+          state.path.removeAll()
+          state.home.onAppearType = .tabReappeared
+          state.selectedTab = .home
           return .none
           
         default:
@@ -207,6 +215,7 @@ extension MainTabFeature {
     case completeChallenge(CompleteChallengeFeature)
     case myBadge(MyBadgeFeature)
     case likeAttraction(LikeAttractionFeature)
+    case myComment(MyCommentFeature)
   }
   
 }

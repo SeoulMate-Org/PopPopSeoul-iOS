@@ -54,20 +54,28 @@ public struct CommentListItemView: View {
         
         if activeMenuCommentId == comment.id {
           AppMoreMenu(
-            items: [
-              AppMoreMenuItem(
-                title: "수정",
-                action: {
-                  onEditTapped?()
-                }),
+            items: type == .myComment ?
+            [
               AppMoreMenuItem(
                 title: "삭제",
                 action: {
                   onDeleteTapped?()
                 })
-            ], onDismiss: {
-              activeMenuCommentId = nil
-            }, itemHeight: 34
+            ] :
+              [
+                AppMoreMenuItem(
+                  title: "수정",
+                  action: {
+                    onEditTapped?()
+                  }),
+                AppMoreMenuItem(
+                  title: "삭제",
+                  action: {
+                    onDeleteTapped?()
+                  })
+              ], onDismiss: {
+                activeMenuCommentId = nil
+              }, itemHeight: 34
           )
           .fixedSize()
           .padding(.trailing, 20)
