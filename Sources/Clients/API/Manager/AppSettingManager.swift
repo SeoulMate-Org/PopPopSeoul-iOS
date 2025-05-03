@@ -9,6 +9,7 @@ import Foundation
 import SharedTypes
 import Models
 import ComposableArchitecture
+import Common
 
 public class AppSettingManager {
   public static let shared = AppSettingManager()
@@ -53,10 +54,12 @@ public class AppSettingManager {
         _language = .eng
       }
     }
+    LocalizationManager.provider = self
   }
   
   public func setLanguage(_ language: AppLanguage) async {
     _language = language
+    LocalizationManager.provider = self
     await userDefaultsClient.setLanguage(language)
   }
   
@@ -71,5 +74,11 @@ public class AppSettingManager {
   
   public func setCoordinate(_ coordinate: Coordinate) {
     self.coordinate = coordinate
+  }
+}
+
+extension AppSettingManager: LanguageProvider {
+  public var currentLanguage: String {
+    return language.rawValue
   }
 }

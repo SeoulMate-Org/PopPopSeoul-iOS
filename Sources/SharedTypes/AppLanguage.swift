@@ -8,8 +8,8 @@
 import Foundation
 
 public enum AppLanguage: String, Equatable {
-  case kor
-  case eng
+  case kor = "ko"
+  case eng = "en"
   
   public var apiCode: String {
     switch self {
@@ -23,5 +23,11 @@ public enum AppLanguage: String, Equatable {
     case .kor: return "한국어"
     case .eng: return "English"
     }
+  }
+}
+
+public extension AppLanguage {
+  var code: String {
+    return self.rawValue
   }
 }

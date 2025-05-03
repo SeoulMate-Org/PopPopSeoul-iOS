@@ -97,8 +97,10 @@ struct AppButtonStyle: ButtonStyle {
       switch layout {
       case .textOnly:
         Text(title)
+          .lineLimit(1)
       case .textWithIcon(let icon):
         Text(title)
+          .lineLimit(1)
         icon
       case .iconOnly(let icon):
         icon
@@ -220,7 +222,7 @@ public enum AppButtonSize {
   
   var horizontalPadding: CGFloat {
     switch self {
-    case .lsize: return 38
+    case .lsize: return 10
     case .msize: return 20
     case .ssize: return 16
     }

@@ -724,6 +724,7 @@
 		E9DE71C84C88288412A32A64 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8609EF56D0937265092D5D36 /* Pretendard-ExtraLight.otf */; };
 		EA538B02E6EFCB8F46D36669 /* HomeChallengeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3A6CFAA5F6821C6DF932F /* HomeChallengeItemView.swift */; };
 		EA68103BE802BEBD67434D79 /* SB 어그로OTF M.otf in Resources */ = {isa = PBXBuildFile; fileRef = E283BF28611FAF81E991ABF5 /* SB 어그로OTF M.otf */; };
+		EA7201102DC6149A001D0172 /* LanguageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA72010F2DC6149A001D0172 /* LanguageProvider.swift */; };
 		EA770B0F2DC5D8C5008762C6 /* EventChallengeDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA770B0E2DC5D8C5008762C6 /* EventChallengeDateView.swift */; };
 		EA949284C11DB940F84888C2 /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256CCC92AC8D6EE5FACE5475 /* Dependencies.framework */; };
 		EAE62223229FB6E39F76669F /* CasePathsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CF7412324C02D1745F0E0D /* CasePathsCore.framework */; };
@@ -1681,6 +1682,7 @@
 		E947EE3773A39EFFC1035361 /* LikeAttractionFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeAttractionFeature.swift; sourceTree = "<group>"; };
 		EA14930892816AFA4A88950C /* GoogleUtilities_Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleUtilities_Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA26B67DE986D8D090F59956 /* CombineSchedulers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CombineSchedulers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA72010F2DC6149A001D0172 /* LanguageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageProvider.swift; sourceTree = "<group>"; };
 		EA770B0E2DC5D8C5008762C6 /* EventChallengeDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventChallengeDateView.swift; sourceTree = "<group>"; };
 		EB1AF2F0C1D291ADEC33A0B1 /* GetChallengeMyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeMyRequest.swift; sourceTree = "<group>"; };
 		EB50FD060BF7A2400BB005A7 /* ThemeChallengeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChallengeTabView.swift; sourceTree = "<group>"; };
@@ -1964,6 +1966,7 @@
 				F74ABEEFFC50D57D572FEE89 /* StatefulPreviewWrapper.swift */,
 				22F8E62DCA661935F38FDFBF /* SwiftLog.swift */,
 				3AE161A4BA9FE7BAEA0BE5F6 /* Utilities.swift */,
+				EA72010F2DC6149A001D0172 /* LanguageProvider.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -4464,6 +4467,7 @@
 				052E756E2E5E0FFDB689429A /* TuistAssets+Common.swift in Sources */,
 				D0ED38D6AFEDFE4FBAC0E830 /* TuistBundle+Common.swift in Sources */,
 				B133921A80242C08EB716CD5 /* TuistFonts+Common.swift in Sources */,
+				EA7201102DC6149A001D0172 /* LanguageProvider.swift in Sources */,
 				3B4AA270D1DDB17AF3B16AE3 /* TuistPlists+Common.swift in Sources */,
 				2D83E08A6C322D29FE800970 /* Codable++.swift in Sources */,
 				4F119668E557C635B50E5C4D /* DateFormatter++.swift in Sources */,
