@@ -24,23 +24,23 @@ struct LanguageSettingView: View {
   
   var body: some View {
     VStack(spacing: 0) {
-      HeaderView(type: .back(title: "언어", onBack: {
+      HeaderView(type: .back(title: L10n.myListText_language, onBack: {
         viewStore.send(.tappedBack)
       }))
       
       VStack(alignment: .leading, spacing: 12) {
-        Text("사용할 언어를 선택해주세요")
+        Text(L10n.detaillanguageTitle)
           .font(.appTitle3)
           .foregroundStyle(Colors.gray900.swiftUIColor)
         
         LanguageRow(
-          title: "한국어",
+          title: L10n.korean,
           isSelected: viewStore.language == .kor,
           onTap: { viewStore.send(.tappedLanguage(.kor)) }
         )
         
         LanguageRow(
-          title: "영어",
+          title: L10n.english,
           isSelected: viewStore.language == .eng,
           onTap: { viewStore.send(.tappedLanguage(.eng)) }
         )
@@ -58,13 +58,13 @@ struct LanguageSettingView: View {
       Group {
         if viewStore.showAlert {
           AppAlertView(
-            title: "언어를 변경할까요?",
-            message: "앱이 새로고침되며 변경된 언어가 적용돼요.",
-            primaryButtonTitle: "확인",
+            title: L10n.buttonText_changeLanguage,
+            message: L10n.buttonText_refresh,
+            primaryButtonTitle: L10n.textButton_ok,
             primaryAction: {
               viewStore.send(.tappedChangeLanguage)
             },
-            secondaryButtonTitle: "취소",
+            secondaryButtonTitle: L10n.textButton_cancel,
             secondaryAction: {
               viewStore.send(.tappedCancel)
             })

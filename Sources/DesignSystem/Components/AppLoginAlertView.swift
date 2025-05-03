@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Common
 
 public struct AppLoginAlertView: View {
   let onLoginTapped: () -> Void
@@ -18,16 +19,15 @@ public struct AppLoginAlertView: View {
   
   public var body: some View {
     AppAlertView(
-      title: "로그인이 필요해요",
-      message: "해당 기능은 로그인 후 이용하실 수 있습니다.",
-      primaryButtonTitle: "로그인",
+      title: L10n.alertTitle_login,
+      message: L10n.alertContent_login,
+      primaryButtonTitle: L10n.textButton_login,
       primaryAction: {
         onLoginTapped()
       },
-      secondaryButtonTitle: "취소",
+      secondaryButtonTitle: L10n.textButton_cancel,
       secondaryAction: {
         onCancelTapped()
       })
   }
 }
-

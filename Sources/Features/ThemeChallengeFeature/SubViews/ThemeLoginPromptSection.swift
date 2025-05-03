@@ -15,14 +15,14 @@ struct ThemeLoginPromptSection: View {
   var body: some View {
     HStack {
       VStack(alignment: .leading, spacing: 3) {
-        Text("회원가입하고\n챌린지에 참여해보세요")
+        Text(L10n.banner_signIn)
           .lineLimit(2)
           .lineSpacing(11)
           .font(.buttonM)
           .foregroundColor(Colors.trueWhite.swiftUIColor)
           .frame(height: 54)
         
-          Text("서울을 여행하며 스탬프와 뱃지를 모아보세요.")
+        Text(L10n.banner_collectStamp)
             .lineLimit(2)
             .font(.captionM)
             .foregroundColor(Colors.trueWhite.swiftUIColor)

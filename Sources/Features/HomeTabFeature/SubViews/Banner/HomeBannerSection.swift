@@ -41,7 +41,7 @@ struct HomeBannerSection: View {
       }
       
       VStack(alignment: .leading, spacing: 16) {
-        Text(isCultural ? "⛳️ 지금 바로\n도전 가능한 챌린지!" : "⛳️ 서울 여행 마스터를 위한\n필수 챌린지!")
+        Text(isCultural ? L10n.homeBackGroundText_event : L10n.homeBackGroundText_seoulMaster)
           .font(.appTitle1)
           .lineLimit(2)
           .lineSpacing(9)

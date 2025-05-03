@@ -23,7 +23,7 @@ struct ThemeChallengeView: View {
   
   var body: some View {
     VStack(alignment: .center, spacing: 0) {
-      HeaderView(type: .back(title: "테마별 챌린지", onBack: {
+      HeaderView(type: .back(title: L10n.detailmenuItem_themeChallenge, onBack: {
         viewStore.send(.tappedBack)
       }))
       

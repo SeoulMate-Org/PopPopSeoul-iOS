@@ -24,7 +24,7 @@ struct LikeAttractionView: View {
   
   var body: some View {
     VStack(spacing: 0) {
-      HeaderView(type: .back(title: "찜한 장소", onBack: {
+      HeaderView(type: .back(title: L10n.mybuttonText_JJIMSpots, onBack: {
         viewStore.send(.tappedBack)
       }))
       
@@ -47,7 +47,7 @@ struct LikeAttractionView: View {
           VStack(spacing: 0) {
             Spacer()
             AppToast(type: .iconTextWithButton(
-              message: "찜한 장소가 삭제되었어요",
+              message: L10n.JJIMtoastText_removed,
               buttonTitle: String(sLocalization: .toastButtonRestoration),
               onTap: { viewStore.send(.undoLike) }
             ))

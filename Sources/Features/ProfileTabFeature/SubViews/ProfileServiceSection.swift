@@ -17,7 +17,7 @@ struct ProfileServiceSection: View {
   
   var body: some View {
     SettingSectionContainer {
-      SettingRowView(title: "서비스 소개") {
+      SettingRowView(title: L10n.myListText_aboutService) {
         Button(action: onOnboardingTapped) {
           Assets.Icons.arrowRightSmall.swiftUIImage
             .resizable()
@@ -31,7 +31,7 @@ struct ProfileServiceSection: View {
       .padding(.leading, 16)
       .padding(.trailing, 8)
       
-      SettingRowView(title: "자주 묻는 질문") {
+      SettingRowView(title: L10n.myListText_FAQ) {
         Button(action: onFAQTapped) {
           Assets.Icons.arrowRightSmall.swiftUIImage
             .resizable()

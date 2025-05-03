@@ -49,7 +49,7 @@ public struct HomeRankChallengeItemView: View {
           .foregroundColor(Color.hex(0x2B2B2B))
           .lineLimit(2)
         
-        Text("\(challenge.progressCount)명이 참여중!")
+        Text(L10n.homelistText_joined("\(challenge.progressCount)"))
           .font(.captionL)
           .foregroundColor(Colors.gray300.swiftUIColor)
       }

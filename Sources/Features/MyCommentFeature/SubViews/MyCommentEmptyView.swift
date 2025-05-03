@@ -16,14 +16,14 @@ struct MyCommentEmptyView: View {
   
   var body: some View {
     VStack(spacing: 8) {
-      Text("아직 작성한 댓글이 없어요!")
+      Text(L10n.myCommentText_no)
         .font(.appTitle3)
         .foregroundColor(Colors.gray900.swiftUIColor)
-      Text("챌린지에 참여하고 댓글을 달아보세요..")
+      Text(L10n.myCommentSub_joinChallenge)
         .font(.bodyS)
         .foregroundColor(Colors.gray300.swiftUIColor)
       
-      AppButton(title: "챌린지 찾아보기", size: .msize, style: .primary, layout: .textOnly, state: .enabled, onTap: onTapped, isFullWidth: false)
+      AppButton(title: L10n.textButton_browseChallenge, size: .msize, style: .primary, layout: .textOnly, state: .enabled, onTap: onTapped, isFullWidth: false)
         .frame(height: 38)
         .padding(.top, 20)
     }

@@ -50,7 +50,7 @@ struct HomeMissingChallengeItemView: View {
       Button(action: {
         onStartTapped()
       }) {
-        Text("챌린지 시작하기")
+        Text(L10n.textButton_startChallenge)
           .font(.buttonS)
           .foregroundColor(Colors.blue500.swiftUIColor)
           .padding(.vertical, 6)

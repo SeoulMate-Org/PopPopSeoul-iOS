@@ -8,6 +8,7 @@
 import SwiftUI
 import SharedAssets
 import DesignSystem
+import Common
 
 struct SuccessStampAlertView: View {
   let attractions: [String]
@@ -16,7 +17,7 @@ struct SuccessStampAlertView: View {
   var body: some View {    
     VStack(alignment: .center, spacing: 0) {
       VStack(alignment: .leading, spacing: 0) {
-        Text("스탬프를 찍었어요!")
+        Text(L10n.popupTitle_stampComplete)
           .font(.appTitle2)
           .foregroundColor(Colors.appWhite.swiftUIColor)
           .padding(.top, 28)
@@ -37,7 +38,7 @@ struct SuccessStampAlertView: View {
         .padding(.top, 16)
       
       Button(action: onDoneTapped) {
-        Text("확인")
+        Text(L10n.textButton_ok)
           .font(.buttonM)
           .foregroundColor(Colors.appWhite.swiftUIColor)
           .frame(maxWidth: .infinity, minHeight: 51)

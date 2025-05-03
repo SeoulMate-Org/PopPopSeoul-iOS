@@ -66,9 +66,10 @@ public enum L10n {
   public static var alertContent_logout: String { localized(.alertContent_logout) }
   public static var alertContent_notRestored: String { localized(.alertContent_notRestored) }
   public static var alertContent_quitChallenge: String { localized(.alertContent_quitChallenge) }
-  public static var alertTitle_delete: String { localized(.alertTitle_delete) }
+  public static var alertTitle_deleteComments: String { localized(.alertTitle_deleteComments) }
   public static var alertTitle_deleteAccount: String { localized(.alertTitle_deleteAccount) }
   public static var alertTitle_locationAccess: String { localized(.alertTitle_locationAccess) }
+  public static var alertTitle_locationAccessOff: String { localized(.alertTitle_locationAccessOff) }
   public static var alertTitle_login: String { localized(.alertTitle_login) }
   public static var alertTitle_logout: String { localized(.alertTitle_logout) }
   public static var alertTitle_quitChallenge: String { localized(.alertTitle_quitChallenge) }
@@ -93,7 +94,9 @@ public enum L10n {
   public static var categoryName_walkingTours: String { localized(.categoryName_walkingTours) }
   public static var commentFormText_enter: String { localized(.commentFormText_enter) }
   public static var commentToastText_deleted: String { localized(.commentToastText_deleted) }
+  public static var commentToastText_updated: String { localized(.commentToastText_updated) }
   public static var commentToastText_restored: String { localized(.commentToastText_restored) }
+  public static var toastText_notNear: String { localized(.toastText_notNear) }
   public static var detailBadgeSubText_complete: String { localized(.detailBadgeSubText_complete) }
   public static var detailBadgeTitle_congrats: String { localized(.detailBadgeTitle_congrats) }
   public static var detailChallengeCommentText: String { localized(.detailChallengeCommentText) }
@@ -120,6 +123,7 @@ public enum L10n {
   public static var heartButton: String { localized(.heartButton) }
   public static var homeBackGroundText_event: String { localized(.homeBackGroundText_event) }
   public static var homeBackGroundText_jonggak: String { localized(.homeBackGroundText_jonggak) }
+  public static var homeBackGroundText_rightNearby: String { localized(.homeBackGroundText_rightNearby) }
   public static var homeBackGroundText_keepGoing: String { localized(.homeBackGroundText_keepGoing) }
   public static var homeBackGroundText_lightChallenge: String { localized(.homeBackGroundText_lightChallenge) }
   public static var homeBackGroundText_missed: String { localized(.homeBackGroundText_missed) }
@@ -147,6 +151,8 @@ public enum L10n {
   public static var myJJIMTitle_havenot: String { localized(.myJJIMTitle_havenot) }
   public static var myListButtonText_deleteAccount: String { localized(.myListButtonText_deleteAccount) }
   public static var myListButtonText_korean: String { localized(.myListButtonText_korean) }
+  public static var korean: String { localized(.korean) }
+  public static var english: String { localized(.english) }
   public static var myListButtonText_logout: String { localized(.myListButtonText_logout) }
   public static var myListText_aboutService: String { localized(.myListText_aboutService) }
   public static var myListText_FAQ: String { localized(.myListText_FAQ) }
@@ -154,6 +160,7 @@ public enum L10n {
   public static var myListText_locationAccess: String { localized(.myListText_locationAccess) }
   public static var myListText_locationAgree: String { localized(.myListText_locationAgree) }
   public static var myListText_notifications: String { localized(.myListText_notifications) }
+  public static var myListText_optional: String { localized(.myListText_optional) }
   public static var myListText_privacyPolicy: String { localized(.myListText_privacyPolicy) }
   public static var myListText_termsService: String { localized(.myListText_termsService) }
   public static var myListText_version: String { localized(.myListText_version) }
@@ -168,12 +175,15 @@ public enum L10n {
   public static var subText_away: String { localized(.subText_away) }
   public static var subText_closed: String { localized(.subText_closed) }
   public static var subText_hotSport: String { localized(.subText_hotSport) }
+  public static var textButton_browseChallenge: String { localized(.textButton_browseChallenge) }
   public static var textButton_browse: String { localized(.textButton_browse) }
+  public static var textButton_ok: String { localized(.textButton_ok) }
   public static var textButton_cancel: String { localized(.textButton_cancel) }
   public static var textButton_copy: String { localized(.textButton_copy) }
   public static var textButton_copyAddress: String { localized(.textButton_copyAddress) }
   public static var textButton_deleteAccount: String { localized(.textButton_deleteAccount) }
   public static var textButton_goToSetting: String { localized(.textButton_goToSetting) }
+  public static var textButton_goToSettingOff: String { localized(.textButton_goToSettingOff) }
   public static var textButton_later: String { localized(.textButton_later) }
   public static var textButton_leaveChallenge: String { localized(.textButton_leaveChallenge) }
   public static var textButton_login: String { localized(.textButton_login) }
@@ -194,6 +204,16 @@ public enum L10n {
   public static var withdrawexplanation_shareyour: String { localized(.withdrawexplanation_shareyour) }
   public static var withdrawexplanation_thankyou: String { localized(.withdrawexplanation_thankyou) }
   public static var withdrawNote: String { localized(.withdrawNote) }
+  public static var detailCommentsText: String { localized(.detailCommentsText) }
+  public static var onboardingSub_2: String { localized(.onboardingSub_2) }
+  public static var onboardingSub_3: String { localized(.onboardingSub_3) }
+  public static var onboardingSub_4: String { localized(.onboardingSub_4) }
+  public static var onboardingText_1: String { localized(.onboardingText_1) }
+  public static var onboardingText_2: String { localized(.onboardingText_2) }
+  public static var onboardingText_3: String { localized(.onboardingText_3) }
+  public static var onboardingTitle_2: String { localized(.onboardingTitle_2) }
+  public static var onboardingTitle_3: String { localized(.onboardingTitle_3) }
+  public static var onboardingTitle_4: String { localized(.onboardingTitle_4) }
   
   public static func alarmListText_location(_ args: CVarArg...) -> String { localized(.alarmListText_location, args) }
   public static func alarmListText_vibration(_ args: CVarArg...) -> String { localized(.alarmListText_vibration, args) }
@@ -204,7 +224,6 @@ public enum L10n {
   public static func alertContent_logout(_ args: CVarArg...) -> String { localized(.alertContent_logout, args) }
   public static func alertContent_notRestored(_ args: CVarArg...) -> String { localized(.alertContent_notRestored, args) }
   public static func alertContent_quitChallenge(_ args: CVarArg...) -> String { localized(.alertContent_quitChallenge, args) }
-  public static func alertTitle_delete(_ args: CVarArg...) -> String { localized(.alertTitle_delete, args) }
   public static func alertTitle_deleteAccount(_ args: CVarArg...) -> String { localized(.alertTitle_deleteAccount, args) }
   public static func alertTitle_locationAccess(_ args: CVarArg...) -> String { localized(.alertTitle_locationAccess, args) }
   public static func alertTitle_login(_ args: CVarArg...) -> String { localized(.alertTitle_login, args) }
@@ -306,7 +325,7 @@ public enum L10n {
   public static func subText_away(_ args: CVarArg...) -> String { localized(.subText_away, args) }
   public static func subText_closed(_ args: CVarArg...) -> String { localized(.subText_closed, args) }
   public static func subText_hotSport(_ args: CVarArg...) -> String { localized(.subText_hotSport, args) }
-  public static func textButton_browse(_ args: CVarArg...) -> String { localized(.textButton_browse, args) }
+  public static func textButton_browseChallenge(_ args: CVarArg...) -> String { localized(.textButton_browseChallenge, args) }
   public static func textButton_cancel(_ args: CVarArg...) -> String { localized(.textButton_cancel, args) }
   public static func textButton_copy(_ args: CVarArg...) -> String { localized(.textButton_copy, args) }
   public static func textButton_copyAddress(_ args: CVarArg...) -> String { localized(.textButton_copyAddress, args) }
@@ -372,7 +391,15 @@ public enum LocalizationsKey: String {
 }
 
 public enum LocalizedKey: String {
-  case alarmListText_location
+  case onboardingSub_2
+  case onboardingSub_3
+  case onboardingSub_4
+  case onboardingText_1
+  case onboardingText_2
+  case onboardingText_3
+  case onboardingTitle_2
+  case onboardingTitle_3
+  case onboardingTitle_4
   case alarmListText_vibration
   case alertContent_deleteAccount
   case alertContent_locationAccess
@@ -381,9 +408,11 @@ public enum LocalizedKey: String {
   case alertContent_logout
   case alertContent_notRestored
   case alertContent_quitChallenge
-  case alertTitle_delete
+  case alarmListText_location
+  case alertTitle_deleteComments
   case alertTitle_deleteAccount
   case alertTitle_locationAccess
+  case alertTitle_locationAccessOff
   case alertTitle_login
   case alertTitle_logout
   case alertTitle_quitChallenge
@@ -409,6 +438,8 @@ public enum LocalizedKey: String {
   case commentFormText_enter
   case commentToastText_deleted
   case commentToastText_restored
+  case commentToastText_updated
+  case toastText_notNear
   case detailBadgeSubText_complete
   case detailBadgeTitle_congrats
   case detailChallengeCommentText
@@ -462,6 +493,8 @@ public enum LocalizedKey: String {
   case myJJIMTitle_havenot
   case myListButtonText_deleteAccount
   case myListButtonText_korean
+  case korean
+  case english
   case myListButtonText_logout
   case myListText_aboutService
   case myListText_FAQ
@@ -469,6 +502,7 @@ public enum LocalizedKey: String {
   case myListText_locationAccess
   case myListText_locationAgree
   case myListText_notifications
+  case myListText_optional
   case myListText_privacyPolicy
   case myListText_termsService
   case myListText_version
@@ -483,12 +517,14 @@ public enum LocalizedKey: String {
   case subText_away
   case subText_closed
   case subText_hotSport
+  case textButton_browseChallenge
   case textButton_browse
   case textButton_cancel
   case textButton_copy
   case textButton_copyAddress
   case textButton_deleteAccount
   case textButton_goToSetting
+  case textButton_goToSettingOff
   case textButton_later
   case textButton_leaveChallenge
   case textButton_login
@@ -509,4 +545,7 @@ public enum LocalizedKey: String {
   case withdrawexplanation_shareyour
   case withdrawexplanation_thankyou
   case withdrawNote
+  case homeBackGroundText_rightNearby
+  case textButton_ok
+  case detailCommentsText
 }

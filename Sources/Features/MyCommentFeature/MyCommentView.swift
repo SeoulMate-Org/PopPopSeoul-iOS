@@ -25,7 +25,7 @@ struct MyCommentView: View {
   
     var body: some View {
       VStack(spacing: 0) {
-        HeaderView(type: .back(title: "내 댓글", onBack: {
+        HeaderView(type: .back(title: L10n.mybuttonText_myComments, onBack: {
           viewStore.send(.tappedBack)
         }))
         
@@ -78,13 +78,13 @@ struct MyCommentView: View {
         Group {
           if let deletingComment = viewStore.deletingComment {
             AppAlertView(
-              title: "댓글을 삭제할까요?",
-              message: "삭제한 댓글은 복구할 수 없습니다.",
-              primaryButtonTitle: "삭제",
+              title: L10n.alertTitle_deleteComments,
+              message: L10n.alertContent_notRestored,
+              primaryButtonTitle: L10n.reviewSubButton_delete,
               primaryAction: {
                 viewStore.send(.deleteComment(deletingComment))
               },
-              secondaryButtonTitle: "취소",
+              secondaryButtonTitle: L10n.textButton_cancel,
               secondaryAction: {
                 viewStore.send(.cancelDeleteComment)
               })
@@ -100,7 +100,7 @@ struct MyCommentView: View {
 extension MyCommentFeature.Toast {
   var message: String {
     switch self {
-    case .deleteComplete: "댓글이 삭제되었습니다."
+    case .deleteComplete: L10n.commentToastText_deleted
     }
   }
 }

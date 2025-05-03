@@ -9,6 +9,7 @@ import SwiftUI
 import DesignSystem
 import SharedAssets
 import SharedTypes
+import Common
 
 struct ProfileSettingSection: View {
   let language: String
@@ -19,7 +20,7 @@ struct ProfileSettingSection: View {
 
   var body: some View {
     SettingSectionContainer {
-      SettingRowView(title: "언어") {
+      SettingRowView(title: L10n.myListText_language) {
         Button(action: onLanguageTapped) {
           Text(language)
             .font(.captionM)
@@ -29,7 +30,7 @@ struct ProfileSettingSection: View {
       }
       .padding(.horizontal, 16)
 
-      SettingRowView(title: "알림") {
+      SettingRowView(title: L10n.myListText_notifications) {
         Button(action: onNotiTapped) {
           Assets.Icons.arrowRightSmall.swiftUIImage
             .resizable()
@@ -40,7 +41,7 @@ struct ProfileSettingSection: View {
       .padding(.leading, 16)
       .padding(.trailing, 8)
 
-      SettingRowView(title: "위치 권한 설정", subTitle: "(선택)") {
+      SettingRowView(title: L10n.myListText_locationAccess, subTitle: L10n.myListText_optional) {
         Toggle("", isOn: $isLocationAuth)
           .foregroundStyle(Colors.blue500.swiftUIColor)
           .labelsHidden()

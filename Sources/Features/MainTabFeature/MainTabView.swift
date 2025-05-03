@@ -63,37 +63,37 @@ public struct MainTabView: View {
                 })
               case .logout:
                 AppAlertView(
-                  title: "로그아웃할까요?",
-                  message: "앱에서 로그아웃됩니다.",
-                  primaryButtonTitle: "로그인",
+                  title: L10n.alertTitle_logout,
+                  message: L10n.alertContent_logout,
+                  primaryButtonTitle: L10n.buttonText_logout,
                   primaryAction: {
                     viewStore.send(.alertAction(.logout, true))
                   },
-                  secondaryButtonTitle: "취소",
+                  secondaryButtonTitle: L10n.textButton_cancel,
                   secondaryAction: {
                     viewStore.send(.alertAction(.logout, false))
                   })
               case .onLocation:
                 AppAlertView(
-                  title: "위치 권한을 설정할까요?",
-                  message: "챌린지 진행을 위해 위치 정보가 필요해요.",
-                  primaryButtonTitle: "설정하러 가기",
+                  title: L10n.alertTitle_locationAccess,
+                  message: L10n.alertContent_locationAccess,
+                  primaryButtonTitle: L10n.textButton_goToSetting,
                   primaryAction: {
                     viewStore.send(.alertAction(.onLocation, true))
                   },
-                  secondaryButtonTitle: "취소",
+                  secondaryButtonTitle: L10n.textButton_later,
                   secondaryAction: {
                     viewStore.send(.alertAction(.onLocation, false))
                   })
               case .offLocation:
                 AppAlertView(
-                  title: "위치 권한을 해제할까요?",
-                  message: "챌린지 진행을 위해 위치 정보가 필요해요.",
-                  primaryButtonTitle: "해제하러 가기",
+                  title: L10n.alertTitle_locationAccessOff,
+                  message: L10n.alertContent_locationAccess,
+                  primaryButtonTitle: L10n.textButton_goToSettingOff,
                   primaryAction: {
                     viewStore.send(.alertAction(.offLocation, true))
                   },
-                  secondaryButtonTitle: "나중에",
+                  secondaryButtonTitle: L10n.textButton_later,
                   secondaryAction: {
                     viewStore.send(.alertAction(.offLocation, false))
                   })

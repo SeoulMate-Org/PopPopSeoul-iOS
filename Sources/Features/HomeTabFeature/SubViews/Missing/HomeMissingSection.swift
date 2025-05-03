@@ -45,13 +45,13 @@ struct HomeMissingSection: View {
       }
       
       VStack(alignment: .leading, spacing: 0) {
-        Text(isMissing ? "🏃‍ 놓치고 있는 챌린지" : "🏃‍ 도전하기 좋은 챌린지")
+        Text(isMissing ? L10n.homeBackGroundText_missed : L10n.homeBackGroundText_startChallenge)
           .font(.appTitle2)
           .foregroundStyle(Colors.appWhite.swiftUIColor)
           .padding(.horizontal, 20)
           .padding(.top, 72)
         
-        Text(isMissing ? "지금 참여 중인 챌린지, 계속 이어가볼까요?" : "가벼운 챌린지부터 시작해볼까요?")
+        Text(isMissing ? L10n.homeBackGroundText_keepGoing : L10n.homeBackGroundText_lightChallenge)
           .font(.captionL)
           .foregroundStyle(Colors.gray25.swiftUIColor)
           .padding(.top, 4)

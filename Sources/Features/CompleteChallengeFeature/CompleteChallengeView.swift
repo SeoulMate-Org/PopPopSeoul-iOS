@@ -11,7 +11,6 @@ import Common
 import DesignSystem
 import SharedAssets
 import SharedTypes
-import Clients
 
 struct CompleteChallengeView: View {
   let store: StoreOf<CompleteChallengeFeature>
@@ -30,12 +29,12 @@ struct CompleteChallengeView: View {
           .scaledToFit()
           .frame(width: 304, height: 304)
         
-        Text("축하해요!")
+        Text(L10n.detailBadgeTitle_congrats)
           .font(.appTitle1)
           .foregroundColor(Colors.gray900.swiftUIColor)
           .padding(.top, 26)
         
-        Text("\(viewStore.theme.title(AppSettingManager.shared.language)) 챌린지를 완료 했어요!")
+        Text(L10n.detailBadgeSubText_complete("\(viewStore.theme.title)"))
           .font(.bodyS)
           .foregroundColor(Colors.gray300.swiftUIColor)
           .padding(.top, 6)
@@ -48,7 +47,7 @@ struct CompleteChallengeView: View {
         Button {
           viewStore.send(.moveToBadge)
         } label: {
-          Text("내 배지 보러가기")
+          Text(L10n.textButton_viewMyBadge)
             .font(.buttonM)
             .foregroundColor(Colors.gray900.swiftUIColor)
         }
@@ -56,7 +55,7 @@ struct CompleteChallengeView: View {
         Button(action: {
           viewStore.send(.tappedDone)
         }) {
-          Text("완료")
+          Text(L10n.myTapButtonText_completed)
             .font(.buttonM)
             .foregroundColor(Colors.appWhite.swiftUIColor)
             .frame(maxWidth: .infinity, minHeight: 51)

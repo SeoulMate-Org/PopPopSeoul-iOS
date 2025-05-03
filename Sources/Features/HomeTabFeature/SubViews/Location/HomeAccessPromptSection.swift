@@ -56,14 +56,14 @@ struct HomeAccessPromptSection: View {
     
     var title: String {
       switch self {
-      case .login: return "지금 가입하고\n가까운 챌린지를 참여해봐요!"
-      case .location: return "근처 챌린지를 찾으려면\n위치 권한이 필요해요"
+      case .login: return L10n.banner_signUp
+      case .location: return L10n.banner_allowLocation
       }
     }
     
     var description: String {
       switch self {
-      case .login: return "근처 장소부터 쉽게 참여할 수 있어요"
+      case .login: return L10n.banner_nearby
       case .location: return ""
       }
     }

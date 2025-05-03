@@ -52,7 +52,7 @@ struct ThemeChallengeListView: View {
         }
         .padding(.top, 24)
         
-        Text("🤩 더 많은 챌린지를 준비중이에요!")
+        Text(L10n.themeDetailText_comingSoon)
           .font(.bodyM)
           .foregroundStyle(Colors.gray600.swiftUIColor)
           .frame(maxWidth: .infinity)

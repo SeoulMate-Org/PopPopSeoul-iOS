@@ -37,7 +37,7 @@ struct NicknameSettingView: View {
         Button(action: {
           viewStore.send(.tappedSave)
         }) {
-          Text("완료")
+          Text(L10n.myTapButtonText_completed)
             .font(.buttonM)
             .foregroundColor(Colors.appWhite.swiftUIColor)
             .frame(maxWidth: .infinity, minHeight: 51)
@@ -50,7 +50,7 @@ struct NicknameSettingView: View {
         .padding(.vertical, 10)
       } else {
         Button(action: { }) {
-          Text("완료")
+          Text(L10n.myTapButtonText_completed)
             .font(.buttonM)
             .foregroundColor(Colors.blue300.swiftUIColor)
             .frame(maxWidth: .infinity, minHeight: 51)

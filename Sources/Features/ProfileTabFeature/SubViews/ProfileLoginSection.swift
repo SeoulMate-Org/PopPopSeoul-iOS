@@ -17,7 +17,7 @@ struct ProfileLoginSection: View {
   
   var body: some View {
     SettingSectionContainer {
-      SettingRowView(title: "로그아웃") {
+      SettingRowView(title: L10n.myListButtonText_logout) {
         EmptyView()
       }
       .onTapGesture {
@@ -25,7 +25,7 @@ struct ProfileLoginSection: View {
       }
       .padding(.horizontal, 16)
       
-      SettingRowView(title: "탈퇴하기") {
+      SettingRowView(title: L10n.myListButtonText_deleteAccount) {
         EmptyView()
       }
       .onTapGesture {

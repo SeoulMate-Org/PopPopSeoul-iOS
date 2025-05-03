@@ -31,7 +31,7 @@ struct DetailAttractionMapSection: View {
         onMapTapped()
       }) {
         HStack(spacing: 2) {
-          Text("네이버 지도 보러 가기")
+          Text(L10n.textButton_viewNaverMap)
             .font(.buttonS)
             .foregroundColor(Colors.blue500.swiftUIColor)
             .padding(.vertical, 9)

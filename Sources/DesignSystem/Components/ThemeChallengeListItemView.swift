@@ -73,7 +73,7 @@ public struct ThemeChallengeListItemView: View {
         }
         
         HStack(spacing: 4) {
-          Text("주요 동네")
+          Text(L10n.subText_hotSport)
             .font(.captionM)
             .foregroundColor(Colors.blue500.swiftUIColor)
             .padding(.horizontal, 4)

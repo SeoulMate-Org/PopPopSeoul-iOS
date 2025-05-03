@@ -101,7 +101,7 @@ struct DetailAtrractionView: View {
 extension DetailAttractionFeature.Toast {
   var message: String {
     switch self {
-    case .paste: "복사되었습니다."
+    case .paste: L10n.toastText_copied
     }
   }
 }

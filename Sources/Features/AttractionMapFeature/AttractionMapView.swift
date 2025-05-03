@@ -68,7 +68,7 @@ struct AttractionMapView: View {
   func detailBottomSheet(_ attraction: Attraction) -> some View {
     VStack {
       if viewStore.showToast == .paste {
-        AppToast(type: .text(message: "복사되었습니다."))
+        AppToast(type: .text(message: L10n.toastText_copied))
           .padding(.bottom, 16)
           .transition(.opacity.animation(.easeInOut(duration: 0.2)))
       }

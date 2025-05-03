@@ -19,10 +19,10 @@ struct LikeAttractionEmptyView: View {
         .scaledToFit()
         .frame(width: 100, height: 100)
       VStack(spacing: 8) {
-        Text("아직 찜한 장소가 없어요!")
+        Text(L10n.myJJIMContent_havenot)
           .font(.appTitle3)
           .foregroundColor(Colors.gray900.swiftUIColor)
-        Text("여러 챌린지를 찾아보고 추가하세요.")
+        Text(L10n.myJJIMContent_addMore)
           .font(.bodyS)
           .foregroundColor(Colors.gray300.swiftUIColor)
       }

@@ -160,13 +160,13 @@ struct DetailChallengeView: View {
         
         if let deletingComment = viewStore.deletingComment {
           AppAlertView(
-            title: "댓글을 삭제할까요?",
-            message: "삭제한 댓글은 복구할 수 없습니다.",
-            primaryButtonTitle: "삭제",
+            title: L10n.alertTitle_deleteComments,
+            message: L10n.alertContent_notRestored,
+            primaryButtonTitle: L10n.reviewSubButton_delete,
             primaryAction: {
               viewStore.send(.deleteComment(deletingComment))
             },
-            secondaryButtonTitle: "취소",
+            secondaryButtonTitle: L10n.textButton_cancel,
             secondaryAction: {
               viewStore.send(.cancelDeleteComment)
             })
@@ -200,9 +200,9 @@ struct DetailChallengeView: View {
 extension DetailChallengeFeature.Toast {
   var message: String {
     switch self {
-    case .deleteComplete: "댓글이 삭제되었습니다."
-    case .notNearAttraction: "장소 근처에서만 스탬프를 찍을 수 있어요"
-    case .paste: "복사되었습니다."
+    case .deleteComplete: L10n.commentToastText_deleted
+    case .notNearAttraction: L10n.toastText_notNear
+    case .paste: L10n.toastText_copied
     }
   }
 }

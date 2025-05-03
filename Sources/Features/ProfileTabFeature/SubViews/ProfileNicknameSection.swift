@@ -25,7 +25,7 @@ struct ProfileNicknameSection: View {
             .font(.appTitle1)
             .foregroundStyle(Colors.gray900.swiftUIColor)
         } else {
-          Text("로그인이 필요해요")
+          Text(L10n.alertTitle_login)
             .font(.appTitle1)
             .foregroundStyle(Colors.gray900.swiftUIColor)
         }
@@ -53,7 +53,7 @@ struct ProfileNicknameSection: View {
             .padding(.top, 5)
         }
       } else if !isLogin {
-        Text("챌린지도 찜하고, 배지도 모을 수 있어요")
+        Text(L10n.mySubText_JJIMBadge)
           .font(.captionM)
           .foregroundColor(Colors.appWhite.swiftUIColor)
           .padding(.horizontal, 10)

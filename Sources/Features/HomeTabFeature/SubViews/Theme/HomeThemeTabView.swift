@@ -8,7 +8,6 @@
 import SwiftUI
 import DesignSystem
 import Common
-import Clients
 import SharedAssets
 import SharedTypes
 
@@ -18,11 +17,10 @@ struct HomeThemeTabView: View {
   let onTapped: () -> Void
     
   var body: some View {
-    let lanuage = AppSettingManager.shared.language
     Button(action: {
       onTapped()
     }) {
-      Text(tab.title(lanuage))
+      Text(tab.title)
         .font(.captionM)
         .foregroundColor(isSelected ? Colors.blue500.swiftUIColor : Colors.gray900.swiftUIColor)
         .padding(.horizontal, 10)

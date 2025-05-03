@@ -95,7 +95,7 @@ struct AttractionMapDetailView: View {
       
       HStack(spacing: 10) {
         AppButton(
-          title: "Copy Address",
+          title: L10n.textButton_copyAddress,
           size: .msize,
           style: .neutral,
           layout: .textOnly,
@@ -110,7 +110,7 @@ struct AttractionMapDetailView: View {
         .frame(maxHeight: 46)
         
         AppButton(
-          title: "장소 상세보기",
+          title: L10n.textButton_viewOnMap,
           size: .msize,
           style: .primary,
           layout: .textOnly,

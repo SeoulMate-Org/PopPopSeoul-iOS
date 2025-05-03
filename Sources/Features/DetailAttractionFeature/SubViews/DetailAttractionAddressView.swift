@@ -54,7 +54,7 @@ struct DetailAttractionAddressView: View {
             onPasteTapped()
             UIPasteboard.general.string = text
           }) {
-            Text("복사")
+            Text(L10n.textButton_copy)
               .foregroundStyle(Colors.blue500.swiftUIColor)
               .font(.buttonS)
           }
@@ -75,7 +75,7 @@ struct DetailAttractionAddressView: View {
                   .fill(Colors.blue50.swiftUIColor)
               )
             
-            Text("나로부터 \(distance)")
+            Text(L10n.subText_away(distance))
               .font(.bodyS)
               .foregroundStyle(Colors.gray900.swiftUIColor)
           }

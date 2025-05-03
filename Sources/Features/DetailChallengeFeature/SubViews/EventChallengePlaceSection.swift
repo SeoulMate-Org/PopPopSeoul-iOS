@@ -20,11 +20,11 @@ struct EventChallengePlaceSection: View {
   var body: some View {
     VStack(alignment: .leading, spacing: 0) {
       VStack(alignment: .leading, spacing: 2) {
-        Text("스탬프 미션 문화행사")
+        Text(L10n.detailChallengeText_missionSpots)
           .font(.appTitle3)
           .foregroundColor(Colors.gray900.swiftUIColor)
         
-        Text("아래 문화행사를 방문하면 스탬프가 찍혀요")
+        Text(L10n.detailChallengeSubText_stampMission)
           .font(.captionL)
           .foregroundColor(Colors.gray400.swiftUIColor)
           .fixedSize(horizontal: false, vertical: true)

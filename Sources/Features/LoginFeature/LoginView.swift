@@ -45,7 +45,7 @@ struct LoginView: View {
             Button {
               store.send(.aroundTapped)
             } label: {
-              Text("둘러보기")
+              Text(L10n.textButton_browse)
                 .font(.bodyS)
                 .foregroundColor(Colors.appWhite.swiftUIColor)
                 .padding(8)

@@ -28,7 +28,7 @@ struct MyBadgeView: View {
   
   var body: some View {
     VStack(spacing: 0) {
-      HeaderView(type: .back(title: "내 배지", onBack: {
+      HeaderView(type: .back(title: L10n.detailmenuItem_myBadge, onBack: {
         viewStore.send(.tappedBack)
       }))
       
@@ -55,12 +55,12 @@ struct MyBadgeView: View {
   private func prompt() -> some View {
     HStack {
       VStack(alignment: .leading, spacing: 4) {
-        Text("배지를 모아갈수록 완주에 가까워져요!")
+        Text(L10n.myBadgeTitle_moreCloser)
           .lineLimit(1)
           .font(.captionM)
           .foregroundColor(Colors.gray500.swiftUIColor)
         
-        Text("서울을 모두 채워볼 준비 되셨나요?")
+        Text(L10n.myBadgeContent_ready)
           .lineLimit(1)
           .font(.buttonM)
           .foregroundColor(Colors.gray900.swiftUIColor)

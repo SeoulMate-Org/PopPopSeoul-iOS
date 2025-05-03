@@ -63,11 +63,11 @@ struct OnboardingPageView: View {
   @ViewBuilder
   private func stepList() -> some View {
     VStack(alignment: .leading, spacing: 12) {
-      stepRow(numberImage: Assets.Images.onboardingNumber1.swiftUIImage, text: "마음에 드는 여행 챌린지를 골라요")
+      stepRow(numberImage: Assets.Images.onboardingNumber1.swiftUIImage, text: L10n.onboardingText_1)
       lineDivider()
-      stepRow(numberImage: Assets.Images.onboardingNumber2.swiftUIImage, text: "장소를 방문하고 스탬프를 직접 찍어요")
+      stepRow(numberImage: Assets.Images.onboardingNumber2.swiftUIImage, text: L10n.onboardingText_2)
       lineDivider()
-      stepRow(numberImage: Assets.Images.onboardingNumber3.swiftUIImage, text: "스탬프를 모아 배지를 획득해요")
+      stepRow(numberImage: Assets.Images.onboardingNumber3.swiftUIImage, text: L10n.onboardingText_3)
     }
   }
 
@@ -99,11 +99,11 @@ struct OnboardingPageView: View {
     let (title, description): (String, String) = {
       switch index {
       case 1:
-        return ("관광지를 방문하고\n스탬프를 찍어보세요!", "50m 이내로 가까워지면\n스탬프를 직접 찍을 수 있어요.")
+        return (L10n.onboardingTitle_2, L10n.onboardingSub_2)
       case 2:
-        return ("한국 감성 가득한 배지,\n다 모아볼까요?", "하나의 챌린지를 완성하면\n배지를 얻을 수 있어요.")
+        return (L10n.onboardingTitle_3, L10n.onboardingSub_3)
       case 3:
-        return ("하고 싶은 챌린지를\n‘찜’해 보세요!", "나만의 챌린지를 기록하고 다시 찾아보세요.")
+        return (L10n.onboardingTitle_4, L10n.onboardingSub_4)
       default:
         return ("", "")
       }

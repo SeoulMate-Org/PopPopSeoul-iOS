@@ -57,7 +57,7 @@ public struct CommentListItemView: View {
             items: type == .myComment ?
             [
               AppMoreMenuItem(
-                title: "삭제",
+                title: L10n.reviewSubButton_delete,
                 action: {
                   onDeleteTapped?()
                 })
@@ -69,7 +69,7 @@ public struct CommentListItemView: View {
                     onEditTapped?()
                   }),
                 AppMoreMenuItem(
-                  title: "삭제",
+                  title: L10n.reviewSubButton_delete,
                   action: {
                     onDeleteTapped?()
                   })

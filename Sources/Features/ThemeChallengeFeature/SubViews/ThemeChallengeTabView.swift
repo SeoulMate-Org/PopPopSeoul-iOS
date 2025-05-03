@@ -8,7 +8,6 @@
 import SwiftUI
 import Common
 import DesignSystem
-import Clients
 import SharedAssets
 import SharedTypes
 import Models
@@ -18,7 +17,6 @@ struct ThemeChallengeTabView: View {
   let themeTabChanged: (ChallengeTheme) -> Void
   
   var body: some View {
-    let lanuage = AppSettingManager.shared.language
     
     ScrollViewReader { proxy in
       ScrollView(.horizontal, showsIndicators: false) {
@@ -28,7 +26,7 @@ struct ThemeChallengeTabView: View {
               selectedTab = tab
             }) {
               VStack(spacing: 0) {
-                Text(tab.title(lanuage))
+                Text(tab.title)
                   .font(.bodyS)
                   .foregroundColor(tab == selectedTab ? Colors.blue500.swiftUIColor : Colors.gray500.swiftUIColor)
                   .frame(alignment: .center)

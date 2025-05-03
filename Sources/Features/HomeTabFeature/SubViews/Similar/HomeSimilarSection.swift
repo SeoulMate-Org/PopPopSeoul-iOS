@@ -23,12 +23,12 @@ struct HomeSimilarSection: View {
     
     VStack(alignment: .leading, spacing: 0) {
       // MARK: - 헤더 타이틀
-      Text("😎 ‘\(lastAttractionName)’과 비슷한 챌린지")
+      Text(L10n.homeBackGroundText_similar("\(lastAttractionName)"))
         .font(.appTitle2)
         .foregroundStyle(Colors.gray900.swiftUIColor)
         .padding(.horizontal, 20)
       
-      Text("최근에 스탬프한 장소가 포함된 챌린지예요")
+      Text(L10n.homeBackGroundText_recently)
         .font(.captionL)
         .foregroundStyle(Colors.gray600.swiftUIColor)
         .padding(.top, 4)

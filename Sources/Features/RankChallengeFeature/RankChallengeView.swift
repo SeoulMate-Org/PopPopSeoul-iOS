@@ -12,6 +12,7 @@ import DesignSystem
 import SharedAssets
 import Clients
 
+// TODO: - 1차 오픈에서 히든
 struct RankChallengeView: View {
   let store: StoreOf<RankChallengeFeature>
   @ObservedObject var viewStore: ViewStore<RankChallengeFeature.State, RankChallengeFeature.Action>
@@ -30,11 +31,11 @@ struct RankChallengeView: View {
       // MARK: - 리스트
       ScrollView(showsIndicators: false) {
         VStack(alignment: .leading, spacing: 0) {
-          Text("🏅 챌린지 랭킹")
+          Text(L10n.homeBackGroundText_ranking)
             .font(.appTitle2)
             .foregroundStyle(Colors.gray900.swiftUIColor)
           
-          Text("많이 참여한 챌린지를 순위로 보여드려요!")
+          Text(L10n.homeBackGroundText_mostPopular)
             .font(.captionL)
             .foregroundStyle(Colors.gray600.swiftUIColor)
             .padding(.top, 4)

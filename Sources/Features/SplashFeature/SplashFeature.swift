@@ -101,15 +101,15 @@ public struct SplashFeature {
         }
         
       case .showForceUpdateAlert:
-        state.alert = AlertState(
-          title: { TextState("업데이트")
-          }, actions: {
-            ButtonState(action: .goToUpdateTapped) {
-              TextState("업데이트 하러가기")
-            }
-          }, message: {
-            TextState("앱을 사용하려면 업데이트가 필요합니다.")
-          })
+//        state.alert = AlertState(
+//          title: { TextState("업데이트")
+//          }, actions: {
+//            ButtonState(action: .goToUpdateTapped) {
+//              TextState("업데이트 하러가기")
+//            }
+//          }, message: {
+//            TextState("앱을 사용하려면 업데이트가 필요합니다.")
+//          })
         return .none
         
       case .alert(.presented(.goToUpdateTapped)):

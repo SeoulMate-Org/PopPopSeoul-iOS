@@ -81,7 +81,7 @@ struct ChallengePlaceListItem: View {
             .frame(width: 16, height: 16)
           
           if let distance = place.distance {
-            Text("나로부터 \(distance.formattedDistance)")
+            Text(L10n.subText_away("\(distance.formattedDistance)"))
               .font(.captionL)
               .foregroundColor(Colors.gray400.swiftUIColor)
           }

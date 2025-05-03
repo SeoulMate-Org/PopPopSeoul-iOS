@@ -20,15 +20,15 @@ struct ProfileCountView: View {
   
   var body: some View {
     HStack(alignment: .center, spacing: 4) {
-      profileCountItem(title: "배지", count: user?.badgeCount ?? 0, onTap: onbadgeTapped)
+      profileCountItem(title: L10n.mybuttonText_badge, count: user?.badgeCount ?? 0, onTap: onbadgeTapped)
       
       divider
       
-      profileCountItem(title: "찜한 장소", count: user?.likedCount ?? 0, onTap: onLikeTapped)
+      profileCountItem(title: L10n.mybuttonText_JJIMSpots, count: user?.likedCount ?? 0, onTap: onLikeTapped)
       
       divider
       
-      profileCountItem(title: "내 댓글", count: user?.commentCount ?? 0, onTap: onCommentTapped)
+      profileCountItem(title: L10n.mybuttonText_myComments, count: user?.commentCount ?? 0, onTap: onCommentTapped)
     }
     .frame(maxWidth: .infinity)
     .frame(height: 80)

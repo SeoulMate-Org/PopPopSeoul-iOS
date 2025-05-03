@@ -226,23 +226,6 @@
         }
       }
     },
-    "alertTitle_delete" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Delete this comment?"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "댓글을 삭제할까요?"
-          }
-        }
-      }
-    },
     "alertTitle_deleteAccount" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -260,6 +243,23 @@
         }
       }
     },
+    "alertTitle_deleteComments" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Delete this comment?"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "댓글을 삭제할까요?"
+          }
+        }
+      }
+    },
     "alertTitle_locationAccess" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -273,6 +273,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "위치 권한을 설정할까요?"
+          }
+        }
+      }
+    },
+    "alertTitle_locationAccessOff" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turn off location access?"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위치 권한을 해제할까요?"
           }
         }
       }
@@ -351,13 +368,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "We need location access to find nearby challenges"
+            "value" : "Allow Location Access\nto Discover Nearby Challenges"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "근처 챌린지를 찾으려면 위치 권한이 필요해요"
+            "value" : "근처 챌린지를 찾으려면 위치 권한이 필요해요"
           }
         }
       }
@@ -401,14 +418,14 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sign up and join challenges!"
+            "state" : "needs_review",
+            "value" : "Sign Up Now!\nJoin Challenges"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "회원가입하고 챌린지에 참여해 보세요"
+            "value" : "회원가입하고\n챌린지에 참여해 보세요"
           }
         }
       }
@@ -702,6 +719,17 @@
         }
       }
     },
+    "commentToastText_updated" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "댓글이 수정되었습니다."
+          }
+        }
+      }
+    },
     "detailBadgeSubText_complete" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -868,6 +896,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "스탬프 미션: 문화 행사"
+          }
+        }
+      }
+    },
+    "detailCommentsText" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Collect a stamp and leave a comment!"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스탬프를 찍고 첫 댓글을 남겨주세요!"
           }
         }
       }
@@ -1042,6 +1087,23 @@
         }
       }
     },
+    "english" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "English"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "영어"
+          }
+        }
+      }
+    },
     "footer_home" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1189,14 +1251,14 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Challenges you might’ve missed"
+            "state" : "translated",
+            "value" : "🏃‍ Challenges you might’ve missed"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "놓치고 있는 챌린지"
+            "value" : "🏃‍ 놓치고 있는 챌린지"
           }
         }
       }
@@ -1223,14 +1285,14 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Don’t miss nearby challenges!"
+            "state" : "needs_review",
+            "value" : "🏅 Don’t miss nearby challenges!"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "근처 챌린지, 놓치지 마세요!"
+            "value" : "🏅 근처 챌린지, 놓치지 마세요!"
           }
         }
       }
@@ -1240,14 +1302,14 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Challenge Ranking"
+            "state" : "needs_review",
+            "value" : "🏅 Challenge Ranking"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "챌린지 랭킹"
+            "value" : "🏅 챌린지 랭킹"
           }
         }
       }
@@ -1269,19 +1331,36 @@
         }
       }
     },
-    "homeBackGroundText_seoulMaster" : {
+    "homeBackGroundText_rightNearby" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Essential Challenges to Become a Seoul Travel Master!"
+            "state" : "translated",
+            "value" : "You can collect stamps right nearby"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "서울 여행 마스터를 위한 필수 챌린지!"
+            "value" : "바로 근처에서 스탬프를 찍을 수 있어요"
+          }
+        }
+      }
+    },
+    "homeBackGroundText_seoulMaster" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⛳️ Must-Do Challenges \nto Master Travel in Seoul"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⛳️ 서울 여행 마스터를 위한\n필수 챌린지!"
           }
         }
       }
@@ -1292,13 +1371,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Similar to %@"
+            "value" : "Similar to ‘%@’"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@과 비슷한 챌린지"
+            "value" : "‘%@’과 비슷한 챌린지"
           }
         }
       }
@@ -1308,14 +1387,14 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Great challenges to start with"
+            "state" : "translated",
+            "value" : "🏃‍ Great challenges to start with"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "도전하기 좋은 챌린지"
+            "value" : "🏃‍ 도전하기 좋은 챌린지"
           }
         }
       }
@@ -1371,11 +1450,34 @@
         }
       }
     },
+    "Key" : {
+      "extractionState" : "manual"
+    },
+    "Key 1" : {
+      "extractionState" : "manual"
+    },
     "Key 2" : {
       "extractionState" : "manual"
     },
     "Key 3" : {
       "extractionState" : "manual"
+    },
+    "korean" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Korean"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "한국어"
+          }
+        }
+      }
     },
     "MY" : {
 
@@ -1737,6 +1839,23 @@
         }
       }
     },
+    "myListText_optional" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "(Optional)"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(선택)"
+          }
+        }
+      }
+    },
     "myListText_privacyPolicy" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1852,6 +1971,159 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "진행 중"
+          }
+        }
+      }
+    },
+    "onboardingSub_2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can stamp it \nwhen you’re within 50m of the spot."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "50m 이내로 가까워지면 스탬프를 직접 찍을 수 있어요."
+          }
+        }
+      }
+    },
+    "onboardingSub_3" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Complete a challenge to unlock a badge.\n‘JJIM’ means saving your favorite challenge."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "하나의 챌린지를 완성하면 배지를 얻을 수 있어요."
+          }
+        }
+      }
+    },
+    "onboardingSub_4" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save and revisit \nyour favorite challenges later."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "나만의 챌린지를 기록하고 다시 찾아보세요."
+          }
+        }
+      }
+    },
+    "onboardingText_1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pick a travel challenge you like"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "마음에 드는 여행 챌린지를 골라요"
+          }
+        }
+      }
+    },
+    "onboardingText_2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Collect stamps and earn badges"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "장소를 방문하고 스탬프를 직접 찍어요"
+          }
+        }
+      }
+    },
+    "onboardingText_3" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "isit and stamp each spot"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스탬프를 모아 배지를 획득해요"
+          }
+        }
+      }
+    },
+    "onboardingTitle_2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visit spots, \nstamp your trip!"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "관광지를 방문하고 스탬프를 찍어보세요!"
+          }
+        }
+      }
+    },
+    "onboardingTitle_3" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Collect  Korea-style badges!"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "한국 감성 가득한 배지, 다 모아볼까요?"
+          }
+        }
+      }
+    },
+    "onboardingTitle_4" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "‘JJIM’ challenges \nyou want to try!"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "하고 싶은 챌린지를 ‘찜’해 보세요!"
           }
         }
       }
@@ -1981,6 +2253,23 @@
         "en" : {
           "stringUnit" : {
             "state" : "needs_review",
+            "value" : "Browse"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "둘러보기"
+          }
+        }
+      }
+    },
+    "textButton_browseChallenge" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
             "value" : "Browse Challenges"
           }
         },
@@ -2077,6 +2366,23 @@
         }
       }
     },
+    "textButton_goToSettingOff" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Go to Settings"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "해제하러 가기"
+          }
+        }
+      }
+    },
     "textButton_later" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -2141,6 +2447,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "로그인하고 스탬프 찍기"
+          }
+        }
+      }
+    },
+    "textButton_ok" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "OK"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "확인"
           }
         }
       }
@@ -2289,6 +2612,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "복사되었습니다."
+          }
+        }
+      }
+    },
+    "toastText_notNear" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can only collect stamps near the location."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "장소 근처에서만 스탬프를 찍을 수 있어요"
           }
         }
       }

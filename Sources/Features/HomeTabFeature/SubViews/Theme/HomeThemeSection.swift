@@ -26,7 +26,7 @@ struct HomeThemeSection: View {
       
       // MARK: - 헤더 타이틀 + 더보기
       HStack(alignment: .bottom) {
-        Text("🎡 테마별로 골라보는 챌린지")
+        Text(L10n.homeBackGroundText_theme)
           .font(.appTitle2)
           .foregroundStyle(Colors.gray900.swiftUIColor)
         
@@ -35,7 +35,7 @@ struct HomeThemeSection: View {
         Button(action: {
           onMoreTapped()
         }) {
-          Text("더보기")
+          Text(L10n.subButton_more)
             .font(.captionM)
             .foregroundColor(Colors.gray400.swiftUIColor)
         }

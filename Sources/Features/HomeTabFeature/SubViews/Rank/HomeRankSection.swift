@@ -24,12 +24,12 @@ struct HomeRankSection: View {
       
       // MARK: - 헤더 타이틀 + 더보기
       VStack(alignment: .leading, spacing: 0) {
-        Text("🏅 챌린지 랭킹")
+        Text(L10n.homeBackGroundText_ranking)
           .font(.appTitle2)
           .foregroundStyle(Colors.gray900.swiftUIColor)
         
         HStack(alignment: .bottom) {
-          Text("많이 참여한 챌린지를 순위로 보여드려요!")
+          Text(L10n.homeBackGroundText_mostPopular)
             .font(.captionL)
             .foregroundStyle(Colors.gray600.swiftUIColor)
           

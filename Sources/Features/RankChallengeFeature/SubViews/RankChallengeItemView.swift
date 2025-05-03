@@ -50,7 +50,7 @@ public struct RankChallengeItemView: View {
           .lineLimit(2)
           .padding(.top, 4)
         
-        Text("\(challenge.progressCount)명이 참여중!")
+        Text(L10n.homelistText_joined("\(challenge.progressCount)"))
           .font(.captionL)
           .foregroundColor(Colors.gray300.swiftUIColor)
           .padding(.vertical, 4)

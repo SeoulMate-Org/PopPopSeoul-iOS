@@ -18,7 +18,7 @@ struct ProfilePolicySection: View {
   
   var body: some View {
     SettingSectionContainer {
-      SettingRowView(title: "서비스 이용 약관") {
+      SettingRowView(title: L10n.myListText_termsService) {
         Button(action: onServiceTapped) {
           Assets.Icons.arrowRightSmall.swiftUIImage
             .resizable()
@@ -32,7 +32,7 @@ struct ProfilePolicySection: View {
       .padding(.leading, 16)
       .padding(.trailing, 8)
       
-      SettingRowView(title: "개인정보 처리 방침") {
+      SettingRowView(title: L10n.myListText_privacyPolicy) {
         Button(action: onPrivacyTapped) {
           Assets.Icons.arrowRightSmall.swiftUIImage
             .resizable()
@@ -46,7 +46,7 @@ struct ProfilePolicySection: View {
       .padding(.leading, 16)
       .padding(.trailing, 8)
       
-      SettingRowView(title: "위치 정보 동의서") {
+      SettingRowView(title: L10n.myListText_locationAgree) {
         Button(action: onLocationTapped) {
           Assets.Icons.arrowRightSmall.swiftUIImage
             .resizable()

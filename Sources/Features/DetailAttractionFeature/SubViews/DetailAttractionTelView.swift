@@ -36,7 +36,7 @@ struct DetailAttractionTelView: View {
         onPasteTapped()
         UIPasteboard.general.string = text
       }) {
-        Text("복사")
+        Text(L10n.textButton_copy)
           .foregroundStyle(Colors.blue500.swiftUIColor)
           .font(.buttonS)
       }
