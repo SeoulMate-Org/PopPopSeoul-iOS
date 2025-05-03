@@ -245,6 +245,14 @@ public struct MainTabFeature {
           state.selectedTab = .home
           return .none
           
+          // move to my > badge
+        case .element(id: _, action: .completeChallenge(.moveToBadge)):
+          state.path.removeAll()
+          state.profile.onAppearType = .tabReappeared
+          state.selectedTab = .profile
+          state.path.append(.myBadge(MyBadgeFeature.State()))
+          return .none
+          
           // app re launch
         case .element(id: _, action: .languageSetting(.appReLaunch)):
           return .send(.appReLaunch)
