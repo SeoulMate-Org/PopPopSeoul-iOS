@@ -4,6 +4,9 @@
     "" : {
 
     },
+    "-" : {
+
+    },
     "{%@}명이 참여중!" : {
 
     },
@@ -41,6 +44,16 @@
     },
     "%lld" : {
 
+    },
+    "%lld/%lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld/%2$lld"
+          }
+        }
+      }
     },
     "⛳️ 지금 바로\n도전 가능한 챌린지!" : {
       "localizations" : {

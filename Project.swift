@@ -59,13 +59,13 @@ let appInfoPlist: [String: Plist.Value] = {
             "SB 어그로OTF L.otf",
             "SB 어그로OTF M.otf",
         ],
-        "NSUserTrackingUsageDescription": "로그인을 위해 Apple 계정을 사용합니다.",
+        "NSUserTrackingUsageDescription": "$(NSUserTrackingUsageDescription)",
+        "NSLocationWhenInUseUsageDescription": "$(NSLocationWhenInUseUsageDescription)",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "$(NSLocationAlwaysAndWhenInUseUsageDescription)",
         "FacebookAdvertiserIDCollectionEnabled": false,
         "NSAppTransportSecurity": [
             "NSAllowsArbitraryLoads": true
         ],
-        "NSLocationWhenInUseUsageDescription": "앱 사용 중 사용자의 위치를 확인하기 위해 필요합니다.",
-        "NSLocationAlwaysAndWhenInUseUsageDescription": "앱이 백그라운드에서도 위치를 사용할 수 있도록 하기 위해 필요합니다.",
         // ✅ Facebook & Google 관련 설정
         "CFBundleURLTypes": [
             [
