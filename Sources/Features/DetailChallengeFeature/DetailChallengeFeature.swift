@@ -42,6 +42,7 @@ public struct DetailChallengeFeature {
   public enum Toast: Equatable {
     case deleteComplete
     case notNearAttraction
+    case paste
   }
   
   // MARK: Actions

@@ -42,6 +42,7 @@ struct ProfileSettingSection: View {
 
       SettingRowView(title: "위치 권한 설정", subTitle: "(선택)") {
         Toggle("", isOn: $isLocationAuth)
+          .foregroundStyle(Colors.blue500.swiftUIColor)
           .labelsHidden()
           .frame(width: 46, height: 28)
       }

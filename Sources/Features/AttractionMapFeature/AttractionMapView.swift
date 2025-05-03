@@ -66,27 +66,37 @@ struct AttractionMapView: View {
   }
   
   func detailBottomSheet(_ attraction: Attraction) -> some View {
-    VStack(spacing: 0) {
-      // 컨텐츠
-      AttractionMapDetailView(
-        attraction: attraction,
-        onDetailTapped: {
-          viewStore.send(.tappedDetail(attraction.id))
-        },
-        onLikeTapped: {
-          viewStore.send(.tappedLike(attraction.id))
-        }
-      )
-      .background(GeometryReader { proxy in
-        Color.clear
-          .onAppear {
-            contentHeight = proxy.size.height + Utility.safeBottom
+    VStack {
+      if viewStore.showToast == .paste {
+        AppToast(type: .text(message: "복사되었습니다."))
+          .padding(.bottom, 16)
+          .transition(.opacity.animation(.easeInOut(duration: 0.2)))
+      }
+      VStack(spacing: 0) {
+        // 컨텐츠
+        AttractionMapDetailView(
+          attraction: attraction,
+          onDetailTapped: {
+            viewStore.send(.tappedDetail(attraction.id))
+          },
+          onLikeTapped: {
+            viewStore.send(.tappedLike(attraction.id))
+          },
+          onPasteTapped: {
+            viewStore.send(.showToast(.paste))
           }
-      })
+        )
+        .background(GeometryReader { proxy in
+          Color.clear
+            .onAppear {
+              contentHeight = proxy.size.height + Utility.safeBottom
+            }
+        })
+      }
+      .frame(height: contentHeight)
+      .background(Colors.appWhite.swiftUIColor)
+      .cornerRadius(24, corners: [.topLeft, .topRight])
     }
-    .frame(height: contentHeight)
-    .background(Colors.appWhite.swiftUIColor)
-    .cornerRadius(24, corners: [.topLeft, .topRight])
   }
   
   var listBottomSheet: some View {

@@ -2375,6 +2375,7 @@
 			children = (
 				A413023E30212248C50A2234 /* SubViews */,
 				86F7D15E3CD11B3C639F6D3A /* DetailAttractionFeature.swift */,
+				0B0BF5B1A70617AA96129BE5 /* DetailAtrractionView.swift */,
 			);
 			path = DetailAttractionFeature;
 			sourceTree = "<group>";
@@ -3064,7 +3065,6 @@
 				DF046EEF58F101B63AC09610 /* EventChallengePlaceSection.swift */,
 				EA770B0E2DC5D8C5008762C6 /* EventChallengeDateView.swift */,
 				0B1BA0972A683AC55DB404A1 /* SuccessStampAlertView.swift */,
-				0B0BF5B1A70617AA96129BE5 /* DetailAtrractionView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";

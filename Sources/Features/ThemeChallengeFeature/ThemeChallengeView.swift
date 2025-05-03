@@ -39,7 +39,7 @@ struct ThemeChallengeView: View {
       // MARK: - 리스트
       if viewStore.themeChallenges.count > 0 {
         ThemeChallengeListView(
-          loginTapped: viewStore.isLogin ? { viewStore.send(.showAlert(.login)) } : nil,
+          loginTapped: viewStore.isLogin ? nil : { viewStore.send(.showAlert(.login)) },
           challenges: viewStore.themeChallenges,
           onTapped: { id in
             viewStore.send(.tappedChallenge(id))

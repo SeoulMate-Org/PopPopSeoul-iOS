@@ -14,6 +14,7 @@ import DesignSystem
 
 struct DetailAttractionInfoSection: View {
   let attraction: Attraction
+  let onPasteTapped: () -> Void
   
   var body: some View {
     
@@ -21,7 +22,8 @@ struct DetailAttractionInfoSection: View {
       if !attraction.address.isEmpty {
         DetailAttractionAddressView(
           text: attraction.address,
-          distance: attraction.distance?.formattedDistance
+          distance: attraction.distance?.formattedDistance,
+          onPasteTapped: onPasteTapped
         )
       }
       
@@ -34,7 +36,8 @@ struct DetailAttractionInfoSection: View {
       }
       
       if !attraction.tel.isEmpty {
-        DetailAttractionTelView(text: attraction.tel)
+        DetailAttractionTelView(text: attraction.tel,
+                                onPasteTapped: onPasteTapped)
       }
       
       if !attraction.subway.isEmpty {

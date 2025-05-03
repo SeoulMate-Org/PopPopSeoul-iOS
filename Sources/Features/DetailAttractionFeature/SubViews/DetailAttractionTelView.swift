@@ -14,6 +14,7 @@ import DesignSystem
 
 struct DetailAttractionTelView: View {
   let text: String
+  let onPasteTapped: () -> Void
   
   var body: some View {
     HStack(alignment: .top, spacing: 16) {
@@ -31,7 +32,10 @@ struct DetailAttractionTelView: View {
         .frame(alignment: .leading)
         .padding(.vertical, 8)
       
-      Button(action: { UIPasteboard.general.string = text }) {
+      Button(action: {
+        onPasteTapped()
+        UIPasteboard.general.string = text
+      }) {
         Text("복사")
           .foregroundStyle(Colors.blue500.swiftUIColor)
           .font(.buttonS)

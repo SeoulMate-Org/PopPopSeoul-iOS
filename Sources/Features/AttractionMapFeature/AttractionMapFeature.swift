@@ -22,6 +22,7 @@ public struct AttractionMapFeature {
   @ObservableState
   public struct State: Equatable {
     var showLoginAlert: Bool = false
+    var showToast: Toast?
     var challengeName: String
     var attractions: [Attraction]
     var showAttractions: [Attraction]
@@ -47,6 +48,10 @@ public struct AttractionMapFeature {
     }
   }
   
+  public enum Toast: Equatable {
+    case paste
+  }
+  
   // MARK: Actions
   
   @CasePathable
@@ -63,6 +68,9 @@ public struct AttractionMapFeature {
     case tappedLike(Int)
     
     case updateBottomSheetType(BottomSheetType)
+    
+    case showToast(Toast)
+    case dismissToast
   }
   
   // MARK: Reducer
@@ -154,6 +162,17 @@ public struct AttractionMapFeature {
         return .none
         
       case .tappedDetail:
+        return .none
+        
+      case let .showToast(toast):
+        state.showToast = toast
+        return .run { send in
+          try await Task.sleep(nanoseconds: 3 * 1_000_000_000)
+          await send(.dismissToast)
+        }
+        
+      case .dismissToast:
+        state.showToast = nil
         return .none
         
       }

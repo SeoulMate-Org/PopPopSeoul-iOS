@@ -47,7 +47,12 @@ struct DetailChallengeView: View {
                 
                 if challenge.isEventChallenge {
                   if let attraction = challenge.attractions.first {
-                    EventChallengePlaceSection(challenge: challenge, attraction: attraction)
+                    EventChallengePlaceSection(
+                      challenge: challenge,
+                      attraction: attraction,
+                      onPasteTapped: {
+                        viewStore.send(.showToast(.paste))
+                      })
                     divider()
                   }
                 } else {
@@ -79,8 +84,13 @@ struct DetailChallengeView: View {
           
           VStack(spacing: 8) {
             if let toast = viewStore.showToast {
-              AppToast(type: .iconText(message: toast.message))
-                .transition(.opacity.animation(.easeInOut(duration: 0.2)))
+              if toast == .paste {
+                AppToast(type: .text(message: toast.message))
+                  .transition(.opacity.animation(.easeInOut(duration: 0.2)))
+              } else {
+                AppToast(type: .iconText(message: toast.message))
+                  .transition(.opacity.animation(.easeInOut(duration: 0.2)))
+              }
             }
             
             if viewStore.challenge?.challengeStatus == .progress {
@@ -192,6 +202,7 @@ extension DetailChallengeFeature.Toast {
     switch self {
     case .deleteComplete: "댓글이 삭제되었습니다."
     case .notNearAttraction: "장소 근처에서만 스탬프를 찍을 수 있어요"
+    case .paste: "복사되었습니다."
     }
   }
 }

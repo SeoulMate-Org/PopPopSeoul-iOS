@@ -28,10 +28,15 @@ public struct DetailAttractionFeature {
     var attraction: Attraction?
     var map: Data?
     var showLoginAlert: Bool = false
+    var showToast: Toast?
     
     public init(with id: Int) {
       self.attractionId = id
     }
+  }
+  
+  public enum Toast: Equatable {
+    case paste
   }
   
   // MARK: Actions
@@ -43,6 +48,8 @@ public struct DetailAttractionFeature {
     case getMapError
     case showLoginAlert
     case loginAlert(LoginAlertAction)
+    case showToast(Toast)
+    case dismissToast
     
     case update(Attraction)
     case fetchMap(Coordinate?)
@@ -169,6 +176,17 @@ public struct DetailAttractionFeature {
         
       case .loginAlert(.loginTapped):
         state.showLoginAlert = false
+        return .none
+        
+      case let .showToast(toast):
+        state.showToast = toast
+        return .run { send in
+          try await Task.sleep(nanoseconds: 3 * 1_000_000_000)
+          await send(.dismissToast)
+        }
+        
+      case .dismissToast:
+        state.showToast = nil
         return .none
         
       case .getMapError:

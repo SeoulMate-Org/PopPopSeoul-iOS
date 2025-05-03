@@ -16,6 +16,7 @@ struct AttractionMapDetailView: View {
   let attraction: Attraction
   let onDetailTapped: () -> Void
   let onLikeTapped: () -> Void
+  let onPasteTapped: () -> Void
   
   @State private var isExpanded: Bool = false
   
@@ -100,6 +101,7 @@ struct AttractionMapDetailView: View {
           layout: .textOnly,
           state: .enabled,
           onTap: {
+            onPasteTapped()
             UIPasteboard.general.string = attraction.address
           },
           horizontalPadding: 15

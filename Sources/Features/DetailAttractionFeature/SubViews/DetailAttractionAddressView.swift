@@ -15,6 +15,7 @@ import DesignSystem
 struct DetailAttractionAddressView: View {
   let text: String
   let distance: String?
+  let onPasteTapped: () -> Void
   
   @State private var isExpanded: Bool = false
   
@@ -49,7 +50,10 @@ struct DetailAttractionAddressView: View {
             .frame(width: 32, height: 32)
           } // HStack (bottom)
           
-          Button(action: { UIPasteboard.general.string = text }) {
+          Button(action: {
+            onPasteTapped()
+            UIPasteboard.general.string = text
+          }) {
             Text("복사")
               .foregroundStyle(Colors.blue500.swiftUIColor)
               .font(.buttonS)

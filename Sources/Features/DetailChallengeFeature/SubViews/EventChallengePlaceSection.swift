@@ -15,6 +15,7 @@ import DesignSystem
 struct EventChallengePlaceSection: View {
   let challenge: Challenge
   let attraction: Attraction
+  let onPasteTapped: () -> Void
   
   var body: some View {
     VStack(alignment: .leading, spacing: 0) {
@@ -33,7 +34,8 @@ struct EventChallengePlaceSection: View {
         if !attraction.address.isEmpty {
           DetailAttractionAddressView(
             text: attraction.address,
-            distance: attraction.distance?.formattedDistance
+            distance: attraction.distance?.formattedDistance,
+            onPasteTapped: onPasteTapped
           )
         }
         
