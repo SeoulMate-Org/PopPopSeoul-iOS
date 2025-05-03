@@ -2651,13 +2651,13 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Start Challenge"
+            "state" : "translated",
+            "value" : "Start"
           }
         },
         "ko" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "챌린지 시작하기"
           }
         }

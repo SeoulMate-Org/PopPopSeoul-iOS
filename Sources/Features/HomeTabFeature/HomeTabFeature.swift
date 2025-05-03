@@ -327,17 +327,21 @@ public struct HomeTabFeature {
         return .none
         
       case let .tappedStart(id):
-        return .run { send in
-          do {
-            let response = try await challengeClient.putStatus(id, .progress)
-            if response.challengeStatus == .progress {
-              await send(.updateStartList(id))
-            } else {
+        if TokenManager.shared.isLogin {
+          return .run { send in
+            do {
+              let response = try await challengeClient.putStatus(id, .progress)
+              if response.challengeStatus == .progress {
+                await send(.updateStartList(id))
+              } else {
+                await send(.networkError)
+              }
+            } catch {
               await send(.networkError)
             }
-          } catch {
-            await send(.networkError)
           }
+        } else {
+          return .send(.showAlert(.login))
         }
         
       case let .updateStartList(id):

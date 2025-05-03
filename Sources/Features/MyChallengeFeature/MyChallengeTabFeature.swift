@@ -61,6 +61,7 @@ public struct MyChallengeTabFeature {
     case dismissToast
     case tappedInterest(id: Int)
     case tappedItem(id: Int)
+    case moveToHome
     
     case setInterestList([Challenge])
     case setProgressList([Challenge])
@@ -160,6 +161,10 @@ public struct MyChallengeTabFeature {
         
       case .networkError:
         // TODO: - ERROR
+        return .none
+        
+      case .moveToHome:
+        // Main Tab Navigation
         return .none
       }
     }

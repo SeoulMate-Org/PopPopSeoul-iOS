@@ -124,6 +124,9 @@ public struct MainTabFeature {
         state.path.append(.detailChallenge(DetailChallengeFeature.State(with: id)))
         return .none
         
+      case .myChallenge(.moveToHome):
+        return .send(.selectedTabChanged(.home))
+        
         // MARK: - Home Reducer
       case let .home(.showAlert(alert)):
         switch alert {

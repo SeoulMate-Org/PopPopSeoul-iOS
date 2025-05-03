@@ -50,7 +50,7 @@ struct MyChallengeTabView: View {
         if viewStore.interestList.isEmpty {
           MyChallengeEmptyView(
             tab: .interest,
-            onTap: { /* TODO */ }
+            onTap: { viewStore.send(.moveToHome) }
           )
         } else {
           listView(viewStore: viewStore, items: viewStore.interestList, tab: .interest)
@@ -60,7 +60,7 @@ struct MyChallengeTabView: View {
         if viewStore.progressList.isEmpty {
           MyChallengeEmptyView(
             tab: .progress,
-            onTap: { /* TODO */ }
+            onTap: { viewStore.send(.moveToHome) }
           )
         } else {
           listView(viewStore: viewStore, items: viewStore.progressList, tab: .progress)

@@ -13,6 +13,7 @@ public struct ChallengeClient {
   public var get: @Sendable (Int) async throws -> Challenge
   public var putLike: @Sendable (Int) async throws -> DefaultLikeResponse
   public var putStatus: @Sendable (Int, ChallengeStatus) async throws -> DefaultStatusResponse
+  public var quit: @Sendable (Int) async throws -> Bool
 }
 
 extension ChallengeClient: DependencyKey {
@@ -43,6 +44,13 @@ extension ChallengeClient: DependencyKey {
         let (data, _) = try await apiClient.send(request)
         
         return try data.decoded()
+      },
+      quit: { id in
+        let query = DefaultIdRequest(id: id)
+        let request: Request = .delete(.challengeStatus, query: query.queryItems)
+        let (_, _) = try await apiClient.send(request)
+        
+        return true
       }
     )
   }

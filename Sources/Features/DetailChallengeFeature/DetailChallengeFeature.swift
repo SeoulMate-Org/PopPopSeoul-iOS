@@ -121,7 +121,7 @@ public struct DetailChallengeFeature {
         }
         
       case .tappedMore:
-        state.showMenu = true
+        state.showMenu = !state.showMenu
         return .none
         
       case .dismissMenu:
@@ -129,9 +129,23 @@ public struct DetailChallengeFeature {
         return .none
         
       case .quitChallenge:
-        // TODO: 챌린지 그만두기 API 호출
         state.showMenu = false
-        return .none
+        
+        return .run { [state = state] send in
+          guard let challenge = state.challenge else { return }
+          
+          var update = challenge
+          update.challengeStatusCode = ""
+          update.progressCount = max(update.progressCount - 1, 0)
+          await send(.update(update))
+          
+          do {
+            let _ = try await challengeClient.quit(update.id)
+            
+          } catch {
+            await send(.getError)
+          }
+        }
         
       case let .update(new):
         if let challenge = state.challenge,
