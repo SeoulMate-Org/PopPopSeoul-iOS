@@ -26,6 +26,7 @@ struct DetailAttractionLinkView: View {
         .padding(.top, 8)
       
       Link(text, destination: link)
+        .lineLimit(1)
         .multilineTextAlignment(.leading)
         .font(.bodyS)
         .foregroundStyle(Colors.blue300.swiftUIColor)
