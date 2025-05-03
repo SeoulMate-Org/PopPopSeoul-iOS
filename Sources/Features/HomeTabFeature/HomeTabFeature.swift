@@ -346,6 +346,7 @@ public struct HomeTabFeature {
         
       case let .updateStartList(id):
         state.missingList.removeAll(where: { $0.id == id })
+        state.challengeList.removeAll(where: { $0.id == id })
         return .none
         
         // MARK: - Similar Reducer
