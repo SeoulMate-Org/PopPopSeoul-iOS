@@ -72,13 +72,13 @@ struct LoginView: View {
         Spacer()
         
         // FIXME: - 1차 오픈 히든
-//        LoginButtonView(
-//          image: Assets.Icons.facebook.swiftUIImage,
-//          text: L10n.signIn_facebook,
-//          onTap: {
-//            handleFacebookLogin()
-//          }, isLight: false
-//        )
+        //        LoginButtonView(
+        //          image: Assets.Icons.facebook.swiftUIImage,
+        //          text: L10n.signIn_facebook,
+        //          onTap: {
+        //            handleFacebookLogin()
+        //          }, isLight: false
+        //        )
         LoginButtonView(
           image: Assets.Icons.google.swiftUIImage,
           text: L10n.signIn_google,
@@ -86,20 +86,32 @@ struct LoginView: View {
             handleGoogleSignInButton()
           }, isLight: false
         )
-        LoginButtonView(
-          image: Assets.Icons.apple.swiftUIImage,
-          text: L10n.signIn_apple,
-          onTap: {
-            let coordinator = AppleSignInCoordinator()
-            coordinator.onSuccess = { appleIDCredential in
-              handleAppleAuth(appleIDCredential: appleIDCredential)
-            }
-            coordinator.onFailure = {
+        
+        ZStack {
+          SignInWithAppleButton(.signIn) { request in
+            request.requestedScopes = [.fullName, .email]
+          } onCompletion: { result in
+            switch result {
+            case .success(let authResults):
+              handleAppleAuth(credential: authResults.credential)
+            case .failure(let error):
+              logger.error("❌ Apple 로그인 실패: \(error.localizedDescription)")
               store.send(.loginError)
             }
-            coordinator.startSignInWithAppleFlow()
-          }, isLight: true
-        )
+          }
+          .blendMode(.overlay)
+          .frame(maxWidth: .infinity)
+          .frame(height: 52)
+          .cornerRadius(8)
+          .padding(.horizontal, 35)
+          
+          LoginButtonView(
+            image: Assets.Icons.apple.swiftUIImage,
+            text: L10n.signIn_apple,
+            onTap: nil, isLight: true
+          )
+          .allowsHitTesting(false)
+        }
       }
       .frame(width: Utility.screenWidth)
       .padding(.bottom, Utility.safeBottom + 48)
@@ -183,8 +195,9 @@ struct LoginView: View {
     }
   }
   
-  func handleAppleAuth(appleIDCredential: ASAuthorizationAppleIDCredential) {
-    guard let identityTokenData = appleIDCredential.identityToken,
+  func handleAppleAuth(credential: ASAuthorizationCredential) {
+    guard let appleIDCredential = credential as? ASAuthorizationAppleIDCredential,
+          let identityTokenData = appleIDCredential.identityToken,
           let identityToken = String(data: identityTokenData, encoding: .utf8) else {
       store.send(.loginError)
       return

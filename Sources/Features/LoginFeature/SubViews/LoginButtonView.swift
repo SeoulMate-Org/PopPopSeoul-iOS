@@ -13,10 +13,10 @@ import DesignSystem
 struct LoginButtonView: View {
   let image: Image
   let text: String
-  let onTap: () -> Void
+  let onTap: (() -> Void)?
   let isLight: Bool
   
-  init(image: Image, text: String, onTap: @escaping () -> Void, isLight: Bool) {
+  init(image: Image, text: String, onTap: (() -> Void)?, isLight: Bool) {
     self.image = image
     self.text = text
     self.onTap = onTap
@@ -24,7 +24,7 @@ struct LoginButtonView: View {
   }
   
   var body: some View {
-    Button(action: onTap) {
+    Button(action: { onTap?() }) {
       HStack(alignment: .center, spacing: 20) {
         image
           .resizable()
