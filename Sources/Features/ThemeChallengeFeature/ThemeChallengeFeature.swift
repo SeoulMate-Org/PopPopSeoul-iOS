@@ -24,15 +24,21 @@ public struct ThemeChallengeFeature {
   public struct State: Equatable {
     public var fetchType: FetchType = .initial
     
+    var isLogin: Bool
     var initTheme: ChallengeTheme = .mustSeeSpots
     var selectedTheme: ChallengeTheme = .mustSeeSpots
     var themeChallenges: [Challenge] = []
     var shouldScrollToTop: Bool = false
-    var showLoginAlert: Bool = false
+    var showAlert: Alert?
     
     public init(with theme: ChallengeTheme) {
       self.initTheme = theme
+      self.isLogin = TokenManager.shared.isLogin
     }
+  }
+  
+  public enum Alert: Equatable {
+    case login
   }
   
   // MARK: Actions
@@ -40,7 +46,7 @@ public struct ThemeChallengeFeature {
   @CasePathable
   public enum Action: Equatable {
     case onApear
-    case showLoginAlert
+    case showAlert(Alert)
     case loginAlert(LoginAlertAction)
     case moveToMap(Challenge)
     case networkError
@@ -61,6 +67,7 @@ public struct ThemeChallengeFeature {
     Reduce { state, action in
       switch action {
       case .onApear:
+        state.isLogin = TokenManager.shared.isLogin
         state.fetchType = .resumed
         return .send(.themeChanged(state.initTheme))
       case let .setShouldScrollToTop(isTop):
@@ -94,7 +101,7 @@ public struct ThemeChallengeFeature {
             }
           }
         } else {
-          return .send(.showLoginAlert)
+          return .send(.showAlert(.login))
         }
         
       case let .update(index, challenge):
@@ -126,16 +133,19 @@ public struct ThemeChallengeFeature {
         }
         return .none
         
-      case .showLoginAlert:
-        state.showLoginAlert = true
+      case let .showAlert(alert):
+        switch alert {
+        case .login: state.showAlert = .login
+        }
         return .none
         
       case .loginAlert(.cancelTapped):
-        state.showLoginAlert = false
+        state.showAlert = nil
         return .none
         
       case .loginAlert(.loginTapped):
-        state.showLoginAlert = false
+        // Main Tab Navigation
+        state.showAlert = nil
         return .none
         
       case .moveToMap:

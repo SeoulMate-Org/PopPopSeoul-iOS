@@ -11,9 +11,9 @@ import DesignSystem
 import SharedAssets
 import SharedTypes
 import Models
-import Clients
 
 struct ThemeChallengeListView: View {
+  let loginTapped: (() -> Void)?
   let challenges: [Challenge]
   let onTapped: (Int) -> Void
   let onLikeTapped: (Int) -> Void
@@ -26,8 +26,11 @@ struct ThemeChallengeListView: View {
           .frame(height: 0)
           .id("top")
         
-        if !TokenManager.shared.isLogin {
+        if loginTapped != nil {
           ThemeLoginPromptSection()
+            .onTapGesture {
+              loginTapped?()
+            }
             .padding(.top, 24)
         }
         LazyVStack(alignment: .leading, spacing: 16) {

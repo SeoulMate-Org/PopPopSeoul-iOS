@@ -39,6 +39,7 @@ struct ThemeChallengeView: View {
       // MARK: - 리스트
       if viewStore.themeChallenges.count > 0 {
         ThemeChallengeListView(
+          loginTapped: viewStore.isLogin ? { viewStore.send(.showAlert(.login)) } : nil,
           challenges: viewStore.themeChallenges,
           onTapped: { id in
             viewStore.send(.tappedChallenge(id))
@@ -56,12 +57,15 @@ struct ThemeChallengeView: View {
     }
     .overlay(
       Group {
-        if viewStore.showLoginAlert {
-          AppLoginAlertView(onLoginTapped: {
-            viewStore.send(.loginAlert(.loginTapped))
-          }, onCancelTapped: {
-            viewStore.send(.loginAlert(.cancelTapped))
-          })
+        if let alert = viewStore.showAlert {
+          switch alert {
+          case .login:
+            AppLoginAlertView(onLoginTapped: {
+              viewStore.send(.loginAlert(.loginTapped))
+            }, onCancelTapped: {
+              viewStore.send(.loginAlert(.cancelTapped))
+            })
+          }
         }
       }
     )
