@@ -24,13 +24,14 @@ public struct ThemeChallengeFeature {
   public struct State: Equatable {
     public var fetchType: FetchType = .initial
     
+    var initTheme: ChallengeTheme = .mustSeeSpots
     var selectedTheme: ChallengeTheme = .mustSeeSpots
     var themeChallenges: [Challenge] = []
     var shouldScrollToTop: Bool = false
     var showLoginAlert: Bool = false
     
     public init(with theme: ChallengeTheme) {
-      self.selectedTheme = theme
+      self.initTheme = theme
     }
   }
   
@@ -61,10 +62,7 @@ public struct ThemeChallengeFeature {
       switch action {
       case .onApear:
         state.fetchType = .resumed
-        return .run { [state = state] send in
-          let theme = state.selectedTheme
-          await send(.fetchThemeList(theme))
-        }
+        return .send(.themeChanged(state.initTheme))
       case let .setShouldScrollToTop(isTop):
         state.shouldScrollToTop = isTop
         return .none
