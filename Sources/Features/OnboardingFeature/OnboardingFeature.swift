@@ -66,4 +66,3 @@ public struct OnboardingFeature {
 }
 
 // MARK: - Helper
-

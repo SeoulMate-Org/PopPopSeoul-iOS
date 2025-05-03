@@ -9,13 +9,14 @@ import SwiftUI
 import DesignSystem
 import SharedAssets
 import SharedTypes
+import Common
 
 struct ProfileVersionSection: View {
   let version: String
   
   var body: some View {
     SettingSectionContainer {
-      SettingRowView(title: "버전 정보") {
+      SettingRowView(title: L10n.myListText_version) {
         Text(version)
           .font(.captionM)
           .foregroundStyle(Colors.gray600.swiftUIColor)

@@ -25,7 +25,7 @@ struct DetailChallengeCommentSection: View {
       // 1. 제목
       HStack(alignment: .center) {
         let countString = challenge.commentCount > 0 ? " \(challenge.commentCount)" : ""
-        Text(String(sLocalization: .detailchallengeCommentTitle) + countString)
+        Text(L10n.detailmenuItem_comment + countString)
           .font(.appTitle3)
           .foregroundColor(Colors.gray900.swiftUIColor)
         
@@ -77,7 +77,7 @@ struct DetailChallengeCommentSection: View {
             .padding(.horizontal, 20)
         } else {
           AppButton(
-            title: String(sLocalization: .detailchallengeCommentButton),
+            title: L10n.textButton_allComments,
             size: .ssize,
             style: .neutral,
             layout: .textOnly,
@@ -94,7 +94,7 @@ struct DetailChallengeCommentSection: View {
       
       // case2. 로그인 X or 미진행 챌린지
       if !TokenManager.shared.isLogin || challenge.myStampCountLocal <= 0 {
-        Text(String(sLocalization: .detailchallengeCommentDes))
+        Text(L10n.detailChallengeCommentText)
           .font(.bodyS)
           .foregroundStyle(Colors.gray900.swiftUIColor)
           .frame(maxWidth: .infinity, alignment: .center)

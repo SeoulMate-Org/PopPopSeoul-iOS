@@ -70,7 +70,7 @@ struct OnboardingView: View {
     Button(action: {
       viewStore.send(.tappedNext)
     }) {
-      Text(isLast ? "시작하기!" : "다음")
+      Text(isLast ? L10n.onboardingButton_start : L10n.onboardingButton_next)
         .font(.buttonM)
         .foregroundColor(Colors.appWhite.swiftUIColor)
         .frame(maxWidth: .infinity, minHeight: 51)

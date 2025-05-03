@@ -1450,6 +1450,9 @@
         }
       }
     },
+    "Key 1" : {
+      "extractionState" : "manual"
+    },
     "korean" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1585,6 +1588,40 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "아직 작성한 댓글이 없어요!"
+          }
+        }
+      }
+    },
+    "myCompleteContent_havenot" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try completing an easy one first"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "가벼운 챌린지부터 완료해보세요."
+          }
+        }
+      }
+    },
+    "myCompleteTitle_havenot" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You haven’t completed any challenges yet!"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "아직 완료한 챌린지가 없어요!"
           }
         }
       }
@@ -1895,6 +1932,23 @@
         }
       }
     },
+    "myProgressTitle_havenot" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You haven’t started any challenges yet!"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "아직 시작한 챌린지가 없어요!"
+          }
+        }
+      }
+    },
     "mySubText_JJIMBadge" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1959,6 +2013,40 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "진행 중"
+          }
+        }
+      }
+    },
+    "onboardingButton_next" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "다음"
+          }
+        }
+      }
+    },
+    "onboardingButton_start" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Let’s go!"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시작하기!"
           }
         }
       }
@@ -2282,6 +2370,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "주요 동네"
+          }
+        }
+      }
+    },
+    "textButton_allComments" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View All Comments"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "전체 댓글보기"
           }
         }
       }

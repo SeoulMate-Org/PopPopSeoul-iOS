@@ -31,7 +31,7 @@ let appInfoPlist: [String: Plist.Value] = {
             "UIApplicationSupportsMultipleScenes": false,
             "UISceneConfigurations": []
         ],
-        "CFBundleDevelopmentRegion": "ko",
+        "CFBundleDevelopmentRegion": "en",
         "CFBundleLocalizations": [
             "ko",
             "en"
@@ -167,7 +167,7 @@ let project = Project(
     options: .options(
         // localization 설정
         defaultKnownRegions: ["en", "ko"],
-        developmentRegion: "ko",
+        developmentRegion: "en",
         disableShowEnvironmentVarsInScriptPhases: true,
         textSettings: .textSettings(indentWidth: 2, tabWidth: 2)
     ),
@@ -179,7 +179,7 @@ let project = Project(
             "ENABLE_BITCODE": "NO",
             "CODE_SIGN_IDENTITY": "",
             "CODE_SIGNING_REQUIRED": "NO",
-            "DEVELOPMENT_LANGUAGE": "ko"
+            "DEVELOPMENT_LANGUAGE": "en"
         ],
         configurations: [
             .debug(name: "Debug", xcconfig: .relativeToRoot("App/Resources/Secrets.xcconfig")),

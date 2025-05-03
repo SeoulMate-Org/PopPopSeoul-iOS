@@ -24,7 +24,7 @@ struct NicknameSettingView: View {
   
   var body: some View {
     VStack(spacing: 0) {
-      HeaderView(type: .back(title: "닉네임 변경", onBack: {
+      HeaderView(type: .back(title: L10n.detailmenuItem_changeNickname, onBack: {
         viewStore.send(.tappedBack)
       }))
       
@@ -128,9 +128,9 @@ extension NicknameSettingFeature.TextFieldStatus {
   var hint: String {
     switch self {
     case .none, .good, .error:
-      "닉네임을 2~15자로 입력해주세요."
+      L10n.detailnicknameText_enter
     case .duplication:
-      "사용 중인 닉네임입니다."
+      L10n.detailnicknameSubText
     }
   }
 }

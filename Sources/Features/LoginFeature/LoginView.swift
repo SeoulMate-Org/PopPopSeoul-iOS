@@ -81,14 +81,14 @@ struct LoginView: View {
 //        )
         LoginButtonView(
           image: Assets.Icons.google.swiftUIImage,
-          text:  L10n.signIn_google,
+          text: L10n.signIn_google,
           onTap: {
             handleGoogleSignInButton()
           }, isLight: false
         )
         LoginButtonView(
           image: Assets.Icons.apple.swiftUIImage,
-          text:  L10n.signIn_apple,
+          text: L10n.signIn_apple,
           onTap: {
             let coordinator = AppleSignInCoordinator()
             coordinator.onSuccess = { appleIDCredential in

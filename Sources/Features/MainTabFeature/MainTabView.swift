@@ -249,9 +249,9 @@ extension MainTabFeature.State.Tab {
   
   var title: String {
     switch self {
-    case .home: String(sLocalization: .tabHome)
-    case .myChallenge: String(sLocalization: .tabMychallenge)
-    case .profile: String(sLocalization: .tabProfile)
+    case .home: L10n.footer_home
+    case .myChallenge: L10n.footer_mychallenge
+    case .profile: L10n.footer_my
     }
   }
   

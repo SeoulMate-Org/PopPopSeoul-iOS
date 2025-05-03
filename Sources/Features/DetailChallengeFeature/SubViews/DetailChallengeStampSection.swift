@@ -19,12 +19,12 @@ struct DetailChallengeStampSection: View {
     // 스탬프 정보
     VStack(alignment: .leading, spacing: 0) {
       // 1. 제목
-      Text(String(sLocalization: .detailchallengeStampTitle))
+      Text(L10n.detailChallengeText_stamp)
         .font(.appTitle3)
         .foregroundColor(Colors.gray900.swiftUIColor)
       
       // 2. 설명
-      Text(String(sLocalization: .detailchallengeStampDes))
+      Text(L10n.detailChallengeSubText_checkStamp)
         .font(.captionL)
         .foregroundColor(Colors.gray400.swiftUIColor)
         .padding(.top, 2)

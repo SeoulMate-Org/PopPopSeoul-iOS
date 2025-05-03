@@ -1,11 +1,11 @@
 {
-  "sourceLanguage" : "ko",
+  "sourceLanguage" : "en",
   "strings" : {
     "CFBundleDisplayName" : {
       "comment" : "Bundle display name",
       "extractionState" : "extracted_with_value",
       "localizations" : {
-        "ko" : {
+        "en" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "PopPop Seoul"
@@ -17,7 +17,7 @@
       "comment" : "Bundle name",
       "extractionState" : "extracted_with_value",
       "localizations" : {
-        "ko" : {
+        "en" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "PopPopSeoul"
@@ -29,7 +29,7 @@
       "comment" : "Privacy - Location Always and When In Use Usage Description",
       "extractionState" : "extracted_with_value",
       "localizations" : {
-        "ko" : {
+        "en" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "앱이 백그라운드에서도 위치를 사용할 수 있도록 하기 위해 필요합니다."
@@ -58,7 +58,7 @@
       "comment" : "Privacy - Tracking Usage Description",
       "extractionState" : "extracted_with_value",
       "localizations" : {
-        "ko" : {
+        "en" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "로그인을 위해 Apple 계정을 사용합니다."

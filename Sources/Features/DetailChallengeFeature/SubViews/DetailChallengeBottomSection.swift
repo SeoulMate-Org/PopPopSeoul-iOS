@@ -24,23 +24,23 @@ struct DetailChallengeBottomSection: View {
       
       if TokenManager.shared.isLogin {
         if !challenge.isEventChallenge {
-          AppButton(title: String(sLocalization: .detailchallengeMapButton), size: .msize, style: .outline, layout: .textOnly, state: .enabled, onTap: { onTap(.map) }, isFullWidth: true)
+          AppButton(title: L10n.textButton_viewOnMap, size: .msize, style: .outline, layout: .textOnly, state: .enabled, onTap: { onTap(.map) }, isFullWidth: true)
             .padding(.vertical, 10)
         }
         
         switch challenge.challengeStatus {
         case .progress:
-          AppButton(title: String(sLocalization: .detailchallengeStampButton), size: .msize, style: .primary, layout: .textOnly, state: .enabled, onTap: { onTap(.stamp) }, isFullWidth: true)
+          AppButton(title: L10n.detailChallengeText_stamp, size: .msize, style: .primary, layout: .textOnly, state: .enabled, onTap: { onTap(.stamp) }, isFullWidth: true)
             .padding(.vertical, 10)
         case .completed:
-          AppButton(title: String(sLocalization: .detailchallengeStampButton), size: .msize, style: .primary, layout: .textOnly, state: .disabled, onTap: { onTap(.start) }, isFullWidth: true)
+          AppButton(title: L10n.detailChallengeText_stamp, size: .msize, style: .primary, layout: .textOnly, state: .disabled, onTap: { onTap(.start) }, isFullWidth: true)
             .padding(.vertical, 10)
         default:
-            AppButton(title: String(sLocalization: .detailchallengeStartButton), size: .msize, style: .primary, layout: .textOnly, state: .enabled, onTap: { onTap(.start) }, isFullWidth: true)
+          AppButton(title: L10n.textButton_startChallenge, size: .msize, style: .primary, layout: .textOnly, state: .enabled, onTap: { onTap(.start) }, isFullWidth: true)
               .padding(.vertical, 10)
         }
       } else {
-        AppButton(title: String(sLocalization: .detailchallengeLoginButton), size: .msize, style: .primary, layout: .textOnly, state: .enabled, onTap: { onTap(.login) }, isFullWidth: true)
+        AppButton(title: L10n.textButton_loginStamp, size: .msize, style: .primary, layout: .textOnly, state: .enabled, onTap: { onTap(.login) }, isFullWidth: true)
           .padding(.vertical, 10)
       }
     }
@@ -70,7 +70,7 @@ struct DetailChallengeBottomSection: View {
           .foregroundStyle(isSelected ? Colors.red500.swiftUIColor : Colors.gray500.swiftUIColor)
           .frame(width: 24, height: 24)
         
-        Text(String(sLocalization: .detailchallengeInterestButton))
+        Text(L10n.heartButton)
           .font(.captionM)
       }
       .foregroundColor(Colors.gray700.swiftUIColor)

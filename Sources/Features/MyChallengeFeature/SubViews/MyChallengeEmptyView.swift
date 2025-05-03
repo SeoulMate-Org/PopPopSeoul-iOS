@@ -48,24 +48,24 @@ struct MyChallengeEmptyView: View {
 extension MyChallengeTabFeature.Tab {
   var emptyTitle: String {
     switch self {
-    case .interest: return String(sLocalization: .mychallengeInterestEmptyTitle)
-    case .progress: return String(sLocalization: .mychallengeProgressEmptyTitle)
-    case .completed: return String(sLocalization: .mychallengeCompletedEmptyTitle)
+    case .interest: return L10n.myJJIMTitle_havenot
+    case .progress: return L10n.myProgressTitle_havenot
+    case .completed: return L10n.myCompleteTitle_havenot
     }
   }
   
   var emptyText: String {
     switch self {
-    case .interest: return String(sLocalization: .mychallengeInterestEmptyDes)
-    case .progress: return String(sLocalization: .mychallengeProgressEmptyDes)
-    case .completed: return String(sLocalization: .mychallengeCompletedEmptyDes)
+    case .interest: return L10n.myJJIMContent_addMore
+    case .progress: return L10n.myJJIMContent_addMore
+    case .completed: return L10n.myCompleteContent_havenot
     }
   }
   
   var buttonTitle: String? {
     switch self {
-    case .interest: return String(sLocalization: .mychallengeInterestEmptyButton)
-    case .progress: return String(sLocalization: .mychallengeProgressEmptyButton)
+    case .interest: return L10n.textButton_browseChallenge
+    case .progress: return L10n.textButton_browseChallenge
     case .completed: return nil
     }
   }

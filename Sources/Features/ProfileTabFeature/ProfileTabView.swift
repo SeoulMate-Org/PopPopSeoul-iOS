@@ -25,7 +25,7 @@ struct ProfileTabView: View {
   var body: some View {
     
     VStack(spacing: 0) {
-      HeaderView(type: .titleOnly(title: "MY"))
+      HeaderView(type: .titleOnly(title: L10n.footer_my))
       
       ScrollView(showsIndicators: false) {
         VStack(spacing: 0) {

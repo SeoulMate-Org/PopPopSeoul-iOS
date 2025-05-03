@@ -28,10 +28,6 @@ public extension String {
     return NSLocalizedString(self, bundle: bundle, comment: "")
   }
   
-  init(sLocalization key: LocalizationsKey) {
-    self = key.rawValue.localized
-  }
-  
   init(sLocalization key: LocalizedKey) {
     self = key.rawValue.localized
   }
@@ -44,15 +40,14 @@ public extension String {
     String(format: NSLocalizedString(self, comment: ""), arguments: arguments)
   }
 }
+
 public extension L10n {
   static func localized(_ key: LocalizedKey) -> String {
     String(sLocalization: key).localized
-//    NSLocalizedString(key.rawValue, comment: "")
   }
   
   static func localized(_ key: LocalizedKey, _ args: [CVarArg]) -> String {
     String(sLocalization: key).localizedFormat(args)
-//    String(format: NSLocalizedString(key.rawValue, comment: ""), arguments: args)
   }
 }
 
@@ -153,6 +148,9 @@ public enum L10n {
   public static var myJJIMSubText_havenot: String { localized(.myJJIMSubText_havenot) }
   public static var myJJIMSubText_total: String { localized(.myJJIMSubText_total) }
   public static var myJJIMTitle_havenot: String { localized(.myJJIMTitle_havenot) }
+  public static var myProgressTitle_havenot: String { localized(.myProgressTitle_havenot) }
+  public static var myCompleteTitle_havenot: String { localized(.myCompleteTitle_havenot) }
+  public static var myCompleteContent_havenot: String { localized(.myCompleteContent_havenot) }
   public static var myListButtonText_deleteAccount: String { localized(.myListButtonText_deleteAccount) }
   public static var myListButtonText_korean: String { localized(.myListButtonText_korean) }
   public static var korean: String { localized(.korean) }
@@ -181,6 +179,7 @@ public enum L10n {
   public static var subText_hotSport: String { localized(.subText_hotSport) }
   public static var textButton_browseChallenge: String { localized(.textButton_browseChallenge) }
   public static var textButton_browse: String { localized(.textButton_browse) }
+  public static var textButton_allComments: String { localized(.textButton_allComments) }
   public static var textButton_ok: String { localized(.textButton_ok) }
   public static var textButton_cancel: String { localized(.textButton_cancel) }
   public static var textButton_copy: String { localized(.textButton_copy) }
@@ -218,6 +217,8 @@ public enum L10n {
   public static var onboardingTitle_2: String { localized(.onboardingTitle_2) }
   public static var onboardingTitle_3: String { localized(.onboardingTitle_3) }
   public static var onboardingTitle_4: String { localized(.onboardingTitle_4) }
+  public static var onboardingButton_next: String { localized(.onboardingButton_next) }
+  public static var onboardingButton_start: String { localized(.onboardingButton_start) }
   
   public static func alarmListText_location(_ args: CVarArg...) -> String { localized(.alarmListText_location, args) }
   public static func alarmListText_vibration(_ args: CVarArg...) -> String { localized(.alarmListText_vibration, args) }
@@ -357,43 +358,6 @@ public enum L10n {
   public static func withdrawNote(_ args: CVarArg...) -> String { localized(.withdrawNote, args) }
 }
 
-// MARK: - lagacy
-public enum LocalizationsKey: String {
-  case tabProfile = "tab_profile"
-  case tabMychallenge = "tab_mychallenge"
-  case tabHome = "tab_home"
-  case mychallengeInterestTitle = "mychallenge_interest_title"
-  case mychallengeInterestEmptyTitle = "mychallenge_interest_empty_title"
-  case mychallengeInterestEmptyDes = "mychallenge_interest_empty_des"
-  case mychallengeInterestEmptyButton = "mychallenge_interest_empty_button"
-  case mychallengeInprogressTitle = "mychallenge_inprogress_title"
-  case mychallengeHeaderTitle = "mychallenge_header_title"
-  case mychallengeCompletedTitle = "mychallenge_completed_title"
-  case mychallengeInterestDeleteToast = "mychallenge_interest_delete_toast"
-  case toastButtonRestoration = "toast_button_restoration"
-  case mychallengeProgressEmptyButton = "mychallenge_progress_empty_button"
-  case mychallengeProgressEmptyTitle = "mychallenge_progress_empty_title"
-  case mychallengeProgressEmptyDes = "mychallenge_progress_empty_des"
-  case mychallengeCompletedEmptyTitle = "mychallenge_completed_empty_title"
-  case mychallengeCompletedEmptyDes = "mychallenge_completed_empty_des"
-  case detailchallengeCommentButton = "detailchallenge_comment_button"
-  case detailchallengeCommentTitle = "detailchallenge_comment_title"
-  case detailchallengeInterestButton = "detailchallenge_interest_button"
-  case detailchallengeLoginButton = "detailchallenge_login_button"
-  case detailchallengeMapButton = "detailchallenge_map_button"
-  case detailchallengePlaceDes = "detailchallenge_place_des"
-  case detailchallengePlaceTitle = "detailchallenge_place_title"
-  case detailchallengeStampDes = "detailchallenge_stamp_des"
-  case detailchallengeStampTitle = "detailchallenge_stamp_title"
-  case detailchallengeStartButton = "detailchallenge_start_button"
-  case mychallengeTotal = "mychallenge_total"
-  case placeDistance = "place_distance"
-  case detailchallengeCommentDes = "detailchallenge_comment_des"
-  case detailchallengeEndButton = "detailchallenge_end_button"
-  case detailchallengeStampButton = "detailchallenge_stamp_button"
-  case detailchallengeFloatingText = "detailchallenge_floating_text"
-}
-
 public enum LocalizedKey: String {
   case signIn_apple
   case signIn_facebook
@@ -407,6 +371,8 @@ public enum LocalizedKey: String {
   case onboardingTitle_2
   case onboardingTitle_3
   case onboardingTitle_4
+  case onboardingButton_start
+  case onboardingButton_next
   case alarmListText_vibration
   case alertContent_deleteAccount
   case alertContent_locationAccess
@@ -498,6 +464,9 @@ public enum LocalizedKey: String {
   case myJJIMSubText_havenot
   case myJJIMSubText_total
   case myJJIMTitle_havenot
+  case myProgressTitle_havenot
+  case myCompleteTitle_havenot
+  case myCompleteContent_havenot
   case myListButtonText_deleteAccount
   case myListButtonText_korean
   case korean
@@ -526,6 +495,7 @@ public enum LocalizedKey: String {
   case subText_hotSport
   case textButton_browseChallenge
   case textButton_browse
+  case textButton_allComments
   case textButton_cancel
   case textButton_copy
   case textButton_copyAddress

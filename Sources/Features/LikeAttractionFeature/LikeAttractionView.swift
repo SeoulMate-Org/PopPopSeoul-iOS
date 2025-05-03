@@ -48,7 +48,7 @@ struct LikeAttractionView: View {
             Spacer()
             AppToast(type: .iconTextWithButton(
               message: L10n.JJIMtoastText_removed,
-              buttonTitle: String(sLocalization: .toastButtonRestoration),
+              buttonTitle: L10n.textButton_restore,
               onTap: { viewStore.send(.undoLike) }
             ))
             .padding(.bottom, 16)

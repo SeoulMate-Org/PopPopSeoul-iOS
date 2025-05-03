@@ -22,7 +22,7 @@ struct MyChallengeListView: View {
     
     ScrollView(showsIndicators: false) {
       LazyVStack(alignment: .leading, spacing: 4) {
-        Text(String(sLocalization: .mychallengeTotal).localizedFormat("\(items.count)"))
+        Text(L10n.myJJIMSubText_total("\(items.count)"))
           .font(.captionL)
           .foregroundColor(Colors.gray300.swiftUIColor)
           .padding(.leading, 28)

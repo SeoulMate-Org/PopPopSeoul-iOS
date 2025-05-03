@@ -94,7 +94,7 @@ struct DetailChallengeView: View {
             }
             
             if viewStore.challenge?.challengeStatus == .progress {
-              Text(String(sLocalization: .detailchallengeFloatingText))
+              Text(L10n.detailChallengeFloatText)
                 .font(.captionM)
                 .foregroundColor(Colors.blue500.swiftUIColor)
                 .padding(.vertical, 11)
@@ -125,7 +125,7 @@ struct DetailChallengeView: View {
         AppMoreMenu(
           items: [
             AppMoreMenuItem(
-              title: String(sLocalization: .detailchallengeEndButton),
+              title: L10n.textButton_leaveChallenge,
               action: {
                 viewStore.send(.quitChallenge)
               })

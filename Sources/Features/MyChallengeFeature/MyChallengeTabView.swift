@@ -26,7 +26,7 @@ struct MyChallengeTabView: View {
   private func rootView(viewStore: ViewStoreOf<MyChallengeTabFeature>) -> some View {
     VStack(spacing: 0) {
       HeaderView(
-        type: .titleOnly(title: String(sLocalization: .mychallengeHeaderTitle))
+        type: .titleOnly(title: L10n.footer_mychallenge)
       )
       
       TopTabView(
@@ -93,8 +93,8 @@ struct MyChallengeTabView: View {
           VStack(spacing: 0) {
             Spacer()
             AppToast(type: .iconTextWithButton(
-              message: String(sLocalization: .mychallengeInterestDeleteToast),
-              buttonTitle: String(sLocalization: .toastButtonRestoration),
+              message: L10n.toastText_removedJJIM,
+              buttonTitle: L10n.textButton_restore,
               onTap: { viewStore.send(.undoLike) }
             ))
             .padding(.bottom, 16)
@@ -113,9 +113,9 @@ struct MyChallengeTabView: View {
 extension  MyChallengeTabFeature.Tab {
   var title: String {
     switch self {
-    case .interest: String(sLocalization: .mychallengeInterestTitle)
-    case .progress: String(sLocalization: .mychallengeInprogressTitle)
-    case .completed: String(sLocalization: .mychallengeCompletedTitle)
+    case .interest: L10n.myTapButtonText_jjim
+    case .progress: L10n.myTapButtonText_onIt
+    case .completed: L10n.myTapButtonText_completed
     }
   }
 }
