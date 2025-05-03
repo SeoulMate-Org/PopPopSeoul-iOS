@@ -71,23 +71,24 @@ struct LoginView: View {
         
         Spacer()
         
-        LoginButtonView(
-          image: Assets.Icons.facebook.swiftUIImage,
-          text: "페이스북으로 계속하기",
-          onTap: {
-            handleFacebookLogin()
-          }, isLight: false
-        )
+        // FIXME: - 1차 오픈 히든
+//        LoginButtonView(
+//          image: Assets.Icons.facebook.swiftUIImage,
+//          text: L10n.signIn_facebook,
+//          onTap: {
+//            handleFacebookLogin()
+//          }, isLight: false
+//        )
         LoginButtonView(
           image: Assets.Icons.google.swiftUIImage,
-          text: "구글로 계속하기",
+          text:  L10n.signIn_google,
           onTap: {
             handleGoogleSignInButton()
           }, isLight: false
         )
         LoginButtonView(
           image: Assets.Icons.apple.swiftUIImage,
-          text: "애플로 계속하기",
+          text:  L10n.signIn_apple,
           onTap: {
             let coordinator = AppleSignInCoordinator()
             coordinator.onSuccess = { appleIDCredential in

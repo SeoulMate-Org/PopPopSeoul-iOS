@@ -57,6 +57,10 @@ public extension L10n {
 }
 
 public enum L10n {
+  public static var signIn_facebook: String { localized(.signIn_facebook) }
+  public static var signIn_google: String { localized(.signIn_google) }
+  public static var signIn_apple: String { localized(.signIn_apple) }
+  
   public static var alarmListText_location: String { localized(.alarmListText_location) }
   public static var alarmListText_vibration: String { localized(.alarmListText_vibration) }
   public static var alertContent_deleteAccount: String { localized(.alertContent_deleteAccount) }
@@ -391,6 +395,9 @@ public enum LocalizationsKey: String {
 }
 
 public enum LocalizedKey: String {
+  case signIn_apple
+  case signIn_facebook
+  case signIn_google
   case onboardingSub_2
   case onboardingSub_3
   case onboardingSub_4

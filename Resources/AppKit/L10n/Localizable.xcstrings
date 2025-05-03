@@ -1,5 +1,5 @@
 {
-  "sourceLanguage" : "ko",
+  "sourceLanguage" : "en",
   "strings" : {
     "" : {
 
@@ -15,7 +15,7 @@
     },
     "%@ ~ %@" : {
       "localizations" : {
-        "ko" : {
+        "en" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "%1$@ ~ %2$@"
@@ -28,7 +28,7 @@
     },
     "%@/%@" : {
       "localizations" : {
-        "ko" : {
+        "en" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "%1$@/%2$@"
@@ -1450,18 +1450,6 @@
         }
       }
     },
-    "Key" : {
-      "extractionState" : "manual"
-    },
-    "Key 1" : {
-      "extractionState" : "manual"
-    },
-    "Key 2" : {
-      "extractionState" : "manual"
-    },
-    "Key 3" : {
-      "extractionState" : "manual"
-    },
     "korean" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -2179,6 +2167,57 @@
         }
       }
     },
+    "signIn_apple" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue with Apple"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "애플로 계속하기"
+          }
+        }
+      }
+    },
+    "signIn_facebook" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue with Facebook"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "페이스북으로 계속하기"
+          }
+        }
+      }
+    },
+    "signIn_google" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue with Google"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "구글로 계속하기"
+          }
+        }
+      }
+    },
     "subButton_more" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -2883,7 +2922,7 @@
     },
     "현재 위치: %lf, %lf" : {
       "localizations" : {
-        "ko" : {
+        "en" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "현재 위치: %1$lf, %2$lf"
