@@ -41,9 +41,15 @@ struct HomeTabView: View {
           
           if viewStore.locationListType == .loginRequired {
             HomeAccessPromptSection(type: .login)
+              .onTapGesture {
+                viewStore.send(.showAlert(.login))
+              }
               .padding(.top, 48)
           } else if viewStore.locationListType == .locationAuthRequired {
             HomeAccessPromptSection(type: .location)
+              .onTapGesture {
+                viewStore.send(.showAlert(.onLocation))
+              }
               .padding(.top, 48)
           }
           

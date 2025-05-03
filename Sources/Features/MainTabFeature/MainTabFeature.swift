@@ -125,8 +125,11 @@ public struct MainTabFeature {
         return .none
         
         // MARK: - Home Reducer
-      case .home(.showLoginAlert):
-        state.showAlert = .login
+      case let .home(.showAlert(alert)):
+        switch alert {
+        case .login: state.showAlert = .login
+        case .onLocation: state.showAlert = .onLocation
+        }
         return .none
         
       case .home(.tappedChallenge(let id)):

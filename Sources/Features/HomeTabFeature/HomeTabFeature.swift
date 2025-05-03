@@ -74,7 +74,7 @@ public struct HomeTabFeature {
     case initialize
     case refetch
     case networkError
-    case showLoginAlert
+    case showAlert(Alert)
     case tappedChallenge(id: Int)
     case tappedLike(Challenge)
     case updateLikeList(Challenge)
@@ -117,6 +117,11 @@ public struct HomeTabFeature {
     case updateRankList([Challenge])
     case tappedRankMore
     case moveToRank
+  }
+  
+  public enum Alert: Equatable {
+    case login
+    case onLocation
   }
   
   // MARK: - Reducer
@@ -187,7 +192,7 @@ public struct HomeTabFeature {
             }
           }
         } else {
-          return .send(.showLoginAlert)
+          return .send(.showAlert(.login))
         }
         
       case let .updateLikeList(update):
@@ -381,7 +386,7 @@ public struct HomeTabFeature {
         // TODO: - Error 처리
         return .none
         
-      case .showLoginAlert:
+      case .showAlert:
         // Main Tab Navigation
         return .none
         
