@@ -63,6 +63,7 @@ public struct HeaderView: View {
         .back(let title, _),
         .backWithMenu(let title, _, _):
       return Text(title)
+        .lineLimit(1)
         .font(.appTitle3)
         .foregroundColor(Colors.gray900.swiftUIColor)
     default:
