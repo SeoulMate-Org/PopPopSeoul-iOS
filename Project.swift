@@ -24,6 +24,7 @@ let swiftlintScript: TargetScript = .pre(
 
 let appInfoPlist: [String: Plist.Value] = {
     var base: [String: Plist.Value] = [
+        "CFBundleDisplayName": "PopPop Seoul",
         "CFBundleShortVersionString": Plist.Value(stringLiteral: version),
         "UILaunchStoryboardName": "Launch Screen",
         "UIApplicationSceneManifest": [
@@ -76,7 +77,7 @@ let appInfoPlist: [String: Plist.Value] = {
         ],
         "FacebookAppID": "$(FACEBOOK_APP_ID)",
         "FacebookClientToken": "$(FACEBOOK_CLIENT_TOKEN)",
-        "FacebookDisplayName": "PopPopSeoul",
+        "FacebookDisplayName": "PopPop Seoul",
         "GoogleSignIn": "$(GOOGLE_SIGN_IN)",
         "BASE_URL": "$(BASE_URL)",
         "TEST_BASE_URL": "$(TEST_BASE_URL)",

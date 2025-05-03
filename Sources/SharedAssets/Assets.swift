@@ -66,6 +66,8 @@ public enum Assets {
     public static let subwayLine = ImageAsset(name: "subway_line")
     public static let themeFill = ImageAsset(name: "theme_fill")
     public static let themeLine = ImageAsset(name: "theme_line")
+    public static let timeFill = ImageAsset(name: "time_fill")
+    public static let timeLine = ImageAsset(name: "time_line")
     public static let toiletLine = ImageAsset(name: "toilet_line")
     public static let warningLine = ImageAsset(name: "warning_line")
     public static let webLine = ImageAsset(name: "web_line")

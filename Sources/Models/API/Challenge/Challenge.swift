@@ -23,11 +23,11 @@ public struct Challenge: Hashable, Equatable, Identifiable {
   public var isEventChallenge: Bool {
     return challengeThemeId == 2
   }
-
+  
   public var likes: Int
   public var likedCount: Int
   public var isLiked: Bool
-
+  
   public var progressCount: Int
   public var commentCount: Int
   public let attractionCount: Int
@@ -35,22 +35,26 @@ public struct Challenge: Hashable, Equatable, Identifiable {
   public var myStampCountLocal: Int {
     return attractions.count(where: { $0.isStamped })
   }
-
+  
   public let distance: Int
   public let displayRank: String
-
+  
   public var challengeStatusCode: String
   public var challengeStatus: ChallengeStatus? {
     ChallengeStatus.from(apiCode: challengeStatusCode)
   }
-
+  
   public var comments: [Comment]
   public var attractions: [Attraction]
-
+  
   public var stampCount: Int {
     attractions.filter { $0.isStamped }.count
   }
-
+  
+  public var startDate: String
+  public var endDate: String
+  public var homepageUrl: String
+  
   public init(
     id: Int,
     name: String,
@@ -71,7 +75,10 @@ public struct Challenge: Hashable, Equatable, Identifiable {
     displayRank: String,
     challengeStatusCode: String,
     comments: [Comment],
-    attractions: [Attraction]
+    attractions: [Attraction],
+    startDate: String,
+    endDate: String,
+    homepageUrl: String
   ) {
     self.id = id
     self.name = name
@@ -93,6 +100,9 @@ public struct Challenge: Hashable, Equatable, Identifiable {
     self.challengeStatusCode = challengeStatusCode
     self.comments = comments
     self.attractions = attractions
+    self.startDate = startDate
+    self.endDate = endDate
+    self.homepageUrl = homepageUrl
   }
 }
 
@@ -118,64 +128,75 @@ extension Challenge: Codable {
     case challengeStatusCode
     case comments
     case attractions
+    case startDate
+    case endDate
+    case homepageUrl
   }
   
   public init(from decoder: Decoder) throws {
-      let container = try decoder.container(keyedBy: CodingKeys.self)
-
-      id = try container.decode(Int.self, forKey: .id)
-      name = try container.decodeIfPresent(String.self, forKey: .name) ?? ""
-      title = try container.decodeIfPresent(String.self, forKey: .title) ?? ""
-      description = try container.decodeIfPresent(String.self, forKey: .description) ?? ""
-      imageUrl = try container.decodeIfPresent(String.self, forKey: .imageUrl) ?? ""
-      mainLocation = try container.decodeIfPresent(String.self, forKey: .mainLocation) ?? ""
-      challengeThemeId = try container.decodeIfPresent(Int.self, forKey: .challengeThemeId) ?? -1
-      challengeThemeName = try container.decodeIfPresent(String.self, forKey: .challengeThemeName) ?? ""
-
-      likes = try container.decodeIfPresent(Int.self, forKey: .likes) ?? 0
-      likedCount = try container.decodeIfPresent(Int.self, forKey: .likedCount) ?? 0
-      isLiked = try container.decodeIfPresent(Bool.self, forKey: .isLiked) ?? false
-
-      progressCount = try container.decodeIfPresent(Int.self, forKey: .progressCount) ?? 0
-      commentCount = try container.decodeIfPresent(Int.self, forKey: .commentCount) ?? 0
-      attractionCount = try container.decodeIfPresent(Int.self, forKey: .attractionCount) ?? 0
-      myStampCount = try container.decodeIfPresent(Int.self, forKey: .myStampCount) ?? 0
-
-      distance = try container.decodeIfPresent(Int.self, forKey: .distance) ?? 0
-      displayRank = try container.decodeIfPresent(String.self, forKey: .displayRank) ?? ""
-
-      challengeStatusCode = try container.decodeIfPresent(String.self, forKey: .challengeStatusCode) ?? ""
-      comments = try container.decodeIfPresent([Comment].self, forKey: .comments) ?? []
-      attractions = try container.decodeIfPresent([Attraction].self, forKey: .attractions) ?? []
+    let container = try decoder.container(keyedBy: CodingKeys.self)
+    
+    id = try container.decode(Int.self, forKey: .id)
+    name = try container.decodeIfPresent(String.self, forKey: .name) ?? ""
+    title = try container.decodeIfPresent(String.self, forKey: .title) ?? ""
+    description = try container.decodeIfPresent(String.self, forKey: .description) ?? ""
+    imageUrl = try container.decodeIfPresent(String.self, forKey: .imageUrl) ?? ""
+    mainLocation = try container.decodeIfPresent(String.self, forKey: .mainLocation) ?? ""
+    challengeThemeId = try container.decodeIfPresent(Int.self, forKey: .challengeThemeId) ?? -1
+    challengeThemeName = try container.decodeIfPresent(String.self, forKey: .challengeThemeName) ?? ""
+    
+    likes = try container.decodeIfPresent(Int.self, forKey: .likes) ?? 0
+    likedCount = try container.decodeIfPresent(Int.self, forKey: .likedCount) ?? 0
+    isLiked = try container.decodeIfPresent(Bool.self, forKey: .isLiked) ?? false
+    
+    progressCount = try container.decodeIfPresent(Int.self, forKey: .progressCount) ?? 0
+    commentCount = try container.decodeIfPresent(Int.self, forKey: .commentCount) ?? 0
+    attractionCount = try container.decodeIfPresent(Int.self, forKey: .attractionCount) ?? 0
+    myStampCount = try container.decodeIfPresent(Int.self, forKey: .myStampCount) ?? 0
+    
+    distance = try container.decodeIfPresent(Int.self, forKey: .distance) ?? 0
+    displayRank = try container.decodeIfPresent(String.self, forKey: .displayRank) ?? ""
+    
+    challengeStatusCode = try container.decodeIfPresent(String.self, forKey: .challengeStatusCode) ?? ""
+    comments = try container.decodeIfPresent([Comment].self, forKey: .comments) ?? []
+    attractions = try container.decodeIfPresent([Attraction].self, forKey: .attractions) ?? []
+    
+    startDate = try container.decodeIfPresent(String.self, forKey: .startDate) ?? ""
+    endDate = try container.decodeIfPresent(String.self, forKey: .endDate) ?? ""
+    homepageUrl = try container.decodeIfPresent(String.self, forKey: .homepageUrl) ?? ""
   }
   
   public func encode(to encoder: Encoder) throws {
-      var container = encoder.container(keyedBy: CodingKeys.self)
-      
-      try container.encode(id, forKey: .id)
-      try container.encodeIfPresent(name, forKey: .name)
-      try container.encodeIfPresent(title, forKey: .title)
-      try container.encodeIfPresent(description, forKey: .description)
-      try container.encodeIfPresent(imageUrl, forKey: .imageUrl)
-      try container.encodeIfPresent(mainLocation, forKey: .mainLocation)
-      try container.encodeIfPresent(challengeThemeId, forKey: .challengeThemeId)
-      try container.encodeIfPresent(challengeThemeName, forKey: .challengeThemeName)
-
-      try container.encodeIfPresent(likes, forKey: .likes)
-      try container.encodeIfPresent(likedCount, forKey: .likedCount)
-      try container.encodeIfPresent(isLiked, forKey: .isLiked)
-      
-      try container.encodeIfPresent(progressCount, forKey: .progressCount)
-      try container.encodeIfPresent(commentCount, forKey: .commentCount)
-      try container.encodeIfPresent(attractionCount, forKey: .attractionCount)
-      try container.encodeIfPresent(myStampCount, forKey: .myStampCount)
-      
-      try container.encodeIfPresent(distance, forKey: .distance)
-      try container.encodeIfPresent(displayRank, forKey: .displayRank)
-      
-      try container.encodeIfPresent(challengeStatusCode, forKey: .challengeStatusCode)
-      try container.encodeIfPresent(attractions, forKey: .attractions)
-      try container.encodeIfPresent(comments, forKey: .comments)
+    var container = encoder.container(keyedBy: CodingKeys.self)
+    
+    try container.encode(id, forKey: .id)
+    try container.encodeIfPresent(name, forKey: .name)
+    try container.encodeIfPresent(title, forKey: .title)
+    try container.encodeIfPresent(description, forKey: .description)
+    try container.encodeIfPresent(imageUrl, forKey: .imageUrl)
+    try container.encodeIfPresent(mainLocation, forKey: .mainLocation)
+    try container.encodeIfPresent(challengeThemeId, forKey: .challengeThemeId)
+    try container.encodeIfPresent(challengeThemeName, forKey: .challengeThemeName)
+    
+    try container.encodeIfPresent(likes, forKey: .likes)
+    try container.encodeIfPresent(likedCount, forKey: .likedCount)
+    try container.encodeIfPresent(isLiked, forKey: .isLiked)
+    
+    try container.encodeIfPresent(progressCount, forKey: .progressCount)
+    try container.encodeIfPresent(commentCount, forKey: .commentCount)
+    try container.encodeIfPresent(attractionCount, forKey: .attractionCount)
+    try container.encodeIfPresent(myStampCount, forKey: .myStampCount)
+    
+    try container.encodeIfPresent(distance, forKey: .distance)
+    try container.encodeIfPresent(displayRank, forKey: .displayRank)
+    
+    try container.encodeIfPresent(challengeStatusCode, forKey: .challengeStatusCode)
+    try container.encodeIfPresent(attractions, forKey: .attractions)
+    try container.encodeIfPresent(comments, forKey: .comments)
+    
+    try container.encodeIfPresent(startDate, forKey: .startDate)
+    try container.encodeIfPresent(endDate, forKey: .endDate)
+    try container.encodeIfPresent(homepageUrl, forKey: .homepageUrl)
   }
-
+  
 }

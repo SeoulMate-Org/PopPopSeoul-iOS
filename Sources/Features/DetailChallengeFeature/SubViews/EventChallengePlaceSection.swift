@@ -13,6 +13,7 @@ import Models
 import DesignSystem
 
 struct EventChallengePlaceSection: View {
+  let challenge: Challenge
   let attraction: Attraction
   
   var body: some View {
@@ -36,15 +37,18 @@ struct EventChallengePlaceSection: View {
           )
         }
         
-        // TODO: 운영시간
+        if !challenge.startDate.isEmpty || !challenge.endDate.isEmpty {
+          EventChallengeDateView(start: challenge.startDate, end: challenge.endDate)
+          .padding(.top, 24)
+        }
         
-        if !attraction.homepageUrl.isEmpty,
-           let link = URL(string: attraction.homepageUrl) {
+        if !challenge.homepageUrl.isEmpty,
+           let link = URL(string: challenge.homepageUrl) {
           DetailAttractionLinkView(
-            text: attraction.homepageUrl,
+            text: challenge.homepageUrl,
             link: link
           )
-          .padding(.top, 24)
+          .padding(.top, 8)
         }
       }
       .padding(.top, 20)

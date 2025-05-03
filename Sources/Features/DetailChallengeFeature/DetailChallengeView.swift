@@ -47,7 +47,7 @@ struct DetailChallengeView: View {
                 
                 if challenge.isEventChallenge {
                   if let attraction = challenge.attractions.first {
-                    EventChallengePlaceSection(attraction: attraction)
+                    EventChallengePlaceSection(challenge: challenge, attraction: attraction)
                     divider()
                   }
                 } else {
