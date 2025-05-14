@@ -1,59 +1,99 @@
-# Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+### macOS ###
+# General macOS files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
 
-## User settings
+# Remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+### Xcode ###
+# User settings
 xcuserdata/
 
-## Obj-C/Swift specific
+# Xcode compatibility files
+*.xcscmblueprint
+*.xccheckout
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+
+# Build artifacts
+build/
+DerivedData/
+Derived/
 *.hmap
 
-## App packaging
+# Xcode patch
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+*.xcworkspace
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+
+# App packaging
 *.ipa
 *.dSYM.zip
 *.dSYM
 
-## Playgrounds
+# Playgrounds
 timeline.xctimeline
 playground.xcworkspace
 
-# Swift Package Manager
+### Swift Package Manager ###
 .build/
-build/
 .swiftpm/
 # Packages/
 # Package.pins
 # Package.resolved
 
-# CocoaPods
+### CocoaPods ###
 # Pods/
 
-# Carthage
+### Carthage ###
 Carthage/Build/
 
-# fastlane
+### fastlane ###
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
 
-# Tuist
-Derived/
+### Tuist ###
+Tuist/.build
 Tuist/Dependencies/Build/
 Tuist/Dependencies/SwiftPackageManager/
 Tuist/Cache/
 Tuist/Graph/
 Tuist/Generated/
-TuistEnv/
 Tuist/WorkspaceState.swift
 Tuist/Manifests.swift
+TuistEnv/
 
-# Xcode project/workspace (managed by Tuist, do not track manually)
-*.xcworkspace
-*.xcodeproj/*
-!*.xcodeproj/project.pbxproj
-!*.xcodeproj/xcshareddata/
-!*.xcworkspace/contents.xcworkspacedata
-
-# SnapshotTesting (옵션)
+### SnapshotTesting (optional) ###
 __Snapshots__/
+
+*.p8
+Secrets.plist
+GoogleService-Info.plist
+Secrets.xcconfig

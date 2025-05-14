@@ -1,0 +1,19 @@
+xcassets:          
+  - inputs:
+    - Resources/AppKit/Assets/Icons.xcassets
+    - Resources/AppKit/Assets/Images.xcassets
+    outputs:
+      - templateName: swift5
+        output: Sources/SharedAssets/Assets.swift
+        params:
+          enumName: Assets
+          publicAccess: true
+          
+  - inputs:
+    - Resources/AppKit/Assets/Colors.xcassets
+    outputs:
+      - templateName: swift5
+        output: Sources/SharedAssets/Colors.swift
+        params:
+          enumName: Colors
+          publicAccess: true

@@ -1,0 +1,92 @@
+//
+//  HomeMissingSection.swift
+//  Features
+//
+//  Created by suni on 4/29/25.
+//
+
+import SwiftUI
+import Common
+import DesignSystem
+import SharedAssets
+import Models
+
+struct HomeMissingSection: View {
+  let isMissing: Bool
+  var challenges: [Challenge]
+  var onTapped: (Int) -> Void
+  var onStartTapped: (Int) -> Void
+  
+  var body: some View {
+    let screenWidth = UIScreen.main.bounds.width
+    let cardWidth = screenWidth * (160.0 / 375.0)
+    let gradientHeight = cardWidth * 0.57
+    
+    ZStack(alignment: .topTrailing) {
+      VStack(spacing: 0) {
+        Rectangle()
+          .fill(Color.hex(0x47ABF1))
+          .frame(height: 152)
+        
+        Rectangle()
+          .fill(LinearGradient.skyFadeTopToBottom)
+          .frame(height: gradientHeight)
+      }
+      
+      HStack {
+        Spacer()
+        Assets.Images.homeMissing.swiftUIImage
+          .resizable()
+          .scaledToFit()
+          .frame(width: 139, height: 139)
+          .padding(.top, 8)
+          .padding(.trailing, 2)
+          .rotationEffect(.degrees(12))
+      }
+      
+      VStack(alignment: .leading, spacing: 0) {
+        Text(isMissing ? L10n.homeBackGroundText_missed : L10n.homeBackGroundText_startChallenge)
+          .font(.appTitle2)
+          .foregroundStyle(Colors.appWhite.swiftUIColor)
+          .padding(.horizontal, 20)
+          .padding(.top, 72)
+        
+        Text(isMissing ? L10n.homeBackGroundText_keepGoing : L10n.homeBackGroundText_lightChallenge)
+          .font(.captionL)
+          .foregroundStyle(Colors.gray25.swiftUIColor)
+          .padding(.top, 4)
+          .padding(.horizontal, 20)
+        
+        ScrollView(.horizontal, showsIndicators: false) {
+          HStack(spacing: 8) {
+            ForEach(challenges) { challenge in
+              HomeMissingChallengeItemView(
+                challenge: challenge,
+                cardWidth: cardWidth,
+                onStartTapped: {
+                  onStartTapped(challenge.id)
+              })
+              .onTapGesture {
+                onTapped(challenge.id)
+              }
+            } // ForEach
+          }
+          .padding(.horizontal, 20)
+        }
+        .padding(.top, 36)
+      }
+    }
+    .background(.clear)
+  }
+}
+
+extension LinearGradient {
+  static let skyFadeTopToBottom = LinearGradient(
+    gradient: Gradient(stops: [
+      .init(color: Color.hex(0x47ABF1), location: 0.0),
+      .init(color: Color.hex(0x67C1FF).opacity(0), location: 1.0)
+    ]),
+    startPoint: .top,
+    endPoint: .bottom
+  )
+}
