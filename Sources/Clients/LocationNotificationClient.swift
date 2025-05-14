@@ -11,18 +11,19 @@ import CoreLocation
 import UserNotifications
 import Models
 
-public struct LocationNotificationClient {
-  public var register: @Sendable (_ challenge: Challenge, _ attractions: [Attraction]) async -> Void
-  public var removeAll: @Sendable (_ challengeId: Int, _ attractionIds: [Int]) -> Void
-  public var remove: @Sendable (_ challengeId: Int, _ attractionId: Int) -> Void
+public struct NotificationClient {
+  public var registerLocation: @Sendable (_ challenge: Challenge, _ attractions: [Attraction]) async -> Void
+  public var removeAllLcoation: @Sendable (_ challengeId: Int, _ attractionIds: [Int]) -> Void
+  public var removeLcoation: @Sendable (_ challengeId: Int, _ attractionId: Int) -> Void
+  public var removeAll: @Sendable () -> Void
 }
 
-extension LocationNotificationClient: DependencyKey {
+extension NotificationClient: DependencyKey {
   public static let liveValue: Self = {
     let center = UNUserNotificationCenter.current()
 
     return Self(
-      register: { challenge, attractions in
+      registerLocation: { challenge, attractions in
         _ = try? await center.requestAuthorization(options: [.alert, .sound, .badge])
 
         for attraction in attractions.prefix(5) {
@@ -53,20 +54,30 @@ extension LocationNotificationClient: DependencyKey {
           try? await center.add(request)
         }
       },
-      removeAll: { challengeId, attractionIds in
+      removeAllLcoation: { challengeId, attractionIds in
         let identifiers = attractionIds.map {
           Self.identifier(challengeId: challengeId, attractionId: $0)
         }
         center.removePendingNotificationRequests(withIdentifiers: identifiers)
       },
-      remove: { challengeId, attractionId in
+      removeLcoation: { challengeId, attractionId in
         let id = Self.identifier(challengeId: challengeId, attractionId: attractionId)
         center.removePendingNotificationRequests(withIdentifiers: [id])
+      },
+      removeAll: {
+        center.removeAllPendingNotificationRequests()
       }
     )
   }()
 
   private static func identifier(challengeId: Int, attractionId: Int) -> String {
     "challenge_\(challengeId)_attraction_\(attractionId)"
+  }
+}
+
+public extension DependencyValues {
+  var notificationClient: NotificationClient {
+    get { self[NotificationClient.self] }
+    set { self[NotificationClient.self] = newValue }
   }
 }

@@ -19,6 +19,7 @@ public struct DetailChallengeFeature {
   @Dependency(\.challengeClient) var challengeClient
   @Dependency(\.locationClient) var locationClient
   @Dependency(\.commentClient) var commentClient
+  @Dependency(\.notificationClient) var notificationClient
   
   // MARK: State
   
@@ -141,6 +142,9 @@ public struct DetailChallengeFeature {
           
           do {
             let _ = try await challengeClient.quit(update.id)
+            
+            // FIXME: - v1.0.1 위치 알림 삭제
+            notificationClient.removeAllLcoation(challenge.id, challenge.attractions.map { $0.id })
             
           } catch {
             await send(.getError)
@@ -278,6 +282,10 @@ public struct DetailChallengeFeature {
               updated.challengeStatusCode = ChallengeStatus.completed.apiCode
             }
             // ✅ 반영된 상태 업데이트
+            
+            // FIXME: - v1.0.1 위치 알림 삭제
+            notificationClient.removeAllLcoation(updated.id, updatedAttraction.map { $0.id })
+
             await send(.update(updated))
             await send(.successStamps(updatedAttraction))
           } else {
@@ -356,6 +364,10 @@ public struct DetailChallengeFeature {
                 let fresh = try await challengeClient.get(response.id)
                 await send(.update(fresh))
               }
+              
+              // FIXME: - v1.0.1 위치 알림 추가
+              await notificationClient.registerLocation(challenge, challenge.attractions)
+              
             } catch {
               await send(.getError)
             }

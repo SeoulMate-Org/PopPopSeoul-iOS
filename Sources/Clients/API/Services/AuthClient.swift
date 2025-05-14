@@ -24,6 +24,7 @@ extension AuthClient: DependencyKey {
   public static var liveValue: AuthClient {
     @Dependency(\.apiClient) var apiClient
     @Dependency(\.userDefaultsClient) var userDefaultsClient
+    @Dependency(\.notificationClient) var notificationClient
     
     let isRefreshingBox = AsyncBox(value: false) // ✨ 내부 상태 관리용
     
@@ -86,6 +87,8 @@ extension AuthClient: DependencyKey {
         return result
       },
       logout: {
+        // FIXME: - v1.0.1 위치 알림 모두 삭제
+        notificationClient.removeAll()
         try await withThrowingTaskGroup(of: Void.self) { group in
           group.addTask { await userDefaultsClient.remove(.isAutoLogin) }
           group.addTask { await userDefaultsClient.remove(.lastStampAttractionId) }
