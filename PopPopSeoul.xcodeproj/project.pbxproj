@@ -697,6 +697,7 @@
 		E9DE71C84C88288412A32A64 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8609EF56D0937265092D5D36 /* Pretendard-ExtraLight.otf */; };
 		EA538B02E6EFCB8F46D36669 /* HomeChallengeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3A6CFAA5F6821C6DF932F /* HomeChallengeItemView.swift */; };
 		EA68103BE802BEBD67434D79 /* SB 어그로OTF M.otf in Resources */ = {isa = PBXBuildFile; fileRef = E283BF28611FAF81E991ABF5 /* SB 어그로OTF M.otf */; };
+		EAA6A4822DD4BADC00974561 /* LocationNotificationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA6A4812DD4BADC00974561 /* LocationNotificationClient.swift */; };
 		EAE62223229FB6E39F76669F /* CasePathsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CF7412324C02D1745F0E0D /* CasePathsCore.framework */; };
 		EB1B1D606C9519443C8093A6 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E58A56242DD34BBF412FCA4 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle */; };
 		EB2C1DD848ACAAE2D607CA78 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F75DBDEF31E5F47ECCF65C8 /* UIKit.framework */; };
@@ -1675,6 +1676,7 @@
 		E947EE3773A39EFFC1035361 /* LikeAttractionFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeAttractionFeature.swift; sourceTree = "<group>"; };
 		EA14930892816AFA4A88950C /* GoogleUtilities_Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleUtilities_Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA26B67DE986D8D090F59956 /* CombineSchedulers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CombineSchedulers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAA6A4812DD4BADC00974561 /* LocationNotificationClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationNotificationClient.swift; sourceTree = "<group>"; };
 		EB1AF2F0C1D291ADEC33A0B1 /* GetChallengeMyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeMyRequest.swift; sourceTree = "<group>"; };
 		EB50FD060BF7A2400BB005A7 /* ThemeChallengeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChallengeTabView.swift; sourceTree = "<group>"; };
 		EC4AFF88EA6DCED6098DE437 /* Clients-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Clients-Info.plist"; sourceTree = "<group>"; };
@@ -2802,6 +2804,7 @@
 				83ABE631EB8E51E8B50AC0E5 /* KeychainClient.swift */,
 				824A2AAB54DC0A569CB6D172 /* LocationClient.swift */,
 				A7C4661154860CE88FEFF6B5 /* UserDefaultClient.swift */,
+				EAA6A4812DD4BADC00974561 /* LocationNotificationClient.swift */,
 			);
 			path = Clients;
 			sourceTree = "<group>";
@@ -4430,6 +4433,7 @@
 				051AA0FC2982A0E9210FD7EC /* TuistPlists+Clients.swift in Sources */,
 				D3CE5076C804834D146456E7 /* APIClient.swift in Sources */,
 				A079B3760130F59822BB68A6 /* APIErrorResponse.swift in Sources */,
+				EAA6A4822DD4BADC00974561 /* LocationNotificationClient.swift in Sources */,
 				7036975B3879982BEE989C4C /* AsyncBox.swift in Sources */,
 				CF0930AE7BC5CB401A2395FC /* Endpoint.swift in Sources */,
 				914B274ABDA0C79B9741FDD3 /* AppSettingManager.swift in Sources */,
