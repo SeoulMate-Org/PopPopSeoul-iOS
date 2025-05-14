@@ -27,6 +27,7 @@ public struct HeaderView: View {
       case .titleOnly:
         Spacer()
         centerTitle
+          .lineLimit(1)
         Spacer()
         
       case .back(_, let onBack),
@@ -39,6 +40,7 @@ public struct HeaderView: View {
         }.frame(width: 50, height: 50)
         Spacer()
         centerTitle
+          .lineLimit(1)
         Spacer()
         
         if case .backWithMenu(_, _, let onMore) = type {
@@ -63,7 +65,6 @@ public struct HeaderView: View {
         .back(let title, _),
         .backWithMenu(let title, _, _):
       return Text(title)
-        .lineLimit(1)
         .font(.appTitle3)
         .foregroundColor(Colors.gray900.swiftUIColor)
     default:

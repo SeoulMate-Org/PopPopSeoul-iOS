@@ -10,7 +10,6 @@
 		004C442A2C10C87A05F9D2E4 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 93D2569F11ADDAF2533DAE8F /* Secrets.xcconfig */; };
 		00894CD5FC58B29FC7FC74B8 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 93D2569F11ADDAF2533DAE8F /* Secrets.xcconfig */; };
 		011E952711439CC0338CC5B1 /* NMapsGeometry.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7470E1490679F3CE7452AF3 /* NMapsGeometry.xcframework */; };
-		015E732AE4B861068B8EED78 /* PopPopSeoul_Common.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BB9E5B250148C619260FF4F1 /* PopPopSeoul_Common.bundle */; };
 		017CB4DFD3D3F89DAD9CAB3C /* GoogleUtilities_Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC2C9FB0699149ECB187EB1 /* GoogleUtilities_Network.framework */; };
 		01C19861DCEBA9F2E0BB289D /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D9141EE48B3D34377D5F9C /* Request.swift */; };
 		01D5A6496E357E34D95E73F4 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9767E2AC080051315814DE /* GoogleSignIn.framework */; };
@@ -29,9 +28,8 @@
 		05404CA6576EF2528AD8203E /* GoogleUtilities_GoogleUtilities_Environment.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 19A2185CDE7C6234EE1DF16A /* GoogleUtilities_GoogleUtilities_Environment.bundle */; };
 		05981452C3B02B0953437CB9 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3776FB055AD747BCCDF55C32 /* NetworkDispatcher.swift */; };
 		05EE4BA280CB45F788B25E43 /* Kingfisher_Kingfisher.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 083204ACFC456BC221AF0C3A /* Kingfisher_Kingfisher.bundle */; };
-		060310D17E19D629C0EBE726 /* DesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB57F84F538F6F76D73229ED /* DesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		061DB2D0949F911138215856 /* TuistBundle+Clients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B8E4DCE4DB8E6B7DE79F55 /* TuistBundle+Clients.swift */; };
-		06BED9B3F34031720AD37180 /* Perception.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A040845D9AD803CB2FE2243D /* Perception.framework */; };
+		06DA4A4E600794267B6C7BDD /* Models.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 2EE494055A8FF16DF0918183 /* Models.framework */; };
 		07431CF9B7E2A41714AF4806 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43ADB16D73634BF614EAE508 /* GoogleService-Info.plist */; };
 		08168991ABC231E17D6B7533 /* LikeAttractionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0528639D8F10B97BA4E0FEB /* LikeAttractionListView.swift */; };
 		085CBE9AC126B6C5F9E4666B /* PopPopSeoul_SharedAssets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AC1A07B868BF5B297491E7F4 /* PopPopSeoul_SharedAssets.bundle */; };
@@ -72,27 +70,27 @@
 		11E9EDD60785545E1A0CDBC5 /* Facebook_FacebookLogin.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 220C1E06DB94D6F39A7C2161 /* Facebook_FacebookLogin.bundle */; };
 		121BD62882589CA33C570412 /* AppAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1B267CB0E4FAE7A020820F /* AppAlertView.swift */; };
 		1250E35B7E29509FE702800D /* AppAuthCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F19DB3339F8D50838A1D327 /* AppAuthCore.framework */; };
-		12BB5DBE137A2A837C8A92A0 /* Sharing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9966F8860EC058A8321E83 /* Sharing.framework */; };
 		12BFFE5B63EFED57AE21034F /* SB 어그로OTF L.otf in Resources */ = {isa = PBXBuildFile; fileRef = 19B09F83E09267FC7013EB98 /* SB 어그로OTF L.otf */; };
 		132984BB1878C5D08806ED80 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4106973C4772F2643FF3499D /* FirebaseCore.framework */; };
 		1415B4346CC14829B79EF553 /* nanopb_nanopb.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 54BF44D27ECFDB2810863ED8 /* nanopb_nanopb.bundle */; };
+		14500ABECCABD597E79F2F58 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 52E18CE7974D7F8CCF710FF7 /* InfoPlist.xcstrings */; };
 		1468F216A5EE0EDCDD658196 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21F1198C49E87E8F197837EE /* Assets.xcassets */; };
 		1553901080D631D9EDB934DC /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5355E397BCD019AF8EF299B /* Secrets.plist */; };
 		155E470CE309A58F055F17EA /* ChallengeTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E321B243FD5013A5F3A377 /* ChallengeTheme.swift */; };
 		1591E0E5DC8FCE06620B9C54 /* ProfileLoginSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340ABE4D6AD985E1CE002B73 /* ProfileLoginSection.swift */; };
 		1655024D20135DBBD4E960A0 /* StaticMapParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B70B400F3697C62EBAD99C /* StaticMapParameters.swift */; };
+		165F9756B33F1B6ED793B6B8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE45769C226498DF4026D488 /* Images.xcassets */; };
 		16CD3894D23183FE8BDCD6FE /* HomeLocationSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE3411E90618290E371827D /* HomeLocationSection.swift */; };
 		16D46754E8CA37F9AC2E0215 /* Facebook_FacebookLogin.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 220C1E06DB94D6F39A7C2161 /* Facebook_FacebookLogin.bundle */; };
+		16F4F8800445887522F2A058 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2258D33FCA01CD482A696A5 /* RemoteConfigDefaults.plist */; };
 		16F8C3CD7B71416F8CC1ADCD /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EFE2A73738E1457A6C813045 /* Pretendard-Regular.otf */; };
 		16FBB73FC3C33A7A21F35F52 /* RankChallengeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20301BC068F0EFC35A2C1D26 /* RankChallengeFeature.swift */; };
 		1709885ADF0E124FF5112E99 /* FBLPromises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3862D0DD5D4F03EE871883E3 /* FBLPromises.framework */; };
 		17A796E43FCE1AB93EEC44A3 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EFE2A73738E1457A6C813045 /* Pretendard-Regular.otf */; };
 		17BBC4A3AEDB5D6B5BE79AAF /* MenuStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AC28D4731FFC1ADACFC03C /* MenuStyle.swift */; };
 		17BF788774432FA7F0D33B33 /* Firebase_FirebaseInstallations.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 63810522A380D3401ECFB91E /* Firebase_FirebaseInstallations.bundle */; };
-		17CC00D36B7B2A2777B6A3B2 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5355E397BCD019AF8EF299B /* Secrets.plist */; };
 		17D6DC7F1B2B65662937F369 /* Attraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDB40F90FD3412C20162CD2 /* Attraction.swift */; };
 		17DF8E9063F3CCC83993A4C8 /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A437D480A7D786FD4EFDA8 /* OnboardingPageView.swift */; };
-		180EACDB9E79B41997F71A15 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CE1FAA7B1326A358DB6CD86 /* Icons.xcassets */; };
 		18AE1A6626FC10D5704F38FF /* AppAuth_AppAuthCore.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = BB0596D73CAD6AA1EB814E87 /* AppAuth_AppAuthCore.bundle */; };
 		18E729810F901ABA5B7A4094 /* FBSDKCoreKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A3B62F816276CCCEF90303 /* FBSDKCoreKit.xcframework */; };
 		19360CEED1E92280DF1B9AD7 /* GTMSessionFetcher_GTMSessionFetcherCore.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = BD7EA88B3C127B12E7A5FEE8 /* GTMSessionFetcher_GTMSessionFetcherCore.bundle */; };
@@ -103,17 +101,15 @@
 		19CE3DB262A71B88AA42F2D7 /* HomeSimilarSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F373A34703B8E393C405D7 /* HomeSimilarSection.swift */; };
 		19DF9FFD9F7878167E20AC33 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDD27B7889EDC29093865516 /* Pretendard-Medium.otf */; };
 		1A23027736DC3EDAFF5CA3BC /* swift-sharing_Sharing.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9BCD91FDA3831C38BA0CEA23 /* swift-sharing_Sharing.bundle */; };
+		1A4BBEAD3BF3CE9C16FC5C85 /* SharedTypes.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = DA06EF0C7D6E057CBEAFC24C /* SharedTypes.framework */; };
 		1A762457F4375D1A66FBE09C /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 153553E89664D914E68DEFCC /* Pretendard-Thin.otf */; };
 		1AD17F94A980FC4A75E9BC73 /* DetailAttractionAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67F1CA3DFB013708067C15C /* DetailAttractionAddressView.swift */; };
-		1B06205582E69CF46CD3BDAA /* Clocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3D497BB3165EECBEBCB1888 /* Clocks.framework */; };
 		1B2AF00ADAEA506FD9540CC4 /* PopPopSeoul_SharedAssets.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = AC1A07B868BF5B297491E7F4 /* PopPopSeoul_SharedAssets.bundle */; };
 		1B448BDD3D7B5553C6A1CA9B /* Facebook_FacebookAEM.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 9FB1E12A2FECBF861558A97F /* Facebook_FacebookAEM.bundle */; };
 		1BB5F79E2CF2DEA8F3C2F98E /* DetailChallengeStampSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D076543D5EEF0F63E0FC229 /* DetailChallengeStampSection.swift */; };
 		1CBE2EEFDDCFCEE08E3B4E2C /* GoogleAppMeasurementTarget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C385182C16710AE4608924A /* GoogleAppMeasurementTarget.framework */; };
 		1CD9059E05DB3B5B146186E0 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E4D5476FC354FD8133DF1816 /* Pretendard-Light.otf */; };
 		1D1ED05456CA3F996C44D7FD /* GoogleUtilities_GoogleUtilities_Reachability.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6146039D41909EE6CBF2131E /* GoogleUtilities_GoogleUtilities_Reachability.bundle */; };
-		1D2CFA68AA104EFF61788F5C /* UIKitNavigationShim.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39CC4165F3572ECB2761515F /* UIKitNavigationShim.framework */; };
-		1D623F092FB9E44F66F7F3B3 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E4D5476FC354FD8133DF1816 /* Pretendard-Light.otf */; };
 		1DA57B904818C089FE2D5F04 /* TuistBundle+Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5120F0D9B2E0FCAB7DB07AA /* TuistBundle+Models.swift */; };
 		1DAB5E21F1D44708DB15EFA4 /* WithdrawFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABD04994C6D507298D20A6A /* WithdrawFeature.swift */; };
 		1E4B75C045A2C5CD8376B2ED /* AppCheckCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D08862BFB84DD2302CF5D2 /* AppCheckCore.framework */; };
@@ -127,7 +123,6 @@
 		210B0829DFA58D045A471590 /* TuistAssets+Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31E1BABFA08FDB3BA177E3F /* TuistAssets+Models.swift */; };
 		2137B36043789EEA6475FA1A /* MyChallengeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE9CAB2631F91F8DBEAB595 /* MyChallengeListView.swift */; };
 		216184CB84E5F182FF99923F /* FacebookAEM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACE774587441D48132649B84 /* FacebookAEM.framework */; };
-		21836F3DAD51C3443162E5AA /* PopPopSeoul_SharedTypes.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = C0CB3DDDA16FCFC69781D069 /* PopPopSeoul_SharedTypes.bundle */; };
 		21968F0D6BFA08FB7CDB882A /* swift-composable-architecture_ComposableArchitecture.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 97296BA299CDC0A42867B5F2 /* swift-composable-architecture_ComposableArchitecture.bundle */; };
 		219BC07C623933A692729BEA /* GoogleUtilities_GoogleUtilities_MethodSwizzler.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 649C7C6D3899F21B7A64E2B5 /* GoogleUtilities_GoogleUtilities_MethodSwizzler.bundle */; };
 		21D8104FDC2B68AD427737AF /* DefaultProcessResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A5F09CCE2843BBCFDB89DE /* DefaultProcessResponse.swift */; };
@@ -141,13 +136,12 @@
 		24D151BBFA2E0E11FF4626BC /* TuistAssets+Clients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D86F4B6A1E8658FF210F256 /* TuistAssets+Clients.swift */; };
 		24D82CD371CDCA7DF007CCE8 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFBCCCDCEB53A5AA38BAC5CE /* Pretendard-Bold.otf */; };
 		24E623B17F84E2C71AB91851 /* HomeBannerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF15972BD42EBAEDBDF636C5 /* HomeBannerItemView.swift */; };
-		252B8C3B7F5DC4E46E1A2D01 /* PerceptionCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D5B36A766C6B49FB39D3C7 /* PerceptionCore.framework */; };
 		259AF1D9C9E050C07EBCE123 /* EventChallengeDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FBA8777EB30BB73C5CB9EE /* EventChallengeDateView.swift */; };
 		25EFFC1526C0C16E8D691D85 /* TuistPlists+SharedTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04483998B0B9D6A02D594FE3 /* TuistPlists+SharedTypes.swift */; };
 		26A517737186AB25AD995220 /* GoogleUtilities_GoogleUtilities_MethodSwizzler.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 649C7C6D3899F21B7A64E2B5 /* GoogleUtilities_GoogleUtilities_MethodSwizzler.bundle */; };
 		272162B47375CB44638F84B5 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2DCA6FA638D4F5E493D8DF /* OnboardingView.swift */; };
-		27616A13DDEEA69F01070B3D /* PopPopSeoul_SharedAssets.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = AC1A07B868BF5B297491E7F4 /* PopPopSeoul_SharedAssets.bundle */; };
 		28A6F3B5A52F5E80B842856A /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 153553E89664D914E68DEFCC /* Pretendard-Thin.otf */; };
+		294BB1247D76680376FC0A49 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 153553E89664D914E68DEFCC /* Pretendard-Thin.otf */; };
 		29BCD0D08C8D36C1AB666C1A /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 153553E89664D914E68DEFCC /* Pretendard-Thin.otf */; };
 		29D1642B4B65CB283C648DBB /* swift-composable-architecture_ComposableArchitecture.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 97296BA299CDC0A42867B5F2 /* swift-composable-architecture_ComposableArchitecture.bundle */; };
 		29D544B138D1E634BAFE0E16 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1630C69D82905F67D14915AF /* Pretendard-Black.otf */; };
@@ -161,6 +155,7 @@
 		2C00D49CBCB12B798453DD75 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5055D6B79A3002E12D64D945 /* Launch Screen.storyboard */; };
 		2C3CA69CCB3FF9A9281C6C55 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8609EF56D0937265092D5D36 /* Pretendard-ExtraLight.otf */; };
 		2CDA6E5EDA4E58DACFAA743C /* LikeAttractionItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32E7623E10B53D931496C66 /* LikeAttractionItemView.swift */; };
+		2D20E89CD15C349C0491D1E1 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8609EF56D0937265092D5D36 /* Pretendard-ExtraLight.otf */; };
 		2D2C6BED5A6A966415BCFD97 /* AttractionMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6C1EDAD1361A8520FEC756 /* AttractionMapView.swift */; };
 		2D83E08A6C322D29FE800970 /* Codable++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EA8DD0E11B0C048B89AFA6 /* Codable++.swift */; };
 		2DF9DD5CDA8FED6B3E72CDFE /* LikeAttractionEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A9D52FCB0CD244B708B891 /* LikeAttractionEmptyView.swift */; };
@@ -181,7 +176,6 @@
 		32DEE84C3D3AC5FA2C87209A /* GoogleUtilities_GoogleUtilities_Environment.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 19A2185CDE7C6234EE1DF16A /* GoogleUtilities_GoogleUtilities_Environment.bundle */; };
 		33037A9C1FA6D2D7D88CE1BA /* MyChallengeistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88282C4DFF03C051616A6CD0 /* MyChallengeistItemView.swift */; };
 		3367288309F01FBDE48FFEE2 /* NMapsMap.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94079FDFAC58BF8C1F925028 /* NMapsMap.xcframework */; };
-		340376AB815CEA5746A70781 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D4DEE71E568B3CFAD9800EEC /* Pretendard-ExtraBold.otf */; };
 		34251A406C34A187FCF57879 /* GoogleSignIn_GoogleSignInSwift.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C76B7C9166895A3714883098 /* GoogleSignIn_GoogleSignInSwift.bundle */; };
 		34446A3E309FBE453A4C96EB /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177B5E4368F726F85A5FB78D /* Assets.swift */; };
 		366D6C342A1B9C6136A29509 /* OnboardingFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ABAFDDB2820A461B47D638 /* OnboardingFeature.swift */; };
@@ -198,6 +192,7 @@
 		38FBD354C023DB73B9E750D0 /* Firebase_FirebaseAuth.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 3B3888A5733A786657329D95 /* Firebase_FirebaseAuth.bundle */; };
 		399C8F0515F42B62949490F6 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFBCCCDCEB53A5AA38BAC5CE /* Pretendard-Bold.otf */; };
 		39F33FE66662E81A9806E7A6 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62D1DA8ED790E2822D0D9E60 /* Pretendard-SemiBold.otf */; };
+		3A0B71D9BA3CB868888D30D7 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 52E18CE7974D7F8CCF710FF7 /* InfoPlist.xcstrings */; };
 		3ACE2623AD4DE0ED6CED6A4B /* MyBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE110A13519136DF2D718B3 /* MyBadgeView.swift */; };
 		3AFF06D4E1CAB159E4A326CF /* Firebase_FirebaseCoreInternal.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = DBAE0E09BAEB98F9EB635193 /* Firebase_FirebaseCoreInternal.bundle */; };
 		3B181650C63F2B2FF898CC07 /* XCTestDynamicOverlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9AF0C8A95A003AF209C746 /* XCTestDynamicOverlay.framework */; };
@@ -206,13 +201,10 @@
 		3BBBB3F577B55F9F3B6930CF /* TuistFonts+PopPopSeoulDev.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C99D0246A9E47DC4B631BB /* TuistFonts+PopPopSeoulDev.swift */; };
 		3BC2577C2179DD3F3E247D1C /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2258D33FCA01CD482A696A5 /* RemoteConfigDefaults.plist */; };
 		3BF062D59BAAF84A7F9FB8D6 /* Firebase_FirebaseCoreInternal.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DBAE0E09BAEB98F9EB635193 /* Firebase_FirebaseCoreInternal.bundle */; };
-		3C0153ED1EF62E1866E62F83 /* SharedTypes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA06EF0C7D6E057CBEAFC24C /* SharedTypes.framework */; };
 		3C1EAD45DC10DB50621C67CB /* TuistPlists+Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99555F40E01CC9E0F979312E /* TuistPlists+Models.swift */; };
 		3D19CD463D28DCED504799A6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5055D6B79A3002E12D64D945 /* Launch Screen.storyboard */; };
 		3D53EF0D0E195C39AD4CD9A2 /* Common.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = E47737CBD7A0BFCCB3390F28 /* Common.framework */; };
 		3D628FADBBEC23B88928214A /* Facebook_FacebookLogin.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 220C1E06DB94D6F39A7C2161 /* Facebook_FacebookLogin.bundle */; };
-		3D9021194AADC7A63F5ABB19 /* CombineSchedulers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA26B67DE986D8D090F59956 /* CombineSchedulers.framework */; };
-		3E19AD58936AFF48A50317A5 /* IssueReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FBE934090DCC526B1B6C788 /* IssueReporting.framework */; };
 		3F54C0721B8146C7C6A00B7E /* ChallengeTheme++.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8482A680DDBDAB60EE866AC /* ChallengeTheme++.swift */; };
 		3FAD44719763CAB545C25E1D /* ComposableCoreLocation.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = F2AD6AD14CB5074A1880D0FC /* ComposableCoreLocation.framework */; };
 		3FDF2A1E729BCF6DCD79B7B7 /* swift-sharing_Sharing.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9BCD91FDA3831C38BA0CEA23 /* swift-sharing_Sharing.bundle */; };
@@ -221,20 +213,19 @@
 		40416AE5F2C39BC0B068A4A9 /* Double++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514A84E0911E90026970479D /* Double++.swift */; };
 		40627818F7D87E8A298D1070 /* PopPopSeoul_Common.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BB9E5B250148C619260FF4F1 /* PopPopSeoul_Common.bundle */; };
 		40658FE9354B57ECCD74F010 /* PopPopSeoul_Models.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 06161994F12FC5F549E5E26C /* PopPopSeoul_Models.bundle */; };
+		40A32594F21B2404E9A73276 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1630C69D82905F67D14915AF /* Pretendard-Black.otf */; };
 		40F281536B5AC65068EEDAD9 /* GetChallengeListStampRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528AE41CF538270EC7C23E1E /* GetChallengeListStampRequest.swift */; };
 		411FED675D8308EE5E3E4477 /* LikeAttractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5CA7E958B4404DFA1A943 /* LikeAttractionView.swift */; };
 		412976A7577F83BEAC9B74AB /* GoogleUtilities_GoogleUtilities_Logger.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5EDA54327A28B3642629DA5F /* GoogleUtilities_GoogleUtilities_Logger.bundle */; };
 		415673039A15A6E507B16F47 /* View++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F000EF2496EC810251FC8 /* View++.swift */; };
-		415D8780C81A78EE04B272BA /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFBCCCDCEB53A5AA38BAC5CE /* Pretendard-Bold.otf */; };
 		417C4A5CB580480DE5CEF96E /* HomeMissingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD634D4FE08AB37312062F9 /* HomeMissingSection.swift */; };
 		418AF6EAE52AD8EA5814FB0F /* UserClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01911A2EB5819B9626602E /* UserClient.swift */; };
 		4213E17A69F2E18EAE552088 /* SB 어그로OTF M.otf in Resources */ = {isa = PBXBuildFile; fileRef = E283BF28611FAF81E991ABF5 /* SB 어그로OTF M.otf */; };
 		422082606DFD8D03AAD1758C /* HomeRankChallengeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13EB408A3D9AD076ADA736D /* HomeRankChallengeItemView.swift */; };
 		424876E513AEA1643B30C699 /* SB 어그로OTF B.otf in Resources */ = {isa = PBXBuildFile; fileRef = F01A708EA63FF0316925F74D /* SB 어그로OTF B.otf */; };
-		42768142F86BC3A1BD324FF3 /* OrderedCollections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3593140F181A04CA12AD1AE1 /* OrderedCollections.framework */; };
 		42B598F3A7F181FE74D1EF3B /* FirebaseAnalyticsWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71AB9DF0584FD0B7E762A85C /* FirebaseAnalyticsWrapper.framework */; };
 		433CCF65618A9550705FC34A /* Promises_FBLPromises.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 0F21D60D642DF96328E45E8D /* Promises_FBLPromises.bundle */; };
-		43E9E84B9B311B2E1E4A3747 /* XCTestDynamicOverlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9AF0C8A95A003AF209C746 /* XCTestDynamicOverlay.framework */; };
+		434717CADDCCAF82FCE12DFD /* SB 어그로OTF B.otf in Resources */ = {isa = PBXBuildFile; fileRef = F01A708EA63FF0316925F74D /* SB 어그로OTF B.otf */; };
 		43F9AE3B5BA246DF1D47E1E0 /* SB 어그로OTF M.otf in Resources */ = {isa = PBXBuildFile; fileRef = E283BF28611FAF81E991ABF5 /* SB 어그로OTF M.otf */; };
 		4457D6F4B799D38424D6687C /* DefaultLikeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42116810743D1E4915D2120 /* DefaultLikeResponse.swift */; };
 		44BD4D7553C9A659FAC8C330 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2258D33FCA01CD482A696A5 /* RemoteConfigDefaults.plist */; };
@@ -249,6 +240,7 @@
 		46EE41EB818B56B317C02E3E /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490C4D1CDE12B7E77153E77 /* RoundedCorner.swift */; };
 		471DEA6803035BEC8FDD4040 /* third_party_IsAppEncrypted.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034387876E705BBE266DBCD1 /* third_party_IsAppEncrypted.framework */; };
 		47A047601214DC530312D3B0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D59BBB4CD30AF858BF40189 /* Colors.xcassets */; };
+		47DB0887800F8C63660CEE35 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 52E18CE7974D7F8CCF710FF7 /* InfoPlist.xcstrings */; };
 		4854F30F0B572D89F21636B2 /* AttractionMapDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4C29A399E69E0573C691B8 /* AttractionMapDetailView.swift */; };
 		4880AADC88B371604C5DA879 /* FirebaseRemoteConfig.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 8A6CBA4EB530BE41A0EFACB0 /* FirebaseRemoteConfig.framework */; };
 		491FBD23DF96BBC83A9DBAEA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE45769C226498DF4026D488 /* Images.xcassets */; };
@@ -273,14 +265,10 @@
 		4FFBF4547D0A8AD777748DCA /* swift-sharing_Sharing.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9BCD91FDA3831C38BA0CEA23 /* swift-sharing_Sharing.bundle */; };
 		500A80898DB9650C7F2BF562 /* DetailAttractionTelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CAB6323E8971E6566E2707 /* DetailAttractionTelView.swift */; };
 		501B2C33C6D6D10AC564ECE2 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CE1FAA7B1326A358DB6CD86 /* Icons.xcassets */; };
-		50472AB0312AAC2699336912 /* IdentifiedCollections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AFAF7707DA87C6CE78F726C /* IdentifiedCollections.framework */; };
-		504C1DD69DF46C1C48914BCF /* ComposableArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E85D8F1AB9B0F2707E456267 /* ComposableArchitecture.framework */; };
 		504E1A3626E5C8DB1EC8BD33 /* ThemeChallengeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB50FD060BF7A2400BB005A7 /* ThemeChallengeTabView.swift */; };
-		50ADA638BF806D9E9C3E2D6E /* SB 어그로OTF M.otf in Resources */ = {isa = PBXBuildFile; fileRef = E283BF28611FAF81E991ABF5 /* SB 어그로OTF M.otf */; };
 		50AEBCF3F1056CCCEF84FFF5 /* Features.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05330088E9012B55AB249F3B /* Features.framework */; };
 		51183EB1BE590F8083C7D7EA /* Firebase_FirebaseRemoteConfig.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = BC546639068D86ADBBB0D610 /* Firebase_FirebaseRemoteConfig.bundle */; };
 		5142B9E8768EFE9C0CAF8F1E /* FirebaseABTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7F28F303C1DDA82728FA0C /* FirebaseABTesting.framework */; };
-		515CE12F60963E9E9AAD9C36 /* CustomDump.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 900DC49D756446FE89B91726 /* CustomDump.framework */; };
 		51F102BB491F6FEFF9F37E98 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28106CA4FD800F7ABCF2FADF /* Challenge.swift */; };
 		525B75DDFDBE95D995A01ED0 /* SwiftLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F8E62DCA661935F38FDFBF /* SwiftLog.swift */; };
 		52681D75D9AE1B1355E4D814 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 93D2569F11ADDAF2533DAE8F /* Secrets.xcconfig */; };
@@ -289,11 +277,11 @@
 		5345E40E696F1F2A60AD1565 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1630C69D82905F67D14915AF /* Pretendard-Black.otf */; };
 		5363545F761CA2AED580A7FB /* GoogleSignIn_GoogleSignIn.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = E7C4C3EED06772C16068149B /* GoogleSignIn_GoogleSignIn.bundle */; };
 		5397A2F2870CA0C0653D2655 /* swift-sharing_Sharing.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 9BCD91FDA3831C38BA0CEA23 /* swift-sharing_Sharing.bundle */; };
+		54A0E1B60934B672451367D3 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 52E18CE7974D7F8CCF710FF7 /* InfoPlist.xcstrings */; };
 		557452D00C28FE4E4B4ABC5D /* ProfilePolicySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A642EE6D72CD8A0F14A0232 /* ProfilePolicySection.swift */; };
 		55ABABD4237F6581ED97BF36 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5055D6B79A3002E12D64D945 /* Launch Screen.storyboard */; };
 		560C36308A6D35318DCBA169 /* CompleteChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC948E36DC22351DD0159FC /* CompleteChallengeView.swift */; };
 		56921F679CD357B1C2EAB5E4 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E47737CBD7A0BFCCB3390F28 /* Common.framework */; };
-		569F7B1F5A21647F76B53B16 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43ADB16D73634BF614EAE508 /* GoogleService-Info.plist */; };
 		56B09BA2263C1C8EB2475460 /* GoogleUtilities_GoogleUtilities_MethodSwizzler.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 649C7C6D3899F21B7A64E2B5 /* GoogleUtilities_GoogleUtilities_MethodSwizzler.bundle */; };
 		56CE5ED39C6F4947A7A58B53 /* GoogleUtilities_GoogleUtilities_Environment.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 19A2185CDE7C6234EE1DF16A /* GoogleUtilities_GoogleUtilities_Environment.bundle */; };
 		5773CE8796EE8B683D303D35 /* IdentifiedCollections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AFAF7707DA87C6CE78F726C /* IdentifiedCollections.framework */; };
@@ -313,6 +301,7 @@
 		5C476A97E6F0E3CEA7BE6186 /* Color++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9779C0026573F48040772F6A /* Color++.swift */; };
 		5C57525CFF9CB228AC1F5A27 /* DependenciesMacros.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6072F35CECEAE437ED16D8DE /* DependenciesMacros.framework */; };
 		5C5F891B06547F5498BBEA2F /* HomeThemeChallengeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AE5B3C221CA62A3A9B9E44 /* HomeThemeChallengeListView.swift */; };
+		5CE411F617EB25533D07FB31 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EFE2A73738E1457A6C813045 /* Pretendard-Regular.otf */; };
 		5CEC7C2C94563F9E495CD2FB /* GTMSessionFetcher_GTMSessionFetcherCore.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BD7EA88B3C127B12E7A5FEE8 /* GTMSessionFetcher_GTMSessionFetcherCore.bundle */; };
 		5CFC47F76BF222EEEE8F2C4E /* GoogleAppMeasurement.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4AB602DFBD4076B0F49F5D9 /* GoogleAppMeasurement.xcframework */; };
 		5D376BEFD105396DE7354841 /* MyChallengeTabFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = E718FC95694D8F609FE99FBF /* MyChallengeTabFeature.swift */; };
@@ -343,12 +332,10 @@
 		63C1533CD7F5C181DBB59609 /* Firebase_FirebaseCore.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 9A46294BCEAF8032F4DC91BC /* Firebase_FirebaseCore.bundle */; };
 		63F3BA3BE731CED420EBA0FC /* GoogleSignIn_GoogleSignIn.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = E7C4C3EED06772C16068149B /* GoogleSignIn_GoogleSignIn.bundle */; };
 		644164250698DBB4C9194A9B /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5355E397BCD019AF8EF299B /* Secrets.plist */; };
-		64723DE26E39D9E977943409 /* SwiftNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2CF13F3E25FE22CE8CD6092 /* SwiftNavigation.framework */; };
 		64AC553AEB4876134E27BBCB /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62D1DA8ED790E2822D0D9E60 /* Pretendard-SemiBold.otf */; };
-		64DE2B053F127A286ECAD146 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E47737CBD7A0BFCCB3390F28 /* Common.framework */; };
 		6592A24799A372D310A69D8E /* ThemeChallengeListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFCD442848C28388F572A08 /* ThemeChallengeListItemView.swift */; };
+		65FE5BBCEE3F4210D8969503 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 52E18CE7974D7F8CCF710FF7 /* InfoPlist.xcstrings */; };
 		665DB0AB0D4020306A10D58F /* DetailAttractionInfoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FD1F71189FFAF347B97FC4 /* DetailAttractionInfoSection.swift */; };
-		666D275B7BA779C8F5FA73ED /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EFE2A73738E1457A6C813045 /* Pretendard-Regular.otf */; };
 		6679D5DD3E877A7FCB2BCC09 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7E5F5F2FF69CFDE10CFEBDD5 /* Localizable.xcstrings */; };
 		66C07903A237163E412EFB8C /* GTMSessionFetcher_GTMSessionFetcherCore.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BD7EA88B3C127B12E7A5FEE8 /* GTMSessionFetcher_GTMSessionFetcherCore.bundle */; };
 		66E9EE1FD2206BA20B74211A /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 0E58A56242DD34BBF412FCA4 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle */; };
@@ -358,9 +345,11 @@
 		6881ECA50DB92C99D9B34881 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21F1198C49E87E8F197837EE /* Assets.xcassets */; };
 		68840A024EC758E7C25082FD /* PopPopSeoul_Common.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = BB9E5B250148C619260FF4F1 /* PopPopSeoul_Common.bundle */; };
 		6897032E42A3C359B58696B0 /* UIKitNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883C2DDDE23D8048FA4E3E71 /* UIKitNavigation.framework */; };
+		69242D9444D6792604D29889 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 52E18CE7974D7F8CCF710FF7 /* InfoPlist.xcstrings */; };
 		695A8C4D1888B6776C3DD0CF /* HomeRankSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3669877F059664F7D5E869 /* HomeRankSection.swift */; };
 		69F2D609BC76058D7E5347E9 /* NicknameSettingFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52BDEA65F4DAF2DF39CE7C6 /* NicknameSettingFeature.swift */; };
 		6A16975E7453E6C610DE7282 /* Features.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05330088E9012B55AB249F3B /* Features.framework */; };
+		6A601D4EBA88FDB56BC5DF44 /* SB 어그로OTF L.otf in Resources */ = {isa = PBXBuildFile; fileRef = 19B09F83E09267FC7013EB98 /* SB 어그로OTF L.otf */; };
 		6AE35D011EBE504F7FC5BCC4 /* TuistPlists+PopPopSeoul.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EE6B11D830B9CA3E8FD854 /* TuistPlists+PopPopSeoul.swift */; };
 		6B821EDED6924B830C573A2C /* LanguageSettingFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736F8FC76CF084DE24E66EC5 /* LanguageSettingFeature.swift */; };
 		6BAE69274483F2C50513E290 /* FBAEMKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E58D03845E0B3E5BADE8D7 /* FBAEMKit.xcframework */; };
@@ -410,6 +399,7 @@
 		78C518535EF59956251E9E4E /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1630C69D82905F67D14915AF /* Pretendard-Black.otf */; };
 		78D78D60E4D0F62ACE83D04C /* TuistBundle+PopPopSeoulDev.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC2597C20035CADBB59FBB4 /* TuistBundle+PopPopSeoulDev.swift */; };
 		79108B0657D9FC5CD4B46984 /* GoogleUtilities_GoogleUtilities_Reachability.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6146039D41909EE6CBF2131E /* GoogleUtilities_GoogleUtilities_Reachability.bundle */; };
+		79321D4379158BF538A605B2 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDD27B7889EDC29093865516 /* Pretendard-Medium.otf */; };
 		799FB83129A5E733630AF525 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D59BBB4CD30AF858BF40189 /* Colors.xcassets */; };
 		7A17F72DA6D73361393E01C2 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDD27B7889EDC29093865516 /* Pretendard-Medium.otf */; };
 		7A2ED77DF23E962073D08663 /* MyCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0D68D2B78584DC3E58672E /* MyCommentView.swift */; };
@@ -422,22 +412,21 @@
 		7C9B0667ACB05B192F0796BE /* CommentClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A03A3CB0BE02487388DF4 /* CommentClient.swift */; };
 		7D93E8D0D27E19DC700BEED2 /* MyChallengeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3143F3F1894ECDA31FBF1 /* MyChallengeTabView.swift */; };
 		7DBAA59CECD4DAECA357157F /* PutChallengeStatusRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B509AD1B7976D1AD71AC9CA9 /* PutChallengeStatusRequest.swift */; };
-		7DE5AC7AC5956889CE0DB8D8 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1630C69D82905F67D14915AF /* Pretendard-Black.otf */; };
 		7E5784AB6C8494EA2262B651 /* AppLoginAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC1195988BF6D3E5D51B6AE /* AppLoginAlertView.swift */; };
+		7F405C5EFFBA595C258E1A30 /* SharedAssets.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 1B82A2C652AC08DF83E34D9A /* SharedAssets.framework */; };
 		7F412B32575F7CCAE1A55505 /* GTMAppAuth_GTMAppAuth.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 26A5A230A0BCACD07BCCCDAF /* GTMAppAuth_GTMAppAuth.bundle */; };
 		7F77D99D95CCBB36FE8E29E9 /* Firebase_FirebaseCore.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9A46294BCEAF8032F4DC91BC /* Firebase_FirebaseCore.bundle */; };
 		800D6CA88DCE555BD656C21A /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D554DAD3D5458EFD59ACD4BF /* SplashView.swift */; };
-		805FD10B9091C4275EE4424C /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDD27B7889EDC29093865516 /* Pretendard-Medium.otf */; };
 		80F74EDB056EEFFDBFA682EE /* Models.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 2EE494055A8FF16DF0918183 /* Models.framework */; };
+		8229540C37AA2BF2BFDCA55E /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7E5F5F2FF69CFDE10CFEBDD5 /* Localizable.xcstrings */; };
 		8251585596373E172367FA5B /* AttractionMapFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EDF01DC922B1058A95CCF6 /* AttractionMapFeature.swift */; };
+		82B062847278FF3D5FC36ADC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21F1198C49E87E8F197837EE /* Assets.xcassets */; };
 		82C2D2FABCBD71F8F8593807 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70465D127541955C0C2D8BE6 /* Foundation.framework */; };
 		82E6135B0DA6BE185B105A7B /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDD27B7889EDC29093865516 /* Pretendard-Medium.otf */; };
 		83396825ED66BDBF11B04929 /* Firebase_FirebaseCoreInternal.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DBAE0E09BAEB98F9EB635193 /* Firebase_FirebaseCoreInternal.bundle */; };
-		835771D0821741CA9320959F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D59BBB4CD30AF858BF40189 /* Colors.xcassets */; };
 		83D2FE98E1D81556C8C30280 /* Firebase_FirebaseCore.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 9A46294BCEAF8032F4DC91BC /* Firebase_FirebaseCore.bundle */; };
 		84B90B728332F1CE16807B6F /* GTMAppAuth_GTMAppAuth.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 26A5A230A0BCACD07BCCCDAF /* GTMAppAuth_GTMAppAuth.bundle */; };
 		84C9C75468E604F9F6AF48FE /* GoogleUtilities_GoogleUtilities_Environment.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 19A2185CDE7C6234EE1DF16A /* GoogleUtilities_GoogleUtilities_Environment.bundle */; };
-		857C1B780BFC4B3CB77462A4 /* DependenciesMacros.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6072F35CECEAE437ED16D8DE /* DependenciesMacros.framework */; };
 		85CD59E529EB6870128CABEB /* GoogleUtilities_NSData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C2149AE4B08C2A77B08C5D /* GoogleUtilities_NSData.framework */; };
 		85DF2A7B75BD6FDF595962A2 /* GTMAppAuth_GTMAppAuth.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 26A5A230A0BCACD07BCCCDAF /* GTMAppAuth_GTMAppAuth.bundle */; };
 		860EC4AEFFA554CE6799AF95 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CE1FAA7B1326A358DB6CD86 /* Icons.xcassets */; };
@@ -447,10 +436,8 @@
 		8776D3AA097BC2D0ECA53991 /* Firebase_FirebaseAuth.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3B3888A5733A786657329D95 /* Firebase_FirebaseAuth.bundle */; };
 		879E9D0F825EA1A6D7C9A7A9 /* SettingSectionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E7CA699B8F75195CFA1F8A /* SettingSectionContainer.swift */; };
 		87D0A40256DFB93EFCAC8671 /* FirebaseCoreInternal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9D070E36B90A864EF98871 /* FirebaseCoreInternal.framework */; };
-		8806A4776ACB3E3A3A9EB30E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21F1198C49E87E8F197837EE /* Assets.xcassets */; };
 		8808BC3A293387F2CBCD1591 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3CD259A37EECD98933B1F2 /* AppView.swift */; };
 		880D3B4FBB47E41A393D5FDB /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7E5F5F2FF69CFDE10CFEBDD5 /* Localizable.xcstrings */; };
-		884AF8369E7F3BA77B02DD25 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 93D2569F11ADDAF2533DAE8F /* Secrets.xcconfig */; };
 		88B29F280A7845E7A27AD59D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43ADB16D73634BF614EAE508 /* GoogleService-Info.plist */; };
 		89021F9BD0F73F4A2F2CCBED /* StampChallenges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101B912733A280BFD261596D /* StampChallenges.swift */; };
 		890F251B640599817C6193FA /* FirebaseRemoteConfigInternal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB4403DF24CDDA90E8880F30 /* FirebaseRemoteConfigInternal.framework */; };
@@ -458,6 +445,7 @@
 		8AD264941C6ECCD70961D45D /* Firebase_FirebaseCoreInternal.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = DBAE0E09BAEB98F9EB635193 /* Firebase_FirebaseCoreInternal.bundle */; };
 		8B1D4E52EE332DB6A7B2D117 /* SB 어그로OTF B.otf in Resources */ = {isa = PBXBuildFile; fileRef = F01A708EA63FF0316925F74D /* SB 어그로OTF B.otf */; };
 		8BF2120EDB20D0E9084D1E4A /* GoogleSignIn_GoogleSignInSwift.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = C76B7C9166895A3714883098 /* GoogleSignIn_GoogleSignInSwift.bundle */; };
+		8BF26D198A97331372CF8942 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D59BBB4CD30AF858BF40189 /* Colors.xcassets */; };
 		8C1D3210319650131E598B3B /* AppAuth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7924B0080D9F90CA5714671 /* AppAuth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8C756E4FF659AF6AD9DDFE6E /* EventChallengeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCEC3414D84196953B24321 /* EventChallengeImageView.swift */; };
 		8CD011F8B17B12D69FF39F71 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA745F2B4CB477A8E6696E9 /* SafariView.swift */; };
@@ -467,15 +455,13 @@
 		8DA134F5E41027A69E8ABCD0 /* Features.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 05330088E9012B55AB249F3B /* Features.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8EB7C9B0AEC5E9F30A03E7C1 /* GTMAppAuth_GTMAppAuth.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 26A5A230A0BCACD07BCCCDAF /* GTMAppAuth_GTMAppAuth.bundle */; };
 		8FA5EA9455E7D23A113C2059 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FDB3B6F8B6D0952C039D72A /* Kingfisher.framework */; };
+		8FCCC5C3F07D09DD87CB3473 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43ADB16D73634BF614EAE508 /* GoogleService-Info.plist */; };
 		8FEBD3666807BB87BFCF635B /* swift-composable-architecture_ComposableArchitecture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 97296BA299CDC0A42867B5F2 /* swift-composable-architecture_ComposableArchitecture.bundle */; };
 		90AEDB51FA2E2323914CCECD /* Promises_FBLPromises.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0F21D60D642DF96328E45E8D /* Promises_FBLPromises.bundle */; };
-		90B8DAE1E65436ED7C6DF93B /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8609EF56D0937265092D5D36 /* Pretendard-ExtraLight.otf */; };
 		90BDF6A4F7E1BD1159AE348B /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EFE2A73738E1457A6C813045 /* Pretendard-Regular.otf */; };
 		914B274ABDA0C79B9741FDD3 /* AppSettingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D2187A0DF10DE3B4B8E69 /* AppSettingManager.swift */; };
-		91719DD6946DD60A7C2BAA44 /* ConcurrencyExtras.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F9952AF8C2F91BEBDF80076 /* ConcurrencyExtras.framework */; };
 		91F115B0D0F8A9CF2ADA2EBB /* DefaultStatusResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054AC463CD810A0A4989CF58 /* DefaultStatusResponse.swift */; };
 		9225CACA32BFF94C2A1625B4 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D59BBB4CD30AF858BF40189 /* Colors.xcassets */; };
-		92B15FC932FF7BC7DE8C1CE1 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FDB3B6F8B6D0952C039D72A /* Kingfisher.framework */; };
 		92B8208599545AF8AEAD6BB8 /* MyCommentEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C19412007C19A68940B1791 /* MyCommentEmptyView.swift */; };
 		936731239B4CD74F564058F8 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770D59D079BC6DD039278746 /* Firebase.framework */; };
 		93BF4B91F439728916FB9AD4 /* ThemeChallengeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDE546E5D313FE82340221A /* ThemeChallengeFeature.swift */; };
@@ -503,7 +489,6 @@
 		9B23B5E3FF3C3E334253D12E /* GoogleUtilities_GoogleUtilities_MethodSwizzler.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 649C7C6D3899F21B7A64E2B5 /* GoogleUtilities_GoogleUtilities_MethodSwizzler.bundle */; };
 		9B90221148BA2C9B3D5654C4 /* Firebase_FirebaseCoreExtension.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = EECB86F51B27909F700E29A0 /* Firebase_FirebaseCoreExtension.bundle */; };
 		9B9120F8E5E15016CACBEEDA /* GoogleUtilities_GoogleUtilities_NSData.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = D33356F810759666121A369E /* GoogleUtilities_GoogleUtilities_NSData.bundle */; };
-		9D2C14A131E075E873E262D7 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62D1DA8ED790E2822D0D9E60 /* Pretendard-SemiBold.otf */; };
 		9D782B7496616D286069D79D /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62D1DA8ED790E2822D0D9E60 /* Pretendard-SemiBold.otf */; };
 		9E1D23C37EF9A6A03F985B28 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE45769C226498DF4026D488 /* Images.xcassets */; };
 		9E3A3DF689C6B4A0B0B11313 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 93D2569F11ADDAF2533DAE8F /* Secrets.xcconfig */; };
@@ -526,24 +511,24 @@
 		A354D1BAB94055264FB72509 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E4D5476FC354FD8133DF1816 /* Pretendard-Light.otf */; };
 		A46CC750D4824041F8B940AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21F1198C49E87E8F197837EE /* Assets.xcassets */; };
 		A4A36B5E6E4A47F58DA5D633 /* Firebase_FirebaseCoreInternal.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = DBAE0E09BAEB98F9EB635193 /* Firebase_FirebaseCoreInternal.bundle */; };
-		A4D35499470EDBEC1C899390 /* InternalCollectionsUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B01A220D0CFFBA6E41CC67D0 /* InternalCollectionsUtilities.framework */; };
 		A5614FCE6AA0E4370E1089E5 /* GoogleUtilities_GoogleUtilities_MethodSwizzler.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 649C7C6D3899F21B7A64E2B5 /* GoogleUtilities_GoogleUtilities_MethodSwizzler.bundle */; };
 		A56ABF6DB1AFBB6EA2411E57 /* LanguageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02774264AA7A8235D64EB35 /* LanguageRow.swift */; };
 		A572189134FA55F6320499C9 /* SB 어그로OTF B.otf in Resources */ = {isa = PBXBuildFile; fileRef = F01A708EA63FF0316925F74D /* SB 어그로OTF B.otf */; };
 		A5B055F8BF0360808F23A389 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7E5F5F2FF69CFDE10CFEBDD5 /* Localizable.xcstrings */; };
 		A60D757C75D4F55A4C2B4D6D /* AttractionMapListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F427C08FEFC2EDD598A1E9E9 /* AttractionMapListView.swift */; };
 		A61E4A2CCEC899CBD6A571B5 /* Firebase_FirebaseInstallations.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 63810522A380D3401ECFB91E /* Firebase_FirebaseInstallations.bundle */; };
+		A79741249FDB6EA62FB081E3 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 52E18CE7974D7F8CCF710FF7 /* InfoPlist.xcstrings */; };
 		A809AFD74912D337269D8566 /* AttractionMapListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182711EDD635A74307BC0535 /* AttractionMapListItem.swift */; };
 		A87307A01D70F98004A896F0 /* GTMSessionFetcher_GTMSessionFetcherCore.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BD7EA88B3C127B12E7A5FEE8 /* GTMSessionFetcher_GTMSessionFetcherCore.bundle */; };
 		A87B2527AC10797CC53830A3 /* ChallengeStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42F83AEBA48033FAC2BD18D /* ChallengeStatus.swift */; };
 		A8B75D08F062A94216067E6B /* Facebook_FacebookCore.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = C92C2C3D8279026F9632600D /* Facebook_FacebookCore.bundle */; };
+		A977789040637E5C48A55E92 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFBCCCDCEB53A5AA38BAC5CE /* Pretendard-Bold.otf */; };
 		AA18673FB5ECBF0AF2328279 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905204ABDC93BB334A399D54 /* HTTPMethod.swift */; };
 		AA3FDBA7F748E148DF1A8F47 /* CommentListRseponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272937EAC38C5BF4D9E4EC86 /* CommentListRseponse.swift */; };
 		AA7CBC528519E6732AA7EBFE /* Firebase_FirebaseABTesting.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8E6C40C4E64943D6CB7F026D /* Firebase_FirebaseABTesting.bundle */; };
 		AACA8B198FFC110DD29FAEE9 /* SharedAssets.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 1B82A2C652AC08DF83E34D9A /* SharedAssets.framework */; };
 		ABCC20933A6F369792E35324 /* DeviceCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEB806B07E0A28845FA40F3 /* DeviceCheck.framework */; };
 		AC384B79F8060C8B928CB24B /* nanopb_nanopb.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 54BF44D27ECFDB2810863ED8 /* nanopb_nanopb.bundle */; };
-		AC3E481AA061ABF359D672A0 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5055D6B79A3002E12D64D945 /* Launch Screen.storyboard */; };
 		AC6628F0856D377C30B3BF0B /* NMapsGeometry.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7470E1490679F3CE7452AF3 /* NMapsGeometry.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AC9D8E611BC919F14CDE84E8 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D4DEE71E568B3CFAD9800EEC /* Pretendard-ExtraBold.otf */; };
 		ACAA2875BEA2B68E5B0A0F50 /* NMapsMap.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94079FDFAC58BF8C1F925028 /* NMapsMap.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -556,7 +541,6 @@
 		AD36D2E663B0F7D343429A15 /* SharedTypes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA06EF0C7D6E057CBEAFC24C /* SharedTypes.framework */; };
 		AD3D2B0BC6F30FDA9521F74E /* Firebase_FirebaseRemoteConfig.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = BC546639068D86ADBBB0D610 /* Firebase_FirebaseRemoteConfig.bundle */; };
 		AD9CB7DA18911B544F4AFB3D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5055D6B79A3002E12D64D945 /* Launch Screen.storyboard */; };
-		ADD36351CBD11CC3785936BE /* Sharing2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F31B0682AA9AE7459E6012BE /* Sharing2.framework */; };
 		ADE10FFE1B290522678BC279 /* SB 어그로OTF L.otf in Resources */ = {isa = PBXBuildFile; fileRef = 19B09F83E09267FC7013EB98 /* SB 어그로OTF L.otf */; };
 		ADF8753D78D6AB6AF59D1F2D /* AppFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1812A1D0AAC69CDC1AFC682 /* AppFeature.swift */; };
 		AE78D79A451540ECEF92C58C /* SB 어그로OTF B.otf in Resources */ = {isa = PBXBuildFile; fileRef = F01A708EA63FF0316925F74D /* SB 어그로OTF B.otf */; };
@@ -575,7 +559,6 @@
 		B3A28D53A457325E28582DC8 /* ComposableCoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2AD6AD14CB5074A1880D0FC /* ComposableCoreLocation.framework */; };
 		B4A41E6CA6B261D3422B5E92 /* CustomDump.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 900DC49D756446FE89B91726 /* CustomDump.framework */; };
 		B5529127694EBBCDAC846A2C /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AFBCCCDCEB53A5AA38BAC5CE /* Pretendard-Bold.otf */; };
-		B5541F57328D8C8224C4B72F /* Models.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EE494055A8FF16DF0918183 /* Models.framework */; };
 		B605962AB2D9FDD869D2A32B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2FA38918E869355F1DF35A /* LoginView.swift */; };
 		B62ABAD4F67FED7F2CDD9EDB /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1630C69D82905F67D14915AF /* Pretendard-Black.otf */; };
 		B6A7523326D1D45A4C29B314 /* ChallengeStampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118A7B5552BB25A1B1BE75CA /* ChallengeStampView.swift */; };
@@ -584,6 +567,8 @@
 		B6EBEB77D9970AB5C51CD316 /* GoogleSignIn_GoogleSignInSwift.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = C76B7C9166895A3714883098 /* GoogleSignIn_GoogleSignInSwift.bundle */; };
 		B6FD82AEA19C3B7448C2AB5C /* TuistAssets+DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A249C02F8BBDBF2FCFD2E6 /* TuistAssets+DesignSystem.swift */; };
 		B78F2E9A5CC0A29B589A6413 /* GoogleUtilities_GoogleUtilities_Network.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 60EA577380D1B46D4B45A848 /* GoogleUtilities_GoogleUtilities_Network.bundle */; };
+		B810669A2D33DF7571E19133 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62D1DA8ED790E2822D0D9E60 /* Pretendard-SemiBold.otf */; };
+		B8E3E32EBDE06F0CDF33AC3F /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 52E18CE7974D7F8CCF710FF7 /* InfoPlist.xcstrings */; };
 		B95C4EA4D203E9C17E301712 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 153553E89664D914E68DEFCC /* Pretendard-Thin.otf */; };
 		BAA89660D5B860B2B2D2FF88 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDD27B7889EDC29093865516 /* Pretendard-Medium.otf */; };
 		BB2EC322501704879852A742 /* SB 어그로OTF B.otf in Resources */ = {isa = PBXBuildFile; fileRef = F01A708EA63FF0316925F74D /* SB 어그로OTF B.otf */; };
@@ -591,6 +576,7 @@
 		BCD818147A773F20FB8FE7F4 /* FirebaseAnalyticsTarget.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 02637208A8A0DEB3A493E097 /* FirebaseAnalyticsTarget.framework */; };
 		BD45C41C0F0FCB7464450B35 /* SB 어그로OTF M.otf in Resources */ = {isa = PBXBuildFile; fileRef = E283BF28611FAF81E991ABF5 /* SB 어그로OTF M.otf */; };
 		BD875E02E0B8DEA7859B9E4F /* GoogleUtilities_GoogleUtilities_Logger.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5EDA54327A28B3642629DA5F /* GoogleUtilities_GoogleUtilities_Logger.bundle */; };
+		BDA8DFF227064E241314F63B /* Kingfisher.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 4FDB3B6F8B6D0952C039D72A /* Kingfisher.framework */; };
 		BE04F4EADC3257D0A715C921 /* Firebase_FirebaseCore.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9A46294BCEAF8032F4DC91BC /* Firebase_FirebaseCore.bundle */; };
 		BE1D03E82A6893ABBEF4CFD9 /* GoogleUtilities_GoogleUtilities_NSData.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = D33356F810759666121A369E /* GoogleUtilities_GoogleUtilities_NSData.bundle */; };
 		BE621387BFE334D663EBBFC4 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDD27B7889EDC29093865516 /* Pretendard-Medium.otf */; };
@@ -600,22 +586,22 @@
 		BFF535CA218D4D3D4D34A11A /* Clients.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911B898934BC167929C0BD23 /* Clients.framework */; };
 		C0E3943F20D22DE560097FD9 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E58A56242DD34BBF412FCA4 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle */; };
 		C0FB381726436527D182C153 /* SharedAssets.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = 1B82A2C652AC08DF83E34D9A /* SharedAssets.framework */; };
-		C119C08C1D0035574AC30492 /* SB 어그로OTF B.otf in Resources */ = {isa = PBXBuildFile; fileRef = F01A708EA63FF0316925F74D /* SB 어그로OTF B.otf */; };
 		C16D09C648728A863F5D5FE5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A4DDB5D02B074CD5E173771 /* StoreKit.framework */; };
 		C1F9F581EF42C4D0FFC2A17A /* AppLoginType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEB3395A4C1A66335604FA6 /* AppLoginType.swift */; };
 		C20A11341D3925D221AFAE4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21F1198C49E87E8F197837EE /* Assets.xcassets */; };
 		C2688B07261A56CFFF72D6C3 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CE1FAA7B1326A358DB6CD86 /* Icons.xcassets */; };
 		C31E8BE7060082D63119B1C6 /* FirebaseRemoteConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A6CBA4EB530BE41A0EFACB0 /* FirebaseRemoteConfig.framework */; };
+		C3F3EB7B7A6BEC11F77BA524 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E4D5476FC354FD8133DF1816 /* Pretendard-Light.otf */; };
 		C432EA8B01F96843C023E693 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 153553E89664D914E68DEFCC /* Pretendard-Thin.otf */; };
 		C455AD881489E6D39C4CBB88 /* MyCommentFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041B9502D655E0820CBC6CFC /* MyCommentFeature.swift */; };
 		C480E0D3E38E96F42D3FA910 /* Firebase_FirebaseInstallations.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 63810522A380D3401ECFB91E /* Firebase_FirebaseInstallations.bundle */; };
 		C4A83BF6D28606FC34EAA596 /* Firebase_FirebaseAuth.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 3B3888A5733A786657329D95 /* Firebase_FirebaseAuth.bundle */; };
+		C526A7BC2598ADCD81ECEA2D /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5355E397BCD019AF8EF299B /* Secrets.plist */; };
 		C53036C0162F4BB088A721E3 /* TopTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4440191745BD246EF39FD43B /* TopTabView.swift */; };
 		C56059106B3C746523E031A1 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EFE2A73738E1457A6C813045 /* Pretendard-Regular.otf */; };
-		C56F458FB332CFD7C1602BED /* PopPopSeoul_SharedTypes.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C0CB3DDDA16FCFC69781D069 /* PopPopSeoul_SharedTypes.bundle */; };
+		C593A739C1B0EC5A82DC7714 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 93D2569F11ADDAF2533DAE8F /* Secrets.xcconfig */; };
 		C65A600002199304A18650E8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7E5F5F2FF69CFDE10CFEBDD5 /* Localizable.xcstrings */; };
 		C6ABCFB758437E04B0AD3FDB /* Kingfisher_Kingfisher.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 083204ACFC456BC221AF0C3A /* Kingfisher_Kingfisher.bundle */; };
-		C7CE0C6213D9FDB4454B5B6F /* SB 어그로OTF L.otf in Resources */ = {isa = PBXBuildFile; fileRef = 19B09F83E09267FC7013EB98 /* SB 어그로OTF L.otf */; };
 		C7F650AF1B74121C99AA7518 /* FirebaseInstallations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDC7634792471BCEEC7B75AF /* FirebaseInstallations.framework */; };
 		C8273CE2E9AE75D98433C094 /* Firebase_FirebaseCoreExtension.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = EECB86F51B27909F700E29A0 /* Firebase_FirebaseCoreExtension.bundle */; };
 		C836F33226EBE2F13A5532C3 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8609EF56D0937265092D5D36 /* Pretendard-ExtraLight.otf */; };
@@ -627,7 +613,6 @@
 		CA636ADCF3372BEF92489A36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21F1198C49E87E8F197837EE /* Assets.xcassets */; };
 		CA6A1AC6F958CA055FA99194 /* FacebookCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F645A2F6DB3F5F41256B3A9 /* FacebookCore.framework */; };
 		CA87B9189F348E42993172D6 /* MyBadgeFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2FCFF966D29186A1E738AB /* MyBadgeFeature.swift */; };
-		CAAB2228D9792D83E4B58521 /* SwiftUINavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06799675636A19EFA14949F8 /* SwiftUINavigation.framework */; };
 		CB0AF933E7700037CC7DBE12 /* PopPopSeoulApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33CE81337F6D0536EA2B2BC /* PopPopSeoulApp.swift */; };
 		CBAB1CF2B6E58D82029D9F85 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CE1FAA7B1326A358DB6CD86 /* Icons.xcassets */; };
 		CE71190043C804A467BDA0E2 /* Sharing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9966F8860EC058A8321E83 /* Sharing.framework */; };
@@ -637,6 +622,7 @@
 		D08B2B6CFCA43B3E0477D842 /* ProfileNicknameSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B048594540A6AEEABADFCD /* ProfileNicknameSection.swift */; };
 		D0AF5F2900283ED4743D1801 /* FBAEMKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 90E58D03845E0B3E5BADE8D7 /* FBAEMKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D0ED38D6AFEDFE4FBAC0E830 /* TuistBundle+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27B13D941A23D3BE9314400 /* TuistBundle+Common.swift */; };
+		D143E0727A6E1BF7B8E40455 /* PopPopSeoul_DesignSystem.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 369E8DA2E2633A711AE16031 /* PopPopSeoul_DesignSystem.bundle */; };
 		D157143D3DDA3C9E2CA7C41F /* swift-sharing_Sharing.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 9BCD91FDA3831C38BA0CEA23 /* swift-sharing_Sharing.bundle */; };
 		D1B428D8176B9129AE17723F /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D4DEE71E568B3CFAD9800EEC /* Pretendard-ExtraBold.otf */; };
 		D1F5C74ECBC6D05372A9D465 /* PutCommentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B97DDA6CAFD7FF74D382F7F /* PutCommentRequest.swift */; };
@@ -644,26 +630,23 @@
 		D36803220D903AFA443830EC /* Facebook_FacebookAEM.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9FB1E12A2FECBF861558A97F /* Facebook_FacebookAEM.bundle */; };
 		D3CE5076C804834D146456E7 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A992203820C5108F6994F698 /* APIClient.swift */; };
 		D422BD25FFE2F6309B377283 /* MyClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D19CA79F3095A81D9CA5B7 /* MyClient.swift */; };
-		D45E4CD7E153AA22AAA4920E /* PopPopSeoul_Models.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 06161994F12FC5F549E5E26C /* PopPopSeoul_Models.bundle */; };
 		D48241DC5E19EF83ED4C3240 /* SB 어그로OTF M.otf in Resources */ = {isa = PBXBuildFile; fileRef = E283BF28611FAF81E991ABF5 /* SB 어그로OTF M.otf */; };
 		D49A7BD41AF01544C0367BB6 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDD27B7889EDC29093865516 /* Pretendard-Medium.otf */; };
-		D49C3DCA0910325843D7CCD9 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2258D33FCA01CD482A696A5 /* RemoteConfigDefaults.plist */; };
 		D4AD64A3A52F29CFE3ECB2D0 /* TuistFonts+Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE85159FC743EC8C738F77B /* TuistFonts+Models.swift */; };
 		D4BEEF95CD5DD3449A6E63AB /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2258D33FCA01CD482A696A5 /* RemoteConfigDefaults.plist */; };
 		D4CACD68BB76B68062CB51ED /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EFE2A73738E1457A6C813045 /* Pretendard-Regular.otf */; };
 		D605037CD903925E811022D5 /* GTMSessionFetcher_GTMSessionFetcherCore.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = BD7EA88B3C127B12E7A5FEE8 /* GTMSessionFetcher_GTMSessionFetcherCore.bundle */; };
 		D62CE625C235CA0FE5D54806 /* CombineSchedulers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA26B67DE986D8D090F59956 /* CombineSchedulers.framework */; };
 		D6B6938A4DC3398E81550C6A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43ADB16D73634BF614EAE508 /* GoogleService-Info.plist */; };
-		D6D0E0E6DCC8DED98149691C /* SharedAssets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B82A2C652AC08DF83E34D9A /* SharedAssets.framework */; };
 		D76F5F3CFFA895CD6679B6C0 /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05327EFAD26819A5282441E6 /* AuthClient.swift */; };
 		D782D3F167ECD68AFED288FE /* DetailChallengeBottomSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FFF658871EDA115BCFB975 /* DetailChallengeBottomSection.swift */; };
 		D7B9148D38C12EDBD6E0E2E8 /* Kingfisher_Kingfisher.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 083204ACFC456BC221AF0C3A /* Kingfisher_Kingfisher.bundle */; };
 		D83156D2272403C24BB67079 /* Pageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEE7E0C11807B93EFB023AA /* Pageable.swift */; };
 		D878A680C9C7DA69085095BC /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB57F84F538F6F76D73229ED /* DesignSystem.framework */; };
 		D87CF682849E5782E8A3996C /* Clocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3D497BB3165EECBEBCB1888 /* Clocks.framework */; };
-		D8C0C2C1880199A299F7E5F3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7E5F5F2FF69CFDE10CFEBDD5 /* Localizable.xcstrings */; };
 		D8FFE749E49D633F1300B3B1 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5355E397BCD019AF8EF299B /* Secrets.plist */; };
-		D9A4B9667FBE6D12D3C8B4EB /* DesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB57F84F538F6F76D73229ED /* DesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D98443B615BB5B6F1A7551A2 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 52E18CE7974D7F8CCF710FF7 /* InfoPlist.xcstrings */; };
+		D99701193F9798733C49E119 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D4DEE71E568B3CFAD9800EEC /* Pretendard-ExtraBold.otf */; };
 		D9C7B3479FBC881C91AEFFE7 /* SB 어그로OTF B.otf in Resources */ = {isa = PBXBuildFile; fileRef = F01A708EA63FF0316925F74D /* SB 어그로OTF B.otf */; };
 		D9F68C7C3F02FF2F13259580 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B59F2DBE876530F2FD29463 /* nanopb.framework */; };
 		DA4DF0B8FC0EC0A9EA3BDCF8 /* DetailAttractionSubwayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9152BD10A66F9B12134CCCE /* DetailAttractionSubwayView.swift */; };
@@ -676,18 +659,16 @@
 		DCD9D12B7A8245E08CA943C6 /* GetDefaultPageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1332188DD8ED974E4AE283 /* GetDefaultPageRequest.swift */; };
 		DCF098504FA470FA5A50ECA1 /* Sharing1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24AB27F4882D504C05138895 /* Sharing1.framework */; };
 		DD83BDAE5B53870C0C3FEBE0 /* TuistBundle+SharedAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC3BF44BCAB6188E3DB6FB5 /* TuistBundle+SharedAssets.swift */; };
+		DE700DA7A03EC4D66CC353B3 /* Common.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = E47737CBD7A0BFCCB3390F28 /* Common.framework */; };
 		DF0CFF82EC6F3508A20D825E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D59BBB4CD30AF858BF40189 /* Colors.xcassets */; };
 		DF1452FDDBA20F85D7CC3916 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9EDBD84F2BF24A199FE989 /* CoreGraphics.framework */; };
 		DFB3F5CB7F0D55A6CE190C51 /* Firebase_FirebaseRemoteConfig.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BC546639068D86ADBBB0D610 /* Firebase_FirebaseRemoteConfig.bundle */; };
 		E030D4CFDF244ADCD1D4F5F9 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2258D33FCA01CD482A696A5 /* RemoteConfigDefaults.plist */; };
 		E06CD4C9C413FFA49C7DD284 /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5726AEC8CEC0F67F1ACE7F5 /* AppSetting.swift */; };
-		E0A1CB56A49E385A080F3953 /* Sharing1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24AB27F4882D504C05138895 /* Sharing1.framework */; };
 		E0E9EA7F7960B9FBCF551848 /* LikeAttractionFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = E947EE3773A39EFFC1035361 /* LikeAttractionFeature.swift */; };
 		E0F3F613105C0E2D6FCF1EC4 /* GoogleSignIn_GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E7C4C3EED06772C16068149B /* GoogleSignIn_GoogleSignIn.bundle */; };
 		E104AFD80E32283CA607F74F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D59BBB4CD30AF858BF40189 /* Colors.xcassets */; };
 		E14A95C6BDA216C07695B46C /* GoogleSignIn_GoogleSignIn.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = E7C4C3EED06772C16068149B /* GoogleSignIn_GoogleSignIn.bundle */; };
-		E17B7DD4323C87244321C70C /* ComposableCoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2AD6AD14CB5074A1880D0FC /* ComposableCoreLocation.framework */; };
-		E222C3AE7763309A26F1F2E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE45769C226498DF4026D488 /* Images.xcassets */; };
 		E2266B73DDF25009617E04CF /* Facebook_FacebookCore.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = C92C2C3D8279026F9632600D /* Facebook_FacebookCore.bundle */; };
 		E2316F92C0689B90B96D4F89 /* PostAuthLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE192FE54B098C9E1557C74A /* PostAuthLoginRequest.swift */; };
 		E41C34C4F80B1F249A16A5A2 /* GTMSessionFetcherCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B1E2394370D1713FAA8F94 /* GTMSessionFetcherCore.framework */; };
@@ -699,7 +680,6 @@
 		E5575917FE90B5901CD47CAA /* PerceptionCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2D5B36A766C6B49FB39D3C7 /* PerceptionCore.framework */; };
 		E5D0CF286D8BF66B231ED103 /* UIApplication++.swift in Sources */ = {isa = PBXBuildFile; fileRef = C985F6F737100BAAA169894C /* UIApplication++.swift */; };
 		E5E475098CC6AB3FEA6231B0 /* SharedTypes.framework in Dependencies */ = {isa = PBXBuildFile; fileRef = DA06EF0C7D6E057CBEAFC24C /* SharedTypes.framework */; };
-		E600A0E6E2FFC969A744318F /* UIKitNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883C2DDDE23D8048FA4E3E71 /* UIKitNavigation.framework */; };
 		E61D4A85B462B5D5679BB113 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5055D6B79A3002E12D64D945 /* Launch Screen.storyboard */; };
 		E61EFF54D5A75686328C4A92 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E4D5476FC354FD8133DF1816 /* Pretendard-Light.otf */; };
 		E64B2FC4BB0C4BEDB2A4DED6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43ADB16D73634BF614EAE508 /* GoogleService-Info.plist */; };
@@ -712,31 +692,20 @@
 		E8324C9D067B52F06D848AAA /* Facebook_FacebookLogin.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 220C1E06DB94D6F39A7C2161 /* Facebook_FacebookLogin.bundle */; };
 		E8B7EA5D67F13A437692FDEB /* AppAuth_AppAuthCore.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = BB0596D73CAD6AA1EB814E87 /* AppAuth_AppAuthCore.bundle */; };
 		E8EB01889B6C1C6A20EE834A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43ADB16D73634BF614EAE508 /* GoogleService-Info.plist */; };
-		E906803B11761D8180B20C35 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 153553E89664D914E68DEFCC /* Pretendard-Thin.otf */; };
 		E91EFE77BFEE340B43194D47 /* Facebook_FacebookCore.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C92C2C3D8279026F9632600D /* Facebook_FacebookCore.bundle */; };
 		E9990850B12B4043D5B727A3 /* AppLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816E908C3AF8834E0498D994 /* AppLocation.swift */; };
 		E9DE71C84C88288412A32A64 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8609EF56D0937265092D5D36 /* Pretendard-ExtraLight.otf */; };
 		EA538B02E6EFCB8F46D36669 /* HomeChallengeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3A6CFAA5F6821C6DF932F /* HomeChallengeItemView.swift */; };
 		EA68103BE802BEBD67434D79 /* SB 어그로OTF M.otf in Resources */ = {isa = PBXBuildFile; fileRef = E283BF28611FAF81E991ABF5 /* SB 어그로OTF M.otf */; };
-		EA793ED82DC655AF0064A4CA /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = EA793ED72DC655AF0064A4CA /* InfoPlist.xcstrings */; };
-		EA793ED92DC655AF0064A4CA /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = EA793ED72DC655AF0064A4CA /* InfoPlist.xcstrings */; };
-		EA793EDA2DC655AF0064A4CA /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = EA793ED72DC655AF0064A4CA /* InfoPlist.xcstrings */; };
-		EA793EDB2DC655AF0064A4CA /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = EA793ED72DC655AF0064A4CA /* InfoPlist.xcstrings */; };
-		EA793EDC2DC655AF0064A4CA /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = EA793ED72DC655AF0064A4CA /* InfoPlist.xcstrings */; };
-		EA793EDD2DC655AF0064A4CA /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = EA793ED72DC655AF0064A4CA /* InfoPlist.xcstrings */; };
-		EA793EDE2DC655AF0064A4CA /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = EA793ED72DC655AF0064A4CA /* InfoPlist.xcstrings */; };
-		EA793EDF2DC655AF0064A4CA /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = EA793ED72DC655AF0064A4CA /* InfoPlist.xcstrings */; };
-		EA793EE02DC655AF0064A4CA /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = EA793ED72DC655AF0064A4CA /* InfoPlist.xcstrings */; };
-		EA949284C11DB940F84888C2 /* Dependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 256CCC92AC8D6EE5FACE5475 /* Dependencies.framework */; };
 		EAE62223229FB6E39F76669F /* CasePathsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CF7412324C02D1745F0E0D /* CasePathsCore.framework */; };
 		EB1B1D606C9519443C8093A6 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E58A56242DD34BBF412FCA4 /* GoogleUtilities_GoogleUtilities_UserDefaults.bundle */; };
 		EB2C1DD848ACAAE2D607CA78 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F75DBDEF31E5F47ECCF65C8 /* UIKit.framework */; };
 		EB577A8062D14CFE4FB5207F /* GoogleSignInSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E5E0505F3396FBC9194F27 /* GoogleSignInSwift.framework */; };
 		EBB70C9114A22B024B933DDC /* Firebase_FirebaseRemoteConfig.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = BC546639068D86ADBBB0D610 /* Firebase_FirebaseRemoteConfig.bundle */; };
 		EBF020E4AC4AE2646D0139DF /* PopPopSeoul_SharedTypes.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C0CB3DDDA16FCFC69781D069 /* PopPopSeoul_SharedTypes.bundle */; };
-		EC656463A3B8C5EFE639FB41 /* CasePathsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CF7412324C02D1745F0E0D /* CasePathsCore.framework */; };
-		EC91A89FCF470843C684CCA5 /* PopPopSeoul_SharedAssets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AC1A07B868BF5B297491E7F4 /* PopPopSeoul_SharedAssets.bundle */; };
 		ECB5D4E109BF2CCB78E304F4 /* NaverMapsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B360215909F40369B5F6A9 /* NaverMapsEndpoint.swift */; };
+		ECDB3EFA4F723D7876CE8D72 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CE1FAA7B1326A358DB6CD86 /* Icons.xcassets */; };
+		ED02270489C80A26CBD6360A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5055D6B79A3002E12D64D945 /* Launch Screen.storyboard */; };
 		ED991AF2C448D3EF4377E16A /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8609EF56D0937265092D5D36 /* Pretendard-ExtraLight.otf */; };
 		EEEB173922F2FB01658DF6E9 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5355E397BCD019AF8EF299B /* Secrets.plist */; };
 		EEF66AAA3F7AAF8B0CDF7293 /* GoogleUtilities_GoogleUtilities_AppDelegateSwizzler.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 1B3451ACAF4F0DAE1C400CAE /* GoogleUtilities_GoogleUtilities_AppDelegateSwizzler.bundle */; };
@@ -745,9 +714,10 @@
 		EF82FC5CAC64BCADA9F27D38 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 439E29FD827B44FD54D99F81 /* libc++.tbd */; };
 		F09417129212C5CFF53A01A2 /* HomeBannerSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04DA2FB9EE32AF5B05711C4 /* HomeBannerSection.swift */; };
 		F0F94F31C0B86D03E47684D6 /* AppAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7924B0080D9F90CA5714671 /* AppAuth.framework */; };
+		F10226B1787B903DBD458AED /* PopPopSeoul_DesignSystem.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 369E8DA2E2633A711AE16031 /* PopPopSeoul_DesignSystem.bundle */; };
 		F1736B23ED64824E86A566D0 /* CasePaths.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40AE01B72DAE9495C40B61FB /* CasePaths.framework */; };
 		F1786D99F8C359536D48681E /* Facebook_FacebookAEM.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9FB1E12A2FECBF861558A97F /* Facebook_FacebookAEM.bundle */; };
-		F2CA6C6752ED1EAE403B541A /* CasePaths.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40AE01B72DAE9495C40B61FB /* CasePaths.framework */; };
+		F275BF5A11755397730F9E34 /* SB 어그로OTF M.otf in Resources */ = {isa = PBXBuildFile; fileRef = E283BF28611FAF81E991ABF5 /* SB 어그로OTF M.otf */; };
 		F2DC4982507A6BD9BA6502D5 /* TuistAssets+SharedTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8306CE1A54581D0765474974 /* TuistAssets+SharedTypes.swift */; };
 		F2DCA76B1396CE7B197416C6 /* Firebase_FirebaseCoreExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EECB86F51B27909F700E29A0 /* Firebase_FirebaseCoreExtension.bundle */; };
 		F45A3ADA154044EF72EC5EF2 /* SB 어그로OTF L.otf in Resources */ = {isa = PBXBuildFile; fileRef = 19B09F83E09267FC7013EB98 /* SB 어그로OTF L.otf */; };
@@ -762,12 +732,10 @@
 		F5B6744A10FF0055B9449255 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5355E397BCD019AF8EF299B /* Secrets.plist */; };
 		F5F3E3974F0EC5815DEDB580 /* swift-composable-architecture_ComposableArchitecture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 97296BA299CDC0A42867B5F2 /* swift-composable-architecture_ComposableArchitecture.bundle */; };
 		F6A2528E38E7F7A5EE2C1A7D /* PostAuthLoginFbIosRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16109898D575DC5C1B33394B /* PostAuthLoginFbIosRequest.swift */; };
-		F6A485802FCB05C07AA0D758 /* PopPopSeoul_Common.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = BB9E5B250148C619260FF4F1 /* PopPopSeoul_Common.bundle */; };
 		F6BADB1DD27252D4E5D341C2 /* DetailAtrractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BF5B1A70617AA96129BE5 /* DetailAtrractionView.swift */; };
 		F6BE3052103DBE0DE0215C65 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62D1DA8ED790E2822D0D9E60 /* Pretendard-SemiBold.otf */; };
 		F6C046314D528AED65B16393 /* SB 어그로OTF M.otf in Resources */ = {isa = PBXBuildFile; fileRef = E283BF28611FAF81E991ABF5 /* SB 어그로OTF M.otf */; };
 		F6ECDC6016DFB3F64067898D /* TuistAssets+PopPopSeoul.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E9D4C972EBECDF69395F5A /* TuistAssets+PopPopSeoul.swift */; };
-		F723F2C38AA036DA87A920BC /* PopPopSeoul_Models.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 06161994F12FC5F549E5E26C /* PopPopSeoul_Models.bundle */; };
 		F7380632790A58E04E53C580 /* GoogleUtilities_GoogleUtilities_Network.bundle in Dependencies */ = {isa = PBXBuildFile; fileRef = 60EA577380D1B46D4B45A848 /* GoogleUtilities_GoogleUtilities_Network.bundle */; };
 		F74A3DCD8FDB02E32B9C23F5 /* LanguageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94197C338BC75BA2CB710C1 /* LanguageProvider.swift */; };
 		F760C809AE669D21872BD159 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EDD27B7889EDC29093865516 /* Pretendard-Medium.otf */; };
@@ -926,6 +894,13 @@
 			remoteGlobalIDString = 88FF7D46605EC7375FCB7B9A;
 			remoteInfo = Clients;
 		};
+		BB55993E4771FF00CD2440D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E54A57BF89BE582F4D0E668A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDADB3EE6F8FCBC1CA207403;
+			remoteInfo = PopPopSeoul_DesignSystem;
+		};
 		D5C328F7941A810090ACE454 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E54A57BF89BE582F4D0E668A /* Project object */;
@@ -1056,6 +1031,16 @@
 			name = Dependencies;
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		467315214DEF17EC2F144B20 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4DD27E559D0879C6A0CD1CE0 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1073,6 +1058,7 @@
 			files = (
 				ACBB0EEE878B28681CE491DB /* PopPopSeoul_Clients.bundle in Dependencies */,
 				68840A024EC758E7C25082FD /* PopPopSeoul_Common.bundle in Dependencies */,
+				D143E0727A6E1BF7B8E40455 /* PopPopSeoul_DesignSystem.bundle in Dependencies */,
 				40658FE9354B57ECCD74F010 /* PopPopSeoul_Models.bundle in Dependencies */,
 				1B2AF00ADAEA506FD9540CC4 /* PopPopSeoul_SharedAssets.bundle in Dependencies */,
 				37AD77FC1CF932FF2A4EFFE9 /* PopPopSeoul_SharedTypes.bundle in Dependencies */,
@@ -1107,7 +1093,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				8C1D3210319650131E598B3B /* AppAuth.framework in Embed Frameworks */,
-				060310D17E19D629C0EBE726 /* DesignSystem.framework in Embed Frameworks */,
 				A28B6A497FA5B484F8CA6735 /* Features.framework in Embed Frameworks */,
 				6F1716B182AC6EDBC29A18C2 /* FBAEMKit.xcframework in Embed Frameworks */,
 				08AF603C7DAAB601079C66EC /* FBSDKCoreKit.xcframework in Embed Frameworks */,
@@ -1136,7 +1121,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				A1C7274B6C8500A0F8EE02BC /* AppAuth.framework in Embed Frameworks */,
-				D9A4B9667FBE6D12D3C8B4EB /* DesignSystem.framework in Embed Frameworks */,
 				8DA134F5E41027A69E8ABCD0 /* Features.framework in Embed Frameworks */,
 				D0AF5F2900283ED4743D1801 /* FBAEMKit.xcframework in Embed Frameworks */,
 				7AD3400B9BFDCACE1DF0E8A3 /* FBSDKCoreKit.xcframework in Embed Frameworks */,
@@ -1278,10 +1262,11 @@
 			buildActionMask = 8;
 			dstSubfolderSpec = 16;
 			files = (
-				F6A485802FCB05C07AA0D758 /* PopPopSeoul_Common.bundle in Dependencies */,
-				D45E4CD7E153AA22AAA4920E /* PopPopSeoul_Models.bundle in Dependencies */,
-				27616A13DDEEA69F01070B3D /* PopPopSeoul_SharedAssets.bundle in Dependencies */,
-				21836F3DAD51C3443162E5AA /* PopPopSeoul_SharedTypes.bundle in Dependencies */,
+				DE700DA7A03EC4D66CC353B3 /* Common.framework in Dependencies */,
+				BDA8DFF227064E241314F63B /* Kingfisher.framework in Dependencies */,
+				06DA4A4E600794267B6C7BDD /* Models.framework in Dependencies */,
+				7F405C5EFFBA595C258E1A30 /* SharedAssets.framework in Dependencies */,
+				1A4BBEAD3BF3CE9C16FC5C85 /* SharedTypes.framework in Dependencies */,
 			);
 			name = Dependencies;
 			runOnlyForDeploymentPostprocessing = 1;
@@ -1414,6 +1399,7 @@
 		34E9D4C972EBECDF69395F5A /* TuistAssets+PopPopSeoul.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+PopPopSeoul.swift"; sourceTree = "<group>"; };
 		3556588400F0DEF63391F2C6 /* DetailChallengeInfoSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailChallengeInfoSection.swift; sourceTree = "<group>"; };
 		3593140F181A04CA12AD1AE1 /* OrderedCollections.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OrderedCollections.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		369E8DA2E2633A711AE16031 /* PopPopSeoul_DesignSystem.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopPopSeoul_DesignSystem.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		36D9141EE48B3D34377D5F9C /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		370BADC8F413EA841D7941BF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
 		3776FB055AD747BCCDF55C32 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
@@ -1452,10 +1438,12 @@
 		514A84E0911E90026970479D /* Double++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double++.swift"; sourceTree = "<group>"; };
 		51A0EA8247C58EDE26EA33EE /* TuistBundle+PopPopSeoul.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+PopPopSeoul.swift"; sourceTree = "<group>"; };
 		528AE41CF538270EC7C23E1E /* GetChallengeListStampRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeListStampRequest.swift; sourceTree = "<group>"; };
+		52E18CE7974D7F8CCF710FF7 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		53A5F09CCE2843BBCFDB89DE /* DefaultProcessResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultProcessResponse.swift; sourceTree = "<group>"; };
 		53F8DADFF44CB16EB58E8EB6 /* TuistFonts+PopPopSeoul.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistFonts+PopPopSeoul.swift"; sourceTree = "<group>"; };
 		543A01964A969639805945B6 /* DetailAttractionLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAttractionLinkView.swift; sourceTree = "<group>"; };
 		54BF44D27ECFDB2810863ED8 /* nanopb_nanopb.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nanopb_nanopb.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		554F3B4E0B1981F1322CECFB /* PopPopSeoul_DesignSystem-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "PopPopSeoul_DesignSystem-Info.plist"; sourceTree = "<group>"; };
 		55A3B62F816276CCCEF90303 /* FBSDKCoreKit.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:V9WTTPBFK9:Meta Platforms, Inc."; lastKnownFileType = wrapper.xcframework; path = FBSDKCoreKit.xcframework; sourceTree = "<group>"; };
 		57068C7D0574A65D24D50AF0 /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
 		577087070F7AE2AA53E7E82E /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1687,7 +1675,6 @@
 		E947EE3773A39EFFC1035361 /* LikeAttractionFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeAttractionFeature.swift; sourceTree = "<group>"; };
 		EA14930892816AFA4A88950C /* GoogleUtilities_Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleUtilities_Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA26B67DE986D8D090F59956 /* CombineSchedulers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CombineSchedulers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA793ED72DC655AF0064A4CA /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		EB1AF2F0C1D291ADEC33A0B1 /* GetChallengeMyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeMyRequest.swift; sourceTree = "<group>"; };
 		EB50FD060BF7A2400BB005A7 /* ThemeChallengeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChallengeTabView.swift; sourceTree = "<group>"; };
 		EC4AFF88EA6DCED6098DE437 /* Clients-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Clients-Info.plist"; sourceTree = "<group>"; };
@@ -1859,39 +1846,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2CA6C6752ED1EAE403B541A /* CasePaths.framework in Frameworks */,
-				EC656463A3B8C5EFE639FB41 /* CasePathsCore.framework in Frameworks */,
-				1B06205582E69CF46CD3BDAA /* Clocks.framework in Frameworks */,
-				3D9021194AADC7A63F5ABB19 /* CombineSchedulers.framework in Frameworks */,
-				64DE2B053F127A286ECAD146 /* Common.framework in Frameworks */,
-				504C1DD69DF46C1C48914BCF /* ComposableArchitecture.framework in Frameworks */,
-				E17B7DD4323C87244321C70C /* ComposableCoreLocation.framework in Frameworks */,
-				91719DD6946DD60A7C2BAA44 /* ConcurrencyExtras.framework in Frameworks */,
-				515CE12F60963E9E9AAD9C36 /* CustomDump.framework in Frameworks */,
-				EA949284C11DB940F84888C2 /* Dependencies.framework in Frameworks */,
-				857C1B780BFC4B3CB77462A4 /* DependenciesMacros.framework in Frameworks */,
-				50472AB0312AAC2699336912 /* IdentifiedCollections.framework in Frameworks */,
-				A4D35499470EDBEC1C899390 /* InternalCollectionsUtilities.framework in Frameworks */,
-				3E19AD58936AFF48A50317A5 /* IssueReporting.framework in Frameworks */,
-				92B15FC932FF7BC7DE8C1CE1 /* Kingfisher.framework in Frameworks */,
-				B5541F57328D8C8224C4B72F /* Models.framework in Frameworks */,
-				42768142F86BC3A1BD324FF3 /* OrderedCollections.framework in Frameworks */,
-				06BED9B3F34031720AD37180 /* Perception.framework in Frameworks */,
-				252B8C3B7F5DC4E46E1A2D01 /* PerceptionCore.framework in Frameworks */,
-				D6D0E0E6DCC8DED98149691C /* SharedAssets.framework in Frameworks */,
-				3C0153ED1EF62E1866E62F83 /* SharedTypes.framework in Frameworks */,
-				12BB5DBE137A2A837C8A92A0 /* Sharing.framework in Frameworks */,
-				E0A1CB56A49E385A080F3953 /* Sharing1.framework in Frameworks */,
-				ADD36351CBD11CC3785936BE /* Sharing2.framework in Frameworks */,
-				64723DE26E39D9E977943409 /* SwiftNavigation.framework in Frameworks */,
-				CAAB2228D9792D83E4B58521 /* SwiftUINavigation.framework in Frameworks */,
-				E600A0E6E2FFC969A744318F /* UIKitNavigation.framework in Frameworks */,
-				1D2CFA68AA104EFF61788F5C /* UIKitNavigationShim.framework in Frameworks */,
-				43E9E84B9B311B2E1E4A3747 /* XCTestDynamicOverlay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7D2652D0DEDD69184BB3E794 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DA4AD7138075C724E137FA7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2540,6 +2505,7 @@
 				E2D5B36A766C6B49FB39D3C7 /* PerceptionCore.framework */,
 				D69DD2245CF30BD4AFABD97A /* PopPopSeoul_Clients.bundle */,
 				BB9E5B250148C619260FF4F1 /* PopPopSeoul_Common.bundle */,
+				369E8DA2E2633A711AE16031 /* PopPopSeoul_DesignSystem.bundle */,
 				06161994F12FC5F549E5E26C /* PopPopSeoul_Models.bundle */,
 				AC1A07B868BF5B297491E7F4 /* PopPopSeoul_SharedAssets.bundle */,
 				C0CB3DDDA16FCFC69781D069 /* PopPopSeoul_SharedTypes.bundle */,
@@ -2991,6 +2957,7 @@
 				C06C8172FA3415CE3BE1C0FF /* Models-Info.plist */,
 				7974544367CD1C497790722A /* PopPopSeoul_Clients-Info.plist */,
 				0DB7776628098AFF11935400 /* PopPopSeoul_Common-Info.plist */,
+				554F3B4E0B1981F1322CECFB /* PopPopSeoul_DesignSystem-Info.plist */,
 				FF7A61DE1718C7CC08BC56E8 /* PopPopSeoul_Models-Info.plist */,
 				E0FE2E7C1A9CFE6B68EF1849 /* PopPopSeoul_SharedAssets-Info.plist */,
 				B88E77D13F54ECDE9C55B08F /* PopPopSeoul_SharedTypes-Info.plist */,
@@ -3008,11 +2975,11 @@
 			children = (
 				21F1198C49E87E8F197837EE /* Assets.xcassets */,
 				43ADB16D73634BF614EAE508 /* GoogleService-Info.plist */,
+				52E18CE7974D7F8CCF710FF7 /* InfoPlist.xcstrings */,
 				5055D6B79A3002E12D64D945 /* Launch Screen.storyboard */,
 				F2258D33FCA01CD482A696A5 /* RemoteConfigDefaults.plist */,
 				E5355E397BCD019AF8EF299B /* Secrets.plist */,
 				93D2569F11ADDAF2533DAE8F /* Secrets.xcconfig */,
-				EA793ED72DC655AF0064A4CA /* InfoPlist.xcstrings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -3438,6 +3405,7 @@
 			dependencies = (
 				0686F68682E043D969373763 /* PBXTargetDependency */,
 				AE20AB086794BD8C3B823D14 /* PBXTargetDependency */,
+				AF24A2A5C0A15E26263FF218 /* PBXTargetDependency */,
 				FD647A47085D4E51E7CC8044 /* PBXTargetDependency */,
 				01B80D9E9617D9E1CA479420 /* PBXTargetDependency */,
 			);
@@ -3469,6 +3437,27 @@
 			productName = PopPopSeoulKitTests;
 			productReference = C8EC2B4C824DB1404597122B /* PopPopSeoulKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BDADB3EE6F8FCBC1CA207403 /* PopPopSeoul_DesignSystem */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62E003199D2E6C421366240E /* Build configuration list for PBXNativeTarget "PopPopSeoul_DesignSystem" */;
+			buildPhases = (
+				C2739E82543FB70735A0D384 /* Sources */,
+				5DAF621D4A1C887A227FD132 /* Resources */,
+				8DA4AD7138075C724E137FA7 /* Frameworks */,
+				467315214DEF17EC2F144B20 /* Embed Frameworks */,
+				68CC0D2889C65EFA36AE897C /* Copy Built Products for Explicit Dependencies */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PopPopSeoul_DesignSystem;
+			packageProductDependencies = (
+			);
+			productName = PopPopSeoul_DesignSystem;
+			productReference = 369E8DA2E2633A711AE16031 /* PopPopSeoul_DesignSystem.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 		EA997D0841AC70DE8AB32A76 /* Models */ = {
 			isa = PBXNativeTarget;
@@ -3528,6 +3517,7 @@
 				A69DCF14A5EEFFAE6F9C4B78 /* PopPopSeoulKitTests */,
 				0521132038E58AD16A92CBD2 /* PopPopSeoul_Clients */,
 				59B0320C581C213221CB3F1B /* PopPopSeoul_Common */,
+				BDADB3EE6F8FCBC1CA207403 /* PopPopSeoul_DesignSystem */,
 				74AE6B35AAEE6439B1DE758E /* PopPopSeoul_Models */,
 				0D6B304835E137B9A9FAE44E /* PopPopSeoul_SharedAssets */,
 				470CB56D2FADDA9DD155E3D2 /* PopPopSeoul_SharedTypes */,
@@ -3544,6 +3534,7 @@
 			files = (
 				CA636ADCF3372BEF92489A36 /* Assets.xcassets in Resources */,
 				D6B6938A4DC3398E81550C6A /* GoogleService-Info.plist in Resources */,
+				54A0E1B60934B672451367D3 /* InfoPlist.xcstrings in Resources */,
 				3D19CD463D28DCED504799A6 /* Launch Screen.storyboard in Resources */,
 				6FCF825E69F0804916974A27 /* RemoteConfigDefaults.plist in Resources */,
 				1553901080D631D9EDB934DC /* Secrets.plist in Resources */,
@@ -3561,7 +3552,6 @@
 				B6D97F8D0367C1240EF5E4C1 /* Pretendard-SemiBold.otf in Resources */,
 				B95C4EA4D203E9C17E301712 /* Pretendard-Thin.otf in Resources */,
 				2287B26B355F65D1D6018991 /* SB 어그로OTF B.otf in Resources */,
-				EA793EDB2DC655AF0064A4CA /* InfoPlist.xcstrings in Resources */,
 				98982165F90F19C48338A9D1 /* SB 어그로OTF L.otf in Resources */,
 				74FF81847A89421D3AD04AD4 /* SB 어그로OTF M.otf in Resources */,
 				C9AD5A091578E997E1AF0729 /* Localizable.xcstrings in Resources */,
@@ -3574,6 +3564,7 @@
 			files = (
 				B1A8176B5CEE5BCB50281660 /* Assets.xcassets in Resources */,
 				88B29F280A7845E7A27AD59D /* GoogleService-Info.plist in Resources */,
+				B8E3E32EBDE06F0CDF33AC3F /* InfoPlist.xcstrings in Resources */,
 				A09C5459EC1347AFF13BC5B8 /* Launch Screen.storyboard in Resources */,
 				3BC2577C2179DD3F3E247D1C /* RemoteConfigDefaults.plist in Resources */,
 				F5B6744A10FF0055B9449255 /* Secrets.plist in Resources */,
@@ -3591,10 +3582,39 @@
 				9D782B7496616D286069D79D /* Pretendard-SemiBold.otf in Resources */,
 				10A9502E617171814E1F5EF4 /* Pretendard-Thin.otf in Resources */,
 				A572189134FA55F6320499C9 /* SB 어그로OTF B.otf in Resources */,
-				EA793ED92DC655AF0064A4CA /* InfoPlist.xcstrings in Resources */,
 				F45A3ADA154044EF72EC5EF2 /* SB 어그로OTF L.otf in Resources */,
 				D48241DC5E19EF83ED4C3240 /* SB 어그로OTF M.otf in Resources */,
 				0A6A78F6F41426DB52A0718E /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DAF621D4A1C887A227FD132 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82B062847278FF3D5FC36ADC /* Assets.xcassets in Resources */,
+				8FCCC5C3F07D09DD87CB3473 /* GoogleService-Info.plist in Resources */,
+				47DB0887800F8C63660CEE35 /* InfoPlist.xcstrings in Resources */,
+				ED02270489C80A26CBD6360A /* Launch Screen.storyboard in Resources */,
+				16F4F8800445887522F2A058 /* RemoteConfigDefaults.plist in Resources */,
+				C526A7BC2598ADCD81ECEA2D /* Secrets.plist in Resources */,
+				C593A739C1B0EC5A82DC7714 /* Secrets.xcconfig in Resources */,
+				8BF26D198A97331372CF8942 /* Colors.xcassets in Resources */,
+				ECDB3EFA4F723D7876CE8D72 /* Icons.xcassets in Resources */,
+				165F9756B33F1B6ED793B6B8 /* Images.xcassets in Resources */,
+				40A32594F21B2404E9A73276 /* Pretendard-Black.otf in Resources */,
+				A977789040637E5C48A55E92 /* Pretendard-Bold.otf in Resources */,
+				D99701193F9798733C49E119 /* Pretendard-ExtraBold.otf in Resources */,
+				2D20E89CD15C349C0491D1E1 /* Pretendard-ExtraLight.otf in Resources */,
+				C3F3EB7B7A6BEC11F77BA524 /* Pretendard-Light.otf in Resources */,
+				79321D4379158BF538A605B2 /* Pretendard-Medium.otf in Resources */,
+				5CE411F617EB25533D07FB31 /* Pretendard-Regular.otf in Resources */,
+				B810669A2D33DF7571E19133 /* Pretendard-SemiBold.otf in Resources */,
+				294BB1247D76680376FC0A49 /* Pretendard-Thin.otf in Resources */,
+				434717CADDCCAF82FCE12DFD /* SB 어그로OTF B.otf in Resources */,
+				6A601D4EBA88FDB56BC5DF44 /* SB 어그로OTF L.otf in Resources */,
+				F275BF5A11755397730F9E34 /* SB 어그로OTF M.otf in Resources */,
+				8229540C37AA2BF2BFDCA55E /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3611,6 +3631,7 @@
 			files = (
 				6881ECA50DB92C99D9B34881 /* Assets.xcassets in Resources */,
 				E64B2FC4BB0C4BEDB2A4DED6 /* GoogleService-Info.plist in Resources */,
+				65FE5BBCEE3F4210D8969503 /* InfoPlist.xcstrings in Resources */,
 				E61D4A85B462B5D5679BB113 /* Launch Screen.storyboard in Resources */,
 				44BD4D7553C9A659FAC8C330 /* RemoteConfigDefaults.plist in Resources */,
 				0F5BD8963BB771C115AF964D /* Secrets.plist in Resources */,
@@ -3631,9 +3652,9 @@
 				C92F54085FAAC020D0E41D8F /* SB 어그로OTF L.otf in Resources */,
 				BD45C41C0F0FCB7464450B35 /* SB 어그로OTF M.otf in Resources */,
 				FD25F736DB5BED84E721376B /* Localizable.xcstrings in Resources */,
-				EA793EDA2DC655AF0064A4CA /* InfoPlist.xcstrings in Resources */,
 				57ADD3BD182BDABBB90219B0 /* PopPopSeoul_Clients.bundle in Resources */,
 				40627818F7D87E8A298D1070 /* PopPopSeoul_Common.bundle in Resources */,
+				F10226B1787B903DBD458AED /* PopPopSeoul_DesignSystem.bundle in Resources */,
 				36819869B2A0B3CA9EE50D48 /* PopPopSeoul_Models.bundle in Resources */,
 				085CBE9AC126B6C5F9E4666B /* PopPopSeoul_SharedAssets.bundle in Resources */,
 				EBF020E4AC4AE2646D0139DF /* PopPopSeoul_SharedTypes.bundle in Resources */,
@@ -3646,6 +3667,7 @@
 			files = (
 				ACF878EE9C5F64FF2FE7E69E /* Assets.xcassets in Resources */,
 				E4E82B0D02FCF66D49849097 /* GoogleService-Info.plist in Resources */,
+				D98443B615BB5B6F1A7551A2 /* InfoPlist.xcstrings in Resources */,
 				2C00D49CBCB12B798453DD75 /* Launch Screen.storyboard in Resources */,
 				7714D49AD3FFA8D3DDFDAE4F /* RemoteConfigDefaults.plist in Resources */,
 				644164250698DBB4C9194A9B /* Secrets.plist in Resources */,
@@ -3692,7 +3714,6 @@
 				05EE4BA280CB45F788B25E43 /* Kingfisher_Kingfisher.bundle in Resources */,
 				ACBF7E9E1F5ADF4A9AF4BD22 /* Promises_FBLPromises.bundle in Resources */,
 				AC384B79F8060C8B928CB24B /* nanopb_nanopb.bundle in Resources */,
-				EA793EDC2DC655AF0064A4CA /* InfoPlist.xcstrings in Resources */,
 				2E07869F75040C1CFA7F6226 /* swift-composable-architecture_ComposableArchitecture.bundle in Resources */,
 				3FDF2A1E729BCF6DCD79B7B7 /* swift-sharing_Sharing.bundle in Resources */,
 			);
@@ -3704,6 +3725,7 @@
 			files = (
 				A46CC750D4824041F8B940AA /* Assets.xcassets in Resources */,
 				1979D181EE86057282B8F9CB /* GoogleService-Info.plist in Resources */,
+				3A0B71D9BA3CB868888D30D7 /* InfoPlist.xcstrings in Resources */,
 				899C8C9CE8E1ADB88B49483C /* Launch Screen.storyboard in Resources */,
 				95ECD9FF0B722EA407D0A27C /* RemoteConfigDefaults.plist in Resources */,
 				EEEB173922F2FB01658DF6E9 /* Secrets.plist in Resources */,
@@ -3721,7 +3743,6 @@
 				39F33FE66662E81A9806E7A6 /* Pretendard-SemiBold.otf in Resources */,
 				28A6F3B5A52F5E80B842856A /* Pretendard-Thin.otf in Resources */,
 				BB2EC322501704879852A742 /* SB 어그로OTF B.otf in Resources */,
-				EA793EDD2DC655AF0064A4CA /* InfoPlist.xcstrings in Resources */,
 				96DFB5FDE1B84FF4C069511F /* SB 어그로OTF L.otf in Resources */,
 				43F9AE3B5BA246DF1D47E1E0 /* SB 어그로OTF M.otf in Resources */,
 				6679D5DD3E877A7FCB2BCC09 /* Localizable.xcstrings in Resources */,
@@ -3734,6 +3755,7 @@
 			files = (
 				1468F216A5EE0EDCDD658196 /* Assets.xcassets in Resources */,
 				602E91AC7D6CEE77EF429DCC /* GoogleService-Info.plist in Resources */,
+				A79741249FDB6EA62FB081E3 /* InfoPlist.xcstrings in Resources */,
 				AD9CB7DA18911B544F4AFB3D /* Launch Screen.storyboard in Resources */,
 				D4BEEF95CD5DD3449A6E63AB /* RemoteConfigDefaults.plist in Resources */,
 				76D4A75E70AE6CC13FC09DE6 /* Secrets.plist in Resources */,
@@ -3780,7 +3802,6 @@
 				6100817950786DDB938D0C2D /* Kingfisher_Kingfisher.bundle in Resources */,
 				9680CB6F124DBC1C0065D409 /* Promises_FBLPromises.bundle in Resources */,
 				784AF66A989C4A8223F08B09 /* nanopb_nanopb.bundle in Resources */,
-				EA793EE02DC655AF0064A4CA /* InfoPlist.xcstrings in Resources */,
 				8FEBD3666807BB87BFCF635B /* swift-composable-architecture_ComposableArchitecture.bundle in Resources */,
 				4FFBF4547D0A8AD777748DCA /* swift-sharing_Sharing.bundle in Resources */,
 			);
@@ -3790,33 +3811,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8806A4776ACB3E3A3A9EB30E /* Assets.xcassets in Resources */,
-				569F7B1F5A21647F76B53B16 /* GoogleService-Info.plist in Resources */,
-				AC3E481AA061ABF359D672A0 /* Launch Screen.storyboard in Resources */,
-				D49C3DCA0910325843D7CCD9 /* RemoteConfigDefaults.plist in Resources */,
-				17CC00D36B7B2A2777B6A3B2 /* Secrets.plist in Resources */,
-				884AF8369E7F3BA77B02DD25 /* Secrets.xcconfig in Resources */,
-				835771D0821741CA9320959F /* Colors.xcassets in Resources */,
-				180EACDB9E79B41997F71A15 /* Icons.xcassets in Resources */,
-				E222C3AE7763309A26F1F2E4 /* Images.xcassets in Resources */,
-				7DE5AC7AC5956889CE0DB8D8 /* Pretendard-Black.otf in Resources */,
-				415D8780C81A78EE04B272BA /* Pretendard-Bold.otf in Resources */,
-				340376AB815CEA5746A70781 /* Pretendard-ExtraBold.otf in Resources */,
-				90B8DAE1E65436ED7C6DF93B /* Pretendard-ExtraLight.otf in Resources */,
-				1D623F092FB9E44F66F7F3B3 /* Pretendard-Light.otf in Resources */,
-				805FD10B9091C4275EE4424C /* Pretendard-Medium.otf in Resources */,
-				666D275B7BA779C8F5FA73ED /* Pretendard-Regular.otf in Resources */,
-				9D2C14A131E075E873E262D7 /* Pretendard-SemiBold.otf in Resources */,
-				E906803B11761D8180B20C35 /* Pretendard-Thin.otf in Resources */,
-				C119C08C1D0035574AC30492 /* SB 어그로OTF B.otf in Resources */,
-				C7CE0C6213D9FDB4454B5B6F /* SB 어그로OTF L.otf in Resources */,
-				50ADA638BF806D9E9C3E2D6E /* SB 어그로OTF M.otf in Resources */,
-				EA793EDF2DC655AF0064A4CA /* InfoPlist.xcstrings in Resources */,
-				D8C0C2C1880199A299F7E5F3 /* Localizable.xcstrings in Resources */,
-				015E732AE4B861068B8EED78 /* PopPopSeoul_Common.bundle in Resources */,
-				F723F2C38AA036DA87A920BC /* PopPopSeoul_Models.bundle in Resources */,
-				EC91A89FCF470843C684CCA5 /* PopPopSeoul_SharedAssets.bundle in Resources */,
-				C56F458FB332CFD7C1602BED /* PopPopSeoul_SharedTypes.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3861,6 +3855,7 @@
 			files = (
 				4E43810AC3286D79283DE369 /* Assets.xcassets in Resources */,
 				07431CF9B7E2A41714AF4806 /* GoogleService-Info.plist in Resources */,
+				14500ABECCABD597E79F2F58 /* InfoPlist.xcstrings in Resources */,
 				55ABABD4237F6581ED97BF36 /* Launch Screen.storyboard in Resources */,
 				E030D4CFDF244ADCD1D4F5F9 /* RemoteConfigDefaults.plist in Resources */,
 				D8FFE749E49D633F1300B3B1 /* Secrets.plist in Resources */,
@@ -3878,7 +3873,6 @@
 				F6BE3052103DBE0DE0215C65 /* Pretendard-SemiBold.otf in Resources */,
 				C432EA8B01F96843C023E693 /* Pretendard-Thin.otf in Resources */,
 				424876E513AEA1643B30C699 /* SB 어그로OTF B.otf in Resources */,
-				EA793EDE2DC655AF0064A4CA /* InfoPlist.xcstrings in Resources */,
 				12BFFE5B63EFED57AE21034F /* SB 어그로OTF L.otf in Resources */,
 				2E31C1CA9AA6E05D5502AA1E /* SB 어그로OTF M.otf in Resources */,
 				880D3B4FBB47E41A393D5FDB /* Localizable.xcstrings in Resources */,
@@ -3919,6 +3913,7 @@
 			files = (
 				C20A11341D3925D221AFAE4A /* Assets.xcassets in Resources */,
 				E8EB01889B6C1C6A20EE834A /* GoogleService-Info.plist in Resources */,
+				69242D9444D6792604D29889 /* InfoPlist.xcstrings in Resources */,
 				74A4F4BAFF6CEEBCF2EF45A7 /* Launch Screen.storyboard in Resources */,
 				B2BF4FF650D2E11F2137AFCA /* RemoteConfigDefaults.plist in Resources */,
 				9929000CB1F7468CC4E164B9 /* Secrets.plist in Resources */,
@@ -3936,7 +3931,6 @@
 				3092C266CB26AB0F40E088D8 /* Pretendard-SemiBold.otf in Resources */,
 				1A762457F4375D1A66FBE09C /* Pretendard-Thin.otf in Resources */,
 				D9C7B3479FBC881C91AEFFE7 /* SB 어그로OTF B.otf in Resources */,
-				EA793ED82DC655AF0064A4CA /* InfoPlist.xcstrings in Resources */,
 				7260809B9FE0C4C43655E966 /* SB 어그로OTF L.otf in Resources */,
 				F6C046314D528AED65B16393 /* SB 어그로OTF M.otf in Resources */,
 				A5B055F8BF0360808F23A389 /* Localizable.xcstrings in Resources */,
@@ -4025,6 +4019,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# This script copies built products into the shared directory to be available for app and other targets that don't have scoped directories\n# If you try to archive any of the configurations seen in the output paths, the operation will fail due to `Multiple commands produce` error\n\nFILE=\"$BUILD_DIR/Debug$EFFECTIVE_PLATFORM_NAME$TARGET_BUILD_SUBPATH/$PRODUCT_NAME/$PRODUCT_NAME.framework\"\nDESTINATION_FILE=\"$BUILD_DIR/Debug$EFFECTIVE_PLATFORM_NAME$TARGET_BUILD_SUBPATH/$PRODUCT_NAME.framework\"\nif [[ -d \"$FILE\" && ! -d \"$DESTINATION_FILE\" ]]; then\n    ln -s \"$FILE\" \"$DESTINATION_FILE\"\nfi\n\nif [[ -f \"$FILE\" && ! -f \"$DESTINATION_FILE\" ]]; then\n    ln -s \"$FILE\" \"$DESTINATION_FILE\"\nfi";
+		};
+		68CC0D2889C65EFA36AE897C /* Copy Built Products for Explicit Dependencies */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILD_DIR)/Debug$(EFFECTIVE_PLATFORM_NAME)$(TARGET_BUILD_SUBPATH)/$(PRODUCT_NAME)/$(PRODUCT_NAME).bundle",
+			);
+			name = "Copy Built Products for Explicit Dependencies";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILD_DIR)/Debug$(EFFECTIVE_PLATFORM_NAME)$(TARGET_BUILD_SUBPATH)/$(PRODUCT_NAME).bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This script copies built products into the shared directory to be available for app and other targets that don't have scoped directories\n# If you try to archive any of the configurations seen in the output paths, the operation will fail due to `Multiple commands produce` error\n\nFILE=\"$BUILD_DIR/Debug$EFFECTIVE_PLATFORM_NAME$TARGET_BUILD_SUBPATH/$PRODUCT_NAME/$PRODUCT_NAME.bundle\"\nDESTINATION_FILE=\"$BUILD_DIR/Debug$EFFECTIVE_PLATFORM_NAME$TARGET_BUILD_SUBPATH/$PRODUCT_NAME.bundle\"\nif [[ -d \"$FILE\" && ! -d \"$DESTINATION_FILE\" ]]; then\n    ln -s \"$FILE\" \"$DESTINATION_FILE\"\nfi\n\nif [[ -f \"$FILE\" && ! -f \"$DESTINATION_FILE\" ]]; then\n    ln -s \"$FILE\" \"$DESTINATION_FILE\"\nfi";
 		};
 		69A7C45AC76836EC6EB869F6 /* Copy Built Products for Explicit Dependencies */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -4519,6 +4533,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C2739E82543FB70735A0D384 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CB742D7A39E4A0C891B767B0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -4691,6 +4712,12 @@
 			target = EA997D0841AC70DE8AB32A76 /* Models */;
 			targetProxy = 997B72717AF86CEA1F888E32 /* PBXContainerItemProxy */;
 		};
+		AF24A2A5C0A15E26263FF218 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PopPopSeoul_DesignSystem;
+			target = BDADB3EE6F8FCBC1CA207403 /* PopPopSeoul_DesignSystem */;
+			targetProxy = BB55993E4771FF00CD2440D4 /* PBXContainerItemProxy */;
+		};
 		D30E58E96D2EDDF16BED3332 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DesignSystem;
@@ -4754,7 +4781,7 @@
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TARGET_BUILD_DIR = "$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/$(PRODUCT_NAME)";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -4780,10 +4807,31 @@
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TARGET_BUILD_DIR = "$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/$(PRODUCT_NAME)";
 			};
 			name = Debug;
+		};
+		17B136FA5208EB66E3BD83B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_MASTER_OBJECT_FILE = NO;
+				INFOPLIST_FILE = "Derived/InfoPlists/PopPopSeoul_DesignSystem-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.sunidev.poppopseoul.designsystem.resources;
+				PRODUCT_NAME = PopPopSeoul_DesignSystem;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
 		};
 		18F9BD773514FE0B8FCCDF5B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -4796,11 +4844,11 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Common",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedTypes",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedAssets",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedAssets",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedAssets",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedTypes",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedTypes",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Common",
 				);
 				INFOPLIST_FILE = "Derived/InfoPlists/Common-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -4821,7 +4869,7 @@
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TARGET_BUILD_DIR = "$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/$(PRODUCT_NAME)";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -4906,7 +4954,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -4929,7 +4977,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -4963,7 +5011,7 @@
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TARGET_BUILD_DIR = "$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/$(PRODUCT_NAME)";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -4987,7 +5035,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -5097,7 +5145,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -5202,7 +5250,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -5262,7 +5310,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -5285,7 +5332,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -5306,7 +5353,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -5337,7 +5384,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -5362,7 +5409,7 @@
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TARGET_BUILD_DIR = "$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/$(PRODUCT_NAME)";
 			};
 			name = Debug;
@@ -5378,99 +5425,99 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax510",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Common",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax601",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacrosPlugin",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Environment",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Promises_FBLPromises",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Network",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Common",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedTypes",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_MethodSwizzler",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftNavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Reachability",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Clients",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax600",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxBuilder",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/_SwiftSyntaxCShims",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseCoreInternal",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseSharedSwift",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Logger",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePaths",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/OrderedCollections",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseCoreInternal",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing2",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_NSData",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseRemoteConfig",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing1",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPlugin",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseRemoteConfig",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Models",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAnalyticsWrapper",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableCoreLocation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/XCTestDynamicOverlay",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParserDiagnostics",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftBasicFormat",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedTypes",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Models",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseInstallations",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/InternalCollectionsUtilities",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Reachability",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax509",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_AppDelegateSwizzler",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftDiagnostics",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_UserDefaults",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Environment",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CombineSchedulers",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/third_party_IsAppEncrypted",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseInstallations",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FBLPromises",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Dependencies",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedAssets",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigationShim",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacroExpansion",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Network",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_MethodSwizzler",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Logger",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitectureMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseRemoteConfigInternal",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ConcurrencyExtras",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Clocks",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacroExpansion",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/nanopb_nanopb",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CustomDump",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_MethodSwizzler",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_AppDelegateSwizzler",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseCoreInternal",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Perception",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax509",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftNavigation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-sharing_Sharing",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseRemoteConfigInterop",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-composable-architecture_ComposableArchitecture",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseABTesting",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IdentifiedCollections",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseABTesting",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseInstallations",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Common",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax600",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAnalyticsTarget",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ConcurrencyExtras",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedTypes",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/nanopb",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftOperators",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing2",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAnalyticsWrapper",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitectureMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedTypes",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Models",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_UserDefaults",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CustomDump",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigationShim",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseInstallations",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseRemoteConfig",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax601",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxBuilder",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Clients",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedAssets",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Network",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseRemoteConfigInternal",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleAppMeasurementTarget",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IssueReporting",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_NSData",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Clocks",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePaths",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParser",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-composable-architecture_ComposableArchitecture",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Environment",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax510",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParserDiagnostics",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Common",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPlugin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CombineSchedulers",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IdentifiedCollections",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Environment",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_NSData",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Reachability",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseSharedSwift",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_UserDefaults",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionCore",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAnalyticsTarget",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftUINavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParser",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitecture",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IssueReporting",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-sharing_Sharing",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Logger",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Promises_FBLPromises",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/InternalCollectionsUtilities",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/_SwiftSyntaxCShims",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftBasicFormat",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPluginMessageHandling",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Perception",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleAppMeasurementTarget",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_AppDelegateSwizzler",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Network",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_NSData",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedAssets",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseABTesting",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftOperators",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/XCTestDynamicOverlay",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseRemoteConfig",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftDiagnostics",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing1",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedAssets",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Reachability",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_AppDelegateSwizzler",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Models",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableCoreLocation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_MethodSwizzler",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/third_party_IsAppEncrypted",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FBLPromises",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitecture",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftUINavigation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseCoreInternal",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Dependencies",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseABTesting",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacrosPlugin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsCore",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5542,7 +5589,7 @@
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TARGET_BUILD_DIR = "$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/$(PRODUCT_NAME)";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -5656,7 +5703,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -5672,130 +5719,131 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftBasicFormat",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/AppAuthCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Kingfisher_Kingfisher",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-sharing_Sharing",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_MethodSwizzler",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseRemoteConfig",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Environment",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftDiagnostics",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPluginMessageHandling",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GTMAppAuth_GTMAppAuth",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParser",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftOperators",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseSharedSwift",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GTMSessionFetcher_GTMSessionFetcherCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAnalyticsTarget",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing2",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAuthInterop",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Common",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Facebook_FacebookAEM",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseCoreExtension",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/AppAuth",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Facebook_FacebookCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GTMAppAuth",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax601",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CustomDump",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Logger",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/AppCheckCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/NMapsMapTarget",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigationShim",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Clients",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseInstallations",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_UserDefaults",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/InternalCollectionsUtilities",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Models",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Logger",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CombineSchedulers",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Facebook_FacebookCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing2",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Reachability",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FacebookAEM",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Kingfisher_Kingfisher",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_UserDefaults",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FacebookLogin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/AppAuthCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax601",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseAuth",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleSignIn_GoogleSignIn",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GTMSessionFetcher_GTMSessionFetcherCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAnalyticsWrapper",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Common",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GTMAppAuth_GTMAppAuth",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseRemoteConfig",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax510",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Network",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAppCheckInterop",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Kingfisher",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_AppDelegateSwizzler",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Clocks",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseRemoteConfigInternal",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePaths",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CustomDump",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_MethodSwizzler",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleSignIn_GoogleSignInSwift",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseCoreExtension",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedTypes",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftDiagnostics",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseCoreExtension",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacrosPlugin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Environment",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedAssets",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/XCTestDynamicOverlay",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/_SwiftSyntaxCShims",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-composable-architecture_ComposableArchitecture",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Reachability",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Environment",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftNavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Clocks",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacroExpansion",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/third_party_IsAppEncrypted",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/NMapsMapTarget",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseAuth",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableCoreLocation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseInstallations",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Reachability",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftOperators",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedTypes",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ConcurrencyExtras",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPlugin",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_UserDefaults",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_NSData",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FacebookCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IdentifiedCollections",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseCoreInternal",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FBLPromises",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Facebook_FacebookLogin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/third_party_IsAppEncrypted",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleSignIn",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GTMSessionFetcherCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_AppDelegateSwizzler",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing1",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/OrderedCollections",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAuth",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseCoreInternal",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftUINavigation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxBuilder",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAuthInterop",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_DesignSystem",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Common",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/nanopb",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Models",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Models",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_MethodSwizzler",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Logger",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacroExpansion",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Promises_FBLPromises",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAuthInternal",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Environment",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedAssets",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Clients",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_UserDefaults",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax509",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax600",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseSharedSwift",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftBasicFormat",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitecture",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParserDiagnostics",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseABTesting",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/nanopb_nanopb",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IssueReporting",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAnalyticsTarget",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPlugin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/RecaptchaInterop",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-sharing_Sharing",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleSignInSwift",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParser",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/AppAuth",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax509",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseRemoteConfig",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleAppMeasurementTarget",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Dependencies",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitectureMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Perception",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPluginMessageHandling",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Facebook_FacebookAEM",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseRemoteConfigInterop",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Network",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Facebook_FacebookLogin",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseABTesting",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseInstallations",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_NSData",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAnalyticsWrapper",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FacebookLogin",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseABTesting",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/AppCheckCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitecture",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleSignIn_GoogleSignInSwift",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Reachability",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleSignIn",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Clients",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Clients",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/OrderedCollections",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Kingfisher",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CombineSchedulers",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedAssets",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedTypes",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/nanopb",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IssueReporting",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GTMSessionFetcherCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseCoreInternal",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/RecaptchaInterop",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IdentifiedCollections",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacrosPlugin",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FacebookCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftUINavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParserDiagnostics",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_Network",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAuth",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_NSData",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleSignIn_GoogleSignIn",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseInstallations",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleAppMeasurementTarget",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Models",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseCoreInternal",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedTypes",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedAssets",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Perception",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_AppDelegateSwizzler",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_AppDelegateSwizzler",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Common",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_GoogleUtilities_Logger",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigationShim",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FBLPromises",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableCoreLocation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax510",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/nanopb_nanopb",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Promises_FBLPromises",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_MethodSwizzler",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Dependencies",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseRemoteConfigInternal",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAppCheckInterop",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DesignSystem",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxBuilder",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FacebookAEM",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleSignInSwift",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseCoreExtension",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePaths",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing1",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseABTesting",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GTMAppAuth",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/AppAuth_AppAuthCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitectureMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Firebase_FirebaseRemoteConfig",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/FirebaseAuthInternal",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/GoogleUtilities_NSData",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DesignSystem",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftNavigation",
 					"$(SRCROOT)/Tuist/.build/artifacts/facebook-ios-sdk/FBAEMKit",
 					"$(SRCROOT)/Tuist/.build/artifacts/facebook-ios-sdk/FBSDKCoreKit",
 					"$(SRCROOT)/Tuist/.build/artifacts/facebook-ios-sdk/FBSDKCoreKit_Basics",
@@ -5901,7 +5949,7 @@
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TARGET_BUILD_DIR = "$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/$(PRODUCT_NAME)";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -6016,7 +6064,7 @@
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -6041,13 +6089,14 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-fmodule-map-file=$(SRCROOT)/Tuist/.build/checkouts/swift-syntax/Sources/_SwiftSyntaxCShims/include/module.modulemap",
 					"-fmodule-map-file=$(SRCROOT)/Tuist/.build/tuist-derived/UIKitNavigationShim/UIKitNavigationShim.modulemap",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/Tuist/.build/checkouts/swift-syntax/Sources/_SwiftSyntaxCShims/include/module.modulemap -Xcc -fmodule-map-file=$(SRCROOT)/Tuist/.build/tuist-derived/UIKitNavigationShim/UIKitNavigationShim.modulemap -load-plugin-executable $BUILD_DIR/Debug$EFFECTIVE_PLATFORM_NAME/CasePathsMacros#CasePathsMacros -load-plugin-executable $BUILD_DIR/Debug$EFFECTIVE_PLATFORM_NAME/ComposableArchitectureMacros#ComposableArchitectureMacros -load-plugin-executable $BUILD_DIR/Debug$EFFECTIVE_PLATFORM_NAME/DependenciesMacrosPlugin#DependenciesMacrosPlugin -load-plugin-executable $BUILD_DIR/Debug$EFFECTIVE_PLATFORM_NAME/PerceptionMacros#PerceptionMacros";
-				PRODUCT_BUNDLE_IDENTIFIER = dev.sunidev.poppopseoul.clients;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.sunidev.poppopseoul.designsystem;
 				PRODUCT_NAME = DesignSystem;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -6057,7 +6106,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -6075,61 +6124,62 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigationShim",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax509",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax600",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParserDiagnostics",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Models",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePaths",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Common",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Kingfisher_Kingfisher",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/_SwiftSyntaxCShims",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-sharing_Sharing",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing2",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IssueReporting",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxBuilder",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax510",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPluginMessageHandling",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-composable-architecture_ComposableArchitecture",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedTypes",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IdentifiedCollections",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax601",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedAssets",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedTypes",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Dependencies",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitecture",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/OrderedCollections",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPlugin",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftOperators",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Common",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/InternalCollectionsUtilities",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Models",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Perception",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedAssets",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftBasicFormat",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftDiagnostics",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableCoreLocation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Clocks",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParser",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing1",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitectureMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftUINavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ConcurrencyExtras",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftNavigation",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CombineSchedulers",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CustomDump",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Kingfisher",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/XCTestDynamicOverlay",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacrosPlugin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing2",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/OrderedCollections",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Kingfisher_Kingfisher",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftUINavigation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxBuilder",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_DesignSystem",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Common",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax601",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Models",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Models",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Common",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacroExpansion",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax510",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedAssets",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax600",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Kingfisher",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftBasicFormat",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitecture",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParserDiagnostics",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Clocks",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CustomDump",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePaths",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IssueReporting",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedTypes",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPlugin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftDiagnostics",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacrosPlugin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-sharing_Sharing",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParser",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedAssets",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax509",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/_SwiftSyntaxCShims",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/XCTestDynamicOverlay",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-composable-architecture_ComposableArchitecture",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableCoreLocation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftOperators",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Dependencies",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedTypes",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ConcurrencyExtras",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitectureMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPluginMessageHandling",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Perception",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IdentifiedCollections",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftNavigation",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -6143,13 +6193,14 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-fmodule-map-file=$(SRCROOT)/Tuist/.build/checkouts/swift-syntax/Sources/_SwiftSyntaxCShims/include/module.modulemap",
 					"-fmodule-map-file=$(SRCROOT)/Tuist/.build/tuist-derived/UIKitNavigationShim/UIKitNavigationShim.modulemap",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/Tuist/.build/checkouts/swift-syntax/Sources/_SwiftSyntaxCShims/include/module.modulemap -Xcc -fmodule-map-file=$(SRCROOT)/Tuist/.build/tuist-derived/UIKitNavigationShim/UIKitNavigationShim.modulemap -load-plugin-executable $BUILD_DIR/Debug$EFFECTIVE_PLATFORM_NAME/CasePathsMacros#CasePathsMacros -load-plugin-executable $BUILD_DIR/Debug$EFFECTIVE_PLATFORM_NAME/ComposableArchitectureMacros#ComposableArchitectureMacros -load-plugin-executable $BUILD_DIR/Debug$EFFECTIVE_PLATFORM_NAME/DependenciesMacrosPlugin#DependenciesMacrosPlugin -load-plugin-executable $BUILD_DIR/Debug$EFFECTIVE_PLATFORM_NAME/PerceptionMacros#PerceptionMacros";
-				PRODUCT_BUNDLE_IDENTIFIER = dev.sunidev.poppopseoul.clients;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.sunidev.poppopseoul.designsystem;
 				PRODUCT_NAME = DesignSystem;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -6160,7 +6211,7 @@
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TARGET_BUILD_DIR = "$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/$(PRODUCT_NAME)";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -6282,7 +6333,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -6315,7 +6366,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -6338,7 +6389,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -6353,59 +6404,59 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitectureMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedTypes",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftNavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftDiagnostics",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-sharing_Sharing",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Common",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitecture",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax510",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Dependencies",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax600",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPlugin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsCore",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigationShim",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxBuilder",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacroExpansion",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Clocks",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IdentifiedCollections",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing2",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftDiagnostics",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-composable-architecture_ComposableArchitecture",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Common",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxMacroExpansion",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntaxBuilder",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftOperators",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/_SwiftSyntaxCShims",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax509",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePaths",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/InternalCollectionsUtilities",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-sharing_Sharing",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CustomDump",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/XCTestDynamicOverlay",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitecture",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax601",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax510",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Perception",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Common",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedAssets",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParser",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPluginMessageHandling",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IdentifiedCollections",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParserDiagnostics",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_Models",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing1",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax509",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing2",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CombineSchedulers",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Common",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/XCTestDynamicOverlay",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftUINavigation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedAssets",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax600",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/InternalCollectionsUtilities",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/OrderedCollections",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax601",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Dependencies",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableCoreLocation",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacrosPlugin",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/swift-composable-architecture_ComposableArchitecture",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ConcurrencyExtras",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Perception",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftOperators",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsMacros",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePathsCore",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParser",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/_SwiftSyntaxCShims",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedTypes",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftBasicFormat",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CasePaths",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedAssets",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IssueReporting",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftCompilerPlugin",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftParserDiagnostics",
-					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CustomDump",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacrosPlugin",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PopPopSeoul_SharedAssets",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/DependenciesMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftSyntax",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/UIKitNavigation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableCoreLocation",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ConcurrencyExtras",
 					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SharedTypes",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Sharing",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/IssueReporting",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/PerceptionCore",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/Clocks",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/CombineSchedulers",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/OrderedCollections",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/ComposableArchitectureMacros",
+					"$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/SwiftNavigation",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -6437,7 +6488,7 @@
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TARGET_BUILD_DIR = "$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/$(PRODUCT_NAME)";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -6553,7 +6604,7 @@
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -6584,7 +6635,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -6628,7 +6679,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -6653,7 +6704,7 @@
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TARGET_BUILD_DIR = "$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/$(PRODUCT_NAME)";
 			};
 			name = Debug;
@@ -6677,7 +6728,31 @@
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+				TARGET_BUILD_DIR = "$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/$(PRODUCT_NAME)";
+			};
+			name = Debug;
+		};
+		E6FD4262545BAA1E6CDC634F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILT_PRODUCTS_DIR = "$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/$(PRODUCT_NAME)";
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_MASTER_OBJECT_FILE = NO;
+				INFOPLIST_FILE = "Derived/InfoPlists/PopPopSeoul_DesignSystem-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.sunidev.poppopseoul.designsystem.resources;
+				PRODUCT_NAME = PopPopSeoul_DesignSystem;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				TARGET_BUILD_DIR = "$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/$(PRODUCT_NAME)";
 			};
 			name = Debug;
@@ -6784,7 +6859,7 @@
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -6851,7 +6926,6 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 			};
 			name = Debug;
@@ -6875,7 +6949,7 @@
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TARGET_BUILD_DIR = "$(CONFIGURATION_BUILD_DIR)$(TARGET_BUILD_SUBPATH)/$(PRODUCT_NAME)";
 			};
 			name = Debug;
@@ -6915,6 +6989,15 @@
 			buildConfigurations = (
 				67677CB2987580502A640E0A /* Debug */,
 				1926EB52B1EDC7CB824AF187 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62E003199D2E6C421366240E /* Build configuration list for PBXNativeTarget "PopPopSeoul_DesignSystem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6FD4262545BAA1E6CDC634F /* Debug */,
+				17B136FA5208EB66E3BD83B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

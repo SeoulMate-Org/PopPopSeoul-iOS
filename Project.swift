@@ -5,7 +5,7 @@ public let version = "1.0.0"
 
 public let deploymentTargetString = "17.0"
 public let appDeploymentTargets: DeploymentTargets = .iOS(deploymentTargetString)
-public let appDestinations: Destinations = [.iPhone, .iPad]
+public let appDestinations: Destinations = [.iPhone]
 
 let isAppStore = Environment.isAppStore.getBoolean(default: false)
 let additionalCondition = isAppStore ? "APPSTORE" : ""
@@ -59,7 +59,6 @@ let appInfoPlist: [String: Plist.Value] = {
             "SB 어그로OTF L.otf",
             "SB 어그로OTF M.otf",
         ],
-        "NSUserTrackingUsageDescription": "$(NSUserTrackingUsageDescription)",
         "NSLocationWhenInUseUsageDescription": "$(NSLocationWhenInUseUsageDescription)",
         "NSLocationAlwaysAndWhenInUseUsageDescription": "$(NSLocationAlwaysAndWhenInUseUsageDescription)",
         "FacebookAdvertiserIDCollectionEnabled": false,
@@ -275,8 +274,8 @@ let project = Project(
         .target(
             name: "DesignSystem",
             destinations: appDestinations,
-            product: Environment.forPreview.getBoolean(default: false) ? .framework : .staticFramework,
-            bundleId: "dev.sunidev.poppopseoul.clients",
+            product: .staticFramework,
+            bundleId: "dev.sunidev.poppopseoul.designsystem",
             infoPlist: .default,
             sources: "Sources/DesignSystem/**",
             resources: .resources([

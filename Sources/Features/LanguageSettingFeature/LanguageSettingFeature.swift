@@ -74,7 +74,7 @@ public struct LanguageSettingFeature {
         
       case .tappedChangeLanguage:
         return .run { [state = state] send in
-          await userDefaultsClient.setLanguage(state.language)
+          await AppSettingManager.shared.setLanguage(state.language)
           await send(.appReLaunch)
         }
         

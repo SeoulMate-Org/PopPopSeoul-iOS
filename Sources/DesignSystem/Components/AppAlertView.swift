@@ -73,32 +73,3 @@ public struct AppAlertView: View {
 }
 
 // MARK: - Preview
-struct AppAlertView_Previews: PreviewProvider {
-  static var previews: some View {
-    Group {
-      // 버튼 2개 버전
-      AppAlertView(
-        title: "로그인이 필요해요",
-        message: "찜하기 기능을 이용하려면 로그인해야 합니다.",
-        primaryButtonTitle: "로그인",
-        primaryAction: {},
-        secondaryButtonTitle: "취소",
-        secondaryAction: {}
-      )
-      .previewDisplayName("2-Button Alert")
-
-      // 버튼 1개 버전
-      AppAlertView(
-        title: "알림",
-        message: "처리가 완료되었습니다.",
-        primaryButtonTitle: "확인",
-        primaryAction: {},
-        secondaryButtonTitle: nil,
-        secondaryAction: nil
-      )
-      .previewDisplayName("1-Button Alert")
-    }
-    .background(Color.gray.opacity(0.2))
-    .previewLayout(.sizeThatFits)
-  }
-}
