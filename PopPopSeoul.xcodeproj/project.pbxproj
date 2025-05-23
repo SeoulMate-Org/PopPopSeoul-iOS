@@ -695,6 +695,7 @@
 		E91EFE77BFEE340B43194D47 /* Facebook_FacebookCore.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C92C2C3D8279026F9632600D /* Facebook_FacebookCore.bundle */; };
 		E9990850B12B4043D5B727A3 /* AppLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816E908C3AF8834E0498D994 /* AppLocation.swift */; };
 		E9DE71C84C88288412A32A64 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8609EF56D0937265092D5D36 /* Pretendard-ExtraLight.otf */; };
+		EA5339A82DE0A0820059335F /* ExpandableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA6A4832DD4C45900974561 /* ExpandableText.swift */; };
 		EA538B02E6EFCB8F46D36669 /* HomeChallengeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D3A6CFAA5F6821C6DF932F /* HomeChallengeItemView.swift */; };
 		EA68103BE802BEBD67434D79 /* SB 어그로OTF M.otf in Resources */ = {isa = PBXBuildFile; fileRef = E283BF28611FAF81E991ABF5 /* SB 어그로OTF M.otf */; };
 		EAA6A4822DD4BADC00974561 /* LocationNotificationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA6A4812DD4BADC00974561 /* LocationNotificationClient.swift */; };
@@ -1677,6 +1678,7 @@
 		EA14930892816AFA4A88950C /* GoogleUtilities_Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GoogleUtilities_Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA26B67DE986D8D090F59956 /* CombineSchedulers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CombineSchedulers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAA6A4812DD4BADC00974561 /* LocationNotificationClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationNotificationClient.swift; sourceTree = "<group>"; };
+		EAA6A4832DD4C45900974561 /* ExpandableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableText.swift; sourceTree = "<group>"; };
 		EB1AF2F0C1D291ADEC33A0B1 /* GetChallengeMyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeMyRequest.swift; sourceTree = "<group>"; };
 		EB50FD060BF7A2400BB005A7 /* ThemeChallengeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChallengeTabView.swift; sourceTree = "<group>"; };
 		EC4AFF88EA6DCED6098DE437 /* Clients-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Clients-Info.plist"; sourceTree = "<group>"; };
@@ -2014,8 +2016,8 @@
 				812F024DFECC1088EEB8D2BC /* AttractionMapFeature */,
 				47BB1AFEE009F7B1A746A6F6 /* CompleteChallengeFeature */,
 				5A5A2711E3C58F5D9D2D7853 /* DetailAttractionFeature */,
-				C14829B0D69DDA71F6117608 /* DetailChallengeFeature */,
 				9A6922F48EA003901E26B624 /* DetailCommentFeature */,
+				C14829B0D69DDA71F6117608 /* DetailChallengeFeature */,
 				A3F4542B3AD0F2A1CF4FB40B /* HomeTabFeature */,
 				3C6576FE18300465F4969FF8 /* LanguageSettingFeature */,
 				59BDB07C64EB1C4051FAC842 /* LikeAttractionFeature */,
@@ -2785,6 +2787,7 @@
 		B3FC4462F7A1D3FAC90D2D82 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				EAA6A4832DD4C45900974561 /* ExpandableText.swift */,
 				CB1B267CB0E4FAE7A020820F /* AppAlertView.swift */,
 				9EC1195988BF6D3E5D51B6AE /* AppLoginAlertView.swift */,
 				D3A60251940F86C2302966EB /* CommentListItemView.swift */,
@@ -4524,6 +4527,7 @@
 				61CE1D7BC5495D4584F07048 /* TuistPlists+DesignSystem.swift in Sources */,
 				121BD62882589CA33C570412 /* AppAlertView.swift in Sources */,
 				7E5784AB6C8494EA2262B651 /* AppLoginAlertView.swift in Sources */,
+				EA5339A82DE0A0820059335F /* ExpandableText.swift in Sources */,
 				980BBBA87237AA39FAE5DA2D /* CommentListItemView.swift in Sources */,
 				978DE3EFCDADD2297BC2E96F /* HeaderView.swift in Sources */,
 				FB91BDE3CBA03C265A261EB9 /* ProgressBar.swift in Sources */,

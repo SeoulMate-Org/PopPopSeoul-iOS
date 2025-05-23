@@ -58,9 +58,7 @@ struct DetailChallengeInfoSection: View {
         .padding(.top, 36)
         
         // 6. 설명
-        Text(challenge.description)
-          .font(.captionL)
-          .foregroundColor(Colors.gray300.swiftUIColor)
+        ExpandableText(text: challenge.description)
           .fixedSize(horizontal: false, vertical: true)
           .padding(.top, 8)
       }

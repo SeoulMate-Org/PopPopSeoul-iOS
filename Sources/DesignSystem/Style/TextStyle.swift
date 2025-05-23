@@ -5,6 +5,7 @@
 //  Created by suni on 4/8/25.
 //
 
+import UIKit
 import SwiftUI
 
 public extension Font {
@@ -21,32 +22,52 @@ public extension Font {
   static let buttonS: Font = pretendard(size: 12, weight: .semibold)
   
   static func pretendard(size: CGFloat, weight: Font.Weight = .regular) -> Font {
-      let name: String
-      switch weight {
-      case .bold:
-          name = "Pretendard-Bold"
-      case .semibold:
-          name = "Pretendard-SemiBold"
-      case .medium:
-          name = "Pretendard-Medium"
-      default:
-          name = "Pretendard-Regular"
-      }
-      return .custom(name, size: size)
+    let name: String
+    switch weight {
+    case .bold:
+      name = "Pretendard-Bold"
+    case .semibold:
+      name = "Pretendard-SemiBold"
+    case .medium:
+      name = "Pretendard-Medium"
+    default:
+      name = "Pretendard-Regular"
+    }
+    return .custom(name, size: size)
   }
   
   static func smAggro(size: CGFloat, weight: Font.Weight = .regular) -> Font {
-      let name: String
-      switch weight {
-      case .bold:
-          name = "OTSBAggroB"
-      case .light:
-          name = "OTSBAggroL"
-      case .medium:
-          name = "OTSBAggroM"
-      default:
-          name = "OTSBAggroM"
-      }
-      return .custom(name, size: size)
+    let name: String
+    switch weight {
+    case .bold:
+      name = "OTSBAggroB"
+    case .light:
+      name = "OTSBAggroL"
+    case .medium:
+      name = "OTSBAggroM"
+    default:
+      name = "OTSBAggroM"
+    }
+    return .custom(name, size: size)
+  }
+}
+
+public extension UIFont {
+  
+  static let captionL: UIFont = pretendard(size: 13, weight: .medium)
+  
+  static func pretendard(size: CGFloat, weight: UIFont.Weight = .regular) -> UIFont {
+    let name: String
+    switch weight {
+    case .bold:
+      name = "Pretendard-Bold"
+    case .semibold:
+      name = "Pretendard-SemiBold"
+    case .medium:
+      name = "Pretendard-Medium"
+    default:
+      name = "Pretendard-Regular"
+    }
+    return UIFont(name: name, size: size)!
   }
 }
