@@ -59,9 +59,7 @@ struct DetailAttractionTopSection: View {
           .padding(.top, 4)
         
         // 6. 설명
-        Text(attraction.description)
-          .font(.captionL)
-          .foregroundColor(Colors.gray300.swiftUIColor)
+        ExpandableText(text: attraction.description)
           .fixedSize(horizontal: false, vertical: true)
           .padding(.top, 8)
       }
