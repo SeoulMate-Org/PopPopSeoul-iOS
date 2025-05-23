@@ -219,6 +219,7 @@ public enum L10n {
   public static var onboardingTitle_4: String { localized(.onboardingTitle_4) }
   public static var onboardingButton_next: String { localized(.onboardingButton_next) }
   public static var onboardingButton_start: String { localized(.onboardingButton_start) }
+  public static var pushTitle: String { localized(.pushTitle) }
   
   public static func alarmListText_location(_ args: CVarArg...) -> String { localized(.alarmListText_location, args) }
   public static func alarmListText_vibration(_ args: CVarArg...) -> String { localized(.alarmListText_vibration, args) }
@@ -356,9 +357,12 @@ public enum L10n {
   public static func withdrawexplanation_shareyour(_ args: CVarArg...) -> String { localized(.withdrawexplanation_shareyour, args) }
   public static func withdrawexplanation_thankyou(_ args: CVarArg...) -> String { localized(.withdrawexplanation_thankyou, args) }
   public static func withdrawNote(_ args: CVarArg...) -> String { localized(.withdrawNote, args) }
+  public static func pushText(_ args: CVarArg...) -> String { localized(.pushText, args) }
 }
 
 public enum LocalizedKey: String {
+  case pushTitle
+  case pushText
   case signIn_apple
   case signIn_facebook
   case signIn_google

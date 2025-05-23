@@ -10,6 +10,7 @@ import ComposableArchitecture
 import CoreLocation
 import UserNotifications
 import Models
+import Common
 
 public struct NotificationClient {
   public var registerLocation: @Sendable (_ challenge: Challenge, _ attractions: [Attraction]) async -> Void
@@ -41,8 +42,8 @@ extension NotificationClient: DependencyKey {
 
           let content = UNMutableNotificationContent()
           // TODO: - 위치 알림 기획 반영
-          content.title = "🧭 \(challenge.name) 지역 도착!"
-          content.body = "지금 \"\(attraction.name)\" 스탬프를 찍고 도전을 기록해보세요"
+          content.title = L10n.pushTitle
+          content.body = L10n.pushText(attraction.name)
           content.sound = .default
 
           let request = UNNotificationRequest(

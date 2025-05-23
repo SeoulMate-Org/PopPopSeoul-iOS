@@ -1463,9 +1463,6 @@
         }
       }
     },
-    "Key 1" : {
-      "extractionState" : "manual"
-    },
     "korean" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -2230,6 +2227,42 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "스탬프를 찍었어요!"
+          }
+        }
+      }
+    },
+    "pushText" : {
+      "comment" : "You’ve just arrived at %@. Start your challenge and collect your stamp!",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You’ve just arrived at %@. Start your challenge and collect your stamp!"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "지금 %@에 도착했어요. 스탬프를 찍고 챌린지를 진행해 보세요."
+          }
+        }
+      }
+    },
+    "pushTitle" : {
+      "comment" : "Time to Get Your Stamp!",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Time to Get Your Stamp!"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "스탬프 찍을 준비 완료!"
           }
         }
       }
