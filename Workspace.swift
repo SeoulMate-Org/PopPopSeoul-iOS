@@ -4,6 +4,6 @@ let workspace = Workspace(
   name: "PopPopSeoul",
   projects: ["."],
   generationOptions: .options(
-    lastXcodeUpgradeCheck: Version(15, 4, 0)
+    lastXcodeUpgradeCheck: Version(26, 0, 0)
   )
 )

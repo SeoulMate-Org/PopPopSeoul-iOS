@@ -1,21 +1,21 @@
 // swift-tools-version: 6.0
 import PackageDescription
 
-#if TUIST
-import ProjectDescription
-
-let packageSettings = PackageSettings(
-    productTypes: [
-//        "FBLPromises": .framework,
-//        "GTMSessionFetcher": .framework,
-//        "GoogleUtilities": .framework,
-//        "AppCheckCore": .framework,
-//        "GoogleSignIn": .framework,
-//        "GTMAppAuth": .framework,
-        "AppAuth": .framework,
-    ]
-)
-#endif
+//#if TUIST
+//import ProjectDescription
+//
+//let packageSettings = PackageSettings(
+//    productTypes: [
+////        "FBLPromises": .framework,
+////        "GTMSessionFetcher": .framework,
+////        "GoogleUtilities": .framework,
+////        "AppCheckCore": .framework,
+////        "GoogleSignIn": .framework,
+////        "GTMAppAuth": .framework,
+//        "AppAuth": .framework,
+//    ]
+//)
+//#endif
 
 let package = Package(
     name: "SeoulMateDependencies",
@@ -30,7 +30,7 @@ let package = Package(
         ),
         .package(
             url: "https://github.com/navermaps/SPM-NMapsMap.git",
-            branch: "main"
+            .upToNextMajor(from: "3.23.0")
         ),
         .package(
             url: "https://github.com/google/GoogleSignIn-iOS",

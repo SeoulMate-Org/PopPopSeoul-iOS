@@ -1,7 +1,7 @@
 import Foundation
 import ProjectDescription
 
-public let version = "1.0.0"
+public let version = "1.0.1"
 
 public let deploymentTargetString = "17.0"
 public let appDeploymentTargets: DeploymentTargets = .iOS(deploymentTargetString)
@@ -146,6 +146,7 @@ func createAppTarget(suffix: String = "", isDev: Bool = false, scripts: [TargetS
                 "CODE_SIGN_IDENTITY": "iPhone Developer",
                 "CODE_SIGNING_REQUIRED": "YES",
                 "OTHER_LDFLAGS": "-ObjC",
+                "OTHER_CFLAGS": "-Wno-deprecated-declarations",
             ],
             debug: [
                 "OTHER_SWIFT_FLAGS": "-D DEBUG $(inherited) -Xfrontend -warn-long-function-bodies=500 -Xfrontend -warn-long-expression-type-checking=500 -Xfrontend -debug-time-function-bodies -Xfrontend -debug-time-expression-type-checking -Xfrontend -enable-actor-data-race-checks",

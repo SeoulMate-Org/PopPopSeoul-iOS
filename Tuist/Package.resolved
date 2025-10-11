@@ -1,5 +1,5 @@
 {
-  "originHash" : "c5132078abc21b4a4363a1b436415f28c59b404500b713d97546c7b850ae05fa",
+  "originHash" : "cdb6c5002d57778d223484431682b679738b267e71090fa69746cf8e08d1ab5c",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -186,8 +186,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/navermaps/SPM-NMapsMap.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "ad89e53fdfec3b8d8994280fb0414b5a7b1c3e8e"
+        "revision" : "fb4eef37db9904c0a0dcdf7a828c892e13782cfa",
+        "version" : "3.23.0"
       }
     },
     {
